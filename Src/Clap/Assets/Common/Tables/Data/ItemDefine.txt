@@ -1,0 +1,28 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "补给——补",
+    "Description": "获得一发子弹",
+    "Type": "补给",
+    "Audio": "UI/Audios/1",
+    "Icon": "UI/Items/1"
+  },
+  "2": {
+    "ID": 2,
+    "Name": "补给——拔",
+    "Description": "获得一把剑",
+    "Type": "补给",
+    "Audio": "UI/Audios/2",
+    "Icon": "UI/Items/2"
+  },
+  "3": {
+    "ID": 3,
+    "Name": "攻击——激光炮",
+    "Description": "消耗：(X-1)，其中X为目标的生命值     \n\n攻击力：1\n\n伤害：X\n\n对应防御：所有防御\n\n对应反弹：反弹，镜面反射",
+    "Type": "直伤",
+    "ATK": 1,
+    "Hurt": 1,
+    "Audio": "UI/Audios/3",
+    "Icon": "UI/Items/3"
+  }
+}
