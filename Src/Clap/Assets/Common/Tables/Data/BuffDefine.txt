@@ -1,0 +1,29 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "和平",
+    "Description": "对目标三人各造成1点伤害",
+    "ItemType": "溅射",
+    "Target": "三人",
+    "Hurt": 1.0
+  },
+  "2": {
+    "ID": 2,
+    "Name": "缴械",
+    "Description": "让对手所有的剑进入一回合冷却效果",
+    "CostType": "剑",
+    "Cost": 1000,
+    "ItemType": "控制",
+    "Target": "单体"
+  },
+  "3": {
+    "ID": 3,
+    "Name": "嘲讽",
+    "Description": "下一回合该目标不对自己执行伤害效果则失去一点体力",
+    "ItemType": "控制",
+    "Target": "单体",
+    "Trigger": 1,
+    "Duration": 1,
+    "Hurt": 1.0
+  }
+}

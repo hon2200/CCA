@@ -1,78 +1,101 @@
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Windows;
 
 public class UILogin : MonoBehaviour
 {
-    public UIManager Manager;
+    public TMP_InputField Email;
+    public TMP_InputField Password;
 
-    [Header("Button References")]
-    public Button SingleBtn;
-    public Button OnlineBtn;
-    public Button HelpBtn;
-    public Button llustratedBtn;
-    public Button DeveloperBtn;
-    public Button SettingsBtn;
-    public Button QuitBtn;
 
-    [Header("UI Panels")] 
-    public GameObject settingsPanel;
-    public GameObject creditsPanel;
-    public string currentSence = "UILogin";
+    public TMP_InputField username;
+    public TMP_InputField password;
+    public TMP_InputField passwordConfirm;
 
-    void Start()
+    public GameObject uiLogin;
+    public void OnButton()
     {
-
+        if (string.IsNullOrEmpty(this.Email.text))
+        {
+            MessageBox.Show("请输入账号");
+            return;
+        }
+        if (string.IsNullOrEmpty(this.Password.text))
+        {
+            MessageBox.Show("请输入密码");
+            return;
+        }
+        if (Logins(this.Email.text, this.Password.text))
+        {
+            
+            User.Instance.UserSet(PlayerPrefs.GetInt("user_" + Email.text), "user_"+this.Email.text);
+            SceneManager.Instance.LoadScene("LoadingSence");
+            UIManager.Instance.currentScene = UIManager.Scene.LoadingSence;
+        }
+    }
+    public bool Logins(string username, string password)
+    {
+        if (!PlayerPrefs.HasKey("user_" + username))
+        {
+            Debug.LogError("用户不存在");
+            return false;
+        }
+        return password == PlayerPrefs.GetString(PlayerPrefs.GetInt("user_" + username).ToString()); ;
     }
 
-    #region 按钮事件实现
-    public void OnSingle()
-    {
-        SceneManager.Instance.LoadScene("CharSelect");
-    }
 
-    public void OnOnline()
+    public void OnClickRegister()
     {
-        SceneManager.Instance.LoadScene("CharSelect");
+        PlayerPrefs.DeleteAll();
+        if (string.IsNullOrEmpty(this.username.text))
+        {
+            MessageBox.Show("请输入账号");
+            return;
+        }
+        if (string.IsNullOrEmpty(this.password.text))
+        {
+            MessageBox.Show("请输入密码");
+            return;
+        }
+        if (string.IsNullOrEmpty(this.passwordConfirm.text))
+        {
+            MessageBox.Show("请输入确认密码");
+            return;
+        }
+        if (this.password.text != this.passwordConfirm.text)
+        {
+            MessageBox.Show("两次输入的密码不一致");
+            return;
+        }
+        if(Register(this.username.text, this.password.text))
+        {
+            MessageBox.Show("注册成功,请登录", "提示", MessageBoxType.Information).OnYes = this.CloseRegister;
+        }
+        
     }
-
-    public void OnHelp()
+    public bool Register(string username, string password)
     {
-        //SceneManager.LoadScene("TutorialScene");
+        if (PlayerPrefs.HasKey("user_" + username))
+        {
+            Debug.LogError("用户名已存在");
+            return false;
+        }
+        int randomID;
+        do
+        {
+            randomID = UnityEngine.Random.Range(1, 1000);
+        } while (PlayerPrefs.HasKey(randomID.ToString()));
+        PlayerPrefs.SetInt("user_" + username, randomID);
+        PlayerPrefs.SetString(randomID.ToString(), password);
+        PlayerPrefs.Save();
+        return true;
     }
-
-    public void Onllustrated()
+    void CloseRegister()
     {
-        BookManager.Instance.ShowBook();
+        this.gameObject.SetActive(true);
+        uiLogin.SetActive(false);
     }
-
-    public void OnDeveloper()
-    {
-        UIManager.Instance.Show<UIDeveloper>();
-    }
-
-    public void OnSetting()
-    {
-        UIManager.Instance.Show<UISetting>();
-    }
-
-    public void OnQuit()
-    {
-        Application.Quit();
-    }
-    #endregion
-
-    #region 辅助方法
-    // 可扩展音量控制、画质设置等功能
-    public void SetMasterVolume(float value)
-    {
-        AudioListener.volume = value;
-    }
-    
-    public void ClosePanel(GameObject panel)
-    {
-        panel.SetActive(false);
-    }
-    #endregion
 }

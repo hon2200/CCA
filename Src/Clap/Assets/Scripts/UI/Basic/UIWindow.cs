@@ -9,7 +9,7 @@ public class UIWindow : MonoBehaviour
 
     public virtual System.Type Type { get { return this.GetType(); } }
 
-    public Transform Root;
+    public pos Root;
 
     public enum WindowResult
     {

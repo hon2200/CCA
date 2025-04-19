@@ -16,6 +16,6 @@ public class UIBookmessage : MonoBehaviour
     {
         if (this.title != null) this.title.text =name;
         if (this.description != null) this.description.text = description;
-        if (this.item != null) this.item.overrideSprite = Resloader.Load<Sprite>(icon);
+        if (this.item != null& icon!=null) this.item.overrideSprite = Resloader.Load<Sprite>(icon);
     }
 }

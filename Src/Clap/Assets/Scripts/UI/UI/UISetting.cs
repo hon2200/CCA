@@ -30,6 +30,8 @@ public class UISetting : UIWindow
     public void OnBackToMainMenuClicked()
     {
         // 加载主菜单场景
+        SceneManager.Instance.LoadScene("LoadingSence");
+        UIManager.Instance.currentScene = UIManager.Scene.LoadingSence;
         Debug.Log("已退回主菜单");
     }
 }

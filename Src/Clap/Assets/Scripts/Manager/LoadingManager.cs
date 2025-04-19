@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class LoadingManager : MonoBehaviour
 {
-    // start is called before the first frame update
     IEnumerator Start()
     {
-
+        RoomManager.Instance.Init();
         BookManager.Instance.Init();
+        CharacterManager.Instance.Init();
         yield return DataManager.Instance.LoadData();
     }
 }
