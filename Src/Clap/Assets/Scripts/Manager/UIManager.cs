@@ -1,16 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
-    public Scene currentScene = 0;
+    public Scene currentScene = Scene.LoginSence;
 
     public enum Scene
     {
-        UILogin=0,
+        LoadingSence=0,
+        LoginSence=1,
+        MainSence =2,
+        BattleScene=3,
     }
 
     class UIElent
@@ -25,8 +30,7 @@ public class UIManager : Singleton<UIManager>
     public UIManager()
     {//所有需要的预制界面
         this.UIResources.Add(typeof(UISetting), new UIElent() { Resources = "UI/UISetting", Cache = true });
-        this.UIResources.Add(typeof(UIDeveloper), new UIElent() { Resources = "UI/UIDeveloper", Cache = false });
-        this.UIResources.Add(typeof(UIBook), new UIElent() { Resources = "UI/UIBook", Cache = false });
+        this.UIResources.Add(typeof(UIBook), new UIElent() { Resources = "UI/UIBook", Cache = true });
     }
 
     ~UIManager() { }

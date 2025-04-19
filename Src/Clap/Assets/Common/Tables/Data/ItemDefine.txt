@@ -1,28 +1,395 @@
 {
   "1": {
     "ID": 1,
-    "Name": "补给——补",
-    "Description": "获得一发子弹",
-    "Type": "补给",
-    "Audio": "UI/Audios/1",
-    "Icon": "UI/Items/1"
+    "Name": "血量",
+    "ItemType": "货币",
+    "Copywriting": "生存之道，就在其中"
   },
   "2": {
     "ID": 2,
-    "Name": "补给——拔",
-    "Description": "获得一把剑",
-    "Type": "补给",
-    "Audio": "UI/Audios/2",
-    "Icon": "UI/Items/2"
+    "Name": "子弹",
+    "ItemType": "货币",
+    "Copywriting": "多一颗子弹，你生存下来的可能性便大一分"
   },
   "3": {
     "ID": 3,
-    "Name": "攻击——激光炮",
-    "Description": "消耗：(X-1)，其中X为目标的生命值     \n\n攻击力：1\n\n伤害：X\n\n对应防御：所有防御\n\n对应反弹：反弹，镜面反射",
-    "Type": "直伤",
+    "Name": "剑",
+    "ItemType": "货币",
+    "CD": 1,
+    "Copywriting": "传说某位剑圣拥有“万剑归宗”的绝技"
+  },
+  "4": {
+    "ID": 4,
+    "Name": " 补给",
+    "Description": "获得一颗子弹",
+    "Order": 30,
+    "CostType": "子弹",
+    "Cost": -1,
+    "TargetType": "自己",
+    "ItemType": "补给",
+    "Copywriting": "要来一场牛仔间的决斗吗？"
+  },
+  "5": {
+    "ID": 5,
+    "Name": " 双重补给",
+    "Description": "获得两颗子弹",
+    "Order": 30,
+    "CostType": "子弹",
+    "Cost": -2,
+    "TargetType": "自己",
+    "ItemType": "补给",
+    "Copywriting": "我上两次！"
+  },
+  "6": {
+    "ID": 6,
+    "Name": "拔剑",
+    "Description": "获得一把剑",
+    "Order": 30,
+    "CostType": "剑",
+    "Cost": -1,
+    "TargetType": "自己",
+    "ItemType": "补给",
+    "Copywriting": "剑是君子的象征"
+  },
+  "7": {
+    "ID": 7,
+    "Name": "双重拔剑",
+    "Description": "获得两把剑",
+    "Order": 30,
+    "CostType": "剑",
+    "Cost": -2,
+    "TargetType": "自己",
+    "ItemType": "补给",
+    "Copywriting": "屯田日久，屡建奇功！"
+  },
+  "8": {
+    "ID": 8,
+    "Name": "刺",
+    "Description": "攻击力：2\\n使用一把剑，对目标造成一点伤害",
+    "Order": 40,
+    "CostType": "剑",
+    "Cost": 1,
+    "TargetType": "敌方单人",
+    "ItemType": "近战",
+    "ATK": 2,
+    "HurtType": "血量",
+    "Hurt": 1.0,
+    "Copywriting": "似乎在某个平行宇宙中，两人对刺是一种上流运动"
+  },
+  "9": {
+    "ID": 9,
+    "Name": "砍",
+    "Description": "攻击力：3\\n使用两把剑，对目标造成一点伤害",
+    "Order": 40,
+    "CostType": "剑",
+    "Cost": 2,
+    "TargetType": "敌方单人",
+    "ItemType": "近战",
+    "ATK": 3,
+    "HurtType": "血量",
+    "Hurt": 1.0,
+    "Copywriting": "什么，你破防了？不会吧？"
+  },
+  "10": {
+    "ID": 10,
+    "Name": "光剑",
+    "Description": "攻击力：2\\n使用三把剑，对目标造成两点伤害",
+    "Order": 40,
+    "CostType": "剑",
+    "Cost": 3,
+    "TargetType": "敌方单人",
+    "ItemType": "近战",
+    "ATK": 2,
+    "HurtType": "血量",
+    "Hurt": 2.0,
+    "Copywriting": "光聚我手，其化剑形"
+  },
+  "11": {
+    "ID": 11,
+    "Name": "光刀",
+    "Description": "攻击力：3\\n使用五把剑，对目标造成两点伤害",
+    "Order": 40,
+    "CostType": "剑",
+    "Cost": 5,
+    "TargetType": "敌方单人",
+    "ItemType": "近战",
+    "ATK": 3,
+    "HurtType": "血量",
+    "Hurt": 2.0,
+    "Copywriting": "让光明，将你净化"
+  },
+  "12": {
+    "ID": 12,
+    "Name": "鬼斩",
+    "Description": "攻击力：5\\n使用六把剑，对目标造成一点伤害",
+    "Order": 40,
+    "CostType": "剑",
+    "Cost": 6,
+    "TargetType": "敌方单人",
+    "ItemType": "近战",
+    "ATK": 5,
+    "HurtType": "血量",
+    "Hurt": 1.0,
+    "Copywriting": "感受，从地狱喷涌出来的怒火！"
+  },
+  "13": {
+    "ID": 13,
+    "Name": "燕尾斩",
+    "Description": "攻击力：5\\n使用十把剑，对目标造成两点伤害",
+    "Order": 40,
+    "CostType": "剑",
+    "Cost": 10,
+    "TargetType": "敌方单人",
+    "ItemType": "近战",
+    "ATK": 5,
+    "HurtType": "血量",
+    "Hurt": 2.0,
+    "Copywriting": "力劲到处，华山如纸"
+  },
+  "14": {
+    "ID": 14,
+    "Name": "给枪",
+    "Description": "攻击力：4\\n消耗一颗子弹，对对方造成一点伤害",
+    "Order": 40,
+    "CostType": "子弹",
+    "Cost": 1,
+    "TargetType": "敌方单人",
+    "ItemType": "远程",
+    "ATK": 4,
+    "HurtType": "血量",
+    "Hurt": 1.0,
+    "Copywriting": "咻！"
+  },
+  "15": {
+    "ID": 15,
+    "Name": "双枪",
+    "Description": "攻击力：4\\n消耗两颗子弹，对对方造成一点伤害",
+    "Order": 40,
+    "CostType": "子弹",
+    "Cost": 2,
+    "TargetType": "敌方单人",
+    "ItemType": "远程",
+    "ATK": 4,
+    "HurtType": "血量",
+    "Hurt": 1.0,
+    "Copywriting": "看这儿！"
+  },
+  "16": {
+    "ID": 16,
+    "Name": "激光枪",
+    "Description": "攻击力：4\\n消耗两颗子弹，对对方造成两点伤害",
+    "Order": 40,
+    "CostType": "子弹",
+    "Cost": 2,
+    "TargetType": "敌方单人",
+    "ItemType": "远程",
+    "ATK": 4,
+    "HurtType": "血量",
+    "Hurt": 2.0,
+    "Copywriting": "大人，时代变了"
+  },
+  "17": {
+    "ID": 17,
+    "Name": "激光炮",
+    "Description": "攻击力：1\\n消耗（X-1）颗子弹，对对方造成X点伤害",
+    "Order": 40,
+    "CostType": "子弹",
+    "TargetType": "敌方单人",
+    "ItemType": "远程",
     "ATK": 1,
-    "Hurt": 1,
-    "Audio": "UI/Audios/3",
-    "Icon": "UI/Items/3"
+    "HurtType": "血量",
+    "Copywriting": "菜就多练（双重含义）"
+  },
+  "18": {
+    "ID": 18,
+    "Name": "RPG",
+    "Description": "攻击力：6\\n消耗三颗子弹，对对方造成两点伤害",
+    "Order": 40,
+    "CostType": "子弹",
+    "Cost": 3,
+    "TargetType": "敌方单人",
+    "ItemType": "远程",
+    "ATK": 6,
+    "HurtType": "血量",
+    "Hurt": 2.0,
+    "Copywriting": "反坦克好用，反人类更好用"
+  },
+  "19": {
+    "ID": 19,
+    "Name": "双RPG",
+    "Description": "攻击力：6\\n消耗六颗子弹，对对方造成三点伤害",
+    "Order": 40,
+    "CostType": "子弹",
+    "Cost": 6,
+    "TargetType": "敌方单人",
+    "ItemType": "远程",
+    "ATK": 6,
+    "HurtType": "血量",
+    "Hurt": 3.0,
+    "Copywriting": "猜猜你和灰太狼谁先飞回狼堡？"
+  },
+  "20": {
+    "ID": 20,
+    "Name": "和平",
+    "Description": "攻击力：5\\n消耗五颗子弹，对对方造成3+1点伤害",
+    "Order": 40,
+    "CostType": "子弹",
+    "Cost": 5,
+    "TargetType": "敌方三人",
+    "ItemType": "远程",
+    "ATK": 7,
+    "HurtType": "血量",
+    "Hurt": 2.0,
+    "Buff": 1,
+    "Copywriting": "艺术就是蘑菇云！！！"
+  },
+  "21": {
+    "ID": 21,
+    "Name": "挡",
+    "Description": "使用这张卡牌，你可以挡住：\\n“激光炮”“刺”“光剑”“给枪”“激光枪”和“RPG”",
+    "Order": 10,
+    "TargetType": "自己",
+    "ItemType": "防御",
+    "DEFType": [
+      17,
+      8,
+      10,
+      14,
+      16,
+      18
+    ],
+    "Copywriting": "无畏向前！"
+  },
+  "22": {
+    "ID": 22,
+    "Name": "双挡",
+    "Description": "使用这张卡牌，你可以挡住：\\n“激光炮”“双枪”和“双RPG”",
+    "Order": 10,
+    "TargetType": "自己",
+    "ItemType": "防御",
+    "DEFType": [
+      17,
+      15,
+      19
+    ],
+    "Copywriting": "集中意志！"
+  },
+  "23": {
+    "ID": 23,
+    "Name": "重挡",
+    "Description": "使用这张卡牌，你可以挡住：\\n“激光炮”“砍”和“光刀”",
+    "Order": 10,
+    "TargetType": "自己",
+    "ItemType": "防御",
+    "DEFType": [
+      17,
+      9,
+      11
+    ],
+    "Copywriting": "铁血之躯！"
+  },
+  "24": {
+    "ID": 24,
+    "Name": "巨盾",
+    "Description": "使用这张卡牌，你可以挡住：\\n“激光炮”“鬼斩”“燕尾斩”",
+    "Order": 10,
+    "TargetType": "自己",
+    "ItemType": "防御",
+    "DEFType": [
+      17,
+      12,
+      13
+    ],
+    "Copywriting": "坚城加护！"
+  },
+  "25": {
+    "ID": 25,
+    "Name": "反弹",
+    "Description": "本卡牌可以反弹：\\n“激光炮”“给枪”“激光枪”“RPG”“核平”\\n挡住：\\n“刺”",
+    "Order": 20,
+    "CostType": "子弹",
+    "Cost": 1,
+    "TargetType": "自己",
+    "ItemType": "反制",
+    "ParryType": [
+      17,
+      14,
+      16,
+      18,
+      20
+    ],
+    "DEFType": [
+      8
+    ],
+    "Copywriting": "略略略略略（嘻嘻）"
+  },
+  "26": {
+    "ID": 26,
+    "Name": "亮剑",
+    "Description": "本卡牌的可以反弹：\\n“刺”“光剑”",
+    "Order": 20,
+    "CostType": "剑",
+    "Cost": 1,
+    "TargetType": "自己",
+    "ItemType": "反制",
+    "ParryType": [
+      8,
+      10
+    ],
+    "Copywriting": "决斗？有意思"
+  },
+  "27": {
+    "ID": 27,
+    "Name": "缴械",
+    "Description": "当目标使用：\\n“刺”“光剑”“砍”“光刀”\\n时，会使得卡牌无效并让对手所有的剑进入一回合冷却效果",
+    "Order": 10,
+    "CostType": "剑",
+    "Cost": 3,
+    "TargetType": "自己",
+    "ItemType": "防御",
+    "DEFType": [
+      8,
+      10,
+      9,
+      11
+    ],
+    "Copywriting": "你的武器不能用了，怎么回事呢？"
+  },
+  "28": {
+    "ID": 28,
+    "Name": "镜面反射",
+    "Description": "本卡牌的可以反弹：\\n“激光炮”“光剑”“光刀”“激光枪”",
+    "Order": 20,
+    "CostType": "剑",
+    "Cost": 3,
+    "TargetType": "自己",
+    "ItemType": "反制",
+    "ParryType": [
+      16,
+      10,
+      11,
+      17
+    ],
+    "Copywriting": "光的艺术，我也略通一二"
+  },
+  "29": {
+    "ID": 29,
+    "Name": "过来",
+    "Description": "在当前回合行动结算前发动战吼：\\n将所有场上的补给掠夺，并且不分敌我地吸收本回合所有已经被选择执行的伤害效果",
+    "Order": 20,
+    "TargetType": "敌方全体",
+    "ItemType": "特效",
+    "CD": 1,
+    "Copywriting": "浴血奋战，矢志不渝！"
+  },
+  "30": {
+    "ID": 30,
+    "Name": "挑衅",
+    "Description": "本卡牌使用的目标会获得由自己施加的“嘲讽”buff，下一回合该目标不对自己执行伤害效果则失去一点体力",
+    "Order": 1,
+    "TargetType": "敌方单人",
+    "ItemType": "特效",
+    "Buff": 2,
+    "Copywriting": "不是哥们？就这水平还来打PVP？回教程关再练练吧"
   }
 }
