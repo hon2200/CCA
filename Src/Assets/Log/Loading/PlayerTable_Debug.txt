@@ -1,0 +1,68 @@
+Dict 内容 (Count: 3)
+====================================
+Key: 1
+
+  playerDefine: 
+    ID:       0
+    MaxHP:       5
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  ID_inGame:     1
+  HP:     5
+  resources: 
+    Bullet:       0
+    Sword:       0
+    SwordinCD:       0
+  ActionList: 
+    List`1 (Count: 0)
+  BriefHistory: 
+    Dictionary (Dictionary`2)
+  LongHistory: 
+    Dictionary (Dictionary`2)
+------------------------------------
+Key: 2
+
+  playerDefine: 
+    ID:       0
+    MaxHP:       5
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  ID_inGame:     2
+  HP:     5
+  resources: 
+    Bullet:       0
+    Sword:       0
+    SwordinCD:       0
+  ActionList: 
+    List`1 (Count: 0)
+  BriefHistory: 
+    Dictionary (Dictionary`2)
+  LongHistory: 
+    Dictionary (Dictionary`2)
+------------------------------------
+Key: 3
+
+  playerDefine: 
+    ID:       0
+    MaxHP:       5
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  ID_inGame:     3
+  HP:     5
+  resources: 
+    Bullet:       0
+    Sword:       0
+    SwordinCD:       0
+  ActionList: 
+    List`1 (Count: 0)
+  BriefHistory: 
+    Dictionary (Dictionary`2)
+  LongHistory: 
+    Dictionary (Dictionary`2)
+------------------------------------

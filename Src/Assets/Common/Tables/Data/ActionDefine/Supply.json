@@ -1,0 +1,66 @@
+{
+    "bullet": {
+        "ID": "bullet",
+        "Name": "补给",
+        "Description": "获得一颗子弹",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Supply",
+        "CD": 0,
+        "SupplyNumber": [
+            1,
+            0
+        ]
+    },
+    "double_bullet": {
+        "ID": "double_bullet",
+        "Name": "双补",
+        "Description": "获得两颗子弹",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Supply",
+        "CD": 0,
+        "SupplyNumber": [
+            2,
+            0
+        ]
+    },
+    "sword": {
+        "ID": "sword",
+        "Name": "拔剑",
+        "Description": "获得一把剑",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Supply",
+        "CD": 0,
+        "SupplyNumber": [
+            0,
+            1
+        ]
+    },
+    "double_sword": {
+        "ID": "double_sword",
+        "Name": "双拔",
+        "Description": "获得两把剑",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Supply",
+        "CD": 0,
+        "SupplyNumber": [
+            0,
+            2
+        ]
+    }
+}

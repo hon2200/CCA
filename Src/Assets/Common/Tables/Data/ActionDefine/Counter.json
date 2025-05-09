@@ -1,0 +1,50 @@
+{
+    "rebounce": {
+        "ID": "rebounce",
+        "Name": "反弹",
+        "Description": "可以反弹单挡对应的子弹类攻击以及和平，可以挡刺",
+        "Costs": [
+            1,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Counter",
+        "CD": 0
+    },
+    "counterblade": {
+        "ID": "counterblade",
+        "Name": "亮剑",
+        "Description": "可以反弹“刺类”攻击",
+        "Costs": [
+            0,
+            1
+        ],
+        "TargetType": "Self",
+        "ItemType": "Counter",
+        "CD": 0
+    },
+    "disarm": {
+        "ID": "disarm",
+        "Name": "缴械",
+        "Description": "可以防御鬼斩以下的刀剑类攻击，生效时使得攻击方所有剑进入不可用状态",
+        "Costs": [
+            0,
+            4
+        ],
+        "TargetType": "Self",
+        "ItemType": "Counter",
+        "CD": 0
+    },
+    "spectral_reflection": {
+        "ID": "spectral_reflection",
+        "Name": "镜面反射",
+        "Description": "可以反弹“光类”攻击",
+        "Costs": [
+            0,
+            3
+        ],
+        "TargetType": "Self",
+        "ItemType": "Counter",
+        "CD": 0
+    }
+}

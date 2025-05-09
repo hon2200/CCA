@@ -1,0 +1,314 @@
+Dict 内容 (Count: 104)
+====================================
+Key: (stab, block)
+  Block
+------------------------------------
+Key: (stab, double_block)
+  Block
+------------------------------------
+Key: (stab, heavy_block)
+  None
+------------------------------------
+Key: (stab, severance_parry)
+  None
+------------------------------------
+Key: (stab, rebounce)
+  Block
+------------------------------------
+Key: (stab, counterblade)
+  Rebounce
+------------------------------------
+Key: (stab, disarm)
+  Disarm
+------------------------------------
+Key: (stab, spectral_reflection)
+  None
+------------------------------------
+Key: (cleave, block)
+  None
+------------------------------------
+Key: (cleave, double_block)
+  None
+------------------------------------
+Key: (cleave, heavy_block)
+  Block
+------------------------------------
+Key: (cleave, severance_parry)
+  None
+------------------------------------
+Key: (cleave, rebounce)
+  None
+------------------------------------
+Key: (cleave, counterblade)
+  None
+------------------------------------
+Key: (cleave, disarm)
+  Disarm
+------------------------------------
+Key: (cleave, spectral_reflection)
+  None
+------------------------------------
+Key: (laser_stab, block)
+  Block
+------------------------------------
+Key: (laser_stab, double_block)
+  Block
+------------------------------------
+Key: (laser_stab, heavy_block)
+  None
+------------------------------------
+Key: (laser_stab, severance_parry)
+  None
+------------------------------------
+Key: (laser_stab, rebounce)
+  Block
+------------------------------------
+Key: (laser_stab, counterblade)
+  Rebounce
+------------------------------------
+Key: (laser_stab, disarm)
+  Disarm
+------------------------------------
+Key: (laser_stab, spectral_reflection)
+  Rebounce
+------------------------------------
+Key: (laser_cleave, block)
+  None
+------------------------------------
+Key: (laser_cleave, double_block)
+  None
+------------------------------------
+Key: (laser_cleave, heavy_block)
+  Block
+------------------------------------
+Key: (laser_cleave, severance_parry)
+  None
+------------------------------------
+Key: (laser_cleave, rebounce)
+  None
+------------------------------------
+Key: (laser_cleave, counterblade)
+  None
+------------------------------------
+Key: (laser_cleave, disarm)
+  Disarm
+------------------------------------
+Key: (laser_cleave, spectral_reflection)
+  Rebounce
+------------------------------------
+Key: (ghost_sever, block)
+  None
+------------------------------------
+Key: (ghost_sever, double_block)
+  None
+------------------------------------
+Key: (ghost_sever, heavy_block)
+  None
+------------------------------------
+Key: (ghost_sever, severance_parry)
+  Block
+------------------------------------
+Key: (ghost_sever, rebounce)
+  None
+------------------------------------
+Key: (ghost_sever, counterblade)
+  None
+------------------------------------
+Key: (ghost_sever, disarm)
+  None
+------------------------------------
+Key: (ghost_sever, spectral_reflection)
+  None
+------------------------------------
+Key: (spirit_sever, block)
+  None
+------------------------------------
+Key: (spirit_sever, double_block)
+  None
+------------------------------------
+Key: (spirit_sever, heavy_block)
+  None
+------------------------------------
+Key: (spirit_sever, severance_parry)
+  Block
+------------------------------------
+Key: (spirit_sever, rebounce)
+  None
+------------------------------------
+Key: (spirit_sever, counterblade)
+  None
+------------------------------------
+Key: (spirit_sever, disarm)
+  None
+------------------------------------
+Key: (spirit_sever, spectral_reflection)
+  None
+------------------------------------
+Key: (shoot, block)
+  Block
+------------------------------------
+Key: (shoot, double_block)
+  None
+------------------------------------
+Key: (shoot, heavy_block)
+  None
+------------------------------------
+Key: (shoot, severance_parry)
+  None
+------------------------------------
+Key: (shoot, rebounce)
+  Rebounce
+------------------------------------
+Key: (shoot, counterblade)
+  None
+------------------------------------
+Key: (shoot, disarm)
+  None
+------------------------------------
+Key: (shoot, spectral_reflection)
+  None
+------------------------------------
+Key: (double_shoot, block)
+  None
+------------------------------------
+Key: (double_shoot, double_block)
+  Block
+------------------------------------
+Key: (double_shoot, heavy_block)
+  None
+------------------------------------
+Key: (double_shoot, severance_parry)
+  None
+------------------------------------
+Key: (double_shoot, rebounce)
+  None
+------------------------------------
+Key: (double_shoot, counterblade)
+  None
+------------------------------------
+Key: (double_shoot, disarm)
+  None
+------------------------------------
+Key: (double_shoot, spectral_reflection)
+  None
+------------------------------------
+Key: (laser_shoot, block)
+  Block
+------------------------------------
+Key: (laser_shoot, double_block)
+  None
+------------------------------------
+Key: (laser_shoot, heavy_block)
+  None
+------------------------------------
+Key: (laser_shoot, severance_parry)
+  None
+------------------------------------
+Key: (laser_shoot, rebounce)
+  Rebounce
+------------------------------------
+Key: (laser_shoot, counterblade)
+  None
+------------------------------------
+Key: (laser_shoot, disarm)
+  None
+------------------------------------
+Key: (laser_shoot, spectral_reflection)
+  Rebounce
+------------------------------------
+Key: (laser_overclocked_apocalypse, block)
+  Block
+------------------------------------
+Key: (laser_overclocked_apocalypse, double_block)
+  Block
+------------------------------------
+Key: (laser_overclocked_apocalypse, heavy_block)
+  Block
+------------------------------------
+Key: (laser_overclocked_apocalypse, severance_parry)
+  Block
+------------------------------------
+Key: (laser_overclocked_apocalypse, rebounce)
+  Rebounce
+------------------------------------
+Key: (laser_overclocked_apocalypse, counterblade)
+  None
+------------------------------------
+Key: (laser_overclocked_apocalypse, disarm)
+  None
+------------------------------------
+Key: (laser_overclocked_apocalypse, spectral_reflection)
+  Rebounce
+------------------------------------
+Key: (RPG, block)
+  Block
+------------------------------------
+Key: (RPG, double_block)
+  None
+------------------------------------
+Key: (RPG, heavy_block)
+  None
+------------------------------------
+Key: (RPG, severance_parry)
+  None
+------------------------------------
+Key: (RPG, rebounce)
+  Rebounce
+------------------------------------
+Key: (RPG, counterblade)
+  None
+------------------------------------
+Key: (RPG, disarm)
+  None
+------------------------------------
+Key: (RPG, spectral_reflection)
+  None
+------------------------------------
+Key: (double_RPG, block)
+  None
+------------------------------------
+Key: (double_RPG, double_block)
+  Block
+------------------------------------
+Key: (double_RPG, heavy_block)
+  None
+------------------------------------
+Key: (double_RPG, severance_parry)
+  None
+------------------------------------
+Key: (double_RPG, rebounce)
+  None
+------------------------------------
+Key: (double_RPG, counterblade)
+  None
+------------------------------------
+Key: (double_RPG, disarm)
+  None
+------------------------------------
+Key: (double_RPG, spectral_reflection)
+  None
+------------------------------------
+Key: (nuclearbomb, block)
+  None
+------------------------------------
+Key: (nuclearbomb, double_block)
+  None
+------------------------------------
+Key: (nuclearbomb, heavy_block)
+  None
+------------------------------------
+Key: (nuclearbomb, severance_parry)
+  None
+------------------------------------
+Key: (nuclearbomb, rebounce)
+  Rebounce
+------------------------------------
+Key: (nuclearbomb, counterblade)
+  None
+------------------------------------
+Key: (nuclearbomb, disarm)
+  None
+------------------------------------
+Key: (nuclearbomb, spectral_reflection)
+  None
+------------------------------------

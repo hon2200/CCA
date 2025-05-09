@@ -1,0 +1,26 @@
+{
+    "comeon": {
+        "ID": "comeon",
+        "Name": "万象天引",
+        "Description": "吸收所有场上所有补给和攻击",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Special",
+        "CD": 1
+    },
+    "provoke": {
+        "ID": "provoke",
+        "Name": "挑衅",
+        "Description": "下回合你不打我就掉血",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Special",
+        "CD": 1
+    }
+}

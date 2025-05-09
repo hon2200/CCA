@@ -1,0 +1,183 @@
+{
+    "stab": {
+        "ID": "stab",
+        "Name": "刺",
+        "Description": "对应防御：挡，双挡",
+        "Costs": [
+            0,
+            1
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 2,
+        "Damage": 1
+    },
+    "cleave": {
+        "ID": "cleave",
+        "Name": "砍",
+        "Description": "对应防御：重挡",
+        "Costs": [
+            0,
+            2
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 3,
+        "Damage": 1
+    },
+    "laser_stab": {
+        "ID": "laser_stab",
+        "Name": "光剑",
+        "Description": "对应防御：挡，双挡",
+        "Costs": [
+            0,
+            3
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 2,
+        "Damage": 2
+    },
+    "laser_cleave": {
+        "ID": "laser_cleave",
+        "Name": "光刀",
+        "Description": "对应防御：重挡",
+        "Costs": [
+            0,
+            5
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 3,
+        "Damage": 2
+    },
+    "ghost_sever": {
+        "ID": "ghost_sever",
+        "Name": "鬼斩",
+        "Description": "对应防御：巨盾",
+        "Costs": [
+            0,
+            6
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 5,
+        "Damage": 1
+    },
+    "spirit_sever": {
+        "ID": "spirit_sever",
+        "Name": "断魂斩",
+        "Description": "对应防御：巨盾",
+        "Costs": [
+            0,
+            10
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 5,
+        "Damage": 2
+    },
+    "shoot": {
+        "ID": "shoot",
+        "Name": "给枪",
+        "Description": "对应防御：挡",
+        "Costs": [
+            1,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 4,
+        "Damage": 1
+    },
+    "double_shoot": {
+        "ID": "double_shoot",
+        "Name": "双枪",
+        "Description": "对应防御：双挡",
+        "Costs": [
+            2,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 4,
+        "Damage": 1
+    },
+    "laser_shoot": {
+        "ID": "laser_shoot",
+        "Name": "激光枪",
+        "Description": "对应防御：挡",
+        "Costs": [
+            2,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 4,
+        "Damage": 2
+    },
+    "laser_overclocked_apocalypse": {
+        "ID": "laser_overclocked_apocalypse",
+        "Name": "超载激光炮",
+        "Description": "对应防御：任意防御",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 1
+    },
+    "RPG": {
+        "ID": "RPG",
+        "Name": "火箭炮",
+        "Description": "对应防御：挡",
+        "Costs": [
+            3,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 6,
+        "Damage": 2
+    },
+    "double_RPG": {
+        "ID": "double_RPG",
+        "Name": "双火箭炮",
+        "Description": "对应防御：双挡",
+        "Costs": [
+            6,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 6,
+        "Damage": 3
+    },
+    "nuclear_bomb": {
+        "ID": "nuclear_bomb",
+        "Name": "和平",
+        "Description": "不可以被防御",
+        "Costs": [
+            5,
+            0
+        ],
+        "TargetType": "Enemy",
+        "ItemType": "Attack",
+        "CD": 0,
+        "Level": 7,
+        "Damage": 3
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "block": {
+        "ID": "block",
+        "Name": "挡",
+        "Description": "可以挡住“刺类”攻击和单发子弹类攻击",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Defend",
+        "CD": 0
+    },
+    "double_block": {
+        "ID": "double_block",
+        "Name": "双挡",
+        "Description": "可以挡住双发子弹类攻击",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Defend",
+        "CD": 0
+    },
+    "heavy_block": {
+        "ID": "heavy_block",
+        "Name": "重挡",
+        "Description": "可以挡住“刀类”攻击",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Defend",
+        "CD": 0
+    },
+    "severance_parry": {
+        "ID": "severance_parry",
+        "Name": "御斩",
+        "Description": "可以挡住“斩类”攻击",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "ItemType": "Defend",
+        "CD": 0
+    }
+}
