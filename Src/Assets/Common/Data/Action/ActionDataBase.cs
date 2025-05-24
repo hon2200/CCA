@@ -10,7 +10,7 @@ using AYellowpaper;
 //行动数据库类
 public class ActionDataBase : MonoSingleton<ActionDataBase>
 {
-    private void Start()
+    private void Awake()
     {
         LoadingActions();
     }
@@ -43,8 +43,6 @@ public class LoadingAction :Singleton<LoadingAction>
         //对每一个行动，创建字典
         foreach (ActionType type in Enum.GetValues(typeof(ActionType)))
         {
-            if (type == ActionType.None)
-                continue;
             var subDict = CreateSpecificDictionary(type);
             foreach (var kvp in subDict)
                 dict.Add(kvp.Key, kvp.Value);
@@ -58,10 +56,13 @@ public class LoadingAction :Singleton<LoadingAction>
         string path;
         switch(actionType)
         {
-            case ActionType.Attack:
+            //BulletAttack帮忙把所有Attack都加载了，就没有SwordAttack什么事儿了
+            case ActionType.BulletAttack:
                 path = Path.Combine(MainPath, "Attack.json");
                 Dictionary<string, AttackDefine> attackDictionary = JsonLoader.DeserializeObject<Dictionary<string, AttackDefine>>(path);
                 return attackDictionary.ConvertToParentDictionary<string, ActionDefine, AttackDefine>();
+            case ActionType.SwordAttack:
+                return new();
             case ActionType.Defend:
                 path = Path.Combine(MainPath, "Defend.json");
                 Dictionary<string, DefendDefine> defendDictionary = JsonLoader.DeserializeObject<Dictionary<string, DefendDefine>>(path);

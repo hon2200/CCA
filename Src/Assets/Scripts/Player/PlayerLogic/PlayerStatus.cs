@@ -9,15 +9,26 @@ public class PlayerStatus
     public PlayerDefine playerDefine;
     public HPAttribute HP;
     public NewPlayerResource resources;
+    public IsAliveAttribute life;
     public PlayerStatus(PlayerDefine playerDefine)
     {
         this.playerDefine = playerDefine;
+        life = new();
+        life.Born();
         HP = new();
         resources = new();
         HP.Set(playerDefine.MaxHP);
+        HP.OnValueChanged += (oldVal, newVal, opType) =>
+            DeadCheck(newVal);
         resources.Bullet.Set(playerDefine.iniResource.Bullet);
         resources.Sword.Set(playerDefine.iniResource.Sword);
         resources.AvailableSword.Set(playerDefine.iniResource.Sword - playerDefine.iniResource.SwordinCD);
+    }
+    //将这个函数添加到HPAttribute的订阅中，一旦HP的值发生改变，立刻检查是否死亡。
+    private void DeadCheck(int HP)
+    {
+        if (HP <= 0)
+            life.Die();
     }
 }
 

@@ -18,11 +18,12 @@ class BattleManager: MonoSingleton<BattleManager>
         //无事发生
 
         //行动阶段
-        ActionPhase.Instance.ReadinAllActs_Debug();
+        ActionPhase.Instance.ReadinOnlyPlayerActs_Debug();
         //结算阶段
         ResolutionPhase.Instance.Resolution();
         //回合结束阶段
         EndPhase.Instance.UpdateHistory();
         EndPhase.Instance.ClearMove();
+        CardDemonstrateSystem.Instance.DeleteAllDemonstratingCard();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 // 非泛型基类
-public abstract class ActionBase:ICloneable
+public abstract class ActionBase : ICloneable
 {
     public ActionDefine ActionInfo { get; protected set; }
     public int Target { get; set; }

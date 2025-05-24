@@ -8,7 +8,6 @@
             0
         ],
         "TargetType": "Self",
-        "ItemType": "Supply",
         "CD": 0,
         "SupplyNumber": [
             1,
@@ -24,7 +23,6 @@
             0
         ],
         "TargetType": "Self",
-        "ItemType": "Supply",
         "CD": 0,
         "SupplyNumber": [
             2,
@@ -40,7 +38,6 @@
             0
         ],
         "TargetType": "Self",
-        "ItemType": "Supply",
         "CD": 0,
         "SupplyNumber": [
             0,
@@ -56,7 +53,6 @@
             0
         ],
         "TargetType": "Self",
-        "ItemType": "Supply",
         "CD": 0,
         "SupplyNumber": [
             0,

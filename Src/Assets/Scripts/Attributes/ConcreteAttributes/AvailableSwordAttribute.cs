@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class AvailableSwordAttribute:ObservableAttribute<int>
+public class AvailableSwordAttribute : ObservableAttribute<int>
 {
     public void Set(int amount) => SetValue(amount, "Set");
     public void CoolDown(int number) => SetValue(number, "CoolDown");

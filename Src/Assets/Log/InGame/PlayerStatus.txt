@@ -15,14 +15,319 @@ status:
     Value:       5
   resources: 
     Bullet: 
-      Value:         -1
+      Value:         1
     Sword: 
-      Value:         0
+      Value:         5
     AvailableSword: 
-      Value:         -1
+      Value:         5
+  life: 
+    Value:       True
 ------------------------------------
 Key: 2
 ID_inGame:   2
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       5
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       5
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       5
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Key: 5
+ID_inGame:   5
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       5
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Dict 内容 (Count: 5) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       Human
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       5
+  resources: 
+    Bullet: 
+      Value:         -2
+    Sword: 
+      Value:         5
+    AvailableSword: 
+      Value:         5
+  life: 
+    Value:       True
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       4
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       4
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       4
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Key: 5
+ID_inGame:   5
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       5
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Dict 内容 (Count: 5) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       Human
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       3
+  resources: 
+    Bullet: 
+      Value:         -12
+    Sword: 
+      Value:         5
+    AvailableSword: 
+      Value:         5
+  life: 
+    Value:       True
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       0
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       False
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       0
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       False
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    Value:       2
+  resources: 
+    Bullet: 
+      Value:         0
+    Sword: 
+      Value:         0
+    AvailableSword: 
+      Value:         0
+  life: 
+    Value:       True
+------------------------------------
+Key: 5
+ID_inGame:   5
 status: 
   playerDefine: 
     ID:       Debug_Player
@@ -36,393 +341,11 @@ status:
     Value:       3
   resources: 
     Bullet: 
-      Value:         1
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 3
-ID_inGame:   3
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         1
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 4
-ID_inGame:   4
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
       Value:         0
     Sword: 
       Value:         0
     AvailableSword: 
       Value:         0
-------------------------------------
-Key: 5
-ID_inGame:   5
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         -1
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Dict 内容 (Count: 5) - 显示属性: ID_inGame, status
-====================================
-Key: 1
-ID_inGame:   1
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       Human
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         -2
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         -2
-------------------------------------
-Key: 2
-ID_inGame:   2
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       1
-  resources: 
-    Bullet: 
-      Value:         2
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 3
-ID_inGame:   3
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         2
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 4
-ID_inGame:   4
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         0
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 5
-ID_inGame:   5
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         -2
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Dict 内容 (Count: 5) - 显示属性: ID_inGame, status
-====================================
-Key: 1
-ID_inGame:   1
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       Human
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         -3
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         -3
-------------------------------------
-Key: 2
-ID_inGame:   2
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       -1
-  resources: 
-    Bullet: 
-      Value:         3
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 3
-ID_inGame:   3
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         3
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 4
-ID_inGame:   4
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         0
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 5
-ID_inGame:   5
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         -3
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Dict 内容 (Count: 5) - 显示属性: ID_inGame, status
-====================================
-Key: 1
-ID_inGame:   1
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       Human
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         -4
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         -4
-------------------------------------
-Key: 2
-ID_inGame:   2
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       -3
-  resources: 
-    Bullet: 
-      Value:         4
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 3
-ID_inGame:   3
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         4
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 4
-ID_inGame:   4
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         0
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
-------------------------------------
-Key: 5
-ID_inGame:   5
-status: 
-  playerDefine: 
-    ID:       Debug_Player
-    MaxHP:       5
-    Type:       AI
-    iniResource: 
-      Bullet:         0
-      Sword:         0
-      SwordinCD:         0
-  HP: 
-    Value:       5
-  resources: 
-    Bullet: 
-      Value:         -4
-    Sword: 
-      Value:         0
-    AvailableSword: 
-      Value:         0
+  life: 
+    Value:       True
 ------------------------------------

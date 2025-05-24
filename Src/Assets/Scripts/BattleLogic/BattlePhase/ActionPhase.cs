@@ -28,4 +28,7 @@ class ActionPhase:Singleton<ActionPhase>
         else
             Log.PrintLoadedDictionary(Movedict, "Log/InGame/Action_Phase.txt", false);
     }
+    public void ReadinOnlyPlayerActs_Debug()
+    {
+    }
 }

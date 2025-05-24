@@ -2,331 +2,227 @@ Dict 内容 (Count: 5) - 仅显示属性路径: action.ActionList
 ====================================
 Key: 1
 action.ActionList: 
-  List`1 (Count: 4)
+  List`1 (Count: 6)
     [0]: 
       ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
+        SupplyNumber: 
           List`1 (Count: 2)
             [0]:               1
             [1]:               0
+        isCopy:           False
+        ID:           bullet
+        Name:           补给
+        Description:           获得一颗子弹
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
+        TargetType:           Self
       ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
+        SupplyNumber: 
           List`1 (Count: 2)
             [0]:               1
             [1]:               0
+        isCopy:           False
+        ID:           bullet
+        Name:           补给
+        Description:           获得一颗子弹
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         2
-      isEffective:         True
+        TargetType:           Self
+      Target:         1
+      isEffective:         False
     [1]: 
       ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
+        SupplyNumber: 
           List`1 (Count: 2)
             [0]:               0
             [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
+        TargetType:           Self
       ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
+        SupplyNumber: 
           List`1 (Count: 2)
             [0]:               0
             [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         2
-      isEffective:         True
+        TargetType:           Self
+      Target:         1
+      isEffective:         False
     [2]: 
       ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
+        SupplyNumber: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
         Costs: 
           List`1 (Count: 2)
-            [0]:               1
+            [0]:               0
             [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
+        TargetType:           Self
       ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
+        SupplyNumber: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
         Costs: 
           List`1 (Count: 2)
-            [0]:               1
+            [0]:               0
             [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         3
+        TargetType:           Self
+      Target:         1
       isEffective:         False
     [3]: 
       ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
+        SupplyNumber: 
           List`1 (Count: 2)
             [0]:               0
             [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
+        TargetType:           Self
       ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
+        SupplyNumber: 
           List`1 (Count: 2)
             [0]:               0
             [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
         CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         3
+        TargetType:           Self
+      Target:         1
+      isEffective:         False
+    [4]: 
+      ActionInfo: 
+        SupplyNumber: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
+        CD:           0
+        TargetType:           Self
+      ActionInfo: 
+        SupplyNumber: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
+        CD:           0
+        TargetType:           Self
+      Target:         1
+      isEffective:         False
+    [5]: 
+      ActionInfo: 
+        SupplyNumber: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
+        CD:           0
+        TargetType:           Self
+      ActionInfo: 
+        SupplyNumber: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               1
+        isCopy:           False
+        ID:           sword
+        Name:           拔剑
+        Description:           获得一把剑
+        Costs: 
+          List`1 (Count: 2)
+            [0]:               0
+            [1]:               0
+        CD:           0
+        TargetType:           Self
+      Target:         1
       isEffective:         False
 ------------------------------------
 Key: 2
 action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 3
 action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         1
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 4
 action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 5
 action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         5
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Dict 内容 (Count: 5) - 仅显示属性路径: action.ActionList
 ====================================
 Key: 1
 action.ActionList: 
-  List`1 (Count: 4)
+  List`1 (Count: 3)
     [0]: 
       ActionInfo: 
         Level:           4
@@ -342,7 +238,6 @@ action.ActionList:
             [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
       ActionInfo: 
         Level:           4
         Damage:           1
@@ -357,48 +252,45 @@ action.ActionList:
             [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
       Target:         2
       isEffective:         True
     [1]: 
       ActionInfo: 
-        Level:           2
+        Level:           4
         Damage:           1
         AttackType:           0
         isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
+        ID:           shoot
+        Name:           给枪
+        Description:           对应防御：挡
         Costs: 
           List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
+            [0]:               1
+            [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
       ActionInfo: 
-        Level:           2
+        Level:           4
         Damage:           1
         AttackType:           0
         isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
+        ID:           shoot
+        Name:           给枪
+        Description:           对应防御：挡
         Costs: 
           List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
+            [0]:               1
+            [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
-      Target:         2
+      Target:         3
       isEffective:         True
     [2]: 
       ActionInfo: 
         Level:           4
         Damage:           1
         AttackType:           0
-        isCopy:           True
+        isCopy:           False
         ID:           shoot
         Name:           给枪
         Description:           对应防御：挡
@@ -408,12 +300,11 @@ action.ActionList:
             [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
       ActionInfo: 
         Level:           4
         Damage:           1
         AttackType:           0
-        isCopy:           True
+        isCopy:           False
         ID:           shoot
         Name:           给枪
         Description:           对应防御：挡
@@ -423,874 +314,106 @@ action.ActionList:
             [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-    [3]: 
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         3
-      isEffective:         False
+      Target:         4
+      isEffective:         True
 ------------------------------------
 Key: 2
 action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 3
 action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         1
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 4
 action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 5
 action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         5
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Dict 内容 (Count: 5) - 仅显示属性路径: action.ActionList
 ====================================
 Key: 1
 action.ActionList: 
-  List`1 (Count: 4)
+  List`1 (Count: 2)
     [0]: 
       ActionInfo: 
-        Level:           4
-        Damage:           1
+        Level:           7
+        Damage:           3
         AttackType:           0
         isCopy:           False
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
+        ID:           nuclear_bomb
+        Name:           和平
+        Description:           不可以被防御
         Costs: 
           List`1 (Count: 2)
-            [0]:               1
+            [0]:               5
             [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
       ActionInfo: 
-        Level:           4
-        Damage:           1
+        Level:           7
+        Damage:           3
         AttackType:           0
         isCopy:           False
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
+        ID:           nuclear_bomb
+        Name:           和平
+        Description:           不可以被防御
         Costs: 
           List`1 (Count: 2)
-            [0]:               1
+            [0]:               5
             [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
-      Target:         2
+      Target:         3
       isEffective:         True
     [1]: 
       ActionInfo: 
-        Level:           2
-        Damage:           1
+        Level:           7
+        Damage:           3
         AttackType:           0
         isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
+        ID:           nuclear_bomb
+        Name:           和平
+        Description:           不可以被防御
         Costs: 
           List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
+            [0]:               5
+            [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
       ActionInfo: 
-        Level:           2
-        Damage:           1
+        Level:           7
+        Damage:           3
         AttackType:           0
         isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
+        ID:           nuclear_bomb
+        Name:           和平
+        Description:           不可以被防御
         Costs: 
           List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
+            [0]:               5
+            [1]:               0
         CD:           0
         TargetType:           Enemy
-        ActionType:           0
       Target:         2
       isEffective:         True
-    [2]: 
-      ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-    [3]: 
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         3
-      isEffective:         False
 ------------------------------------
 Key: 2
 action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 3
 action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         1
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 4
 action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------
 Key: 5
 action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         5
-      isEffective:         False
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action.ActionList
-====================================
-Key: 1
-action.ActionList: 
-  List`1 (Count: 4)
-    [0]: 
-      ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         2
-      isEffective:         True
-    [1]: 
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           False
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         2
-      isEffective:         True
-    [2]: 
-      ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      ActionInfo: 
-        Level:           4
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           shoot
-        Name:           给枪
-        Description:           对应防御：挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-    [3]: 
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      ActionInfo: 
-        Level:           2
-        Damage:           1
-        AttackType:           0
-        isCopy:           True
-        ID:           stab
-        Name:           刺
-        Description:           对应防御：挡，双挡
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               1
-        CD:           0
-        TargetType:           Enemy
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-------------------------------------
-Key: 2
-action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 3
-action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           comeon
-        Name:           万象天引
-        Description:           吸收所有场上所有补给和攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           1
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           block
-        Name:           挡
-        Description:           可以挡住“刺类”攻击和单发子弹类攻击
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         1
-      isEffective:         False
-------------------------------------
-Key: 4
-action.ActionList: 
-  List`1 (Count: 2)
-    [0]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           False
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         2
-      isEffective:         False
-    [1]: 
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        SupplyNumber: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        isCopy:           True
-        ID:           bullet
-        Name:           补给
-        Description:           获得一颗子弹
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               0
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         3
-      isEffective:         False
-------------------------------------
-Key: 5
-action.ActionList: 
-  List`1 (Count: 1)
-    [0]: 
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      ActionInfo: 
-        ID:           rebounce
-        Name:           反弹
-        Description:           可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-        Costs: 
-          List`1 (Count: 2)
-            [0]:               1
-            [1]:               0
-        CD:           0
-        TargetType:           Self
-        ActionType:           0
-      Target:         5
-      isEffective:         False
+  List`1 (Count: 0)
 ------------------------------------

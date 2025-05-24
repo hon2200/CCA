@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using static UnityEngine.EventSystems.EventTrigger;
+using UnityEngine;
 
 //行动类别
+[Serializable]
 public enum ActionType
 {
-    None = -1,
     Supply = 1,
-    Attack = 2,
-    Defend =3,
-    Counter = 4,
-    Special =5,
+    BulletAttack = 2, 
+    SwordAttack = 3,
+    Defend = 4,
+    Counter = 5,
+    Special = 6,
 }
     
 //目标的类别
 public enum TargetType
 {
-    None = -1, 
     Self = 0,  //默认目标是自己，如补给，防御，反制，过来
     Enemy = 1, //默认目标是敌人，如攻击和挑衅
 }
@@ -24,7 +25,6 @@ public enum TargetType
 //补给or消耗资源的类别
 public enum SupplyType
 {
-    None = -1,
     Bullet = 1,
     Sword = 2,
 }
@@ -32,7 +32,6 @@ public enum SupplyType
 //攻击类型
 public enum AttackType
 {
-    None = -1,
     BulletAttack = 1,
     SwordAttack = 2,
 }
@@ -54,8 +53,7 @@ public class ActionDefine : ICloneable
     public string Description { get; set; } // 行动描述
     public List<int> Costs { get; set; } // 行动消耗
     public int CD { get; set; } //冷却时间
-    public TargetType TargetType { get; set; } // 目标类型
-    public ActionType ActionType { get; set; } //行动类型
+    public TargetType TargetType { get; set; } // 目标类型//未来可能在读取行动上面有用
     // 实现 ICloneable 接口（深拷贝）
     public virtual object Clone()
     {
@@ -67,7 +65,6 @@ public class ActionDefine : ICloneable
             Costs = new List<int>(this.Costs), // 创建新 List，复制所有元素
             CD = this.CD,
             TargetType = this.TargetType,
-            ActionType = this.ActionType,
         };
     }
 }
@@ -113,7 +110,7 @@ public class AttackDefine : ActionDefine
         switch(attack.ActionInfo.ID)
         {
             //溅射伤害，暂时没有通过buff去定义它，之后想到好的架构再去加，先暂时写在这里
-            case "nuclearbomb":
+            case "nuclear_bomb":
                 victim.status.HP.Damage(attack.ActionInfo.Damage);
                 foreach(var player in PlayerManager.Instance.Players)
                 {

@@ -8,7 +8,6 @@
             0
         ],
         "TargetType": "Self",
-        "ItemType": "Counter",
         "CD": 0
     },
     "counterblade": {
@@ -20,7 +19,6 @@
             1
         ],
         "TargetType": "Self",
-        "ItemType": "Counter",
         "CD": 0
     },
     "disarm": {
@@ -32,7 +30,6 @@
             4
         ],
         "TargetType": "Self",
-        "ItemType": "Counter",
         "CD": 0
     },
     "spectral_reflection": {
@@ -44,7 +41,6 @@
             3
         ],
         "TargetType": "Self",
-        "ItemType": "Counter",
         "CD": 0
     }
 }

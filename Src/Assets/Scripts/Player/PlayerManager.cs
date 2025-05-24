@@ -53,10 +53,10 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         }
 
         // 创建位置列表并复制（避免修改原始数据）
-        var availablePositions = new List<Vector2Int>();
+        var availablePositions = new List<Vector2>();
         for (int i = 0; i < spacingData.Player_X.Count; i++)
         {
-            availablePositions.Add(new Vector2Int(spacingData.Player_X[i], spacingData.Player_Y[i]));
+            availablePositions.Add(new Vector2(spacingData.Player_X[i], spacingData.Player_Y[i]));
         }
 
         // 先处理人类玩家（确保人类玩家有固定位置）
@@ -65,7 +65,9 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             if (player.status.playerDefine.Type == PlayerType.Human)
             {
                 // 人类玩家固定位置
-                player.transform.localPosition = new Vector3(0, -300, 0);
+                player.transform.localPosition = new Vector3(8, -5, 1);
+                if (CardSelectionManager.Instance.player1 == null)
+                    CardSelectionManager.Instance.player1 = player;
             }
         }
 
@@ -76,7 +78,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             {
                 // 使用并移除第一个可用位置
                 var pos = availablePositions[0];
-                player.transform.localPosition = new Vector3(pos.x, pos.y, 0);
+                player.transform.localPosition = new Vector3(pos.x, pos.y, 1);
                 availablePositions.RemoveAt(0);
             }
         }

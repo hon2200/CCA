@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 public class PlayerSpacingDataBase : MonoSingleton<PlayerSpacingDataBase>
 {
-    public void Start()
+    public void Awake()
     {
         LoadingPlayers();
     }

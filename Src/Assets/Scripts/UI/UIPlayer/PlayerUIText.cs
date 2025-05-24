@@ -5,11 +5,14 @@ using TMPro;
 using AYellowpaper.SerializedCollections;
 
 //挂载在玩家Prefab身上，获取到玩家自己的UI，初始化之后读入UITextManager，在UIText里面统一管理
+//处理PlayerStatue里面的逻辑信息到界面上UI的真实信息的传递
 public class PlayerUIText : MonoBehaviour
 {
     public Player player;
+    //玩家的图像
+    public SpriteRenderer spriteRenderer;
     [SerializeField]
-    public SerializedDictionary<PlayerUITextName, TextMeshProUGUI> UIText;
+    public SerializedDictionary<PlayerUITextName, TextMeshPro> UIText;
     public void Initialize()
     {
         foreach(var text in UIText)
@@ -38,7 +41,7 @@ public class PlayerUIText : MonoBehaviour
                     player.status.resources.AvailableSword.OnValueChanged += (oldVal, newVal, opType) =>
                         UpdatePlayerText(text.Value, newVal, player.status.resources.Sword.Value);
                     player.status.resources.Sword.OnValueChanged += (oldVal, newVal, opType) =>
-                        UpdatePlayerText(text.Value, player.status.resources.Sword.Value, newVal);
+                        UpdatePlayerText(text.Value, player.status.resources.AvailableSword.Value, newVal);
                     // 初始更新
                     UpdatePlayerText(text.Value, player.status.resources.AvailableSword.Value,
                         player.status.resources.Sword.Value);
@@ -48,10 +51,22 @@ public class PlayerUIText : MonoBehaviour
                     break;
             }
         }
-        
+
+        player.status.life.OnValueChanged += (oldVal, newVal, opType) =>
+        {
+            if (opType == "Die")
+            {
+                OntheEdgeofDeath();
+            }
+        };
+    }
+    private void OntheEdgeofDeath()
+    {
+        spriteRenderer.color = Color.gray;
+        Debug.Log("Player" + player.ID_inGame + "Have done it now...");
     }
     // 辅助方法：更新文本显示
-    private void UpdatePlayerText(TextMeshProUGUI textElement, object value, object maxValue = null)
+    private void UpdatePlayerText(TextMeshPro textElement, object value, object maxValue = null)
     {
         if (textElement == null) return;
 
