@@ -66,8 +66,14 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             {
                 // 人类玩家固定位置
                 player.transform.localPosition = new Vector3(8, -5, 1);
+                //卡牌的选择和展示系统都需要知道哪位是玩家1，这里面第一个生成的人类玩家是玩家1，联机再说
                 if (CardSelectionManager.Instance.player1 == null)
+                {
                     CardSelectionManager.Instance.player1 = player;
+                    CardDemonstrateSystem.Instance.AddListener(player);
+                    CardPresentSystem.Instance.player1 = player;
+                }
+
             }
         }
 

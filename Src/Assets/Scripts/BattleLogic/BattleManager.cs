@@ -24,6 +24,5 @@ class BattleManager: MonoSingleton<BattleManager>
         //回合结束阶段
         EndPhase.Instance.UpdateHistory();
         EndPhase.Instance.ClearMove();
-        CardDemonstrateSystem.Instance.DeleteAllDemonstratingCard();
     }
 }

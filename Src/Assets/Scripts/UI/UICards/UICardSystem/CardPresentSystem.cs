@@ -23,6 +23,7 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
     public SerializedDictionary<ActionType, Button> MenuButtons;
     [SerializeField]
     public  SerializedDictionary<ActionType, List<GameObject>> Cards_inType;
+    public Player player1;
 
     //依据CardLiberary，按照类型创建卡牌
     public void CreateCards()
@@ -73,6 +74,38 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
             OpenPenal(button.Key));               
         }
     }
+    //检查卡牌是否可用
+    public void CheckCards()
+    {
+        if (player1 != null)
+        {
+            foreach (var cards_inType in Cards_inType)
+            {
+                foreach (var card in cards_inType.Value)
+                {
+                    var runTimeCard = card.GetComponent<RunTimeCard>();
+                    if (RuleCheck.isActionLegal(player1, runTimeCard.actionDefine))
+                        runTimeCard.isAvailable = true;
+                    else
+                        runTimeCard.isAvailable = false;
+                }
+            }
+        }
+    }
+
+    //根据Key键查找卡牌
+    public void FindCard(string key, out GameObject cardFinded)
+    {
+        cardFinded = null;
+        foreach(var cards_inType in Cards_inType)
+        {
+            foreach (var card in cards_inType.Value)
+            {
+                if (card.GetComponent<RunTimeCard>().actionDefine.ID == key)
+                    cardFinded = card;
+            }
+        }
+    }
 
     public void Start()
     {
@@ -80,6 +113,10 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
         ArrangeCards();
         MenuButtonsReady();
         OpenPenal(ActionType.Supply);
+    }
+    public void Update()
+    {
+        CheckCards();
     }
     #region 具体实现私有函数
     private GameObject CreateCard(CardTemplete cardTemplete, Transform parent)

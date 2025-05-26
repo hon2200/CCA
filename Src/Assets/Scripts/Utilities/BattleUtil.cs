@@ -11,7 +11,7 @@ static class BattleUtil
     public static List<BattleAction<Type>> SelectActionType<Type>(this Player player)where Type:ActionDefine
     {
         List<BattleAction<Type>> list = new ();
-        foreach(ActionBase action in player.action.ActionList)
+        foreach(ActionBase action in player.action)
         {
             if(action is BattleAction<Type> typedAction)
             {

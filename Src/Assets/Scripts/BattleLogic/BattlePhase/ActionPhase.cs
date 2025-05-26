@@ -20,7 +20,7 @@ class ActionPhase:Singleton<ActionPhase>
             Movedict.TryGetValue(player.Key, out var moves);
             foreach (var move in moves)
             {
-                player.Value.action.ReadinMove(move.Item1, move.Item2);
+                player.Value.action.ReadinMove(move.Item1, move.Item2, "Debug");
             }
         }
         if (BattleManager.Instance.Turn.Value == 1)

@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class RunTimeCard : MonoBehaviour
 {
+    public bool isAvailable = true;
     public CardTemplete cardTemplete;
     public ActionDefine actionDefine;
 }

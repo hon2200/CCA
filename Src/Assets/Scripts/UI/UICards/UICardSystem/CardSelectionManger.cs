@@ -29,6 +29,11 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
     public void Update()
     {
         MouseAndRayUtil.Hit("Card", out var card);
+        //这个代码不好，之后处理isAvailable的位置把这个一起处理了。我感觉可以写在接口里面？
+        //但是看看Card的逻辑上isAvailable和交互上的要不要分开？
+        if (card != null)
+            if (card.GetComponent<RunTimeCard>().isAvailable == false)
+                card = null;
         MouseAndRayUtil.Hit("Player", out var player);
         MouseAndRayUtil.Hit("CardEffectiveArea", out var area);
         MouseAndRayUtil.Hit("CardDemo", out var cardDemo);
@@ -46,8 +51,7 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     if (cardDemo != null)
                     {
                         int order = CardDemonstrateSystem.Instance.presentCard.IndexOf(cardDemo);
-                        player1.action.ActionList.RemoveAt(order);
-                        CardDemonstrateSystem.Instance.DeleteDemonstratingCard(cardDemo);
+                        player1.action.DeleteMoveAt(order, "Player");
                     }
 
                 }
@@ -87,10 +91,8 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 {
                     if (area != null)
                     {
-                        player1.action.ReadinMove(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID, player1.ID_inGame);
-                        Debug.Log("ReadinMove" + lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID);
+                        player1.action.ReadinMove(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID, player1.ID_inGame, "Player");
                         lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
-                        CardDemonstrateSystem.Instance.CreateDemonstratingCard(lastHoveredCard, player1.ID_inGame);
                         rayStatus = RayStatus.ChooseCard;
                     }
                     else
@@ -114,9 +116,7 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
                         player1.action.ReadinMove(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
-                            target);
-                        Debug.Log("ReadinMove" + lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID);
-                        CardDemonstrateSystem.Instance.CreateDemonstratingCard(lastHoveredCard, target);
+                            target, "Player");
                         lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
                         Arrow.Instance.DeActive();
                         rayStatus = RayStatus.ChooseMultiTarget;
@@ -139,9 +139,8 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
                         player1.action.ReadinMove(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
-                            target);
+                            target, "Player");
                         Debug.Log("ReadinMove" + lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID);
-                        CardDemonstrateSystem.Instance.CreateDemonstratingCard(lastHoveredCard, target);
                         player.GetComponent<PlayerSelection>().OnSelect();
                     }
                 }

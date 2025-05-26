@@ -6,8 +6,29 @@ using UnityEngine;
 public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
 {
     public List<GameObject> presentCard;
+    public void AddListener(Player player1)
+    {
+        player1.action.OnListChanged += (newList, message) =>
+        {
+            if (message == "Clear_End")
+                DeleteAllDemonstratingCard();
+            if (message == "Remove_Player" || message == "Add_Player")
+                DemonstrateCards(newList);
+        };
+    }
+    public void DemonstrateCards(List<ActionBase> actionList)
+    {
+        DeleteAllDemonstratingCard();
+        foreach(var action in actionList)
+        {
+            CardPresentSystem.Instance.FindCard(action.ActionInfo.ID, out var card);
+            if (card != null)
+                CreateDemonstratingCard(card, action.Target);
+        }
+        ArrangePosition();
+    }
     //复制一个卡牌用于展示
-    public void CreateDemonstratingCard(GameObject oriCard, int target)
+    private void CreateDemonstratingCard(GameObject oriCard, int target)
     {
         //Copy卡牌
         GameObject demoCard = Instantiate(oriCard, transform);
@@ -38,18 +59,13 @@ public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
             presentCard[i].transform.localPosition = position;
         }
     }
-    //删除展示卡牌
-    public void DeleteDemonstratingCard(GameObject oriCard)
-    {
-        oriCard.SetActive(false);
-        presentCard.Remove(oriCard);
-    }
     public void DeleteAllDemonstratingCard()
     {
         foreach(var card in presentCard)
         {
-            card.SetActive(false);
+            Destroy(card);
         }
         presentCard.Clear();
+        Arrow.Instance.DeActive();
     }
 }

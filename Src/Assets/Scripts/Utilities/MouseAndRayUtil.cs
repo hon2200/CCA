@@ -25,6 +25,7 @@ public static class MouseAndRayUtil
         // 使用LayerMask进行射线检测，只检测指定层级的物体
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, 1 << LayerMask.NameToLayer(LayerName)))
         {
+            //只检测可用的Card
             item = hit.collider.gameObject;
             return true;
         }

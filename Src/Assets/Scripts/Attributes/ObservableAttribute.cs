@@ -20,6 +20,10 @@ public abstract class ObservableAttribute<T> where T : struct
         get => _value;
         protected set => SetValue(value, "DirectSet");
     }
+    //备份//备份直到读取期间，观测模式关闭
+    private T save;
+    //是否开启观测模式
+    public bool onObserve = true;
 
     protected void SetValue(T newValue, string operationType)
     {
@@ -27,10 +31,18 @@ public abstract class ObservableAttribute<T> where T : struct
         {
             T oldValue = _value;
             _value = newValue;
-            OnValueChanged?.Invoke(oldValue, _value, operationType);
-            AfterValueChanged(oldValue, _value, operationType);
+            if(onObserve)
+                OnValueChanged?.Invoke(oldValue, _value, operationType);
         }
     }
-
-    protected virtual void AfterValueChanged(T oldValue, T newValue, string operationType) { }
+    protected void Save()
+    {
+        save = _value;
+        onObserve = false;
+    }
+    protected void Load()
+    {
+        _value = save;
+        onObserve = true;
+    }
 }

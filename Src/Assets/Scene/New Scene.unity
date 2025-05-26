@@ -1520,6 +1520,7 @@ MonoBehaviour:
       Value: []
     - Key: 6
       Value: []
+  player1: {fileID: 0}
 --- !u!4 &1880790771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4129098898081166046, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}

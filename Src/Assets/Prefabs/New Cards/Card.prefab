@@ -1214,6 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94bb3fadf144da2438d8b42781233cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAvailable: 1
   cardTemplete: {fileID: 0}
 --- !u!114 &5492411247626016280
 MonoBehaviour:

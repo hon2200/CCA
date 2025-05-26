@@ -11,15 +11,31 @@ public class CardUI : MonoBehaviour
     public bool DoBind = true;
     //这个Dictionary里面的值可以是null不报错，这个兼容性还是要有的。
     [SerializeField]
-    public SerializedDictionary<CardUITextName, TextMeshPro> UIText;
+    public AYellowpaper.SerializedCollections.SerializedDictionary<CardUITextName, TextMeshPro> UIText;
 
     //管理图片
     public SpriteRenderer sprite;
+    public Color spriteOriginalColor;
     public SpriteRenderer comsume_icon_sprite;
 
     //管理UI层级
     public Canvas cardCanvas;
     public SortingGroup sortingGroup;
+    public void Start()
+    {
+        spriteOriginalColor = sprite.color;
+    }
+    public void Update()
+    {
+        if (GetComponent<RunTimeCard>().isAvailable == true)
+        {
+            sprite.color = spriteOriginalColor;
+        }
+        if (GetComponent<RunTimeCard>().isAvailable == false)
+        {
+            sprite.color = Color.gray;
+        }
+    }
     public void Initialize(CardTemplete cardTemplete)
     {
         if (!DoBind)

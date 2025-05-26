@@ -120,7 +120,7 @@ public static class Log
     //打印字典里的嵌套字段
     public static void PrintNestedPropertyInDictionary<key, Type>(
     Dictionary<key, Type> Dict,
-    string nestedPropertyPath,  // 例如 "action.ActionList"
+    string nestedPropertyPath,  // 例如 "action.Value"
     string LogPath = "Log/log.txt",
     bool overwrite = true)
     {

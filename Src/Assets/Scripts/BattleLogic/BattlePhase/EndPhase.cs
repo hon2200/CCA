@@ -17,7 +17,7 @@ class EndPhase : Singleton<EndPhase>
     {
         foreach(var player in PlayerManager.Instance.Players)
         {
-            player.Value.action.ClearMove();
+            player.Value.action.ClearMove("End");
         }
     }
 }

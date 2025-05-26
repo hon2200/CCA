@@ -36,14 +36,14 @@ public class ResolutionPhase : Singleton<ResolutionPhase>
             Log.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players, 
                 new string[] {"ID_inGame", "status"},"Log/InGame/PlayerStatus.txt");
             Log.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
-                "action.ActionList", "Log/InGame/PlayerAction.txt");
+                "action.Value", "Log/InGame/PlayerAction.txt");
         }
         else
         {
             Log.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
                 new string[] { "ID_inGame", "status" }, "Log/InGame/PlayerStatus.txt", false);
             Log.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
-                "action.ActionList", "Log/InGame/PlayerAction.txt",false);
+                "action.Value", "Log/InGame/PlayerAction.txt",false);
         }
 
     }
@@ -80,7 +80,7 @@ public class ResolutionPhase : Singleton<ResolutionPhase>
                         var attackcopy = (BattleAction<AttackDefine>)attack.Clone();
                         attackcopy.Target = theComeonOne.ID_inGame;
                         attackcopy.ActionInfo.isCopy = true;
-                        theBeComeonedOne.Value.action.ActionList.Add(attackcopy);
+                        theBeComeonedOne.Value.action.Add(attackcopy, "InGame");
                     }
                     //过来直接改变目标
                     else
@@ -100,7 +100,7 @@ public class ResolutionPhase : Singleton<ResolutionPhase>
                         var supplycopy = (BattleAction<SupplyDefine>)supply.Clone();
                         supplycopy.Target = theComeonOne.ID_inGame;
                         supplycopy.ActionInfo.isCopy = true;
-                        theBeComeonedOne.Value.action.ActionList.Add(supplycopy);
+                        theBeComeonedOne.Value.action.Add(supplycopy, "InGame");
                     }
                     //过来直接改变目标
                     else
@@ -167,7 +167,7 @@ public class ResolutionPhase : Singleton<ResolutionPhase>
     private void Consume(Player player)
     {
         bool useSword = false;
-        foreach(var action in player.action.ActionList)
+        foreach(var action in player.action)
         {
             player.status.resources.Bullet.Use(action.ActionInfo.Costs[0]);
             player.status.resources.AvailableSword.Use(action.ActionInfo.Costs[1]);
