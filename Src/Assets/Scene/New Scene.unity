@@ -560,6 +560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 1
+  AlivePlayerNumber: 0
   playerPrefab: {fileID: 2879334617743548941, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
 --- !u!4 &61938971
 Transform:
@@ -1186,6 +1187,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1952882935}
+        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1318394102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1383,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1952882935}
         m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: Round
+        m_MethodName: ReadyUpAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1952882935}
+        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
+        m_MethodName: CheckReady
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1665,6 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 1
+  CurrentPhaseIndex: 0
 --- !u!1 &2081707949
 GameObject:
   m_ObjectHideFlags: 0

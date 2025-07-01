@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //PlayerAction信息管理：
 
 /*
+ * 首先：玩家的行动现在是一个Observable可观测量，也就意味着：任何对它的改变都会被检测到并会反馈一个message，
+ * 以下说明对message的命名——
  * 对行动的改变目前只有三种情况可能发生：1.玩家读入，2.电脑读入，3.战斗结算中生成更改。4.战斗结束后（一般是清空行动）
  * 三种情况分别命名为Player、AI、InGame、End
  * 2.命名message的规范是Add_Player，Add为原本List的操作名，用下划线连接，两边都大写
@@ -58,7 +61,6 @@ public class PlayerAction : ObservableList<ActionBase>
 
             // 4. 添加到 Value（Value 是 List<ActionBase>）
             Add((ActionBase)actionInstance, "Add_" + Case);
-                
         }
         else
         {
@@ -80,4 +82,5 @@ public class PlayerAction : ObservableList<ActionBase>
     {
         Clear("Clear_" + Case);
     }
+
 }

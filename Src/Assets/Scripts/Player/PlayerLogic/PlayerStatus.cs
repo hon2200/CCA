@@ -30,6 +30,18 @@ public class PlayerStatus
         if (HP <= 0)
             life.Die();
     }
+    public void SaveStatus()
+    {
+        HP.Save();
+        resources.Save();
+        life.Save();
+    }
+    public void LoadStatus()
+    {
+        HP.Load();
+        resources.Load();
+        life.Load();
+    }
 }
 
 public class NewPlayerResource
@@ -42,5 +54,17 @@ public class NewPlayerResource
         Bullet = new();
         Sword = new();
         AvailableSword = new();
+    }
+    public void Save()
+    {
+        Bullet.Save();
+        Sword.Save();
+        AvailableSword.Save();
+    }
+    public void Load()
+    {
+        Bullet.Load();
+        Sword.Load();
+        AvailableSword.Load();
     }
 }

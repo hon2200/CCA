@@ -4,8 +4,25 @@ using UnityEngine;
 using System.Linq;
 
 //回合结算阶段脚本
-public class ResolutionPhase : Singleton<ResolutionPhase>
+//这个脚本存在的问题：极度依赖于Player类的内部结构，一旦Player类发生改变，这里面的所有相关引用都需要调整，
+//关键是这种问题不止在这个脚本里面，基本上到处都有，Player类内部，Status和Action也即将产生耦合。
+//怎么办呢？
+//或许把代码分块会好一点，在Player类里面专门分一个块用来处理相关操作，这样这个结算类的功能就会简单很多，
+//因为除了结算阶段，一些其他地方也会用到结算函数，这是其一
+//Player类自己的函数依赖于自己内部结构，这个没有任何问题，但是我想避免外部函数对其的依赖
+public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
 {
+    public void OnEnteringPhase()
+    {
+        Resolution();
+        PrintResult_Debug();
+        //结算阶段不等待玩家
+        BattleManager.Instance.PhaseAdvance();
+    }
+    public void OnExitingPhase()
+    {
+
+    }
     //结算阶段，结算大家的行动
     //由于目前还没引入各种buff，所以结算阶段就先写在这里
     public void Resolution()
@@ -13,6 +30,7 @@ public class ResolutionPhase : Singleton<ResolutionPhase>
         foreach (var player in PlayerManager.Instance.Players.Values)
         {
             Consume(player);
+            CoolDownSword(player);
         }
         foreach (var player in PlayerManager.Instance.Players.Values)
         {
@@ -166,15 +184,21 @@ public class ResolutionPhase : Singleton<ResolutionPhase>
     //结算玩家资源的消耗以及剑的回复
     private void Consume(Player player)
     {
-        bool useSword = false;
         foreach(var action in player.action)
         {
             player.status.resources.Bullet.Use(action.ActionInfo.Costs[0]);
             player.status.resources.AvailableSword.Use(action.ActionInfo.Costs[1]);
-            if (action.ActionInfo.Costs[1] !=0) 
+        }
+    }
+    private void CoolDownSword(Player player)
+    {
+        bool useSword = false;
+        foreach (var action in player.action)
+        {
+            if (action.ActionInfo.Costs[1] != 0)
                 useSword = true;
         }
-        if(!useSword)
+        if (!useSword)
         {
             player.status.resources.AvailableSword.CoolDown(player.status.resources.Sword.Value);
         }

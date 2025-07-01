@@ -98,6 +98,75 @@ deepseek强烈建议改成string，同时还建议我加入各种前后缀（例
 
 
 
+Phase : 有来自于各个Phase的继承子类
+
+Phase.OnEnteringPhase()，在进入时触发，
+
+OnExisiting()，触发并且进入下一个Phase
+
+每一个Phase定义一个Ready，一旦ok执行OnExisting？
+
+
+
+ReadyDetector：
+
+```c#
+List<bool> ready;
+bool allReady;
+```
+
+
+
+
+
+每一帧都执行：
+
+
+
+Player
+
+{
+
+}
+
+
+
+点击开始游戏：
+
+进入开始阶段，执行开始阶段，玩家确认后：
+
+进入行动阶段，玩家确认执行行动后
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

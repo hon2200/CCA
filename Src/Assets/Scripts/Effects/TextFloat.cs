@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 
+//×ÖÌåµÄ¶¶¶¯
 public class CustomFont : MonoBehaviour
 {
     public TMP_Text tmp;

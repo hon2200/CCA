@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
+    public int AlivePlayerNumber;
     public GameObject playerPrefab;
     public Dictionary<int, Player> Players;
     public void CreatingPlayers_Debug()
@@ -21,6 +22,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             Players.Add(i, newPlayer);
         }
         InitializePlayerSpace(5);
+        AlivePlayerNumber = 5;
         //Log.PrintLoadedDictionary(Players, "Log/Loading/PlayerTable_Debug.txt");
     }
     //创建HP=5的用于测试的玩家

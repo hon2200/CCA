@@ -7,22 +7,52 @@ using System.Threading.Tasks;
 class BattleManager: MonoSingleton<BattleManager>
 {
     public TurnAttribute Turn;
-    public void Start()
+    public List<Phase> PhaseList;
+    public int CurrentPhaseIndex;
+    //玩家若未确定好行动，则保持等待
+    private bool Ready = false;
+    //初始化PhaseList
+    private void Awake()
     {
-        Turn = new();
+        PhaseList = new();
+        PhaseList.Add(StartPhase.Instance);
+        PhaseList.Add(ActionPhase.Instance);
+        PhaseList.Add(ResolutionPhase.Instance);
+        PhaseList.Add(EndPhase.Instance);
     }
-    public void Round()
+    public void StartGame()
     {
-        //回合开始阶段
-        Turn.Advance();
-        //无事发生
+        CurrentPhaseIndex = 0;
+        Turn = new();
+        StartPhase.Instance.OnEnteringPhase();
+    }
 
-        //行动阶段
-        ActionPhase.Instance.ReadinOnlyPlayerActs_Debug();
-        //结算阶段
-        ResolutionPhase.Instance.Resolution();
-        //回合结束阶段
-        EndPhase.Instance.UpdateHistory();
-        EndPhase.Instance.ClearMove();
+    public void PhaseAdvance()
+    {
+        PhaseList[CurrentPhaseIndex].OnExitingPhase();
+        CurrentPhaseIndex++;
+        if (CurrentPhaseIndex >= PhaseList.Count)
+            CurrentPhaseIndex = CurrentPhaseIndex % PhaseList.Count;
+        PhaseList[CurrentPhaseIndex].OnEnteringPhase();
+    }
+    public void ReadyUpAll()
+    {
+        foreach(var player in PlayerManager.Instance.Players)
+        {
+            player.Value.isReady.ReadyUp();
+        }
+    }
+    public void CheckReady()
+    {
+        bool allReady = true;
+        foreach(var player in PlayerManager.Instance.Players)
+        {
+            if (player.Value.isReady.Value == false)
+                allReady = false;
+        }
+        if(allReady)
+        {
+            PhaseAdvance();
+        }
     }
 }

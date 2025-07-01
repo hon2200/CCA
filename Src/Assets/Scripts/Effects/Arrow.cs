@@ -4,6 +4,8 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.UI.Image;
 
+
+//选择目标的箭头
 public class Arrow : MonoSingleton<Arrow>
 {
     public GameObject arrowBase;
