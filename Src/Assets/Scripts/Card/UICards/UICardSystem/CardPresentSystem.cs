@@ -15,6 +15,8 @@ using UnityEngine.UI;
  * 卡牌之间的Order差为10，卡牌内部Order以1的step跳跃
  */
 
+//很不喜欢这里的引用，需要赋值Player1，但是Player1又是后面生成的...
+
 public class CardPresentSystem : MonoSingleton<CardPresentSystem>
 {
     [SerializeField]

@@ -26,7 +26,18 @@ public class ActionDataBase : MonoSingleton<ActionDataBase>
         //打印行动类到日志
         Log.PrintLoadedDictionary(ActionDictionary,"Log/Loading/ActionDictionary.txt");
         Log.PrintLoadedDictionary(VersusTable,"Log/Loading/VersusTable.txt");
-    }    
+    }
+    public Dictionary<string,T> GetActionType<T>()
+    {
+        Dictionary<string, T> TActionDictionary = new();
+        foreach(var action in ActionDictionary)
+        {
+            if (action.Value is T Taction)
+                TActionDictionary.Add(action.Key, Taction);
+        }
+        return TActionDictionary;
+    }
+
 }
 
 //加载ActionDefine，是ActionDefine对应的简单工厂，但也承担了一部分“生产哪些”的问题，这个类会将ActionDefine读入为字典
