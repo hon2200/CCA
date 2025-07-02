@@ -16,21 +16,21 @@ using UnityEngine;
  * 4.用这样的string管理可能不如enum严谨，但是enum确实也过于麻烦了，而且string可以通过提取前面几个字或者后面几个字的方式提取信息。
  * 
  */
-public class PlayerAction : ObservableList<ActionBase>
+public class PlayerAction : ObservableList<ActionDefine>
 {
     //这回合做出的行动：打出的卡牌
     //行动历史//使用整个变量存储//可以访问到历史行动经过一系列buff后的最终结算参数
     // key: (turnNumber, isProcessed), value: 该回合的行动快照
-    public Dictionary<(int, bool), List<ActionBase>> LongHistory { get; } = new();
+    public Dictionary<(int, bool), List<ActionDefine>> LongHistory { get; } = new();
 
     // 读取当前行动到历史记录
     public void ReadinHistory(bool isProcessed)
     {
         // 创建深拷贝列表
-        var historySnapshot = new List<ActionBase>(this.Count);
+        var historySnapshot = new List<ActionDefine>(this.Count);
         foreach (var action in this) // 直接遍历当前列表
         {
-            historySnapshot.Add((ActionBase)action.Clone());
+            historySnapshot.Add((ActionDefine)action.Clone());
         }
 
         // 以 (当前回合, 是否已处理) 为键存储
@@ -41,46 +41,40 @@ public class PlayerAction : ObservableList<ActionBase>
         LongHistory = new();
     }
     //通过动态类型构造，实现简洁漂亮的代码
-    public void ReadinMove(string ID, int Target, string Case)
+    public ActionDefine ReadinMove(string ID, int Target, string Case)
     {
         if (ActionDataBase.Instance.ActionDictionary.TryGetValue(ID, out var value))
         {
-            // 1. 获取 value 的实际类型（如 AttackDefine）
-            Type actionDefineType = value.GetType();
-
-            // 2. 构造泛型 BattleAction<T> 类型（如 BattleAction<AttackDefine>）
-            Type actionGenericType = typeof(BattleAction<>).MakeGenericType(actionDefineType);
-
-            // 3. 动态创建实例
-            //注意，这里使用value的深拷贝
-            object actionInstance = Activator.CreateInstance(
-                actionGenericType,
-                (ActionDefine)value.Clone(),
-                Target
-            );
-
-            // 4. 添加到 Value（Value 是 List<ActionBase>）
-            Add((ActionBase)actionInstance, "Add_" + Case);
+            //确认目标
+            // 注意这里一定要深拷贝一个Action
+            var myAction = (ActionDefine)value.Clone();
+            myAction.Target = Target;
+            // 添加到 Value（Value 是 List<ActionDefine>）
+            Add(myAction, "Add_" + Case);
+            return myAction;
         }
         else
         {
             Debug.Assert(false, "Wrong ID");
+            return null;
         }
     }
 
-    public void DeleteMove(ActionBase actionBase, string Case)
+    public ActionDefine DeleteMove(ActionDefine actionBase, string Case)
     {
         Remove(actionBase, "Remove_" + Case);
+        return actionBase;
     }
 
-    public void DeleteMoveAt(int order, string Case)
+    public ActionDefine DeleteMoveAt(int order, string Case)
     {
+        var removedAction = this[order];
         RemoveAt(order, "Remove_" + Case);
+        return removedAction;
     }
 
     public void ClearMove(string Case)
     {
         Clear("Clear_" + Case);
     }
-
 }

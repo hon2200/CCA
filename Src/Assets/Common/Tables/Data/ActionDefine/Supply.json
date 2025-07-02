@@ -12,7 +12,9 @@
         "SupplyNumber": [
             1,
             0
-        ]
+        ],
+        "Target": 0,
+        "isCopy": false
     },
     "double_bullet": {
         "ID": "double_bullet",
@@ -27,7 +29,9 @@
         "SupplyNumber": [
             2,
             0
-        ]
+        ],
+        "Target": 0,
+        "isCopy": false
     },
     "sword": {
         "ID": "sword",
@@ -42,7 +46,9 @@
         "SupplyNumber": [
             0,
             1
-        ]
+        ],
+        "Target": 0,
+        "isCopy": false
     },
     "double_sword": {
         "ID": "double_sword",
@@ -57,6 +63,8 @@
         "SupplyNumber": [
             0,
             2
-        ]
+        ],
+        "Target": 0,
+        "isCopy": false
     }
 }

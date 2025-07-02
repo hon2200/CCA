@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//这个类里面描述玩家的模版
+//Player类将PlayerDefine和Player的其他功能组合在一块，完成Player类的功能
 public class PlayerDefine
 {
     public string ID;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //这个东西的调用目前还不太合理，看看以后能不能改成委托，OnReadinMove，但是传递参数是一个问题。
+//另外我觉得这个类的耦合程度也很高
 public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
 {
     public List<GameObject> presentCard;
@@ -16,12 +17,12 @@ public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
                 DemonstrateCards(newList);
         };
     }
-    public void DemonstrateCards(List<ActionBase> actionList)
+    public void DemonstrateCards(List<ActionDefine> actionList)
     {
         DeleteAllDemonstratingCard();
         foreach(var action in actionList)
         {
-            CardPresentSystem.Instance.FindCard(action.ActionInfo.ID, out var card);
+            CardPresentSystem.Instance.FindCard(action.ID, out var card);
             if (card != null)
                 CreateDemonstratingCard(card, action.Target);
         }

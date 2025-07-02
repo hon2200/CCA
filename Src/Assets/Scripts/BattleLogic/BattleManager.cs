@@ -9,8 +9,6 @@ class BattleManager: MonoSingleton<BattleManager>
     public TurnAttribute Turn;
     public List<Phase> PhaseList;
     public int CurrentPhaseIndex;
-    //玩家若未确定好行动，则保持等待
-    private bool Ready = false;
     //初始化PhaseList
     private void Awake()
     {

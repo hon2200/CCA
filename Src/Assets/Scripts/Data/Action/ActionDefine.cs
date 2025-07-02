@@ -54,6 +54,10 @@ public class ActionDefine : ICloneable
     public List<int> Costs { get; set; } // 行动消耗
     public int CD { get; set; } //冷却时间
     public TargetType TargetType { get; set; } // 目标类型//未来可能在读取行动上面有用
+
+    public int Target { get; set; } //目标
+
+    public bool isEffective { get; set; } //是否生效：攻击命中，防御防到等等。
     // 实现 ICloneable 接口（深拷贝）
     public virtual object Clone()
     {
@@ -65,6 +69,8 @@ public class ActionDefine : ICloneable
             Costs = new List<int>(this.Costs), // 创建新 List，复制所有元素
             CD = this.CD,
             TargetType = this.TargetType,
+            Target = this.Target,
+            isEffective = this.isEffective
         };
     }
 }
@@ -104,28 +110,6 @@ public class AttackDefine : ActionDefine
         copy.isCopy = this.isCopy;
         return copy;
     }
-    //假设Attack生效之后调用这个函数
-    public void HowtoAttack(Player attacker, Player victim, BattleAction<AttackDefine> attack)
-    {
-        switch(attack.ActionInfo.ID)
-        {
-            //溅射伤害，暂时没有通过buff去定义它，之后想到好的架构再去加，先暂时写在这里
-            case "nuclear_bomb":
-                victim.status.HP.Damage(attack.ActionInfo.Damage);
-                foreach(var player in PlayerManager.Instance.Players)
-                {
-                    if (player.Key != victim.ID_inGame)
-                    {
-                        player.Value.status.HP.Damage(1);
-                    }
-                }
-                break;
-            default:
-                victim.status.HP.Damage(attack.ActionInfo.Damage);
-                break;
-        }
-        attack.isEffective = true;
-    }
 }
 
 //防御类行动
@@ -137,35 +121,11 @@ public class DefendDefine : ActionDefine
             ((ActionDefine)base.Clone());
         return copy;
     }
-    //目前防御没有任何额外效果
-    public void HowtoDefend(BattleAction<AttackDefine> attack)
-    {
-        attack.isEffective = false;
-    }
 }
 
 //反制类行动
 public class CounterDefine : ActionDefine
 {
-    public void HowtoCounter(CounterMethod counterType, Player attacker, Player victim, BattleAction<AttackDefine> attack)
-    {
-        switch(counterType)
-        {
-            case CounterMethod.Block:
-                attack.isEffective = false;
-                break;
-            case CounterMethod.Disarm:
-                attack.isEffective = false;
-                attacker.status.resources.AvailableSword.Set(0);
-                break;
-            case CounterMethod.Rebounce:
-                attack.isEffective = true;
-                attack.ActionInfo.HowtoAttack(attacker, attacker, attack);
-                break;
-            default:
-                throw new Exception("Wrong Counter Type");
-        }
-    }
     public override object Clone()
     {
         CounterDefine copy = TypeConverter.ShallowConvertToChild<CounterDefine, ActionDefine>
@@ -177,21 +137,6 @@ public class CounterDefine : ActionDefine
 //特殊行动，单独定义
 public class SpecialDefine : ActionDefine
 {
-    private bool RespondingProvoke(Player provoker, Player victim)
-    {
-        var attacks = victim.SelectActionType<AttackDefine>();
-        foreach(var attack in attacks)
-        {
-            if (attack.Target == provoker.ID_inGame)
-                return true;
-        }
-        return false;
-    }
-    public void OnProvoke(Player provoker, Player victim)
-    {
-        if (!RespondingProvoke(provoker, victim))
-            victim.status.HP.Drain(1);
-    }
     public override object Clone()
     {
         SpecialDefine copy = TypeConverter.ShallowConvertToChild<SpecialDefine, ActionDefine>

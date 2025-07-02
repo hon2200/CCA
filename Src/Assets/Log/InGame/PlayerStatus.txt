@@ -17,7 +17,7 @@ status:
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         2
+      Value:         1
     Sword: 
       onObserve:         True
       Value:         0
@@ -159,7 +159,7 @@ status:
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         0
+      Value:         3
     Sword: 
       onObserve:         True
       Value:         0
@@ -211,7 +211,7 @@ status:
       SwordinCD:         0
   HP: 
     onObserve:       True
-    Value:       4
+    Value:       5
   resources: 
     Bullet: 
       onObserve:         True
@@ -239,7 +239,7 @@ status:
       SwordinCD:         0
   HP: 
     onObserve:       True
-    Value:       4
+    Value:       5
   resources: 
     Bullet: 
       onObserve:         True
@@ -301,7 +301,7 @@ status:
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         0
+      Value:         3
     Sword: 
       onObserve:         True
       Value:         0
@@ -353,7 +353,7 @@ status:
       SwordinCD:         0
   HP: 
     onObserve:       True
-    Value:       4
+    Value:       5
   resources: 
     Bullet: 
       onObserve:         True
@@ -381,7 +381,7 @@ status:
       SwordinCD:         0
   HP: 
     onObserve:       True
-    Value:       4
+    Value:       5
   resources: 
     Bullet: 
       onObserve:         True
@@ -410,6 +410,290 @@ status:
   HP: 
     onObserve:       True
     Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Dict 内容 (Count: 5) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       Human
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         -1
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 5
+ID_inGame:   5
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Dict 内容 (Count: 5) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       Human
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         -1
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       True
+------------------------------------
+Key: 5
+ID_inGame:   5
+status: 
+  playerDefine: 
+    ID:       Debug_Player
+    MaxHP:       5
+    Type:       AI
+    iniResource: 
+      Bullet:         0
+      Sword:         0
+      SwordinCD:         0
+  HP: 
+    onObserve:       True
+    Value:       3
   resources: 
     Bullet: 
       onObserve:         True

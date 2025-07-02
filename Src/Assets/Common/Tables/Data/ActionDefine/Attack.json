@@ -10,7 +10,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 2,
-        "Damage": 1
+        "Damage": 1,
+        "Target": 0,
+        "isCopy": false
     },
     "cleave": {
         "ID": "cleave",
@@ -23,7 +25,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 3,
-        "Damage": 1
+        "Damage": 1,
+        "Target": 0,
+        "isCopy": false
     },
     "laser_stab": {
         "ID": "laser_stab",
@@ -36,7 +40,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 2,
-        "Damage": 2
+        "Damage": 2,
+        "Target": 0,
+        "isCopy": false
     },
     "laser_cleave": {
         "ID": "laser_cleave",
@@ -49,7 +55,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 3,
-        "Damage": 2
+        "Damage": 2,
+        "Target": 0,
+        "isCopy": false
     },
     "ghost_sever": {
         "ID": "ghost_sever",
@@ -62,7 +70,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 5,
-        "Damage": 1
+        "Damage": 1,
+        "Target": 0,
+        "isCopy": false
     },
     "spirit_sever": {
         "ID": "spirit_sever",
@@ -75,7 +85,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 5,
-        "Damage": 2
+        "Damage": 2,
+        "Target": 0,
+        "isCopy": false
     },
     "shoot": {
         "ID": "shoot",
@@ -88,7 +100,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 4,
-        "Damage": 1
+        "Damage": 1,
+        "Target": 0,
+        "isCopy": false
     },
     "double_shoot": {
         "ID": "double_shoot",
@@ -101,7 +115,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 4,
-        "Damage": 1
+        "Damage": 1,
+        "Target": 0,
+        "isCopy": false
     },
     "laser_shoot": {
         "ID": "laser_shoot",
@@ -114,7 +130,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 4,
-        "Damage": 2
+        "Damage": 2,
+        "Target": 0,
+        "isCopy": false
     },
     "laser_cannon": {
         "ID": "laser_cannon",
@@ -126,7 +144,9 @@
         ],
         "TargetType": "Enemy",
         "CD": 0,
-        "Level": 1
+        "Level": 1,
+        "Target": 0,
+        "isCopy": false
     },
     "RPG": {
         "ID": "RPG",
@@ -139,7 +159,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 6,
-        "Damage": 2
+        "Damage": 2,
+        "Target": 0,
+        "isCopy": false
     },
     "double_RPG": {
         "ID": "double_RPG",
@@ -152,7 +174,9 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 6,
-        "Damage": 3
+        "Damage": 3,
+        "Target": 0,
+        "isCopy": false
     },
     "nuclear_bomb": {
         "ID": "nuclear_bomb",
@@ -165,6 +189,8 @@
         "TargetType": "Enemy",
         "CD": 0,
         "Level": 7,
-        "Damage": 3
+        "Damage": 3,
+        "Target": 0,
+        "isCopy": false
     }
 }

@@ -22,7 +22,7 @@ public static class RuleCheck
                 out var actions);
             foreach (var action in actions)
             {
-                if (action.ActionInfo.ID == "Comeon")
+                if (action.ID == "Comeon")
                     return false;
             }
         }
@@ -34,7 +34,7 @@ public static class RuleCheck
                 out var actions);
             foreach (var action in actions)
             {
-                if (action.ActionInfo.ID == "Provoke")
+                if (action.ID == "Provoke")
                     return false;
             }
         }

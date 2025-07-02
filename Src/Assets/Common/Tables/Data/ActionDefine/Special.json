@@ -9,7 +9,9 @@
         ],
         "TargetType": "Self",
         "ItemType": "Special",
-        "CD": 1
+        "CD": 1,
+        "Target": 0,
+        "isCopy": false
     },
     "provoke": {
         "ID": "provoke",
@@ -21,6 +23,8 @@
         ],
         "TargetType": "Enemy",
         "ItemType": "Special",
-        "CD": 1
+        "CD": 1,
+        "Target": 0,
+        "isCopy": false
     }
 }

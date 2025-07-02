@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 //射线检测的状态
 public enum RayStatus
@@ -51,7 +52,8 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     if (cardDemo != null)
                     {
                         int order = CardDemonstrateSystem.Instance.presentCard.IndexOf(cardDemo);
-                        player1.action.DeleteMoveAt(order, "Player");
+                        var newMove = player1.action.DeleteMoveAt(order, "Player");
+                        player1.RevokeConsume(newMove);
                     }
 
                 }
@@ -91,7 +93,10 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 {
                     if (area != null)
                     {
-                        player1.action.ReadinMove(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID, player1.ID_inGame, "Player");
+                        var newMove = player1.action.ReadinMove(
+                            lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
+                            player1.ID_inGame, "Player");
+                        player1.Consume(newMove);
                         lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
                         rayStatus = RayStatus.ChooseCard;
                     }
@@ -115,8 +120,10 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     if (player != null)
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
-                        player1.action.ReadinMove(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
+                        var newMove = player1.action.ReadinMove(
+                            lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
                             target, "Player");
+                        player1.Consume(newMove);
                         lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
                         Arrow.Instance.DeActive();
                         rayStatus = RayStatus.ChooseMultiTarget;
@@ -138,8 +145,10 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     if (player != null)
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
-                        player1.action.ReadinMove(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
+                        var newMove = player1.action.ReadinMove(
+                            lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
                             target, "Player");
+                        player1.Consume(newMove);
                         Debug.Log("ReadinMove" + lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID);
                         player.GetComponent<PlayerSelection>().OnSelect();
                     }
