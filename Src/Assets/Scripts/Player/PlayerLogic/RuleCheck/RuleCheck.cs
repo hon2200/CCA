@@ -14,7 +14,7 @@ public static class RuleCheck
         if (player.status.resources.AvailableSword.Value - actionDefine.Costs[1] < 0)
             return false;
         //目前过来和挑衅单独判定，之后会把CD对行动合法性的印象单独写出来
-        if (actionDefine.Name == "Comeon")
+        if (actionDefine.ID == "Comeon")
         {
             if (BattleManager.Instance.Turn.Value == 1)
                 return false;
@@ -26,7 +26,7 @@ public static class RuleCheck
                     return false;
             }
         }
-        if (actionDefine.Name == "Provoke")
+        if (actionDefine.ID == "Provoke")
         {
             if (BattleManager.Instance.Turn.Value == 1)
                 return false;
