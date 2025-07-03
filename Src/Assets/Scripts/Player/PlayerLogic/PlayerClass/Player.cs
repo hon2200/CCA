@@ -14,11 +14,13 @@ public class Player : MonoBehaviour
     public PlayerAction action { get; set; }
     public PlayerUIText playerUIText;
     public ReadyAttribute isReady;
-    public void Initialize(int ID_inGame, PlayerStatus status, PlayerAction action)
+    public PlayerType playerType;
+    public void Initialize(int ID_inGame, PlayerStatus status, PlayerAction action, PlayerType playerType)
     {
         this.ID_inGame = ID_inGame;
         this.status = status;
         this.action = action;
+        this.playerType = playerType;
         isReady = new ReadyAttribute();
         isReady.Cancel();
     }

@@ -54,14 +54,14 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             Log.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players, 
                 new string[] {"ID_inGame", "status"},"Log/InGame/PlayerStatus.txt");
             Log.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
-                "action.Value", "Log/InGame/PlayerAction.txt");
+                "action", "Log/InGame/PlayerAction.txt");
         }
         else
         {
             Log.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
                 new string[] { "ID_inGame", "status" }, "Log/InGame/PlayerStatus.txt", false);
             Log.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
-                "action.Value", "Log/InGame/PlayerAction.txt",false);
+                "action", "Log/InGame/PlayerAction.txt",false);
         }
 
     }

@@ -21,7 +21,7 @@ public enum RayStatus
 public class CardSelectionManager : MonoSingleton<CardSelectionManager>
 {
     //射线状态
-    public RayStatus rayStatus;
+    private RayStatus rayStatus { get; set; }
     //保存上次停留的物件
     private GameObject lastHoveredCard;
     private GameObject lastHoveredPlayer;
@@ -174,6 +174,14 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
         {
             player.Value.GetComponent<PlayerSelection>().OnUnSelect();
         }
+    }
+    public void Disable()
+    {
+        rayStatus = RayStatus.Disable;
+    }
+    public void Enable()
+    {
+        rayStatus = RayStatus.ChooseCard;
     }
 }
 

@@ -8,13 +8,18 @@ using static UnityEngine.GraphicsBuffer;
 
 
 //我担心直到这里构建起来的AILogic会导致各种内存浪费和反复读取的功能浪费...
-public class AILogic : MonoBehaviour
+public class AILogic
 {
-    public Player player;
+    private Player player;
+    public AILogic(Player player)
+    {
+        this.player = player;
+    }
     public void AIMove()
     {
         var newAction = GenerateRandomAction();
         player.action.ReadinMove(newAction.ID, newAction.Target, "AI");
+        player.isReady.ReadyUp();
     }
     private ActionDefine GenerateRandomAction()
     {
@@ -29,7 +34,7 @@ public class AILogic : MonoBehaviour
                         ActionDefine newAction = (ActionDefine)action.Value.Clone();
                         newAction.Target = target.ID_inGame;
                         if (!RuleCheck.isActionFoolish(player, newAction) &&
-                            !RuleCheck.isActionLegal(player, newAction))
+                            RuleCheck.isActionLegal(player, newAction))
                         {
                             availableActions.Add(newAction);
                         }
@@ -40,7 +45,7 @@ public class AILogic : MonoBehaviour
                 ActionDefine newAction = (ActionDefine)action.Value.Clone();
                 newAction.Target = player.ID_inGame;
                 if (!RuleCheck.isActionFoolish(player, newAction) &&
-                    !RuleCheck.isActionLegal(player, newAction))
+                    RuleCheck.isActionLegal(player, newAction))
                 {
                     availableActions.Add(newAction);
                 }

@@ -43,6 +43,11 @@ public static class RuleCheck
 
     public static bool isActionFoolish(this Player thisPlayer, ActionDefine actionDefine)
     {
+        //如果不是这两类，应该不会出现很蠢的情况
+        if(actionDefine is not DefendDefine || actionDefine is not CounterDefine)
+        {
+            return false;
+        }
         foreach(var player in PlayerManager.Instance.Players.Values)
         {
             //判断是否被威胁到
@@ -80,7 +85,7 @@ public static class RuleCheck
                 }
                 else
                 {
-                    throw new Exception("Can't find ID in VersusTable");
+                    throw new Exception("Can't find ID in VersusTable" + attack.ID + "and" + defend.ID);
                 }
             }
         }

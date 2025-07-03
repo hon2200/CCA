@@ -70,7 +70,7 @@ public static class AttackLogic
             }
             else
             {
-                throw new Exception("Can't find ID in VersusTable");
+                throw new Exception("Can't find ID in VersusTable" + attack.ID + "and" + counter.ID);
             }
         }
         return counterMethods;

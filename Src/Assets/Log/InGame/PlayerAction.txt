@@ -1,51 +1,275 @@
-Dict 内容 (Count: 5) - 仅显示属性路径: action.Value
+Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         1
+      isEffective:         False
 ------------------------------------
 Key: 2
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         1
+      Damage:         0
+      AttackType:         0
+      isCopy:         False
+      ID:         laser_cannon
+      Name:         超载激光炮
+      Description:         对应防御：任意防御
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         4
+      isEffective:         True
 ------------------------------------
 Key: 3
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         3
+      isEffective:         False
 ------------------------------------
 Key: 4
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         2
+      isEffective:         False
 ------------------------------------
 Key: 5
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         5
+      isEffective:         False
 ------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action.Value
+Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         1
+      isEffective:         False
 ------------------------------------
 Key: 2
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         3
+      isEffective:         False
 ------------------------------------
 Key: 3
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         1
+      isEffective:         False
 ------------------------------------
 Key: 4
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      isCopy:         False
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
 ------------------------------------
 Key: 5
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         2
+      isEffective:         False
 ------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action.Value
+Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         1
+      isEffective:         False
 ------------------------------------
 Key: 2
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         3
+      isEffective:         False
 ------------------------------------
 Key: 3
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         1
+      isEffective:         False
 ------------------------------------
 Key: 4
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      isCopy:         False
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
 ------------------------------------
 Key: 5
-无法访问属性: Value
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         2
+      isEffective:         False
 ------------------------------------

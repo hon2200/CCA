@@ -36,7 +36,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         newPlayerObject.name = "Player" + ID_inGame;
         //初始化玩家脚本
         var newPlayer = newPlayerObject.GetComponent<Player>();
-        newPlayer.Initialize(ID_inGame, playerStatus, playerAction);
+        newPlayer.Initialize(ID_inGame, playerStatus, playerAction, playerType);
         InitializeUIText(newPlayer);
         return newPlayer;
     }

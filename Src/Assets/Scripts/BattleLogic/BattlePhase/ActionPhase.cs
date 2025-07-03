@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using System.IO;
 using UnityEngine;
 
-
-
 class ActionPhase : Singleton<ActionPhase>, Phase
 {
     public void OnEnteringPhase()
@@ -17,7 +15,9 @@ class ActionPhase : Singleton<ActionPhase>, Phase
             //保存每个玩家的状态，在ActionPhase无论Player还是AI都会对其进行非最终的改动
             player.Value.status.SaveStatus();
         }
-        CardSelectionManager.Instance.rayStatus = RayStatus.ChooseCard;
+        CardSelectionManager.Instance.Enable();
+        //反正AI是要行动的对吧，AI就先行动了。这回不玩赖的了
+        AIMoveTogether();
         //进入选择行动阶段，等待玩家准备
         foreach (var player in PlayerManager.Instance.Players)
         {
@@ -31,9 +31,21 @@ class ActionPhase : Singleton<ActionPhase>, Phase
             //读取每个玩家的状态，在ActionPhase无论Player还是AI都会对其进行非最终的改动
             player.Value.status.LoadStatus();
         }
-        CardSelectionManager.Instance.rayStatus = RayStatus.Disable;
+        CardSelectionManager.Instance.Disable();
+    }
+    public void AIMoveTogether()
+    {
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            if (player.playerType == PlayerType.AI)
+            {
+                AILogic aiLogic = new(player);
+                aiLogic.AIMove();
+            }
+        }
     }
 
+    #region Abandoned
     //测试使用的输入端，通过Json文件自由调控所有玩家的输入
     //这里集合的功能：读入行动，读入历史行动，打印行动结果，考虑使用委托？
     public void ReadinAllActs_Debug(string path = "Common/Data/ReadinMove_Debug/MovesData.json")
@@ -57,4 +69,5 @@ class ActionPhase : Singleton<ActionPhase>, Phase
     public void ReadinOnlyPlayerActs_Debug()
     {
     }
+    #endregion
 }
