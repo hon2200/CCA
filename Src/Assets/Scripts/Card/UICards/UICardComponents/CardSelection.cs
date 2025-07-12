@@ -22,29 +22,18 @@ public class CardSelection : MonoBehaviour, IHoverable
     // 鼠标进入卡牌范围时调用
     public void OnHoverEnter()
     {
-        // 悬停效果：放大、旋转到正位、发光等
-        transform.localScale = Vector3.one * 0.8f;
-        rotation_origin = transform.rotation;
-        transform.rotation = Quaternion.identity;
         Glow.SetActive(true);
         //移动到最上层
         order_origin = gameObject.GetComponent<CardUI>().cardCanvas.sortingOrder;
-        position_origin = transform.position;
         gameObject.GetComponent<CardUI>().PromoteLayerTo(200);
-        //移动到鼠标位置一些以便玩家看到
-        transform.position += new Vector3(0, 0.2f, 0);
         OnHover = true;
     }
 
     // 鼠标离开卡牌范围时调用
     public void OnHoverExit()
     {
-        // 恢复原状
-        transform.localScale = Vector3.one * 0.6f;
-        transform.rotation = rotation_origin;
         Glow.SetActive(false);
         gameObject.GetComponent<CardUI>().PromoteLayerTo(order_origin);
-        transform.position = position_origin;
         OnHover = false;
     }
 

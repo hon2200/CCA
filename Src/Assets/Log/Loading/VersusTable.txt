@@ -216,28 +216,28 @@ Key: (laser_shoot, disarm)
 Key: (laser_shoot, spectral_reflection)
   Rebounce
 ------------------------------------
-Key: (laser_overclocked_apocalypse, block)
+Key: (laser_cannon, block)
   Block
 ------------------------------------
-Key: (laser_overclocked_apocalypse, double_block)
+Key: (laser_cannon, double_block)
   Block
 ------------------------------------
-Key: (laser_overclocked_apocalypse, heavy_block)
+Key: (laser_cannon, heavy_block)
   Block
 ------------------------------------
-Key: (laser_overclocked_apocalypse, severance_parry)
+Key: (laser_cannon, severance_parry)
   Block
 ------------------------------------
-Key: (laser_overclocked_apocalypse, rebounce)
+Key: (laser_cannon, rebounce)
   Rebounce
 ------------------------------------
-Key: (laser_overclocked_apocalypse, counterblade)
+Key: (laser_cannon, counterblade)
   None
 ------------------------------------
-Key: (laser_overclocked_apocalypse, disarm)
+Key: (laser_cannon, disarm)
   None
 ------------------------------------
-Key: (laser_overclocked_apocalypse, spectral_reflection)
+Key: (laser_cannon, spectral_reflection)
   Rebounce
 ------------------------------------
 Key: (RPG, block)

@@ -678,6 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406795252}
+  - component: {fileID: 406795253}
   m_Layer: 0
   m_Name: CounterMenu
   m_TagString: Untagged
@@ -700,6 +701,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406795253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406795251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &492127095
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492127096}
+  - component: {fileID: 492127097}
   m_Layer: 0
   m_Name: SupplyMenu
   m_TagString: Untagged
@@ -731,6 +754,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492127097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492127095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1001 &666523368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1208,6 +1252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1318394103}
+  - component: {fileID: 1318394104}
   m_Layer: 0
   m_Name: DefendMenu
   m_TagString: Untagged
@@ -1230,6 +1275,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1318394104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318394102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &1445872040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1445872041}
+  - component: {fileID: 1445872042}
   m_Layer: 0
   m_Name: SwordAttackMenu
   m_TagString: Untagged
@@ -1261,6 +1328,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1445872042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445872040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &1538753177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,6 +1502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825330119}
+  - component: {fileID: 1825330120}
   m_Layer: 0
   m_Name: SpecialMenu
   m_TagString: Untagged
@@ -1436,6 +1525,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1825330120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825330118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &1837722483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1598,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 1
-  rayStatus: 1
   player1: {fileID: 0}
 --- !u!114 &1837722486
 MonoBehaviour:
@@ -1700,6 +1809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2081707950}
+  - component: {fileID: 2081707951}
   m_Layer: 0
   m_Name: BulletAttackMenu
   m_TagString: Untagged
@@ -1722,6 +1832,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081707951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081707949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &2113054088
 GameObject:
   m_ObjectHideFlags: 0
