@@ -577,6 +577,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &85203109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2276745521987919045, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &402100717
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406795252}
+  - component: {fileID: 406795253}
   m_Layer: 0
   m_Name: CounterMenu
   m_TagString: Untagged
@@ -700,6 +706,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406795253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406795251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &492127095
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492127096}
+  - component: {fileID: 492127097}
   m_Layer: 0
   m_Name: SupplyMenu
   m_TagString: Untagged
@@ -731,6 +759,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492127097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492127095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
+--- !u!1 &510685402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7170626008830330633, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &641119972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5251423478898579160, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &666523368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -743,6 +802,62 @@ PrefabInstance:
       propertyPath: global
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: "\u504F\u7F6EX"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: "\u9650\u5B9AY"
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: center.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: "\u9650\u5236\u70B9.x"
+      value: 1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: "\u8D1D\u585E\u5C14\u66F2\u7EBF\u70B9"
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[8]
+      value: 
+      objectReference: {fileID: 1251713058}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[9]
+      value: 
+      objectReference: {fileID: 1370621247}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[10]
+      value: 
+      objectReference: {fileID: 641119972}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[11]
+      value: 
+      objectReference: {fileID: 1781272510}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[12]
+      value: 
+      objectReference: {fileID: 1493753486}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[13]
+      value: 
+      objectReference: {fileID: 85203109}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[14]
+      value: 
+      objectReference: {fileID: 860699660}
+    - target: {fileID: 1613913723624511510, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+      propertyPath: circles.Array.data[15]
+      value: 
+      objectReference: {fileID: 510685402}
     - target: {fileID: 4447701960781706649, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
       propertyPath: m_Name
       value: Arrow
@@ -803,6 +918,11 @@ PrefabInstance:
 --- !u!4 &817270626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8523581570390530319, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &860699660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4435790651402872737, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
   m_PrefabInstance: {fileID: 666523368}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050750176
@@ -978,6 +1098,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1251713058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1390350326882374487, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1258854014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1318394103}
+  - component: {fileID: 1318394104}
   m_Layer: 0
   m_Name: DefendMenu
   m_TagString: Untagged
@@ -1230,6 +1356,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1318394104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318394102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
+--- !u!1 &1370621247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2167908502353605018, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1445872040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1445872041}
+  - component: {fileID: 1445872042}
   m_Layer: 0
   m_Name: SwordAttackMenu
   m_TagString: Untagged
@@ -1261,6 +1414,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1445872042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445872040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
+--- !u!1 &1493753486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8100423274692139594, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1538753177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1584,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1781272510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3032769414143547865, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
+  m_PrefabInstance: {fileID: 666523368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1825330118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,6 +1598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825330119}
+  - component: {fileID: 1825330120}
   m_Layer: 0
   m_Name: SpecialMenu
   m_TagString: Untagged
@@ -1436,6 +1621,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1825330120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825330118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &1837722483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 1
-  rayStatus: 1
   player1: {fileID: 0}
 --- !u!114 &1837722486
 MonoBehaviour:
@@ -1700,6 +1905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2081707950}
+  - component: {fileID: 2081707951}
   m_Layer: 0
   m_Name: BulletAttackMenu
   m_TagString: Untagged
@@ -1722,6 +1928,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1837722484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081707951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081707949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ba6a08538f52b4493d366a6a192740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationCenter: {x: 0, y: -17.13, z: 0}
+  angle: 5
+  lerpSpeed: 6.5
+  ChildrenCards: []
+  Positions: []
+  Rotations: []
+  TargetPositions: []
+  cardOnHover: 0
+  RoundTime: 0
 --- !u!1 &2113054088
 GameObject:
   m_ObjectHideFlags: 0
