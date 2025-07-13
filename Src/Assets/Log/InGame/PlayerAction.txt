@@ -2,7 +2,7 @@ Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
-  PlayerAction (Count: 12)
+  PlayerAction (Count: 5)
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
@@ -18,7 +18,7 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Self
-      Target:         4
+      Target:         1
       isEffective:         False
     [1]: 
       SupplyNumber: 
@@ -35,7 +35,7 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Self
-      Target:         4
+      Target:         1
       isEffective:         False
     [2]: 
       SupplyNumber: 
@@ -52,7 +52,7 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Self
-      Target:         4
+      Target:         1
       isEffective:         False
     [3]: 
       SupplyNumber: 
@@ -69,45 +69,11 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Self
-      Target:         4
+      Target:         1
       isEffective:         False
     [4]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-    [5]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-    [6]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
           [0]:             0
           [1]:             1
       isCopy:         False
@@ -120,113 +86,29 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Self
-      Target:         4
-      isEffective:         False
-    [7]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-    [8]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-    [9]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-    [10]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-    [11]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
+      Target:         1
       isEffective:         False
 ------------------------------------
 Key: 2
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
       isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
+      ID:         double_sword
+      Name:         双拔
+      Description:         获得两把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         True
+      TargetType:         Self
+      Target:         2
+      isEffective:         False
 ------------------------------------
 Key: 3
 action: 
@@ -241,37 +123,21 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         3
+      Target:         1
       isEffective:         False
 ------------------------------------
 Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      ID:         comeon
-      Name:         万象天引
-      Description:         吸收所有场上所有补给和攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
+          [0]:             0
+          [1]:             2
       isCopy:         False
-      ID:         double_bullet
-      Name:         双补
-      Description:         获得两颗子弹
+      ID:         double_sword
+      Name:         双拔
+      Description:         获得两把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -281,513 +147,7 @@ action:
       Target:         4
       isEffective:         False
 ------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 6)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [1]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [2]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [3]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [4]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [5]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         True
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         True
-------------------------------------
 Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         1
-      isEffective:         True
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 6)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [1]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [2]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [3]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [4]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [5]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         True
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         True
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         1
-      isEffective:         True
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 6)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [1]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [2]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [3]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [4]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [5]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         5
-      isEffective:         True
-------------------------------------
-Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -800,230 +160,6 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         3
-      isEffective:         False
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         2
-      isEffective:         True
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         2
-      isEffective:         True
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 6)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
       Target:         1
       isEffective:         False
-    [1]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [2]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [3]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [4]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [5]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         5
-      isEffective:         True
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         False
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         2
-      isEffective:         True
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         1
-      Damage:         0
-      AttackType:         0
-      isCopy:         False
-      ID:         laser_cannon
-      Name:         超载激光炮
-      Description:         对应防御：任意防御
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         2
-      isEffective:         True
 ------------------------------------

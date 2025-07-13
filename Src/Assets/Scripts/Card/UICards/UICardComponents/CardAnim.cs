@@ -11,7 +11,7 @@ public class 卡牌动画 : MonoBehaviour
 {
     // 旋转相关参数
     [Header("旋转参数")]
-    [SerializeField] private Vector3 rotationCenter = new Vector3(0, -17.13f, 0); // 旋转中心点（世界坐标系）
+    [SerializeField] private Vector3 rotationCenter = new Vector3(0.0f, -19.8f, 0.0f); // 旋转中心点（世界坐标系）
     [SerializeField] private float angle = 5f;      // 悬停时卡牌的旋转角度偏移量
     [SerializeField] private float lerpSpeed = 5f;   // 动画插值速度
 
@@ -66,7 +66,7 @@ public class 卡牌动画 : MonoBehaviour
         // 根据是否有卡牌悬停执行不同动画
         if (CardOnHover >= 0)
         {
-            RotateAroundZAxis(); // 有卡牌悬停时的旋转动画
+            RotateAroundCenter(); // 有卡牌悬停时的旋转动画
         }
         else
         {
@@ -96,15 +96,6 @@ public class 卡牌动画 : MonoBehaviour
     }
 
     /// <summary>
-    /// 刷新卡牌缓存（当卡牌动态添加/删除时调用）
-    /// </summary>
-    public void RefreshCardCache()
-    {
-        // 重新获取所有子卡牌（包括未激活的）
-        ChildrenCards = GetComponentsInChildren<CardSelection>(true);
-    }
-
-    /// <summary>
     /// 检测当前悬停的卡牌
     /// </summary>
     /// <returns>悬停卡牌的索引，没有悬停时返回-1</returns>
@@ -124,7 +115,7 @@ public class 卡牌动画 : MonoBehaviour
     /// <summary>
     /// 使卡牌绕圆心Z轴旋转（悬停状态动画）
     /// </summary>
-    private void RotateAroundZAxis()
+    private void RotateAroundCenter()
     {
         // 更新强制回正计时器
         RoundTime += Time.deltaTime;
@@ -258,7 +249,6 @@ public class 卡牌动画 : MonoBehaviour
                     Rotations[i],
                     t);
             }
-
             // 平滑缩放到默认大小
             ChildrenCards[i].transform.localScale = Vector3.Lerp(
                 ChildrenCards[i].transform.localScale,
