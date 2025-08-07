@@ -30,6 +30,7 @@ public static class AttackLogic
                 break;
         }
         attack.isEffective = true;
+        attack.Victim = victim.ID_inGame;
     }
     //调用这两个个函数可以判断一个攻击是否被防御或者反制，返回所有生效的反制类型
     public static List<DefendDefine> WathoutforDefend( this AttackDefine attack ,Player enemy)

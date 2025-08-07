@@ -96,6 +96,7 @@ public class AttackDefine : ActionDefine
     public int Damage { get; set; } //伤害
     public int AttackType { get; set; } //攻击类别
     public bool isCopy { get; set; } //是否是“过来”产生的复制体，等价于：是否响应过来
+    public int Victim { get; set; } //受害者，不一定是Target
     // 实现 ICloneable 接口
     public override object Clone()
     {

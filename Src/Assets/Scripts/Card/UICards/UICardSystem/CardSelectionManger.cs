@@ -80,6 +80,8 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                         rayStatus = RayStatus.ChosseFirstTarget;
                     else
                         rayStatus = RayStatus.DragCard;
+                    //这里会自动将面板关掉
+                    EventPanelLogic.Instance.CloseEventPanel();
                 }
                 break;
             case RayStatus.DragCard:

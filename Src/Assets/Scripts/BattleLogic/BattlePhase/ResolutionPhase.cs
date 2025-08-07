@@ -14,7 +14,10 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
 {
     public void OnEnteringPhase()
     {
+        EventPanelLogic.Instance.OpenEventPanel();
         Resolution();
+        PrintEvent.Instance.ClearText();
+        PrintEvent.Instance.PrintText();
         PrintResult_Debug();
         //结算阶段不等待玩家
         BattleManager.Instance.PhaseAdvance();

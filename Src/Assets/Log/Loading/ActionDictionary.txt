@@ -82,6 +82,7 @@ Key: stab
   Damage:     1
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     stab
   Name:     刺
   Description:     对应防御：挡，双挡
@@ -100,6 +101,7 @@ Key: cleave
   Damage:     1
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     cleave
   Name:     砍
   Description:     对应防御：重挡
@@ -118,6 +120,7 @@ Key: laser_stab
   Damage:     2
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     laser_stab
   Name:     光剑
   Description:     对应防御：挡，双挡
@@ -136,6 +139,7 @@ Key: laser_cleave
   Damage:     2
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     laser_cleave
   Name:     光刀
   Description:     对应防御：重挡
@@ -154,6 +158,7 @@ Key: ghost_sever
   Damage:     1
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     ghost_sever
   Name:     鬼斩
   Description:     对应防御：巨盾
@@ -172,6 +177,7 @@ Key: spirit_sever
   Damage:     2
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     spirit_sever
   Name:     断魂斩
   Description:     对应防御：巨盾
@@ -190,6 +196,7 @@ Key: shoot
   Damage:     1
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     shoot
   Name:     给枪
   Description:     对应防御：挡
@@ -208,6 +215,7 @@ Key: double_shoot
   Damage:     1
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     double_shoot
   Name:     双枪
   Description:     对应防御：双挡
@@ -226,6 +234,7 @@ Key: laser_shoot
   Damage:     2
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     laser_shoot
   Name:     激光枪
   Description:     对应防御：挡
@@ -244,6 +253,7 @@ Key: laser_cannon
   Damage:     0
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     laser_cannon
   Name:     超载激光炮
   Description:     对应防御：任意防御
@@ -262,6 +272,7 @@ Key: RPG
   Damage:     2
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     RPG
   Name:     火箭炮
   Description:     对应防御：挡
@@ -280,6 +291,7 @@ Key: double_RPG
   Damage:     3
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     double_RPG
   Name:     双火箭炮
   Description:     对应防御：双挡
@@ -298,6 +310,7 @@ Key: nuclear_bomb
   Damage:     3
   AttackType:     0
   isCopy:     False
+  Victim:     0
   ID:     nuclear_bomb
   Name:     和平
   Description:     不可以被防御

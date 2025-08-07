@@ -74,6 +74,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                     CardSelectionManager.Instance.player1 = player;
                     CardDemonstrateSystem.Instance.AddListener(player);
                     CardPresentSystem.Instance.player1 = player;
+                    RoundMonitor.Instance.player1 = player;
                 }
 
             }

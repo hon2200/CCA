@@ -2,25 +2,8 @@ Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
-  PlayerAction (Count: 2)
+  PlayerAction (Count: 1)
     [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-    [1]: 
       SupplyNumber: 
         List`1 (Count: 2)
           [0]:             1
@@ -44,6 +27,64 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         2
+      isEffective:         False
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      isCopy:         False
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         3
+      isEffective:         False
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 5
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
           [0]:             2
           [1]:             0
       isCopy:         False
@@ -56,8 +97,236 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Self
-      Target:         2
+      Target:         5
       isEffective:         False
+------------------------------------
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         3
+      isEffective:         False
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 5
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         4
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         4
+      isEffective:         True
+------------------------------------
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         3
+      isEffective:         False
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 5
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         4
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         4
+      isEffective:         True
+------------------------------------
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         2
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         2
+      isEffective:         True
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         2
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         2
+      isEffective:         True
 ------------------------------------
 Key: 3
 action: 
@@ -84,12 +353,12 @@ Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
+      ID:         rebounce
+      Name:         反弹
+      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
       Costs: 
         List`1 (Count: 2)
-          [0]:             0
+          [0]:             1
           [1]:             0
       CD:         0
       TargetType:         Self
@@ -100,9 +369,14 @@ Key: 5
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      ID:         heavy_block
-      Name:         重挡
-      Description:         可以挡住“刀类”攻击
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             2
+          [1]:             0
+      isCopy:         False
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -116,31 +390,24 @@ Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
-  PlayerAction (Count: 2)
+  PlayerAction (Count: 1)
     [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         2
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
       Costs: 
         List`1 (Count: 2)
-          [0]:             0
+          [0]:             1
           [1]:             0
-      CD:         1
+      CD:         0
       TargetType:         Enemy
       Target:         2
-      isEffective:         False
-    [1]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         False
+      isEffective:         True
 ------------------------------------
 Key: 2
 action: 
@@ -150,55 +417,80 @@ action:
       Damage:         1
       AttackType:         0
       isCopy:         False
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
+      Victim:         2
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
       Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         2
+      isEffective:         True
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      isCopy:         False
+      ID:         double_sword
+      Name:         双拔
+      Description:         获得两把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         3
+      isEffective:         False
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         rebounce
+      Name:         反弹
+      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         4
+      isEffective:         False
+------------------------------------
+Key: 5
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
         List`1 (Count: 2)
           [0]:             2
           [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         True
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
       isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         1
-      isEffective:         True
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         4
+      CD:         0
+      TargetType:         Self
+      Target:         5
       isEffective:         False
 ------------------------------------
-Key: 5
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -210,574 +502,6 @@ action:
       ID:         sword
       Name:         拔剑
       Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         5
-      isEffective:         False
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 2)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         2
-      isEffective:         False
-    [1]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         True
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         1
-      isEffective:         True
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         5
-      isEffective:         False
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         block
-      Name:         挡
-      Description:         可以挡住“刺类”攻击和单发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         True
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         block
-      Name:         挡
-      Description:         可以挡住“刺类”攻击和单发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      CD:         0
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         True
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 4)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         5
-      isEffective:         False
-    [1]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         False
-    [2]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         False
-    [3]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         3
-      isEffective:         False
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         5
-      isEffective:         False
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 4)
-    [0]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         5
-      isEffective:         False
-    [1]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         4
-      isEffective:         False
-    [2]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         3
-      isEffective:         False
-    [3]: 
-      ID:         provoke
-      Name:         挑衅
-      Description:         下回合你不打我就掉血
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         1
-      TargetType:         Enemy
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             1
-      isCopy:         False
-      ID:         sword
-      Name:         拔剑
-      Description:         获得一把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isEffective:         False
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         3
-      isEffective:         False
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         4
-      isEffective:         False
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         5
-      isEffective:         False
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -816,7 +540,7 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         3
+      Target:         2
       isEffective:         False
 ------------------------------------
 Key: 4
@@ -832,24 +556,25 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         2
+      Target:         3
       isEffective:         False
 ------------------------------------
 Key: 5
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         2
-      Damage:         1
+      Level:         1
+      Damage:         0
       AttackType:         0
       isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
+      Victim:         2
+      ID:         laser_cannon
+      Name:         超载激光炮
+      Description:         对应防御：任意防御
       Costs: 
         List`1 (Count: 2)
           [0]:             0
-          [1]:             1
+          [1]:             0
       CD:         0
       TargetType:         Enemy
       Target:         2
@@ -863,12 +588,12 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
+          [0]:             0
+          [1]:             1
       isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -907,7 +632,7 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         3
+      Target:         2
       isEffective:         False
 ------------------------------------
 Key: 4
@@ -923,24 +648,25 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         2
+      Target:         3
       isEffective:         False
 ------------------------------------
 Key: 5
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         2
-      Damage:         1
+      Level:         1
+      Damage:         0
       AttackType:         0
       isCopy:         False
-      ID:         stab
-      Name:         刺
-      Description:         对应防御：挡，双挡
+      Victim:         2
+      ID:         laser_cannon
+      Name:         超载激光炮
+      Description:         对应防御：任意防御
       Costs: 
         List`1 (Count: 2)
           [0]:             0
-          [1]:             1
+          [1]:             0
       CD:         0
       TargetType:         Enemy
       Target:         2

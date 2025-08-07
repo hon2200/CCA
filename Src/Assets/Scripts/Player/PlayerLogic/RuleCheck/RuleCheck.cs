@@ -6,9 +6,24 @@ using System.Threading.Tasks;
 
 public static class RuleCheck
 {
-    //这个函数负责检查行动（攻击行动的Cost不受目标影响-暂时无法处理激光炮）是否合法
+    //这个函数负责检查行动是否合法
     public static bool isActionLegal(this Player player,ActionDefine actionDefine)
     {
+        //已经有超过一个行动了
+        if (player.action.Count >= 1)
+        {
+            foreach(var action in player.action)
+            {
+                //如果有对自己的行动，那么无法进行其他行动
+                if (action.TargetType == TargetType.Self)
+                    return false;
+                //如果是攻击行动，那么如果攻击目标重复则不行
+                if (action.TargetType == TargetType.Enemy)
+                    if (action.Target == actionDefine.Target)
+                        return false;
+            }
+        }
+        //资源消耗检查
         if (player.status.resources.Bullet.Value - actionDefine.Costs[0] < 0)
             return false;
         if (player.status.resources.AvailableSword.Value - actionDefine.Costs[1] < 0)
@@ -74,7 +89,7 @@ public static class RuleCheck
     //威胁度判断函数
     //某个玩家有能力做出一个或几个攻击行动，以至于需要让你思考是否要做某一个防御行动的威胁
     //举一个栗子，敌人有一发子弹，那他就威胁你考虑单挡，但不会威胁你考虑双挡。
-    public static bool ThreatTo(this Player aggressiveOne, Player target, 
+    private static bool ThreatTo(this Player aggressiveOne, Player target, 
         ActionDefine defend)
     {
         var attacks = ActionDataBase.Instance.GetActionType<AttackDefine>();
