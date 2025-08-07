@@ -191,3 +191,15 @@ public static class SpecialLogic
         }
     }
 }
+
+public static class PreCookLogic
+{
+    public static void GiveValueToLaserCannon(this Player player)
+    {
+        foreach (var attack in player.SelectActionType<AttackDefine>())
+        {
+            if (attack.ID == "laser_cannon")
+                attack.LaserCannon();
+        }
+    }
+}

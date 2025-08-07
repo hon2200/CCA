@@ -21,6 +21,7 @@ public class PlayerAction : ObservableList<ActionDefine>
     //这回合做出的行动：打出的卡牌
     //行动历史//使用整个变量存储//可以访问到历史行动经过一系列buff后的最终结算参数
     // key: (turnNumber, isProcessed), value: 该回合的行动快照
+
     public Dictionary<(int, bool), List<ActionDefine>> LongHistory { get; } = new();
 
     // 读取当前行动到历史记录
@@ -32,7 +33,6 @@ public class PlayerAction : ObservableList<ActionDefine>
         {
             historySnapshot.Add((ActionDefine)action.Clone());
         }
-
         // 以 (当前回合, 是否已处理) 为键存储
         LongHistory.Add((BattleManager.Instance.Turn.Value, isProcessed), historySnapshot);
     }

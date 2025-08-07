@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 584918298247610311, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 819615810388810229, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
       propertyPath: m_text
       value: "\u9632\u5FA1"
@@ -16,6 +20,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: caaf5db69da39154099c6501437e1c86, type: 3}
+    - target: {fileID: 1556933124208777364, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 3527518318993375591, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 4266999430404975747, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
       propertyPath: m_Color.b
       value: 0.6462263
@@ -28,6 +40,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6462263
       objectReference: {fileID: 0}
+    - target: {fileID: 4266999430404975747, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 4619745121588166851, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 6316233296263009327, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
       propertyPath: m_text
       value: 0
@@ -40,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f503ad68e3d354b81930b338bd1fe210, type: 3}
+    - target: {fileID: 7501338946246530486, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8364993515996780542, guid: 5badfef003c3aa14cb2c861d0a7820c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.520137

@@ -110,6 +110,13 @@ public class AttackDefine : ActionDefine
         copy.isCopy = this.isCopy;
         return copy;
     }
+    public void LaserCannon()
+    {
+        PlayerManager.Instance.Players.TryGetValue(Target, out var targetPlayer);
+        Damage = targetPlayer.status.HP.Value;
+        Costs[0] = Math.Max(2, targetPlayer.status.HP.Value);
+    }
+
 }
 
 //防御类行动

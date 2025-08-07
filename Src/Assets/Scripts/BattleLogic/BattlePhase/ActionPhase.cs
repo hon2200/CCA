@@ -26,6 +26,8 @@ class ActionPhase : Singleton<ActionPhase>, Phase
     }
     public void OnExitingPhase()
     {
+        //上传历史行动记录：没有预先处理过的
+        UpdateHistory();
         foreach (var player in PlayerManager.Instance.Players)
         {
             //读取每个玩家的状态，在ActionPhase无论Player还是AI都会对其进行非最终的改动
@@ -42,6 +44,13 @@ class ActionPhase : Singleton<ActionPhase>, Phase
                 AILogic aiLogic = new(player);
                 aiLogic.AIMove();
             }
+        }
+    }
+    private void UpdateHistory()
+    {
+        foreach (var player in PlayerManager.Instance.Players)
+        {
+            player.Value.action.ReadinHistory(false);
         }
     }
 

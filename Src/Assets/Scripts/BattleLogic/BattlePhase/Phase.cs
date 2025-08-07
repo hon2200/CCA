@@ -17,6 +17,7 @@ public enum PhaseName
 {
     StartPhase = 1,
     ActionPhase = 2,
-    ResolutionPhase = 3,
-    EndPhase = 4,
+    PreResolutionPhase = 3,
+    ResolutionPhase = 4,
+    EndPhase = 5,
 }

@@ -16,14 +16,14 @@ public class EndPhase : Singleton<EndPhase>, Phase
         UpdateHistory();
         ClearMove();
     }
-    public void UpdateHistory()
+    private void UpdateHistory()
     {
         foreach(var player in PlayerManager.Instance.Players)
         {
             player.Value.action.ReadinHistory(true);
         }
     }
-    public void ClearMove()
+    private void ClearMove()
     {
         foreach(var player in PlayerManager.Instance.Players)
         {

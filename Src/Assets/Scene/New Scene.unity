@@ -159,7 +159,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1802,7 +1802,7 @@ MonoBehaviour:
     - Key: laser_shoot
       Value: {fileID: 11400000, guid: 9225c175eb783aa4295ef9b60a76e5d3, type: 2}
     - Key: laser_cannon
-      Value: {fileID: 11400000, guid: d72482426f55a164bab73a98156a40f9, type: 2}
+      Value: {fileID: 11400000, guid: e8bbf861a6e52c441b95013252c813b9, type: 2}
     - Key: RPG
       Value: {fileID: 11400000, guid: ed231828d236d864c9282b949c257362, type: 2}
     - Key: double_RPG

@@ -7,34 +7,49 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class PlayerSelection : MonoBehaviour, IHoverable
 {
+    //是否能成为目标
+    public bool CanbeSelected = true;
     //即将选择高亮
-    public GameObject Glow;
+    public GameObject ReadyToSelectGlow;
     //确认高亮
-    public GameObject Glow2;
+    public GameObject SelectionCompletedGlow;
     public bool onHover;
+    #region Interface Realization
     public bool IsOnHover()
     {
         return onHover;
     }
     public void OnHoverEnter()
     {
-        onHover = true;
-        // 悬停效果：发光
-        Glow.SetActive(true);
+        if(CanbeSelected)
+        {
+            onHover = true;
+            // 悬停效果：发光
+            ReadyToSelectGlow.SetActive(true);
+        }
     }
     public void OnHoverExit()
     {
         onHover = false;
         // 悬停效果：发光
-        Glow.SetActive(false);
+        ReadyToSelectGlow.SetActive(false);
     }
+    #endregion
+
+    #region Complementary Functions
     public void OnSelect()
     {
-        Glow.SetActive(false);
-        Glow2.SetActive(true);
+        ReadyToSelectGlow.SetActive(false);
+        SelectionCompletedGlow.SetActive(true);
     }
     public void OnUnSelect()
     {
-        Glow2.SetActive(false);
+        SelectionCompletedGlow.SetActive(false);
     }
+    public void DimAllGlows()
+    {
+        ReadyToSelectGlow.SetActive(false);
+        SelectionCompletedGlow.SetActive(false);
+    }
+    #endregion
 }

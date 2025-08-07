@@ -109,15 +109,16 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 break;
             case RayStatus.ChosseFirstTarget:
                 MouseAndRayUtil.RenewHitting(ref lastHoveredPlayer, player);
+                CheckPlayer(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine);
                 //按住拖动箭头
                 if (Input.GetMouseButton(0))
                 {
                     Arrow.Instance.FromOriToMouse(lastHoveredCard.transform);
                 }
                 //鼠标松开读入或放弃
-                else if(Input.GetMouseButtonUp(0))
+                else if (Input.GetMouseButtonUp(0))
                 {
-                    if (player != null)
+                    if (player != null && player.GetComponent<PlayerSelection>().CanbeSelected)
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
                         var newMove = player1.action.ReadinMove(
@@ -136,13 +137,15 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                         rayStatus = RayStatus.ChooseCard;
                     }
                 }
+                
                 break;
             case RayStatus.ChooseMultiTarget:
                 MouseAndRayUtil.RenewHitting(ref lastHoveredPlayer, player);
+                CheckPlayer(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine);
                 //鼠标按下读入
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (player != null)
+                    if (player != null && player.GetComponent<PlayerSelection>().CanbeSelected)
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
                         var newMove = player1.action.ReadinMove(
@@ -160,12 +163,32 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     rayStatus = RayStatus.ChooseCard;
                 }
                 //如果点击鼠标右键，则进入选牌状态
-                if(Input.GetMouseButtonDown(1))
+                if (Input.GetMouseButtonDown(1))
                 {
                     UnSelectAllPlayers();
                     rayStatus = RayStatus.ChooseCard;
                 }
                 break;
+        }
+    }
+    //进行规则检查，判断攻击是否可以选中相应玩家
+    private void CheckPlayer(ActionDefine action)
+    {
+        if(action == null)
+        {
+            foreach (var player in PlayerManager.Instance.Players.Values)
+                player.GetComponent<PlayerSelection>().CanbeSelected = true;
+            return;
+        }
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            ActionDefine targetedAction = (ActionDefine)action.Clone();
+            targetedAction.Target = player.ID_inGame;
+            bool legal = RuleCheck.isActionLegal(player1, targetedAction);
+            if (!legal)
+                player.GetComponent<PlayerSelection>().CanbeSelected = false;
+            else
+                player.GetComponent<PlayerSelection>().CanbeSelected = true;
         }
     }
     private void UnSelectAllPlayers()
@@ -177,6 +200,10 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
     }
     public void Disable()
     {
+        foreach (var player in PlayerManager.Instance.Players)
+        {
+            player.Value.GetComponent<PlayerSelection>().DimAllGlows();
+        }
         rayStatus = RayStatus.Disable;
     }
     public void Enable()

@@ -36,6 +36,7 @@ public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
         //恢复原状并缩小
         demoCard.GetComponent<CardSelection>().OnHoverExit();
         demoCard.transform.localScale = Vector3.one * 0.3f;
+        demoCard.transform.rotation = new();
         //删去CardSelection
         //创建并赋值CardDemo
         var cardSelection = demoCard.GetComponent<CardSelection>();

@@ -14,7 +14,7 @@ public static class RuleCheck
         if (player.status.resources.AvailableSword.Value - actionDefine.Costs[1] < 0)
             return false;
         //目前过来和挑衅单独判定，之后会把CD对行动合法性的印象单独写出来
-        if (actionDefine.ID == "Comeon")
+        if (actionDefine.ID == "comeon")
         {
             if (BattleManager.Instance.Turn.Value == 1)
                 return false;
@@ -22,11 +22,11 @@ public static class RuleCheck
                 out var actions);
             foreach (var action in actions)
             {
-                if (action.ID == "Comeon")
+                if (action.ID == "comeon")
                     return false;
             }
         }
-        if (actionDefine.ID == "Provoke")
+        if (actionDefine.ID == "provoke")
         {
             if (BattleManager.Instance.Turn.Value == 1)
                 return false;
@@ -34,9 +34,19 @@ public static class RuleCheck
                 out var actions);
             foreach (var action in actions)
             {
-                if (action.ID == "Provoke")
+                if (action.ID == "provoke" && action.Target == actionDefine.Target)
                     return false;
             }
+        }
+        //激光炮也单独判定，因为激光炮的赋值在PreResolution，which在Action之后
+        if(actionDefine.ID == "laser_cannon")
+        {
+            if (player.status.resources.Bullet.Value < 2)
+                return false;
+            PlayerManager.Instance.Players.TryGetValue(actionDefine.Target, out var victim);
+            if(victim != null)
+                if (player.status.resources.Bullet.Value < victim.status.HP.Value - 1)
+                    return false;
         }
         return true;
     }

@@ -18,6 +18,7 @@ public static class PlayerActionLogic
             supply.HowtoSupply();
         }
     }
+
     public static void Comeon(this Player theComeonOne)
     {
         List<SpecialDefine> specials = theComeonOne.SelectActionType<SpecialDefine>();
@@ -25,13 +26,25 @@ public static class PlayerActionLogic
         {
             theComeonOne.HowtoComeon();
         }
-
     }
 
     public static void Provoke(this Player player)
     {
-
+        foreach (var provoker in PlayerManager.Instance.Players.Values)
+        {
+            int turn = BattleManager.Instance.Turn.Value;
+            var specials = provoker.SelectActionType_inHistory<SpecialDefine>(turn - 1, true);
+            foreach(var special in specials)
+            {
+                //对方是挑衅，且目标是你
+                if (special.ID == "provoke" && special.Target == player.ID_inGame)
+                {
+                    provoker.OnProvoke(player);
+                }
+            }
+        }
     }
+
     public static void Attack(this Player player)
     {
         List<AttackDefine> attacks = player.SelectActionType<AttackDefine>();
@@ -86,6 +99,7 @@ public static class PlayerActionLogic
             player.status.resources.AvailableSword.CoolDown(player.status.resources.Sword.Value);
         }
     }
+
     public static void Consume(this Player player)
     {
         foreach (var action in player.action)
@@ -99,6 +113,7 @@ public static class PlayerActionLogic
         player.status.resources.Bullet.Use(action.Costs[0]);
         player.status.resources.AvailableSword.Use(action.Costs[1]);
     }
+    
     public static void RevokeConsume(this Player player, ActionDefine action)
     {
         player.status.resources.Bullet.Get(action.Costs[0]);
