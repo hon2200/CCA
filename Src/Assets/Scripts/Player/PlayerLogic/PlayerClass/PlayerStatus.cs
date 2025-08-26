@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 public class PlayerStatus
 {
-    public PlayerDefine playerDefine;
+    public HeroDefine playerDefine;
     public HPAttribute HP;
     public NewPlayerResource resources;
     public IsAliveAttribute life;
-    public PlayerStatus(PlayerDefine playerDefine)
+    public PlayerStatus(HeroDefine playerDefine)
     {
         this.playerDefine = playerDefine;
         life = new();

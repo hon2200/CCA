@@ -56,8 +56,6 @@ public class ActionDefine : ICloneable
     public TargetType TargetType { get; set; } // 目标类型//未来可能在读取行动上面有用
 
     public int Target { get; set; } //目标
-
-    public bool isEffective { get; set; } //是否生效：攻击命中，防御防到等等。
     // 实现 ICloneable 接口（深拷贝）
     public virtual object Clone()
     {
@@ -70,7 +68,6 @@ public class ActionDefine : ICloneable
             CD = this.CD,
             TargetType = this.TargetType,
             Target = this.Target,
-            isEffective = this.isEffective
         };
     }
 }

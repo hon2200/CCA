@@ -28,7 +28,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     //创建HP=5的用于测试的玩家
     private Player CreatePlayer_Debug(int ID_inGame,PlayerType playerType)
     {
-        PlayerDefine playerDefine = new("Debug_Player", playerType, 5, new PlayerResource(0, 0, 0));
+        HeroDefine playerDefine = new("Debug_Player", 5, new PlayerResource(0, 0, 0));
         PlayerStatus playerStatus = new(playerDefine);
         PlayerAction playerAction = new();
         //创建玩家物体
@@ -38,11 +38,16 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         var newPlayer = newPlayerObject.GetComponent<Player>();
         newPlayer.Initialize(ID_inGame, playerStatus, playerAction, playerType);
         InitializeUIText(newPlayer);
+        InitializePlayerEffectController(newPlayer);
         return newPlayer;
     }
     private void InitializeUIText(Player newPlayer)
     {
         newPlayer.playerUIText.Initialize();
+    }
+    private void InitializePlayerEffectController(Player newPlayer)
+    {
+        newPlayer.playerEffectController.Initialize();
     }
     private void InitializePlayerSpace(int playerCount)
     {
@@ -64,7 +69,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         // 先处理人类玩家（确保人类玩家有固定位置）
         foreach (var player in Players.Values)
         {
-            if (player.status.playerDefine.Type == PlayerType.Human)
+            if (player.playerType == PlayerType.Human)
             {
                 // 人类玩家固定位置
                 player.transform.localPosition = new Vector3(8, -5, 1);
@@ -83,7 +88,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         // 然后处理AI玩家
         foreach (var player in Players.Values)
         {
-            if (player.status.playerDefine.Type == PlayerType.AI && availablePositions.Count > 0)
+            if (player.playerType == PlayerType.AI && availablePositions.Count > 0)
             {
                 // 使用并移除第一个可用位置
                 var pos = availablePositions[0];

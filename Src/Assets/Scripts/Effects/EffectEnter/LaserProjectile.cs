@@ -17,12 +17,12 @@ public class LaserProjectile : MonoBehaviour, IPathvfx
         travelSpeed  = particleSystem.main.startSpeed.constant; 
         StartCoroutine(TravelAndExplode());
     }
-    private IEnumerator TravelAndExplode()
+    private IEnumerator TravelAndExplode(bool doexplode = false)
     {
         float travelTime = journeyLength / travelSpeed;
         yield return new WaitForSeconds(travelTime);
         transform.position = targetPosition;
-        if (explosionPrefab != null)
+        if (explosionPrefab != null && doexplode)
         {
             Instantiate(explosionPrefab, targetPosition, Quaternion.identity);
         }

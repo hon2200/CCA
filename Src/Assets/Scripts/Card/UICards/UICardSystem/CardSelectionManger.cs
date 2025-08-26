@@ -55,7 +55,6 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                         var newMove = player1.action.DeleteMoveAt(order, "Player");
                         player1.RevokeConsume(newMove);
                     }
-
                 }
                 //停留在卡牌上进入停留阶段
                 if (card != null)

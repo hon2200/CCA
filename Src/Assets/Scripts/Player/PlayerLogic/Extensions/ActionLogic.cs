@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
+using static UnityEngine.EventSystems.EventTrigger;
 
 
 public static class AttackLogic
@@ -29,11 +30,10 @@ public static class AttackLogic
                 victim.status.HP.Damage(attack.Damage);
                 break;
         }
-        attack.isEffective = true;
         attack.Victim = victim.ID_inGame;
     }
     //调用这两个个函数可以判断一个攻击是否被防御或者反制，返回所有生效的反制类型
-    public static List<DefendDefine> WathoutforDefend( this AttackDefine attack ,Player enemy)
+    public static List<DefendDefine> WatchoutforDefend( this AttackDefine attack ,Player enemy)
     {
         List<DefendDefine> defendMethods = new();
         var enemy_defends = enemy.SelectActionType<DefendDefine>();
@@ -55,7 +55,7 @@ public static class AttackLogic
         return defendMethods;
     }
     
-    public static List<(CounterDefine,CounterMethod)> WathoutforCounter(this AttackDefine attack, Player enemy)
+    public static List<(CounterDefine,CounterMethod)> WatchoutforCounter(this AttackDefine attack, Player enemy)
     {
         List<(CounterDefine,CounterMethod)> counterMethods = new();
         var enemy_counters = enemy.SelectActionType<CounterDefine>();
@@ -81,9 +81,9 @@ public static class AttackLogic
 public static class DefendLogic
 {
     //目前防御没有任何额外效果
-    public static void HowtoDefend(this DefendDefine defend,AttackDefine attack)
+    public static void HowtoDefend(this DefendDefine defend,AttackDefine attack, Player victim)
     {
-        attack.isEffective = false;
+        EffectManager.Instance.Defend(victim.gameObject);
     }
 }
 
@@ -95,15 +95,15 @@ public static class CounterLogic
         switch (counterType)
         {
             case CounterMethod.Block:
-                attack.isEffective = false;
+                EffectManager.Instance.Defend(victim.gameObject);
                 break;
             case CounterMethod.Disarm:
-                attack.isEffective = false;
                 attacker.status.resources.AvailableSword.Set(0);
+                EffectManager.Instance.Defend(victim.gameObject);
                 break;
             case CounterMethod.Rebounce:
-                attack.isEffective = true;
                 attack.HowtoAttack(attacker, attacker);
+                EffectManager.Instance.Shot(victim.gameObject, attacker.gameObject);
                 break;
             default:
                 throw new Exception("Wrong Counter Type");

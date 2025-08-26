@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 
 //这个类只装一些Player用于结算行动的方法，拓展功能，避免Player类过于臃肿
@@ -53,11 +55,12 @@ public static class PlayerActionLogic
             //获取到攻击目标，以Target为键值，找到enemy
             PlayerManager.Instance.Players.TryGetValue(attack.Target, out Player enemy);
             var enemy_attacks = enemy.SelectActionType<AttackDefine>();
+            EffectManager.Instance.Shot(player.gameObject, enemy.gameObject);
             //攻击力等级判断
             if (attack.Level > enemy.MaxLevel(player))
             {
-                var counters = attack.WathoutforCounter(enemy);
-                var defends = attack.WathoutforDefend(enemy);
+                var counters = attack.WatchoutforCounter(enemy);
+                var defends = attack.WatchoutforDefend(enemy);
                 //对应防御反击判断
                 if (counters.Count > 0)
                 {
@@ -70,7 +73,7 @@ public static class PlayerActionLogic
                 {
                     foreach (var defend in defends)
                     {
-                        defend.HowtoDefend(attack);
+                        defend.HowtoDefend(attack, enemy);
                     }
                 }
                 //总算是命中了！
@@ -81,7 +84,6 @@ public static class PlayerActionLogic
             }
             else
             {
-                attack.isEffective = false;
             }
         }
     }

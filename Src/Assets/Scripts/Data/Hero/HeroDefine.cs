@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//这个类里面描述玩家的模版
-//Player类将PlayerDefine和Player的其他功能组合在一块，完成Player类的功能
-public class PlayerDefine
+//英雄的定义
+//ID就是Table中的英雄的ID
+public class HeroDefine
 {
     public string ID;
+    public string Name;
+    public string Description;
     public int MaxHP;
-    public PlayerType Type;
     public PlayerResource iniResource;
-    public PlayerDefine(string ID, PlayerType playerType,int maxHP,PlayerResource playerResource)
+    public List<string> SkillIDList;
+    public HeroDefine(string ID,int maxHP,PlayerResource playerResource)
     {
-        this.Type = playerType;
         this.ID = ID;
         this.MaxHP = maxHP;
         this.iniResource = playerResource;

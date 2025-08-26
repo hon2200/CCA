@@ -9,7 +9,7 @@ Key: (stab, double_block)
 Key: (stab, heavy_block)
   None
 ------------------------------------
-Key: (stab, severance_parry)
+Key: (stab, deflect)
   None
 ------------------------------------
 Key: (stab, rebounce)
@@ -33,7 +33,7 @@ Key: (cleave, double_block)
 Key: (cleave, heavy_block)
   Block
 ------------------------------------
-Key: (cleave, severance_parry)
+Key: (cleave, deflect)
   None
 ------------------------------------
 Key: (cleave, rebounce)
@@ -57,7 +57,7 @@ Key: (laser_stab, double_block)
 Key: (laser_stab, heavy_block)
   None
 ------------------------------------
-Key: (laser_stab, severance_parry)
+Key: (laser_stab, deflect)
   None
 ------------------------------------
 Key: (laser_stab, rebounce)
@@ -81,7 +81,7 @@ Key: (laser_cleave, double_block)
 Key: (laser_cleave, heavy_block)
   Block
 ------------------------------------
-Key: (laser_cleave, severance_parry)
+Key: (laser_cleave, deflect)
   None
 ------------------------------------
 Key: (laser_cleave, rebounce)
@@ -105,7 +105,7 @@ Key: (ghost_sever, double_block)
 Key: (ghost_sever, heavy_block)
   None
 ------------------------------------
-Key: (ghost_sever, severance_parry)
+Key: (ghost_sever, deflect)
   Block
 ------------------------------------
 Key: (ghost_sever, rebounce)
@@ -129,7 +129,7 @@ Key: (spirit_sever, double_block)
 Key: (spirit_sever, heavy_block)
   None
 ------------------------------------
-Key: (spirit_sever, severance_parry)
+Key: (spirit_sever, deflect)
   Block
 ------------------------------------
 Key: (spirit_sever, rebounce)
@@ -153,7 +153,7 @@ Key: (shoot, double_block)
 Key: (shoot, heavy_block)
   None
 ------------------------------------
-Key: (shoot, severance_parry)
+Key: (shoot, deflect)
   None
 ------------------------------------
 Key: (shoot, rebounce)
@@ -177,7 +177,7 @@ Key: (double_shoot, double_block)
 Key: (double_shoot, heavy_block)
   None
 ------------------------------------
-Key: (double_shoot, severance_parry)
+Key: (double_shoot, deflect)
   None
 ------------------------------------
 Key: (double_shoot, rebounce)
@@ -201,7 +201,7 @@ Key: (laser_shoot, double_block)
 Key: (laser_shoot, heavy_block)
   None
 ------------------------------------
-Key: (laser_shoot, severance_parry)
+Key: (laser_shoot, deflect)
   None
 ------------------------------------
 Key: (laser_shoot, rebounce)
@@ -225,7 +225,7 @@ Key: (laser_cannon, double_block)
 Key: (laser_cannon, heavy_block)
   Block
 ------------------------------------
-Key: (laser_cannon, severance_parry)
+Key: (laser_cannon, deflect)
   Block
 ------------------------------------
 Key: (laser_cannon, rebounce)
@@ -249,7 +249,7 @@ Key: (RPG, double_block)
 Key: (RPG, heavy_block)
   None
 ------------------------------------
-Key: (RPG, severance_parry)
+Key: (RPG, deflect)
   None
 ------------------------------------
 Key: (RPG, rebounce)
@@ -273,7 +273,7 @@ Key: (double_RPG, double_block)
 Key: (double_RPG, heavy_block)
   None
 ------------------------------------
-Key: (double_RPG, severance_parry)
+Key: (double_RPG, deflect)
   None
 ------------------------------------
 Key: (double_RPG, rebounce)
@@ -297,7 +297,7 @@ Key: (nuclearbomb, double_block)
 Key: (nuclearbomb, heavy_block)
   None
 ------------------------------------
-Key: (nuclearbomb, severance_parry)
+Key: (nuclearbomb, deflect)
   None
 ------------------------------------
 Key: (nuclearbomb, rebounce)

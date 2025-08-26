@@ -2389,6 +2389,7 @@ GameObject:
   - component: {fileID: 1952882934}
   - component: {fileID: 1952882935}
   - component: {fileID: 1952882936}
+  - component: {fileID: 1952882937}
   m_Layer: 0
   m_Name: -- GameManager --
   m_TagString: Untagged
@@ -2531,6 +2532,28 @@ MonoBehaviour:
   global: 1
   player1: {fileID: 0}
   button: {fileID: 1538753181}
+--- !u!114 &1952882937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952882930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b959517a52f564a40b87e3a3b81435ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 1
+  EffectDictionary:
+    _serializedList:
+    - Key: Bullet
+      Value: {fileID: 1846121760718615178, guid: 9a2818510f364d04a88172a6a9ddf93e, type: 3}
+    - Key: Shield
+      Value: {fileID: 9178071811743212453, guid: 6a35811e624e11341922f36ff2fdba05, type: 3}
+    - Key: Hit
+      Value: {fileID: 3826759674495339984, guid: 389f646fcf81f864cbd3ce208fbe1912, type: 3}
+  maxDistance: 100
 --- !u!1 &2057421226
 GameObject:
   m_ObjectHideFlags: 0

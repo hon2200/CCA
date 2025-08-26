@@ -16,11 +16,8 @@ public class PrintEvent : MonoSingleton<PrintEvent>
                 Text.text += "\n";
                 if(action is AttackDefine attack)
                 {
-                    if(attack.isEffective)
-                    {
-                        Text.text += ("玩家" + player.ID_inGame + "对" + attack.Victim + "造成了" + attack.Damage + "伤害");
-                        Text.text += "\n";
-                    }
+                    Text.text += ("玩家" + player.ID_inGame + "对" + attack.Victim + "造成了" + attack.Damage + "伤害");
+                    Text.text += "\n";
                 }
             }
            
