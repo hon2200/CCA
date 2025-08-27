@@ -4,33 +4,62 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using AYellowpaper.SerializedCollections;
-using static UnityEngine.UI.Image;
-using static UnityEngine.GraphicsBuffer;
 
-public class EffectDefinition
+public class EffectEvent
 {
-    public string effectName;
-    public GameObject effectPrefab;
-    public float duration = 1f;
-    public EffectType effectType;
-    public bool poolable = true;
-    public int poolSize = 10;
+    //特效持续时间
+    public float Duration { get; set; }
+    //特效开始调用
+    public Action OnStart { get; set; }
+    //特效延迟
+    public float Delay { get; set; }
 }
 
-public enum EffectType
-{
-    Projectile,
-    Shield,
-    Impact,
-    AreaEffect,
-    Other
-}
-
+//我觉得我应该在这里面写一个Dictionary，是string（Effect ID）和具体Effect
+//（也就是函数，不过需要做成委托Action）的对应
+//原本的EffectDictionary我觉得有点多余，这个把毫不相关的特效预制体组合在一块
+//我觉得特效具体实现函数可以下放。不过现在不着急
 public class EffectManager : MonoSingleton<EffectManager>
 {
     [SerializeField]
-    public SerializedDictionary<string, GameObject> EffectDictionary;
+    //轨迹预制体
+    public SerializedDictionary<string, GameObject> TrailDictionary;
+    //原地效果预制体
+    public SerializedDictionary<string, GameObject> SpotDictionary;
     public float maxDistance = 100f;
+
+    //这个东西再未来要做成表的，在代码里写String的一一对应关系显然太蠢了
+    public void CreateTrailEvent(string EffectID ,GameObject origin, 
+        GameObject target,float Delay = 0)
+    {
+        EffectEvent effectEvent = new EffectEvent();
+        switch(EffectID)
+        {
+            case "Shoot":
+                effectEvent.OnStart += () => Shoot("Bullet", origin, target);
+                effectEvent.Duration = 0.1f;
+                break;
+        }
+        effectEvent.Delay = Delay;
+        EffectToDoList.Instance.EnqueueEffect(effectEvent);
+    }
+    public void CreateSpotEvent(string EffectID, GameObject target, float Delay = 0)
+    {
+        EffectEvent effectEvent = new EffectEvent();
+        switch(EffectID)
+        {
+            case "Defend":
+                effectEvent.OnStart += () => Spot("Shield", 3.5f, target);
+                effectEvent.Duration = 1f;
+                break;
+            case "Hit":
+                effectEvent.OnStart += () => Spot("Hit", 4f, target);
+                effectEvent.Duration = 0.2f;
+                break;
+        }
+        effectEvent.Delay = Delay;
+        EffectToDoList.Instance.EnqueueEffect(effectEvent);
+    }
 
     void Update()
     {
@@ -47,54 +76,37 @@ public class EffectManager : MonoSingleton<EffectManager>
             target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
             if (Input.GetMouseButton(0))
             {
-                Shot(gameObject, target);
-            }
-            if (Input.GetMouseButton(1))
-            {
-                Defend(target);
-            }
-            if (Input.GetMouseButton(2))
-            {
-                Hit(target);
+                Shoot("Bullet",gameObject, target);
             }
             Destroy(target);
         }
     }
 
-    public void Shot(GameObject origin, GameObject target, Vector3 offset = new Vector3())
+    //轨迹型特效
+    public void Shoot(string TrailPrefabID ,GameObject origin, GameObject target, Vector3 offset = new Vector3())
     {
-        Vector3 vector3 = new Vector3(0,0,4);
+        Vector3 vector3 = new Vector3(0, 0, 4);
         Vector3 targetPosition = target.transform.position + offset+ vector3;
         GameObject projectile = Instantiate(
-            EffectDictionary["Bullet"],
+            TrailDictionary[TrailPrefabID],
             origin.transform.position,
             Quaternion.LookRotation(targetPosition - origin.transform.position)
         );
         IPathvfx ivfx = projectile.GetComponent<IPathvfx>();
         ivfx.show(origin.transform.position+ vector3, targetPosition);
     }
-    public void Defend(GameObject target, Vector3 offset = new Vector3())
+    //定位型特效
+    //order指显示上的优先级，也就是调整位置的z坐标
+    public void Spot(string SpotPrefabID ,float order ,GameObject target, Vector3 offset = new Vector3())
     {
-        Vector3 vector3 = new Vector3(0, 0, 3.5f);
+        Vector3 vector3 = new Vector3(0, 0, order);
         Vector3 spawnPos = target.transform.position + offset;
         GameObject shield = Instantiate(
-            EffectDictionary["Shield"],
+            SpotDictionary[SpotPrefabID],
             spawnPos,
             Quaternion.identity
         );
         ITargetvfx ivfx = shield.GetComponent<ITargetvfx>();
         ivfx.show(spawnPos + vector3);
-    }
-    public void Hit(GameObject target, Vector3 offset = new Vector3())
-    {
-        Vector3 vector3 = new Vector3(0, 0, 4);
-        Vector3 hitPoint = target.transform.TransformPoint(offset);
-        GameObject effect = Instantiate(
-            EffectDictionary["Hit"],
-            hitPoint,
-            Quaternion.identity
-        );
-        ITargetvfx ivfx = effect.GetComponent<ITargetvfx>();
-        ivfx.show(hitPoint + vector3);
     }
 }

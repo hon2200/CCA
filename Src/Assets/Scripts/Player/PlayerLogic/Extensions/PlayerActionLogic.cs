@@ -55,7 +55,8 @@ public static class PlayerActionLogic
             //获取到攻击目标，以Target为键值，找到enemy
             PlayerManager.Instance.Players.TryGetValue(attack.Target, out Player enemy);
             var enemy_attacks = enemy.SelectActionType<AttackDefine>();
-            EffectManager.Instance.Shot(player.gameObject, enemy.gameObject);
+            //创建并添加攻击特效
+            EffectManager.Instance.CreateTrailEvent("Shoot", player.gameObject, enemy.gameObject);
             //攻击力等级判断
             if (attack.Level > enemy.MaxLevel(player))
             {

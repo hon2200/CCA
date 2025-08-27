@@ -11,10 +11,10 @@ public class LaserProjectile : MonoBehaviour, IPathvfx
     {
         transform.position = startPos;
         journeyLength = Vector3.Distance(startPos, endPos);
-        targetPosition =endPos;
+        targetPosition = endPos;
         transform.rotation = Quaternion.LookRotation(endPos - startPos);
         ParticleSystem particleSystem = GetComponent<ParticleSystem>();
-        travelSpeed  = particleSystem.main.startSpeed.constant; 
+        travelSpeed = particleSystem.main.startSpeed.constant;
         StartCoroutine(TravelAndExplode());
     }
     private IEnumerator TravelAndExplode(bool doexplode = false)
