@@ -51,7 +51,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -172,7 +172,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 26.17
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4975,6 +4975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 3826759674495339984, guid: 389f646fcf81f864cbd3ce208fbe1912, type: 3}
+  particleSystem: {fileID: 1942497287899797259}
   targetPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &8906797177888299419
 MonoBehaviour:

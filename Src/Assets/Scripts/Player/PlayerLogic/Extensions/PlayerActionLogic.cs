@@ -56,7 +56,7 @@ public static class PlayerActionLogic
             PlayerManager.Instance.Players.TryGetValue(attack.Target, out Player enemy);
             var enemy_attacks = enemy.SelectActionType<AttackDefine>();
             //创建并添加攻击特效
-            EffectManager.Instance.CreateTrailEvent("Shoot", player.gameObject, enemy.gameObject);
+            EffectManager.Instance.CreateTrailEvent("Bullet", player.gameObject, enemy.gameObject,0,0.3f);
             //攻击力等级判断
             if (attack.Level > enemy.MaxLevel(player))
             {

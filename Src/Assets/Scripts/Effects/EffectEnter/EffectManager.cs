@@ -28,16 +28,16 @@ public class EffectManager : MonoSingleton<EffectManager>
     public SerializedDictionary<string, GameObject> SpotDictionary;
     public float maxDistance = 100f;
 
-    //这个东西再未来要做成表的，在代码里写String的一一对应关系显然太蠢了
-    public void CreateTrailEvent(string EffectID ,GameObject origin, 
-        GameObject target,float Delay = 0)
+
+    //这是原逻辑
+    public void CreateTrailEvent(string EffectID, GameObject origin, GameObject target, float Delay = 0, float duration = 0.3f)
     {
         EffectEvent effectEvent = new EffectEvent();
-        switch(EffectID)
+        switch (EffectID)
         {
-            case "Shoot":
-                effectEvent.OnStart += () => Shoot("Bullet", origin, target);
-                effectEvent.Duration = 0.1f;
+            case "Bullet":
+                effectEvent.OnStart += () => Shoot("Bullet", origin, target, duration);
+                effectEvent.Duration = duration;
                 break;
         }
         effectEvent.Delay = Delay;
@@ -46,7 +46,7 @@ public class EffectManager : MonoSingleton<EffectManager>
     public void CreateSpotEvent(string EffectID, GameObject target, float Delay = 0)
     {
         EffectEvent effectEvent = new EffectEvent();
-        switch(EffectID)
+        switch (EffectID)
         {
             case "Defend":
                 effectEvent.OnStart += () => Spot("Shield", 3.5f, target);
@@ -61,29 +61,9 @@ public class EffectManager : MonoSingleton<EffectManager>
         EffectToDoList.Instance.EnqueueEffect(effectEvent);
     }
 
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.S))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 targetPosition = ray.GetPoint(maxDistance);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, maxDistance))
-            {
-                targetPosition = hit.point;
-            }
-            GameObject target = new();
-            target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
-            if (Input.GetMouseButton(0))
-            {
-                Shoot("Bullet",gameObject, target);
-            }
-            Destroy(target);
-        }
-    }
 
     //轨迹型特效
-    public void Shoot(string TrailPrefabID ,GameObject origin, GameObject target, Vector3 offset = new Vector3())
+    public void Shoot(string TrailPrefabID ,GameObject origin, GameObject target, float duration = 0.2f, Vector3 offset = new Vector3())
     {
         Vector3 vector3 = new Vector3(0, 0, 4);
         Vector3 targetPosition = target.transform.position + offset+ vector3;
@@ -93,11 +73,11 @@ public class EffectManager : MonoSingleton<EffectManager>
             Quaternion.LookRotation(targetPosition - origin.transform.position)
         );
         IPathvfx ivfx = projectile.GetComponent<IPathvfx>();
-        ivfx.show(origin.transform.position+ vector3, targetPosition);
+        ivfx.show(origin.transform.position+ vector3, targetPosition, duration);
     }
     //定位型特效
     //order指显示上的优先级，也就是调整位置的z坐标
-    public void Spot(string SpotPrefabID ,float order ,GameObject target, Vector3 offset = new Vector3())
+    public void Spot(string SpotPrefabID ,float order ,GameObject target, float duration = 0.2f, Vector3 offset = new Vector3())
     {
         Vector3 vector3 = new Vector3(0, 0, order);
         Vector3 spawnPos = target.transform.position + offset;
@@ -107,6 +87,6 @@ public class EffectManager : MonoSingleton<EffectManager>
             Quaternion.identity
         );
         ITargetvfx ivfx = shield.GetComponent<ITargetvfx>();
-        ivfx.show(spawnPos + vector3);
+        ivfx.show(spawnPos + vector3, duration);
     }
 }

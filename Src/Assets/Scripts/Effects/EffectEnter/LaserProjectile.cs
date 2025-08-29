@@ -3,28 +3,36 @@ using System.Collections;
 
 public class LaserProjectile : MonoBehaviour, IPathvfx
 {
-    private float travelSpeed;
     public GameObject explosionPrefab;
+    public ParticleSystem particleSystem;
     public Vector3 targetPosition;
-    private float journeyLength;
-    public void show(Vector3 startPos, Vector3 endPos)
+    private float duration;
+
+    public void show(Vector3 startPos, Vector3 endPos, float duration)
     {
+        float distance = Vector3.Distance(startPos, endPos);
+        ParticleSystem.MainModule mainModule = particleSystem.main;
+        mainModule.startLifetime = duration; 
+        mainModule.startSpeed = distance / duration;
+        mainModule.gravityModifier = 0f;
+        mainModule.simulationSpace = ParticleSystemSimulationSpace.World;
+
         transform.position = startPos;
-        journeyLength = Vector3.Distance(startPos, endPos);
         targetPosition = endPos;
         transform.rotation = Quaternion.LookRotation(endPos - startPos);
-        ParticleSystem particleSystem = GetComponent<ParticleSystem>();
-        travelSpeed = particleSystem.main.startSpeed.constant;
+
+        this.duration = duration;
+        particleSystem.Play();
         StartCoroutine(TravelAndExplode());
     }
+
     private IEnumerator TravelAndExplode(bool doexplode = false)
     {
-        float travelTime = journeyLength / travelSpeed;
-        yield return new WaitForSeconds(travelTime);
-        transform.position = targetPosition;
-        if (explosionPrefab != null && doexplode)
+        yield return new WaitForSeconds(duration);
+
+        if (doexplode && explosionPrefab != null)
         {
-            Instantiate(explosionPrefab, targetPosition, Quaternion.identity);
+            Instantiate(explosionPrefab, targetPosition, transform.rotation);
         }
         Destroy(gameObject);
     }

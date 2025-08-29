@@ -108,7 +108,7 @@ public static class CounterLogic
                 //创建并添加防御
                 EffectManager.Instance.CreateSpotEvent("Defend", victim.gameObject);
                 //创建并添加反击路线
-                EffectManager.Instance.CreateTrailEvent("Shoot", victim.gameObject, attacker.gameObject);
+                EffectManager.Instance.CreateTrailEvent("Shoot", victim.gameObject, attacker.gameObject,0,0.3f);
                 attack.HowtoAttack(attacker, attacker);
                 break;
             default:

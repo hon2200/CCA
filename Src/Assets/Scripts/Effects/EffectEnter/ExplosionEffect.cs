@@ -4,9 +4,10 @@ using UnityEngine;
 public class ExplosionEffect : MonoBehaviour, ITargetvfx
 {
     private ParticleSystem explosionPS;
+    private float duration;
     private bool hasStarted;
 
-    public void show(Vector3 target)
+    public void show(Vector3 target, float duration)
     {
         explosionPS = GetComponent<ParticleSystem>();
     }

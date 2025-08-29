@@ -782,7 +782,7 @@ SortingGroup:
   m_GameObject: {fileID: 231519277}
   m_Enabled: 1
   m_SortingLayerID: -2106269023
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!224 &231519279
@@ -2054,6 +2054,37 @@ MonoBehaviour:
   TargetPositions: []
   cardOnHover: 0
   RoundTime: 0
+--- !u!1 &1491576979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491576980}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491576980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491576979}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3087375, y: 15.476421, z: -1.2163161}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1493753486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8100423274692139594, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
@@ -2391,6 +2422,7 @@ GameObject:
   - component: {fileID: 1952882936}
   - component: {fileID: 1952882937}
   - component: {fileID: 1952882938}
+  - component: {fileID: 1952882939}
   m_Layer: 0
   m_Name: -- GameManager --
   m_TagString: Untagged
@@ -2570,6 +2602,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 1
+--- !u!114 &1952882939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952882930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59352a4e97a7b3448ae7cd87b9a1dd49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 100
+  duration: 0.3
+  target: {fileID: 1491576979}
 --- !u!1 &2057421226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,3 +2814,4 @@ SceneRoots:
   - {fileID: 1258854016}
   - {fileID: 61938971}
   - {fileID: 231519279}
+  - {fileID: 1491576980}
