@@ -208,7 +208,6 @@ def excel_to_json_Dictionary(input_excel_path: Union[str, Path],
             for cell in sheet[1]:
                 header = str(cell.value) if cell.value is not None else f"Column_{cell.column}"
                 headers.append(header)
-                print(f"DEBUG - 找到列名: '{header}'")  # 添加调试信息
             try:
                 key_col_index = headers.index("Key")
             except ValueError:

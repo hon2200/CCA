@@ -1,0 +1,1850 @@
+{
+    "Mech-Grunt": {
+        "ID": "Mech-Grunt",
+        "Character": "Arrogant",
+        "Available Action": "[bullet,shoot,block]",
+        "Name": "机械兵",
+        "IsFriend": false,
+        "HP": 2,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Mech-Scout": {
+        "ID": "Mech-Scout",
+        "Character": "Arrogant",
+        "Available Action": "[bullet,shoot,double_shoot,block,double_block]",
+        "Name": "机械斥候",
+        "IsFriend": false,
+        "HP": 2,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Mech-Minion": {
+        "ID": "Mech-Minion",
+        "Character": "Cold",
+        "Available Action": "[bullet,shoot,double_shoot,block,double_block,rebounce]",
+        "Name": "机械跟班",
+        "IsFriend": false,
+        "HP": 1,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Mech-Guardian": {
+        "ID": "Mech-Guardian",
+        "Character": "Bellicose",
+        "Available Action": "[bullet,shoot,double_shoot,block,double_block,rebounce]",
+        "Name": "机械卫士",
+        "IsFriend": false,
+        "HP": 2,
+        "InitialResource": [
+            1,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Bog Monkey": {
+        "ID": "Bog Monkey",
+        "Character": "Sly",
+        "Available Action": "[bullet,shoot,double_shoot,block,double_block,rebounce,provoke]",
+        "Name": "水猴子",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Swordsman's Spirit": {
+        "ID": "Swordsman's Spirit",
+        "Character": "Friendly",
+        "Available Action": "[sword,stab,cleave,block,double_block,heavy_block,counterblade,provoke]",
+        "Name": "“剑心”",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Shadow Within": {
+        "ID": "Shadow Within",
+        "Character": "Bellicose",
+        "Available Action": "[sword,stab,cleave,block,double_block,heavy_block,counterblade,provoke]",
+        "Name": "“心魔”",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Blackman": {
+        "ID": "Blackman",
+        "Character": "Cold",
+        "Available Action": "[sword,stab,cleave,block,double_block,heavy_block,deflect,counterblade,provoke]",
+        "Name": "黑衣人",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Skunk Ninja": {
+        "ID": "Skunk Ninja",
+        "Character": "Cold",
+        "Available Action": "[sword,stab,cleave,ghost_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "臭鼬忍者",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Skunk Chieftain": {
+        "ID": "Skunk Chieftain",
+        "Character": "Cold",
+        "Available Action": "[sword,stab,cleave,ghost_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "臭鼬头领",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            6,
+            6
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Novice Assassin": {
+        "ID": "Novice Assassin",
+        "Character": "Cowardly",
+        "Available Action": "[sword,stab,cleave,block,double_block,heavy_block,deflect,counterblade,provoke]",
+        "Name": "见习刺客",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Furious Blade": {
+        "ID": "Furious Blade",
+        "Character": "Bellicose",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "“狂战士”",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Deathshead Grin": {
+        "ID": "Deathshead Grin",
+        "Character": "Sly",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "“笑面”",
+        "IsFriend": false,
+        "HP": 2,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Voidwarden of Pale": {
+        "ID": "Voidwarden of Pale",
+        "Character": "Friendly",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "白使徒",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Voidwarden of Abyss": {
+        "ID": "Voidwarden of Abyss",
+        "Character": "Bellicose",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "黑使徒",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Cursed Tree": {
+        "ID": "Cursed Tree",
+        "Character": "Friendly",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "魔树",
+        "IsFriend": false,
+        "HP": 9,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Arborfolk": {
+        "ID": "Arborfolk",
+        "Character": "Bellicose",
+        "Available Action": "[sword,stab,cleave,block,double_block,heavy_block,deflect]",
+        "Name": "树灵",
+        "IsFriend": false,
+        "HP": 1,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Rubber Grunt": {
+        "ID": "Rubber Grunt",
+        "Character": "Sly",
+        "Available Action": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]",
+        "Name": "橡胶大兵",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            3,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Rubber Tank": {
+        "ID": "Rubber Tank",
+        "Character": "Bellicose",
+        "Available Action": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]",
+        "Name": "橡胶坦克",
+        "IsFriend": false,
+        "HP": 7,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "\"Tiger\"": {
+        "ID": "\"Tiger\"",
+        "Character": "Bellicose",
+        "Available Action": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]",
+        "Name": "“虎式”",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            6,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Heavy Gunner": {
+        "ID": "Heavy Gunner",
+        "Character": "Bellicose",
+        "Available Action": "[bullet,RPG,double_RPG,block,double_block,heavy_block,deflect]",
+        "Name": "重炮步兵",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            3,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Vanguard Horseman": {
+        "ID": "Vanguard Horseman",
+        "Character": "Sly",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "锋卫骑兵",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Alloy Cavalier": {
+        "ID": "Alloy Cavalier",
+        "Character": "Arrogant",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "合金铁骑",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Booby-Trapper": {
+        "ID": "Booby-Trapper",
+        "Character": "Sly",
+        "Available Action": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]",
+        "Name": "诡雷兵",
+        "IsFriend": false,
+        "HP": 2,
+        "InitialResource": [
+            2,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Void Devotee": {
+        "ID": "Void Devotee",
+        "Character": "Bellicose",
+        "Available Action": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "虚空拥趸",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            3,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Void": {
+        "ID": "Void",
+        "Character": "Arrogant",
+        "Available Action": "[bullet,sword,shoot,double_shoot,RPG,double_RPG,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke,comeon]",
+        "Name": "虚空",
+        "IsFriend": false,
+        "HP": 11,
+        "InitialResource": [
+            2,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Voidwolf": {
+        "ID": "Voidwolf",
+        "Character": "Bellicose",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "虚空兽",
+        "IsFriend": false,
+        "HP": 1,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Chronos Hand": {
+        "ID": "Chronos Hand",
+        "Character": "Cold",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "时间之手",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Mnemosyne Hand": {
+        "ID": "Mnemosyne Hand",
+        "Character": "Sly",
+        "Available Action": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]",
+        "Name": "记忆之手",
+        "IsFriend": false,
+        "HP": 2,
+        "InitialResource": [
+            2,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Weasel Bandit": {
+        "ID": "Weasel Bandit",
+        "Character": "Sly",
+        "Available Action": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "黄鼠狼强盗",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Weasel Lackey": {
+        "ID": "Weasel Lackey",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "黄鼠狼小弟",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Butaro": {
+        "ID": "Butaro",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]",
+        "Name": "肥之郎",
+        "IsFriend": false,
+        "HP": 6,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Huntaro": {
+        "ID": "Huntaro",
+        "Character": "Sly",
+        "Available Action": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]",
+        "Name": "狩之郎",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "One-Eye": {
+        "ID": "One-Eye",
+        "Character": "Cowardly",
+        "Available Action": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]",
+        "Name": "一只眼",
+        "IsFriend": false,
+        "HP": 12,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Arbiter of Divine": {
+        "ID": "Arbiter of Divine",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "裁决使",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Judge of Divine": {
+        "ID": "Judge of Divine",
+        "Character": "Arrogant",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "审判官",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Prism Dancer": {
+        "ID": "Prism Dancer",
+        "Character": "Cold",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "棱镜舞者",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Cleric": {
+        "ID": "Cleric",
+        "Character": "Arrogant",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "牧师",
+        "IsFriend": false,
+        "HP": 7,
+        "InitialResource": [
+            3,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "The Brave": {
+        "ID": "The Brave",
+        "Character": "Cold",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "勇者",
+        "IsFriend": false,
+        "HP": 8,
+        "InitialResource": [
+            1,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Heart of Fear": {
+        "ID": "Heart of Fear",
+        "Character": "Cowardly",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "畏惧之心",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Unbroken Will": {
+        "ID": "Unbroken Will",
+        "Character": "Bellicose",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "不屈之意",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            3,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Ancient Brave": {
+        "ID": "Ancient Brave",
+        "Character": "Arrogant",
+        "Available Action": "[double_sowrd,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]",
+        "Name": "古老勇者",
+        "IsFriend": false,
+        "HP": 6,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Oathblade": {
+        "ID": "Oathblade",
+        "Character": "Cold",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "誓约之剑",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Hand-Mirage": {
+        "ID": "Hand-Mirage",
+        "Character": "Cold",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "手·幻象",
+        "IsFriend": false,
+        "HP": 12,
+        "InitialResource": [
+            2,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Left Warden": {
+        "ID": "Left Warden",
+        "Character": "Friendly",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "左戍卫",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Right Warden": {
+        "ID": "Right Warden",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "右戍卫",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Left Vindicator": {
+        "ID": "Left Vindicator",
+        "Character": "Cold",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "圣殿左亲卫",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            3,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Right Vindicator": {
+        "ID": "Right Vindicator",
+        "Character": "Cold",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "圣殿右亲卫",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            2,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Gipsy Divine": {
+        "ID": "Gipsy Divine",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "神圣流浪者",
+        "IsFriend": false,
+        "HP": 13,
+        "InitialResource": [
+            0,
+            7,
+            7
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Pillarbearer": {
+        "ID": "Pillarbearer",
+        "Character": "Friendly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "持殿柱",
+        "IsFriend": false,
+        "HP": 14,
+        "InitialResource": [
+            7,
+            7,
+            7
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Athena": {
+        "ID": "Athena",
+        "Character": "Sly",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "雅典娜",
+        "IsFriend": false,
+        "HP": 7,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Megathon": {
+        "ID": "Megathon",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "震殿威",
+        "IsFriend": false,
+        "HP": 10,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Voidhold": {
+        "ID": "Voidhold",
+        "Character": "Arrogant",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "虚空之笼",
+        "IsFriend": false,
+        "HP": 7,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Voidlock": {
+        "ID": "Voidlock",
+        "Character": "Cold",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "虚空之锁",
+        "IsFriend": false,
+        "HP": 6,
+        "InitialResource": [
+            2,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Mech-Grunt": {
+        "ID": "#Mech-Grunt",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "机械兵",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Bog Monkey": {
+        "ID": "#Bog Monkey",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "水猴子",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            3,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Skunk Chieftain": {
+        "ID": "#Skunk Chieftain",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "臭鼬头领",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            2,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Shadow Within": {
+        "ID": "#Shadow Within",
+        "Character": "Cowardly",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "“心魔”",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Deathshead Grin": {
+        "ID": "#Deathshead Grin",
+        "Character": "Sly",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "“笑面”",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Rubber Grunt": {
+        "ID": "#Rubber Grunt",
+        "Character": "Sly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "橡胶大兵",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            2,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Booby-Trapper": {
+        "ID": "#Booby-Trapper",
+        "Character": "Sly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "诡雷兵",
+        "IsFriend": false,
+        "HP": 6,
+        "InitialResource": [
+            2,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Arbiter of Divine": {
+        "ID": "#Arbiter of Divine",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "裁决使",
+        "IsFriend": false,
+        "HP": 6,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Judge of Divine": {
+        "ID": "#Judge of Divine",
+        "Character": "Arrogant",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "审判官",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            3,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Alloy Cavalier": {
+        "ID": "#Alloy Cavalier",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "合金铁骑",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            6,
+            6
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#\"Tiger\"": {
+        "ID": "#\"Tiger\"",
+        "Character": "Bellicose",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "“虎式”",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            4,
+            8,
+            8
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Butaro": {
+        "ID": "#Butaro",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "肥之郎",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Huntaro": {
+        "ID": "#Huntaro",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "狩之郎",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Infancy": {
+        "ID": "#Infancy",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "孩提",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#The Brave": {
+        "ID": "#The Brave",
+        "Character": "Cold",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "勇者",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            2,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Slasher": {
+        "ID": "#Slasher",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "拔刀斋",
+        "IsFriend": false,
+        "HP": 8,
+        "InitialResource": [
+            0,
+            8,
+            8
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Dust-Sealed Heart": {
+        "ID": "#Dust-Sealed Heart",
+        "Character": "Bellicose",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "尘封之心",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            6,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Void": {
+        "ID": "#Void",
+        "Character": "Sly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "虚空",
+        "IsFriend": false,
+        "HP": 3,
+        "InitialResource": [
+            0,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Hand-Ideal": {
+        "ID": "#Hand-Ideal",
+        "Character": "Friendly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "手·真",
+        "IsFriend": false,
+        "HP": 15,
+        "InitialResource": [
+            12,
+            12,
+            12
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Mech-Grunt#": {
+        "ID": "#Mech-Grunt#",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "机械兵",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Bog Monkey#": {
+        "ID": "#Bog Monkey#",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "水猴子",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            3,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Skunk Chieftain#": {
+        "ID": "#Skunk Chieftain#",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "臭鼬头领",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            2,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Shadow Within#": {
+        "ID": "#Shadow Within#",
+        "Character": "Cowardly",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "“心魔”",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            0,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Deathshead Grin#": {
+        "ID": "#Deathshead Grin#",
+        "Character": "Sly",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "“笑面”",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Rubber Grunt#": {
+        "ID": "#Rubber Grunt#",
+        "Character": "Sly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "橡胶大兵",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            2,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Booby-Trapper#": {
+        "ID": "#Booby-Trapper#",
+        "Character": "Sly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "诡雷兵",
+        "IsFriend": false,
+        "HP": 8,
+        "InitialResource": [
+            2,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Arbiter of Divine#": {
+        "ID": "#Arbiter of Divine#",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "裁决使",
+        "IsFriend": false,
+        "HP": 8,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Judge of Divine#": {
+        "ID": "#Judge of Divine#",
+        "Character": "Arrogant",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "审判官",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            3,
+            1,
+            1
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Alloy Cavalier#": {
+        "ID": "#Alloy Cavalier#",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "合金铁骑",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            6,
+            6
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#\"Tiger\"#": {
+        "ID": "#\"Tiger\"#",
+        "Character": "Bellicose",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "“虎式”",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            4,
+            8,
+            8
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Butaro#": {
+        "ID": "#Butaro#",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "肥之郎",
+        "IsFriend": false,
+        "HP": 7,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Huntaro#": {
+        "ID": "#Huntaro#",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "狩之郎",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Infancy#": {
+        "ID": "#Infancy#",
+        "Character": "Cowardly",
+        "Available Action": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "孩提",
+        "IsFriend": false,
+        "HP": 5,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#The Brave#": {
+        "ID": "#The Brave#",
+        "Character": "Cold",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "勇者",
+        "IsFriend": false,
+        "HP": 7,
+        "InitialResource": [
+            2,
+            3,
+            3
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Slasher#": {
+        "ID": "#Slasher#",
+        "Character": "Arrogant",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "拔刀斋",
+        "IsFriend": false,
+        "HP": 10,
+        "InitialResource": [
+            0,
+            8,
+            8
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Dust-Sealed Heart#": {
+        "ID": "#Dust-Sealed Heart#",
+        "Character": "Bellicose",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "尘封之心",
+        "IsFriend": false,
+        "HP": 7,
+        "InitialResource": [
+            6,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Void#": {
+        "ID": "#Void#",
+        "Character": "Sly",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "虚空",
+        "IsFriend": false,
+        "HP": 4,
+        "InitialResource": [
+            0,
+            4,
+            4
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "#Hand-Sin#": {
+        "ID": "#Hand-Sin#",
+        "Character": "Arrogant",
+        "Available Action": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "手·邪",
+        "IsFriend": false,
+        "HP": 20,
+        "InitialResource": [
+            12,
+            12,
+            12
+        ],
+        "AvailableAction": [
+            "bullet",
+            "block",
+            "shoot"
+        ]
+    },
+    "Shadow": {
+        "ID": "Shadow",
+        "Character": "Cold",
+        "Available Action": "[bullet,shoot,double_shoot,block,double_block,rebounce",
+        "Name": "神秘人",
+        "IsFriend": true,
+        "HP": 2,
+        "InitialResource": [
+            1,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "block",
+            "double_block",
+            "rebounce"
+        ]
+    },
+    "$Shadow": {
+        "ID": "$Shadow",
+        "Character": "Cold",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "神秘人",
+        "IsFriend": true,
+        "HP": 2,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
+    },
+    "Emissary of Light": {
+        "ID": "Emissary of Light",
+        "Character": "Friendly",
+        "Available Action": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]",
+        "Name": "光明来使",
+        "IsFriend": true,
+        "HP": 5,
+        "InitialResource": [
+            2,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke"
+        ]
+    },
+    "Entity of Will": {
+        "ID": "Entity of Will",
+        "Character": "Cold",
+        "Available Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]",
+        "Name": "意志实体",
+        "IsFriend": true,
+        "InitialResource": [
+            0,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
+    },
+    "Retreating Figure": {
+        "ID": "Retreating Figure",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "背影",
+        "IsFriend": true,
+        "HP": 6,
+        "InitialResource": [
+            0,
+            2,
+            2
+        ],
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
+    },
+    "$Swordsman's Spirit": {
+        "ID": "$Swordsman's Spirit",
+        "Character": "Bellicose",
+        "Available Action": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Name": "“剑心”",
+        "IsFriend": true,
+        "HP": 8,
+        "InitialResource": [
+            0,
+            5,
+            5
+        ],
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
+    },
+    "Tin Soldier": {
+        "ID": "Tin Soldier",
+        "Character": "Bellicose",
+        "Available Action": "[double_bullet,shoot,double_shoot,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]",
+        "Name": "锡兵",
+        "IsFriend": true,
+        "HP": 6,
+        "InitialResource": [
+            4,
+            0,
+            0
+        ],
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "Monkey": {
+        "ID": "Monkey",
+        "Name": "猴子",
+        "Description": "伤害*3",
+        "MaxHP": 12,
+        "SkillIDList": "TripleDamage"
+    },
+    "Lvbu": {
+        "ID": "Lvbu",
+        "Name": "吕布",
+        "Description": "攻击力+0.5n",
+        "MaxHP": 20,
+        "SkillIDList": "WuShuang"
+    }
+}

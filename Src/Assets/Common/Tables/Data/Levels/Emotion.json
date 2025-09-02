@@ -1,0 +1,47 @@
+{
+    "Angry": {
+        "ID": "Angry",
+        "Name": "愤怒的",
+        "Emotional Value Lower Limit": 7,
+        "Emotional Value Upper Limit": 10,
+        "Action Tendency": [
+            5,
+            9,
+            1,
+            1,
+            4
+        ],
+        "MultiAttackCheckValue": 0.7,
+        "MutiProvokeCheckValue": 0.7
+    },
+    "Peaceful": {
+        "ID": "Peaceful",
+        "Name": "平和的",
+        "Emotional Value Lower Limit": 3,
+        "Emotional Value Upper Limit": 6,
+        "Action Tendency": [
+            5,
+            6,
+            3,
+            4,
+            2
+        ],
+        "MultiAttackCheckValue": 0.4,
+        "MutiProvokeCheckValue": 0.4
+    },
+    "Afraid": {
+        "ID": "Afraid",
+        "Name": "恐惧的",
+        "Emotional Value Lower Limit": 0,
+        "Emotional Value Upper Limit": 2,
+        "Action Tendency": [
+            5,
+            3,
+            7,
+            3,
+            2
+        ],
+        "MultiAttackCheckValue": 0.3,
+        "MutiProvokeCheckValue": 0.3
+    }
+}

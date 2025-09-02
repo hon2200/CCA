@@ -28,6 +28,27 @@ public class EffectManager : MonoSingleton<EffectManager>
     public SerializedDictionary<string, GameObject> SpotDictionary;
     public float maxDistance = 100f;
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.S))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector3 targetPosition = ray.GetPoint(maxDistance);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, maxDistance))
+            {
+                targetPosition = hit.point;
+            }
+            GameObject target = new();
+            target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
+            if (Input.GetMouseButton(0))
+            {
+                Shoot("Bullet", gameObject, target);
+            }
+            Destroy(target);
+        }
+    }
+
 
     //这是原逻辑
     public void CreateTrailEvent(string EffectID, GameObject origin, GameObject target, float Delay = 0, float duration = 0.3f)
@@ -63,7 +84,7 @@ public class EffectManager : MonoSingleton<EffectManager>
 
 
     //轨迹型特效
-    public void Shoot(string TrailPrefabID ,GameObject origin, GameObject target, float duration = 0.2f, Vector3 offset = new Vector3())
+    public void Shoot(string TrailPrefabID ,GameObject origin, GameObject target, float duration = 0.3f, Vector3 offset = new Vector3())
     {
         Vector3 vector3 = new Vector3(0, 0, 4);
         Vector3 targetPosition = target.transform.position + offset+ vector3;

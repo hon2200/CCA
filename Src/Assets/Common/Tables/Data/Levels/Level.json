@@ -1,0 +1,524 @@
+{
+    "1-1": {
+        "ID": "1-1",
+        "English Name": "The Guardian",
+        "Name": "守旧的人",
+        "Enemy List": "[[Mech-Grunt]]",
+        "Unlocked Action": "[bullet,shoot,block]",
+        "Player HP": 5,
+        "Player Initial Resource": [
+            0,
+            0,
+            0
+        ]
+    },
+    "1-2": {
+        "ID": "1-2",
+        "English Name": "The Spire",
+        "Name": "高塔",
+        "Enemy List": "[[Mech-Scout]]",
+        "Unlocked Action": "[bullet,shoot,double_shoot,block,double_block,rebounce]",
+        "Player HP": 5,
+        "Player Initial Resource": [
+            0,
+            0,
+            0
+        ]
+    },
+    "1-3": {
+        "ID": "1-3",
+        "English Name": "Last Stand",
+        "Name": "围剿",
+        "Enemy List": "[[Mech-Minion,Mech-Guardian]]",
+        "Friend List": "[[shadow]]",
+        "Unlocked Action": "[bullet,shoot,double_shoot,block,double_block,rebounce]",
+        "Player HP": 5,
+        "Player Initial Resource": [
+            0,
+            0,
+            0
+        ]
+    },
+    "1-4": {
+        "ID": "1-4",
+        "English Name": "Limnophobia",
+        "Name": "深水恐惧",
+        "Enemy List": "[[Bog Monkey]]",
+        "Unlocked Action": "[bullet,shoot,double_shoot,block,double_block,rebounce,provoke]",
+        "Player HP": 5,
+        "Player Initial Resource": [
+            0,
+            0,
+            0
+        ]
+    },
+    "1-5": {
+        "ID": "1-5",
+        "English Name": "The Imp",
+        "Name": "“淘气包”"
+    },
+    "1-6": {
+        "ID": "1-6",
+        "English Name": "Kensei",
+        "Name": "宗师",
+        "Enemy List": "[[Swordsman's Spirit]]",
+        "Unlocked Action": "[sword,stab,cleave,block,double_block,heavy_block,counterblade]",
+        "Player HP": 5,
+        "Player Initial Resource": [
+            0,
+            0,
+            0
+        ]
+    },
+    "1-7": {
+        "ID": "1-7",
+        "English Name": "Ashes of Glory",
+        "Name": "“剑心”",
+        "Enemy List": "[[Swordsman's Spirit,Shadow Within]]",
+        "Unlocked Action": "[sword,stab,cleave,block,double_block,heavy_block,counterblade]",
+        "Player HP": 6,
+        "Player Initial Resource": [
+            0,
+            1,
+            1
+        ]
+    },
+    "2-1": {
+        "ID": "2-1",
+        "English Name": "Ambush",
+        "Name": "不速之客",
+        "Enemy List": "[[Blackman],[Skunk Ninja],[Skunk Chieftain]]",
+        "Unlocked Action": "[sword,stab,cleave,ghost_sever,block,double_block,heavy_block,deflect,counterblade,disarm]",
+        "Player HP": 6,
+        "Player Initial Resource": [
+            0,
+            0,
+            0
+        ]
+    },
+    "2-2": {
+        "ID": "2-2",
+        "English Name": "The Hunt",
+        "Name": "危机四伏",
+        "Enemy List": "[[Novice Assassin,Furious Blade,Deathshead Grin]]",
+        "Friend List": "[[$shadow]]",
+        "Unlocked Action": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm]",
+        "Player HP": 6,
+        "Player Initial Resource": [
+            0,
+            6,
+            6
+        ]
+    },
+    "2-3": {
+        "ID": "2-3",
+        "English Name": "Void Apostle",
+        "Name": "使徒",
+        "Enemy List": "[[Voidwarden of Pale,Voidwarden of Abyss]]",
+        "Unlocked Action": "[bullet,sword,stab,cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke]",
+        "Player HP": 6,
+        "Player Initial Resource": [
+            1,
+            0,
+            0
+        ]
+    },
+    "2-4": {
+        "ID": "2-4",
+        "English Name": "The Cursed Tree",
+        "Name": "魔树",
+        "Enemy List": "[[Cursed Tree]]",
+        "Unlocked Action": "[bullet,sword,stab,cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke]",
+        "Player HP": 6,
+        "Player Initial Resource": [
+            1,
+            0,
+            0
+        ]
+    },
+    "2-5": {
+        "ID": "2-5",
+        "English Name": "Hot Zone",
+        "Name": "火线",
+        "Enemy List": "[[Rubber Grunt]]",
+        "Unlocked Action": "[bullet,sword,stab,cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke]",
+        "Player HP": 7,
+        "Player Initial Resource": [
+            3,
+            0,
+            0
+        ]
+    },
+    "2-6": {
+        "ID": "2-6",
+        "English Name": "Tin Can",
+        "Name": "铁皮盒子",
+        "Enemy List": "[[Rubber Tank],[\"Tiger\",Vanguard Horseman]]",
+        "Friend List": "[[],[Emissary of Light]]",
+        "Unlocked Action": "[bullet,sword,stab,cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke]",
+        "Player HP": 7,
+        "Player Initial Resource": [
+            3,
+            0,
+            0
+        ]
+    },
+    "2-7": {
+        "ID": "2-7",
+        "English Name": "A Hail of Bullets",
+        "Name": "枪林弹雨",
+        "Enemy List": "[[Heavy Gunner,Alloy Cavalier,Booby-Trapper]]",
+        "Unlocked Action": "[bullet,sword,stab,cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke]",
+        "Player HP": 7,
+        "Player Initial Resource": [
+            3,
+            1,
+            1
+        ]
+    },
+    "2-8": {
+        "ID": "2-8",
+        "English Name": "Smother",
+        "Name": "窒息",
+        "Enemy List": "[[Void Devotee]]",
+        "Unlocked Action": "[bullet,sword,stab,cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke]",
+        "Player HP": 7,
+        "Player Initial Resource": [
+            3,
+            1,
+            1
+        ]
+    },
+    "2-9": {
+        "ID": "2-9",
+        "English Name": "Void",
+        "Name": "“虚界”",
+        "Enemy List": "[[Void,Chronos Hand,Mnemosyne Hand]]",
+        "Friend List": "[[Entity of Will]]",
+        "Unlocked Action": "[bullet,sword,stab,cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke,comeon]",
+        "Player HP": 7,
+        "Player Initial Resource": [
+            3,
+            2,
+            2
+        ]
+    },
+    "3-1": {
+        "ID": "3-1",
+        "English Name": "Robbery",
+        "Name": "抢劫",
+        "Enemy List": "[[Weasel Bandit，Weasel Lackey]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke,comeon]",
+        "Player HP": 8,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-2": {
+        "ID": "3-2",
+        "English Name": "Den of Thieves",
+        "Name": "深入贼窝",
+        "Enemy List": "[[Butaro,Butaro]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke,comeon]",
+        "Player HP": 8,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-3": {
+        "ID": "3-3",
+        "English Name": "Pest Control",
+        "Name": "替天行道",
+        "Enemy List": "[[One-Eye]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke,comeon]",
+        "Player HP": 8,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-4": {
+        "ID": "3-4",
+        "English Name": "A Golden Childhood",
+        "Name": "没有缺憾的童年"
+    },
+    "3-5": {
+        "ID": "3-5",
+        "English Name": "The Prismatic Maze",
+        "Name": "棱镜迷宫",
+        "Enemy List": "[[Arbiter of Divine,Judge of Divine]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 8,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-6": {
+        "ID": "3-6",
+        "English Name": "Mirror",
+        "Name": "镜中万象",
+        "Enemy List": "[[Prism Dancer,Cleric]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 8,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-7": {
+        "ID": "3-7",
+        "English Name": "In my heart",
+        "Name": "童话勇者",
+        "Enemy List": "[[The Brave,Heart of Fear,Unbroken Will]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 8,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-8": {
+        "ID": "3-8",
+        "English Name": "Retreating Figure",
+        "Name": "最伟岸的背影"
+    },
+    "3-9": {
+        "ID": "3-9",
+        "English Name": "Miracle",
+        "Name": "Miracle",
+        "Enemy List": "[[Ancient Brave,Oathblade]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 9,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-10": {
+        "ID": "3-10",
+        "English Name": "The Calling",
+        "Name": "神启",
+        "Enemy List": "[[Hand-Mirage,Left Warden,Right Warden]]",
+        "Friend List": "[[Retreating Figure]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 9,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "3-11": {
+        "ID": "3-11",
+        "English Name": "On The Way",
+        "Name": "沿着这条路"
+    },
+    "3-12": {
+        "ID": "3-12",
+        "English Name": "The Cathedral",
+        "Name": "圣殿",
+        "Enemy List": "[[Left Vindicator,Right Vindicator],[Gipsy Divine],[Pillarbearer,Athena,Megathon]]",
+        "Friend List": "[[],[],[$Swordsman's Spirit]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 9,
+        "Player Initial Resource": [
+            1,
+            2,
+            2
+        ]
+    },
+    "4-1": {
+        "ID": "4-1",
+        "English Name": "Anonymous Pages of Years",
+        "Name": "无名书"
+    },
+    "4-2": {
+        "ID": "4-2",
+        "English Name": "Two Roads Diverged in Life",
+        "Name": "十字路口",
+        "Enemy List": "[[Voidhold,Voidlock]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-3A": {
+        "ID": "4-3A",
+        "English Name": "Timidity",
+        "Name": "怯",
+        "Enemy List": "[[#Mech-Grunt,#Bog Monkey,#Skunk Chieftain,#Shadow Within]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-4A": {
+        "ID": "4-4A",
+        "English Name": "Deception",
+        "Name": "欺",
+        "Enemy List": "[[#Deathshead Grin,#Rubber Grunt,#Booby-Trapper]]",
+        "Friend List": "[[$Swordsman's Spirit]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-5A": {
+        "ID": "4-5A",
+        "English Name": "Conceit",
+        "Name": "傲",
+        "Enemy List": "[[#Arbiter of Divine,#Judge of Divine,#Alloy Cavalier]]",
+        "Friend List": "[[$Swordsman's Spirit]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-6A": {
+        "ID": "4-6A",
+        "English Name": "Anger",
+        "Name": "怒",
+        "Enemy List": "[[#Butaro,#Huntaro,#\"Tiger\"]]",
+        "Friend List": "[[$Swordsman's Spirit]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-7A": {
+        "ID": "4-7A",
+        "English Name": "Regret",
+        "Name": "惜",
+        "Enemy List": "[[#Infancy,#The Brave,#Slasher,#Dust-Sealed Heart,#Void]]",
+        "Friend List": "[[$Swordsman's Spirit,Tin Soldier]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-8A": {
+        "ID": "4-8A",
+        "English Name": "The True Heart",
+        "Name": "真",
+        "Enemy List": "[[#Hand-Ideal]]",
+        "Friend List": "[[$Swordsman's Spirit,Tin Soldier]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-3B": {
+        "ID": "4-3B",
+        "English Name": "Dread",
+        "Name": "惧",
+        "Enemy List": "[[#Mech-Grunt#,#Bog Monkey#,#Skunk Chieftain#,#Shadow Within#]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-4B": {
+        "ID": "4-4B",
+        "English Name": "Fraud",
+        "Name": "诈",
+        "Enemy List": "[[#Deathshead Grin#,#Rubber Grunt#,#Booby-Trapper#]]",
+        "Friend List": "[[$Swordsman's Spirit]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-5B": {
+        "ID": "4-5B",
+        "English Name": "Contempt",
+        "Name": "慢",
+        "Enemy List": "[[#Arbiter of Divine#,#Judge of Divine#,#Alloy Cavalier#]]",
+        "Friend List": "[[$Swordsman's Spirit]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-6B": {
+        "ID": "4-6B",
+        "English Name": "Evil",
+        "Name": "恶",
+        "Enemy List": "[[#Butaro#,#Huntaro#,#\"Tiger\"#]]",
+        "Friend List": "[[$Swordsman's Spirit]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-7B": {
+        "ID": "4-7B",
+        "English Name": "Grudge",
+        "Name": "怨",
+        "Enemy List": "[[#Infancy#,#The Brave#,#Slasher#,#Dust-Sealed Heart#,#Void#]]",
+        "Friend List": "[[$Swordsman's Spirit,Tin Soldier]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    },
+    "4-8B": {
+        "ID": "4-8B",
+        "English Name": "The Malignant Masquerade",
+        "Name": "祟",
+        "Enemy List": "[[#Hand-Sin#]]",
+        "Friend List": "[[$Swordsman's Spirit,Tin Soldier]]",
+        "Unlocked Action": "[double_bullet,double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,shoot,double_shoot,laser_shoot,laser_connon,RPG,doule_RPG,nuclear_bomb,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]",
+        "Player HP": 10,
+        "Player Initial Resource": [
+            3,
+            5,
+            5
+        ]
+    }
+}
