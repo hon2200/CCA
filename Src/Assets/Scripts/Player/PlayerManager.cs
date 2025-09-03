@@ -28,7 +28,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     //创建HP=5的用于测试的玩家
     private Player CreatePlayer_Debug(int ID_inGame,PlayerType playerType)
     {
-        HeroDefine playerDefine = new("Debug_Player", 5, new PlayerResource(0, 0, 0));
+        HeroDefine playerDefine = new("Debug_Player", 5, new List<int> { 0, 0, 0 });
         PlayerStatus playerStatus = new(playerDefine);
         PlayerAction playerAction = new();
         //创建玩家物体

@@ -1,16 +1,20 @@
 {
-    "Monkey": {
-        "ID": "Monkey",
+    "Wukong": {
+        "ID": "Wukong",
         "Name": "猴子",
         "Description": "伤害*3",
         "MaxHP": 12,
-        "SkillIDList": "TripleDamage"
+        "SkillIDList": [
+            "Mountain Crusher\"#\""
+        ]
     },
     "Lvbu": {
         "ID": "Lvbu",
         "Name": "吕布",
         "Description": "攻击力+0.5n",
         "MaxHP": 20,
-        "SkillIDList": "WuShuang"
+        "SkillIDList": [
+            "Peerless"
+        ]
     }
 }

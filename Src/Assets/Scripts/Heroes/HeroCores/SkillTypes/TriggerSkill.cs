@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public abstract class Triggered : Skill
+public abstract class TriggerSkill : Skill
 {
     //受到伤害调用
     public virtual void OnDamaged() { }

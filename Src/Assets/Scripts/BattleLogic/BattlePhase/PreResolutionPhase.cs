@@ -19,6 +19,13 @@ public class PreResolutionPhase : Phase
         foreach(var player in PlayerManager.Instance.Players.Values)
         {
             player.GiveValueToLaserCannon();
+            foreach(var skill in player.hero.skills)
+            {
+                if(skill is PhasebasedSkill phasebasedSkill)
+                {
+                    phasebasedSkill.BeforeResolution();
+                }
+            }
         }
     }
 }
