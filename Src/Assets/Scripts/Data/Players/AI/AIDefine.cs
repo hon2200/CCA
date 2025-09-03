@@ -11,7 +11,7 @@ public class AIDefine
 {
     public string ID { get; set; }
     public string Name { get; set; }
-    public int HP { get; set; }
+    public int maxHP { get; set; }
     public bool IsFriend { get; set; }
     public List<int> InitialResource { get; set; } //子弹，剑，可用剑
     public string CharacterID { get; set; }

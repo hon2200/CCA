@@ -11,19 +11,34 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int ID_inGame { get; set; }
+    //玩家状态
     public PlayerStatus status { get; set; }
+    //玩家行动
     public PlayerAction action { get; set; }
+    public PlayerType playerType { get; set; }
+    public Hero hero { get; set; }
+    public ReadyAttribute isReady { get; set; }
+
     public PlayerUIText playerUIText;
     public PlayerEffectController playerEffectController;
-    public ReadyAttribute isReady;
-    public PlayerType playerType;
-    public Hero hero;
-    public void Initialize(int ID_inGame, PlayerStatus status, PlayerAction action, PlayerType playerType)
+
+    //创建一个英雄类型的玩家
+    public void Initialize(int ID_inGame, PlayerType playerType, HeroDefine heroDefine)
     {
         this.ID_inGame = ID_inGame;
-        this.status = status;
-        this.action = action;
+        this.status = new(heroDefine.MaxHP, new());
+        this.action = new();
         this.playerType = playerType;
+        //添加英雄技能
+        foreach(var hero in HeroDataBase.Instance.HeroDictionary)
+        {
+            if (hero.Key == heroDefine.ID)
+                foreach(var skillID in hero.Value.SkillIDList)
+                {
+                    SkillLiberary.Instance.skillDic.TryGetValue(skillID, out var skill);
+                    this.hero.skills.Add(skill);
+                }
+        }
         isReady = new ReadyAttribute();
         isReady.Cancel();
     }

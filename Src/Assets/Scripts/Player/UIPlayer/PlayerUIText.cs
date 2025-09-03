@@ -23,11 +23,11 @@ public class PlayerUIText : MonoBehaviour
                     // 绑定HP变化事件
                     //这里采用的写法没有声明函数主题
                     player.status.HP.OnValueChanged += (oldVal, newVal, opType) =>
-                        UpdatePlayerText(text.Value, newVal, player.status.playerDefine.MaxHP);
+                        UpdatePlayerText(text.Value, newVal, player.status.MaxHP);
                     // 初始更新
                     UpdatePlayerText(text.Value,
                         player.status.HP.Value,
-                        player.status.playerDefine.MaxHP);
+                        player.status.MaxHP);
                     break;
                 case PlayerUITextName.Bullet:
                     // 绑定子弹变化事件

@@ -6,24 +6,34 @@ using System.Threading.Tasks;
 
 public class PlayerStatus
 {
-    public HeroDefine playerDefine;
+    public int MaxHP;
     public HPAttribute HP;
     public NewPlayerResource resources;
     public IsAliveAttribute life;
-    public PlayerStatus(HeroDefine playerDefine)
+    public PlayerStatus()
     {
-        this.playerDefine = playerDefine;
-        life = new();
-        life.Born();
         HP = new();
         resources = new();
-        HP.Set(playerDefine.MaxHP);
+        life = new();
+        life.Born();
         HP.OnValueChanged += (oldVal, newVal, opType) =>
             DeadCheck(newVal);
-        resources.Bullet.Set(playerDefine.iniResource[0]);
-        resources.Sword.Set(playerDefine.iniResource[1]);
-        resources.AvailableSword.Set(playerDefine.iniResource[1] - playerDefine.iniResource[2]);
     }
+    public PlayerStatus(int MaxHP, List<int> iniReources)
+    {
+        HP = new();
+        resources = new();
+        life = new();
+        life.Born();
+        HP.OnValueChanged += (oldVal, newVal, opType) =>
+            DeadCheck(newVal);
+        HP.Set(MaxHP);
+        this.MaxHP = MaxHP;
+        resources.Bullet.Set(iniReources[0]);
+        resources.Sword.Set(iniReources[1]);
+        resources.AvailableSword.Set(iniReources[1] - iniReources[2]);
+    }
+
     //将这个函数添加到HPAttribute的订阅中，一旦HP的值发生改变，立刻检查是否死亡。
     private void DeadCheck(int HP)
     {

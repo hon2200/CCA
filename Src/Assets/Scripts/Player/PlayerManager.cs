@@ -25,18 +25,15 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         AlivePlayerNumber = 5;
         //Log.PrintLoadedDictionary(Players, "Log/Loading/PlayerTable_Debug.txt");
     }
-    //创建HP=5的用于测试的玩家
+    //创建HP=5的用于测试的玩家猴子
     private Player CreatePlayer_Debug(int ID_inGame,PlayerType playerType)
     {
-        HeroDefine playerDefine = new("Debug_Player", 5, new List<int> { 0, 0, 0 });
-        PlayerStatus playerStatus = new(playerDefine);
-        PlayerAction playerAction = new();
         //创建玩家物体
         var newPlayerObject = Instantiate(playerPrefab,this.transform);
         newPlayerObject.name = "Player" + ID_inGame;
         //初始化玩家脚本
         var newPlayer = newPlayerObject.GetComponent<Player>();
-        newPlayer.Initialize(ID_inGame, playerStatus, playerAction, playerType);
+        newPlayer.Initialize(ID_inGame, playerType, new("Wukong", 12));
         InitializeUIText(newPlayer);
         InitializePlayerEffectController(newPlayer);
         return newPlayer;

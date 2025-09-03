@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public abstract class TriggerSkill : Skill
 {
     //受到伤害调用
-    public virtual void OnDamaged() { }
+    public virtual void OnDamaged(Player attacker, int damage) { }
     //造成伤害调用
     public virtual void OnDamaging() { }
     //攻击生效调用

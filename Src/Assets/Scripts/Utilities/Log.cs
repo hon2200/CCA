@@ -38,7 +38,7 @@ public static class Log
         logContent.AppendLine("====================================");
         foreach (Player player in PlayerManager.Instance.Players.Values)
         {
-            logContent.AppendLine($"player ID : {player.ID_inGame} HP : {player.status.HP.Value} " +
+            logContent.AppendLine($"player ID : {player.ID_inGame} maxHP : {player.status.HP.Value} " +
                 $"Bullet : {player.status.resources.Bullet.Value} Sword : {player.status.resources.Sword.Value} " + 
                 $"SwordAvailable : {player.status.resources.AvailableSword.Value}");
             logContent.AppendLine();
