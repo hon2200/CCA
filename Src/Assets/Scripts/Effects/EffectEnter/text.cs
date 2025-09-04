@@ -20,6 +20,7 @@ public class text : MonoBehaviour
             }
             target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
                 EffectManager.Instance.Shoot("Bullet", gameObject, target,duration);
+            EffectManager.Instance.Spot("Hit", 4f ,target,duration);
         }
     }
 }

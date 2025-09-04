@@ -1,33 +1,23 @@
 using UnityEngine;
+using System.Collections;
 
-[RequireComponent(typeof(ParticleSystem))]
 public class ExplosionEffect : MonoBehaviour, ITargetvfx
 {
-    private ParticleSystem explosionPS;
+    public ParticleSystem explosionPS;
     private float duration;
-    private bool hasStarted;
 
     public void show(Vector3 target, float duration)
     {
-        explosionPS = GetComponent<ParticleSystem>();
-    }
-
-    void Awake()
-    {
-        explosionPS = GetComponent<ParticleSystem>();
-    }
-
-    void OnEnable()
-    {
-        hasStarted = true;
+        this.duration = duration;
+        ParticleSystem.MainModule mainModule = explosionPS.main;
+        mainModule.startLifetime = duration;
         explosionPS.Play();
+        StartCoroutine(DestroyAfterDuration());
     }
 
-    void Update()
+    private IEnumerator DestroyAfterDuration()
     {
-        if (hasStarted && explosionPS.isStopped)
-        {
-            Destroy(gameObject);
-        }
+        yield return new WaitForSeconds(duration);
+        Destroy(gameObject);
     }
 }
