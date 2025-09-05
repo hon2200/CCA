@@ -1,0 +1,20 @@
+Dict 内容 (Count: 2)
+====================================
+Key: Wukong
+
+  ID:     Wukong
+  Name:     猴子
+  MaxHP:     12
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Mountain Crusher"#"
+------------------------------------
+Key: Lvbu
+
+  ID:     Lvbu
+  Name:     吕布
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Peerless
+------------------------------------

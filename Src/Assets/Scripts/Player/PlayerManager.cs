@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//这两天写一个通过UI创建英雄的函数
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
     public int AlivePlayerNumber;
@@ -25,7 +28,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         AlivePlayerNumber = 5;
         //Log.PrintLoadedDictionary(Players, "Log/Loading/PlayerTable_Debug.txt");
     }
-    //创建HP=5的用于测试的玩家猴子
+    //创建HP=5的用于测试的玩家吕布
     private Player CreatePlayer_Debug(int ID_inGame,PlayerType playerType)
     {
         //创建玩家物体
@@ -33,7 +36,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         newPlayerObject.name = "Player" + ID_inGame;
         //初始化玩家脚本
         var newPlayer = newPlayerObject.GetComponent<Player>();
-        newPlayer.Initialize(ID_inGame, playerType, new("Wukong", 12));
+        newPlayer.Initialize(ID_inGame, playerType, new("Lvbu", 12));
         InitializeUIText(newPlayer);
         InitializePlayerEffectController(newPlayer);
         return newPlayer;

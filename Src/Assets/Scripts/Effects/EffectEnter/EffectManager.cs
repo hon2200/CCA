@@ -5,6 +5,14 @@ using TMPro;
 using UnityEngine;
 using AYellowpaper.SerializedCollections;
 
+
+
+
+//需要通过特效达成传递信息的目的
+//攻击行动，单独的内容
+//给枪(shoot- bullet)，双枪(shoot - bullet*2)，激光枪，激光炮(调整一下弹道的参数，Trail的时间，色泽上的处理
+//RPG，双RPG(实例化一个对象，和给枪一样)
+//刺，砍，斩（通过粒子系统，生成不同的轨迹），光剑，光刀（调整一下弹道的参数，Trail的时间，色泽上的处理）
 public class EffectEvent
 {
     //特效持续时间
@@ -51,7 +59,8 @@ public class EffectManager : MonoSingleton<EffectManager>
 
 
     //这是原逻辑
-    public void CreateTrailEvent(string EffectID, GameObject origin, GameObject target, float Delay = 0, float duration = 0.3f)
+    public void CreateTrailEvent(string EffectID, GameObject origin, GameObject target, 
+        float Delay = 0, float duration = 0.3f)
     {
         EffectEvent effectEvent = new EffectEvent();
         switch (EffectID)

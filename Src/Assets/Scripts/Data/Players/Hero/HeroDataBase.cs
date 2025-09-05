@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class HeroDataBase : Singleton<HeroDataBase>
+//DataBase很多，但是代码基本一样，后续可以简化
+public class HeroDataBase : MonoSingleton<HeroDataBase>
 {
     public string path;
     // 玩家字典，包含所有玩家数据库
     public Dictionary<string, HeroDefine> HeroDictionary { get; set; }
+    public void Awake()
+    {
+        LoadingHeroes();
+    }
     //读入所有玩家
     public void LoadingHeroes()
     {
