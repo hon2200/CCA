@@ -9,8 +9,9 @@ public class HeroDataBase : MonoSingleton<HeroDataBase>
     public string path;
     // 玩家字典，包含所有玩家数据库
     public Dictionary<string, HeroDefine> HeroDictionary { get; set; }
-    public void Awake()
+    private new void Awake()
     {
+        base.Awake();
         LoadingHeroes();
     }
     //读入所有玩家

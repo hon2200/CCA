@@ -1,20 +1,734 @@
-Dict 内容 (Count: 2)
+Dict 内容 (Count: 69)
 ====================================
+Key: Blank
+
+  ID:     Blank
+  Name:     白板
+  Description:     null
+  MaxHP:     25
+  SkillIDList: 
+    List`1 (Count: 0)
+------------------------------------
 Key: Wukong
 
   ID:     Wukong
   Name:     猴子
+  Description:     伤害*3
   MaxHP:     12
   SkillIDList: 
     List`1 (Count: 1)
-      [0]:         Mountain Crusher"#"
+      [0]:         Mountain Crusher
 ------------------------------------
 Key: Lvbu
 
   ID:     Lvbu
   Name:     吕布
+  Description:     攻击力+0.5n
   MaxHP:     20
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Peerless
+------------------------------------
+Key: Diaochan
+
+  ID:     Diaochan
+  Name:     貂蝉
+  Description:     消耗子弹指定两名玩家，未攻击对方者失去n!体力
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Fracture Cascade
+------------------------------------
+Key: Licunxu
+
+  ID:     Licunxu
+  Name:     李存勖
+  Description:     开局获三把剑；伤害翻n倍（n为血量十位数）；血量最高时每回合流失2体力
+  MaxHP:     40
+  SkillIDList: 
+    List`1 (Count: 3)
+      [0]:         Triple Tribute Oath
+      [1]:         Decade's Dominance
+      [2]:         Thespian's Curse
+------------------------------------
+Key: Houyi
+
+  ID:     Houyi
+  Name:     后羿
+  Description:     消耗2子弹造成3伤害+眩晕，可被挡/反弹
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Celestial Shatter
+------------------------------------
+Key: Bianque
+
+  ID:     Bianque
+  Name:     扁鹊
+  Description:     造成伤害可附加中毒状态，持续掉血
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Terminal Affliction
+------------------------------------
+Key: Arthur
+
+  ID:     Arthur
+  Name:     亚瑟
+  Description:     不能补子弹；消耗20把剑发动核弹级攻击
+  MaxHP:     30
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Royal Knight
+      [1]:         EXcalibur
+------------------------------------
+Key: Daji
+
+  ID:     Daji
+  Name:     妲己
+  Description:     攻击生效可造成眩晕
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Bewitching Hex
+------------------------------------
+Key: Dianwei
+
+  ID:     Dianwei
+  Name:     典韦
+  Description:     一回合可进行2种不同类型行动
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Dual Onslaught
+------------------------------------
+Key: TheSepulchralGuardian
+
+  ID:     TheSepulchralGuardian
+  Name:     守墓人
+  Description:     死亡前对一名玩家造成10点伤害+3溅射
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Posthumous Retribution
+------------------------------------
+Key: KingLeonidasI
+
+  ID:     KingLeonidasI
+  Name:     列奥尼达一世
+  Description:     发动后进入三回合免伤状态，每局3次
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Spartan Aegis
+------------------------------------
+Key: Zhugeliang
+
+  ID:     Zhugeliang
+  Name:     诸葛亮
+  Description:     每造成伤害获标记，伤害翻（n%5+1）倍
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Volley Cycle
+------------------------------------
+Key: Chengyaojin
+
+  ID:     Chengyaojin
+  Name:     程咬金
+  Description:     生命≤10时伤害×2，≤5时×4
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Threshold Fury
+------------------------------------
+Key: Maxim
+
+  ID:     Maxim
+  Name:     马克沁
+  Description:     消耗n发子弹对n个玩家各造成2点伤害
+  MaxHP:     12
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Maxim Machine Gun
+------------------------------------
+Key: Yingzheng
+
+  ID:     Yingzheng
+  Name:     嬴政
+  Description:     拔剑对自己生效时可额外获得8把剑
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Blade Dominator
+------------------------------------
+Key: Liru
+
+  ID:     Liru
+  Name:     李儒
+  Description:     攻击未命中者眩晕；可发动焚城使未消耗资源者受伤
+  MaxHP:     12
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Urban Inferno
+      [1]:         Counter Trap
+------------------------------------
+Key: Zhuangzhou
+
+  ID:     Zhuangzhou
+  Name:     庄周
+  Description:     无法成为技能目标；攻击和被攻击时无视对方技能效果
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Transcendence
+------------------------------------
+Key: Zhouyu
+
+  ID:     Zhouyu
+  Name:     周瑜
+  Description:     可对目标发动反间，若条件满足则造成n+1点伤害
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Chain Deceit
+------------------------------------
+Key: Xiaoqiao
+
+  ID:     Xiaoqiao
+  Name:     小乔
+  Description:     可将受到的伤害转移给他人并令其选择效果
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Pandora's Torrent
+------------------------------------
+Key: Lanlingwang
+
+  ID:     Lanlingwang
+  Name:     兰陵王
+  Description:     持续4回合未攻击则进入强化状态
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Silent Fury
+------------------------------------
+Key: Machao
+
+  ID:     Machao
+  Name:     马超
+  Description:     可失去体力指定目标，本回合对其伤害+2且命中则眩晕
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Ferrum Charge
+      [1]:         Requital Blitz
+------------------------------------
+Key: Jiangwei
+
+  ID:     Jiangwei
+  Name:     姜维
+  Description:     可进行策略选择获得资源或强化；限定技可交换资源并共享伤害加成
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Strategic Gambit
+      [1]:         Collaborating Last Stand
+------------------------------------
+Key: Lichunfeng
+
+  ID:     Lichunfeng
+  Name:     李淳风
+  Description:     只能使用特定行动，包括天灾、人祸、嫁祸等
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 7)
+      [0]:         Up Cataclysm
+      [1]:         Down Havoc
+      [2]:         Scapegoat Blight
+      [3]:         Self Dharma
+      [4]:         Pacify Right
+      [5]:         War Left
+      [6]:         Divine Chastisement
+------------------------------------
+Key: Gilgamesh
+
+  ID:     Gilgamesh
+  Name:     吉尔伽美什
+  Description:     拥有无限资源；第一回合无法攻击，免疫负面效果
+  MaxHP:     3
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Golden Vault
+      [1]:         Divine Pride
+------------------------------------
+Key: Gawain
+
+  ID:     Gawain
+  Name:     高文
+  Description:     半数以上角色未攻击时伤害×3且受伤/3
+  MaxHP:     18
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Solar Surge
+------------------------------------
+Key: Heiwuchang
+
+  ID:     Heiwuchang
+  Name:     黑无常
+  Description:     可附加尸毒标记，回合结束时按标记数造成伤害
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Plague Reckoning
+------------------------------------
+Key: Baiwuchang
+
+  ID:     Baiwuchang
+  Name:     白无常
+  Description:     可造成眩晕并附身，附身状态下转移伤害
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Spirit Shackle
+      [1]:         Binding Passage
+------------------------------------
+Key: Panguan
+
+  ID:     Panguan
+  Name:     判官
+  Description:     可消耗子弹减少受伤并增强下次攻击；可协议使目标免伤但三回合后死亡
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Decree Approval
+      [1]:         Doom Edict
+------------------------------------
+Key: Mengpo
+
+  ID:     Mengpo
+  Name:     孟婆
+  Description:     可协议获得他人技能；可使目标后续回合伤害变化
+  MaxHP:     18
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Soul Reset
+      [1]:         Aftertaste
+------------------------------------
+Key: Qinguangwang
+
+  ID:     Qinguangwang
+  Name:     秦广王
+  Description:     其他角色攻击你消耗的资源翻倍
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Royal Barricade
+------------------------------------
+Key: Yuantiangang
+
+  ID:     Yuantiangang
+  Name:     袁天罡
+  Description:     造成伤害可获得标记并分配不同效果；受到伤害时可重新分配
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Stellar Allocation
+      [1]:         Revolving Sky
+------------------------------------
+Key: Lancelot
+
+  ID:     Lancelot
+  Name:     兰斯洛特
+  Description:     攻击命中可选择弃置资源或使目标失血；未命中攻击可获得资源
+  MaxHP:     18
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Tidal Knight
+      [1]:         Unbroken Loot
+------------------------------------
+Key: Mordred
+
+  ID:     Mordred
+  Name:     莫德雷德
+  Description:     造成伤害后可临时获得目标剑数；可令目标眩晕但自身体力降为1
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Premeditated Usurpation
+      [1]:         Treason's Toll
+------------------------------------
+Key: Spider
+
+  ID:     Spider
+  Name:     蜘蛛
+  Description:     可结网免伤并捕获目标；可产卵回复体力并获得网标记
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 3)
+      [0]:         SpitSilk
+      [1]:         SpinWeb
+      [2]:         LayEggs
+------------------------------------
+Key: Huamulan
+
+  ID:     Huamulan
+  Name:     花木兰
+  Description:     补给额外获剑；可进入征战状态获得无双等效果；可保护指定目标
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 3)
+      [0]:         Scribe's Mart
+      [1]:         Filial Campaign
+      [2]:         Bastion Sacrifice
+------------------------------------
+Key: Wuzeitan
+
+  ID:     Wuzeitan
+  Name:     武则天
+  Description:     可附加标记；核弹伤害可根据标记数增强
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 3)
+      [0]:         Vindictive Script
+      [1]:         Death Decree
+      [2]:         Retribution of Empress
+------------------------------------
+Key: Guiguzi
+
+  ID:     Guiguzi
+  Name:     鬼谷子
+  Description:     可交换两名角色的体力和资源；根据获得子弹数减少受伤
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Fate Swap
+      [1]:         Prudent Ward
+------------------------------------
+Key: Houqing
+
+  ID:     Houqing
+  Name:     后卿
+  Description:     伤害随已损失体力增加；造成伤害后可进入泣血状态
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 4)
+      [0]:         Bloodspring Surge
+      [1]:         Weeping Thorns
+      [2]:         Sanguine Ruin
+      [3]:         Bloody Substitution
+------------------------------------
+Key: Yinggou
+
+  ID:     Yinggou
+  Name:     赢勾
+  Description:     补子弹和拔剑时免疫相应攻击伤害
+  MaxHP:     18
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Cadaverous Barrier
+------------------------------------
+Key: Hanba
+
+  ID:     Hanba
+  Name:     旱魃
+  Description:     攻击时他人无法获得资源；可附加旱标记增强伤害
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Scorched Dominion
+      [1]:         Famine Brand
+------------------------------------
+Key: Jiangchen
+
+  ID:     Jiangchen
+  Name:     将臣
+  Description:     无体力值，初始存活6回合，造成伤害可延长存活时间
+  MaxHP:     10000000
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Eternal Specter
+      [1]:         Death's Crescendo
+------------------------------------
+Key: WolfKing
+
+  ID:     WolfKing
+  Name:     狼王
+  Description:     可召唤狼群，狼会复制你的子弹攻击
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Spectral Pack
+------------------------------------
+Key: Liyuanba
+
+  ID:     Liyuanba
+  Name:     李元霸
+  Description:     可发动血怒，持续失去体力但伤害×5
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Sacrificial Fury
+------------------------------------
+Key: Taiyizhenren
+
+  ID:     Taiyizhenren
+  Name:     太乙真人
+  Description:     可炼制并使用各种灵药获得不同效果
+  MaxHP:     12
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Alchemic Synthesis
+------------------------------------
+Key: Sunce
+
+  ID:     Sunce
+  Name:     孙策
+  Description:     每造成伤害获得子弹，下回合伤害翻倍
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Overdrive Rampage
+------------------------------------
+Key: ZhuBajie
+
+  ID:     ZhuBajie
+  Name:     猪八戒
+  Description:     只能单补单拔
+  MaxHP:     40
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Hog-Tied
+------------------------------------
+Key: ShaSeng
+
+  ID:     ShaSeng
+  Name:     沙僧
+  Description:     不能补给
+  MaxHP:     50
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Void of Sustenance
+------------------------------------
+Key: Tangseng
+
+  ID:     Tangseng
+  Name:     唐僧
+  Description:     双手合十可眩晕攻击者并获得其资源
+  MaxHP:     18
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         MonkProtection
+------------------------------------
+Key: LiuBei
+
+  ID:     LiuBei
+  Name:     刘备
+  Description:     造成伤害后可选择取消部分改为眩晕并获得资源
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Fertile Mercy
+------------------------------------
+Key: SunQuan
+
+  ID:     SunQuan
+  Name:     孙权
+  Description:     攻击后可改为防御行动
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Ease Sanctuary
+------------------------------------
+Key: HanXin
+
+  ID:     HanXin
+  Name:     韩信
+  Description:     每3资源攻击力+0.5，伤害+1，上限3
+  MaxHP:     12
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Mass Mustering Master
+------------------------------------
+Key: XiangYu
+
+  ID:     XiangYu
+  Name:     项羽
+  Description:     可进入霸王状态，伤害×3且最多受1伤害
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Dominion Fervor
+------------------------------------
+Key: LiuBang
+
+  ID:     LiuBang
+  Name:     刘邦
+  Description:     受到伤害时可发动，根据对方下回合行动反弹伤害或自身眩晕
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Royal Gambit
+------------------------------------
+Key: SuQin
+
+  ID:     SuQin
+  Name:     苏秦
+  Description:     造成伤害后可合纵，补给时获得额外资源
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         VerticalAlliance
+------------------------------------
+Key: ZhangYi
+
+  ID:     ZhangYi
+  Name:     张仪
+  Description:     造成伤害后可连横，增加攻击力
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         HorizontalAlliance
+------------------------------------
+Key: BillOnTheRun
+
+  ID:     BillOnTheRun
+  Name:     逃犯比尔
+  Description:     对你造成伤害的玩家获得一发子弹
+  MaxHP:     40
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Daring Bounty
+------------------------------------
+Key: CunningJack
+
+  ID:     CunningJack
+  Name:     狡盗杰克
+  Description:     补给，获得5发子弹
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Powder Keg
+------------------------------------
+Key: RedHandedRory
+
+  ID:     RedHandedRory
+  Name:     血手罗里
+  Description:     受到攻击伤害之后，你可以选择获得等同于造成伤害的资源
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Ruthless Subsidization
+------------------------------------
+Key: HenryTheFarmer
+
+  ID:     HenryTheFarmer
+  Name:     农民亨利
+  Description:     你可以三拔三补
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Gathering Food
+------------------------------------
+Key: CalebTheThunderCultist
+
+  ID:     CalebTheThunderCultist
+  Name:     雷电法师迦勒
+  Description:     防御或反弹行动生效后，你可以对一位玩家使用技能雷击：造成三点无来源伤害；你获得所有无来源伤害的人头收益
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Thunder Command
+      [1]:         Heaven's Mandate
+------------------------------------
+Key: TheGuardian
+
+  ID:     TheGuardian
+  Name:     守护者
+  Description:     当你防御或反弹行动生效时，你获得一个化盾标记；你一回合可以同时进行n个防御或n个反弹，n为你化盾标记数
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Aegis Conversion
+      [1]:         Infinite Aegis
+------------------------------------
+Key: TheUndead
+
+  ID:     TheUndead
+  Name:     僵尸
+  Description:     死亡结算前命数变为绝对值；可以对自己进行攻击
+  MaxHP:     6
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Zombie lives forever
+      [1]:         Cannibalism
+------------------------------------
+Key: TomTheCat
+
+  ID:     TomTheCat
+  Name:     汤姆
+  Description:     造成伤害后附加鼠标记；对带标记玩家攻击力+0.5；可绑火箭倒计时放飞；火箭相关互动；放飞时获得收益
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 5)
+      [0]:         Mouse Hunter
+      [1]:         Species Dominance
+      [2]:         Rocket Specialist
+      [3]:         Blazing Fury
+      [4]:         Relentless Pursuit
+------------------------------------
+Key: SorenTheSwordman
+
+  ID:     SorenTheSwordman
+  Name:     剑客索伦
+  Description:     刀剑攻击首次命中获无双；连续命中可眩晕、重置剑CD、获连刺；三次命中重置计数
+  MaxHP:     18
+  SkillIDList: 
+    List`1 (Count: 3)
+      [0]:         Multistrike I
+      [1]:         Multistrike II
+      [2]:         Multistrike III
+------------------------------------
+Key: SorenTheSwordMaster
+
+  ID:     SorenTheSwordMaster
+  Name:     大剑师索伦
+  Description:     刀剑攻击生效获剑；刀剑攻击力+0.5；拥有连斩技能
+  MaxHP:     12
+  SkillIDList: 
+    List`1 (Count: 3)
+      [0]:         Swift
+      [1]:         Way of the Sword
+      [2]:         Multistrike
+------------------------------------
+Key: LeoTheCowboy
+
+  ID:     LeoTheCowboy
+  Name:     牛仔里奥
+  Description:     可以在多人时对一位玩家使用双枪和双RPG；子弹消耗后进入CD
+  MaxHP:     18
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Twin Pistols
+      [1]:         Marksmanship
+------------------------------------
+Key: TheIronBlood
+
+  ID:     TheIronBlood
+  Name:     铁血战士
+  Description:     濒死时进入铁血状态，获得无畏和大力，三回合内造成10点伤害则复活
+  MaxHP:     6
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         IronBlood
+------------------------------------
+Key: Frankenstein
+
+  ID:     Frankenstein
+  Name:     弗兰肯斯坦
+  Description:     体力≤5时进入暴怒状态，5回合伤害×4、霸体、伤害免疫，之后死亡
+  MaxHP:     15
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Rampage
 ------------------------------------

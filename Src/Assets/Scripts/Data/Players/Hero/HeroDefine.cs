@@ -9,6 +9,7 @@ public class HeroDefine
 {
     public string ID;
     public string Name;
+    public string Description;
     public int MaxHP;
     public List<string> SkillIDList;
     public HeroDefine(string ID, int maxHP)

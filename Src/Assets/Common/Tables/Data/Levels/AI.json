@@ -27,7 +27,13 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,block,double_block]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "block",
+            "double_block"
+        ]
     },
     "Mech-Minion": {
         "ID": "Mech-Minion",
@@ -40,7 +46,14 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,block,double_block,rebounce]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "block",
+            "double_block",
+            "rebounce"
+        ]
     },
     "Mech-Guardian": {
         "ID": "Mech-Guardian",
@@ -53,7 +66,14 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,block,double_block,rebounce]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "block",
+            "double_block",
+            "rebounce"
+        ]
     },
     "Bog Monkey": {
         "ID": "Bog Monkey",
@@ -66,7 +86,15 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,block,double_block,rebounce,provoke]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "block",
+            "double_block",
+            "rebounce",
+            "provoke"
+        ]
     },
     "Swordsman's Spirit": {
         "ID": "Swordsman's Spirit",
@@ -79,7 +107,16 @@
             0,
             0
         ],
-        "AvailableAction": "[sword,stab,cleave,block,double_block,heavy_block,counterblade,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "block",
+            "double_block",
+            "heavy_block",
+            "counterblade",
+            "provoke"
+        ]
     },
     "Shadow Within": {
         "ID": "Shadow Within",
@@ -92,7 +129,16 @@
             1,
             1
         ],
-        "AvailableAction": "[sword,stab,cleave,block,double_block,heavy_block,counterblade,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "block",
+            "double_block",
+            "heavy_block",
+            "counterblade",
+            "provoke"
+        ]
     },
     "Blackman": {
         "ID": "Blackman",
@@ -105,7 +151,17 @@
             0,
             0
         ],
-        "AvailableAction": "[sword,stab,cleave,block,double_block,heavy_block,deflect,counterblade,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "provoke"
+        ]
     },
     "Skunk Ninja": {
         "ID": "Skunk Ninja",
@@ -118,7 +174,19 @@
             1,
             1
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Skunk Chieftain": {
         "ID": "Skunk Chieftain",
@@ -131,7 +199,19 @@
             6,
             6
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Novice Assassin": {
         "ID": "Novice Assassin",
@@ -144,7 +224,17 @@
             0,
             0
         ],
-        "AvailableAction": "[sword,stab,cleave,block,double_block,heavy_block,deflect,counterblade,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "provoke"
+        ]
     },
     "Furious Blade": {
         "ID": "Furious Blade",
@@ -157,7 +247,20 @@
             2,
             2
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Deathshead Grin": {
         "ID": "Deathshead Grin",
@@ -170,7 +273,20 @@
             1,
             1
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Voidwarden of Pale": {
         "ID": "Voidwarden of Pale",
@@ -183,7 +299,20 @@
             0,
             0
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Voidwarden of Abyss": {
         "ID": "Voidwarden of Abyss",
@@ -196,7 +325,20 @@
             2,
             2
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Cursed Tree": {
         "ID": "Cursed Tree",
@@ -209,7 +351,20 @@
             3,
             3
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Arborfolk": {
         "ID": "Arborfolk",
@@ -222,7 +377,15 @@
             1,
             1
         ],
-        "AvailableAction": "[sword,stab,cleave,block,double_block,heavy_block,deflect]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect"
+        ]
     },
     "Rubber Grunt": {
         "ID": "Rubber Grunt",
@@ -235,7 +398,19 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke"
+        ]
     },
     "Rubber Tank": {
         "ID": "Rubber Tank",
@@ -248,10 +423,22 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke"
+        ]
     },
-    "\"Tiger\"": {
-        "ID": "\"Tiger\"",
+    "Tiger": {
+        "ID": "Tiger",
         "Character": "Bellicose",
         "Name": "“虎式”",
         "IsFriend": false,
@@ -261,7 +448,19 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke"
+        ]
     },
     "Heavy Gunner": {
         "ID": "Heavy Gunner",
@@ -274,7 +473,15 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,RPG,double_RPG,block,double_block,heavy_block,deflect]"
+        "AvailableAction": [
+            "bullet",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect"
+        ]
     },
     "Vanguard Horseman": {
         "ID": "Vanguard Horseman",
@@ -287,7 +494,20 @@
             2,
             2
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Alloy Cavalier": {
         "ID": "Alloy Cavalier",
@@ -300,7 +520,20 @@
             4,
             4
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Booby-Trapper": {
         "ID": "Booby-Trapper",
@@ -313,7 +546,19 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke"
+        ]
     },
     "Void Devotee": {
         "ID": "Void Devotee",
@@ -326,7 +571,20 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "Void": {
         "ID": "Void",
@@ -339,7 +597,27 @@
             2,
             2
         ],
-        "AvailableAction": "[bullet,sword,shoot,double_shoot,RPG,double_RPG,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,provoke,comeon]"
+        "AvailableAction": [
+            "bullet",
+            "sword",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "provoke",
+            "comeon"
+        ]
     },
     "Voidwolf": {
         "ID": "Voidwolf",
@@ -352,7 +630,20 @@
             1,
             1
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Chronos Hand": {
         "ID": "Chronos Hand",
@@ -365,7 +656,20 @@
             2,
             2
         ],
-        "AvailableAction": "[sword,stab,cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Mnemosyne Hand": {
         "ID": "Mnemosyne Hand",
@@ -378,7 +682,19 @@
             0,
             0
         ],
-        "AvailableAction": "[bullet,shoot,double_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke]"
+        "AvailableAction": [
+            "bullet",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke"
+        ]
     },
     "Weasel Bandit": {
         "ID": "Weasel Bandit",
@@ -391,7 +707,20 @@
             2,
             2
         ],
-        "AvailableAction": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "double_sword",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Weasel Lackey": {
         "ID": "Weasel Lackey",
@@ -404,7 +733,20 @@
             1,
             1
         ],
-        "AvailableAction": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke]"
+        "AvailableAction": [
+            "double_sword",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ]
     },
     "Butaro": {
         "ID": "Butaro",
@@ -417,7 +759,21 @@
             3,
             3
         ],
-        "AvailableAction": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke",
+            "comeon"
+        ]
     },
     "Huntaro": {
         "ID": "Huntaro",
@@ -430,7 +786,21 @@
             1,
             1
         ],
-        "AvailableAction": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke",
+            "comeon"
+        ]
     },
     "One-Eye": {
         "ID": "One-Eye",
@@ -443,7 +813,21 @@
             0,
             0
         ],
-        "AvailableAction": "[double_sword,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke",
+            "comeon"
+        ]
     },
     "Arbiter of Divine": {
         "ID": "Arbiter of Divine",
@@ -456,7 +840,24 @@
             2,
             2
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Judge of Divine": {
         "ID": "Judge of Divine",
@@ -469,7 +870,21 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "Prism Dancer": {
         "ID": "Prism Dancer",
@@ -482,7 +897,24 @@
             3,
             3
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Cleric": {
         "ID": "Cleric",
@@ -495,7 +927,21 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "The Brave": {
         "ID": "The Brave",
@@ -508,7 +954,31 @@
             2,
             2
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Heart of Fear": {
         "ID": "Heart of Fear",
@@ -521,7 +991,25 @@
             1,
             1
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Unbroken Will": {
         "ID": "Unbroken Will",
@@ -534,7 +1022,21 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "Ancient Brave": {
         "ID": "Ancient Brave",
@@ -547,7 +1049,23 @@
             2,
             2
         ],
-        "AvailableAction": "[double_sowrd,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "provoke",
+            "comeon"
+        ]
     },
     "Oathblade": {
         "ID": "Oathblade",
@@ -560,7 +1078,24 @@
             4,
             4
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Hand-Mirage": {
         "ID": "Hand-Mirage",
@@ -573,7 +1108,31 @@
             2,
             2
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Left Warden": {
         "ID": "Left Warden",
@@ -586,7 +1145,24 @@
             2,
             2
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Right Warden": {
         "ID": "Right Warden",
@@ -599,7 +1175,24 @@
             3,
             3
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Left Vindicator": {
         "ID": "Left Vindicator",
@@ -612,7 +1205,21 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "Right Vindicator": {
         "ID": "Right Vindicator",
@@ -625,7 +1232,31 @@
             2,
             2
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Gipsy Divine": {
         "ID": "Gipsy Divine",
@@ -638,7 +1269,24 @@
             7,
             7
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Pillarbearer": {
         "ID": "Pillarbearer",
@@ -651,7 +1299,31 @@
             7,
             7
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Athena": {
         "ID": "Athena",
@@ -664,7 +1336,21 @@
             3,
             3
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "Megathon": {
         "ID": "Megathon",
@@ -677,7 +1363,24 @@
             0,
             0
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Voidhold": {
         "ID": "Voidhold",
@@ -690,7 +1393,32 @@
             3,
             3
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Voidlock": {
         "ID": "Voidlock",
@@ -703,7 +1431,32 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Mech-Grunt": {
         "ID": "#Mech-Grunt",
@@ -716,7 +1469,21 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Bog Monkey": {
         "ID": "#Bog Monkey",
@@ -729,7 +1496,31 @@
             2,
             2
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Skunk Chieftain": {
         "ID": "#Skunk Chieftain",
@@ -742,7 +1533,31 @@
             3,
             3
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Shadow Within": {
         "ID": "#Shadow Within",
@@ -755,7 +1570,24 @@
             4,
             4
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Deathshead Grin": {
         "ID": "#Deathshead Grin",
@@ -768,7 +1600,24 @@
             1,
             1
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Rubber Grunt": {
         "ID": "#Rubber Grunt",
@@ -781,7 +1630,31 @@
             3,
             3
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Booby-Trapper": {
         "ID": "#Booby-Trapper",
@@ -794,7 +1667,31 @@
             4,
             4
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Arbiter of Divine": {
         "ID": "#Arbiter of Divine",
@@ -807,7 +1704,24 @@
             3,
             3
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Judge of Divine": {
         "ID": "#Judge of Divine",
@@ -820,7 +1734,31 @@
             1,
             1
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Alloy Cavalier": {
         "ID": "#Alloy Cavalier",
@@ -833,10 +1771,27 @@
             6,
             6
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
-    "#\"Tiger\"": {
-        "ID": "#\"Tiger\"",
+    "#Tiger": {
+        "ID": "#Tiger",
         "Character": "Bellicose",
         "Name": "“虎式”",
         "IsFriend": false,
@@ -846,7 +1801,32 @@
             8,
             8
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "laser_cannon",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Butaro": {
         "ID": "#Butaro",
@@ -859,7 +1839,24 @@
             2,
             2
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Huntaro": {
         "ID": "#Huntaro",
@@ -872,7 +1869,24 @@
             3,
             3
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Infancy": {
         "ID": "#Infancy",
@@ -885,7 +1899,21 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "#The Brave": {
         "ID": "#The Brave",
@@ -898,7 +1926,33 @@
             3,
             3
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "laser_cannon",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Slasher": {
         "ID": "#Slasher",
@@ -911,7 +1965,24 @@
             8,
             8
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Dust-Sealed Heart": {
         "ID": "#Dust-Sealed Heart",
@@ -924,7 +1995,31 @@
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Void": {
         "ID": "#Void",
@@ -937,7 +2032,32 @@
             4,
             4
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Hand-Ideal": {
         "ID": "#Hand-Ideal",
@@ -950,7 +2070,33 @@
             12,
             12
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "laser_cannon",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Mech-Grunt#": {
         "ID": "#Mech-Grunt#",
@@ -959,11 +2105,25 @@
         "IsFriend": false,
         "HP": 5,
         "InitialResource": [
-            4,
+            6,
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Bog Monkey#": {
         "ID": "#Bog Monkey#",
@@ -972,11 +2132,35 @@
         "IsFriend": false,
         "HP": 5,
         "InitialResource": [
+            5,
             3,
-            2,
-            2
+            3
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Skunk Chieftain#": {
         "ID": "#Skunk Chieftain#",
@@ -985,11 +2169,35 @@
         "IsFriend": false,
         "HP": 5,
         "InitialResource": [
-            2,
             3,
-            3
+            4,
+            4
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Shadow Within#": {
         "ID": "#Shadow Within#",
@@ -999,10 +2207,27 @@
         "HP": 5,
         "InitialResource": [
             0,
-            4,
-            4
+            6,
+            6
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Deathshead Grin#": {
         "ID": "#Deathshead Grin#",
@@ -1012,10 +2237,27 @@
         "HP": 4,
         "InitialResource": [
             0,
-            1,
-            1
+            2,
+            2
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Rubber Grunt#": {
         "ID": "#Rubber Grunt#",
@@ -1024,11 +2266,35 @@
         "IsFriend": false,
         "HP": 5,
         "InitialResource": [
-            2,
             3,
-            3
+            4,
+            4
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Booby-Trapper#": {
         "ID": "#Booby-Trapper#",
@@ -1037,11 +2303,35 @@
         "IsFriend": false,
         "HP": 8,
         "InitialResource": [
-            2,
-            4,
-            4
+            3,
+            5,
+            5
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Arbiter of Divine#": {
         "ID": "#Arbiter of Divine#",
@@ -1051,10 +2341,27 @@
         "HP": 8,
         "InitialResource": [
             0,
-            3,
-            3
+            4,
+            4
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Judge of Divine#": {
         "ID": "#Judge of Divine#",
@@ -1063,11 +2370,35 @@
         "IsFriend": false,
         "HP": 5,
         "InitialResource": [
-            3,
+            4,
             1,
             1
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Alloy Cavalier#": {
         "ID": "#Alloy Cavalier#",
@@ -1077,23 +2408,65 @@
         "HP": 4,
         "InitialResource": [
             0,
-            6,
-            6
+            8,
+            8
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
-    "#\"Tiger\"#": {
-        "ID": "#\"Tiger\"#",
+    "#Tiger#": {
+        "ID": "#Tiger#",
         "Character": "Bellicose",
         "Name": "“虎式”",
         "IsFriend": false,
         "HP": 4,
         "InitialResource": [
-            4,
+            6,
             8,
             8
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "laser_cannon",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Butaro#": {
         "ID": "#Butaro#",
@@ -1103,10 +2476,27 @@
         "HP": 7,
         "InitialResource": [
             0,
-            2,
-            2
+            3,
+            3
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Huntaro#": {
         "ID": "#Huntaro#",
@@ -1116,10 +2506,27 @@
         "HP": 4,
         "InitialResource": [
             0,
-            3,
-            3
+            4,
+            4
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Infancy#": {
         "ID": "#Infancy#",
@@ -1128,11 +2535,25 @@
         "IsFriend": false,
         "HP": 5,
         "InitialResource": [
-            4,
+            5,
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,shoot,double_shoot,laser_shoot,RPG,double_RPG,block,double_block,heavy_block,deflect,rebounce,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "provoke",
+            "comeon"
+        ]
     },
     "#The Brave#": {
         "ID": "#The Brave#",
@@ -1142,10 +2563,36 @@
         "HP": 7,
         "InitialResource": [
             2,
-            3,
-            3
+            5,
+            5
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "laser_cannon",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Slasher#": {
         "ID": "#Slasher#",
@@ -1155,10 +2602,27 @@
         "HP": 10,
         "InitialResource": [
             0,
-            8,
-            8
+            10,
+            10
         ],
-        "AvailableAction": "[double_sword,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_sword",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Dust-Sealed Heart#": {
         "ID": "#Dust-Sealed Heart#",
@@ -1167,11 +2631,35 @@
         "IsFriend": false,
         "HP": 7,
         "InitialResource": [
-            6,
+            7,
             0,
             0
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Void#": {
         "ID": "#Void#",
@@ -1181,10 +2669,35 @@
         "HP": 4,
         "InitialResource": [
             0,
-            4,
-            4
+            5,
+            5
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "#Hand-Sin#": {
         "ID": "#Hand-Sin#",
@@ -1194,10 +2707,36 @@
         "HP": 20,
         "InitialResource": [
             12,
-            12,
-            12
+            13,
+            13
         ],
-        "AvailableAction": "[double_bullet,double_sword,shoot,double_shoot,laser_shoot,RPG,double_RPG,laser_connon,nuclear_bomb,stab,cleave,laser_stab,laser_cleave,ghost_sever,spirit_sever,block,double_block,heavy_block,deflect,rebounce,counterblade,disarm,spectral_reflection,provoke,comeon]"
+        "AvailableAction": [
+            "double_bullet",
+            "double_sword",
+            "shoot",
+            "double_shoot",
+            "laser_shoot",
+            "RPG",
+            "double_RPG",
+            "laser_cannon",
+            "nuclear_bomb",
+            "stab",
+            "cleave",
+            "laser_stab",
+            "laser_cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "spectral_reflection",
+            "provoke",
+            "comeon"
+        ]
     },
     "Shadow": {
         "ID": "Shadow",

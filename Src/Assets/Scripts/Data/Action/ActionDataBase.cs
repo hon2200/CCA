@@ -11,7 +11,7 @@ using AYellowpaper;
 //由于在数据库内的行动和玩家使用的行动都是ActionDefine类，需要将ActionDefine类保护起来，怎么办呢？
 public class ActionDataBase : MonoSingleton<ActionDataBase>
 {
-    private void Awake()
+    private void Start()
     {
         LoadingActions();
     }

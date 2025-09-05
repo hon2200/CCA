@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 public class PlayerStatus
 {
-    public int MaxHP;
-    public HPAttribute HP;
-    public NewPlayerResource resources;
-    public IsAliveAttribute life;
+    public int MaxHP { get; set; }
+    public HPAttribute HP { get; set; }
+    public NewPlayerResource resources { get; set; }
+    public IsAliveAttribute life { get; set; }
     public PlayerStatus()
     {
         HP = new();

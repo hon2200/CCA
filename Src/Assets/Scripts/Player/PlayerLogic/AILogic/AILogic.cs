@@ -63,24 +63,60 @@ public class AILogic
         return availableActions.ElementAt(rand.Next(availableActions.Count));
     }
     //这个类依赖于咱们的行动类别《补给，攻击，防御，反弹，特效》
-    private ActionDefine GenerateAccordingToTendecy(List<int> Tendency)
+    private ActionDefine GenerateAccordingToTendency(List<int> Tendency)
     {
-        //
-        switch (1)
+        // 检查输入有效性
+        if (Tendency == null || Tendency.Count != 5)
         {
-            case 1:
-                return GenerateSpecificAction<SupplyDefine>();
-            case 2:
-                return GenerateSpecificAction<AttackDefine>();
-            case 3:
-                return GenerateSpecificAction<DefendDefine>();
-            case 4:
-                return GenerateSpecificAction<AttackDefine>();
-            case 5:
-                return GenerateSpecificAction<SpecialDefine>();
-            default:
-                return null;
+            Debug.LogError("Tendency列表必须包含5个权重值");
+            return null;
         }
+
+        // 计算总权重
+        int totalWeight = 0;
+        foreach (int weight in Tendency)
+        {
+            totalWeight += weight;
+        }
+
+        // 如果总权重为0，使用默认权重
+        if (totalWeight == 0)
+        {
+            Debug.LogWarning("所有权重都为0，使用默认权重");
+            Tendency = new List<int> { 1, 1, 1, 1, 1 };
+            totalWeight = 5;
+        }
+
+        // 生成随机数
+        int randomValue = UnityEngine.Random.Range(0, totalWeight);
+        int currentSum = 0;
+
+        // 根据权重选择对应的动作类型
+        for (int i = 0; i < Tendency.Count; i++)
+        {
+            currentSum += Tendency[i];
+            if (randomValue < currentSum)
+            {
+                switch (i + 1)
+                {
+                    case 1:
+                        return GenerateSpecificAction<SupplyDefine>();
+                    case 2:
+                        return GenerateSpecificAction<AttackDefine>();
+                    case 3:
+                        return GenerateSpecificAction<DefendDefine>();
+                    case 4:
+                        return GenerateSpecificAction<AttackDefine>(); // 注意：这里和case 2重复了
+                    case 5:
+                        return GenerateSpecificAction<SpecialDefine>();
+                    default:
+                        return null;
+                }
+            }
+        }
+
+        // 备用方案（理论上不会执行到这里）
+        return GenerateSpecificAction<SupplyDefine>();
     }
 }
 

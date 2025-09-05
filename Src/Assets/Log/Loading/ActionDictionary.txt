@@ -242,7 +242,7 @@ Key: laser_cannon
   isCopy:     False
   Victim:     0
   ID:     laser_cannon
-  Name:     超载激光炮
+  Name:     激光炮
   Description:     对应防御：任意防御
   Costs: 
     List`1 (Count: 2)

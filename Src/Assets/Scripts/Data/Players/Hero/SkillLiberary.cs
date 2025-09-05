@@ -8,7 +8,7 @@ using AYellowpaper.SerializedCollections;
 public class SkillLiberary : MonoSingleton<SkillLiberary>
 {
     public Dictionary<string, Skill> skillDic = new Dictionary<string, Skill>();
-    public void Awake()
+    public void Start()
     {
         AddAllSkills();
     }
