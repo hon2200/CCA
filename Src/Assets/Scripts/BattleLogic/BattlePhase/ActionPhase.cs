@@ -39,10 +39,9 @@ class ActionPhase : Singleton<ActionPhase>, Phase
     {
         foreach(var player in PlayerManager.Instance.Players.Values)
         {
-            if (player.playerType == PlayerType.AI)
+            if (player is AIPlayer ai && player.status.life.Value == LifeStatus.Alive)
             {
-                AILogic aiLogic = new(player);
-                aiLogic.AIMove();
+                ai.EmotionalAIMove();
             }
         }
     }
@@ -71,9 +70,9 @@ class ActionPhase : Singleton<ActionPhase>, Phase
             }
         }
         if (BattleManager.Instance.Turn.Value == 1)
-            Log.PrintLoadedDictionary(Movedict, "Log/InGame/Action_Phase.txt");
+            MyLog.PrintLoadedDictionary(Movedict, "Log/InGame/Action_Phase.txt");
         else
-            Log.PrintLoadedDictionary(Movedict, "Log/InGame/Action_Phase.txt", false);
+            MyLog.PrintLoadedDictionary(Movedict, "Log/InGame/Action_Phase.txt", false);
     }
     public void ReadinOnlyPlayerActs_Debug()
     {

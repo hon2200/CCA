@@ -48,24 +48,62 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             player.Supply();
             player.Attack();
         }
+        //将死之人若无办法，则死亡
+        KnockofDeath();
+        CheckofDeath();
+        CheckofVictory();
+
         PrintResult_Debug();
     }
     public void PrintResult_Debug()
     {
         if (BattleManager.Instance.Turn.Value == 1)
         {
-            Log.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players, 
+            MyLog.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players, 
                 new string[] {"ID_inGame", "status"},"Log/InGame/PlayerStatus.txt");
-            Log.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
+            MyLog.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
                 "action", "Log/InGame/PlayerAction.txt");
         }
         else
         {
-            Log.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
+            MyLog.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
                 new string[] { "ID_inGame", "status" }, "Log/InGame/PlayerStatus.txt", false);
-            Log.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
+            MyLog.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
                 "action", "Log/InGame/PlayerAction.txt",false);
         }
 
+    }
+
+    public void KnockofDeath()
+    {
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            if (player.status.life.Value == LifeStatus.EdgeofDeath)
+            {
+                player.status.life.DieOut();
+            }
+        }
+    }
+
+    public void CheckofDeath()
+    {
+        foreach (var player in PlayerManager.Instance.Players.Values)
+        {
+            if (player.status.life.Value == LifeStatus.Death && player.playerType == PlayerType.Human)
+            {
+                BattleManager.Instance.OnDefeated.Invoke();
+            }
+        }
+    }
+    public void CheckofVictory()
+    {
+        foreach (var player in PlayerManager.Instance.Players.Values)
+        {
+            if (player.status.life.Value == LifeStatus.Alive && player is AIPlayer aIPlayer && !aIPlayer.isFriend)
+            {
+                return;
+            }
+        }
+        BattleManager.Instance.OnWinning.Invoke();
     }
 }

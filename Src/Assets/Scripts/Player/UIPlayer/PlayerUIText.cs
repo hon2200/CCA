@@ -49,12 +49,40 @@ public class PlayerUIText : MonoBehaviour
                 case PlayerUITextName.ID:
                     text.Value.text = player.ID_inGame.ToString();
                     break;
+                case PlayerUITextName.AvailableAction:
+                    string result = string.Join("\n", player.AvailableActions);
+                    text.Value.text = result;
+                    break;
+            }
+            if (player is AIPlayer aiPlayer)
+            {
+                switch (text.Key)
+                {
+                    case PlayerUITextName.Character:
+                        text.Value.text = aiPlayer.CharacterDefine.Name;
+                        break;
+                    case PlayerUITextName.Intention:
+                        aiPlayer.IntendedType.OnValueChanged += (oldVal, newVal, opType) =>
+                        UpdatePlayerText(text.Value, aiPlayer.IntendedType.Value);
+                        UpdatePlayerText(text.Value, aiPlayer.IntendedType.Value);
+                        break;
+                    case PlayerUITextName.Honesty:
+                        aiPlayer.Honest.OnValueChanged += (oldVal, newVal, opType) =>
+                        UpdatePlayerText(text.Value, aiPlayer.Honest.Value);
+                        UpdatePlayerText(text.Value, aiPlayer.Honest.Value);
+                        break;
+                    case PlayerUITextName.Emotion:
+                        aiPlayer.Emo.OnValueChanged += (oldVal, newVal, opType) =>
+                        UpdatePlayerText(text.Value, aiPlayer.Emo.emotionType);
+                        UpdatePlayerText(text.Value, aiPlayer.Emo.emotionType);
+                        break;
+                }
             }
         }
 
         player.status.life.OnValueChanged += (oldVal, newVal, opType) =>
         {
-            if (opType == "Die")
+            if (opType == "Dying")
             {
                 OntheEdgeofDeath();
             }
@@ -93,4 +121,9 @@ public enum PlayerUITextName
     HP = 1,
     Bullet = 2,
     Sword = 3,
+    AvailableAction = 4,
+    Character = 5,
+    Honesty = 6,
+    Emotion = 7,
+    Intention = 8,
 }

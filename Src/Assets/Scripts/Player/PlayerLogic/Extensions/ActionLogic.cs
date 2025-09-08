@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
-using static UnityEngine.EventSystems.EventTrigger;
 
 
 public static class AttackLogic
@@ -54,7 +52,6 @@ public static class AttackLogic
         }
         return defendMethods;
     }
-    
     public static List<(CounterDefine,CounterMethod)> WatchoutforCounter(this AttackDefine attack, Player enemy)
     {
         List<(CounterDefine,CounterMethod)> counterMethods = new();

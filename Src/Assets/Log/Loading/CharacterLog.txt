@@ -1,0 +1,92 @@
+Dict 内容 (Count: 6)
+====================================
+Key: Cold
+
+  ID:     Cold
+  Name:     冷漠的
+  IniHonesty:     1
+  IniEmotion:     5
+  HonestyChange_TurnBased:     0
+  EmotionChange_TurnBased:     0
+  HonestyChange_DamageBased:     0
+  EmotionChange_DamageBased:     1
+  MaxHonesty:     1
+  MinHonesty:     0.9
+  MaxEmotion:     10
+  MinEmotion:     0
+------------------------------------
+Key: Sly
+
+  ID:     Sly
+  Name:     狡诈的
+  IniHonesty:     0.15
+  IniEmotion:     4
+  HonestyChange_TurnBased:     0.1
+  EmotionChange_TurnBased:     0
+  HonestyChange_DamageBased:     0.1
+  EmotionChange_DamageBased:     0
+  MaxHonesty:     0.8
+  MinHonesty:     0
+  MaxEmotion:     8
+  MinEmotion:     1
+------------------------------------
+Key: Friendly
+
+  ID:     Friendly
+  Name:     友好的
+  IniHonesty:     1
+  IniEmotion:     4
+  HonestyChange_TurnBased:     0
+  EmotionChange_TurnBased:     -1
+  HonestyChange_DamageBased:     -0.1
+  EmotionChange_DamageBased:     1
+  MaxHonesty:     1
+  MinHonesty:     0.9
+  MaxEmotion:     8
+  MinEmotion:     3
+------------------------------------
+Key: Cowardly
+
+  ID:     Cowardly
+  Name:     怯懦的
+  IniHonesty:     0.3
+  IniEmotion:     3
+  HonestyChange_TurnBased:     0
+  EmotionChange_TurnBased:     0
+  HonestyChange_DamageBased:     0.2
+  EmotionChange_DamageBased:     -1
+  MaxHonesty:     1
+  MinHonesty:     0.3
+  MaxEmotion:     6
+  MinEmotion:     0
+------------------------------------
+Key: Bellicose
+
+  ID:     Bellicose
+  Name:     好战的
+  IniHonesty:     0.95
+  IniEmotion:     7
+  HonestyChange_TurnBased:     0
+  EmotionChange_TurnBased:     1
+  HonestyChange_DamageBased:     -0.1
+  EmotionChange_DamageBased:     1
+  MaxHonesty:     0.95
+  MinHonesty:     0.1
+  MaxEmotion:     10
+  MinEmotion:     3
+------------------------------------
+Key: Arrogant
+
+  ID:     Arrogant
+  Name:     傲慢的
+  IniHonesty:     1
+  IniEmotion:     5
+  HonestyChange_TurnBased:     0
+  EmotionChange_TurnBased:     1
+  HonestyChange_DamageBased:     0
+  EmotionChange_DamageBased:     0
+  MaxHonesty:     1
+  MinHonesty:     0.7
+  MaxEmotion:     10
+  MinEmotion:     0
+------------------------------------

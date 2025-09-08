@@ -10,12 +10,16 @@ public class CharacterDataBase : MonoSingleton<CharacterDataBase>
 {
     public string path;
     public Dictionary<string, CharacterDefine> CharacterDictionary { get; set; }
+    private void Start()
+    {
+        LoadingCharacter();
+    }
     //读入所有玩家
     public void LoadingCharacter()
     {
         path = Path.Combine(Application.dataPath, "Common/Tables/Data/Levels/Character.json");
         CharacterDictionary = JsonLoader.DeserializeObject<Dictionary<string, CharacterDefine>>(path);
         //打印行动类到日志
-        Log.PrintLoadedDictionary(CharacterDictionary, "Log/Loading/CharacterLog.txt");
+        MyLog.PrintLoadedDictionary(CharacterDictionary, "Log/Loading/CharacterLog.txt");
     }
 }

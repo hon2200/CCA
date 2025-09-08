@@ -1,0 +1,50 @@
+Dict 内容 (Count: 3)
+====================================
+Key: Angry
+
+  ID:     Angry
+  Name:     愤怒的
+  EmotionalValueLowerLimit:     7
+  EmotionalValueUpperLimit:     100
+  ActionTendency: 
+    List`1 (Count: 5)
+      [0]:         5
+      [1]:         9
+      [2]:         1
+      [3]:         1
+      [4]:         4
+  MultiAttackCheckValue:     0.7
+  MultiProvokeCheckValue:     0.7
+------------------------------------
+Key: Peaceful
+
+  ID:     Peaceful
+  Name:     平和的
+  EmotionalValueLowerLimit:     3
+  EmotionalValueUpperLimit:     7
+  ActionTendency: 
+    List`1 (Count: 5)
+      [0]:         5
+      [1]:         6
+      [2]:         3
+      [3]:         4
+      [4]:         2
+  MultiAttackCheckValue:     0.4
+  MultiProvokeCheckValue:     0.4
+------------------------------------
+Key: Afraid
+
+  ID:     Afraid
+  Name:     恐惧的
+  EmotionalValueLowerLimit:     0
+  EmotionalValueUpperLimit:     3
+  ActionTendency: 
+    List`1 (Count: 5)
+      [0]:         5
+      [1]:         3
+      [2]:         7
+      [3]:         3
+      [4]:         2
+  MultiAttackCheckValue:     0.3
+  MultiProvokeCheckValue:     0.3
+------------------------------------

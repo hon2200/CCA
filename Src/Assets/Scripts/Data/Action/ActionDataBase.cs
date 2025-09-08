@@ -11,7 +11,7 @@ using AYellowpaper;
 //由于在数据库内的行动和玩家使用的行动都是ActionDefine类，需要将ActionDefine类保护起来，怎么办呢？
 public class ActionDataBase : MonoSingleton<ActionDataBase>
 {
-    private void Start()
+    private void Awake()
     {
         LoadingActions();
     }
@@ -24,8 +24,8 @@ public class ActionDataBase : MonoSingleton<ActionDataBase>
         ActionDictionary = LoadingAction.Instance.CreateAllActionDictionary();
         VersusTable = LoadingAction.Instance.LoadingVersusTable("../Versus/Attack_Defend_Counter_2dArray.json");
         //打印行动类到日志
-        Log.PrintLoadedDictionary(ActionDictionary,"Log/Loading/ActionDictionary.txt");
-        Log.PrintLoadedDictionary(VersusTable,"Log/Loading/VersusTable.txt");
+        MyLog.PrintLoadedDictionary(ActionDictionary,"Log/Loading/ActionDictionary.txt");
+        MyLog.PrintLoadedDictionary(VersusTable,"Log/Loading/VersusTable.txt");
     }
     public Dictionary<string,T> GetActionType<T>()
     {
@@ -55,6 +55,8 @@ public class LoadingAction :Singleton<LoadingAction>
         //对每一个行动，创建字典
         foreach (ActionType type in Enum.GetValues(typeof(ActionType)))
         {
+            if (type == ActionType.Origin)
+                continue;
             var subDict = CreateSpecificDictionary(type);
             foreach (var kvp in subDict)
                 dict.Add(kvp.Key, kvp.Value);
@@ -69,12 +71,10 @@ public class LoadingAction :Singleton<LoadingAction>
         switch(actionType)
         {
             //BulletAttack帮忙把所有Attack都加载了，就没有SwordAttack什么事儿了
-            case ActionType.BulletAttack:
+            case ActionType.Attack:
                 path = Path.Combine(MainPath, "Attack.json");
                 Dictionary<string, AttackDefine> attackDictionary = JsonLoader.DeserializeObject<Dictionary<string, AttackDefine>>(path);
                 return attackDictionary.ConvertToParentDictionary<string, ActionDefine, AttackDefine>();
-            case ActionType.SwordAttack:
-                return new();
             case ActionType.Defend:
                 path = Path.Combine(MainPath, "Defend.json");
                 Dictionary<string, DefendDefine> defendDictionary = JsonLoader.DeserializeObject<Dictionary<string, DefendDefine>>(path);

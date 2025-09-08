@@ -14,4 +14,6 @@ public class LevelDefine
     public List<string> UnlockedAction { get; set; }
     public int PlayerHP { get; set; }
     public List<int> PlayerInitialResource { get; set; }
+    public string NextLevel { get; set; }
+    public string PreviousLevel { get; set; }
 }

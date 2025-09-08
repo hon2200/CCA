@@ -1,0 +1,1787 @@
+Dict 内容 (Count: 42)
+====================================
+Key: 1-1
+
+  ID:     1-1
+  EnglishName:     The Guardian
+  Name:     守旧的人
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Mech-Grunt
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 3)
+      [0]:         bullet
+      [1]:         shoot
+      [2]:         block
+  PlayerHP:     5
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     1-2
+  PreviousLevel:     null
+------------------------------------
+Key: 1-2
+
+  ID:     1-2
+  EnglishName:     The Spire
+  Name:     高塔
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Mech-Scout
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 6)
+      [0]:         bullet
+      [1]:         shoot
+      [2]:         double_shoot
+      [3]:         block
+      [4]:         double_block
+      [5]:         rebounce
+  PlayerHP:     5
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     1-3
+  PreviousLevel:     1-1
+------------------------------------
+Key: 1-3
+
+  ID:     1-3
+  EnglishName:     Last Stand
+  Name:     围剿
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Mech-Minion
+          [1]:             Mech-Guardian
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Shadow
+  UnlockedAction: 
+    List`1 (Count: 6)
+      [0]:         bullet
+      [1]:         shoot
+      [2]:         double_shoot
+      [3]:         block
+      [4]:         double_block
+      [5]:         rebounce
+  PlayerHP:     5
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     1-4
+  PreviousLevel:     1-2
+------------------------------------
+Key: 1-4
+
+  ID:     1-4
+  EnglishName:     Limnophobia
+  Name:     深水恐惧
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Bog Monkey
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 7)
+      [0]:         bullet
+      [1]:         shoot
+      [2]:         double_shoot
+      [3]:         block
+      [4]:         double_block
+      [5]:         rebounce
+      [6]:         provoke
+  PlayerHP:     5
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     1-5
+  PreviousLevel:     1-3
+------------------------------------
+Key: 1-5
+
+  ID:     1-5
+  EnglishName:     The Imp
+  Name:     “淘气包”
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 0)
+  PlayerHP:     0
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     1-6
+  PreviousLevel:     1-4
+------------------------------------
+Key: 1-6
+
+  ID:     1-6
+  EnglishName:     Kensei
+  Name:     宗师
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Swordsman's Spirit
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 7)
+      [0]:         sword
+      [1]:         stab
+      [2]:         cleave
+      [3]:         block
+      [4]:         double_block
+      [5]:         heavy_block
+      [6]:         counterblade
+  PlayerHP:     5
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     1-7
+  PreviousLevel:     1-5
+------------------------------------
+Key: 1-7
+
+  ID:     1-7
+  EnglishName:     Ashes of Glory
+  Name:     “剑心”
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Swordsman's Spirit
+          [1]:             Shadow Within
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 7)
+      [0]:         sword
+      [1]:         stab
+      [2]:         cleave
+      [3]:         block
+      [4]:         double_block
+      [5]:         heavy_block
+      [6]:         counterblade
+  PlayerHP:     6
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         1
+      [2]:         1
+  NextLevel:     2-1
+  PreviousLevel:     1-6
+------------------------------------
+Key: 2-1
+
+  ID:     2-1
+  EnglishName:     Ambush
+  Name:     不速之客
+  EnemyList: 
+    List`1 (Count: 3)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Blackman
+      [1]: 
+        List`1 (Count: 1)
+          [0]:             Skunk Ninja
+      [2]: 
+        List`1 (Count: 1)
+          [0]:             Skunk Chieftain
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 10)
+      [0]:         sword
+      [1]:         stab
+      [2]:         cleave
+      [3]:         ghost_sever
+      [4]:         block
+      [5]:         double_block
+      [6]:         heavy_block
+      [7]:         deflect
+      [8]:         counterblade
+      [9]:         disarm
+  PlayerHP:     6
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     2-2
+  PreviousLevel:     1-7
+------------------------------------
+Key: 2-2
+
+  ID:     2-2
+  EnglishName:     The Hunt
+  Name:     危机四伏
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             Novice Assassin
+          [1]:             Furious Blade
+          [2]:             Deathshead Grin
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             $Shadow
+  UnlockedAction: 
+    List`1 (Count: 11)
+      [0]:         sword
+      [1]:         stab
+      [2]:         cleave
+      [3]:         ghost_sever
+      [4]:         spirit_sever
+      [5]:         block
+      [6]:         double_block
+      [7]:         heavy_block
+      [8]:         deflect
+      [9]:         counterblade
+      [10]:         disarm
+  PlayerHP:     6
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         6
+      [2]:         6
+  NextLevel:     2-3
+  PreviousLevel:     2-1
+------------------------------------
+Key: 2-3
+
+  ID:     2-3
+  EnglishName:     Void Apostle
+  Name:     使徒
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Voidwarden of Pale
+          [1]:             Voidwarden of Abyss
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 17)
+      [0]:         bullet
+      [1]:         sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         ghost_sever
+      [5]:         spirit_sever
+      [6]:         shoot
+      [7]:         double_shoot
+      [8]:         RPG
+      [9]:         block
+      [10]:         double_block
+      [11]:         heavy_block
+      [12]:         deflect
+      [13]:         rebounce
+      [14]:         counterblade
+      [15]:         disarm
+      [16]:         provoke
+  PlayerHP:     6
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         0
+      [2]:         0
+  NextLevel:     2-4
+  PreviousLevel:     2-2
+------------------------------------
+Key: 2-4
+
+  ID:     2-4
+  EnglishName:     The Cursed Tree
+  Name:     魔树
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Cursed Tree
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 17)
+      [0]:         bullet
+      [1]:         sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         ghost_sever
+      [5]:         spirit_sever
+      [6]:         shoot
+      [7]:         double_shoot
+      [8]:         RPG
+      [9]:         block
+      [10]:         double_block
+      [11]:         heavy_block
+      [12]:         deflect
+      [13]:         rebounce
+      [14]:         counterblade
+      [15]:         disarm
+      [16]:         provoke
+  PlayerHP:     6
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         0
+      [2]:         0
+  NextLevel:     2-5
+  PreviousLevel:     2-3
+------------------------------------
+Key: 2-5
+
+  ID:     2-5
+  EnglishName:     Hot Zone
+  Name:     火线
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Rubber Grunt
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 17)
+      [0]:         bullet
+      [1]:         sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         ghost_sever
+      [5]:         spirit_sever
+      [6]:         shoot
+      [7]:         double_shoot
+      [8]:         RPG
+      [9]:         block
+      [10]:         double_block
+      [11]:         heavy_block
+      [12]:         deflect
+      [13]:         rebounce
+      [14]:         counterblade
+      [15]:         disarm
+      [16]:         provoke
+  PlayerHP:     7
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         0
+      [2]:         0
+  NextLevel:     2-6
+  PreviousLevel:     2-4
+------------------------------------
+Key: 2-6
+
+  ID:     2-6
+  EnglishName:     Tin Can
+  Name:     铁皮盒子
+  EnemyList: 
+    List`1 (Count: 2)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Rubber Tank
+      [1]: 
+        List`1 (Count: 2)
+          [0]:             Tiger
+          [1]:             Vanguard Horseman
+  FriendList: 
+    List`1 (Count: 2)
+      [0]: 
+        List`1 (Count: 0)
+      [1]: 
+        List`1 (Count: 1)
+          [0]:             Emissary of Light
+  UnlockedAction: 
+    List`1 (Count: 18)
+      [0]:         bullet
+      [1]:         sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         ghost_sever
+      [5]:         spirit_sever
+      [6]:         shoot
+      [7]:         double_shoot
+      [8]:         RPG
+      [9]:         double_RPG
+      [10]:         block
+      [11]:         double_block
+      [12]:         heavy_block
+      [13]:         deflect
+      [14]:         rebounce
+      [15]:         counterblade
+      [16]:         disarm
+      [17]:         provoke
+  PlayerHP:     7
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         0
+      [2]:         0
+  NextLevel:     2-7
+  PreviousLevel:     2-5
+------------------------------------
+Key: 2-7
+
+  ID:     2-7
+  EnglishName:     A Hail of Bullets
+  Name:     枪林弹雨
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             Heavy Gunner
+          [1]:             Alloy Cavalier
+          [2]:             Booby-Trapper
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 18)
+      [0]:         bullet
+      [1]:         sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         ghost_sever
+      [5]:         spirit_sever
+      [6]:         shoot
+      [7]:         double_shoot
+      [8]:         RPG
+      [9]:         double_RPG
+      [10]:         block
+      [11]:         double_block
+      [12]:         heavy_block
+      [13]:         deflect
+      [14]:         rebounce
+      [15]:         counterblade
+      [16]:         disarm
+      [17]:         provoke
+  PlayerHP:     7
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         1
+      [2]:         1
+  NextLevel:     2-8
+  PreviousLevel:     2-6
+------------------------------------
+Key: 2-8
+
+  ID:     2-8
+  EnglishName:     Smother
+  Name:     窒息
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Void Devotee
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 18)
+      [0]:         bullet
+      [1]:         sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         ghost_sever
+      [5]:         spirit_sever
+      [6]:         shoot
+      [7]:         double_shoot
+      [8]:         RPG
+      [9]:         double_RPG
+      [10]:         block
+      [11]:         double_block
+      [12]:         heavy_block
+      [13]:         deflect
+      [14]:         rebounce
+      [15]:         counterblade
+      [16]:         disarm
+      [17]:         provoke
+  PlayerHP:     7
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         1
+      [2]:         1
+  NextLevel:     2-9
+  PreviousLevel:     2-7
+------------------------------------
+Key: 2-9
+
+  ID:     2-9
+  EnglishName:     Void
+  Name:     “虚界”
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             Void
+          [1]:             Chronos Hand
+          [2]:             Mnemosyne Hand
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Entity of Will
+  UnlockedAction: 
+    List`1 (Count: 19)
+      [0]:         bullet
+      [1]:         sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         ghost_sever
+      [5]:         spirit_sever
+      [6]:         shoot
+      [7]:         double_shoot
+      [8]:         RPG
+      [9]:         double_RPG
+      [10]:         block
+      [11]:         double_block
+      [12]:         heavy_block
+      [13]:         deflect
+      [14]:         rebounce
+      [15]:         counterblade
+      [16]:         disarm
+      [17]:         provoke
+      [18]:         comeon
+  PlayerHP:     7
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-1
+  PreviousLevel:     2-8
+------------------------------------
+Key: 3-1
+
+  ID:     3-1
+  EnglishName:     Robbery
+  Name:     抢劫
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Weasel Bandit
+          [1]:             Weasel Lackey
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 21)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         RPG
+      [11]:         double_RPG
+      [12]:         block
+      [13]:         double_block
+      [14]:         heavy_block
+      [15]:         deflect
+      [16]:         rebounce
+      [17]:         counterblade
+      [18]:         disarm
+      [19]:         provoke
+      [20]:         comeon
+  PlayerHP:     8
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-2
+  PreviousLevel:     2-9
+------------------------------------
+Key: 3-2
+
+  ID:     3-2
+  EnglishName:     Den of Thieves
+  Name:     深入贼窝
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Butaro
+          [1]:             Butaro
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 21)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         RPG
+      [11]:         double_RPG
+      [12]:         block
+      [13]:         double_block
+      [14]:         heavy_block
+      [15]:         deflect
+      [16]:         rebounce
+      [17]:         counterblade
+      [18]:         disarm
+      [19]:         provoke
+      [20]:         comeon
+  PlayerHP:     8
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-3
+  PreviousLevel:     3-1
+------------------------------------
+Key: 3-3
+
+  ID:     3-3
+  EnglishName:     Pest Control
+  Name:     替天行道
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             One-Eye
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 21)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         RPG
+      [11]:         double_RPG
+      [12]:         block
+      [13]:         double_block
+      [14]:         heavy_block
+      [15]:         deflect
+      [16]:         rebounce
+      [17]:         counterblade
+      [18]:         disarm
+      [19]:         provoke
+      [20]:         comeon
+  PlayerHP:     8
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-4
+  PreviousLevel:     3-2
+------------------------------------
+Key: 3-4
+
+  ID:     3-4
+  EnglishName:     A Golden Childhood
+  Name:     没有缺憾的童年
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 0)
+  PlayerHP:     0
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     3-5
+  PreviousLevel:     3-3
+------------------------------------
+Key: 3-5
+
+  ID:     3-5
+  EnglishName:     The Prismatic Maze
+  Name:     棱镜迷宫
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Arbiter of Divine
+          [1]:             Judge of Divine
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 23)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         RPG
+      [12]:         double_RPG
+      [13]:         block
+      [14]:         double_block
+      [15]:         heavy_block
+      [16]:         deflect
+      [17]:         rebounce
+      [18]:         counterblade
+      [19]:         disarm
+      [20]:         spectral_reflection
+      [21]:         provoke
+      [22]:         comeon
+  PlayerHP:     8
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-6
+  PreviousLevel:     3-4
+------------------------------------
+Key: 3-6
+
+  ID:     3-6
+  EnglishName:     Mirror
+  Name:     镜中万象
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Prism Dancer
+          [1]:             Cleric
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 23)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         RPG
+      [12]:         double_RPG
+      [13]:         block
+      [14]:         double_block
+      [15]:         heavy_block
+      [16]:         deflect
+      [17]:         rebounce
+      [18]:         counterblade
+      [19]:         disarm
+      [20]:         spectral_reflection
+      [21]:         provoke
+      [22]:         comeon
+  PlayerHP:     8
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-7
+  PreviousLevel:     3-5
+------------------------------------
+Key: 3-7
+
+  ID:     3-7
+  EnglishName:     In my heart
+  Name:     童话勇者
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             The Brave
+          [1]:             Heart of Fear
+          [2]:             Unbroken Will
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 23)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         RPG
+      [12]:         double_RPG
+      [13]:         block
+      [14]:         double_block
+      [15]:         heavy_block
+      [16]:         deflect
+      [17]:         rebounce
+      [18]:         counterblade
+      [19]:         disarm
+      [20]:         spectral_reflection
+      [21]:         provoke
+      [22]:         comeon
+  PlayerHP:     8
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-8
+  PreviousLevel:     3-6
+------------------------------------
+Key: 3-8
+
+  ID:     3-8
+  EnglishName:     Retreating Figure
+  Name:     最伟岸的背影
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 0)
+  PlayerHP:     0
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     3-9
+  PreviousLevel:     3-7
+------------------------------------
+Key: 3-9
+
+  ID:     3-9
+  EnglishName:     Miracle
+  Name:     Miracle
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Ancient Brave
+          [1]:             Oathblade
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     9
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-10
+  PreviousLevel:     3-8
+------------------------------------
+Key: 3-10
+
+  ID:     3-10
+  EnglishName:     The Calling
+  Name:     神启
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             Hand-Mirage
+          [1]:             Left Warden
+          [2]:             Right Warden
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Retreating Figure
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     9
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     3-11
+  PreviousLevel:     3-9
+------------------------------------
+Key: 3-11
+
+  ID:     3-11
+  EnglishName:     On The Way
+  Name:     沿着这条路
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 0)
+  PlayerHP:     0
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     3-12
+  PreviousLevel:     3-10
+------------------------------------
+Key: 3-12
+
+  ID:     3-12
+  EnglishName:     The Cathedral
+  Name:     圣殿
+  EnemyList: 
+    List`1 (Count: 3)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Left Vindicator
+          [1]:             Right Vindicator
+      [1]: 
+        List`1 (Count: 1)
+          [0]:             Gipsy Divine
+      [2]: 
+        List`1 (Count: 3)
+          [0]:             Pillarbearer
+          [1]:             Athena
+          [2]:             Megathon
+  FriendList: 
+    List`1 (Count: 3)
+      [0]: 
+        List`1 (Count: 0)
+      [1]: 
+        List`1 (Count: 0)
+      [2]: 
+        List`1 (Count: 1)
+          [0]:             $Swordsman's Spirit
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         block
+      [1]:         cleave
+      [2]:         comeon
+      [3]:         counterblade
+      [4]:         deflect
+      [5]:         disarm
+      [6]:         double_RPG
+      [7]:         double_bullet
+      [8]:         double_block
+      [9]:         double_shoot
+      [10]:         double_sword
+      [11]:         ghost_sever
+      [12]:         heavy_block
+      [13]:         laser_cleave
+      [14]:         laser_cannon
+      [15]:         laser_shoot
+      [16]:         laser_stab
+      [17]:         provoke
+      [18]:         rebounce
+      [19]:         shoot
+      [20]:         spectral_reflection
+      [21]:         spirit_sever
+      [22]:         stab
+      [23]:         RPG
+  PlayerHP:     9
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         2
+      [2]:         2
+  NextLevel:     4-1
+  PreviousLevel:     3-11
+------------------------------------
+Key: 4-1
+
+  ID:     4-1
+  EnglishName:     Anonymous Pages of Years
+  Name:     无名书
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 0)
+  PlayerHP:     0
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  NextLevel:     4-2
+  PreviousLevel:     3-12
+------------------------------------
+Key: 4-2
+
+  ID:     4-2
+  EnglishName:     Two Roads Diverged in Life
+  Name:     十字路口
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             Voidhold
+          [1]:             Voidlock
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-3A
+  PreviousLevel:     4-1
+------------------------------------
+Key: 4-3A
+
+  ID:     4-3A
+  EnglishName:     Timidity
+  Name:     怯
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 4)
+          [0]:             #Mech-Grunt
+          [1]:             #Bog Monkey
+          [2]:             #Skunk Chieftain
+          [3]:             #Shadow Within
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-4A
+  PreviousLevel:     4-2
+------------------------------------
+Key: 4-4A
+
+  ID:     4-4A
+  EnglishName:     Deception
+  Name:     欺
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             #Deathshead Grin
+          [1]:             #Rubber Grunt
+          [2]:             #Booby-Trapper
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             $Swordsman's Spirit
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-5A
+  PreviousLevel:     4-3A
+------------------------------------
+Key: 4-5A
+
+  ID:     4-5A
+  EnglishName:     Conceit
+  Name:     傲
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             #Arbiter of Divine
+          [1]:             #Judge of Divine
+          [2]:             #Alloy Cavalier
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             $Swordsman's Spirit
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-6A
+  PreviousLevel:     4-4A
+------------------------------------
+Key: 4-6A
+
+  ID:     4-6A
+  EnglishName:     Anger
+  Name:     怒
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             #Butaro
+          [1]:             #Huntaro
+          [2]:             #Tiger
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             $Swordsman's Spirit
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-7A
+  PreviousLevel:     4-5A
+------------------------------------
+Key: 4-7A
+
+  ID:     4-7A
+  EnglishName:     Regret
+  Name:     惜
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 5)
+          [0]:             #Infancy
+          [1]:             #The Brave
+          [2]:             #Slasher
+          [3]:             #Dust-Sealed Heart
+          [4]:             #Void
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             $Swordsman's Spirit
+          [1]:             Tin Soldier
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-8A
+  PreviousLevel:     4-6A
+------------------------------------
+Key: 4-8A
+
+  ID:     4-8A
+  EnglishName:     The True Heart
+  Name:     真
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             #Hand-Ideal
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             $Swordsman's Spirit
+          [1]:             Tin Soldier
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-3B
+  PreviousLevel:     4-7A
+------------------------------------
+Key: 4-3B
+
+  ID:     4-3B
+  EnglishName:     Dread
+  Name:     惧
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 4)
+          [0]:             #Mech-Grunt#
+          [1]:             #Bog Monkey#
+          [2]:             #Skunk Chieftain#
+          [3]:             #Shadow Within#
+  FriendList: 
+    List`1 (Count: 0)
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-4B
+  PreviousLevel:     4-8A
+------------------------------------
+Key: 4-4B
+
+  ID:     4-4B
+  EnglishName:     Fraud
+  Name:     诈
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             #Deathshead Grin#
+          [1]:             #Rubber Grunt#
+          [2]:             #Booby-Trapper#
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             $Swordsman's Spirit
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-5B
+  PreviousLevel:     4-3B
+------------------------------------
+Key: 4-5B
+
+  ID:     4-5B
+  EnglishName:     Contempt
+  Name:     慢
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             #Arbiter of Divine#
+          [1]:             #Judge of Divine#
+          [2]:             #Alloy Cavalier#
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             $Swordsman's Spirit
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-6B
+  PreviousLevel:     4-4B
+------------------------------------
+Key: 4-6B
+
+  ID:     4-6B
+  EnglishName:     Evil
+  Name:     恶
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 3)
+          [0]:             #Butaro#
+          [1]:             #Huntaro#
+          [2]:             #Tiger#
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             $Swordsman's Spirit
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-7B
+  PreviousLevel:     4-5B
+------------------------------------
+Key: 4-7B
+
+  ID:     4-7B
+  EnglishName:     Grudge
+  Name:     怨
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 5)
+          [0]:             #Infancy#
+          [1]:             #The Brave#
+          [2]:             #Slasher#
+          [3]:             #Dust-Sealed Heart#
+          [4]:             #Void#
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             $Swordsman's Spirit
+          [1]:             Tin Soldier
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     4-8B
+  PreviousLevel:     4-6B
+------------------------------------
+Key: 4-8B
+
+  ID:     4-8B
+  EnglishName:     The Malignant Masquerade
+  Name:     祟
+  EnemyList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             #Hand-Sin#
+  FriendList: 
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 2)
+          [0]:             $Swordsman's Spirit
+          [1]:             Tin Soldier
+  UnlockedAction: 
+    List`1 (Count: 24)
+      [0]:         double_bullet
+      [1]:         double_sword
+      [2]:         stab
+      [3]:         cleave
+      [4]:         laser_stab
+      [5]:         laser_cleave
+      [6]:         ghost_sever
+      [7]:         spirit_sever
+      [8]:         shoot
+      [9]:         double_shoot
+      [10]:         laser_shoot
+      [11]:         laser_cannon
+      [12]:         RPG
+      [13]:         double_RPG
+      [14]:         block
+      [15]:         double_block
+      [16]:         heavy_block
+      [17]:         deflect
+      [18]:         rebounce
+      [19]:         counterblade
+      [20]:         disarm
+      [21]:         spectral_reflection
+      [22]:         provoke
+      [23]:         comeon
+  PlayerHP:     10
+  PlayerInitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         5
+      [2]:         5
+  NextLevel:     null
+  PreviousLevel:     4-7B
+------------------------------------

@@ -8,15 +8,15 @@ public class CharacterDefine
 {
     public string ID { get; set; }
     public string Name { get; set; }
-    public int IniHonesty { get; set; }
-    public int IniEmotion { get; set; }
-    public int HonestyChange_TurnBased { get; set; }
-    public int EmotionChange_TurnBased { get; set; }
-    public int HonsetyChange_DamageBased { get; set; }
-    public int EmotionChange_DamageBased { get; set; }
-    public int maxHonesty { get; set; }
-    public int minHonesty { get; set; }
-    public int maxEmotion { get; set; }
-    public int minEmotion { get; set; }
+    public float IniHonesty { get; set; }
+    public float IniEmotion { get; set; }
+    public float HonestyChange_TurnBased { get; set; }
+    public float EmotionChange_TurnBased { get; set; }
+    public float HonestyChange_DamageBased { get; set; }
+    public float EmotionChange_DamageBased { get; set; }
+    public float MaxHonesty { get; set; }
+    public float MinHonesty { get; set; }
+    public float MaxEmotion { get; set; }
+    public float MinEmotion { get; set; }
 }
 

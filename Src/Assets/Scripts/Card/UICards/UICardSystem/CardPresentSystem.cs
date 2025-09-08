@@ -20,11 +20,11 @@ using UnityEngine.UI;
 public class CardPresentSystem : MonoSingleton<CardPresentSystem>
 {
     [SerializeField]
-    public SerializedDictionary<ActionType, GameObject> CardMenu;
+    public SerializedDictionary<CardType, GameObject> CardMenu;
     [SerializeField]
-    public SerializedDictionary<ActionType, Button> MenuButtons;
+    public SerializedDictionary<CardType, Button> MenuButtons;
     [SerializeField]
-    public  SerializedDictionary<ActionType, List<GameObject>> Cards_inType;
+    public  SerializedDictionary<CardType, List<GameObject>> Cards_inType;
     public Player player1;
 
     //依据CardLiberary，按照类型创建卡牌
@@ -86,7 +86,8 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
                 foreach (var card in cards_inType.Value)
                 {
                     var runTimeCard = card.GetComponent<RunTimeCard>();
-                    if (RuleCheck.isActionLegal(player1, runTimeCard.actionDefine))
+                    if (RuleCheck.isActionLegal(player1, runTimeCard.actionDefine)
+                        && RuleCheck.isActionAvailable(player1, runTimeCard.actionDefine))
                         runTimeCard.isAvailable = true;
                     else
                         runTimeCard.isAvailable = false;
@@ -114,7 +115,7 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
         CreateCards();
         ArrangeCards();
         MenuButtonsReady();
-        OpenPenal(ActionType.Supply);
+        OpenPenal(CardType.Supply);
     }
     public void Update()
     {
@@ -136,7 +137,7 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
         return newCard;
     }
     //打开某一个卡牌菜单。
-    private void OpenPenal(ActionType actionType)
+    private void OpenPenal(CardType actionType)
     {
         foreach (var menu in CardMenu)
         {

@@ -5,7 +5,7 @@ using UnityEngine;
 
 //行动类别
 [Serializable]
-public enum ActionType
+public enum CardType
 {
     Supply = 1,
     BulletAttack = 2, 
@@ -14,7 +14,18 @@ public enum ActionType
     Counter = 5,
     Special = 6,
 }
-    
+
+public enum ActionType
+{
+    Origin = 0,
+    Supply = 1,
+    Attack = 2,
+    Defend = 3,
+    Counter = 4,
+    Special = 5,
+}
+
+
 //目标的类别
 public enum TargetType
 {
@@ -70,6 +81,7 @@ public class ActionDefine : ICloneable
             Target = this.Target,
         };
     }
+    public virtual ActionType GetActionType() { return ActionType.Origin; }
 }
 
 //补给类行动
@@ -83,6 +95,10 @@ public class SupplyDefine : ActionDefine
             ((ActionDefine)base.Clone());
         copy.SupplyNumber = new List<int>(this.SupplyNumber); // 创建新 List，复制所有元素
         return copy;
+    }
+    public override ActionType GetActionType()
+    {
+        return ActionType.Supply;
     }
 }
 
@@ -114,7 +130,10 @@ public class AttackDefine : ActionDefine
         Damage = targetPlayer.status.HP.Value;
         Costs[0] = Math.Max(2, targetPlayer.status.HP.Value);
     }
-
+    public override ActionType GetActionType()
+    {
+        return ActionType.Attack;
+    }
 }
 
 //防御类行动
@@ -125,6 +144,10 @@ public class DefendDefine : ActionDefine
         DefendDefine copy = TypeConverter.ShallowConvertToChild<DefendDefine, ActionDefine>
             ((ActionDefine)base.Clone());
         return copy;
+    }
+    public override ActionType GetActionType()
+    {
+        return ActionType.Defend;
     }
 }
 
@@ -137,6 +160,10 @@ public class CounterDefine : ActionDefine
             ((ActionDefine)base.Clone());
         return copy;
     }
+    public override ActionType GetActionType()
+    {
+        return ActionType.Counter;
+    }
 }
 
 //特殊行动，单独定义
@@ -147,5 +174,9 @@ public class SpecialDefine : ActionDefine
         SpecialDefine copy = TypeConverter.ShallowConvertToChild<SpecialDefine, ActionDefine>
             ((ActionDefine)base.Clone());
         return copy;
+    }
+    public override ActionType GetActionType()
+    {
+        return ActionType.Special;
     }
 }

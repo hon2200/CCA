@@ -17,6 +17,6 @@ public class PlayerSpacingDataBase : MonoSingleton<PlayerSpacingDataBase>
         string path = Path.Combine(Application.dataPath, "Common/Tables/Data/Space/PlayerSpacing.json");
         playerSpacingDictionary = JsonLoader.DeserializeObject<Dictionary<int, PlayerSpacing>>(path);
         //打印行动类到日志
-        Log.PrintLoadedDictionary(playerSpacingDictionary, "Log/Loading/PlayerSpacinglog.txt");
+        MyLog.PrintLoadedDictionary(playerSpacingDictionary, "Log/Loading/PlayerSpacinglog.txt");
     }
 }

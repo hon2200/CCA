@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 
     public PlayerUIText playerUIText;
     public PlayerEffectController playerEffectController;
+    //可用行动列
+    public List<string> AvailableActions;
 
     //创建一个英雄类型的玩家
     public void Initialize(int ID_inGame, PlayerType playerType, HeroDefine heroDefine)
@@ -32,5 +34,25 @@ public class Player : MonoBehaviour
         this.hero = new(heroDefine);
         isReady = new ReadyAttribute();
         isReady.Cancel();
+        AvailableActions = new();
+        foreach(var action in ActionDataBase.Instance.ActionDictionary.Values)
+        {
+            AvailableActions.Add(action.ID);
+        }
+    }
+    //创建闯关过程的玩家
+    public void InitailizePlayer(int ID_inGame, LevelDefine Level)
+    {
+        this.ID_inGame = ID_inGame;
+        this.status = new(Level.PlayerHP, Level.PlayerInitialResource);
+        this.action = new();
+        this.playerType = PlayerType.Human;
+        isReady = new ReadyAttribute();
+        isReady.Cancel();
+        AvailableActions = new();
+        foreach (var actionID in Level.UnlockedAction)
+        {
+            AvailableActions.Add(actionID);
+        }
     }
 }

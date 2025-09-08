@@ -2,107 +2,83 @@
     "Cold": {
         "ID": "Cold",
         "Name": "冷漠的",
-        "Initial Honesty Value": 1,
-        "Initial Emotional Value": 5,
-        "Turn Based Change of Honesty": 0,
-        "Turn Based Change of Emotional Value": 0,
-        "Damage Based Change of Honesty": 0,
-        "Damage Based Change of Emotional Value": 1,
-        "Honesty Range": [
-            0.9,
-            1
-        ],
-        "Emotion Range": [
-            0,
-            10
-        ]
+        "IniHonesty": 1,
+        "IniEmotion": 5,
+        "HonestyChange_TurnBased": 0,
+        "EmotionChange_TurnBased": 0,
+        "HonestyChange_DamageBased": 0,
+        "EmotionChange_DamageBased": 1,
+        "MaxHonesty": 1,
+        "MinHonesty": 0.9,
+        "MaxEmotion": 10,
+        "MinEmotion": 0
     },
     "Sly": {
         "ID": "Sly",
         "Name": "狡诈的",
-        "Initial Honesty Value": 0.15,
-        "Initial Emotional Value": 4,
-        "Turn Based Change of Honesty": 0.1,
-        "Turn Based Change of Emotional Value": 0.1,
-        "Honesty Range": [
-            0,
-            0.8
-        ],
-        "Emotion Range": [
-            1,
-            8
-        ]
+        "IniHonesty": 0.15,
+        "IniEmotion": 4,
+        "HonestyChange_TurnBased": 0.1,
+        "HonestyChange_DamageBased": 0.1,
+        "MaxHonesty": 0.8,
+        "MinHonesty": 0,
+        "MaxEmotion": 8,
+        "MinEmotion": 1
     },
     "Friendly": {
         "ID": "Friendly",
         "Name": "友好的",
-        "Initial Honesty Value": 1,
-        "Initial Emotional Value": 4,
-        "Turn Based Change of Honesty": 0,
-        "Turn Based Change of Emotional Value": -0.1,
-        "Damage Based Change of Honesty": -1,
-        "Damage Based Change of Emotional Value": 1,
-        "Honesty Range": [
-            0.9,
-            1
-        ],
-        "Emotion Range": [
-            3,
-            8
-        ]
+        "IniHonesty": 1,
+        "IniEmotion": 4,
+        "HonestyChange_TurnBased": 0,
+        "EmotionChange_TurnBased": -1,
+        "HonestyChange_DamageBased": -0.1,
+        "EmotionChange_DamageBased": 1,
+        "MaxHonesty": 1,
+        "MinHonesty": 0.9,
+        "MaxEmotion": 8,
+        "MinEmotion": 3
     },
     "Cowardly": {
         "ID": "Cowardly",
         "Name": "怯懦的",
-        "Initial Honesty Value": 0.3,
-        "Initial Emotional Value": 3,
-        "Turn Based Change of Honesty": 0,
-        "Turn Based Change of Emotional Value": 0.2,
-        "Damage Based Change of Honesty": 0,
-        "Damage Based Change of Emotional Value": -1,
-        "Honesty Range": [
-            0.3,
-            1
-        ],
-        "Emotion Range": [
-            0,
-            6
-        ]
+        "IniHonesty": 0.3,
+        "IniEmotion": 3,
+        "HonestyChange_TurnBased": 0,
+        "EmotionChange_TurnBased": 0,
+        "HonestyChange_DamageBased": 0.2,
+        "EmotionChange_DamageBased": -1,
+        "MaxHonesty": 1,
+        "MinHonesty": 0.3,
+        "MaxEmotion": 6,
+        "MinEmotion": 0
     },
     "Bellicose": {
         "ID": "Bellicose",
         "Name": "好战的",
-        "Initial Honesty Value": 0.95,
-        "Initial Emotional Value": 7,
-        "Turn Based Change of Honesty": 0,
-        "Turn Based Change of Emotional Value": -0.1,
-        "Damage Based Change of Honesty": 1,
-        "Damage Based Change of Emotional Value": 1,
-        "Honesty Range": [
-            0.1,
-            0.95
-        ],
-        "Emotion Range": [
-            3,
-            10
-        ]
+        "IniHonesty": 0.95,
+        "IniEmotion": 7,
+        "HonestyChange_TurnBased": 0,
+        "EmotionChange_TurnBased": 1,
+        "HonestyChange_DamageBased": -0.1,
+        "EmotionChange_DamageBased": 1,
+        "MaxHonesty": 0.95,
+        "MinHonesty": 0.1,
+        "MaxEmotion": 10,
+        "MinEmotion": 3
     },
     "Arrogant": {
         "ID": "Arrogant",
         "Name": "傲慢的",
-        "Initial Honesty Value": 1,
-        "Initial Emotional Value": 5,
-        "Turn Based Change of Honesty": 0,
-        "Turn Based Change of Emotional Value": 0,
-        "Damage Based Change of Honesty": 1,
-        "Damage Based Change of Emotional Value": 0,
-        "Honesty Range": [
-            0.7,
-            1
-        ],
-        "Emotion Range": [
-            0,
-            10
-        ]
+        "IniHonesty": 1,
+        "IniEmotion": 5,
+        "HonestyChange_TurnBased": 0,
+        "EmotionChange_TurnBased": 1,
+        "HonestyChange_DamageBased": 0,
+        "EmotionChange_DamageBased": 0,
+        "MaxHonesty": 1,
+        "MinHonesty": 0.7,
+        "MaxEmotion": 10,
+        "MinEmotion": 0
     }
 }

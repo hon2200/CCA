@@ -1,35 +1,38 @@
 {
     "1-1": {
         "ID": "1-1",
-        "English Name": "The Guardian",
+        "EnglishName": "The Guardian",
         "Name": "守旧的人",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Mech-Grunt"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "bullet",
             "shoot",
             "block"
         ],
-        "Player HP": 5,
-        "Player Initial Resource": [
+        "PlayerHP": 5,
+        "PlayerInitialResource": [
             0,
             0,
             0
-        ]
+        ],
+        "NextLevel": "1-2"
     },
     "1-2": {
         "ID": "1-2",
-        "English Name": "The Spire",
+        "EnglishName": "The Spire",
         "Name": "高塔",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Mech-Scout"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -37,29 +40,31 @@
             "double_block",
             "rebounce"
         ],
-        "Player HP": 5,
-        "Player Initial Resource": [
+        "PlayerHP": 5,
+        "PlayerInitialResource": [
             0,
             0,
             0
-        ]
+        ],
+        "NextLevel": "1-3",
+        "PreviousLevel": "1-1"
     },
     "1-3": {
         "ID": "1-3",
-        "English Name": "Last Stand",
+        "EnglishName": "Last Stand",
         "Name": "围剿",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Mech-Minion",
                 "Mech-Guardian"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
-                "shadow"
+                "Shadow"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -67,23 +72,26 @@
             "double_block",
             "rebounce"
         ],
-        "Player HP": 5,
-        "Player Initial Resource": [
+        "PlayerHP": 5,
+        "PlayerInitialResource": [
             0,
             0,
             0
-        ]
+        ],
+        "NextLevel": "1-4",
+        "PreviousLevel": "1-2"
     },
     "1-4": {
         "ID": "1-4",
-        "English Name": "Limnophobia",
+        "EnglishName": "Limnophobia",
         "Name": "深水恐惧",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Bog Monkey"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -92,28 +100,45 @@
             "rebounce",
             "provoke"
         ],
-        "Player HP": 5,
-        "Player Initial Resource": [
+        "PlayerHP": 5,
+        "PlayerInitialResource": [
             0,
             0,
             0
-        ]
+        ],
+        "NextLevel": "1-5",
+        "PreviousLevel": "1-3"
     },
     "1-5": {
         "ID": "1-5",
-        "English Name": "The Imp",
-        "Name": "“淘气包”"
+        "EnglishName": "The Imp",
+        "Name": "“淘气包”",
+        "EnemyList": [
+            [
+                ""
+            ]
+        ],
+        "FriendList": [],
+        "UnlockedAction": [],
+        "PlayerInitialResource": [
+            0,
+            0,
+            0
+        ],
+        "NextLevel": "1-6",
+        "PreviousLevel": "1-4"
     },
     "1-6": {
         "ID": "1-6",
-        "English Name": "Kensei",
+        "EnglishName": "Kensei",
         "Name": "宗师",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "sword",
             "stab",
             "cleave",
@@ -122,24 +147,27 @@
             "heavy_block",
             "counterblade"
         ],
-        "Player HP": 5,
-        "Player Initial Resource": [
+        "PlayerHP": 5,
+        "PlayerInitialResource": [
             0,
             0,
             0
-        ]
+        ],
+        "NextLevel": "1-7",
+        "PreviousLevel": "1-5"
     },
     "1-7": {
         "ID": "1-7",
-        "English Name": "Ashes of Glory",
+        "EnglishName": "Ashes of Glory",
         "Name": "“剑心”",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Swordsman's Spirit",
                 "Shadow Within"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "sword",
             "stab",
             "cleave",
@@ -148,18 +176,20 @@
             "heavy_block",
             "counterblade"
         ],
-        "Player HP": 6,
-        "Player Initial Resource": [
+        "PlayerHP": 6,
+        "PlayerInitialResource": [
             0,
             1,
             1
-        ]
+        ],
+        "NextLevel": "2-1",
+        "PreviousLevel": "1-6"
     },
     "2-1": {
         "ID": "2-1",
-        "English Name": "Ambush",
+        "EnglishName": "Ambush",
         "Name": "不速之客",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Blackman"
             ],
@@ -170,7 +200,8 @@
                 "Skunk Chieftain"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "sword",
             "stab",
             "cleave",
@@ -182,30 +213,32 @@
             "counterblade",
             "disarm"
         ],
-        "Player HP": 6,
-        "Player Initial Resource": [
+        "PlayerHP": 6,
+        "PlayerInitialResource": [
             0,
             0,
             0
-        ]
+        ],
+        "NextLevel": "2-2",
+        "PreviousLevel": "1-7"
     },
     "2-2": {
         "ID": "2-2",
-        "English Name": "The Hunt",
+        "EnglishName": "The Hunt",
         "Name": "危机四伏",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Novice Assassin",
                 "Furious Blade",
                 "Deathshead Grin"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
-                "$shadow"
+                "$Shadow"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "sword",
             "stab",
             "cleave",
@@ -218,24 +251,27 @@
             "counterblade",
             "disarm"
         ],
-        "Player HP": 6,
-        "Player Initial Resource": [
+        "PlayerHP": 6,
+        "PlayerInitialResource": [
             0,
             6,
             6
-        ]
+        ],
+        "NextLevel": "2-3",
+        "PreviousLevel": "2-1"
     },
     "2-3": {
         "ID": "2-3",
-        "English Name": "Void Apostle",
+        "EnglishName": "Void Apostle",
         "Name": "使徒",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Voidwarden of Pale",
                 "Voidwarden of Abyss"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "bullet",
             "sword",
             "stab",
@@ -254,40 +290,26 @@
             "disarm",
             "provoke"
         ],
-        "Player HP": 6,
-        "Player Initial Resource": [
+        "PlayerHP": 6,
+        "PlayerInitialResource": [
             1,
             0,
             0
-        ]
+        ],
+        "NextLevel": "2-4",
+        "PreviousLevel": "2-2"
     },
     "2-4": {
         "ID": "2-4",
-        "English Name": "The Cursed Tree",
+        "EnglishName": "The Cursed Tree",
         "Name": "魔树",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Cursed Tree"
             ]
         ],
-        "Unlocked Action": "[\"bullet\",\"sword\",\"stab\",\"cleave\",\"ghost_sever\",\"spirit_sever\",\"shoot\",\"double_shoot\",\"RPG\",\"block\",\"double_block\",\"heavy_block\",\"deflect\",\"rebounce\",\"counterblade\",\"disarm\",\"provoke\"],",
-        "Player HP": 6,
-        "Player Initial Resource": [
-            1,
-            0,
-            0
-        ]
-    },
-    "2-5": {
-        "ID": "2-5",
-        "English Name": "Hot Zone",
-        "Name": "火线",
-        "Enemy List": [
-            [
-                "Rubber Grunt"
-            ]
-        ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "bullet",
             "sword",
             "stab",
@@ -306,18 +328,58 @@
             "disarm",
             "provoke"
         ],
-        "Player HP": 7,
-        "Player Initial Resource": [
+        "PlayerHP": 6,
+        "PlayerInitialResource": [
+            1,
+            0,
+            0
+        ],
+        "NextLevel": "2-5",
+        "PreviousLevel": "2-3"
+    },
+    "2-5": {
+        "ID": "2-5",
+        "EnglishName": "Hot Zone",
+        "Name": "火线",
+        "EnemyList": [
+            [
+                "Rubber Grunt"
+            ]
+        ],
+        "FriendList": [],
+        "UnlockedAction": [
+            "bullet",
+            "sword",
+            "stab",
+            "cleave",
+            "ghost_sever",
+            "spirit_sever",
+            "shoot",
+            "double_shoot",
+            "RPG",
+            "block",
+            "double_block",
+            "heavy_block",
+            "deflect",
+            "rebounce",
+            "counterblade",
+            "disarm",
+            "provoke"
+        ],
+        "PlayerHP": 7,
+        "PlayerInitialResource": [
             3,
             0,
             0
-        ]
+        ],
+        "NextLevel": "2-6",
+        "PreviousLevel": "2-4"
     },
     "2-6": {
         "ID": "2-6",
-        "English Name": "Tin Can",
+        "EnglishName": "Tin Can",
         "Name": "铁皮盒子",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Rubber Tank"
             ],
@@ -326,13 +388,13 @@
                 "Vanguard Horseman"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [],
             [
                 "Emissary of Light"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "bullet",
             "sword",
             "stab",
@@ -352,25 +414,28 @@
             "disarm",
             "provoke"
         ],
-        "Player HP": 7,
-        "Player Initial Resource": [
+        "PlayerHP": 7,
+        "PlayerInitialResource": [
             3,
             0,
             0
-        ]
+        ],
+        "NextLevel": "2-7",
+        "PreviousLevel": "2-5"
     },
     "2-7": {
         "ID": "2-7",
-        "English Name": "A Hail of Bullets",
+        "EnglishName": "A Hail of Bullets",
         "Name": "枪林弹雨",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Heavy Gunner",
                 "Alloy Cavalier",
                 "Booby-Trapper"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "bullet",
             "sword",
             "stab",
@@ -390,23 +455,26 @@
             "disarm",
             "provoke"
         ],
-        "Player HP": 7,
-        "Player Initial Resource": [
+        "PlayerHP": 7,
+        "PlayerInitialResource": [
             3,
             1,
             1
-        ]
+        ],
+        "NextLevel": "2-8",
+        "PreviousLevel": "2-6"
     },
     "2-8": {
         "ID": "2-8",
-        "English Name": "Smother",
+        "EnglishName": "Smother",
         "Name": "窒息",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Void Devotee"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "bullet",
             "sword",
             "stab",
@@ -426,30 +494,32 @@
             "disarm",
             "provoke"
         ],
-        "Player HP": 7,
-        "Player Initial Resource": [
+        "PlayerHP": 7,
+        "PlayerInitialResource": [
             3,
             1,
             1
-        ]
+        ],
+        "NextLevel": "2-9",
+        "PreviousLevel": "2-7"
     },
     "2-9": {
         "ID": "2-9",
-        "English Name": "Void",
+        "EnglishName": "Void",
         "Name": "“虚界”",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Void",
                 "Chronos Hand",
                 "Mnemosyne Hand"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "Entity of Will"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "bullet",
             "sword",
             "stab",
@@ -470,24 +540,27 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 7,
-        "Player Initial Resource": [
+        "PlayerHP": 7,
+        "PlayerInitialResource": [
             3,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-1",
+        "PreviousLevel": "2-8"
     },
     "3-1": {
         "ID": "3-1",
-        "English Name": "Robbery",
+        "EnglishName": "Robbery",
         "Name": "抢劫",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Weasel Bandit",
                 "Weasel Lackey"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -510,24 +583,27 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 8,
-        "Player Initial Resource": [
+        "PlayerHP": 8,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-2",
+        "PreviousLevel": "2-9"
     },
     "3-2": {
         "ID": "3-2",
-        "English Name": "Den of Thieves",
+        "EnglishName": "Den of Thieves",
         "Name": "深入贼窝",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Butaro",
                 "Butaro"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -550,23 +626,26 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 8,
-        "Player Initial Resource": [
+        "PlayerHP": 8,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-3",
+        "PreviousLevel": "3-1"
     },
     "3-3": {
         "ID": "3-3",
-        "English Name": "Pest Control",
+        "EnglishName": "Pest Control",
         "Name": "替天行道",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "One-Eye"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -589,29 +668,46 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 8,
-        "Player Initial Resource": [
+        "PlayerHP": 8,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-4",
+        "PreviousLevel": "3-2"
     },
     "3-4": {
         "ID": "3-4",
-        "English Name": "A Golden Childhood",
-        "Name": "没有缺憾的童年"
+        "EnglishName": "A Golden Childhood",
+        "Name": "没有缺憾的童年",
+        "EnemyList": [
+            [
+                ""
+            ]
+        ],
+        "FriendList": [],
+        "UnlockedAction": [],
+        "PlayerInitialResource": [
+            0,
+            0,
+            0
+        ],
+        "NextLevel": "3-5",
+        "PreviousLevel": "3-3"
     },
     "3-5": {
         "ID": "3-5",
-        "English Name": "The Prismatic Maze",
+        "EnglishName": "The Prismatic Maze",
         "Name": "棱镜迷宫",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Arbiter of Divine",
                 "Judge of Divine"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -636,24 +732,27 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 8,
-        "Player Initial Resource": [
+        "PlayerHP": 8,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-6",
+        "PreviousLevel": "3-4"
     },
     "3-6": {
         "ID": "3-6",
-        "English Name": "Mirror",
+        "EnglishName": "Mirror",
         "Name": "镜中万象",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Prism Dancer",
                 "Cleric"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -678,25 +777,28 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 8,
-        "Player Initial Resource": [
+        "PlayerHP": 8,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-7",
+        "PreviousLevel": "3-5"
     },
     "3-7": {
         "ID": "3-7",
-        "English Name": "In my heart",
+        "EnglishName": "In my heart",
         "Name": "童话勇者",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "The Brave",
                 "Heart of Fear",
                 "Unbroken Will"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -721,29 +823,46 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 8,
-        "Player Initial Resource": [
+        "PlayerHP": 8,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-8",
+        "PreviousLevel": "3-6"
     },
     "3-8": {
         "ID": "3-8",
-        "English Name": "Retreating Figure",
-        "Name": "最伟岸的背影"
+        "EnglishName": "Retreating Figure",
+        "Name": "最伟岸的背影",
+        "EnemyList": [
+            [
+                ""
+            ]
+        ],
+        "FriendList": [],
+        "UnlockedAction": [],
+        "PlayerInitialResource": [
+            0,
+            0,
+            0
+        ],
+        "NextLevel": "3-9",
+        "PreviousLevel": "3-7"
     },
     "3-9": {
         "ID": "3-9",
-        "English Name": "Miracle",
+        "EnglishName": "Miracle",
         "Name": "Miracle",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Ancient Brave",
                 "Oathblade"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -769,30 +888,32 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 9,
-        "Player Initial Resource": [
+        "PlayerHP": 9,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-10",
+        "PreviousLevel": "3-8"
     },
     "3-10": {
         "ID": "3-10",
-        "English Name": "The Calling",
+        "EnglishName": "The Calling",
         "Name": "神启",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Hand-Mirage",
                 "Left Warden",
                 "Right Warden"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "Retreating Figure"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -818,23 +939,39 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 9,
-        "Player Initial Resource": [
+        "PlayerHP": 9,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "3-11",
+        "PreviousLevel": "3-9"
     },
     "3-11": {
         "ID": "3-11",
-        "English Name": "On The Way",
-        "Name": "沿着这条路"
+        "EnglishName": "On The Way",
+        "Name": "沿着这条路",
+        "EnemyList": [
+            [
+                ""
+            ]
+        ],
+        "FriendList": [],
+        "UnlockedAction": [],
+        "PlayerInitialResource": [
+            0,
+            0,
+            0
+        ],
+        "NextLevel": "3-12",
+        "PreviousLevel": "3-10"
     },
     "3-12": {
         "ID": "3-12",
-        "English Name": "The Cathedral",
+        "EnglishName": "The Cathedral",
         "Name": "圣殿",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Left Vindicator",
                 "Right Vindicator"
@@ -848,14 +985,14 @@
                 "Megathon"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [],
             [],
             [
                 "$Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "block",
             "cleave",
             "comeon",
@@ -881,29 +1018,46 @@
             "stab",
             "RPG"
         ],
-        "Player HP": 9,
-        "Player Initial Resource": [
+        "PlayerHP": 9,
+        "PlayerInitialResource": [
             1,
             2,
             2
-        ]
+        ],
+        "NextLevel": "4-1",
+        "PreviousLevel": "3-11"
     },
     "4-1": {
         "ID": "4-1",
-        "English Name": "Anonymous Pages of Years",
-        "Name": "无名书"
+        "EnglishName": "Anonymous Pages of Years",
+        "Name": "无名书",
+        "EnemyList": [
+            [
+                ""
+            ]
+        ],
+        "FriendList": [],
+        "UnlockedAction": [],
+        "PlayerInitialResource": [
+            0,
+            0,
+            0
+        ],
+        "NextLevel": "4-2",
+        "PreviousLevel": "3-12"
     },
     "4-2": {
         "ID": "4-2",
-        "English Name": "Two Roads Diverged in Life",
+        "EnglishName": "Two Roads Diverged in Life",
         "Name": "十字路口",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "Voidhold",
                 "Voidlock"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -929,18 +1083,20 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-3A",
+        "PreviousLevel": "4-1"
     },
     "4-3A": {
         "ID": "4-3A",
-        "English Name": "Timidity",
+        "EnglishName": "Timidity",
         "Name": "怯",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Mech-Grunt",
                 "#Bog Monkey",
@@ -948,7 +1104,8 @@
                 "#Shadow Within"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -974,30 +1131,32 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-4A",
+        "PreviousLevel": "4-2"
     },
     "4-4A": {
         "ID": "4-4A",
-        "English Name": "Deception",
+        "EnglishName": "Deception",
         "Name": "欺",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Deathshead Grin",
                 "#Rubber Grunt",
                 "#Booby-Trapper"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "$Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1023,30 +1182,32 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-5A",
+        "PreviousLevel": "4-3A"
     },
     "4-5A": {
         "ID": "4-5A",
-        "English Name": "Conceit",
+        "EnglishName": "Conceit",
         "Name": "傲",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Arbiter of Divine",
                 "#Judge of Divine",
                 "#Alloy Cavalier"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "$Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1072,30 +1233,32 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-6A",
+        "PreviousLevel": "4-4A"
     },
     "4-6A": {
         "ID": "4-6A",
-        "English Name": "Anger",
+        "EnglishName": "Anger",
         "Name": "怒",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Butaro",
                 "#Huntaro",
                 "#Tiger"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "$Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1121,18 +1284,20 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-7A",
+        "PreviousLevel": "4-5A"
     },
     "4-7A": {
         "ID": "4-7A",
-        "English Name": "Regret",
+        "EnglishName": "Regret",
         "Name": "惜",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Infancy",
                 "#The Brave",
@@ -1141,12 +1306,13 @@
                 "#Void"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
-                "$Swordsman's Spirit,Tin Soldier"
+                "$Swordsman's Spirit",
+                "Tin Soldier"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1172,28 +1338,31 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-8A",
+        "PreviousLevel": "4-6A"
     },
     "4-8A": {
         "ID": "4-8A",
-        "English Name": "The True Heart",
+        "EnglishName": "The True Heart",
         "Name": "真",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Hand-Ideal"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
-                "$Swordsman's Spirit,Tin Soldier"
+                "$Swordsman's Spirit",
+                "Tin Soldier"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1219,18 +1388,20 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-3B",
+        "PreviousLevel": "4-7A"
     },
     "4-3B": {
         "ID": "4-3B",
-        "English Name": "Dread",
+        "EnglishName": "Dread",
         "Name": "惧",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Mech-Grunt#",
                 "#Bog Monkey#",
@@ -1238,7 +1409,8 @@
                 "#Shadow Within#"
             ]
         ],
-        "Unlocked Action": [
+        "FriendList": [],
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1264,30 +1436,32 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-4B",
+        "PreviousLevel": "4-8A"
     },
     "4-4B": {
         "ID": "4-4B",
-        "English Name": "Fraud",
+        "EnglishName": "Fraud",
         "Name": "诈",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Deathshead Grin#",
                 "#Rubber Grunt#",
                 "#Booby-Trapper#"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "$Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1313,30 +1487,32 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-5B",
+        "PreviousLevel": "4-3B"
     },
     "4-5B": {
         "ID": "4-5B",
-        "English Name": "Contempt",
+        "EnglishName": "Contempt",
         "Name": "慢",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Arbiter of Divine#",
                 "#Judge of Divine#",
                 "#Alloy Cavalier#"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "$Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1362,30 +1538,32 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-6B",
+        "PreviousLevel": "4-4B"
     },
     "4-6B": {
         "ID": "4-6B",
-        "English Name": "Evil",
+        "EnglishName": "Evil",
         "Name": "恶",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Butaro#",
                 "#Huntaro#",
                 "#Tiger#"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
                 "$Swordsman's Spirit"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1411,18 +1589,20 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-7B",
+        "PreviousLevel": "4-5B"
     },
     "4-7B": {
         "ID": "4-7B",
-        "English Name": "Grudge",
+        "EnglishName": "Grudge",
         "Name": "怨",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Infancy#",
                 "#The Brave#",
@@ -1431,12 +1611,13 @@
                 "#Void#"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
-                "$Swordsman's Spirit,Tin Soldier"
+                "$Swordsman's Spirit",
+                "Tin Soldier"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1462,28 +1643,31 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "NextLevel": "4-8B",
+        "PreviousLevel": "4-6B"
     },
     "4-8B": {
         "ID": "4-8B",
-        "English Name": "The Malignant Masquerade",
+        "EnglishName": "The Malignant Masquerade",
         "Name": "祟",
-        "Enemy List": [
+        "EnemyList": [
             [
                 "#Hand-Sin#"
             ]
         ],
-        "Friend List": [
+        "FriendList": [
             [
-                "$Swordsman's Spirit,Tin Soldier"
+                "$Swordsman's Spirit",
+                "Tin Soldier"
             ]
         ],
-        "Unlocked Action": [
+        "UnlockedAction": [
             "double_bullet",
             "double_sword",
             "stab",
@@ -1509,11 +1693,12 @@
             "provoke",
             "comeon"
         ],
-        "Player HP": 10,
-        "Player Initial Resource": [
+        "PlayerHP": 10,
+        "PlayerInitialResource": [
             3,
             5,
             5
-        ]
+        ],
+        "PreviousLevel": "4-7B"
     }
 }

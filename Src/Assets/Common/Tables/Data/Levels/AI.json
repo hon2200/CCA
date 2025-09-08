@@ -1,16 +1,16 @@
 {
     "Mech-Grunt": {
         "ID": "Mech-Grunt",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "机械兵",
         "IsFriend": false,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "block",
             "shoot"
@@ -18,16 +18,16 @@
     },
     "Mech-Scout": {
         "ID": "Mech-Scout",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "机械斥候",
         "IsFriend": false,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -37,16 +37,16 @@
     },
     "Mech-Minion": {
         "ID": "Mech-Minion",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "机械跟班",
         "IsFriend": false,
-        "HP": 1,
+        "MaxHP": 1,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -57,16 +57,16 @@
     },
     "Mech-Guardian": {
         "ID": "Mech-Guardian",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "机械卫士",
         "IsFriend": false,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             1,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -77,16 +77,16 @@
     },
     "Bog Monkey": {
         "ID": "Bog Monkey",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "水猴子",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -98,16 +98,16 @@
     },
     "Swordsman's Spirit": {
         "ID": "Swordsman's Spirit",
-        "Character": "Friendly",
+        "CharacterID": "Friendly",
         "Name": "“剑心”",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -120,16 +120,16 @@
     },
     "Shadow Within": {
         "ID": "Shadow Within",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "“心魔”",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -142,16 +142,16 @@
     },
     "Blackman": {
         "ID": "Blackman",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "黑衣人",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -165,16 +165,16 @@
     },
     "Skunk Ninja": {
         "ID": "Skunk Ninja",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "臭鼬忍者",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -190,16 +190,16 @@
     },
     "Skunk Chieftain": {
         "ID": "Skunk Chieftain",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "臭鼬头领",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             6,
             6
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -215,16 +215,16 @@
     },
     "Novice Assassin": {
         "ID": "Novice Assassin",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "见习刺客",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -238,16 +238,16 @@
     },
     "Furious Blade": {
         "ID": "Furious Blade",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "“狂战士”",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -264,16 +264,16 @@
     },
     "Deathshead Grin": {
         "ID": "Deathshead Grin",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "“笑面”",
         "IsFriend": false,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -290,16 +290,16 @@
     },
     "Voidwarden of Pale": {
         "ID": "Voidwarden of Pale",
-        "Character": "Friendly",
+        "CharacterID": "Friendly",
         "Name": "白使徒",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -316,16 +316,16 @@
     },
     "Voidwarden of Abyss": {
         "ID": "Voidwarden of Abyss",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "黑使徒",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -342,16 +342,16 @@
     },
     "Cursed Tree": {
         "ID": "Cursed Tree",
-        "Character": "Friendly",
+        "CharacterID": "Friendly",
         "Name": "魔树",
         "IsFriend": false,
-        "HP": 9,
+        "MaxHP": 9,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -368,16 +368,16 @@
     },
     "Arborfolk": {
         "ID": "Arborfolk",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "树灵",
         "IsFriend": false,
-        "HP": 1,
+        "MaxHP": 1,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -389,16 +389,16 @@
     },
     "Rubber Grunt": {
         "ID": "Rubber Grunt",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "橡胶大兵",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             3,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -414,16 +414,16 @@
     },
     "Rubber Tank": {
         "ID": "Rubber Tank",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "橡胶坦克",
         "IsFriend": false,
-        "HP": 7,
+        "MaxHP": 7,
         "InitialResource": [
             4,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -439,16 +439,16 @@
     },
     "Tiger": {
         "ID": "Tiger",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "“虎式”",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             6,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -464,16 +464,16 @@
     },
     "Heavy Gunner": {
         "ID": "Heavy Gunner",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "重炮步兵",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             3,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "RPG",
             "double_RPG",
@@ -485,16 +485,16 @@
     },
     "Vanguard Horseman": {
         "ID": "Vanguard Horseman",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "锋卫骑兵",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -511,16 +511,16 @@
     },
     "Alloy Cavalier": {
         "ID": "Alloy Cavalier",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "合金铁骑",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -537,16 +537,16 @@
     },
     "Booby-Trapper": {
         "ID": "Booby-Trapper",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "诡雷兵",
         "IsFriend": false,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             2,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -562,16 +562,16 @@
     },
     "Void Devotee": {
         "ID": "Void Devotee",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "虚空拥趸",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             3,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -588,16 +588,16 @@
     },
     "Void": {
         "ID": "Void",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "虚空",
         "IsFriend": false,
-        "HP": 11,
+        "MaxHP": 11,
         "InitialResource": [
             2,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "sword",
             "shoot",
@@ -621,16 +621,16 @@
     },
     "Voidwolf": {
         "ID": "Voidwolf",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "虚空兽",
         "IsFriend": false,
-        "HP": 1,
+        "MaxHP": 1,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -647,16 +647,16 @@
     },
     "Chronos Hand": {
         "ID": "Chronos Hand",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "时间之手",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -673,16 +673,16 @@
     },
     "Mnemosyne Hand": {
         "ID": "Mnemosyne Hand",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "记忆之手",
         "IsFriend": false,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             2,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -698,16 +698,16 @@
     },
     "Weasel Bandit": {
         "ID": "Weasel Bandit",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "黄鼠狼强盗",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "laser_stab",
             "laser_cleave",
@@ -724,16 +724,16 @@
     },
     "Weasel Lackey": {
         "ID": "Weasel Lackey",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "黄鼠狼小弟",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "laser_stab",
             "laser_cleave",
@@ -750,16 +750,16 @@
     },
     "Butaro": {
         "ID": "Butaro",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "肥之郎",
         "IsFriend": false,
-        "HP": 6,
+        "MaxHP": 6,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "laser_stab",
             "laser_cleave",
@@ -777,16 +777,16 @@
     },
     "Huntaro": {
         "ID": "Huntaro",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "狩之郎",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "laser_stab",
             "laser_cleave",
@@ -804,16 +804,16 @@
     },
     "One-Eye": {
         "ID": "One-Eye",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "一只眼",
         "IsFriend": false,
-        "HP": 12,
+        "MaxHP": 12,
         "InitialResource": [
             0,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "laser_stab",
             "laser_cleave",
@@ -831,16 +831,16 @@
     },
     "Arbiter of Divine": {
         "ID": "Arbiter of Divine",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "裁决使",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -861,16 +861,16 @@
     },
     "Judge of Divine": {
         "ID": "Judge of Divine",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "审判官",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             4,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -888,16 +888,16 @@
     },
     "Prism Dancer": {
         "ID": "Prism Dancer",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "棱镜舞者",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -918,16 +918,16 @@
     },
     "Cleric": {
         "ID": "Cleric",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "牧师",
         "IsFriend": false,
-        "HP": 7,
+        "MaxHP": 7,
         "InitialResource": [
             3,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -945,16 +945,16 @@
     },
     "The Brave": {
         "ID": "The Brave",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "勇者",
         "IsFriend": false,
-        "HP": 8,
+        "MaxHP": 8,
         "InitialResource": [
             1,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -982,16 +982,16 @@
     },
     "Heart of Fear": {
         "ID": "Heart of Fear",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "畏惧之心",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1013,16 +1013,16 @@
     },
     "Unbroken Will": {
         "ID": "Unbroken Will",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "不屈之意",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             3,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -1040,16 +1040,16 @@
     },
     "Ancient Brave": {
         "ID": "Ancient Brave",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "古老勇者",
         "IsFriend": false,
-        "HP": 6,
+        "MaxHP": 6,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1069,16 +1069,16 @@
     },
     "Oathblade": {
         "ID": "Oathblade",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "誓约之剑",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1099,16 +1099,16 @@
     },
     "Hand-Mirage": {
         "ID": "Hand-Mirage",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "手·幻象",
         "IsFriend": false,
-        "HP": 12,
+        "MaxHP": 12,
         "InitialResource": [
             2,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1136,16 +1136,16 @@
     },
     "Left Warden": {
         "ID": "Left Warden",
-        "Character": "Friendly",
+        "CharacterID": "Friendly",
         "Name": "左戍卫",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1166,16 +1166,16 @@
     },
     "Right Warden": {
         "ID": "Right Warden",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "右戍卫",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1196,16 +1196,16 @@
     },
     "Left Vindicator": {
         "ID": "Left Vindicator",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "圣殿左亲卫",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             3,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -1223,16 +1223,16 @@
     },
     "Right Vindicator": {
         "ID": "Right Vindicator",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "圣殿右亲卫",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             2,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1260,16 +1260,16 @@
     },
     "Gipsy Divine": {
         "ID": "Gipsy Divine",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "神圣流浪者",
         "IsFriend": false,
-        "HP": 13,
+        "MaxHP": 13,
         "InitialResource": [
             0,
             7,
             7
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1290,16 +1290,16 @@
     },
     "Pillarbearer": {
         "ID": "Pillarbearer",
-        "Character": "Friendly",
+        "CharacterID": "Friendly",
         "Name": "持殿柱",
         "IsFriend": false,
-        "HP": 14,
+        "MaxHP": 14,
         "InitialResource": [
             7,
             7,
             7
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1327,16 +1327,16 @@
     },
     "Athena": {
         "ID": "Athena",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "雅典娜",
         "IsFriend": false,
-        "HP": 7,
+        "MaxHP": 7,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -1354,16 +1354,16 @@
     },
     "Megathon": {
         "ID": "Megathon",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "震殿威",
         "IsFriend": false,
-        "HP": 10,
+        "MaxHP": 10,
         "InitialResource": [
             4,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1384,16 +1384,16 @@
     },
     "Voidhold": {
         "ID": "Voidhold",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "虚空之笼",
         "IsFriend": false,
-        "HP": 7,
+        "MaxHP": 7,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1422,16 +1422,16 @@
     },
     "Voidlock": {
         "ID": "Voidlock",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "虚空之锁",
         "IsFriend": false,
-        "HP": 6,
+        "MaxHP": 6,
         "InitialResource": [
             2,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1460,16 +1460,16 @@
     },
     "#Mech-Grunt": {
         "ID": "#Mech-Grunt",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "机械兵",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             4,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -1487,16 +1487,16 @@
     },
     "#Bog Monkey": {
         "ID": "#Bog Monkey",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "水猴子",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             3,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1524,16 +1524,16 @@
     },
     "#Skunk Chieftain": {
         "ID": "#Skunk Chieftain",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "臭鼬头领",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             2,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1561,16 +1561,16 @@
     },
     "#Shadow Within": {
         "ID": "#Shadow Within",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "“心魔”",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1591,16 +1591,16 @@
     },
     "#Deathshead Grin": {
         "ID": "#Deathshead Grin",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "“笑面”",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1621,16 +1621,16 @@
     },
     "#Rubber Grunt": {
         "ID": "#Rubber Grunt",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "橡胶大兵",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             2,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1658,16 +1658,16 @@
     },
     "#Booby-Trapper": {
         "ID": "#Booby-Trapper",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "诡雷兵",
         "IsFriend": false,
-        "HP": 6,
+        "MaxHP": 6,
         "InitialResource": [
             2,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1695,16 +1695,16 @@
     },
     "#Arbiter of Divine": {
         "ID": "#Arbiter of Divine",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "裁决使",
         "IsFriend": false,
-        "HP": 6,
+        "MaxHP": 6,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1725,16 +1725,16 @@
     },
     "#Judge of Divine": {
         "ID": "#Judge of Divine",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "审判官",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             3,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1762,16 +1762,16 @@
     },
     "#Alloy Cavalier": {
         "ID": "#Alloy Cavalier",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "合金铁骑",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             6,
             6
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1792,16 +1792,16 @@
     },
     "#Tiger": {
         "ID": "#Tiger",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "“虎式”",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             4,
             8,
             8
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1830,16 +1830,16 @@
     },
     "#Butaro": {
         "ID": "#Butaro",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "肥之郎",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1860,16 +1860,16 @@
     },
     "#Huntaro": {
         "ID": "#Huntaro",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "狩之郎",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1890,16 +1890,16 @@
     },
     "#Infancy": {
         "ID": "#Infancy",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "孩提",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             4,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -1917,16 +1917,16 @@
     },
     "#The Brave": {
         "ID": "#The Brave",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "勇者",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             2,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -1956,16 +1956,16 @@
     },
     "#Slasher": {
         "ID": "#Slasher",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "拔刀斋",
         "IsFriend": false,
-        "HP": 8,
+        "MaxHP": 8,
         "InitialResource": [
             0,
             8,
             8
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -1986,16 +1986,16 @@
     },
     "#Dust-Sealed Heart": {
         "ID": "#Dust-Sealed Heart",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "尘封之心",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             6,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2023,16 +2023,16 @@
     },
     "#Void": {
         "ID": "#Void",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "虚空",
         "IsFriend": false,
-        "HP": 3,
+        "MaxHP": 3,
         "InitialResource": [
             0,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2061,16 +2061,16 @@
     },
     "#Hand-Ideal": {
         "ID": "#Hand-Ideal",
-        "Character": "Friendly",
+        "CharacterID": "Friendly",
         "Name": "手·真",
         "IsFriend": false,
-        "HP": 15,
+        "MaxHP": 15,
         "InitialResource": [
             12,
             12,
             12
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2100,16 +2100,16 @@
     },
     "#Mech-Grunt#": {
         "ID": "#Mech-Grunt#",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "机械兵",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             6,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -2127,16 +2127,16 @@
     },
     "#Bog Monkey#": {
         "ID": "#Bog Monkey#",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "水猴子",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             5,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2164,16 +2164,16 @@
     },
     "#Skunk Chieftain#": {
         "ID": "#Skunk Chieftain#",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "臭鼬头领",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             3,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2201,16 +2201,16 @@
     },
     "#Shadow Within#": {
         "ID": "#Shadow Within#",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "“心魔”",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             0,
             6,
             6
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2231,16 +2231,16 @@
     },
     "#Deathshead Grin#": {
         "ID": "#Deathshead Grin#",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "“笑面”",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2261,16 +2261,16 @@
     },
     "#Rubber Grunt#": {
         "ID": "#Rubber Grunt#",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "橡胶大兵",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             3,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2298,16 +2298,16 @@
     },
     "#Booby-Trapper#": {
         "ID": "#Booby-Trapper#",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "诡雷兵",
         "IsFriend": false,
-        "HP": 8,
+        "MaxHP": 8,
         "InitialResource": [
             3,
             5,
             5
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2335,16 +2335,16 @@
     },
     "#Arbiter of Divine#": {
         "ID": "#Arbiter of Divine#",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "裁决使",
         "IsFriend": false,
-        "HP": 8,
+        "MaxHP": 8,
         "InitialResource": [
             0,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2365,16 +2365,16 @@
     },
     "#Judge of Divine#": {
         "ID": "#Judge of Divine#",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "审判官",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             4,
             1,
             1
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2402,16 +2402,16 @@
     },
     "#Alloy Cavalier#": {
         "ID": "#Alloy Cavalier#",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "合金铁骑",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             8,
             8
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2432,16 +2432,16 @@
     },
     "#Tiger#": {
         "ID": "#Tiger#",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "“虎式”",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             6,
             8,
             8
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2470,16 +2470,16 @@
     },
     "#Butaro#": {
         "ID": "#Butaro#",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "肥之郎",
         "IsFriend": false,
-        "HP": 7,
+        "MaxHP": 7,
         "InitialResource": [
             0,
             3,
             3
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2500,16 +2500,16 @@
     },
     "#Huntaro#": {
         "ID": "#Huntaro#",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "狩之郎",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             4,
             4
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2530,16 +2530,16 @@
     },
     "#Infancy#": {
         "ID": "#Infancy#",
-        "Character": "Cowardly",
+        "CharacterID": "Cowardly",
         "Name": "孩提",
         "IsFriend": false,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             5,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",
@@ -2557,16 +2557,16 @@
     },
     "#The Brave#": {
         "ID": "#The Brave#",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "勇者",
         "IsFriend": false,
-        "HP": 7,
+        "MaxHP": 7,
         "InitialResource": [
             2,
             5,
             5
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2596,16 +2596,16 @@
     },
     "#Slasher#": {
         "ID": "#Slasher#",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "拔刀斋",
         "IsFriend": false,
-        "HP": 10,
+        "MaxHP": 10,
         "InitialResource": [
             0,
             10,
             10
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2626,16 +2626,16 @@
     },
     "#Dust-Sealed Heart#": {
         "ID": "#Dust-Sealed Heart#",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "尘封之心",
         "IsFriend": false,
-        "HP": 7,
+        "MaxHP": 7,
         "InitialResource": [
             7,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2663,16 +2663,16 @@
     },
     "#Void#": {
         "ID": "#Void#",
-        "Character": "Sly",
+        "CharacterID": "Sly",
         "Name": "虚空",
         "IsFriend": false,
-        "HP": 4,
+        "MaxHP": 4,
         "InitialResource": [
             0,
             5,
             5
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2701,16 +2701,16 @@
     },
     "#Hand-Sin#": {
         "ID": "#Hand-Sin#",
-        "Character": "Arrogant",
+        "CharacterID": "Arrogant",
         "Name": "手·邪",
         "IsFriend": false,
-        "HP": 20,
+        "MaxHP": 20,
         "InitialResource": [
             12,
             13,
             13
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "double_sword",
             "shoot",
@@ -2740,16 +2740,16 @@
     },
     "Shadow": {
         "ID": "Shadow",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "神秘人",
         "IsFriend": true,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             1,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -2760,16 +2760,16 @@
     },
     "$Shadow": {
         "ID": "$Shadow",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "神秘人",
         "IsFriend": true,
-        "HP": 2,
+        "MaxHP": 2,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -2786,16 +2786,16 @@
     },
     "Emissary of Light": {
         "ID": "Emissary of Light",
-        "Character": "Friendly",
+        "CharacterID": "Friendly",
         "Name": "光明来使",
         "IsFriend": true,
-        "HP": 5,
+        "MaxHP": 5,
         "InitialResource": [
             2,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "bullet",
             "shoot",
             "double_shoot",
@@ -2811,7 +2811,7 @@
     },
     "Entity of Will": {
         "ID": "Entity of Will",
-        "Character": "Cold",
+        "CharacterID": "Cold",
         "Name": "意志实体",
         "IsFriend": true,
         "InitialResource": [
@@ -2819,7 +2819,7 @@
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "sword",
             "stab",
             "cleave",
@@ -2836,16 +2836,16 @@
     },
     "Retreating Figure": {
         "ID": "Retreating Figure",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "背影",
         "IsFriend": true,
-        "HP": 6,
+        "MaxHP": 6,
         "InitialResource": [
             0,
             2,
             2
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2866,16 +2866,16 @@
     },
     "$Swordsman's Spirit": {
         "ID": "$Swordsman's Spirit",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "“剑心”",
         "IsFriend": true,
-        "HP": 8,
+        "MaxHP": 8,
         "InitialResource": [
             0,
             5,
             5
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_sword",
             "stab",
             "cleave",
@@ -2896,16 +2896,16 @@
     },
     "Tin Soldier": {
         "ID": "Tin Soldier",
-        "Character": "Bellicose",
+        "CharacterID": "Bellicose",
         "Name": "锡兵",
         "IsFriend": true,
-        "HP": 6,
+        "MaxHP": 6,
         "InitialResource": [
             4,
             0,
             0
         ],
-        "AvailableAction": [
+        "AvailableActionID": [
             "double_bullet",
             "shoot",
             "double_shoot",

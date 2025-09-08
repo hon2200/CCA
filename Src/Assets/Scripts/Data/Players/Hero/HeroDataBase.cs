@@ -20,6 +20,6 @@ public class HeroDataBase : MonoSingleton<HeroDataBase>
         path = Path.Combine(Application.dataPath, "Common/Tables/Data/Hero/Hero.json");
         HeroDictionary = JsonLoader.DeserializeObject<Dictionary<string, HeroDefine>>(path);
         //打印行动类到日志
-        Log.PrintLoadedDictionary(HeroDictionary,"Log/Loading/Heroes.txt");
+        MyLog.PrintLoadedDictionary(HeroDictionary,"Log/Loading/Heroes.txt");
     }
 }

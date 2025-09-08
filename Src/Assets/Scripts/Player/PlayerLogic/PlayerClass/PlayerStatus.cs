@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 public class PlayerStatus
 {
@@ -25,9 +26,9 @@ public class PlayerStatus
         resources = new();
         life = new();
         life.Born();
+        HP.Set(MaxHP);
         HP.OnValueChanged += (oldVal, newVal, opType) =>
             DeadCheck(newVal);
-        HP.Set(MaxHP);
         this.MaxHP = MaxHP;
         resources.Bullet.Set(iniReources[0]);
         resources.Sword.Set(iniReources[1]);
@@ -38,7 +39,8 @@ public class PlayerStatus
     private void DeadCheck(int HP)
     {
         if (HP <= 0)
-            life.Die();
+            life.Dying();
+        Debug.Log("Someone is Dying");
     }
     public void SaveStatus()
     {

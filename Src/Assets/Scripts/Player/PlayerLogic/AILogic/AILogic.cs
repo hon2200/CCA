@@ -1,122 +1,96 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 
 //我担心直到这里构建起来的AILogic会导致各种内存浪费和反复读取的功能浪费...
-//我担心直到这里构建起来的AILogic会导致各种内存浪费和反复读取的功能浪费...
+//这个类停用
 public class AILogic
 {
     public AIDefine aiDefine;
-    private Player player;
-    public AILogic(Player player)
-    {
-        this.player = player;
-    }
-    public void AIMove()
-    {
-        var newAction = GenerateSpecificAction<ActionDefine>();
-        player.action.ReadinMove(newAction.ID, newAction.Target, "AI");
-        player.isReady.ReadyUp();
-    }
+    private AIPlayer aiPlayer;
+    //老东西了
+    // 改进的GenerateSpecificAction方法，添加更多调试信息
     private ActionDefine GenerateSpecificAction<Type>() where Type : ActionDefine
     {
         List<ActionDefine> availableActions = new();
         var actionTypeDic = ActionDataBase.Instance.GetActionType<Type>();
+
+        if (actionTypeDic == null || actionTypeDic.Count == 0)
+        {
+            Debug.LogWarning($"没有找到 {typeof(Type).Name} 类型的行动");
+            return null;
+        }
+
         foreach (var action in actionTypeDic)
         {
             if (action.Value.TargetType == TargetType.Enemy)
+            {
                 foreach (var target in PlayerManager.Instance.Players.Values)
                 {
-                    if (target.status.life.Value)
+                    if (target.status.life.Value == LifeStatus.Alive)
                     {
                         ActionDefine newAction = (ActionDefine)action.Value.Clone();
                         newAction.Target = target.ID_inGame;
-                        if (!RuleCheck.isActionFoolish(player, newAction) &&
-                            RuleCheck.isActionLegal(player, newAction))
-                        {
-                            availableActions.Add(newAction);
-                        }
+                        CheckAction(availableActions, newAction);
+                    }
+                    else
+                    {
+                        Debug.Log($"跳过目标 {target.ID_inGame} - 已死亡");
                     }
                 }
+
+            }
+
             if (action.Value.TargetType == TargetType.Self)
             {
                 ActionDefine newAction = (ActionDefine)action.Value.Clone();
-                newAction.Target = player.ID_inGame;
-                if (!RuleCheck.isActionFoolish(player, newAction) &&
-                    RuleCheck.isActionLegal(player, newAction))
-                {
-                    availableActions.Add(newAction);
-                }
+                newAction.Target = aiPlayer.ID_inGame;
+                CheckAction(availableActions, newAction);
+
             }
         }
+
         if (availableActions.Count == 0)
         {
-            Debug.Assert(false, "No Available Action!");
             return null;
         }
+
         System.Random rand = new();
-        return availableActions.ElementAt(rand.Next(availableActions.Count));
+        return availableActions[rand.Next(availableActions.Count)];
     }
-    //这个类依赖于咱们的行动类别《补给，攻击，防御，反弹，特效》
-    private ActionDefine GenerateAccordingToTendency(List<int> Tendency)
+
+    private void CheckAction(List<ActionDefine> availableActions,ActionDefine newAction)
     {
-        // 检查输入有效性
-        if (Tendency == null || Tendency.Count != 5)
+        StringBuilder checkLog = new StringBuilder();
+        checkLog.Append($"\nPlayer" + aiPlayer.ID_inGame + "检查自身行动 " + newAction.ID + ":\n ");
+
+        bool isFoolish = RuleCheck.isActionFoolish(aiPlayer, newAction);
+        bool isLegal = RuleCheck.isActionLegal(aiPlayer, newAction);
+        bool isAvailable = RuleCheck.isActionAvailable(aiPlayer, newAction);
+
+        if (!isFoolish && isLegal && isAvailable)
         {
-            Debug.LogError("Tendency列表必须包含5个权重值");
-            return null;
+            availableActions.Add(newAction);
+            checkLog.Append("✓ 所有检查通过");
         }
-
-        // 计算总权重
-        int totalWeight = 0;
-        foreach (int weight in Tendency)
+        else
         {
-            totalWeight += weight;
-        }
-
-        // 如果总权重为0，使用默认权重
-        if (totalWeight == 0)
-        {
-            Debug.LogWarning("所有权重都为0，使用默认权重");
-            Tendency = new List<int> { 1, 1, 1, 1, 1 };
-            totalWeight = 5;
-        }
-
-        // 生成随机数
-        int randomValue = UnityEngine.Random.Range(0, totalWeight);
-        int currentSum = 0;
-
-        // 根据权重选择对应的动作类型
-        for (int i = 0; i < Tendency.Count; i++)
-        {
-            currentSum += Tendency[i];
-            if (randomValue < currentSum)
+            if (isFoolish)
             {
-                switch (i + 1)
-                {
-                    case 1:
-                        return GenerateSpecificAction<SupplyDefine>();
-                    case 2:
-                        return GenerateSpecificAction<AttackDefine>();
-                    case 3:
-                        return GenerateSpecificAction<DefendDefine>();
-                    case 4:
-                        return GenerateSpecificAction<AttackDefine>(); // 注意：这里和case 2重复了
-                    case 5:
-                        return GenerateSpecificAction<SpecialDefine>();
-                    default:
-                        return null;
-                }
+                checkLog.Append("✗ 愚蠢行动 ");
+            }
+            if (!isLegal)
+            {
+                checkLog.Append("✗ 非法行动 ");
+            }
+            if (!isAvailable)
+            {
+                checkLog.Append("✗ 不可用行动 ");
             }
         }
-
-        // 备用方案（理论上不会执行到这里）
-        return GenerateSpecificAction<SupplyDefine>();
+        MyLog.WriteToFile("Assets/Log/InGame/ActionCheck.txt", checkLog, false);
     }
 }
 

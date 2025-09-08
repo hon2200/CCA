@@ -17,7 +17,7 @@ public class CardTemplete : ScriptableObject
     //图像
     public Sprite image;
     //类别
-    public ActionType actionType;
+    public CardType actionType;
     //消耗图像，如果无消耗这个=null
     public Sprite comsume_image;
     //预制体//预制体只制造相应类别

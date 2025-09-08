@@ -3,25 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 
 class BattleManager: MonoSingleton<BattleManager>
 {
-    public TurnAttribute Turn;
-    public List<Phase> PhaseList;
-    public int CurrentPhaseIndex;
+    public Action OnDefeated;
+    public Action OnWinning;
+    //已经创建好游戏玩家的情况下，要重新开始需要进行的内容
+    public Action OnRestarting;
+    //新的一波来袭
+    public Action OnNewWave;
+    public TextMeshPro Text;
+    public TurnAttribute Turn { get; private set; }
+    private List<Phase> PhaseList { get; set; }
+    private int CurrentPhaseIndex { get; set; }
     //初始化PhaseList
-    private void Awake()
+    private void Start()
     {
         PhaseList = new();
         PhaseList.Add(StartPhase.Instance);
         PhaseList.Add(ActionPhase.Instance);
         PhaseList.Add(ResolutionPhase.Instance);
         PhaseList.Add(EndPhase.Instance);
+        Turn = new();
+        Turn.OnValueChanged += (oldVal, newVal, message) =>
+        {
+            Text.text = "Turn" + Turn.Value.ToString();
+        };
+        OnRestarting += () =>
+        {
+            StartGame();
+        };
+        OnNewWave += () =>
+        {
+            CurrentPhaseIndex = 0;
+            StartPhase.Instance.OnEnteringPhase();
+        };
     }
     public void StartGame()
     {
         CurrentPhaseIndex = 0;
-        Turn = new();
+        Turn.Clear();
         StartPhase.Instance.OnEnteringPhase();
     }
 

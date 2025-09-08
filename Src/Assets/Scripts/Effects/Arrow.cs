@@ -60,7 +60,7 @@ public class Arrow : MonoSingleton<Arrow>
     {
         arrowBase.transform.position = 贝塞尔曲线点;
         List < Vector3 > points = 构造贝塞尔曲线(origin, target);
-        Debug.Log("points.Count=" + points.Count);
+        //Debug.Log("points.Count=" + points.Count);
         for (int i = 0; i < circles.Count; i++)
         {
             Vector3 localPos = arrowBase.transform.InverseTransformPoint(points[i]);
