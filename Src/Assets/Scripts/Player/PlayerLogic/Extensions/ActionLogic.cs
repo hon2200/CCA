@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
+using static UnityEngine.EventSystems.EventTrigger;
 
 
 public static class AttackLogic
@@ -52,6 +54,7 @@ public static class AttackLogic
         }
         return defendMethods;
     }
+    
     public static List<(CounterDefine,CounterMethod)> WatchoutforCounter(this AttackDefine attack, Player enemy)
     {
         List<(CounterDefine,CounterMethod)> counterMethods = new();
@@ -81,7 +84,7 @@ public static class DefendLogic
     public static void HowtoDefend(this DefendDefine defend,AttackDefine attack, Player victim)
     {
         //创建并添加防御
-        EffectManager.Instance.CreateSpotEvent("Defend", victim.gameObject);
+        VFXManager.Instance.PlayPointEffect(false,"Defend", victim.gameObject);
     }
 }
 
@@ -94,18 +97,18 @@ public static class CounterLogic
         {
             case CounterMethod.Block:
                 //创建并添加防御
-                EffectManager.Instance.CreateSpotEvent("Defend", victim.gameObject);
+                VFXManager.Instance.PlayPointEffect(false,"Defend", victim.gameObject);
                 break;
             case CounterMethod.Disarm:
                 //创建并添加防御
-                EffectManager.Instance.CreateSpotEvent("Defend", victim.gameObject);
+                VFXManager.Instance.PlayPointEffect(false, "Defend", victim.gameObject);
                 attacker.status.resources.AvailableSword.Set(0);
                 break;
             case CounterMethod.Rebounce:
                 //创建并添加防御
-                EffectManager.Instance.CreateSpotEvent("Defend", victim.gameObject);
+                VFXManager.Instance.PlayPointEffect(false, "Defend", victim.gameObject);
                 //创建并添加反击路线
-                EffectManager.Instance.CreateTrailEvent("Shoot", victim.gameObject, attacker.gameObject,0,0.3f);
+                VFXManager.Instance.PlayTrailEffect(false, "Shoot", victim.gameObject, attacker.gameObject,0,0.3f);
                 attack.HowtoAttack(attacker, attacker);
                 break;
             default:

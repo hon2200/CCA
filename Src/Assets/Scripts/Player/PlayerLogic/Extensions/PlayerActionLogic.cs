@@ -56,7 +56,7 @@ public static class PlayerActionLogic
             PlayerManager.Instance.Players.TryGetValue(attack.Target, out Player enemy);
             var enemy_attacks = enemy.SelectActionType<AttackDefine>();
             //创建并添加攻击特效
-            EffectManager.Instance.CreateTrailEvent("Bullet", player.gameObject, enemy.gameObject,0,0.3f);
+            VFXManager.Instance.PlayTrailEffect(false,"Bullet", player.gameObject, enemy.gameObject,0,0.3f);
             //攻击力等级判断
             if (attack.Level > enemy.MaxLevel(player))
             {
@@ -144,11 +144,10 @@ public static class PlayerActionLogic
     //一个玩家调用这个函数可以看到他历史记录里头某一回合某一类型的行动列
     public static List<Type> SelectActionType_inHistory<Type>(this Player player, int Turn, bool isProcessed) where Type : ActionDefine
     {
+        if (Turn == 0)
+            return new();
         List<Type> list = new();
         player.action.LongHistory.TryGetValue((Turn, isProcessed), out var actionList);
-        //此前没有历史记录
-        if (actionList == null)
-            return new();
         foreach (ActionDefine action in actionList)
         {
             if (action is Type typedAction)
@@ -165,15 +164,13 @@ public static class PlayerActionLogic
         float maxLevel = 0;
         if (attacker.ID_inGame == enemy.ID_inGame)
             return -10;
-        var attacks = attacker.SelectActionType<AttackDefine>();
+        var attacks = enemy.SelectActionType<AttackDefine>();
         foreach (var attack in attacks)
         {
-            //enemy反击力度
             if (attack.Target == enemy.ID_inGame)
                 if (maxLevel < attack.Level)
                     maxLevel = attack.Level;
         }
-        Debug.Log(enemy.ID_inGame + "最大攻击力是" + maxLevel);
         return maxLevel;
     }
 
