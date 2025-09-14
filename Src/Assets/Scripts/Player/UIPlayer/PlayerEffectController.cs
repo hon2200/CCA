@@ -12,6 +12,6 @@ public class PlayerEffectController : MonoBehaviour
     public void OnPlayerDamaged(int ori, int res, string message)
     {
         if (message == "Damage")
-            EffectManager.Instance.CreateSpotEvent("Hit", player.gameObject);
+            VFXManager.Instance.PlayPointEffect(false,"Hit", player.gameObject);
     }
 }
