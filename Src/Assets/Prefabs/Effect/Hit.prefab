@@ -9787,7 +9787,7 @@ GameObject:
   - component: {fileID: 3893995321569035208}
   - component: {fileID: 8493656248331792189}
   - component: {fileID: 2520121652900391774}
-  - component: {fileID: -7139807326132547368}
+  - component: {fileID: -243387553439750856}
   m_Layer: 0
   m_Name: Hit
   m_TagString: Untagged
@@ -14668,7 +14668,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &-7139807326132547368
+--- !u!114 &-243387553439750856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14677,10 +14677,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3826759674495339984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc44ec16fccab044a03669eed02fa4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c0b59fc52ff4e6478a650e2e30853b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPS: {fileID: 8493656248331792189}
+  IsFinished: 0
+  particleSystem: {fileID: 8493656248331792189}
 --- !u!1 &5851750320872722308
 GameObject:
   m_ObjectHideFlags: 0

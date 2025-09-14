@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3334062473523563828}
   - component: {fileID: 3922721887954498662}
   - component: {fileID: 369629440776646969}
-  - component: {fileID: 807605097834353302}
+  - component: {fileID: -4248824363513773074}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -4970,7 +4970,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &807605097834353302
+--- !u!114 &-4248824363513773074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4979,6 +4979,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9178071811743212453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc44ec16fccab044a03669eed02fa4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c0b59fc52ff4e6478a650e2e30853b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsFinished: 0
+  particleSystem: {fileID: 3922721887954498662}
