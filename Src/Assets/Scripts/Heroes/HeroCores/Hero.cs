@@ -1,27 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 public class Hero
 {
     public string ID { get; set; }
-
     public List<Skill> skills;
+
     public Hero(HeroDefine heroDefine)
     {
+        ID = heroDefine.ID;
         skills = new List<Skill>();
-        //添加英雄技能
-        foreach (var hero in HeroDataBase.Instance.HeroDictionary)
+
+        // 添加英雄技能
+        if (HeroDataBase.Instance.HeroDictionary.TryGetValue(heroDefine.ID, out var heroData))
         {
-            if (hero.Key == heroDefine.ID)
-                foreach (var skillID in hero.Value.SkillIDList)
+            foreach (var skillID in heroData.SkillIDList)
+            {
+                if (SkillLibrary.Instance.skillDic.TryGetValue(skillID, out var skill))
                 {
-                    SkillLiberary.Instance.skillDic.TryGetValue(skillID, out var skill);
                     skills.Add(skill);
                 }
+                else
+                {
+                    UnityEngine.Debug.LogWarning($"技能ID不存在: {skillID}");
+                }
+            }
+        }
+        else
+        {
+            UnityEngine.Debug.LogWarning($"英雄ID不存在: {heroDefine.ID}");
         }
     }
 }
