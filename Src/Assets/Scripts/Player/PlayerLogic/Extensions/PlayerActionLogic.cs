@@ -164,7 +164,7 @@ public static class PlayerActionLogic
         float maxLevel = 0;
         if (attacker.ID_inGame == enemy.ID_inGame)
             return -10;
-        var attacks = enemy.SelectActionType<AttackDefine>();
+        var attacks = attacker.SelectActionType<AttackDefine>();
         foreach (var attack in attacks)
         {
             if (attack.Target == enemy.ID_inGame)
