@@ -11,7 +11,8 @@
         "ItemType": "Special",
         "CD": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "provoke": {
         "ID": "provoke",
@@ -25,6 +26,7 @@
         "ItemType": "Special",
         "CD": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     }
 }

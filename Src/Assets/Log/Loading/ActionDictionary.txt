@@ -17,6 +17,7 @@ Key: bullet
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: double_bullet
 
@@ -35,6 +36,7 @@ Key: double_bullet
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: sword
 
@@ -53,6 +55,7 @@ Key: sword
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: double_sword
 
@@ -71,6 +74,7 @@ Key: double_sword
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: stab
 
@@ -89,6 +93,7 @@ Key: stab
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: cleave
 
@@ -107,6 +112,7 @@ Key: cleave
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: laser_stab
 
@@ -125,6 +131,7 @@ Key: laser_stab
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: laser_cleave
 
@@ -143,6 +150,7 @@ Key: laser_cleave
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: ghost_sever
 
@@ -161,6 +169,7 @@ Key: ghost_sever
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: spirit_sever
 
@@ -179,6 +188,7 @@ Key: spirit_sever
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: shoot
 
@@ -197,6 +207,7 @@ Key: shoot
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: double_shoot
 
@@ -215,6 +226,7 @@ Key: double_shoot
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: laser_shoot
 
@@ -233,6 +245,7 @@ Key: laser_shoot
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: laser_cannon
 
@@ -251,6 +264,7 @@ Key: laser_cannon
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: RPG
 
@@ -269,6 +283,7 @@ Key: RPG
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: double_RPG
 
@@ -287,6 +302,7 @@ Key: double_RPG
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: nuclear_bomb
 
@@ -305,6 +321,7 @@ Key: nuclear_bomb
   CD:     0
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: block
 
@@ -318,6 +335,7 @@ Key: block
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: double_block
 
@@ -331,6 +349,7 @@ Key: double_block
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: heavy_block
 
@@ -344,6 +363,7 @@ Key: heavy_block
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: deflect
 
@@ -357,6 +377,7 @@ Key: deflect
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: rebounce
 
@@ -370,6 +391,7 @@ Key: rebounce
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: counterblade
 
@@ -383,6 +405,7 @@ Key: counterblade
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: disarm
 
@@ -396,6 +419,7 @@ Key: disarm
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: spectral_reflection
 
@@ -409,6 +433,7 @@ Key: spectral_reflection
   CD:     0
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: comeon
 
@@ -422,6 +447,7 @@ Key: comeon
   CD:     1
   TargetType:     Self
   Target:     0
+  isBasic:     True
 ------------------------------------
 Key: provoke
 
@@ -435,4 +461,5 @@ Key: provoke
   CD:     1
   TargetType:     Enemy
   Target:     0
+  isBasic:     True
 ------------------------------------

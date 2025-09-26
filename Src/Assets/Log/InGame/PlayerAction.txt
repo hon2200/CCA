@@ -1,0 +1,44 @@
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         1
+      isBasic:         False
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      isCopy:         False
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         2
+      isBasic:         False
+------------------------------------

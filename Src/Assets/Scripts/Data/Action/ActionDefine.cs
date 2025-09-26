@@ -67,6 +67,7 @@ public class ActionDefine : ICloneable
     public TargetType TargetType { get; set; } // 目标类型//未来可能在读取行动上面有用
 
     public int Target { get; set; } //目标
+    public bool isBasic { get; set; } //是否是每一个玩家都可以拥有的基础行动
     // 实现 ICloneable 接口（深拷贝）
     public virtual object Clone()
     {

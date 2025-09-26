@@ -692,8 +692,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 1
-  playerPrefab: {fileID: 2879334617743548941, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
   AIPrefab: {fileID: 4423560992785770756, guid: c71ed241551923744865a206de1cc090, type: 3}
+  HumanPrefab: {fileID: 8459155760957464287, guid: bedb4e1ed6471db488d638614be79175, type: 3}
 --- !u!4 &61938971
 Transform:
   m_ObjectHideFlags: 0
@@ -17424,7 +17424,7 @@ Transform:
   m_GameObject: {fileID: 1491576979}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3087375, y: 15.476421, z: -1.2163161}
+  m_LocalPosition: {x: 3.56, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

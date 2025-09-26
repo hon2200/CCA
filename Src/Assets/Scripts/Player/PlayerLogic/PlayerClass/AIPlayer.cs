@@ -9,7 +9,6 @@ using UnityEngine;
 //未来可以把Emotion写成Attribute，把OnEmotionChange写成委托
 public class AIPlayer : Player
 {
-    public AIDefine AIDefine { get; set; }
     public CharacterDefine CharacterDefine { get; set; }
     public Emotion Emo { get; set; }
     public bool isFriend { get; set; }
@@ -17,16 +16,11 @@ public class AIPlayer : Player
     private Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory { get; set; }
     //告诉玩家的行动类别
     public Intention IntendedType { get; set; }
+    //创造闯关过程中的AI
     public void Initialize(int ID_inGame, AIDefine aIDefine, bool isFriend)
     {
-        HeroDataBase.Instance.HeroDictionary.TryGetValue("Blank", out var heroDefine);
-        base.Initialize(ID_inGame, PlayerType.AI, heroDefine);
-        //重新修改最大生命值
-        this.status = new(aIDefine.MaxHP, aIDefine.InitialResource);
-        //处理可用行动
-        this.AvailableActions = aIDefine.AvailableActionID;
-        //赋值
-        AIDefine = aIDefine;
+        base.Initialize(ID_inGame, PlayerType.AI, aIDefine.MaxHP, aIDefine.InitialResource,
+            aIDefine.AvailableActionID);
         //赋值性格
         CharacterDataBase.Instance.CharacterDictionary.TryGetValue(aIDefine.CharacterID, out var characterDefine);
         if (characterDefine == null)
@@ -54,6 +48,41 @@ public class AIPlayer : Player
                 DamagedReaction(damageAmount);
             }
         };
+        OnBirth?.Invoke();
+    }
+
+    //创造英雄模式中的AI
+    public void Initialize(int ID_inGame, HeroDefine heroDefine)
+    {
+        base.Initialize(ID_inGame, PlayerType.AI, heroDefine.MaxHP);
+        //赋值性格
+        CharacterDataBase.Instance.CharacterDictionary.TryGetValue("Friendly", out var characterDefine);
+        if (characterDefine == null)
+            Debug.Assert(false, "Can't find Character");
+        CharacterDefine = characterDefine;
+        //赋值情感
+        Emo = new();
+        //注意：情绪变化监听
+        Emo.OnValueChanged += (float oldEmo, float newEmo, string message) =>
+        {
+            OnEmoChange();
+        };
+        Emo.Set(characterDefine.IniEmotion);
+        //赋值诚实
+        Honest = new();
+        Honest.Set(characterDefine.IniHonesty);
+        this.isFriend = false;
+        IntendedType = new();
+        //警戒：情绪值对受伤应激激动
+        status.HP.OnValueChanged += (int oldHP, int newHP, string message) =>
+        {
+            if (message == "Damage")
+            {
+                int damageAmount = oldHP - newHP;
+                DamagedReaction(damageAmount);
+            }
+        };
+        OnBirth?.Invoke();
     }
     #region EmotionRelated
     private void OnEmoChange()

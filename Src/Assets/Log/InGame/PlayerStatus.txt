@@ -1,0 +1,44 @@
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     25
+  HP: 
+    onObserve:       True
+    Value:       25
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     12
+  HP: 
+    onObserve:       True
+    Value:       12
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+------------------------------------

@@ -12,7 +12,8 @@
         "Level": 2,
         "Damage": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "cleave": {
         "ID": "cleave",
@@ -27,7 +28,8 @@
         "Level": 3,
         "Damage": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "laser_stab": {
         "ID": "laser_stab",
@@ -42,7 +44,8 @@
         "Level": 2,
         "Damage": 2,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "laser_cleave": {
         "ID": "laser_cleave",
@@ -57,7 +60,8 @@
         "Level": 3,
         "Damage": 2,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "ghost_sever": {
         "ID": "ghost_sever",
@@ -72,7 +76,8 @@
         "Level": 5,
         "Damage": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "spirit_sever": {
         "ID": "spirit_sever",
@@ -87,7 +92,8 @@
         "Level": 5,
         "Damage": 2,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "shoot": {
         "ID": "shoot",
@@ -102,7 +108,8 @@
         "Level": 4,
         "Damage": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "double_shoot": {
         "ID": "double_shoot",
@@ -117,7 +124,8 @@
         "Level": 4,
         "Damage": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "laser_shoot": {
         "ID": "laser_shoot",
@@ -132,7 +140,8 @@
         "Level": 4,
         "Damage": 2,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "laser_cannon": {
         "ID": "laser_cannon",
@@ -146,7 +155,8 @@
         "CD": 0,
         "Level": 1,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "RPG": {
         "ID": "RPG",
@@ -161,7 +171,8 @@
         "Level": 6,
         "Damage": 2,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "double_RPG": {
         "ID": "double_RPG",
@@ -176,7 +187,8 @@
         "Level": 6,
         "Damage": 3,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "nuclear_bomb": {
         "ID": "nuclear_bomb",
@@ -191,6 +203,7 @@
         "Level": 7,
         "Damage": 3,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     }
 }

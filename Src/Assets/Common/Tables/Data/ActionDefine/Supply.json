@@ -14,7 +14,8 @@
             0
         ],
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "double_bullet": {
         "ID": "double_bullet",
@@ -31,7 +32,8 @@
             0
         ],
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "sword": {
         "ID": "sword",
@@ -48,7 +50,8 @@
             1
         ],
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "double_sword": {
         "ID": "double_sword",
@@ -65,6 +68,7 @@
             2
         ],
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     }
 }

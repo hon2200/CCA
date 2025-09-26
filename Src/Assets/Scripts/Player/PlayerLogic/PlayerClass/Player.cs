@@ -23,36 +23,51 @@ public class Player : MonoBehaviour
     public PlayerEffectController playerEffectController;
     //可用行动列
     public List<string> AvailableActions;
+    public Action OnBirth; 
 
-    //创建一个英雄类型的玩家
-    public void Initialize(int ID_inGame, PlayerType playerType, HeroDefine heroDefine)
+    //创建玩家
+    protected void Initialize(int ID_inGame, PlayerType playerType,
+        int MaxHP, List<int> InitialResource = null, List<string> AvailableActions = null,
+         HeroDefine heroDefine = null)
     {
         this.ID_inGame = ID_inGame;
-        this.status = new(heroDefine.MaxHP, new (){ 0, 0, 0 });
+        if (InitialResource == null)
+            InitialResource = new() { 0, 0, 0 };
+        this.status = new(MaxHP, InitialResource);
         this.action = new();
         this.playerType = playerType;
-        this.hero = new(heroDefine);
+        //处理英雄：如果没有赋值，则为其赋值白板
+        if (heroDefine != null)
+            this.hero = new(heroDefine);
+        else
+        {
+            HeroDataBase.Instance.HeroDictionary.TryGetValue("Blank", out var blank);
+            this.hero = new(blank);
+        }
         isReady = new ReadyAttribute();
         isReady.Cancel();
-        AvailableActions = new();
-        foreach(var action in ActionDataBase.Instance.ActionDictionary.Values)
+        //处理可用行动：如果没有为其赋值，则为其赋值基础行动
+        if (AvailableActions != null)
         {
-            AvailableActions.Add(action.ID);
+            this.AvailableActions = new();
+            foreach (var action in AvailableActions)
+            {
+                this.AvailableActions.Add(action);
+            }
         }
-    }
-    //创建闯关过程的玩家
-    public void InitailizePlayer(int ID_inGame, LevelDefine Level)
-    {
-        this.ID_inGame = ID_inGame;
-        this.status = new(Level.PlayerHP, Level.PlayerInitialResource);
-        this.action = new();
-        this.playerType = PlayerType.Human;
-        isReady = new ReadyAttribute();
-        isReady.Cancel();
-        AvailableActions = new();
-        foreach (var actionID in Level.UnlockedAction)
+        else
         {
-            AvailableActions.Add(actionID);
+            this.AvailableActions = new();
+            foreach (var action in ActionDataBase.Instance.ActionDictionary.Values)
+            {
+                if (action.isBasic)
+                    this.AvailableActions.Add(action.ID);
+            }
         }
+        OnBirth += () =>
+        {
+            playerUIText.Initialize();
+            playerEffectController.Initialize();
+        };
     }
 }

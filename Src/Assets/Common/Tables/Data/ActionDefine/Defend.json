@@ -10,7 +10,8 @@
         "TargetType": "Self",
         "CD": 0,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "double_block": {
         "ID": "double_block",
@@ -23,7 +24,8 @@
         "TargetType": "Self",
         "CD": 0,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "heavy_block": {
         "ID": "heavy_block",
@@ -36,7 +38,8 @@
         "TargetType": "Self",
         "CD": 0,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     },
     "deflect": {
         "ID": "deflect",
@@ -49,6 +52,7 @@
         "TargetType": "Self",
         "CD": 0,
         "Target": 0,
-        "isCopy": false
+        "isCopy": false,
+        "isBasic": true
     }
 }

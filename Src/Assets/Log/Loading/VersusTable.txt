@@ -288,27 +288,27 @@ Key: (double_RPG, disarm)
 Key: (double_RPG, spectral_reflection)
   None
 ------------------------------------
-Key: (nuclearbomb, block)
+Key: (nuclear_bomb, block)
   None
 ------------------------------------
-Key: (nuclearbomb, double_block)
+Key: (nuclear_bomb, double_block)
   None
 ------------------------------------
-Key: (nuclearbomb, heavy_block)
+Key: (nuclear_bomb, heavy_block)
   None
 ------------------------------------
-Key: (nuclearbomb, deflect)
+Key: (nuclear_bomb, deflect)
   None
 ------------------------------------
-Key: (nuclearbomb, rebounce)
+Key: (nuclear_bomb, rebounce)
   Rebounce
 ------------------------------------
-Key: (nuclearbomb, counterblade)
+Key: (nuclear_bomb, counterblade)
   None
 ------------------------------------
-Key: (nuclearbomb, disarm)
+Key: (nuclear_bomb, disarm)
   None
 ------------------------------------
-Key: (nuclearbomb, spectral_reflection)
+Key: (nuclear_bomb, spectral_reflection)
   None
 ------------------------------------

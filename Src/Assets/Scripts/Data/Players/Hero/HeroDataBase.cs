@@ -30,10 +30,10 @@ public class HeroDataBase : MonoSingleton<HeroDataBase>
         }
         else
         {
-            Debug.Log($"[HeroDataBase] Loaded {HeroDictionary.Count} heroes.");
+            //Debug.Log($"[HeroDataBase] Loaded {HeroDictionary.Count} heroes.");
             foreach (var hero in HeroDictionary)
             {
-                Debug.Log($"[HeroDataBase] HeroID: {hero.Key}, Name: {hero.Value.Name}");
+                //Debug.Log($"[HeroDataBase] HeroID: {hero.Key}, Name: {hero.Value.Name}");
             }
         }
 
@@ -52,6 +52,7 @@ public class HeroDataBase : MonoSingleton<HeroDataBase>
         foreach (var kvp in HeroDictionary)
         {
             HeroDefine hero = kvp.Value;
+            /*
             Debug.Log(
                 $"HeroID: {hero.ID}\n" +
                 $"  name: {hero.Name}\n" +
@@ -59,6 +60,7 @@ public class HeroDataBase : MonoSingleton<HeroDataBase>
                 $"  maxHP: {hero.MaxHP}\n" +
                 $"  skill: {(hero.SkillIDList != null && hero.SkillIDList.Count > 0 ? string.Join(", ", hero.SkillIDList) : "?")}\n"
             );
+            */
         }
     }
     public List<HeroDefine> GetAllHeroes()
