@@ -9,6 +9,15 @@ using System.Threading.Tasks;
 //写了一个函数，但是也可能不是最优的做法
 public abstract class PhasebasedSkill : Skill
 {
-    //在结算阶段前调用
+    // 在回合或阶段开始前调用
+    public virtual void OnPhaseStart() { }
+
+    // 在回合或阶段结束时调用
+    public virtual void OnPhaseEnd() { }
+
+    // 在结算阶段前调用
     public virtual void BeforeResolution() { }
+
+    // 在结算阶段后调用
+    public virtual void AfterResolution() { }
 }

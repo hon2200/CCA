@@ -13,11 +13,16 @@ public class ActionDataBase : MonoSingleton<ActionDataBase>
 {
     private void Awake()
     {
-        LoadingActions();
+        LoadingActions(); 
     }
     // 行动字典，包含所有行动
     public Dictionary<string, ActionDefine> ActionDictionary { get; set; }
     public Dictionary<(string, string), CounterMethod> VersusTable { get; set; }
+    // 新增英雄字典
+    public Dictionary<string, HeroDefine> HeroDictionary { get; set; }
+    
+    
+    
     //读入所有行动
     public void LoadingActions()
     {

@@ -1,10 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//英雄的定义
-//ID就是Table中的英雄的ID
+[Serializable]
 public class HeroDefine
 {
     public string ID;
@@ -12,10 +11,20 @@ public class HeroDefine
     public string Description;
     public int MaxHP;
     public List<string> SkillIDList;
+    
+    // 榛樿鏋勯�犲嚱鏁颁緵JSON鍙嶅簭鍒楀寲浣跨敤
+    public HeroDefine() { }
+    
     public HeroDefine(string ID, int maxHP)
     {
         this.ID = ID;
         this.MaxHP = maxHP;
+    }
+    
+    // 閲嶅啓ToString鏂规硶渚夸簬璋冭瘯
+    public override string ToString()
+    {
+        return $"HeroDefine[ID={ID}, Name={Name}, HP={MaxHP}, Skills={SkillIDList?.Count ?? 0}]";
     }
 }
 
