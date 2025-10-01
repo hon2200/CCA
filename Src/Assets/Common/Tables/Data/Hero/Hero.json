@@ -564,7 +564,8 @@
         "Description": "你可以三拔三补",
         "MaxHP": 20,
         "SkillIDList": [
-            "Gathering Food"
+            "Gathering FoodI",
+            "Gathering FoodII"
         ]
     },
     "CalebTheThunderCultist": {

@@ -16,7 +16,7 @@ public class MoutainCrusher: PhasebasedSkill
     {
         ID = "MountainCrusher";
     }
-    public override void BeforeResolution()
+    public override void BeforeResolution(Player thisPlayer)
     {
         foreach(var action in thisPlayer.action)
         {
@@ -36,7 +36,7 @@ public class LegionBreaker : PhasebasedSkill
     {
         ID = "LegionBreaker";
     }
-    public override void BeforeResolution()
+    public override void BeforeResolution(Player thisPlayer)
     {
         foreach(var action in thisPlayer.action)
         {
@@ -63,4 +63,6 @@ public class DaringBounty : TriggerSkill
         Debug.Log("比尔触发技能" + attacker.ID_inGame + "玩家获得了" + damage);
     }
 }
+
+
 

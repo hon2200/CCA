@@ -6,12 +6,12 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             5
           [1]:             0
       isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         powder_keg
+      Name:         火药桶
+      Description:         获得五颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -27,17 +27,95 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             2
           [1]:             0
       isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
+      TargetType:         Self
+      Target:         2
+      isBasic:         False
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             5
+          [1]:             0
+      isCopy:         False
+      ID:         powder_keg
+      Name:         火药桶
+      Description:         获得五颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         2
+      isBasic:         False
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Self
+      Target:         2
+      isBasic:         False
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             5
+          [1]:             0
+      isCopy:         False
+      ID:         powder_keg
+      Name:         火药桶
+      Description:         获得五颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         2
+      isBasic:         False
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
       TargetType:         Self
       Target:         2
       isBasic:         False

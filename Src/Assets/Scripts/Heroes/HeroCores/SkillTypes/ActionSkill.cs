@@ -10,12 +10,9 @@ using System.Threading.Tasks;
 //行动信息(ActionDataBase.cs)
 public abstract class ActionSkill : Skill
 {
-    // 行动技能需要执行的方法
-    public abstract void ExecuteAction();
-
-    // 可以在执行前检查条件
-    public virtual bool CanExecute()
+    public string ActionID { get; protected set; }
+    public virtual void AddingAvailableAction(Player thisPlayer)
     {
-        return true; // 默认可以执行
+        thisPlayer.AvailableActions.Add(ActionID);
     }
 }

@@ -17,5 +17,6 @@ public abstract class TriggerSkill : Skill
     //防御生效调用
     public virtual void OnDefendTakeEffect() { }
 
-    //在反弹生效调用......
+    //在反弹生效调用
+    public virtual void OnCounterTakeEffect() { }
 }

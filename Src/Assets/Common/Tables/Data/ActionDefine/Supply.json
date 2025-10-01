@@ -70,5 +70,59 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true
+    },
+    "powder_keg": {
+        "ID": "powder_keg",
+        "Name": "火药桶",
+        "Description": "获得五颗子弹",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "CD": 0,
+        "SupplyNumber": [
+            5,
+            0
+        ],
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": false
+    },
+    "triple_bullet": {
+        "ID": "triple_bullet",
+        "Name": "三补",
+        "Description": "获得三颗子弹",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "CD": 0,
+        "SupplyNumber": [
+            3,
+            0
+        ],
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": false
+    },
+    "triple_sword": {
+        "ID": "triple_sword",
+        "Name": "三拔",
+        "Description": "获得三拔剑",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "CD": 0,
+        "SupplyNumber": [
+            0,
+            3
+        ],
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": false
     }
 }

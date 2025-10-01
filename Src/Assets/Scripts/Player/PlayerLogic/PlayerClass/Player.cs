@@ -38,11 +38,11 @@ public class Player : MonoBehaviour
         this.playerType = playerType;
         //处理英雄：如果没有赋值，则为其赋值白板
         if (heroDefine != null)
-            this.hero = new(heroDefine);
+            this.hero = new(this, heroDefine);
         else
         {
             HeroDataBase.Instance.HeroDictionary.TryGetValue("Blank", out var blank);
-            this.hero = new(blank);
+            this.hero = new(this, blank);
         }
         isReady = new ReadyAttribute();
         isReady.Cancel();
@@ -64,10 +64,23 @@ public class Player : MonoBehaviour
                     this.AvailableActions.Add(action.ID);
             }
         }
+        //英雄可能带有的行动技
+        foreach(var skill in hero.skills)
+        {
+            if (skill is ActionSkill actionSkill)
+                actionSkill.AddingAvailableAction(this);
+        }
         OnBirth += () =>
         {
             playerUIText.Initialize();
             playerEffectController.Initialize();
         };
+
+        //玩家受伤时，调用Ondamaged
+        status.HP.OnValueChanged += (oldHP,newHP,meassage) =>
+        {
+
+        };
+
     }
 }

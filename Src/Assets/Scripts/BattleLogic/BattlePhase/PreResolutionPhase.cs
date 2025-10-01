@@ -23,7 +23,7 @@ public class PreResolutionPhase : Phase
             {
                 if(skill is PhasebasedSkill phasebasedSkill)
                 {
-                    phasebasedSkill.BeforeResolution();
+                    phasebasedSkill.BeforeResolution(player);
                 }
             }
         }

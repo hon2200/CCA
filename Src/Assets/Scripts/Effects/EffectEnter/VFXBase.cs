@@ -15,14 +15,14 @@ public class VFXBase : MonoBehaviour
     public bool IsFinished = false;
 
     [Tooltip("粒子系统")]
-    public ParticleSystem particleSystem;
+    public ParticleSystem PSystem;
 
     [Tooltip("预定配置")]
     public VFXConfig currentConfig;
 
     public virtual void Init()
     {
-        particleSystem = GetComponent<ParticleSystem>();
+        PSystem = GetComponent<ParticleSystem>();
     }
 
     /// <summary>
@@ -32,8 +32,8 @@ public class VFXBase : MonoBehaviour
     {
         currentConfig = config;
         Init();
-        if (particleSystem == null|| currentConfig == null) return;
-        particleSystem.Stop();
+        if (PSystem == null|| currentConfig == null) return;
+        PSystem.Stop();
         if (config.duration >0) SetDuration(config.duration);
         if (config.delay > 0) SetDelay(config.delay);
         if (config.size > 0) SetSize(config.size);
@@ -58,15 +58,15 @@ public class VFXBase : MonoBehaviour
     {
 
         transform.position = start;
-        if (particleSystem == null) return;            
+        if (PSystem == null) return;            
         float distance = Vector3.Distance(start, end);            
-        var main = particleSystem.main;            
+        var main = PSystem.main;            
         main.startSpeed = distance / duration;            
         main.startLifetime = duration;           
         main.gravityModifier = 0f;            
         main.simulationSpace = ParticleSystemSimulationSpace.World;            
         transform.rotation = Quaternion.LookRotation(end - start);            
-        particleSystem.Play();
+        PSystem.Play();
         StartCoroutine(DestroyAfterDuration(duration));
     }
 
@@ -76,10 +76,10 @@ public class VFXBase : MonoBehaviour
     public virtual void PlayPointEffect(Vector3 position, float duration)
     {
         transform.position = position;
-        if (particleSystem == null) return;
-        var main = particleSystem.main;
+        if (PSystem == null) return;
+        var main = PSystem.main;
         main.startLifetime = duration;
-        particleSystem.Play();
+        PSystem.Play();
         IsFinished = false;
         StartCoroutine(DestroyAfterDuration(duration));
     }
@@ -89,28 +89,28 @@ public class VFXBase : MonoBehaviour
     #region 内置设置方法
     public virtual void SetDuration(float duration)
     {
-        if (particleSystem == null) return;
-        var main = particleSystem.main;
+        if (PSystem == null) return;
+        var main = PSystem.main;
         main.duration = duration;
     }
     public virtual void SetDelay(float delay)
     {
-        if (particleSystem == null) return;
-        var main = particleSystem.main;
+        if (PSystem == null) return;
+        var main = PSystem.main;
         main.startDelay = delay;
-        particleSystem.Stop();
+        PSystem.Stop();
     }
     public virtual void SetSize(float size)
     {
-        if (particleSystem == null) return;
-        var main = particleSystem.main;
+        if (PSystem == null) return;
+        var main = PSystem.main;
         if (size > 0) main.startSize = size;
     }
     public virtual void Set3DSize(float x,float y,float z)
     {
-        if (particleSystem != null)
+        if (PSystem != null)
         {
-            var main = particleSystem.main;
+            var main = PSystem.main;
             main.startSize3D = true;
             main.startSizeX = x;
             main.startSizeY = y;
@@ -119,10 +119,10 @@ public class VFXBase : MonoBehaviour
     }
     public virtual void SetCount(float[] bursttime ,int[] count)
     {
-        if (particleSystem == null|| count == null) return;
+        if (PSystem == null|| count == null) return;
         if (bursttime == null&& count.Length == 1) bursttime = new float[] { 0};
         if (bursttime.Length != count.Length) return;
-        var emission = particleSystem.emission;
+        var emission = PSystem.emission;
         ParticleSystem.Burst[] bursts = new ParticleSystem.Burst[bursttime.Length];
         for (int i = 0; i < bursttime.Length; i++)
         {
@@ -132,14 +132,14 @@ public class VFXBase : MonoBehaviour
     }
     public virtual void SetRateOverTime(int rateOverTime = 0)
     {
-        if (particleSystem == null) return;
-        var emission = particleSystem.emission;
+        if (PSystem == null) return;
+        var emission = PSystem.emission;
         if (rateOverTime>0) emission.rateOverTime = rateOverTime;
     }
     public virtual void SetColor(Color color)
     {
-        if (particleSystem == null) return;
-        var main = particleSystem.main;
+        if (PSystem == null) return;
+        var main = PSystem.main;
         if (color!=null) main.startColor = color;
     }
     #endregion
@@ -149,14 +149,14 @@ public class VFXBase : MonoBehaviour
     /// </summary>
     public virtual void SetSpeed(float speed)
     {
-        if (particleSystem == null) return;
-        var main = particleSystem.main;
+        if (PSystem == null) return;
+        var main = PSystem.main;
         if (speed>0) main.startSpeed = speed;
     }
     private IEnumerator DestroyAfterDuration(float duration)
     {
         yield return new WaitForSeconds(duration);
-        while (particleSystem.isPlaying == true)
+        while (PSystem.isPlaying == true)
         {
             yield return new WaitForSeconds(0.5f);
         }

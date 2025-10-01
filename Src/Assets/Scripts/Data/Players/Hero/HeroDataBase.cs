@@ -48,7 +48,7 @@ public class HeroDataBase : MonoSingleton<HeroDataBase>
             return;
         }
 
-        Debug.Log("=== [HeroDataBase] ????????? ===");
+        //Debug.Log("=== [HeroDataBase] ????????? ===");
         foreach (var kvp in HeroDictionary)
         {
             HeroDefine hero = kvp.Value;

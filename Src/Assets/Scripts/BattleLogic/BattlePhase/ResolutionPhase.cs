@@ -50,6 +50,8 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         }
         //将死之人若无办法，则死亡
         KnockofDeath();
+
+        //输赢判断
         CheckofDeath();
         CheckofVictory();
 
@@ -80,6 +82,11 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         {
             if (player.status.life.Value == LifeStatus.EdgeofDeath)
             {
+                //if（钟馗）
+                //我要扔大核弹
+                //按钮亮起来：是否发动技能
+                //按钮Onclick+(){发动大核弹}
+                //再死
                 player.status.life.DieOut();
             }
         }

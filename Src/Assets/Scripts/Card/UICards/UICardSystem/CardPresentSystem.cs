@@ -26,6 +26,8 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
     [SerializeField]
     public  SerializedDictionary<CardType, List<GameObject>> Cards_inType;
     public Player player1;
+    //卡牌是否创建完毕
+    private bool CardReady = false;
 
     //依据CardLiberary，按照类型创建卡牌
     public void CreateCards()
@@ -42,6 +44,9 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
         //开始创建卡牌
         foreach(var card in CardLiberary.Instance.CardDictionary)
         {
+            //如果行动不可用，则不创建
+            if (!player1.AvailableActions.Contains(card.Key))
+                continue;
             //获得卡牌的actiondata
             ActionDataBase.Instance.ActionDictionary.TryGetValue(card.Key, out var actionData);
             if (actionData == null)
@@ -109,17 +114,18 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
             }
         }
     }
-
-    public void Start()
+    public void CreateAndArrangeCards()
     {
         CreateCards();
         ArrangeCards();
         MenuButtonsReady();
         OpenPenal(CardType.Supply);
+        CardReady = true;
     }
     public void Update()
     {
-        CheckCards();
+        if(CardReady)
+            CheckCards();
     }
     #region 具体实现私有函数
     private GameObject CreateCard(CardTemplete cardTemplete, Transform parent)

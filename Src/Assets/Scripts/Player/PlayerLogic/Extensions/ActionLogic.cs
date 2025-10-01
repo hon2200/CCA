@@ -17,18 +17,19 @@ public static class AttackLogic
         {
             //溅射伤害，暂时没有通过buff去定义它，之后想到好的架构再去加，先暂时写在这里
             case "nuclear_bomb":
-                victim.status.HP.Damage(attack.Damage);
+                victim.status.HP.Damage(attack.Damage, attacker, victim, attack);
                 foreach (var player in PlayerManager.Instance.Players)
                 {
                     if (player.Key != victim.ID_inGame)
                     {
-                        player.Value.status.HP.Damage(1);
+                        player.Value.status.HP.Damage(1, attacker, victim, attack);
                     }
                 }
                 break;
             default:
-                victim.status.HP.Damage(attack.Damage);
+                victim.status.HP.Damage(attack.Damage, attacker, victim, attack);
                 break;
+
         }
         attack.Victim = victim.ID_inGame;
     }

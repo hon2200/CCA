@@ -16,7 +16,7 @@ public abstract class PhasebasedSkill : Skill
     public virtual void OnPhaseEnd() { }
 
     // 在结算阶段前调用
-    public virtual void BeforeResolution() { }
+    public virtual void BeforeResolution(Player thisPlayer) { }
 
     // 在结算阶段后调用
     public virtual void AfterResolution() { }

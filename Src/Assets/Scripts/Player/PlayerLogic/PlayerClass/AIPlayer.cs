@@ -54,7 +54,7 @@ public class AIPlayer : Player
     //创造英雄模式中的AI
     public void Initialize(int ID_inGame, HeroDefine heroDefine)
     {
-        base.Initialize(ID_inGame, PlayerType.AI, heroDefine.MaxHP);
+        base.Initialize(ID_inGame, PlayerType.AI, heroDefine.MaxHP, null, null, heroDefine);
         //赋值性格
         CharacterDataBase.Instance.CharacterDictionary.TryGetValue("Friendly", out var characterDefine);
         if (characterDefine == null)
@@ -143,7 +143,7 @@ public class AIPlayer : Player
     {
         var newAction = GenerateAccordingToTendency();
         action.ReadinMove(newAction.ID, newAction.Target, "AI");
-        IntendedType.Set(DecideToTellAction(newAction.GetActionType()));
+        //IntendedType.Set(DecideToTellAction(newAction.GetActionType()));
         isReady.ReadyUp();
     }
 

@@ -36,7 +36,7 @@ public class SkillLibrary : MonoSingleton<SkillLibrary>
                 if (skillInstance != null && !string.IsNullOrEmpty(skillInstance.ID))
                 {
                     skillDic[skillInstance.ID] = skillInstance;
-                    //Debug.Log($"[SkillLibrary] 已注册技能: {skillInstance.ID} ({type.Name})");
+                    Debug.Log($"[SkillLibrary] 已注册技能: {skillInstance.ID} ({type.Name})");
                 }
             }
             catch (Exception e)

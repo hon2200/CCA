@@ -627,8 +627,9 @@ Key: HenryTheFarmer
   Description:     你可以三拔三补
   MaxHP:     20
   SkillIDList: 
-    List`1 (Count: 1)
-      [0]:         Gathering Food
+    List`1 (Count: 2)
+      [0]:         Gathering FoodI
+      [1]:         Gathering FoodII
 ------------------------------------
 Key: CalebTheThunderCultist
 

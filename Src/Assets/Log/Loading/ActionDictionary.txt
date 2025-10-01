@@ -1,4 +1,4 @@
-Dict 内容 (Count: 27)
+Dict 内容 (Count: 30)
 ====================================
 Key: bullet
 
@@ -75,6 +75,63 @@ Key: double_sword
   TargetType:     Self
   Target:     0
   isBasic:     True
+------------------------------------
+Key: powder_keg
+
+  SupplyNumber: 
+    List`1 (Count: 2)
+      [0]:         5
+      [1]:         0
+  isCopy:     False
+  ID:     powder_keg
+  Name:     火药桶
+  Description:     获得五颗子弹
+  Costs: 
+    List`1 (Count: 2)
+      [0]:         0
+      [1]:         0
+  CD:     0
+  TargetType:     Self
+  Target:     0
+  isBasic:     False
+------------------------------------
+Key: triple_bullet
+
+  SupplyNumber: 
+    List`1 (Count: 2)
+      [0]:         3
+      [1]:         0
+  isCopy:     False
+  ID:     triple_bullet
+  Name:     三补
+  Description:     获得三颗子弹
+  Costs: 
+    List`1 (Count: 2)
+      [0]:         0
+      [1]:         0
+  CD:     0
+  TargetType:     Self
+  Target:     0
+  isBasic:     False
+------------------------------------
+Key: triple_sword
+
+  SupplyNumber: 
+    List`1 (Count: 2)
+      [0]:         0
+      [1]:         3
+  isCopy:     False
+  ID:     triple_sword
+  Name:     三拔
+  Description:     获得三拔剑
+  Costs: 
+    List`1 (Count: 2)
+      [0]:         0
+      [1]:         0
+  CD:     0
+  TargetType:     Self
+  Target:     0
+  isBasic:     False
 ------------------------------------
 Key: stab
 

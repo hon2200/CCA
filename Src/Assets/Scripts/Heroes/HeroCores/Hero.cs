@@ -6,7 +6,7 @@ public class Hero
     public string ID { get; set; }
     public List<Skill> skills;
 
-    public Hero(HeroDefine heroDefine)
+    public Hero(Player thisPlayer,HeroDefine heroDefine)
     {
         ID = heroDefine.ID;
         skills = new List<Skill>();
