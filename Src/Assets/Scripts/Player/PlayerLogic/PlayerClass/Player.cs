@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//´´½¨PlayerĞèÒª×¢ÒâµÄÎÊÌâ£º
-//Èç¹ûÎÒ¶ÔPlayerÀà½øĞĞÄÚ²¿½á¹¹µ÷Õû£¬Ö»ĞèÒª¸ÄÒ»¸ÄInitialize¾ÍºÃ¡£
-//µ«ÊÇÎÒÔÚPlayerÔ¤ÖÆÌåÀïÃæÍÏ×§ÊµÏÖµ÷ÓÃ£¬ÕâÒªÇóÎÒ²»ÄÜÔÙVS»òÆäËûUnityÍâ²¿È¥µ÷ÕûÕâ¸öÎÄ¼şµÄÎ»ÖÃ
-//ÎÒºÜÌÖÑáPlayerºÍPlayerUIText£¬PlayerEffectControllerµÄË«ÏòÒıÓÃ£¬Ö®ºóÏë°ì·¨¼ò»¯Ò»ÏÂ
+//ï¿½ï¿½ï¿½ï¿½Playerï¿½ï¿½Òª×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£º
+//ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½Playerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½Ò»ï¿½ï¿½Initializeï¿½ÍºÃ¡ï¿½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PlayerÔ¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×§Êµï¿½Öµï¿½ï¿½Ã£ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½VSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Unityï¿½â²¿È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+//ï¿½Òºï¿½ï¿½ï¿½ï¿½ï¿½Playerï¿½ï¿½PlayerUITextï¿½ï¿½PlayerEffectControllerï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ì·¨ï¿½ï¿½Ò»ï¿½ï¿½
 public class Player : MonoBehaviour
 {
     public int ID_inGame { get; set; }
-    //Íæ¼Ò×´Ì¬
+    //ï¿½ï¿½ï¿½×´Ì¬
     public PlayerStatus status { get; set; }
-    //Íæ¼ÒĞĞ¶¯
+    //ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½
     public PlayerAction action { get; set; }
     public PlayerType playerType { get; set; }
     public Hero hero { get; set; }
@@ -21,11 +21,12 @@ public class Player : MonoBehaviour
 
     public PlayerUIText playerUIText;
     public PlayerEffectController playerEffectController;
-    //¿ÉÓÃĞĞ¶¯ÁĞ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½
     public List<string> AvailableActions;
-    public Action OnBirth; 
+    public Action OnBirth;
+    public bool is_stun = false;
 
-    //´´½¨Íæ¼Ò
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     protected void Initialize(int ID_inGame, PlayerType playerType,
         int MaxHP, List<int> InitialResource = null, List<string> AvailableActions = null,
          HeroDefine heroDefine = null)
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
         this.status = new(MaxHP, InitialResource);
         this.action = new();
         this.playerType = playerType;
-        //´¦ÀíÓ¢ĞÛ£ºÈç¹ûÃ»ÓĞ¸³Öµ£¬ÔòÎªÆä¸³Öµ°×°å
+        //ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½Û£ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ğ¸ï¿½Öµï¿½ï¿½ï¿½ï¿½Îªï¿½ä¸³Öµï¿½×°ï¿½
         if (heroDefine != null)
             this.hero = new(this, heroDefine);
         else
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour
         }
         isReady = new ReadyAttribute();
         isReady.Cancel();
-        //´¦Àí¿ÉÓÃĞĞ¶¯£ºÈç¹ûÃ»ÓĞÎªÆä¸³Öµ£¬ÔòÎªÆä¸³Öµ»ù´¡ĞĞ¶¯
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Îªï¿½ä¸³Öµï¿½ï¿½ï¿½ï¿½Îªï¿½ä¸³Öµï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½
         if (AvailableActions != null)
         {
             this.AvailableActions = new();
@@ -64,7 +65,7 @@ public class Player : MonoBehaviour
                     this.AvailableActions.Add(action.ID);
             }
         }
-        //Ó¢ĞÛ¿ÉÄÜ´øÓĞµÄĞĞ¶¯¼¼
+        //Ó¢ï¿½Û¿ï¿½ï¿½Ü´ï¿½ï¿½Ğµï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½
         foreach(var skill in hero.skills)
         {
             if (skill is ActionSkill actionSkill)
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour
             playerEffectController.Initialize();
         };
 
-        //Íæ¼ÒÊÜÉËÊ±£¬µ÷ÓÃOndamaged
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ondamaged
         status.HP.OnValueChanged += (oldHP,newHP,meassage) =>
         {
 

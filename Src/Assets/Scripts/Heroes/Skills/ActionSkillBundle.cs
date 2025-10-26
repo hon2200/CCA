@@ -34,3 +34,11 @@ public class PowderKeg : ActionSkill
         ActionID = "powder_keg";
     }
 }
+public class EXcalibur : ActionSkill
+{
+    public EXcalibur()
+    {
+        ID = "EXcalibur";
+        ActionID = "EXcalibur";
+    }
+}

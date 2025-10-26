@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 using static UnityEngine.EventSystems.EventTrigger;
 
@@ -13,6 +14,7 @@ public static class AttackLogic
     //假设攻击生效后调用这个函数
     public static void HowtoAttack(this AttackDefine attack ,Player attacker, Player victim)
     {
+        Debug.Log("111111");
         switch (attack.ID)
         {
             //溅射伤害，暂时没有通过buff去定义它，之后想到好的架构再去加，先暂时写在这里
@@ -25,6 +27,10 @@ public static class AttackLogic
                         player.Value.status.HP.Damage(1, attacker, victim, attack);
                     }
                 }
+                break;
+            case "sheri":
+                victim.status.Buffs.Add(new Buff("stun", 1, 0, true));
+                //眩晕
                 break;
             default:
                 victim.status.HP.Damage(attack.Damage, attacker, victim, attack);
@@ -84,6 +90,15 @@ public static class DefendLogic
     //目前防御没有任何额外效果
     public static void HowtoDefend(this DefendDefine defend,AttackDefine attack, Player victim)
     {
+        switch (attack.ID)
+        {
+            case "sheri":
+                if (defend.ID == "block")
+                {
+                    //眩晕
+                }
+            break;
+        }
         //创建并添加防御
         VFXManager.Instance.PlayPointEffect(false,"Defend", victim.gameObject);
     }

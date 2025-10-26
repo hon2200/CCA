@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-//»ØºÏ½áËã½×¶Î½Å±¾
-//Õâ¸ö½Å±¾´æÔÚµÄÎÊÌâ£º¼«¶ÈÒÀÀµÓÚPlayerÀàµÄÄÚ²¿½á¹¹£¬Ò»µ©PlayerÀà·¢Éú¸Ä±ä£¬ÕâÀïÃæµÄËùÓÐÏà¹ØÒýÓÃ¶¼ÐèÒªµ÷Õû£¬
-//¹Ø¼üÊÇÕâÖÖÎÊÌâ²»Ö¹ÔÚÕâ¸ö½Å±¾ÀïÃæ£¬»ù±¾ÉÏµ½´¦¶¼ÓÐ£¬PlayerÀàÄÚ²¿£¬StatusºÍActionÒ²¼´½«²úÉúñîºÏ¡£
-//ÔõÃ´°ìÄØ£¿
-//»òÐí°Ñ´úÂë·Ö¿é»áºÃÒ»µã£¬ÔÚPlayerÀàÀïÃæ×¨ÃÅ·ÖÒ»¸ö¿éÓÃÀ´´¦ÀíÏà¹Ø²Ù×÷£¬ÕâÑùÕâ¸ö½áËãÀàµÄ¹¦ÄÜ¾Í»á¼òµ¥ºÜ¶à£¬
-//ÒòÎª³ýÁË½áËã½×¶Î£¬Ò»Ð©ÆäËûµØ·½Ò²»áÓÃµ½½áËãº¯Êý£¬ÕâÊÇÆäÒ»
-//PlayerÀà×Ô¼ºµÄº¯ÊýÒÀÀµÓÚ×Ô¼ºÄÚ²¿½á¹¹£¬Õâ¸öÃ»ÓÐÈÎºÎÎÊÌâ£¬µ«ÊÇÎÒÏë±ÜÃâÍâ²¿º¯Êý¶ÔÆäµÄÒÀÀµ
+//ï¿½ØºÏ½ï¿½ï¿½ï¿½×¶Î½Å±ï¿½
+//ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½â£ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Playerï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½á¹¹ï¿½ï¿½Ò»ï¿½ï¿½Playerï¿½à·¢ï¿½ï¿½ï¿½Ä±ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â²»Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½æ£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Playerï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½Statusï¿½ï¿½ActionÒ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½
+//ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ø£ï¿½
+//ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½Ö¿ï¿½ï¿½ï¿½Ò»ï¿½ã£¬ï¿½ï¿½Playerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¨ï¿½Å·ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½Ü¾Í»ï¿½òµ¥ºÜ¶à£¬
+//ï¿½ï¿½Îªï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½×¶Î£ï¿½Ò»Ð©ï¿½ï¿½ï¿½ï¿½ï¿½Ø·ï¿½Ò²ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ãº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»
+//Playerï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ú²ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
 {
     public void OnEnteringPhase()
@@ -19,15 +19,15 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         PrintEvent.Instance.ClearText();
         PrintEvent.Instance.PrintText();
         PrintResult_Debug();
-        //½áËã½×¶Î²»µÈ´ýÍæ¼Ò
+        //ï¿½ï¿½ï¿½ï¿½×¶Î²ï¿½ï¿½È´ï¿½ï¿½ï¿½ï¿½
         BattleManager.Instance.PhaseAdvance();
     }
     public void OnExitingPhase()
     {
 
     }
-    //½áËã½×¶Î£¬½áËã´ó¼ÒµÄÐÐ¶¯
-    //ÓÉÓÚÄ¿Ç°»¹Ã»ÒýÈë¸÷ÖÖbuff£¬ËùÒÔ½áËã½×¶Î¾ÍÏÈÐ´ÔÚÕâÀï
+    //ï¿½ï¿½ï¿½ï¿½×¶Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Ð¶ï¿½
+    //ï¿½ï¿½ï¿½ï¿½Ä¿Ç°ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½buffï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½×¶Î¾ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void Resolution()
     {
         foreach (var player in PlayerManager.Instance.Players.Values)
@@ -48,10 +48,10 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             player.Supply();
             player.Attack();
         }
-        //½«ËÀÖ®ÈËÈôÎÞ°ì·¨£¬ÔòËÀÍö
+        //ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½Þ°ì·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         KnockofDeath();
 
-        //ÊäÓ®ÅÐ¶Ï
+        //ï¿½ï¿½Ó®ï¿½Ð¶ï¿½
         CheckofDeath();
         CheckofVictory();
 
@@ -82,11 +82,23 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         {
             if (player.status.life.Value == LifeStatus.EdgeofDeath)
             {
-                //if£¨ÖÓØ¸£©
-                //ÎÒÒªÈÓ´óºËµ¯
-                //°´Å¥ÁÁÆðÀ´£ºÊÇ·ñ·¢¶¯¼¼ÄÜ
-                //°´Å¥Onclick+(){·¢¶¯´óºËµ¯}
-                //ÔÙËÀ
+                if (player.hero.ID == "Zhongkui")
+                {
+                 
+                    var nukeAction = (AttackDefine)ActionDataBase.Instance.ActionDictionary["nuclear_bomb"];
+
+                    foreach (var victim in PlayerManager.Instance.Players.Values)
+                    {
+                        if (victim.ID_inGame != player.ID_inGame) // é¿å…è‡ªä¼¤
+                        {
+                            nukeAction.HowtoAttack(player, victim);
+                        }
+                    }
+                }
+                //ifæ˜¯é’Ÿé¦—
+                //äº¤äº’æŒ‰é’®äº®èµ·
+                //ï¿½ï¿½Å¥Onclick+(){ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½}
+                //å‘åŠ¨å¤§æ ¸å¼¹
                 player.status.life.DieOut();
             }
         }

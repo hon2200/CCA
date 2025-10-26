@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Heroes.Skills;
 using UnityEngine;
 
 public class PlayerStatus
@@ -11,12 +12,19 @@ public class PlayerStatus
     public HPAttribute HP { get; set; }
     public NewPlayerResource resources { get; set; }
     public IsAliveAttribute life { get; set; }
+    // ✅ 新增：状态管理系统
+    public BuffManager Buffs { get; private set; }
+    public MarkManager Marks { get; private set; }
+    
     public PlayerStatus()
     {
         HP = new();
         resources = new();
         life = new();
         life.Born();
+        Buffs = new BuffManager(); // 初始化 Buff 管理器
+        Marks = new MarkManager();  // 初始化印记管理器
+        
         HP.OnValueChanged += (oldVal, newVal, opType) =>
             DeadCheck(newVal);
     }
