@@ -206,6 +206,7 @@ public static class RuleCheck
         return ActionTargeting;
     }
 
+    //Return all actions that are legal in one catagory, no matter how this action selects a target
     public static List<T> CheckAllAction<T>(this Player thisPlayer) where T: ActionDefine
     {
         List<T> ActionsWithinRules = new();
@@ -221,11 +222,48 @@ public static class RuleCheck
                 }
                 else if (actionDefine.TargetType == TargetType.Enemy)
                 {
-                    T targetedAction = (T)Taction.Clone();
                     foreach(var player in PlayerManager.Instance.Players.Values)
                     {
+                        T targetedAction = (T)Taction.Clone();
                         int target = player.ID_inGame;
                         targetedAction.Target = target;
+
+                        if (thisPlayer.isActionLegal(targetedAction) && !thisPlayer.isActionFoolish(targetedAction))
+                        {
+                            ActionsWithinRules.Add(targetedAction);
+                        }
+                    }
+
+                }
+            }
+
+        }
+        return ActionsWithinRules;
+    }
+    public static List<ActionDefine> CheckAllAction(this Player thisPlayer, ActionType actionType)
+    {
+        List<ActionDefine> ActionsWithinRules = new();
+        foreach (var actionID in thisPlayer.AvailableActions)
+        {
+            ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
+            if (actionDefine.actionType == actionType)
+            {
+                if (actionDefine.TargetType == TargetType.Self)
+                {
+                    if (thisPlayer.isActionLegal(actionDefine) && !thisPlayer.isActionFoolish(actionDefine))
+                        ActionsWithinRules.Add((ActionDefine)actionDefine.Clone());
+                }
+                else if (actionDefine.TargetType == TargetType.Enemy)
+                {
+                    foreach (var player in PlayerManager.Instance.Players.Values)
+                    {
+                        ActionDefine targetedAction = (ActionDefine)actionDefine.Clone();
+                        int target = player.ID_inGame;
+                        targetedAction.Target = target;
+                        if (targetedAction.ID == "provoke")
+                        {
+                            Debug.Log("Find you");
+                        }
                         if (thisPlayer.isActionLegal(targetedAction) && !thisPlayer.isActionFoolish(targetedAction))
                             ActionsWithinRules.Add(targetedAction);
                     }
@@ -236,7 +274,6 @@ public static class RuleCheck
         }
         return ActionsWithinRules;
     }
-
     //威胁度判断函数
     //某个玩家有能力做出一个或几个攻击行动，以至于需要让你思考是否要做某一个防御行动的威胁
     //举一个栗子，敌人有一发子弹，那他就威胁你考虑单挡，但不会威胁你考虑双挡。

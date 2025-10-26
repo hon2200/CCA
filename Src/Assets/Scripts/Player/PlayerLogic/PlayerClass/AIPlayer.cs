@@ -50,7 +50,6 @@ public class AIPlayer : Player
         };
         OnBirth?.Invoke();
     }
-
     //创造英雄模式中的AI
     public void Initialize(int ID_inGame, HeroDefine heroDefine)
     {
@@ -83,6 +82,36 @@ public class AIPlayer : Player
             }
         };
         OnBirth?.Invoke();
+    }
+
+    public List<Player> GetEnemy()
+    {
+        List<Player> enemy = new List<Player>();
+        if(isFriend)
+        {
+            foreach(var player in PlayerManager.Instance.Players.Values)
+            {
+                if(player is AIPlayer ai)
+                {
+                    if (!ai.isFriend)
+                        enemy.Add(ai);
+                }
+            }
+        }
+        else
+        {
+            foreach (var player in PlayerManager.Instance.Players.Values)
+            {
+                if (player is AIPlayer ai)
+                {
+                    if (ai.isFriend)
+                        enemy.Add(ai);
+                }
+                else
+                    enemy.Add(player);
+            }
+        }
+        return enemy;
     }
     #region EmotionRelated
     private void OnEmoChange()
@@ -141,7 +170,8 @@ public class AIPlayer : Player
 
     public void EmotionalAIMove()
     {
-        var newAction = GenerateAccordingToTendency();
+        AI_lmh ai = new(this);
+        var newAction = ai.GenerateAction(); ;
         action.ReadinMove(newAction.ID, newAction.Target, "AI");
         //IntendedType.Set(DecideToTellAction(newAction.GetActionType()));
         isReady.ReadyUp();
