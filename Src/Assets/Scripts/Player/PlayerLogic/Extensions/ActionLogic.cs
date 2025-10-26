@@ -139,10 +139,17 @@ public static class SupplyLogic
     public static void HowtoSupply(this SupplyDefine supply)
     {
         PlayerManager.Instance.Players.TryGetValue(supply.Target, out Player receiver);
-        //理论上这里也可以把resource改成一个list<int>，但是考虑到resource里面还有swordinCD，所以就不改了
-        receiver.status.resources.Bullet.Get(supply.SupplyNumber[0]);
-        receiver.status.resources.Sword.Get(supply.SupplyNumber[1]);
-        receiver.status.resources.AvailableSword.Get(supply.SupplyNumber[1]);
+        if(receiver != null)
+        {
+            //理论上这里也可以把resource改成一个list<int>，但是考虑到resource里面还有swordinCD，所以就不改了
+            receiver.status.resources.Bullet.Get(supply.SupplyNumber[0]);
+            receiver.status.resources.Sword.Get(supply.SupplyNumber[1]);
+            receiver.status.resources.AvailableSword.Get(supply.SupplyNumber[1]);
+        }    
+        else
+        {
+            Debug.Assert(false, "Can't find Supply Receiver"+ supply.Target);
+        }
     }
 }
 

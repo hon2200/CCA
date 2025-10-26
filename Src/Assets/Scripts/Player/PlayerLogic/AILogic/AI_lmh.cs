@@ -9,10 +9,10 @@ using System;
 //用于处理AI行动的方式
 public class AI_lmh
 {
-    public Player thisPlayer { get; set; }
+    public AIPlayer thisPlayer { get; set; }
     //所有人的可用行动字典，分类别存放
     private Dictionary<(int,ActionType),List<ActionDefine>> AvailableActions { get; set; }
-    public AI_lmh(Player thisPlayer)
+    public AI_lmh(AIPlayer thisPlayer)
     {
         this.thisPlayer = thisPlayer;
         AvailableActions = new();
@@ -41,6 +41,62 @@ public class AI_lmh
                 }
             }
         }
+    }
+    private ActionDefine SmartSelectAction(ActionType actionType, Dictionary<ActionType, List<ActionDefine>> availableActionDic)
+    {
+        System.Random rand = new System.Random();
+        switch (actionType)
+        {
+            case ActionType.Supply:
+                var supply = availableActionDic[ActionType.Supply][rand.Next(availableActionDic[ActionType.Supply].Count)];
+                supply.Target = thisPlayer.ID_inGame;
+                return supply;
+            case ActionType.Attack:
+                var players = PlayerManager.Instance.GetAlivePlayers();
+                Player victim = players[rand.Next(players.Count)];
+                while (thisPlayer.CheckAction(ActionType.Attack,victim.ID_inGame).Count == 0)
+                {
+                    players.Remove(victim);
+                    victim = players[rand.Next(players.Count)];
+                }
+                return RandomSelection(CalculateAttackActionProb(victim.ID_inGame));
+            case ActionType.Defend:
+                return RandomSelection(CalculateDefendActionProb(thisPlayer.GetEnemy()));
+            case ActionType.Counter:
+                return RandomSelection(CalculateCounterActionProb(thisPlayer.GetEnemy()));
+            case ActionType.Special:
+                return availableActionDic[ActionType.Special][rand.Next(availableActionDic[ActionType.Special].Count)];
+            default:
+                Debug.Assert(false, "No Type Available");
+                return null;
+        }
+    }
+    private T RandomSelection<T>(Dictionary<T, double> ProbDic)
+    {
+        // 计算总权重
+        float totalWeight = 0;
+        foreach (var category in ProbDic)
+        {
+            totalWeight += (float)category.Value;
+        }
+
+        // 随机选择
+        float randomValue = UnityEngine.Random.Range(0, totalWeight);
+        float currentWeight = 0f;
+
+        foreach (var category in ProbDic)
+        {
+            float adjustedWeight = (float)category.Value;
+            currentWeight += adjustedWeight;
+
+            if (randomValue <= currentWeight)
+            {
+                return category.Key;
+            }
+        }
+
+        Debug.Assert(false, "No Selection Available");
+        return default(T); // fallback
     }
     //计算我的攻击行动可能因为敌方防御受到的惩罚
     private double CalculateDefensePenalty(AttackDefine attack)
@@ -71,7 +127,7 @@ public class AI_lmh
         return penalty;
     }
     //计算攻击行动概率分布
-    public Dictionary<ActionDefine,double> CalculateAttackActionProb(int target)
+    private Dictionary<ActionDefine,double> CalculateAttackActionProb(int target)
     {
         List<AttackDefine> AvailableAttack = thisPlayer.CheckAction<AttackDefine>(target);
         PlayerManager.Instance.Players.TryGetValue(target, out var enemy);
@@ -92,7 +148,7 @@ public class AI_lmh
         return ScoreToProb(ScoreDic.ConvertToParentDictionary<ActionDefine, AttackDefine, double>());
     }
     //计算防御反弹行动概率分布
-    public Dictionary<ActionDefine,double> CalculateDefendActionProb(List<Player> Enemies)
+    private Dictionary<ActionDefine,double> CalculateDefendActionProb(List<Player> Enemies)
     {
         
         List<DefendDefine> defends = thisPlayer.CheckAction<DefendDefine>();
@@ -120,7 +176,7 @@ public class AI_lmh
         }
         return ScoreToProb(ScoreDic.ConvertToParentDictionary<ActionDefine, DefendDefine, double>());
     }
-    public Dictionary<ActionDefine, double> CalculateCounterActionProb(List<Player> Enemies)
+    private Dictionary<ActionDefine, double> CalculateCounterActionProb(List<Player> Enemies)
     {
         List<CounterDefine> defends = thisPlayer.CheckAction<CounterDefine>();
         Dictionary<CounterDefine, double> ScoreDic = new();
@@ -164,6 +220,104 @@ public class AI_lmh
         var result = ScoreDic.Keys.Zip(probs, (key, prob) => new { key, prob })
                   .ToDictionary(x => x.key, x => x.prob);
         return result;
+    }
+    //I think it's ok to randomize the supply and special actions
+    //Now: first generate all available actions, to see if a catagory is empty
+    //Select all none-empty catagories, gives a probabilty, and select one specific. If attack is selected, its target will be randomaized
+    public ActionDefine GenerateAction()
+    {
+        List<int> Tendency = thisPlayer.Emo.GetTendency();
+        StringBuilder AIThinkingProcess = new StringBuilder();
+
+        // 检查输入有效性
+        if (Tendency == null || Tendency.Count != 5)
+        {
+            Debug.LogError("Tendency列表必须包含5个权重值");
+            return null;
+        }
+        AIThinkingProcess.Append("\n\n" + "现在是第" + BattleManager.Instance.Turn.Value + "回合");
+        AIThinkingProcess.Append("\n" + thisPlayer.ID_inGame + "玩家我的行为倾向现在是" + string.Join(" ,", Tendency));
+        AIThinkingProcess.Append("\n" + "我的诚实值是" + thisPlayer.Honest.Value + "待会你就知道我会不会骗你了...");
+        AIThinkingProcess.Append("\n" + "我的情绪值是" + thisPlayer.Emo.Value +
+            "\n" + "我现在很" + thisPlayer.Emo.emotionType +
+            "\n" + "我开始思考......");
+        // 第一步：为每个行动类别生成所有可用行动
+        var availableActionsByCategory = new Dictionary<ActionType, List<ActionDefine>>();
+        foreach (ActionType actionType in Enum.GetValues(typeof(ActionType)))
+        {
+            if (actionType == ActionType.Origin)
+                continue;
+            List<ActionDefine> categoryActions = thisPlayer.CheckAllAction(actionType);
+            availableActionsByCategory[actionType] = categoryActions;
+
+            AIThinkingProcess.Append($"\n{actionType} 类别有 {categoryActions.Count} 个可用行动分别是\n");
+            foreach (var action in categoryActions)
+            {
+                AIThinkingProcess.Append(action.Name + " 目标" + action.Target + " ,");
+            }
+        }
+        // 第二步：根据权重选择类别
+        ActionType selectedActionType = SelectCategoryByWeight(Tendency, availableActionsByCategory);
+
+        if (selectedActionType == ActionType.Origin) // 假设有None作为默认值
+        {
+            AIThinkingProcess.Append("\n所有类别都没有可用行动！");
+            MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
+            return null;
+        }
+
+        // 第三步：从选定的类别中通过权重的方式选择一个行动
+        var mySelection = SmartSelectAction(selectedActionType, availableActionsByCategory);
+        AIThinkingProcess.Append($"\n最终选择: {selectedActionType} 类别的 {mySelection.ID}");
+        MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
+        return mySelection;
+    }
+    private ActionType SelectCategoryByWeight(List<int> tendency, Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory)
+    {
+        // 创建带权重和可用行动数量的类别列表
+        List<(ActionType actionType, int weight, int availableCount)> weightedCategories = new List<(ActionType, int, int)>();
+
+        foreach (ActionType actionType in Enum.GetValues(typeof(ActionType)))
+        {
+            if(actionType == ActionType.Origin)
+                continue;
+            //Original Takes the zero point, so the real index should be 1 less.
+            int index = (int)actionType - 1;
+            int availableCount = availableActionsByCategory[actionType].Count;
+
+            if (availableCount > 0) // 只考虑有可用行动的类别
+            {
+                weightedCategories.Add((actionType, tendency[index], availableCount));
+            }
+        }
+
+        if (weightedCategories.Count == 0)
+        {
+            return ActionType.Origin; // 没有可用行动
+        }
+
+        // 计算总权重
+        float totalWeight = 0f;
+        foreach (var category in weightedCategories)
+        {
+            totalWeight += category.weight;
+        }
+
+        // 随机选择
+        float randomValue = UnityEngine.Random.Range(0f, totalWeight);
+        float currentWeight = 0f;
+
+        foreach (var category in weightedCategories)
+        {
+            currentWeight += category.weight;
+
+            if (randomValue <= currentWeight)
+            {
+                return category.actionType;
+            }
+        }
+
+        return weightedCategories[0].actionType; // fallback
     }
 }
 

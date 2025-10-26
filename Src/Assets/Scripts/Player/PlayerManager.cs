@@ -13,6 +13,17 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     public GameObject HumanPrefab;
     public Dictionary<int, Player> Players;
 
+    public List<Player> GetAlivePlayers()
+    {
+        List<Player> liveones = new();
+        foreach(var player in Players.Values)
+        {
+            if(player.status.life.Value != LifeStatus.Death)
+                liveones.Add(player);
+        }
+        return liveones;
+    }
+
     #region AI Things
     public void CreateCurrentLevelWave()
     {
