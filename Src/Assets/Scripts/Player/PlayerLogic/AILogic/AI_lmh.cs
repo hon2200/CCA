@@ -42,13 +42,13 @@ public class AI_lmh
             }
         }
     }
-    private ActionDefine SmartSelectAction(ActionType actionType, Dictionary<ActionType, List<ActionDefine>> availableActionDic)
+    public ActionDefine SmartSelectAction(ActionType actionType, List<ActionDefine> availableActionList)
     {
         System.Random rand = new System.Random();
         switch (actionType)
         {
             case ActionType.Supply:
-                var supply = availableActionDic[ActionType.Supply][rand.Next(availableActionDic[ActionType.Supply].Count)];
+                var supply = availableActionList[rand.Next(availableActionList.Count)];
                 supply.Target = thisPlayer.ID_inGame;
                 return supply;
             case ActionType.Attack:
@@ -65,7 +65,7 @@ public class AI_lmh
             case ActionType.Counter:
                 return RandomSelection(CalculateCounterActionProb(thisPlayer.GetEnemy()));
             case ActionType.Special:
-                return availableActionDic[ActionType.Special][rand.Next(availableActionDic[ActionType.Special].Count)];
+                return availableActionList[rand.Next(availableActionList.Count)];
             default:
                 Debug.Assert(false, "No Type Available");
                 return null;
@@ -237,7 +237,11 @@ public class AI_lmh
         }
         AIThinkingProcess.Append("\n\n" + "现在是第" + BattleManager.Instance.Turn.Value + "回合");
         AIThinkingProcess.Append("\n" + thisPlayer.ID_inGame + "玩家我的行为倾向现在是" + string.Join(" ,", Tendency));
-        AIThinkingProcess.Append("\n" + "我的诚实值是" + thisPlayer.Honest.Value + "待会你就知道我会不会骗你了...");
+        AIThinkingProcess.Append("\n" + "我已经做了以下行动：" + "\n");
+        foreach(var action in thisPlayer.action)
+        {
+            AIThinkingProcess.Append(action.ID + "目标 " + action.Target + "  ");
+        }
         AIThinkingProcess.Append("\n" + "我的情绪值是" + thisPlayer.Emo.Value +
             "\n" + "我现在很" + thisPlayer.Emo.emotionType +
             "\n" + "我开始思考......");
@@ -267,7 +271,7 @@ public class AI_lmh
         }
 
         // 第三步：从选定的类别中通过权重的方式选择一个行动
-        var mySelection = SmartSelectAction(selectedActionType, availableActionsByCategory);
+        var mySelection = SmartSelectAction(selectedActionType, availableActionsByCategory[selectedActionType]);
         AIThinkingProcess.Append($"\n最终选择: {selectedActionType} 类别的 {mySelection.ID}");
         MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
         return mySelection;

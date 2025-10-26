@@ -171,8 +171,47 @@ public class AIPlayer : Player
     public void EmotionalAIMove()
     {
         AI_lmh ai = new(this);
-        var newAction = ai.GenerateAction(); ;
+        var newAction = ai.GenerateAction();
         action.ReadinMove(newAction.ID, newAction.Target, "AI");
+        EmotionDataBase.Instance.EmotionDictionary.TryGetValue(Emo.emotionType, out var emotion);
+        int count = 0;
+        //多重攻击
+        if (newAction.actionType == ActionType.Attack)
+        {
+            while (UnityEngine.Random.Range(0f, 1f) < emotion.MultiAttackCheckValue)
+            {
+                if (this.CheckAllAction<AttackDefine>().Count > 0)
+                {
+                    var secondAction = ai.SmartSelectAction(ActionType.Attack, this.CheckAllAction(ActionType.Attack));
+                    action.ReadinMove(secondAction.ID, secondAction.Target, "AI");
+                }
+                else
+                {
+                    break;
+                }
+                count++;
+                if (count > 100)
+                    break;
+            }
+        }
+        //多重挑衅
+        if (newAction.ID == "provoke")
+        {
+            while (UnityEngine.Random.Range(0f, 1f) < emotion.MultiAttackCheckValue)
+            {
+                if (this.CheckAllAction<SpecialDefine>().Count > 0)
+                {
+                    var secondAction = ai.SmartSelectAction(ActionType.Special, this.CheckAllAction(ActionType.Special));
+                    action.ReadinMove(secondAction.ID, secondAction.Target, "AI");
+                }
+                else
+                {
+                    break;
+                }
+                if (count > 100)
+                    break;
+            }
+        }
         //IntendedType.Set(DecideToTellAction(newAction.GetActionType()));
         isReady.ReadyUp();
     }

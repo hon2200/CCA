@@ -1,28 +1,6 @@
-Dict 内容 (Count: 2) - 仅显示属性路径: action
+Dict 内容 (Count: 4) - 仅显示属性路径: action
 ====================================
 Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Key: 2
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -40,30 +18,6 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Self
-      Target:         2
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
       Target:         1
       isBasic:         False
       actionType:         Supply
@@ -72,11 +26,33 @@ Key: 2
 action: 
   PlayerAction (Count: 1)
     [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      isCopy:         False
+      ID:         double_sword
+      Name:         双拔
+      Description:         获得两把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         2
+      isBasic:         False
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
       Level:         4
       Damage:         1
       AttackType:         0
       isCopy:         False
-      Victim:         1
+      Victim:         4
       ID:         double_shoot
       Name:         双枪
       Description:         对应防御：双挡
@@ -86,11 +62,28 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Enemy
-      Target:         1
+      Target:         4
       isBasic:         False
       actionType:         Attack
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         rebounce
+      Name:         反弹
+      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         0
+      isBasic:         False
+      actionType:         Counter
+------------------------------------
+Dict 内容 (Count: 4) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
@@ -98,12 +91,12 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             2
           [1]:             0
       isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -118,11 +111,33 @@ Key: 2
 action: 
   PlayerAction (Count: 1)
     [0]: 
+      Level:         5
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         4
+      ID:         ghost_sever
+      Name:         鬼斩
+      Description:         对应防御：巨盾
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             6
+      CD:         0
+      TargetType:         Enemy
+      Target:         4
+      isBasic:         False
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
       Level:         4
       Damage:         1
       AttackType:         0
       isCopy:         False
-      Victim:         1
+      Victim:         4
       ID:         double_shoot
       Name:         双枪
       Description:         对应防御：双挡
@@ -132,11 +147,28 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Enemy
-      Target:         1
+      Target:         4
       isBasic:         False
       actionType:         Attack
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         0
+      isBasic:         False
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 4) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
@@ -144,12 +176,12 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             2
           [1]:             0
       isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -164,165 +196,25 @@ Key: 2
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             2
+      Level:         5
+      Damage:         1
+      AttackType:         0
       isCopy:         False
-      ID:         double_sword
-      Name:         双拔
-      Description:         获得两把剑
+      Victim:         4
+      ID:         ghost_sever
+      Name:         鬼斩
+      Description:         对应防御：巨盾
       Costs: 
         List`1 (Count: 2)
           [0]:             0
-          [1]:             0
+          [1]:             6
       CD:         0
-      TargetType:         Self
-      Target:         2
+      TargetType:         Enemy
+      Target:         4
       isBasic:         False
-      actionType:         Supply
+      actionType:         Attack
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             2
-      isCopy:         False
-      ID:         double_sword
-      Name:         双拔
-      Description:         获得两把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             2
-      isCopy:         False
-      ID:         double_sword
-      Name:         双拔
-      Description:         获得两把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             2
-      isCopy:         False
-      ID:         double_sword
-      Name:         双拔
-      Description:         获得两把剑
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
+Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -330,111 +222,60 @@ action:
       Damage:         1
       AttackType:         0
       isCopy:         False
-      Victim:         2
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
+      Victim:         4
+      ID:         double_shoot
+      Name:         双枪
+      Description:         对应防御：双挡
       Costs: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             2
           [1]:             0
       CD:         0
       TargetType:         Enemy
-      Target:         2
+      Target:         4
       isBasic:         False
       actionType:         Attack
 ------------------------------------
-Key: 2
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         2
-      Damage:         2
-      AttackType:         0
-      isCopy:         False
-      Victim:         0
-      ID:         laser_stab
-      Name:         光剑
-      Description:         对应防御：挡，双挡
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
       Costs: 
         List`1 (Count: 2)
           [0]:             0
-          [1]:             3
+          [1]:             0
       CD:         0
-      TargetType:         Enemy
-      Target:         1
+      TargetType:         Self
+      Target:         0
       isBasic:         False
-      actionType:         Attack
+      actionType:         Defend
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
+Dict 内容 (Count: 4) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      Victim:         2
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
+      SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             2
           [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         2
-      isBasic:         False
-      actionType:         Attack
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         2
-      AttackType:         0
       isCopy:         False
-      Victim:         0
-      ID:         laser_stab
-      Name:         光剑
-      Description:         对应防御：挡，双挡
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
-          [1]:             3
-      CD:         0
-      TargetType:         Enemy
-      Target:         1
-      isBasic:         False
-      actionType:         Attack
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      Victim:         2
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
           [1]:             0
       CD:         0
-      TargetType:         Enemy
-      Target:         2
+      TargetType:         Self
+      Target:         1
       isBasic:         False
-      actionType:         Attack
+      actionType:         Supply
 ------------------------------------
 Key: 2
 action: 
@@ -454,16 +295,67 @@ action:
           [1]:             1
       CD:         0
       TargetType:         Enemy
-      Target:         1
+      Target:         4
       isBasic:         False
       actionType:         Attack
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
+Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         4
+      isBasic:         False
+      actionType:         Special
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 3)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         3
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         3
+      isBasic:         False
+      actionType:         Attack
+    [1]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         1
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         1
+      isBasic:         False
+      actionType:         Attack
+    [2]: 
       Level:         4
       Damage:         1
       AttackType:         0
@@ -481,6 +373,30 @@ action:
       Target:         2
       isBasic:         False
       actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 4) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             2
+          [1]:             0
+      isCopy:         False
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         1
+      isBasic:         False
+      actionType:         Supply
 ------------------------------------
 Key: 2
 action: 
@@ -500,16 +416,67 @@ action:
           [1]:             1
       CD:         0
       TargetType:         Enemy
-      Target:         1
+      Target:         4
       isBasic:         False
       actionType:         Attack
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
+Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Enemy
+      Target:         4
+      isBasic:         False
+      actionType:         Special
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 3)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         3
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         3
+      isBasic:         False
+      actionType:         Attack
+    [1]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         1
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         1
+      isBasic:         False
+      actionType:         Attack
+    [2]: 
       Level:         4
       Damage:         1
       AttackType:         0
@@ -525,6 +492,30 @@ action:
       CD:         0
       TargetType:         Enemy
       Target:         2
+      isBasic:         False
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 4) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      isCopy:         False
+      Victim:         3
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      TargetType:         Enemy
+      Target:         3
       isBasic:         False
       actionType:         Attack
 ------------------------------------
@@ -541,11 +532,50 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         1
+      Target:         4
       isBasic:         False
       actionType:         Special
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      TargetType:         Self
+      Target:         0
+      isBasic:         False
+      actionType:         Special
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             2
+          [1]:             0
+      isCopy:         False
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      TargetType:         Self
+      Target:         3
+      isBasic:         False
+      actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 4) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
@@ -555,7 +585,7 @@ action:
       Damage:         1
       AttackType:         0
       isCopy:         False
-      Victim:         2
+      Victim:         3
       ID:         shoot
       Name:         给枪
       Description:         对应防御：挡
@@ -565,7 +595,7 @@ action:
           [1]:             0
       CD:         0
       TargetType:         Enemy
-      Target:         2
+      Target:         3
       isBasic:         False
       actionType:         Attack
 ------------------------------------
@@ -582,99 +612,46 @@ action:
           [1]:             0
       CD:         1
       TargetType:         Enemy
-      Target:         1
+      Target:         4
       isBasic:         False
       actionType:         Special
 ------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
+Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      Victim:         2
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         2
-      isBasic:         False
-      actionType:         Attack
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         2
-      Damage:         2
-      AttackType:         0
-      isCopy:         False
-      Victim:         0
-      ID:         laser_stab
-      Name:         光剑
-      Description:         对应防御：挡，双挡
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
       Costs: 
         List`1 (Count: 2)
           [0]:             0
-          [1]:             3
-      CD:         0
-      TargetType:         Enemy
-      Target:         1
-      isBasic:         False
-      actionType:         Attack
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      isCopy:         False
-      Victim:         2
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
           [1]:             0
-      CD:         0
-      TargetType:         Enemy
-      Target:         2
+      CD:         1
+      TargetType:         Self
+      Target:         0
       isBasic:         False
-      actionType:         Attack
+      actionType:         Special
 ------------------------------------
-Key: 2
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         2
-      Damage:         2
-      AttackType:         0
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             2
+          [1]:             0
       isCopy:         False
-      Victim:         0
-      ID:         laser_stab
-      Name:         光剑
-      Description:         对应防御：挡，双挡
+      ID:         double_bullet
+      Name:         双补
+      Description:         获得两颗子弹
       Costs: 
         List`1 (Count: 2)
           [0]:             0
-          [1]:             3
+          [1]:             0
       CD:         0
-      TargetType:         Enemy
-      Target:         1
+      TargetType:         Self
+      Target:         3
       isBasic:         False
-      actionType:         Attack
+      actionType:         Supply
 ------------------------------------

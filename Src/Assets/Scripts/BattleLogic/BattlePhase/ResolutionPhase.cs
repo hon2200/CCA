@@ -15,9 +15,10 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     public void OnEnteringPhase()
     {
         EventPanelLogic.Instance.OpenEventPanel();
-        Resolution();
         PrintEvent.Instance.ClearText();
-        PrintEvent.Instance.PrintText();
+        PrintEvent.Instance.PrintAction();
+        Resolution();
+        PrintEvent.Instance.PrintResult();
         PrintResult_Debug();
         //����׶β��ȴ����
         BattleManager.Instance.PhaseAdvance();

@@ -14,19 +14,8 @@ public static class RuleCheck
     public static bool isActionLegal(this Player player,ActionDefine actionDefine)
     {
         //已经有超过一个行动了，多重行动合法性检查
-        if (player.action.Count >= 1)
-        {
-            foreach(var action in player.action)
-            {
-                //如果有对自己的行动，那么无法进行其他行动
-                if (action.TargetType == TargetType.Self)
-                    return false;
-                //如果是攻击行动，那么如果攻击目标重复则不行
-                if (action.TargetType == TargetType.Enemy)
-                    if (action.Target == actionDefine.Target)
-                        return false;
-            }
-        }
+        if (!MultiActionCheck(player, actionDefine))
+            return false;
         //攻击行动检查，不能打死人和自己，不能打队友
         if (actionDefine.TargetType == TargetType.Enemy)
         {
@@ -62,8 +51,6 @@ public static class RuleCheck
             }
 
         }
-
-
         //资源消耗检查
         if (player.status.resources.Bullet.Value - actionDefine.Costs[0] < 0)
             return false;
@@ -105,6 +92,29 @@ public static class RuleCheck
             if(victim != null)
                 if (player.status.resources.Bullet.Value < victim.status.HP.Value - 1)
                     return false;
+        }
+        return true;
+    }
+    private static bool MultiActionCheck(this Player player, ActionDefine actionDefine)
+    {
+        if (player.action.Count >= 1)
+        {
+            //如果是想额外做一个对自己的行动，不行
+            if (actionDefine.TargetType == TargetType.Self)
+                return false;
+            foreach (var action in player.action)
+            {
+                //如果有对自己的行动，那么无法进行其他行动
+                if (action.TargetType == TargetType.Self)
+                    return false;
+                //如果是攻击行动，那么如果攻击目标重复则不行
+                if (action.TargetType == TargetType.Enemy)
+                    if (action.Target == actionDefine.Target)
+                        return false;
+                //必须和之前的行动同类
+                if (action.actionType != actionDefine.actionType)
+                    return false;
+            }
         }
         return true;
     }
