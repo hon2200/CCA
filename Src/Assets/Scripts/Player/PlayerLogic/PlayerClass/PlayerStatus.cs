@@ -69,22 +69,26 @@ public class NewPlayerResource
     public BulletAttibute Bullet;
     public SwordAttribute Sword;
     public AvailableSwordAttribute AvailableSword;
+    public DreamWillAttibute DreamWill;
     public NewPlayerResource()
     {
         Bullet = new();
         Sword = new();
         AvailableSword = new();
+        DreamWill =  new DreamWillAttibute();
     }
     public void Save()
     {
         Bullet.Save();
         Sword.Save();
         AvailableSword.Save();
+        DreamWill.Save();
     }
     public void Load()
     {
         Bullet.Load();
         Sword.Load();
         AvailableSword.Load();
+        DreamWill.Load();
     }
 }

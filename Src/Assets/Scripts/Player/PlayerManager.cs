@@ -4,11 +4,11 @@ using UnityEngine;
 
 
 
-//ÕâÁ½ÌìÐ´Ò»¸öÍ¨¹ýUI´´½¨Ó¢ÐÛµÄº¯Êý
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´Ò»ï¿½ï¿½Í¨ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½Ó¢ï¿½ÛµÄºï¿½ï¿½ï¿½
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
     public int AlivePlayerNumber { get; set; }
-    //ÓµÓÐÇé¸ÐµÄAIµÄÔ¤ÖÆÌå£¨Ò²¾ÍÊÇ¹ÒÔØµÄ½Å±¾±äÁËÒ»ÏÂ£©
+    //Óµï¿½ï¿½ï¿½ï¿½Ðµï¿½AIï¿½ï¿½Ô¤ï¿½ï¿½ï¿½å£¨Ò²ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ØµÄ½Å±ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â£ï¿½
     public GameObject AIPrefab;
     public GameObject HumanPrefab;
     public Dictionary<int, Player> Players;
@@ -16,17 +16,17 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     #region AI Things
     public void CreateCurrentLevelWave()
     {
-        Debug.Log("¼ÓÔØ¹Ø¿¨" + LevelManager.Instance.Level.ID + "µÚ" + LevelManager.Instance.Level.Wave + "²¨");
+        Debug.Log("ï¿½ï¿½ï¿½Ø¹Ø¿ï¿½" + LevelManager.Instance.Level.ID + "ï¿½ï¿½" + LevelManager.Instance.Level.Wave + "ï¿½ï¿½");
         LevelDataBase.Instance.LevelDictionary.TryGetValue(LevelManager.Instance.Level.ID, out var levelData);
         CreatingPlayers_BasedOnLevels(levelData, LevelManager.Instance.Level.Wave);
     }
-    //WaveÊÇ´ÓµÚ0²¨¿ªÊ¼¼ÆÊýµÄ
+    //Waveï¿½Ç´Óµï¿½0ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void CreatingPlayers_BasedOnLevels(LevelDefine levelDefine, int Wave)
     {
         int friendCount = 0, enemyCount = 0, remains = 0;
         if (Wave == 0)
         {
-            //ÇåÀíËùÓÐÈË
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (Players != null)
             {
                 List<int> playersToRemove = new List<int>();
@@ -34,28 +34,28 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 {
                     playersToRemove.Add(player.ID_inGame);
                 }
-                // ÒÆ³ý
+                // ï¿½Æ³ï¿½
                 foreach (int playerId in playersToRemove)
                 {
                     if (Players.TryGetValue(playerId, out var playerToDestroy))
                     {
                         Players.Remove(playerId);
-                        Destroy(playerToDestroy.gameObject); // ¼ÙÉèplayerÊÇComponent
-                                                             // »òÕßÈç¹ûÊÇGameObject£ºDestroy(playerToDestroy);
+                        Destroy(playerToDestroy.gameObject); // ï¿½ï¿½ï¿½ï¿½playerï¿½ï¿½Component
+                                                             // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½GameObjectï¿½ï¿½Destroy(playerToDestroy);
                     }
                 }
             }
-            //ÏÈÐÂ½¨Êý×é
+            //ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½
             Players = new Dictionary<int, Player>();
-            //´´½¨ÈËÀà
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Player newPlayerH = CreateHuman_BasedOnLevel(1, levelDefine);
             Players.Add(1, newPlayerH);
         }
 
         else
         {
-            //ÇåÀíËÀÈËÇåµã»îÈË
-            // ÏÈÊÕ¼¯ÐèÒªÒÆ³ýµÄÍæ¼Ò
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            // ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½Òªï¿½Æ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             List<int> playersToRemove = new List<int>();
 
             foreach (var player in Players.Values)
@@ -70,18 +70,18 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 }
             }
 
-            // ÒÆ³ýËÀÍöµÄÍæ¼Ò
+            // ï¿½Æ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             foreach (int playerId in playersToRemove)
             {
                 if (Players.TryGetValue(playerId, out var playerToDestroy))
                 {
                     Players.Remove(playerId);
-                    Destroy(playerToDestroy.gameObject); // ¼ÙÉèplayerÊÇComponent
-                                                         // »òÕßÈç¹ûÊÇGameObject£ºDestroy(playerToDestroy);
+                    Destroy(playerToDestroy.gameObject); // ï¿½ï¿½ï¿½ï¿½playerï¿½ï¿½Component
+                                                         // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½GameObjectï¿½ï¿½Destroy(playerToDestroy);
                 }
             }
         }
-        //Èç¹ûÓÑ·½»¹ÓÐ×ã¹»µÄ²¨ÊýµÄ»°
+        //ï¿½ï¿½ï¿½ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã¹»ï¿½Ä²ï¿½ï¿½ï¿½ï¿½Ä»ï¿½
         if (levelDefine.FriendList.Count > Wave)
         {
             friendCount = levelDefine.FriendList[Wave].Count;
@@ -123,20 +123,20 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     }
     private Player CreateAI(int ID_inGame, AIDefine aIDefine, bool isFriend)
     {
-        //´´½¨Íæ¼ÒÎïÌå
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var newPlayerObject = Instantiate(AIPrefab, this.transform);
         newPlayerObject.name = "Player" + ID_inGame;
-        //³õÊ¼»¯Íæ¼Ò½Å±¾
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ò½Å±ï¿½
         var newPlayer = newPlayerObject.GetComponent<AIPlayer>();
         newPlayer.Initialize(ID_inGame, aIDefine, isFriend);
         return newPlayer;
     }
     private Player CreateHuman_BasedOnLevel(int ID_inGame,LevelDefine level)
     {
-        //´´½¨Íæ¼ÒÎïÌå
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var newPlayerObject = Instantiate(HumanPrefab, this.transform);
         newPlayerObject.name = "Player" + ID_inGame;
-        //³õÊ¼»¯Íæ¼Ò½Å±¾
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ò½Å±ï¿½
         var newPlayer = newPlayerObject.GetComponent<HumanPlayer>();
         newPlayer.InitializePlayer(ID_inGame, level);
         return newPlayer;
@@ -146,7 +146,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     #region Heroes Things
     public void CreatingPlayers_BasedOnGameSetting_Heroes()
     {
-        //Ã»ÓÐ´ÓInitial Setting½øÈë
+        //Ã»ï¿½Ð´ï¿½Initial Settingï¿½ï¿½ï¿½ï¿½
         if (GameSetting.Instance == null)
         {
             return;
@@ -163,15 +163,15 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 Debug.Assert(false, "Can't fine Hero");
         }
         int totalNumber = heroDefines.Count;
-        //´´½¨ÈËÀàÍæ¼Ò
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var newHumanPlayer = CreateHumanHero(1, heroDefines[0]);
-        //¼ÓÈëÍæ¼Ò
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         Players.Add(1, newHumanPlayer);
-        //´´½¨AIÍæ¼Ò
+        //ï¿½ï¿½ï¿½ï¿½AIï¿½ï¿½ï¿½
         for (int i = 2; i <= totalNumber; i++)
         {
             var newPlayer = CreateAIHero(i, heroDefines[i - 1]);
-            //¼ÓÈëÍæ¼Ò
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Players.Add(i, newPlayer);
         }
         InitializePlayerSpace(totalNumber);
@@ -180,20 +180,20 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     }
     private Player CreateAIHero(int ID_inGame, HeroDefine heroDefine)
     {
-        //´´½¨Íæ¼ÒÎïÌå
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var newPlayerObject = Instantiate(AIPrefab, this.transform);
         newPlayerObject.name = "Player" + ID_inGame;
-        //³õÊ¼»¯Íæ¼Ò½Å±¾
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ò½Å±ï¿½
         var newPlayer = newPlayerObject.GetComponent<AIPlayer>();
         newPlayer.Initialize(ID_inGame, heroDefine);
         return newPlayer;
     }
     private Player CreateHumanHero(int ID_inGame, HeroDefine heroDefine)
     {
-        //´´½¨Íæ¼ÒÎïÌå
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var newPlayerObject = Instantiate(HumanPrefab, this.transform);
         newPlayerObject.name = "Player" + ID_inGame;
-        //³õÊ¼»¯Íæ¼Ò½Å±¾
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ò½Å±ï¿½
         var newPlayer = newPlayerObject.GetComponent<HumanPlayer>();
         newPlayer.InitializePlayer(ID_inGame, heroDefine);
         return newPlayer;
@@ -202,38 +202,38 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     #region Initialization Things
     private void InitializePlayerSpace(int playerCount)
     {
-        // »ñÈ¡Î»ÖÃÅäÖÃ
-        //ÐèÒªÎ¬»¤ÕßÁ½¸öspacing£¨xºÍy×ø±ê£©µÄ²¢ÐÐÁÐ±í³¤¶ÈÒ»ÖÂ£¬Î´À´¿¼ÂÇ¸Ä½ø
+        // ï¿½ï¿½È¡Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ÒªÎ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½spacingï¿½ï¿½xï¿½ï¿½yï¿½ï¿½ï¿½ê£©ï¿½Ä²ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â£ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸Ä½ï¿½
         if (!PlayerSpacingDataBase.Instance.playerSpacingDictionary.TryGetValue(playerCount, out var spacingData))
         {
             Debug.LogError($"No spacing data found for player count: {playerCount}");
             return;
         }
 
-        // ´´½¨Î»ÖÃÁÐ±í²¢¸´ÖÆ£¨±ÜÃâÐÞ¸ÄÔ­Ê¼Êý¾Ý£©
+        // ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½Ô­Ê¼ï¿½ï¿½ï¿½Ý£ï¿½
         var availablePositions = new List<Vector2>();
         for (int i = 0; i < spacingData.Player_X.Count; i++)
         {
             availablePositions.Add(new Vector2(spacingData.Player_X[i], spacingData.Player_Y[i]));
         }
 
-        // ÏÈ´¦ÀíÈËÀàÍæ¼Ò£¨È·±£ÈËÀàÍæ¼ÒÓÐ¹Ì¶¨Î»ÖÃ£©
+        // ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò£ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹Ì¶ï¿½Î»ï¿½Ã£ï¿½
         foreach (var player in Players.Values)
         {
             if (player.playerType == PlayerType.Human)
             {
-                // ÈËÀàÍæ¼Ò¹Ì¶¨Î»ÖÃ
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¹Ì¶ï¿½Î»ï¿½ï¿½
                 player.transform.localPosition = new Vector3(8, -5, 1);
 
             }
         }
 
-        // È»ºó´¦ÀíAIÍæ¼Ò
+        // È»ï¿½ï¿½ï¿½ï¿½AIï¿½ï¿½ï¿½
         foreach (var player in Players.Values)
         {
             if (player.playerType == PlayerType.AI && availablePositions.Count > 0)
             {
-                // Ê¹ÓÃ²¢ÒÆ³ýµÚÒ»¸ö¿ÉÓÃÎ»ÖÃ
+                // Ê¹ï¿½Ã²ï¿½ï¿½Æ³ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
                 var pos = availablePositions[0];
                 player.transform.localPosition = new Vector3(pos.x, pos.y, 1);
                 availablePositions.RemoveAt(0);

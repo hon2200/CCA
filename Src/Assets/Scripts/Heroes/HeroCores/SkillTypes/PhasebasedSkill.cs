@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 public abstract class PhasebasedSkill : Skill
 {
     // 在回合或阶段开始前调用
-    public virtual void OnPhaseStart() { }
+    public virtual void OnPhaseStart(Player thisPlayer) { }
 
     // 在回合或阶段结束时调用
-    public virtual void OnPhaseEnd() { }
+    public virtual void OnPhaseEnd(Player thisPlayer) { }
 
     // 在结算阶段前调用
     public virtual void BeforeResolution(Player thisPlayer) { }
