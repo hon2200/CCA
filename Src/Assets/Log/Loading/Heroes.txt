@@ -1,4 +1,4 @@
-Dict 内容 (Count: 69)
+Dict 内容 (Count: 71)
 ====================================
 Key: Blank
 
@@ -18,6 +18,26 @@ Key: Wukong
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Mountain Crusher
+------------------------------------
+Key: Huaxiong
+
+  ID:     Huaxiong
+  Name:     华雄
+  Description:     null
+  MaxHP:     40
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Courage
+------------------------------------
+Key: Zhongkui
+
+  ID:     Zhongkui
+  Name:     钟馗
+  Description:     null
+  MaxHP:     1
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Deathrattle
 ------------------------------------
 Key: Lvbu
 

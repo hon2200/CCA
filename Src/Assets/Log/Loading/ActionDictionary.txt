@@ -1,4 +1,4 @@
-Dict 内容 (Count: 30)
+Dict 内容 (Count: 31)
 ====================================
 Key: bullet
 
@@ -246,6 +246,25 @@ Key: spirit_sever
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+------------------------------------
+Key: Excalibur
+
+  Level:     7
+  Damage:     3
+  AttackType:     0
+  isCopy:     False
+  Victim:     0
+  ID:     EXcalibur
+  Name:     大宝剑
+  Description:     不可以被防御
+  Costs: 
+    List`1 (Count: 2)
+      [0]:         0
+      [1]:         0
+  CD:     0
+  TargetType:     Enemy
+  Target:     0
+  isBasic:     False
 ------------------------------------
 Key: shoot
 

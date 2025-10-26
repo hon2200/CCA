@@ -11,7 +11,7 @@ public abstract class TriggerSkill : Skill
     //受到伤害调用
     public virtual void OnDamaged(Player attacker, int damage) { }
     //造成伤害调用
-    public virtual void OnDamaging() { }
+    public virtual void OnDamaging(Player attacker,Player victim, int damage) { }
     //攻击生效调用
     public virtual void OnAttackTakeEffect() { }
     //防御生效调用
@@ -19,4 +19,5 @@ public abstract class TriggerSkill : Skill
 
     //在反弹生效调用
     public virtual void OnCounterTakeEffect() { }
+    public virtual void OnDeath(Player self) { }
 }

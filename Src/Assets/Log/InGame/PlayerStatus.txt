@@ -10,7 +10,7 @@ status:
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         5
+      Value:         1
     Sword: 
       onObserve:         True
       Value:         0
@@ -24,10 +24,10 @@ status:
 Key: 2
 ID_inGame:   2
 status: 
-  MaxHP:     15
+  MaxHP:     12
   HP: 
     onObserve:       True
-    Value:       15
+    Value:       12
   resources: 
     Bullet: 
       onObserve:         True
@@ -54,7 +54,7 @@ status:
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         5
+      Value:         0
     Sword: 
       onObserve:         True
       Value:         0
@@ -68,14 +68,14 @@ status:
 Key: 2
 ID_inGame:   2
 status: 
-  MaxHP:     15
+  MaxHP:     12
   HP: 
     onObserve:       True
-    Value:       15
+    Value:       11
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         7
+      Value:         4
     Sword: 
       onObserve:         True
       Value:         0
@@ -98,7 +98,7 @@ status:
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         5
+      Value:         0
     Sword: 
       onObserve:         True
       Value:         0
@@ -112,14 +112,14 @@ status:
 Key: 2
 ID_inGame:   2
 status: 
-  MaxHP:     15
+  MaxHP:     12
   HP: 
     onObserve:       True
-    Value:       15
+    Value:       11
   resources: 
     Bullet: 
       onObserve:         True
-      Value:         7
+      Value:         4
     Sword: 
       onObserve:         True
       Value:         0

@@ -95,6 +95,22 @@
         "isCopy": false,
         "isBasic": true
     },
+    "Excalibur": {
+        "ID": "EXcalibur",
+        "Name": "大宝剑",
+        "Description": "不可以被防御",
+        "Costs": [
+            0,
+            0
+        ],
+        "TargetType": "Enemy",
+        "CD": 0,
+        "Level": 7,
+        "Damage": 3,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": false
+    },
     "shoot": {
         "ID": "shoot",
         "Name": "给枪",

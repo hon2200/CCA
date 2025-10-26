@@ -18669,7 +18669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6df89432cc87044780fe20dccf0b620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  global: 1
+  global: 0
   CardDictionary:
     _serializedList:
     - Key: bullet
@@ -18730,6 +18730,8 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: e1bae89f4dc030748a20bebb43baac7b, type: 2}
     - Key: triple_bullet
       Value: {fileID: 11400000, guid: 7c88065af15351542939dd4edb735e28, type: 2}
+    - Key: EXcalibur
+      Value: {fileID: 11400000, guid: 9c44d5573636ed4439295aaa4efd2adc, type: 2}
     - Key: triple_sword
       Value: {fileID: 11400000, guid: f9676dca91ac9e141929eff32bd5cf3b, type: 2}
 --- !u!114 &1917504221
