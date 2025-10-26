@@ -16,17 +16,23 @@ public class HPAttribute : ObservableAttribute<int>
         {
             if (skill is TriggerSkill triggerSkill)
             {
-                triggerSkill.OnDamaged(attacker, attack.Damage);
+                triggerSkill.OnDamaged(attacker, amount);
             }
         }
-
         foreach (var skill in attacker.hero.skills)
         {
             if (skill is TriggerSkill triggerSkill)
             {
-                Debug.Log("4444444");
-                triggerSkill.OnDamaging(attacker,victim,attack.Damage);
+                triggerSkill.OnDamaging(attacker, victim, amount);
             }
+        }
+        if(attacker is AIPlayer aiAttacker)
+        {
+            aiAttacker.DamagingReaction(amount);
+        }
+        if(victim is AIPlayer aiVictim)
+        {
+            aiVictim.DamagedReaction(amount);
         }
         SetValue(Value - amount, "Damage");
     }

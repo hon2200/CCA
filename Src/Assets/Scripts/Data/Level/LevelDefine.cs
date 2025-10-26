@@ -9,11 +9,13 @@ public class LevelDefine
     public string ID { get; set; }
     public string EnglishName { get; set; }
     public string Name { get; set; }
+    public int Chapter { get; set; }
+    public List<string> UnlockedSkillFinal { get; set; }
+    public int PlayerSkillSlots { get; set; }
     public List<List<string>> EnemyList { get; set; }
     public List<List<string>> FriendList { get; set; }
     public List<string> UnlockedAction { get; set; }
     public int PlayerHP { get; set; }
-    public int PlayerSkillSlots { get; set; } = 0;
     public List<int> PlayerInitialResource { get; set; }
     public string NextLevel { get; set; }
     public string PreviousLevel { get; set; }

@@ -101,7 +101,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 AIDataBase.Instance.AIDictionary.TryGetValue(levelDefine.FriendList[Wave][j], out var AI);
                 if (AI != null)
                 {
-                    Player newPlayer = CreateAI(j + remains + 2, AI, true);
+                    Player newPlayer = CreateAI(j + remains + 2, AI, true, levelDefine);
                     Players.Add(j + remains + 2, newPlayer);
                 }
 
@@ -117,7 +117,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 AIDataBase.Instance.AIDictionary.TryGetValue(levelDefine.EnemyList[Wave][i], out var AI);
                 if (AI != null)
                 {
-                    Player newPlayer = CreateAI(i + remains + friendCount + 2, AI, false);
+                    Player newPlayer = CreateAI(i + remains + friendCount + 2, AI, false, levelDefine);
                     Players.Add(i + remains + friendCount + 2, newPlayer);
                 }
 
@@ -132,14 +132,14 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         //MyLog.PrintLoadedDictionary(Players, "MyLog/Loading/PlayerTable_Debug.txt");
 
     }
-    private Player CreateAI(int ID_inGame, AIDefine aIDefine, bool isFriend)
+    private Player CreateAI(int ID_inGame, AIDefine aIDefine, bool isFriend, LevelDefine levelDefine)
     {
         //�����������
         var newPlayerObject = Instantiate(AIPrefab, this.transform);
         newPlayerObject.name = "Player" + ID_inGame;
         //��ʼ����ҽű�
         var newPlayer = newPlayerObject.GetComponent<AIPlayer>();
-        newPlayer.Initialize(ID_inGame, aIDefine, isFriend);
+        newPlayer.Initialize(ID_inGame, aIDefine, isFriend, levelDefine);
         return newPlayer;
     }
     private Player CreateHuman_BasedOnLevel(int ID_inGame,LevelDefine level)

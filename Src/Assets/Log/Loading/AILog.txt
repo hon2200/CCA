@@ -1,3026 +1,1928 @@
-Dict 内容 (Count: 99)
+Dict 内容 (Count: 81)
 ====================================
-Key: Mech-Grunt
+Key: Toy Grunt
 
-  ID:     Mech-Grunt
-  Name:     机械兵
+  ID:     Toy Grunt
+  Name:     玩具兵
+  MonsterType:     Commmon
   MaxHP:     2
+  InitialHP:     2
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
+  MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 3)
-      [0]:         bullet
-      [1]:         block
-      [2]:         shoot
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
 ------------------------------------
-Key: Mech-Scout
+Key: Toy Warrior
 
-  ID:     Mech-Scout
-  Name:     机械斥候
+  ID:     Toy Warrior
+  Name:     玩具战士
+  MonsterType:     Commmon
   MaxHP:     2
+  InitialHP:     2
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 5)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         block
-      [4]:         double_block
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
 ------------------------------------
-Key: Mech-Minion
+Key: Toy Guardian
 
-  ID:     Mech-Minion
-  Name:     机械跟班
+  ID:     Toy Guardian
+  Name:     玩具盾卫
+  MonsterType:     Commmon
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Toy Minion
+
+  ID:     Toy Minion
+  Name:     玩具跟班
+  MonsterType:     Commmon
   MaxHP:     1
+  InitialHP:     1
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 6)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         block
-      [4]:         double_block
-      [5]:         rebounce
-------------------------------------
-Key: Mech-Guardian
-
-  ID:     Mech-Guardian
-  Name:     机械卫士
-  MaxHP:     2
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         1
-      [1]:         0
-      [2]:         0
+  MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 6)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         block
-      [4]:         double_block
-      [5]:         rebounce
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
 ------------------------------------
-Key: Bog Monkey
+Key: Toy Gentleman
 
-  ID:     Bog Monkey
-  Name:     水猴子
+  ID:     Toy Gentleman
+  Name:     玩具绅士
+  MonsterType:     Elite
   MaxHP:     4
-  IsFriend:     False
+  InitialHP:     4
+  IsFriend:     True
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 7)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         block
-      [4]:         double_block
-      [5]:         rebounce
-      [6]:         provoke
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Save Me!!!
 ------------------------------------
-Key: Swordsman's Spirit
+Key: Toy Factory
 
-  ID:     Swordsman's Spirit
-  Name:     “剑心”
-  MaxHP:     3
+  ID:     Toy Factory
+  Name:     玩具制造工厂
+  MonsterType:     BOSS
+  MaxHP:     7
+  InitialHP:     7
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
+  MonsterDescription:     需要补完
   CharacterID:     Friendly
-  AvailableActionID: 
-    List`1 (Count: 8)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         block
-      [4]:         double_block
-      [5]:         heavy_block
-      [6]:         counterblade
-      [7]:         provoke
+  DisabledAction: 
+    List`1 (Count: 2)
+      [0]:         shoot
+      [1]:         double_shoot
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Toy Assembly Line
+      [1]:         Castle Guardian
 ------------------------------------
-Key: Shadow Within
+Key: Swordsman of Faith
 
-  ID:     Shadow Within
-  Name:     “心魔”
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         1
-      [2]:         1
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 8)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         block
-      [4]:         double_block
-      [5]:         heavy_block
-      [6]:         counterblade
-      [7]:         provoke
-------------------------------------
-Key: Blackman
-
-  ID:     Blackman
-  Name:     黑衣人
-  MaxHP:     3
+  ID:     Swordsman of Faith
+  Name:     卫道剑士
+  MonsterType:     Elite
+  MaxHP:     4
+  InitialHP:     4
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 9)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         block
-      [4]:         double_block
-      [5]:         heavy_block
-      [6]:         deflect
-      [7]:         counterblade
-      [8]:         provoke
-------------------------------------
-Key: Skunk Ninja
-
-  ID:     Skunk Ninja
-  Name:     臭鼬忍者
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         1
-      [2]:         1
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 11)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         block
-      [5]:         double_block
-      [6]:         heavy_block
-      [7]:         deflect
-      [8]:         counterblade
-      [9]:         disarm
-      [10]:         provoke
-------------------------------------
-Key: Skunk Chieftain
-
-  ID:     Skunk Chieftain
-  Name:     臭鼬头领
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         6
-      [2]:         6
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 11)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         block
-      [5]:         double_block
-      [6]:         heavy_block
-      [7]:         deflect
-      [8]:         counterblade
-      [9]:         disarm
-      [10]:         provoke
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Fight Again
 ------------------------------------
 Key: Novice Assassin
 
   ID:     Novice Assassin
   Name:     见习刺客
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 9)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         block
-      [4]:         double_block
-      [5]:         heavy_block
-      [6]:         deflect
-      [7]:         counterblade
-      [8]:         provoke
-------------------------------------
-Key: Furious Blade
-
-  ID:     Furious Blade
-  Name:     “狂战士”
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Deathshead Grin
-
-  ID:     Deathshead Grin
-  Name:     “笑面”
-  MaxHP:     2
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         1
-      [2]:         1
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Voidwarden of Pale
-
-  ID:     Voidwarden of Pale
-  Name:     白使徒
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         0
-      [2]:         0
-  CharacterID:     Friendly
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Voidwarden of Abyss
-
-  ID:     Voidwarden of Abyss
-  Name:     黑使徒
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Cursed Tree
-
-  ID:     Cursed Tree
-  Name:     魔树
-  MaxHP:     9
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Friendly
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Arborfolk
-
-  ID:     Arborfolk
-  Name:     树灵
+  MonsterType:     Commmon
   MaxHP:     1
+  InitialHP:     1
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         1
-      [2]:         1
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 7)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         block
-      [4]:         double_block
-      [5]:         heavy_block
-      [6]:         deflect
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
 ------------------------------------
-Key: Rubber Grunt
+Key: Black Coat
 
-  ID:     Rubber Grunt
-  Name:     橡胶大兵
-  MaxHP:     5
+  ID:     Black Coat
+  Name:     黑衣人
+  MonsterType:     Commmon
+  MaxHP:     3
+  InitialHP:     3
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
-      [0]:         3
+      [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 11)
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction: 
+    List`1 (Count: 1)
       [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         RPG
-      [4]:         double_RPG
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         rebounce
-      [10]:         provoke
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
 ------------------------------------
-Key: Rubber Tank
+Key: Furious Skunk
 
-  ID:     Rubber Tank
-  Name:     橡胶坦克
+  ID:     Furious Skunk
+  Name:     臭鼬狂战士
+  MonsterType:     Elite
+  MaxHP:     5
+  InitialHP:     5
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Skunk Slave
+
+  ID:     Skunk Slave
+  Name:     臭鼬奴隶
+  MonsterType:     Commmon
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Skunk Chieftain
+
+  ID:     Skunk Chieftain
+  Name:     臭鼬头领
+  MonsterType:     Elite
   MaxHP:     7
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         4
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 11)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         RPG
-      [4]:         double_RPG
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         rebounce
-      [10]:         provoke
-------------------------------------
-Key: Tiger
-
-  ID:     Tiger
-  Name:     “虎式”
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         6
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 11)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         RPG
-      [4]:         double_RPG
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         rebounce
-      [10]:         provoke
-------------------------------------
-Key: Heavy Gunner
-
-  ID:     Heavy Gunner
-  Name:     重炮步兵
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 7)
-      [0]:         bullet
-      [1]:         RPG
-      [2]:         double_RPG
-      [3]:         block
-      [4]:         double_block
-      [5]:         heavy_block
-      [6]:         deflect
-------------------------------------
-Key: Vanguard Horseman
-
-  ID:     Vanguard Horseman
-  Name:     锋卫骑兵
-  MaxHP:     5
+  InitialHP:     7
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 12)
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
       [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Waraxe Dance
 ------------------------------------
-Key: Alloy Cavalier
+Key: Shadow of Void
 
-  ID:     Alloy Cavalier
-  Name:     合金铁骑
-  MaxHP:     5
+  ID:     Shadow of Void
+  Name:     虚空之影
+  MonsterType:     BOSS
+  MaxHP:     6
+  InitialHP:     6
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         4
-      [2]:         4
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Booby-Trapper
-
-  ID:     Booby-Trapper
-  Name:     诡雷兵
-  MaxHP:     2
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
       [1]:         0
       [2]:         0
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 11)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         RPG
-      [4]:         double_RPG
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         rebounce
-      [10]:         provoke
-------------------------------------
-Key: Void Devotee
-
-  ID:     Void Devotee
-  Name:     虚空拥趸
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         RPG
-      [4]:         double_RPG
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         rebounce
-      [10]:         provoke
-      [11]:         comeon
-------------------------------------
-Key: Void
-
-  ID:     Void
-  Name:     虚空
-  MaxHP:     11
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         2
-      [2]:         2
+  MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 19)
-      [0]:         bullet
-      [1]:         sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         stab
-      [7]:         cleave
-      [8]:         ghost_sever
-      [9]:         spirit_sever
-      [10]:         block
-      [11]:         double_block
-      [12]:         heavy_block
-      [13]:         deflect
-      [14]:         rebounce
-      [15]:         counterblade
-      [16]:         disarm
-      [17]:         provoke
-      [18]:         comeon
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 4)
+      [0]:         Intimidation
+      [1]:         Void Servant
+      [2]:         Devour the Stars
+      [3]:         Morphing Remains
 ------------------------------------
-Key: Voidwolf
+Key: Void Beast
 
-  ID:     Voidwolf
+  ID:     Void Beast
   Name:     虚空兽
+  MonsterType:     Commmon
   MaxHP:     1
+  InitialHP:     1
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         1
-      [2]:         1
+      [2]:         0
+  MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 12)
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
       [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Charge
 ------------------------------------
 Key: Chronos Hand
 
   ID:     Chronos Hand
-  Name:     时间之手
+  Name:     克罗诺斯之手
+  MonsterType:     Elite
   MaxHP:     3
+  InitialHP:     3
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Time Reversal
 ------------------------------------
 Key: Mnemosyne Hand
 
   ID:     Mnemosyne Hand
-  Name:     记忆之手
-  MaxHP:     2
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         0
-      [2]:         0
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 11)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         RPG
-      [4]:         double_RPG
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         rebounce
-      [10]:         provoke
-------------------------------------
-Key: Weasel Bandit
-
-  ID:     Weasel Bandit
-  Name:     黄鼠狼强盗
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         double_sword
-      [1]:         laser_stab
-      [2]:         laser_cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Weasel Lackey
-
-  ID:     Weasel Lackey
-  Name:     黄鼠狼小弟
+  Name:     谟涅摩叙涅之手
+  MonsterType:     Elite
   MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         1
-      [2]:         1
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         double_sword
-      [1]:         laser_stab
-      [2]:         laser_cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Butaro
-
-  ID:     Butaro
-  Name:     肥之郎
-  MaxHP:     6
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_sword
-      [1]:         laser_stab
-      [2]:         laser_cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: Huntaro
-
-  ID:     Huntaro
-  Name:     狩之郎
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         1
-      [2]:         1
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_sword
-      [1]:         laser_stab
-      [2]:         laser_cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: One-Eye
-
-  ID:     One-Eye
-  Name:     一只眼
-  MaxHP:     12
+  InitialHP:     3
   IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_sword
-      [1]:         laser_stab
-      [2]:         laser_cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: Arbiter of Divine
-
-  ID:     Arbiter of Divine
-  Name:     裁决使
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
+  MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: Judge of Divine
-
-  ID:     Judge of Divine
-  Name:     审判官
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         4
-      [1]:         0
-      [2]:         0
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: Prism Dancer
-
-  ID:     Prism Dancer
-  Name:     棱镜舞者
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: Cleric
-
-  ID:     Cleric
-  Name:     牧师
-  MaxHP:     7
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         0
-      [2]:         0
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: The Brave
-
-  ID:     The Brave
-  Name:     勇者
-  MaxHP:     8
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         1
-      [1]:         2
-      [2]:         2
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: Heart of Fear
-
-  ID:     Heart of Fear
-  Name:     畏惧之心
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         1
-      [2]:         1
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 17)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         rebounce
-      [12]:         counterblade
-      [13]:         disarm
-      [14]:         spectral_reflection
-      [15]:         provoke
-      [16]:         comeon
-------------------------------------
-Key: Unbroken Will
-
-  ID:     Unbroken Will
-  Name:     不屈之意
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: Ancient Brave
-
-  ID:     Ancient Brave
-  Name:     古老勇者
-  MaxHP:     6
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 15)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         provoke
-      [14]:         comeon
-------------------------------------
-Key: Oathblade
-
-  ID:     Oathblade
-  Name:     誓约之剑
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         4
-      [2]:         4
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: Hand-Mirage
-
-  ID:     Hand-Mirage
-  Name:     手·幻象
-  MaxHP:     12
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         2
-      [2]:         2
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: Left Warden
-
-  ID:     Left Warden
-  Name:     左戍卫
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Friendly
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: Right Warden
-
-  ID:     Right Warden
-  Name:     右戍卫
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: Left Vindicator
-
-  ID:     Left Vindicator
-  Name:     圣殿左亲卫
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: Right Vindicator
-
-  ID:     Right Vindicator
-  Name:     圣殿右亲卫
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         2
-      [2]:         2
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: Gipsy Divine
-
-  ID:     Gipsy Divine
-  Name:     神圣流浪者
-  MaxHP:     13
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         7
-      [2]:         7
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: Pillarbearer
-
-  ID:     Pillarbearer
-  Name:     持殿柱
-  MaxHP:     14
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         7
-      [1]:         7
-      [2]:         7
-  CharacterID:     Friendly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: Athena
-
-  ID:     Athena
-  Name:     雅典娜
-  MaxHP:     7
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: Megathon
-
-  ID:     Megathon
-  Name:     震殿威
-  MaxHP:     10
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         4
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: Voidhold
-
-  ID:     Voidhold
-  Name:     虚空之笼
-  MaxHP:     7
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 24)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         nuclear_bomb
-      [8]:         stab
-      [9]:         cleave
-      [10]:         laser_stab
-      [11]:         laser_cleave
-      [12]:         ghost_sever
-      [13]:         spirit_sever
-      [14]:         block
-      [15]:         double_block
-      [16]:         heavy_block
-      [17]:         deflect
-      [18]:         rebounce
-      [19]:         counterblade
-      [20]:         disarm
-      [21]:         spectral_reflection
-      [22]:         provoke
-      [23]:         comeon
-------------------------------------
-Key: Voidlock
-
-  ID:     Voidlock
-  Name:     虚空之锁
-  MaxHP:     6
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 24)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         nuclear_bomb
-      [8]:         stab
-      [9]:         cleave
-      [10]:         laser_stab
-      [11]:         laser_cleave
-      [12]:         ghost_sever
-      [13]:         spirit_sever
-      [14]:         block
-      [15]:         double_block
-      [16]:         heavy_block
-      [17]:         deflect
-      [18]:         rebounce
-      [19]:         counterblade
-      [20]:         disarm
-      [21]:         spectral_reflection
-      [22]:         provoke
-      [23]:         comeon
-------------------------------------
-Key: #Mech-Grunt
-
-  ID:     #Mech-Grunt
-  Name:     机械兵
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         4
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: #Bog Monkey
-
-  ID:     #Bog Monkey
-  Name:     水猴子
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         2
-      [2]:         2
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Skunk Chieftain
-
-  ID:     #Skunk Chieftain
-  Name:     臭鼬头领
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         3
-      [2]:         3
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Shadow Within
-
-  ID:     #Shadow Within
-  Name:     “心魔”
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         4
-      [2]:         4
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Deathshead Grin
-
-  ID:     #Deathshead Grin
-  Name:     “笑面”
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         1
-      [2]:         1
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Rubber Grunt
-
-  ID:     #Rubber Grunt
-  Name:     橡胶大兵
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         3
-      [2]:         3
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Booby-Trapper
-
-  ID:     #Booby-Trapper
-  Name:     诡雷兵
-  MaxHP:     6
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         4
-      [2]:         4
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Arbiter of Divine
-
-  ID:     #Arbiter of Divine
-  Name:     裁决使
-  MaxHP:     6
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Judge of Divine
-
-  ID:     #Judge of Divine
-  Name:     审判官
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         1
-      [2]:         1
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Alloy Cavalier
-
-  ID:     #Alloy Cavalier
-  Name:     合金铁骑
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         6
-      [2]:         6
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Tiger
-
-  ID:     #Tiger
-  Name:     “虎式”
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         4
-      [1]:         8
-      [2]:         8
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 24)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         laser_cannon
-      [8]:         stab
-      [9]:         cleave
-      [10]:         laser_stab
-      [11]:         laser_cleave
-      [12]:         ghost_sever
-      [13]:         spirit_sever
-      [14]:         block
-      [15]:         double_block
-      [16]:         heavy_block
-      [17]:         deflect
-      [18]:         rebounce
-      [19]:         counterblade
-      [20]:         disarm
-      [21]:         spectral_reflection
-      [22]:         provoke
-      [23]:         comeon
-------------------------------------
-Key: #Butaro
-
-  ID:     #Butaro
-  Name:     肥之郎
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Huntaro
-
-  ID:     #Huntaro
-  Name:     狩之郎
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Infancy
-
-  ID:     #Infancy
-  Name:     孩提
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         4
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: #The Brave
-
-  ID:     #The Brave
-  Name:     勇者
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         3
-      [2]:         3
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 25)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         laser_cannon
-      [8]:         nuclear_bomb
-      [9]:         stab
-      [10]:         cleave
-      [11]:         laser_stab
-      [12]:         laser_cleave
-      [13]:         ghost_sever
-      [14]:         spirit_sever
-      [15]:         block
-      [16]:         double_block
-      [17]:         heavy_block
-      [18]:         deflect
-      [19]:         rebounce
-      [20]:         counterblade
-      [21]:         disarm
-      [22]:         spectral_reflection
-      [23]:         provoke
-      [24]:         comeon
-------------------------------------
-Key: #Slasher
-
-  ID:     #Slasher
-  Name:     拔刀斋
-  MaxHP:     8
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         8
-      [2]:         8
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Dust-Sealed Heart
-
-  ID:     #Dust-Sealed Heart
-  Name:     尘封之心
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         6
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Void
-
-  ID:     #Void
-  Name:     虚空
-  MaxHP:     3
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         4
-      [2]:         4
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 24)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         nuclear_bomb
-      [8]:         stab
-      [9]:         cleave
-      [10]:         laser_stab
-      [11]:         laser_cleave
-      [12]:         ghost_sever
-      [13]:         spirit_sever
-      [14]:         block
-      [15]:         double_block
-      [16]:         heavy_block
-      [17]:         deflect
-      [18]:         rebounce
-      [19]:         counterblade
-      [20]:         disarm
-      [21]:         spectral_reflection
-      [22]:         provoke
-      [23]:         comeon
-------------------------------------
-Key: #Hand-Ideal
-
-  ID:     #Hand-Ideal
-  Name:     手·真
-  MaxHP:     15
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         12
-      [1]:         12
-      [2]:         12
-  CharacterID:     Friendly
-  AvailableActionID: 
-    List`1 (Count: 25)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         laser_cannon
-      [8]:         nuclear_bomb
-      [9]:         stab
-      [10]:         cleave
-      [11]:         laser_stab
-      [12]:         laser_cleave
-      [13]:         ghost_sever
-      [14]:         spirit_sever
-      [15]:         block
-      [16]:         double_block
-      [17]:         heavy_block
-      [18]:         deflect
-      [19]:         rebounce
-      [20]:         counterblade
-      [21]:         disarm
-      [22]:         spectral_reflection
-      [23]:         provoke
-      [24]:         comeon
-------------------------------------
-Key: #Mech-Grunt#
-
-  ID:     #Mech-Grunt#
-  Name:     机械兵
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         6
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: #Bog Monkey#
-
-  ID:     #Bog Monkey#
-  Name:     水猴子
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         5
-      [1]:         3
-      [2]:         3
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Skunk Chieftain#
-
-  ID:     #Skunk Chieftain#
-  Name:     臭鼬头领
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         4
-      [2]:         4
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Shadow Within#
-
-  ID:     #Shadow Within#
-  Name:     “心魔”
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         6
-      [2]:         6
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Deathshead Grin#
-
-  ID:     #Deathshead Grin#
-  Name:     “笑面”
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Rubber Grunt#
-
-  ID:     #Rubber Grunt#
-  Name:     橡胶大兵
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         4
-      [2]:         4
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Booby-Trapper#
-
-  ID:     #Booby-Trapper#
-  Name:     诡雷兵
-  MaxHP:     8
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         3
-      [1]:         5
-      [2]:         5
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Arbiter of Divine#
-
-  ID:     #Arbiter of Divine#
-  Name:     裁决使
-  MaxHP:     8
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         4
-      [2]:         4
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Judge of Divine#
-
-  ID:     #Judge of Divine#
-  Name:     审判官
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         4
-      [1]:         1
-      [2]:         1
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Alloy Cavalier#
-
-  ID:     #Alloy Cavalier#
-  Name:     合金铁骑
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         8
-      [2]:         8
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Tiger#
-
-  ID:     #Tiger#
-  Name:     “虎式”
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         6
-      [1]:         8
-      [2]:         8
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 24)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         laser_cannon
-      [8]:         stab
-      [9]:         cleave
-      [10]:         laser_stab
-      [11]:         laser_cleave
-      [12]:         ghost_sever
-      [13]:         spirit_sever
-      [14]:         block
-      [15]:         double_block
-      [16]:         heavy_block
-      [17]:         deflect
-      [18]:         rebounce
-      [19]:         counterblade
-      [20]:         disarm
-      [21]:         spectral_reflection
-      [22]:         provoke
-      [23]:         comeon
-------------------------------------
-Key: #Butaro#
-
-  ID:     #Butaro#
-  Name:     肥之郎
-  MaxHP:     7
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         3
-      [2]:         3
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Huntaro#
-
-  ID:     #Huntaro#
-  Name:     狩之郎
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         4
-      [2]:         4
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Infancy#
-
-  ID:     #Infancy#
-  Name:     孩提
-  MaxHP:     5
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         5
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cowardly
-  AvailableActionID: 
-    List`1 (Count: 13)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         laser_shoot
-      [4]:         RPG
-      [5]:         double_RPG
-      [6]:         block
-      [7]:         double_block
-      [8]:         heavy_block
-      [9]:         deflect
-      [10]:         rebounce
-      [11]:         provoke
-      [12]:         comeon
-------------------------------------
-Key: #The Brave#
-
-  ID:     #The Brave#
-  Name:     勇者
-  MaxHP:     7
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         5
-      [2]:         5
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 25)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         laser_cannon
-      [8]:         nuclear_bomb
-      [9]:         stab
-      [10]:         cleave
-      [11]:         laser_stab
-      [12]:         laser_cleave
-      [13]:         ghost_sever
-      [14]:         spirit_sever
-      [15]:         block
-      [16]:         double_block
-      [17]:         heavy_block
-      [18]:         deflect
-      [19]:         rebounce
-      [20]:         counterblade
-      [21]:         disarm
-      [22]:         spectral_reflection
-      [23]:         provoke
-      [24]:         comeon
-------------------------------------
-Key: #Slasher#
-
-  ID:     #Slasher#
-  Name:     拔刀斋
-  MaxHP:     10
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         10
-      [2]:         10
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
-------------------------------------
-Key: #Dust-Sealed Heart#
-
-  ID:     #Dust-Sealed Heart#
-  Name:     尘封之心
-  MaxHP:     7
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         7
-      [1]:         0
-      [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 23)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         stab
-      [8]:         cleave
-      [9]:         laser_stab
-      [10]:         laser_cleave
-      [11]:         ghost_sever
-      [12]:         spirit_sever
-      [13]:         block
-      [14]:         double_block
-      [15]:         heavy_block
-      [16]:         deflect
-      [17]:         rebounce
-      [18]:         counterblade
-      [19]:         disarm
-      [20]:         spectral_reflection
-      [21]:         provoke
-      [22]:         comeon
-------------------------------------
-Key: #Void#
-
-  ID:     #Void#
-  Name:     虚空
-  MaxHP:     4
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         5
-      [2]:         5
-  CharacterID:     Sly
-  AvailableActionID: 
-    List`1 (Count: 24)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         nuclear_bomb
-      [8]:         stab
-      [9]:         cleave
-      [10]:         laser_stab
-      [11]:         laser_cleave
-      [12]:         ghost_sever
-      [13]:         spirit_sever
-      [14]:         block
-      [15]:         double_block
-      [16]:         heavy_block
-      [17]:         deflect
-      [18]:         rebounce
-      [19]:         counterblade
-      [20]:         disarm
-      [21]:         spectral_reflection
-      [22]:         provoke
-      [23]:         comeon
-------------------------------------
-Key: #Hand-Sin#
-
-  ID:     #Hand-Sin#
-  Name:     手·邪
-  MaxHP:     20
-  IsFriend:     False
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         12
-      [1]:         13
-      [2]:         13
-  CharacterID:     Arrogant
-  AvailableActionID: 
-    List`1 (Count: 25)
-      [0]:         double_bullet
-      [1]:         double_sword
-      [2]:         shoot
-      [3]:         double_shoot
-      [4]:         laser_shoot
-      [5]:         RPG
-      [6]:         double_RPG
-      [7]:         laser_cannon
-      [8]:         nuclear_bomb
-      [9]:         stab
-      [10]:         cleave
-      [11]:         laser_stab
-      [12]:         laser_cleave
-      [13]:         ghost_sever
-      [14]:         spirit_sever
-      [15]:         block
-      [16]:         double_block
-      [17]:         heavy_block
-      [18]:         deflect
-      [19]:         rebounce
-      [20]:         counterblade
-      [21]:         disarm
-      [22]:         spectral_reflection
-      [23]:         provoke
-      [24]:         comeon
-------------------------------------
-Key: Shadow
-
-  ID:     Shadow
-  Name:     神秘人
-  MaxHP:     2
-  IsFriend:     True
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         1
-      [1]:         0
-      [2]:         0
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 6)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         block
-      [4]:         double_block
-      [5]:         rebounce
-------------------------------------
-Key: $Shadow
-
-  ID:     $Shadow
-  Name:     神秘人
-  MaxHP:     2
-  IsFriend:     True
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         2
-      [2]:         2
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 12)
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
       [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
-------------------------------------
-Key: Emissary of Light
-
-  ID:     Emissary of Light
-  Name:     光明来使
-  MaxHP:     5
-  IsFriend:     True
-  InitialResource: 
-    List`1 (Count: 3)
-      [0]:         2
-      [1]:         0
-      [2]:         0
-  CharacterID:     Friendly
-  AvailableActionID: 
-    List`1 (Count: 11)
-      [0]:         bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         RPG
-      [4]:         double_RPG
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         rebounce
-      [10]:         provoke
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Cocooning
 ------------------------------------
 Key: Entity of Will
 
   ID:     Entity of Will
   Name:     意志实体
+  MonsterType:     Elite
   MaxHP:     0
+  InitialHP:     0
   IsFriend:     True
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Cold
-  AvailableActionID: 
-    List`1 (Count: 12)
-      [0]:         sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         ghost_sever
-      [4]:         spirit_sever
-      [5]:         block
-      [6]:         double_block
-      [7]:         heavy_block
-      [8]:         deflect
-      [9]:         counterblade
-      [10]:         disarm
-      [11]:         provoke
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Strengthen with Battle
 ------------------------------------
-Key: Retreating Figure
+Key: Dagger of Void
 
-  ID:     Retreating Figure
-  Name:     背影
-  MaxHP:     6
-  IsFriend:     True
+  ID:     Dagger of Void
+  Name:     虚空匕首
+  MonsterType:     Commmon
+  MaxHP:     3
+  InitialHP:     3
+  IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         2
-      [2]:         2
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
 ------------------------------------
-Key: $Swordsman's Spirit
+Key: Sword of Shadow
 
-  ID:     $Swordsman's Spirit
-  Name:     “剑心”
+  ID:     Sword of Shadow
+  Name:     影刃
+  MonsterType:     Elite
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         6
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction: 
+    List`1 (Count: 1)
+      [0]:         ghost_sever
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Dark Embrace
+------------------------------------
+Key: Stronghold Chieftain
+
+  ID:     Stronghold Chieftain
+  Name:     山寨寨主
+  MonsterType:     BOSS
+  MaxHP:     16
+  InitialHP:     16
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         3
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         sword
+      [1]:         ghost_sever
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Enlightenment on High Fort
+      [1]:         Critical Strike
+------------------------------------
+Key: Arbiter of Divine
+
+  ID:     Arbiter of Divine
+  Name:     裁决使
+  MonsterType:     Elite
+  MaxHP:     5
+  InitialHP:     5
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Adjudication
+------------------------------------
+Key: Judge of Divine
+
+  ID:     Judge of Divine
+  Name:     审判官
+  MonsterType:     Elite
+  MaxHP:     6
+  InitialHP:     6
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Judgment
+------------------------------------
+Key: Butaro
+
+  ID:     Butaro
+  Name:     肥之郎
+  MonsterType:     Commmon
+  MaxHP:     6
+  InitialHP:     6
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Huntaro
+
+  ID:     Huntaro
+  Name:     狩之郎
+  MonsterType:     Elite
+  MaxHP:     3
+  InitialHP:     3
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Prismatic Essence
+------------------------------------
+Key: Weasel Bandit
+
+  ID:     Weasel Bandit
+  Name:     黄鼠狼强盗
+  MonsterType:     Commmon
+  MaxHP:     4
+  InitialHP:     4
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: One-Eye
+
+  ID:     One-Eye
+  Name:     一只眼
+  MonsterType:     Elite
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Tactical Turtle
+------------------------------------
+Key: Weasel Lackey
+
+  ID:     Weasel Lackey
+  Name:     黄鼠狼小弟
+  MonsterType:     Commmon
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Left Guard
+
+  ID:     Left Guard
+  Name:     左戍卫
+  MonsterType:     Commmon
+  MaxHP:     5
+  InitialHP:     5
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Right Guard
+
+  ID:     Right Guard
+  Name:     右戍卫
+  MonsterType:     Commmon
+  MaxHP:     4
+  InitialHP:     4
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Guard Captain
+
+  ID:     Guard Captain
+  Name:     戍卫领队
+  MonsterType:     Elite
+  MaxHP:     6
+  InitialHP:     6
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Blazing Armor
+------------------------------------
+Key: Shadow_1
+
+  ID:     Shadow_1
+  Name:     影
+  MonsterType:     Commmon
+  MaxHP:     6
+  InitialHP:     6
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         sword
+      [1]:         cleave
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Photophobia
+------------------------------------
+Key: Shadow_2
+
+  ID:     Shadow_2
+  Name:     影
+  MonsterType:     Elite
   MaxHP:     8
-  IsFriend:     True
+  InitialHP:     8
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         sword
+      [1]:         cleave
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Beat Down
+      [1]:         Photophobia
+------------------------------------
+Key: Shadow_3
+
+  ID:     Shadow_3
+  Name:     影
+  MonsterType:     Commmon
+  MaxHP:     6
+  InitialHP:     6
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         sword
+      [1]:         cleave
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Photophobia
+------------------------------------
+Key: Hand-Mirage
+
+  ID:     Hand-Mirage
+  Name:     手·幻象
+  MonsterType:     BOSS
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         comeon
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Simulacrum
+      [1]:         Loot in Chaos
+------------------------------------
+Key: Cleric
+
+  ID:     Cleric
+  Name:     牧师
+  MonsterType:     Elite
+  MaxHP:     5
+  InitialHP:     5
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Blessing
+      [1]:         Divine Retribution
+------------------------------------
+Key: Prism Dancer_1
+
+  ID:     Prism Dancer_1
+  Name:     棱镜舞者
+  MonsterType:     BOSS
+  MaxHP:     4
+  InitialHP:     4
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 6)
+      [0]:         Dual Genesis
+      [1]:         Fluid Dance Morphology
+      [2]:         Mirror Shred
+      [3]:         Ethereal Emergence
+      [4]:         Crystal Bloom
+      [5]:         Final Curtain
+------------------------------------
+Key: Prism Dancer_2
+
+  ID:     Prism Dancer_2
+  Name:     棱镜舞者
+  MonsterType:     BOSS
+  MaxHP:     4
+  InitialHP:     4
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 6)
+      [0]:         Dual Genesis
+      [1]:         Fluid Dance Morphology
+      [2]:         Mirror Shred
+      [3]:         Ethereal Emergence
+      [4]:         Crystal Bloom
+      [5]:         Final Curtain
+------------------------------------
+Key: Bog Monkey
+
+  ID:     Bog Monkey
+  Name:     水猴子
+  MonsterType:     Commmon
+  MaxHP:     5
+  InitialHP:     5
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 0)
+------------------------------------
+Key: Bog Sage
+
+  ID:     Bog Sage
+  Name:     深潭长老
+  MonsterType:     Elite
+  MaxHP:     8
+  InitialHP:     8
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Water Warding Incantation
+------------------------------------
+Key: Rubber Logistics Soldier
+
+  ID:     Rubber Logistics Soldier
+  Name:     后勤兵
+  MonsterType:     Commmon
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         bullet
+      [1]:         RPG
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Supply Line
+------------------------------------
+Key: Tiger
+
+  ID:     Tiger
+  Name:     虎式
+  MonsterType:     Elite
+  MaxHP:     8
+  InitialHP:     8
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         bullet
+      [1]:         RPG
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         88mm Tank Gun
+      [1]:         Body of Steel
+------------------------------------
+Key: Ghost Warrior
+
+  ID:     Ghost Warrior
+  Name:     鬼武士
+  MonsterType:     Elite
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         12
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         ghost_sever
+      [1]:         spirit_sever
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Will-o'-the-Wisp Rekindled
+------------------------------------
+Key: Gustav Railway Cannon
+
+  ID:     Gustav Railway Cannon
+  Name:     古斯塔夫轨道炮
+  MonsterType:     BOSS
+  MaxHP:     12
+  InitialHP:     12
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction: 
+    List`1 (Count: 2)
+      [0]:         bullet
+      [1]:         sword
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 2)
+      [0]:         RPG
+      [1]:         double_RPG
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         800mm Railgun
+      [1]:         Assemble
+------------------------------------
+Key: Rubber Artillery
+
+  ID:     Rubber Artillery
+  Name:     橡胶炮兵
+  MonsterType:     Commmon
+  MaxHP:     3
+  InitialHP:     3
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         3
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 3)
+      [0]:         bullet
+      [1]:         RPG
+      [2]:         double_RPG
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Load Shells
+------------------------------------
+Key: Voidwarden of Pale
+
+  ID:     Voidwarden of Pale
+  Name:     白使徒
+  MonsterType:     Elite
+  MaxHP:     8
+  InitialHP:     8
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         White Specter's Tear
+      [1]:         Shared Origin_Pale
+------------------------------------
+Key: Voidwarden of Abyss
+
+  ID:     Voidwarden of Abyss
+  Name:     黑使徒
+  MonsterType:     Elite
+  MaxHP:     8
+  InitialHP:     8
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Black Specter's Wing
+      [1]:         Shared Origin_Abyss
+------------------------------------
+Key: Cursed Tree
+
+  ID:     Cursed Tree
+  Name:     魔树
+  MonsterType:     BOSS
+  MaxHP:     14
+  InitialHP:     14
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Animism
+------------------------------------
+Key: Porcupine
+
+  ID:     Porcupine
+  Name:     豪猪
+  MonsterType:     Commmon
+  MaxHP:     5
+  InitialHP:     5
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Run Wild and Crash
+------------------------------------
+Key: Tree Spirit
+
+  ID:     Tree Spirit
+  Name:     树灵
+  MonsterType:     Commmon
+  MaxHP:     3
+  InitialHP:     3
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Entangle
+------------------------------------
+Key: Coyote
+
+  ID:     Coyote
+  Name:     丛林狼
+  MonsterType:     Commmon
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Pouncing Strike
+------------------------------------
+Key: Brave·Left Hand
+
+  ID:     Brave·Left Hand
+  Name:     勇者·左手
+  MonsterType:     Elite
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     null
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Left Hand
+------------------------------------
+Key: Brave·Right Hand
+
+  ID:     Brave·Right Hand
+  Name:     勇者·右手
+  MonsterType:     Elite
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     null
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Right Hand
+------------------------------------
+Key: Fear
+
+  ID:     Fear
+  Name:     恐惧
+  MonsterType:     Elite
+  MaxHP:     6
+  InitialHP:     6
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         spirit_sever
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Linked Hearts
+      [1]:         Fear No More!
+------------------------------------
+Key: Unbroken Will
+
+  ID:     Unbroken Will
+  Name:     不屈
+  MonsterType:     Commmon
+  MaxHP:     4
+  InitialHP:     4
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Wavebreaker
+------------------------------------
+Key: Brave of Old
+
+  ID:     Brave of Old
+  Name:     古老勇者
+  MonsterType:     Elite
+  MaxHP:     8
+  InitialHP:     8
+  IsFriend:     False
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         5
-      [2]:         5
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 16)
-      [0]:         double_sword
-      [1]:         stab
-      [2]:         cleave
-      [3]:         laser_stab
-      [4]:         laser_cleave
-      [5]:         ghost_sever
-      [6]:         spirit_sever
-      [7]:         block
-      [8]:         double_block
-      [9]:         heavy_block
-      [10]:         deflect
-      [11]:         counterblade
-      [12]:         disarm
-      [13]:         spectral_reflection
-      [14]:         provoke
-      [15]:         comeon
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Critical Strike
+      [1]:         Heroic Soul Endures
 ------------------------------------
-Key: Tin Soldier
+Key: Ancestral Brave
 
-  ID:     Tin Soldier
-  Name:     锡兵
+  ID:     Ancestral Brave
+  Name:     勇者先灵
+  MonsterType:     Elite
+  MaxHP:     15
+  InitialHP:     15
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Determined Strike
+------------------------------------
+Key: Oathblade
+
+  ID:     Oathblade
+  Name:     誓约之剑
+  MonsterType:     Elite
+  MaxHP:     8
+  InitialHP:     8
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Dragon Slaying Blade
+      [1]:         Echo of Legend
+------------------------------------
+Key: Void Lock
+
+  ID:     Void Lock
+  Name:     虚空之笼
+  MonsterType:     Elite
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Prison Cage
+------------------------------------
+Key: Void Cage
+
+  ID:     Void Cage
+  Name:     虚空之锁
+  MonsterType:     Elite
+  MaxHP:     8
+  InitialHP:     8
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Shackles
+------------------------------------
+Key: Rat
+
+  ID:     Rat
+  Name:     大鼠
+  MonsterType:     Commmon
+  MaxHP:     3
+  InitialHP:     3
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Run Amok
+------------------------------------
+Key: Rat King
+
+  ID:     Rat King
+  Name:     鼠王
+  MonsterType:     Elite
+  MaxHP:     10
+  InitialHP:     10
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Rat Swarm Rampage
+------------------------------------
+Key: Frog
+
+  ID:     Frog
+  Name:     青蛙
+  MonsterType:     Commmon
+  MaxHP:     7
+  InitialHP:     7
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Reflex Arc
+------------------------------------
+Key: Horse
+
+  ID:     Horse
+  Name:     马
+  MonsterType:     Elite
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Stem Cell
+------------------------------------
+Key: Fruit Fly
+
+  ID:     Fruit Fly
+  Name:     果蝇
+  MonsterType:     Commmon
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Endless
+------------------------------------
+Key: Unsoiled Seed
+
+  ID:     Unsoiled Seed
+  Name:     未受污的种子
+  MonsterType:     Elite
+  MaxHP:     5
+  InitialHP:     5
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Grow
+------------------------------------
+Key: Evergreen
+
+  ID:     Evergreen
+  Name:     常青
+  MonsterType:     Elite
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Guardian's Shade
+------------------------------------
+Key: Unhatch Being
+
+  ID:     Unhatch Being
+  Name:     未破壳的生灵
+  MonsterType:     Elite
   MaxHP:     6
+  InitialHP:     6
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Hatch
+------------------------------------
+Key: White Dove
+
+  ID:     White Dove
+  Name:     白鸽
+  MonsterType:     Elite
+  MaxHP:     7
+  InitialHP:     7
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Song of Peace
+------------------------------------
+Key: Unquenched Flame
+
+  ID:     Unquenched Flame
+  Name:     未熄灭的薪火
+  MonsterType:     Elite
+  MaxHP:     9
+  InitialHP:     9
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Born of Blazing Fire
+------------------------------------
+Key: Phoenix
+
+  ID:     Phoenix
+  Name:     凤凰
+  MonsterType:     BOSS
+  MaxHP:     13
+  InitialHP:     13
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 3)
+      [0]:         bullet
+      [1]:         RPG
+      [2]:         double_RPG
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Immolation
+      [1]:         Raging Lotus Flame
+------------------------------------
+Key: Child
+
+  ID:     Child
+  Name:     孩提
+  MonsterType:     Elite
+  MaxHP:     10
+  InitialHP:     10
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Hello World!
+      [1]:         Toward Tomorrow
+------------------------------------
+Key: Dust-Sealed Heart
+
+  ID:     Dust-Sealed Heart
+  Name:     尘封之心
+  MonsterType:     Elite
+  MaxHP:     7
+  InitialHP:     7
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Protective
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Trial by Fire
+------------------------------------
+Key: Ronin
+
+  ID:     Ronin
+  Name:     浪人
+  MonsterType:     Commmon
+  MaxHP:     4
+  InitialHP:     4
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Cowardly
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         laser_cannon
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Deathrattle
+------------------------------------
+Key: Mortis
+
+  ID:     Mortis
+  Name:     亡魂
+  MonsterType:     Commmon
+  MaxHP:     2
+  InitialHP:     2
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         laser_cannon
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         Soul Severance
+------------------------------------
+Key: Slasher
+
+  ID:     Slasher
+  Name:     人斩
+  MonsterType:     BOSS
+  MaxHP:     13
+  InitialHP:     13
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         7
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         sword
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Fiend on Earth
+      [1]:         Soul Severance Field
+------------------------------------
+Key: Tainted Gipsy
+
+  ID:     Tainted Gipsy
+  Name:     秽染流浪者
+  MonsterType:     BOSS
+  MaxHP:     20
+  InitialHP:     20
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 3)
+      [0]:         Energy-Converging Armor
+      [1]:         Over-Limit Strike
+      [2]:         Core Eruption
+------------------------------------
+Key: Hall-warden
+
+  ID:     Hall-warden
+  Name:     持殿
+  MonsterType:     Elite
+  MaxHP:     10
+  InitialHP:     10
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Friendly
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  SkillList: 
+    List`1 (Count: 1)
+      [0]:         FX-9 Incendiary Bomb
+------------------------------------
+Key: Athena
+
+  ID:     Athena
+  Name:     雅典娜
+  MonsterType:     Elite
+  MaxHP:     12
+  InitialHP:     12
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Dance of Combustion
+      [1]:         True Form of Crimson Lotus
+------------------------------------
+Key: Skyburner
+
+  ID:     Skyburner
+  Name:     焚天
+  MonsterType:     BOSS
+  MaxHP:     15
+  InitialHP:     15
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Bellicose
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         FX-1 Flammable Agent
+      [1]:         FX-5 Shotgun
+------------------------------------
+Key: Hand of Corruption
+
+  ID:     Hand of Corruption
+  Name:     污玷之手
+  MonsterType:     BOSS
+  MaxHP:     28
+  InitialHP:     28
+  IsFriend:     False
+  InitialResource: 
+    List`1 (Count: 3)
+      [0]:         2
+      [1]:         2
+      [2]:         0
+  MonsterDescription:     需要补完
+  CharacterID:     Fucked
+  DisabledAction:     null
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 5)
+      [0]:         Fallen Creator God
+      [1]:         Creation
+      [2]:         Power to Rule the World
+      [3]:         Lash the Universe
+      [4]:         Annihilate, Slay, Destroy
+------------------------------------
+Key: Counter-Blade
+
+  ID:     Counter-Blade
+  Name:     逆刃
+  MonsterType:     BOSS
+  MaxHP:     12
+  InitialHP:     12
   IsFriend:     True
   InitialResource: 
     List`1 (Count: 3)
-      [0]:         4
+      [0]:         0
       [1]:         0
       [2]:         0
-  CharacterID:     Bellicose
-  AvailableActionID: 
-    List`1 (Count: 15)
-      [0]:         double_bullet
-      [1]:         shoot
-      [2]:         double_shoot
-      [3]:         cleave
-      [4]:         laser_stab
-      [5]:         laser_cleave
-      [6]:         ghost_sever
-      [7]:         spirit_sever
-      [8]:         block
-      [9]:         double_block
-      [10]:         heavy_block
-      [11]:         deflect
-      [12]:         rebounce
-      [13]:         provoke
-      [14]:         comeon
+  MonsterDescription:     需要补完
+  CharacterID:     Arrogant
+  DisabledAction: 
+    List`1 (Count: 1)
+      [0]:         bullet
+  EnabledAction:     null
+  PreferedAction:     null
+  SkillList: 
+    List`1 (Count: 2)
+      [0]:         Nine-Headed Dragon Flash
+      [1]:         Counter-Blade
 ------------------------------------

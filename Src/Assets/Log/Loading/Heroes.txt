@@ -19,6 +19,16 @@ Key: Wukong
     List`1 (Count: 1)
       [0]:         Mountain Crusher
 ------------------------------------
+Key: Zhongkui
+
+  ID:     Zhongkui
+  Name:     钟馗
+  Description:     null
+  MaxHP:     20
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Deathrattle
+------------------------------------
 Key: Huaxiong
 
   ID:     Huaxiong
@@ -28,16 +38,6 @@ Key: Huaxiong
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Courage
-------------------------------------
-Key: Zhongkui
-
-  ID:     Zhongkui
-  Name:     钟馗
-  Description:     null
-  MaxHP:     1
-  SkillIDList: 
-    List`1 (Count: 1)
-      [0]:         Deathrattle
 ------------------------------------
 Key: Lvbu
 

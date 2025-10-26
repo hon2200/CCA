@@ -402,7 +402,6 @@ def main():
         excel_to_json_Dictionary("Tables/ActionDefine.xlsx","Data")
         excel_to_json_Dictionary("Tables/Hero.xlsx","Data")
         excel_to_json_Dictionary("Tables/Levels.xlsx","Data")
-        excel_to_json_Dictionary("Tables/Levels(new) (1)(1).xlsx","Data")
         excel_to_json_2dArray("Tables/Versus.xlsx","Data")
 
 

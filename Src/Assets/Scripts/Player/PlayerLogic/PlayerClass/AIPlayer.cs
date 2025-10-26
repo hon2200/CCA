@@ -17,10 +17,14 @@ public class AIPlayer : Player
     //告诉玩家的行动类别
     public Intention IntendedType { get; set; }
     //创造闯关过程中的AI
-    public void Initialize(int ID_inGame, AIDefine aIDefine, bool isFriend)
+    public void Initialize(int ID_inGame, AIDefine aIDefine, bool isFriend, LevelDefine Level)
     {
+        var availableAction = Level.UnlockedAction
+            .Concat(aIDefine.EnabledAction)
+            .Except(aIDefine.DisabledAction)
+            .ToList();
         base.Initialize(ID_inGame, PlayerType.AI, aIDefine.MaxHP, aIDefine.InitialResource,
-            aIDefine.AvailableActionID);
+            availableAction);
         //赋值性格
         CharacterDataBase.Instance.CharacterDictionary.TryGetValue(aIDefine.CharacterID, out var characterDefine);
         if (characterDefine == null)
@@ -39,15 +43,6 @@ public class AIPlayer : Player
         Honest.Set(characterDefine.IniHonesty);
         this.isFriend = isFriend;
         IntendedType = new();
-        //警戒：情绪值对受伤应激激动
-        status.HP.OnValueChanged += (int oldHP, int newHP, string message) =>
-        {
-            if (message == "Damage")
-            {
-                int damageAmount = oldHP - newHP;
-                DamagedReaction(damageAmount);
-            }
-        };
         OnBirth?.Invoke();
     }
     //创造英雄模式中的AI
@@ -129,8 +124,12 @@ public class AIPlayer : Player
     }
     public void DamagedReaction(int damageNumber)
     {
-        Emo.ChangeBy(damageNumber * CharacterDefine.EmotionChange_DamageBased);
+        Emo.ChangeBy(damageNumber * CharacterDefine.EmotionChange_DamagedBased);
         Honest.ChangeBy(damageNumber * CharacterDefine.HonestyChange_DamageBased);
+    }
+    public void DamagingReaction(int damageNummber)
+    {
+        Emo.ChangeBy(damageNummber * CharacterDefine.EmotionChange_DamagingBased);
     }
     public void TurnBasedChange()
     {

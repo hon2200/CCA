@@ -13,7 +13,8 @@ public class CharacterDefine
     public float HonestyChange_TurnBased { get; set; }
     public float EmotionChange_TurnBased { get; set; }
     public float HonestyChange_DamageBased { get; set; }
-    public float EmotionChange_DamageBased { get; set; }
+    public float EmotionChange_DamagedBased { get; set; }
+    public float EmotionChange_DamagingBased { get; set; }
     public float MaxHonesty { get; set; }
     public float MinHonesty { get; set; }
     public float MaxEmotion { get; set; }
