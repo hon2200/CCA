@@ -13,6 +13,7 @@ public class LevelDefine
     public List<List<string>> FriendList { get; set; }
     public List<string> UnlockedAction { get; set; }
     public int PlayerHP { get; set; }
+    public int PlayerSkillSlots { get; set; } = 0;
     public List<int> PlayerInitialResource { get; set; }
     public string NextLevel { get; set; }
     public string PreviousLevel { get; set; }

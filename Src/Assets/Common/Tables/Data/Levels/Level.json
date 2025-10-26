@@ -20,7 +20,8 @@
             0,
             0
         ],
-        "NextLevel": "1-2"
+        "NextLevel": "1-2",
+        "PlayerSkillSlots": 0
     },
     "1-2": {
         "ID": "1-2",
@@ -47,7 +48,8 @@
             0
         ],
         "NextLevel": "1-3",
-        "PreviousLevel": "1-1"
+        "PreviousLevel": "1-1",
+        "PlayerSkillSlots": 0
     },
     "1-3": {
         "ID": "1-3",
@@ -79,7 +81,8 @@
             0
         ],
         "NextLevel": "1-4",
-        "PreviousLevel": "1-2"
+        "PreviousLevel": "1-2",
+        "PlayerSkillSlots": 1
     },
     "1-4": {
         "ID": "1-4",
@@ -107,7 +110,8 @@
             0
         ],
         "NextLevel": "1-5",
-        "PreviousLevel": "1-3"
+        "PreviousLevel": "1-3",
+        "PlayerSkillSlots": 1
     },
     "1-5": {
         "ID": "1-5",
@@ -126,7 +130,8 @@
             0
         ],
         "NextLevel": "1-6",
-        "PreviousLevel": "1-4"
+        "PreviousLevel": "1-4",
+        "PlayerSkillSlots": 1
     },
     "1-6": {
         "ID": "1-6",
@@ -154,7 +159,8 @@
             0
         ],
         "NextLevel": "1-7",
-        "PreviousLevel": "1-5"
+        "PreviousLevel": "1-5",
+        "PlayerSkillSlots": 1
     },
     "1-7": {
         "ID": "1-7",
@@ -183,7 +189,8 @@
             1
         ],
         "NextLevel": "2-1",
-        "PreviousLevel": "1-6"
+        "PreviousLevel": "1-6",
+        "PlayerSkillSlots": 1
     },
     "2-1": {
         "ID": "2-1",
@@ -220,7 +227,8 @@
             0
         ],
         "NextLevel": "2-2",
-        "PreviousLevel": "1-7"
+        "PreviousLevel": "1-7",
+        "PlayerSkillSlots": 2
     },
     "2-2": {
         "ID": "2-2",
@@ -258,7 +266,8 @@
             6
         ],
         "NextLevel": "2-3",
-        "PreviousLevel": "2-1"
+        "PreviousLevel": "2-1",
+        "PlayerSkillSlots": 2
     },
     "2-3": {
         "ID": "2-3",
@@ -297,7 +306,8 @@
             0
         ],
         "NextLevel": "2-4",
-        "PreviousLevel": "2-2"
+        "PreviousLevel": "2-2",
+        "PlayerSkillSlots": 3
     },
     "2-4": {
         "ID": "2-4",
@@ -335,7 +345,8 @@
             0
         ],
         "NextLevel": "2-5",
-        "PreviousLevel": "2-3"
+        "PreviousLevel": "2-3",
+        "PlayerSkillSlots": 3
     },
     "2-5": {
         "ID": "2-5",
@@ -373,7 +384,8 @@
             0
         ],
         "NextLevel": "2-6",
-        "PreviousLevel": "2-4"
+        "PreviousLevel": "2-4",
+        "PlayerSkillSlots": 3
     },
     "2-6": {
         "ID": "2-6",
@@ -421,7 +433,8 @@
             0
         ],
         "NextLevel": "2-7",
-        "PreviousLevel": "2-5"
+        "PreviousLevel": "2-5",
+        "PlayerSkillSlots": 4
     },
     "2-7": {
         "ID": "2-7",
@@ -462,7 +475,8 @@
             1
         ],
         "NextLevel": "2-8",
-        "PreviousLevel": "2-6"
+        "PreviousLevel": "2-6",
+        "PlayerSkillSlots": 4
     },
     "2-8": {
         "ID": "2-8",
@@ -501,7 +515,8 @@
             1
         ],
         "NextLevel": "2-9",
-        "PreviousLevel": "2-7"
+        "PreviousLevel": "2-7",
+        "PlayerSkillSlots": 5
     },
     "2-9": {
         "ID": "2-9",
@@ -547,7 +562,8 @@
             2
         ],
         "NextLevel": "3-1",
-        "PreviousLevel": "2-8"
+        "PreviousLevel": "2-8",
+        "PlayerSkillSlots": 5
     },
     "3-1": {
         "ID": "3-1",
@@ -590,7 +606,8 @@
             2
         ],
         "NextLevel": "3-2",
-        "PreviousLevel": "2-9"
+        "PreviousLevel": "2-9",
+        "PlayerSkillSlots": 5
     },
     "3-2": {
         "ID": "3-2",
@@ -633,7 +650,8 @@
             2
         ],
         "NextLevel": "3-3",
-        "PreviousLevel": "3-1"
+        "PreviousLevel": "3-1",
+        "PlayerSkillSlots": 6
     },
     "3-3": {
         "ID": "3-3",
@@ -675,7 +693,8 @@
             2
         ],
         "NextLevel": "3-4",
-        "PreviousLevel": "3-2"
+        "PreviousLevel": "3-2",
+        "PlayerSkillSlots": 6
     },
     "3-4": {
         "ID": "3-4",
@@ -694,7 +713,8 @@
             0
         ],
         "NextLevel": "3-5",
-        "PreviousLevel": "3-3"
+        "PreviousLevel": "3-3",
+        "PlayerSkillSlots": 6
     },
     "3-5": {
         "ID": "3-5",
@@ -739,7 +759,8 @@
             2
         ],
         "NextLevel": "3-6",
-        "PreviousLevel": "3-4"
+        "PreviousLevel": "3-4",
+        "PlayerSkillSlots": 6
     },
     "3-6": {
         "ID": "3-6",
@@ -784,7 +805,8 @@
             2
         ],
         "NextLevel": "3-7",
-        "PreviousLevel": "3-5"
+        "PreviousLevel": "3-5",
+        "PlayerSkillSlots": 7
     },
     "3-7": {
         "ID": "3-7",
@@ -830,7 +852,8 @@
             2
         ],
         "NextLevel": "3-8",
-        "PreviousLevel": "3-6"
+        "PreviousLevel": "3-6",
+        "PlayerSkillSlots": 8
     },
     "3-8": {
         "ID": "3-8",
@@ -849,7 +872,8 @@
             0
         ],
         "NextLevel": "3-9",
-        "PreviousLevel": "3-7"
+        "PreviousLevel": "3-7",
+        "PlayerSkillSlots": 8
     },
     "3-9": {
         "ID": "3-9",
@@ -895,7 +919,8 @@
             2
         ],
         "NextLevel": "3-10",
-        "PreviousLevel": "3-8"
+        "PreviousLevel": "3-8",
+        "PlayerSkillSlots": 9
     },
     "3-10": {
         "ID": "3-10",
@@ -946,7 +971,8 @@
             2
         ],
         "NextLevel": "3-11",
-        "PreviousLevel": "3-9"
+        "PreviousLevel": "3-9",
+        "PlayerSkillSlots": 9
     },
     "3-11": {
         "ID": "3-11",
@@ -965,7 +991,8 @@
             0
         ],
         "NextLevel": "3-12",
-        "PreviousLevel": "3-10"
+        "PreviousLevel": "3-10",
+        "PlayerSkillSlots": 10
     },
     "3-12": {
         "ID": "3-12",
@@ -1025,7 +1052,8 @@
             2
         ],
         "NextLevel": "4-1",
-        "PreviousLevel": "3-11"
+        "PreviousLevel": "3-11",
+        "PlayerSkillSlots": 11
     },
     "4-1": {
         "ID": "4-1",
@@ -1044,7 +1072,8 @@
             0
         ],
         "NextLevel": "4-2",
-        "PreviousLevel": "3-12"
+        "PreviousLevel": "3-12",
+        "PlayerSkillSlots": 12
     },
     "4-2": {
         "ID": "4-2",
@@ -1090,7 +1119,8 @@
             5
         ],
         "NextLevel": "4-3A",
-        "PreviousLevel": "4-1"
+        "PreviousLevel": "4-1",
+        "PlayerSkillSlots": 12
     },
     "4-3A": {
         "ID": "4-3A",

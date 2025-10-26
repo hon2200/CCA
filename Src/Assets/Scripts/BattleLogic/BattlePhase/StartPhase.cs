@@ -9,7 +9,16 @@ public class StartPhase : Singleton<StartPhase>, Phase
     public void OnEnteringPhase()
     {
         BattleManager.Instance.Turn.Advance();
-
+        foreach (var player in PlayerManager.Instance.Players.Values)
+        {
+            foreach (var skill in player.hero.skills)
+            {
+                if (skill is PhasebasedSkill phasebasedSkill)
+                {
+                    phasebasedSkill.OnPhaseStart(player);
+                }
+            }
+        }
         //等待玩家发动技能
         //交互，按钮：问你要不要发动，倒计时
         //如果所有玩家都做好准备

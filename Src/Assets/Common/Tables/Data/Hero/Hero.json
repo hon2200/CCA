@@ -14,20 +14,20 @@
             "Mountain Crusher"
         ]
     },
+    "Zhongkui": {
+        "ID": "Zhongkui",
+        "Name": "钟馗",
+        "MaxHP": 20,
+        "SkillIDList": [
+            "Deathrattle"
+        ]
+    },
     "Huaxiong": {
         "ID": "Huaxiong",
         "Name": "华雄",
         "MaxHP": 40,
         "SkillIDList": [
             "Courage"
-        ]
-    },
-    "Zhongkui": {
-        "ID": "Zhongkui",
-        "Name": "钟馗",
-        "MaxHP": 1,
-        "SkillIDList": [
-            "Deathrattle"
         ]
     },
     "Lvbu": {
