@@ -18,6 +18,7 @@ Key: bullet
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Supply
 ------------------------------------
 Key: double_bullet
 
@@ -37,6 +38,7 @@ Key: double_bullet
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Supply
 ------------------------------------
 Key: sword
 
@@ -56,6 +58,7 @@ Key: sword
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Supply
 ------------------------------------
 Key: double_sword
 
@@ -75,6 +78,7 @@ Key: double_sword
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Supply
 ------------------------------------
 Key: powder_keg
 
@@ -94,6 +98,7 @@ Key: powder_keg
   TargetType:     Self
   Target:     0
   isBasic:     False
+  actionType:     Supply
 ------------------------------------
 Key: triple_bullet
 
@@ -113,6 +118,7 @@ Key: triple_bullet
   TargetType:     Self
   Target:     0
   isBasic:     False
+  actionType:     Supply
 ------------------------------------
 Key: triple_sword
 
@@ -132,6 +138,7 @@ Key: triple_sword
   TargetType:     Self
   Target:     0
   isBasic:     False
+  actionType:     Supply
 ------------------------------------
 Key: stab
 
@@ -151,6 +158,7 @@ Key: stab
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: cleave
 
@@ -170,6 +178,7 @@ Key: cleave
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: laser_stab
 
@@ -189,6 +198,7 @@ Key: laser_stab
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: laser_cleave
 
@@ -208,6 +218,7 @@ Key: laser_cleave
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: ghost_sever
 
@@ -227,6 +238,7 @@ Key: ghost_sever
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: spirit_sever
 
@@ -246,6 +258,7 @@ Key: spirit_sever
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: Excalibur
 
@@ -265,6 +278,7 @@ Key: Excalibur
   TargetType:     Enemy
   Target:     0
   isBasic:     False
+  actionType:     Attack
 ------------------------------------
 Key: shoot
 
@@ -284,6 +298,7 @@ Key: shoot
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: double_shoot
 
@@ -303,6 +318,7 @@ Key: double_shoot
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: laser_shoot
 
@@ -322,6 +338,7 @@ Key: laser_shoot
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: laser_cannon
 
@@ -341,6 +358,7 @@ Key: laser_cannon
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: RPG
 
@@ -360,6 +378,7 @@ Key: RPG
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: double_RPG
 
@@ -379,6 +398,7 @@ Key: double_RPG
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: nuclear_bomb
 
@@ -398,6 +418,7 @@ Key: nuclear_bomb
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Attack
 ------------------------------------
 Key: block
 
@@ -412,6 +433,7 @@ Key: block
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Defend
 ------------------------------------
 Key: double_block
 
@@ -426,6 +448,7 @@ Key: double_block
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Defend
 ------------------------------------
 Key: heavy_block
 
@@ -440,6 +463,7 @@ Key: heavy_block
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Defend
 ------------------------------------
 Key: deflect
 
@@ -454,6 +478,7 @@ Key: deflect
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Defend
 ------------------------------------
 Key: rebounce
 
@@ -468,6 +493,7 @@ Key: rebounce
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Counter
 ------------------------------------
 Key: counterblade
 
@@ -482,6 +508,7 @@ Key: counterblade
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Counter
 ------------------------------------
 Key: disarm
 
@@ -496,6 +523,7 @@ Key: disarm
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Counter
 ------------------------------------
 Key: spectral_reflection
 
@@ -510,6 +538,7 @@ Key: spectral_reflection
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Counter
 ------------------------------------
 Key: comeon
 
@@ -524,6 +553,7 @@ Key: comeon
   TargetType:     Self
   Target:     0
   isBasic:     True
+  actionType:     Special
 ------------------------------------
 Key: provoke
 
@@ -538,4 +568,5 @@ Key: provoke
   TargetType:     Enemy
   Target:     0
   isBasic:     True
+  actionType:     Special
 ------------------------------------
