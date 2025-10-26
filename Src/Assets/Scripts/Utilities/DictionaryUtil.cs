@@ -28,4 +28,13 @@ public static class DictionaryUtil
             kvp => (TParent)kvp.Value // 直接强制转换
         );
     }
+    public static Dictionary<TParent, TValue> ConvertToParentDictionary<TParent, TChild, TValue>(
+   this Dictionary<TChild, TValue> childDict)
+    where TChild : TParent // 约束 TChild 必须继承自 TParent
+    {
+        return childDict.ToDictionary(
+            kvp => (TParent)kvp.Key,
+            kvp => kvp.Value // 直接强制转换
+        );
+    }
 }

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using static System.Collections.Specialized.BitVector32;
+using static UnityEngine.GraphicsBuffer;
 
 public static class RuleCheck
 {
@@ -142,6 +144,97 @@ public static class RuleCheck
                 return true;
             return false;
         }
+    }
+
+    //之后给这些丢到拓展类里面去
+    //检查有哪些行动是合法的
+    //返回从ActionDataBase Clone过来的ActionDefine
+    public static List<T> CheckAction<T>(this Player thisPlayer) where T : ActionDefine
+    {
+        List<T> ActionsWithinRules = new();
+        foreach (var actionID in thisPlayer.AvailableActions)
+        {
+            ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
+            if (actionDefine is T Taction)
+                if (thisPlayer.isActionLegal(actionDefine) && !thisPlayer.isActionFoolish(actionDefine))
+                    ActionsWithinRules.Add((T)Taction.Clone());
+        }
+        return ActionsWithinRules;
+    }
+    public static List<T> CheckAction<T>(this Player thisPlayer,int target) where T : ActionDefine
+    {
+        List<T> ActionTargeting = new();
+
+        foreach (var actionID in thisPlayer.AvailableActions)
+        {
+            ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
+            if (actionDefine is T Taction)
+            {
+                T targetedAction = (T)Taction.Clone();
+                targetedAction.Target = target;
+                if (thisPlayer.isActionLegal(targetedAction) && !thisPlayer.isActionFoolish(targetedAction))
+                    ActionTargeting.Add(targetedAction);
+            }
+        }
+        return ActionTargeting;
+    }
+    public static List<ActionDefine> CheckAction(this Player thisPlayer, ActionType actionType)
+    {
+        List<ActionDefine> ActionsWithinRules = new();
+        foreach (var actionID in thisPlayer.AvailableActions)
+        {
+            ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
+            if (actionDefine.actionType == actionType)
+                if (thisPlayer.isActionLegal(actionDefine) && !thisPlayer.isActionFoolish(actionDefine))
+                    ActionsWithinRules.Add((ActionDefine)actionDefine.Clone());
+        }
+        return ActionsWithinRules;
+    }
+    public static List<ActionDefine> CheckAction(this Player thisPlayer,ActionType actionType, int target)
+    {
+        List<ActionDefine> ActionTargeting = new();
+
+        foreach (var actionID in thisPlayer.AvailableActions)
+        {
+            ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
+            ActionDefine targetedAction = (ActionDefine)actionDefine.Clone();
+            targetedAction.Target = target;
+            if (actionDefine.actionType == actionType)
+                if (thisPlayer.isActionLegal(targetedAction) && !thisPlayer.isActionFoolish(targetedAction))
+                    ActionTargeting.Add(targetedAction);
+        }
+        return ActionTargeting;
+    }
+
+    public static List<T> CheckAllAction<T>(this Player thisPlayer) where T: ActionDefine
+    {
+        List<T> ActionsWithinRules = new();
+        foreach (var actionID in thisPlayer.AvailableActions)
+        {
+            ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
+            if (actionDefine is T Taction)
+            {
+                if (actionDefine.TargetType == TargetType.Self)
+                {
+                    if (thisPlayer.isActionLegal(actionDefine) && !thisPlayer.isActionFoolish(actionDefine))
+                        ActionsWithinRules.Add((T)Taction.Clone());
+                }
+                else if (actionDefine.TargetType == TargetType.Enemy)
+                {
+                    T targetedAction = (T)Taction.Clone();
+                    foreach(var player in PlayerManager.Instance.Players.Values)
+                    {
+                        int target = player.ID_inGame;
+                        targetedAction.Target = target;
+                        if (thisPlayer.isActionLegal(targetedAction) && !thisPlayer.isActionFoolish(targetedAction))
+                            ActionsWithinRules.Add(targetedAction);
+                    }
+
+                }
+            }
+
+        }
+        return ActionsWithinRules;
     }
 
     //威胁度判断函数

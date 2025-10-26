@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 //创建Player需要注意的问题：
 //如果我对Player类进行内部结构调整，只需要改一改Initialize就好。
 //但是我在Player预制体里面拖拽实现调用，这要求我不能再VS或其他Unity外部去调整这个文件的位置
 //我很讨厌Player和PlayerUIText，PlayerEffectController的双向引用，之后想办法简化一下
+
 public class Player : MonoBehaviour
 {
     public int ID_inGame { get; set; }
@@ -81,6 +81,6 @@ public class Player : MonoBehaviour
         {
 
         };
-
     }
+
 }
