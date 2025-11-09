@@ -20,7 +20,6 @@ public class HumanPlayer : Player
     {
         base.Initialize(ID_inGame, PlayerType.Human, 
             Level.PlayerHP, Level.PlayerInitialResource, Level.UnlockedAction);
-        this.status.resources.DreamWill.Set(Level.PlayerSkillSlots);
         OnBirth?.Invoke();
         HumanPlayerListenUp();
     }

@@ -10,6 +10,7 @@ public enum RayStatus
     DragCard = 3,//拖拽卡牌
     ChosseFirstTarget = 4,//在选择第一个目标时
     ChooseMultiTarget = 5,//在选择多个目标，当然同时也可以选择卡牌
+    ExamineCard = 6, //在查看不交互的卡牌时
 }
 
 
@@ -25,7 +26,8 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
     //保存上次停留的物件
     private GameObject lastHoveredCard;
     private GameObject lastHoveredPlayer;
-    private GameObject lastHoveredCardDemo;
+    private GameObject lastHoveredCardPlayed;
+    private GameObject lastHoveredCardView;
     public Player player1;
     public void Update()
     {
@@ -37,14 +39,16 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 card = null;
         MouseAndRayUtil.Hit("Player", out var player);
         MouseAndRayUtil.Hit("CardEffectiveArea", out var area);
-        MouseAndRayUtil.Hit("CardDemo", out var cardDemo);
+        MouseAndRayUtil.Hit("CardPlayed", out var cardDemo);
+        MouseAndRayUtil.Hit("CardView", out var cardView);
         switch (rayStatus)
         {
             case RayStatus.Disable:
                 break;
             case RayStatus.ChooseCard:
                 MouseAndRayUtil.RenewHitting(ref lastHoveredCard, card);
-                MouseAndRayUtil.RenewHitting(ref lastHoveredCardDemo, cardDemo);
+                MouseAndRayUtil.RenewHitting(ref lastHoveredCardPlayed, cardDemo);
+                MouseAndRayUtil.RenewHitting(ref lastHoveredCardView, cardView);
                 //按下鼠标左键删除行动
                 if(Input.GetMouseButtonDown(1))
                 {
@@ -211,12 +215,4 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
     {
         rayStatus = RayStatus.ChooseCard;
     }
-}
-
-//悬停接口
-public interface IHoverable
-{
-    bool IsOnHover();
-    void OnHoverEnter();
-    void OnHoverExit();
 }

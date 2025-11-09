@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
-public class PlayerSelection : MonoBehaviour, IHoverable
+public class PlayerSelection : HoverableBase
 {
     //是否能成为目标
     public bool CanbeSelected = true;
@@ -13,24 +13,22 @@ public class PlayerSelection : MonoBehaviour, IHoverable
     public GameObject ReadyToSelectGlow;
     //确认高亮
     public GameObject SelectionCompletedGlow;
-    public bool onHover;
     #region Interface Realization
-    public bool IsOnHover()
+
+    public override void OnHoverEnter(Vector3? scaleMultiplier, Quaternion? rotationOffset, Vector3? positionOffset,
+                                  Quaternion? rotationFinal, Vector3? positionFinal)
     {
-        return onHover;
-    }
-    public void OnHoverEnter()
-    {
-        if(CanbeSelected)
+        base.OnHoverEnter(scaleMultiplier, rotationOffset, positionOffset, rotationFinal, positionFinal);
+        if (CanbeSelected)
         {
             onHover = true;
             // 悬停效果：发光
             ReadyToSelectGlow.SetActive(true);
         }
     }
-    public void OnHoverExit()
+    public override void OnHoverExit()
     {
-        onHover = false;
+        base.OnHoverExit();
         // 悬停效果：发光
         ReadyToSelectGlow.SetActive(false);
     }

@@ -32,22 +32,22 @@ public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
     private void CreateDemonstratingCard(GameObject oriCard, int target)
     {
         //Copy卡牌
-        GameObject demoCard = Instantiate(oriCard, transform);
+        GameObject playedCard = Instantiate(oriCard, transform);
         //恢复原状并缩小
-        demoCard.GetComponent<CardSelection>().OnHoverExit();
-        demoCard.transform.localScale = Vector3.one * 0.3f;
-        demoCard.transform.rotation = new();
+        playedCard.GetComponent<CardSelection>().OnHoverExit();
+        playedCard.transform.localScale = Vector3.one * 0.3f;
+        playedCard.transform.rotation = new();
         //删去CardSelection
-        //创建并赋值CardDemo
-        var cardSelection = demoCard.GetComponent<CardSelection>();
-        var cardDemo = demoCard.AddComponent<CardDemostration>();
-        cardDemo.target = target;
-        cardDemo.Glow = cardSelection.Glow;
+        //创建并赋值playedCardSelection
+        var cardSelection = playedCard.GetComponent<CardSelection>();
+        var playedCardSelection = playedCard.AddComponent<PlayedCardSelection>();
+        playedCardSelection.target = target;
+        playedCardSelection.Glow = cardSelection.Glow;
         Destroy(cardSelection);
         //移动到card外图层
-        demoCard.layer = LayerMask.NameToLayer("CardDemo");
+        playedCard.layer = LayerMask.NameToLayer("CardPlayed");
         //加入presentCard
-        presentCard.Add(demoCard);
+        presentCard.Add(playedCard);
         ArrangePosition();
     }
     //排布所有用于展示的卡牌

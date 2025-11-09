@@ -7,41 +7,36 @@ using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 //这个类只负责卡牌出入时需要具体做哪些事情
-public class CardSelection : MonoBehaviour, IHoverable
+public class CardSelection : HoverableBase
 {
     public GameObject Glow;
-    private Quaternion rotation_origin;
-    private Vector3 position_origin;
     private int order_origin;
-    public bool OnHover;
+    private CardUI cardUI;
 
-    public bool IsOnHover()
+    void Awake() => cardUI = GetComponent<CardUI>();
+
+    public override void OnHoverEnter(Vector3? scaleMultiplier, Quaternion? rotationOffset, Vector3? positionOffset,
+                                      Quaternion? rotationFinal, Vector3? positionFinal)
     {
-        return OnHover;
-    }
-    // 鼠标进入卡牌范围时调用
-    public void OnHoverEnter()
-    {
+        base.OnHoverEnter(scaleMultiplier, rotationOffset, positionOffset, rotationFinal, positionFinal);
+
         Glow.SetActive(true);
-        //移动到最上层
-        order_origin = gameObject.GetComponent<CardUI>().cardCanvas.sortingOrder;
-        gameObject.GetComponent<CardUI>().PromoteLayerTo(200);
-        OnHover = true;
+        order_origin = cardUI.cardCanvas.sortingOrder;
+        cardUI.PromoteLayerTo(200);
     }
 
-    // 鼠标离开卡牌范围时调用
-    public void OnHoverExit()
+    public override void OnHoverExit()
     {
+        base.OnHoverExit();
         Glow.SetActive(false);
-        gameObject.GetComponent<CardUI>().PromoteLayerTo(order_origin);
-        OnHover = false;
+        cardUI.PromoteLayerTo(order_origin);
     }
 
     public bool HaveTarget()
     {
         string ID = GetComponent<RunTimeCard>().actionDefine.ID;
         ActionDataBase.Instance.ActionDictionary.TryGetValue(ID, out var action);
-        switch(action.TargetType)
+        switch (action.TargetType)
         {
             case TargetType.Self:
                 return false;
@@ -53,3 +48,5 @@ public class CardSelection : MonoBehaviour, IHoverable
         }
     }
 }
+
+

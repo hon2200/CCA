@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-//������дһ��ͨ��UI����Ӣ�۵ĺ���
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
     public int AlivePlayerNumber { get; set; }
-    //ӵ����е�AI��Ԥ���壨Ҳ���ǹ��صĽű�����һ�£�
     public GameObject AIPrefab;
     public GameObject HumanPrefab;
     public Dictionary<int, Player> Players;
@@ -27,17 +24,15 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     #region AI Things
     public void CreateCurrentLevelWave()
     {
-        Debug.Log("���عؿ�" + LevelManager.Instance.Level.ID + "��" + LevelManager.Instance.Level.Wave + "��");
+        Debug.Log("Level ID" + LevelManager.Instance.Level.ID + "Wave " + LevelManager.Instance.Level.Wave);
         LevelDataBase.Instance.LevelDictionary.TryGetValue(LevelManager.Instance.Level.ID, out var levelData);
         CreatingPlayers_BasedOnLevels(levelData, LevelManager.Instance.Level.Wave);
     }
-    //Wave�Ǵӵ�0����ʼ������
     public void CreatingPlayers_BasedOnLevels(LevelDefine levelDefine, int Wave)
     {
         int friendCount = 0, enemyCount = 0, remains = 0;
         if (Wave == 0)
         {
-            //����������
             if (Players != null)
             {
                 List<int> playersToRemove = new List<int>();
@@ -45,7 +40,6 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 {
                     playersToRemove.Add(player.ID_inGame);
                 }
-                // �Ƴ�
                 foreach (int playerId in playersToRemove)
                 {
                     if (Players.TryGetValue(playerId, out var playerToDestroy))
@@ -56,17 +50,13 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                     }
                 }
             }
-            //���½�����
             Players = new Dictionary<int, Player>();
-            //��������
             Player newPlayerH = CreateHuman_BasedOnLevel(1, levelDefine);
             Players.Add(1, newPlayerH);
         }
 
         else
         {
-            //��������������
-            // ���ռ���Ҫ�Ƴ������
             List<int> playersToRemove = new List<int>();
 
             foreach (var player in Players.Values)
@@ -81,18 +71,16 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 }
             }
 
-            // �Ƴ����������
             foreach (int playerId in playersToRemove)
             {
                 if (Players.TryGetValue(playerId, out var playerToDestroy))
                 {
                     Players.Remove(playerId);
-                    Destroy(playerToDestroy.gameObject); // ����player��Component
-                                                         // ���������GameObject��Destroy(playerToDestroy);
+                    Destroy(playerToDestroy.gameObject); 
+                                                         
                 }
             }
         }
-        //����ѷ������㹻�Ĳ����Ļ�
         if (levelDefine.FriendList.Count > Wave)
         {
             friendCount = levelDefine.FriendList[Wave].Count;

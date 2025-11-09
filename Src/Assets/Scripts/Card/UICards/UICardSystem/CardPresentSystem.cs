@@ -70,7 +70,6 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
             newCardArranger.handCards = cards.Value;
             newCardArranger.ArrangeCards();
         }
-
     }
     //处理每一个MenuButton的Onclick
     public void MenuButtonsReady()
@@ -127,8 +126,7 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
         if(CardReady)
             CheckCards();
     }
-    #region 具体实现私有函数
-    private GameObject CreateCard(CardTemplete cardTemplete, Transform parent)
+    public GameObject CreateCard(CardTemplete cardTemplete, Transform parent)
     {
         var newCard = Instantiate(cardTemplete.prefab, parent);
         newCard.name = cardTemplete.name;
@@ -153,8 +151,6 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
                 menu.Value.SetActive(true);
         }
     }
-
-    #endregion
 }
 
 //按次序扇形打开卡牌
@@ -167,9 +163,8 @@ public class CardArranger
     {
         ArrangePosition();
     }
-    private void ArrangePosition()
+    private void ArrangePosition(float angle = 5.0f)
     {
-        const float angle = 5.0f;
         var cardAngle = (handCards.Count - 1) * angle / 2;
         int order = 0;
         for (var i = 0; i < handCards.Count; ++i)

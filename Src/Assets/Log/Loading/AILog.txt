@@ -15,8 +15,10 @@ Key: Toy Grunt
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -36,8 +38,10 @@ Key: Toy Warrior
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -57,8 +61,10 @@ Key: Toy Guardian
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Protective
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -78,8 +84,10 @@ Key: Toy Minion
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -99,8 +107,10 @@ Key: Toy Gentleman
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Cowardly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -125,7 +135,8 @@ Key: Toy Factory
     List`1 (Count: 2)
       [0]:         shoot
       [1]:         double_shoot
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 2)
@@ -150,7 +161,8 @@ Key: Swordsman of Faith
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -174,7 +186,8 @@ Key: Novice Assassin
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -197,7 +210,8 @@ Key: Black Coat
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -220,7 +234,8 @@ Key: Furious Skunk
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -243,7 +258,8 @@ Key: Skunk Slave
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -263,8 +279,10 @@ Key: Skunk Chieftain
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Fucked
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -287,8 +305,10 @@ Key: Shadow of Void
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 4)
@@ -312,8 +332,10 @@ Key: Void Beast
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -336,8 +358,10 @@ Key: Chronos Hand
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Protective
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         bullet
@@ -360,8 +384,10 @@ Key: Mnemosyne Hand
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -384,8 +410,10 @@ Key: Entity of Will
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -409,7 +437,8 @@ Key: Dagger of Void
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -455,8 +484,10 @@ Key: Stronghold Chieftain
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         sword
@@ -481,8 +512,10 @@ Key: Arbiter of Divine
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -505,8 +538,10 @@ Key: Judge of Divine
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         bullet
@@ -529,8 +564,10 @@ Key: Butaro
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Fucked
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -552,8 +589,10 @@ Key: Huntaro
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Fucked
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -577,7 +616,8 @@ Key: Weasel Bandit
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 0)
@@ -597,8 +637,10 @@ Key: One-Eye
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Cowardly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -619,8 +661,10 @@ Key: Weasel Lackey
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Cowardly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -642,8 +686,10 @@ Key: Left Guard
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Protective
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         bullet
@@ -665,8 +711,10 @@ Key: Right Guard
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Protective
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -688,8 +736,10 @@ Key: Guard Captain
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -710,8 +760,10 @@ Key: Shadow_1
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Cowardly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         sword
@@ -735,8 +787,10 @@ Key: Shadow_2
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         sword
@@ -761,8 +815,10 @@ Key: Shadow_3
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         sword
@@ -786,8 +842,10 @@ Key: Hand-Mirage
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         comeon
@@ -811,8 +869,10 @@ Key: Cleric
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Friendly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 2)
@@ -834,8 +894,10 @@ Key: Prism Dancer_1
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 6)
@@ -861,8 +923,10 @@ Key: Prism Dancer_2
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 6)
@@ -888,8 +952,10 @@ Key: Bog Monkey
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Fucked
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         bullet
@@ -911,8 +977,10 @@ Key: Bog Sage
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Protective
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -933,8 +1001,10 @@ Key: Rubber Logistics Soldier
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Cowardly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         bullet
@@ -958,8 +1028,10 @@ Key: Tiger
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         bullet
@@ -984,8 +1056,10 @@ Key: Ghost Warrior
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         ghost_sever
@@ -1013,7 +1087,8 @@ Key: Gustav Railway Cannon
     List`1 (Count: 2)
       [0]:         bullet
       [1]:         sword
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 2)
       [0]:         RPG
@@ -1041,7 +1116,8 @@ Key: Rubber Artillery
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         sword
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 3)
       [0]:         bullet
@@ -1066,8 +1142,10 @@ Key: Voidwarden of Pale
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Friendly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -1091,8 +1169,10 @@ Key: Voidwarden of Abyss
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         bullet
@@ -1116,8 +1196,10 @@ Key: Cursed Tree
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Friendly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -1140,8 +1222,10 @@ Key: Porcupine
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Fucked
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -1164,8 +1248,10 @@ Key: Tree Spirit
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Cowardly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         bullet
@@ -1191,7 +1277,8 @@ Key: Coyote
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         bullet
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -1212,8 +1299,10 @@ Key: Brave·Left Hand
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     null
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -1234,8 +1323,10 @@ Key: Brave·Right Hand
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     null
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -1259,7 +1350,8 @@ Key: Fear
   DisabledAction: 
     List`1 (Count: 1)
       [0]:         spirit_sever
-  EnabledAction:     null
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 2)
@@ -1281,8 +1373,10 @@ Key: Unbroken Will
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Bellicose
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 1)
@@ -1303,8 +1397,10 @@ Key: Brave of Old
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Protective
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -1328,8 +1424,10 @@ Key: Ancestral Brave
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Friendly
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
@@ -1352,8 +1450,10 @@ Key: Oathblade
       [2]:         0
   MonsterDescription:     需要补完
   CharacterID:     Arrogant
-  DisabledAction:     null
-  EnabledAction:     null
+  DisabledAction: 
+    List`1 (Count: 0)
+  EnabledAction: 
+    List`1 (Count: 0)
   PreferedAction: 
     List`1 (Count: 1)
       [0]:         sword
