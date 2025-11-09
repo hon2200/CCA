@@ -698,19 +698,19 @@ PrefabInstance:
       objectReference: {fileID: 1717783350735368765}
     - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: UIText._serializedList.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: UIText._serializedList.Array.data[5].Key
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
-      propertyPath: UIText._serializedList.Array.data[6].Key
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
-      propertyPath: UIText._serializedList.Array.data[7].Key
+      propertyPath: UIText._serializedList.Array.data[6].Key
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
+      propertyPath: UIText._serializedList.Array.data[7].Key
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: UIText._serializedList.Array.data[8].Key
@@ -723,11 +723,11 @@ PrefabInstance:
     - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: UIText._serializedList.Array.data[6].Value
       value: 
-      objectReference: {fileID: 9073651173061773078}
+      objectReference: {fileID: 2117185002636052835}
     - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: UIText._serializedList.Array.data[7].Value
       value: 
-      objectReference: {fileID: 2117185002636052835}
+      objectReference: {fileID: 6658138746605266879}
     - target: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: UIText._serializedList.Array.data[8].Value
       value: 
@@ -826,6 +826,7 @@ MonoBehaviour:
   playerUIText: {fileID: 7818551160829399064}
   playerEffectController: {fileID: 7839075190111606117}
   AvailableActions: []
+  is_stun: 0
 --- !u!114 &7818551160829399064 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -713886484286432495, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}

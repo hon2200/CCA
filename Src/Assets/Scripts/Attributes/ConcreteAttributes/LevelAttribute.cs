@@ -45,8 +45,8 @@ public class LevelAttribute : ObservableString
             PlayerManager.Instance.CreateCurrentLevelWave();
             CardViewSystem.Instance.Show(newLevelData);
             BattleManager.Instance.OnRestarting?.Invoke();
+            SaveLevel();
         }
-        SaveLevel ();
         
     }
     public void Backward()
@@ -56,6 +56,13 @@ public class LevelAttribute : ObservableString
         Wave = 0;
         LevelDataBase.Instance.LevelDictionary.TryGetValue(levelData.PreviousLevel, out var newLevelData);
         Name = newLevelData.Name;
+        SetLevel();
+        SaveLevel();
+    }
+
+    public void FirstWave()
+    {
+        Wave = 0;
         SetLevel();
         SaveLevel();
     }

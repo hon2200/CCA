@@ -12,7 +12,7 @@ using static UnityEngine.EventSystems.EventTrigger;
 public static class AttackLogic
 {
     //假设攻击生效后调用这个函数
-    public static void HowtoAttack(this AttackDefine attack ,Player attacker, Player victim)
+    public static void HowtoAttack(this AttackDefine attack ,Player attacker, Player victim, Player rebouncer = null)
     {
         Debug.Log("111111");
         switch (attack.ID)
@@ -38,6 +38,10 @@ public static class AttackLogic
 
         }
         attack.Victim = victim.ID_inGame;
+        if (rebouncer != null)
+            victim.possibleKillers.Add(rebouncer.ID_inGame);
+        else
+            victim.possibleKillers.Add(attacker.ID_inGame);
     }
     //调用这两个个函数可以判断一个攻击是否被防御或者反制，返回所有生效的反制类型
     public static List<DefendDefine> WatchoutforDefend( this AttackDefine attack ,Player enemy)
@@ -125,7 +129,7 @@ public static class CounterLogic
                 VFXManager.Instance.PlayPointEffect(false, "Defend", victim.gameObject);
                 //创建并添加反击路线
                 VFXManager.Instance.PlayTrailEffect(false, "Shoot", victim.gameObject, attacker.gameObject,0,0.3f);
-                attack.HowtoAttack(attacker, attacker);
+                attack.HowtoAttack(attacker, attacker, victim);
                 break;
             default:
                 throw new Exception("Wrong Counter Type");

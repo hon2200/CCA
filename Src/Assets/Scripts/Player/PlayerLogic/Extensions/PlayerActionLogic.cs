@@ -144,10 +144,10 @@ public static class PlayerActionLogic
     //一个玩家调用这个函数可以看到他历史记录里头某一回合某一类型的行动列
     public static List<Type> SelectActionType_inHistory<Type>(this Player player, int Turn, bool isProcessed) where Type : ActionDefine
     {
-        if (Turn == 0)
-            return new();
         List<Type> list = new();
         player.action.LongHistory.TryGetValue((Turn, isProcessed), out var actionList);
+        if (actionList == null)
+            return new();
         foreach (ActionDefine action in actionList)
         {
             if (action is Type typedAction)

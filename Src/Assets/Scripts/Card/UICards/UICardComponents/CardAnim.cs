@@ -19,7 +19,7 @@ public class 卡牌动画 : MonoBehaviour
 
     // 卡牌缓存相关
     [Header("卡牌缓存")]
-    [SerializeField] private CardSelection[] ChildrenCards; // 所有子卡牌的CardSelection组件缓存
+    [SerializeField] private CardSelection_[] ChildrenCards; // 所有子卡牌的CardSelection组件缓存
     [SerializeField] private Vector3[] Positions;     // 卡牌初始位置缓存
     [SerializeField] private Quaternion[] Rotations; // 卡牌初始旋转缓存
     [SerializeField] private Vector3[] TargetPositions; // 卡牌目标位置缓存
@@ -88,7 +88,7 @@ public class 卡牌动画 : MonoBehaviour
     private void InitializeCardCache()
     {
         // 获取所有子卡牌的CardSelection组件
-        ChildrenCards = GetComponentsInChildren<CardSelection>();
+        ChildrenCards = GetComponentsInChildren<CardSelection_>();
 
         // 初始化各缓存数组
         Positions = new Vector3[ChildrenCards.Length];

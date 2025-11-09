@@ -7,6 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int ID_inGame { get; set; }
+    public string Name { get; set; }
     public PlayerStatus status { get; set; }
     public PlayerAction action { get; set; }
     public PlayerType playerType { get; set; }
@@ -15,15 +16,17 @@ public class Player : MonoBehaviour
 
     public PlayerUIText playerUIText;
     public PlayerEffectController playerEffectController;
-    public List<string> AvailableActions;
+    public List<string> AvailableActions { get; set; }
+    public List<int> possibleKillers { get; set; }
     public Action OnBirth;
     public bool is_stun = false;
 
-    protected void Initialize(int ID_inGame, PlayerType playerType,
+    protected void Initialize(int ID_inGame, string Name, PlayerType playerType,
         int MaxHP, List<int> InitialResource = null, List<string> AvailableActions = null,
          HeroDefine heroDefine = null)
     {
         this.ID_inGame = ID_inGame;
+        this.Name = Name;
         if (InitialResource == null)
             InitialResource = new() { 0, 0, 0 };
         this.status = new(MaxHP, InitialResource);
@@ -70,6 +73,8 @@ public class Player : MonoBehaviour
         {
 
         };
+
+        possibleKillers = new();
 
     }
 }

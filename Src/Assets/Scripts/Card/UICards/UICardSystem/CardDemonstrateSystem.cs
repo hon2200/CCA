@@ -25,7 +25,7 @@ public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
             CardPresentSystem.Instance.FindCard(action.ID, out var card);
             if (card != null)
             {
-                var cardSelection = card.GetComponent<CardSelection>();
+                var cardSelection = card.GetComponent<CardSelection_>();
                 bool haveTarget = cardSelection.HaveTarget();
                 if (haveTarget)
                     CreateDemonstratingCard(card, action.Target);
@@ -42,12 +42,12 @@ public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
         //Copy卡牌
         GameObject playedCard = Instantiate(oriCard, transform);
         //恢复原状并缩小
-        playedCard.GetComponent<CardSelection>().OnHoverExit();
+        playedCard.GetComponent<CardSelection_>().OnHoverExit();
         playedCard.transform.localScale = Vector3.one * 0.3f;
         playedCard.transform.rotation = new();
         //删去CardSelection
         //创建并赋值playedCardSelection
-        var cardSelection = playedCard.GetComponent<CardSelection>();
+        var cardSelection = playedCard.GetComponent<CardSelection_>();
         var playedCardSelection = playedCard.AddComponent<PlayedCardSelection>();
         playedCardSelection.target = target;
         playedCardSelection.Glow = cardSelection.Glow;

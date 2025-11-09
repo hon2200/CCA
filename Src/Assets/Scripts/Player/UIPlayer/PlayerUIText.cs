@@ -49,6 +49,9 @@ public class PlayerUIText : MonoBehaviour
                 case PlayerUITextName.ID:
                     text.Value.text = player.ID_inGame.ToString();
                     break;
+                case PlayerUITextName.Name:
+                    text.Value.text = player.Name.ToString();
+                    break;
                 case PlayerUITextName.AvailableAction:
                     string result = string.Join("\n", player.AvailableActions);
                     text.Value.text = result;
@@ -65,11 +68,6 @@ public class PlayerUIText : MonoBehaviour
                         aiPlayer.IntendedType.OnValueChanged += (oldVal, newVal, opType) =>
                         UpdatePlayerText(text.Value, aiPlayer.IntendedType.Value);
                         UpdatePlayerText(text.Value, aiPlayer.IntendedType.Value);
-                        break;
-                    case PlayerUITextName.Honesty:
-                        aiPlayer.Honest.OnValueChanged += (oldVal, newVal, opType) =>
-                        UpdatePlayerText(text.Value, aiPlayer.Honest.Value);
-                        UpdatePlayerText(text.Value, aiPlayer.Honest.Value);
                         break;
                     case PlayerUITextName.Emotion:
                         aiPlayer.Emo.OnValueChanged += (oldVal, newVal, opType) =>
@@ -118,12 +116,12 @@ public class UITextBindingConfig
 public enum PlayerUITextName
 {
     ID = 0,
-    HP = 1,
-    Bullet = 2,
-    Sword = 3,
-    AvailableAction = 4,
-    Character = 5,
-    Honesty = 6,
+    Name = 1,
+    HP = 2,
+    Bullet = 3,
+    Sword = 4,
+    AvailableAction = 5,
+    Character = 6,
     Emotion = 7,
-    Intention = 8,
+    Intention = 8
 }

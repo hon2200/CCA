@@ -1,17 +1,18 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+
 public class PlayerSelection : HoverableBase
 {
-    //æ˜¯å¦èƒ½æˆä¸ºç›®æ ‡
+    //ÊÇ·ñÄÜ³ÉÎªÄ¿±ê
     public bool CanbeSelected = true;
-    //å³å°†é€‰æ‹©é«˜äº®
+    //¼´½«Ñ¡Ôñ¸ßÁÁ
     public GameObject ReadyToSelectGlow;
-    //ç¡®è®¤é«˜äº®
+    //È·ÈÏ¸ßÁÁ
     public GameObject SelectionCompletedGlow;
     #region Interface Realization
 
@@ -22,14 +23,14 @@ public class PlayerSelection : HoverableBase
         if (CanbeSelected)
         {
             onHover = true;
-            // æ‚¬åœæ•ˆæœï¼šå‘å…‰
+            // ĞüÍ£Ğ§¹û£º·¢¹â
             ReadyToSelectGlow.SetActive(true);
         }
     }
     public override void OnHoverExit()
     {
         base.OnHoverExit();
-        // æ‚¬åœæ•ˆæœï¼šå‘å…‰
+        // ĞüÍ£Ğ§¹û£º·¢¹â
         ReadyToSelectGlow.SetActive(false);
     }
     #endregion

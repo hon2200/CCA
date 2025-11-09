@@ -5,15 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-//悬停接口
-public interface IHoverable
-{
-    bool IsOnHover();
-    void OnHoverEnter(Vector3? scaleMultiplier = null, Quaternion? rotationOffset = null, Vector3? positionOffset = null,
-        Quaternion? rotationFinal = null, Vector3? positionFinal = null);
-    void OnHoverExit();
-}
-
 public abstract class HoverableBase : MonoBehaviour, IHoverable
 {
     protected Quaternion rotationOrigin;
@@ -55,4 +46,14 @@ public abstract class HoverableBase : MonoBehaviour, IHoverable
         transform.localScale = scaleOrigin;
         onHover = false;
     }
+}
+
+
+//悬停接口
+public interface IHoverable
+{
+    bool IsOnHover();
+    void OnHoverEnter(Vector3? scaleMultiplier = null, Quaternion? rotationOffset = null, Vector3? positionOffset = null,
+        Quaternion? rotationFinal = null, Vector3? positionFinal = null);
+    void OnHoverExit();
 }

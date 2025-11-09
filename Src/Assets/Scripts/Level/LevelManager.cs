@@ -49,6 +49,7 @@ public class LevelManager : MonoSingleton<LevelManager>
     //重新开始
     public void Restart()
     {
+        Level.FirstWave();
         PlayerManager.Instance.CreateCurrentLevelWave();
         BattleManager.Instance.OnRestarting?.Invoke();
     }

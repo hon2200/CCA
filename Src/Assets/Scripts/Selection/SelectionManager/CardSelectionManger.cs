@@ -79,7 +79,7 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 //鼠标在上面按住开始进入使用卡牌的下一阶段
                 else if (Input.GetMouseButton(0))
                 {
-                    if (card.GetComponent<CardSelection>().HaveTarget())
+                    if (card.GetComponent<CardSelection_>().HaveTarget())
                         rayStatus = RayStatus.ChosseFirstTarget;
                     else
                         rayStatus = RayStatus.DragCard;
@@ -102,12 +102,12 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                             lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
                             player1.ID_inGame, "Player");
                         player1.Consume(newMove);
-                        lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
+                        lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         rayStatus = RayStatus.ChooseCard;
                     }
                     else
                     {
-                        lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
+                        lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         rayStatus = RayStatus.ChooseCard;
                     }
                 }
@@ -130,14 +130,14 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                             lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
                             target, "Player");
                         player1.Consume(newMove);
-                        lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
+                        lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         Arrow.Instance.DeActive();
                         rayStatus = RayStatus.ChooseMultiTarget;
                         player.GetComponent<PlayerSelection>().OnSelect();
                     }
                     else
                     {
-                        lastHoveredCard.GetComponent<CardSelection>().OnHoverExit();
+                        lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         Arrow.Instance.DeActive();
                         rayStatus = RayStatus.ChooseCard;
                     }

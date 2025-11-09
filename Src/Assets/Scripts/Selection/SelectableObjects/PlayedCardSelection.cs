@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class PlayedCardSelection : CardSelection
+public class PlayedCardSelection : CardSelection_
 {
     public int target;
     public override void OnHoverEnter(Vector3? scaleMultiplier, Quaternion? rotationOffset, Vector3? positionOffset, Quaternion? rotationFinal, Vector3? positionFinal)

@@ -22,7 +22,7 @@ public class PlayerAction : ObservableList<ActionDefine>
     //行动历史//使用整个变量存储//可以访问到历史行动经过一系列buff后的最终结算参数
     // key: (turnNumber, isProcessed), value: 该回合的行动快照
 
-    public Dictionary<(int, bool), List<ActionDefine>> LongHistory { get; } = new();
+    public Dictionary<(int, bool), List<ActionDefine>> LongHistory { private set; get; } = new();
 
     // 读取当前行动到历史记录
     public void ReadinHistory(bool isProcessed)
@@ -76,5 +76,10 @@ public class PlayerAction : ObservableList<ActionDefine>
     public void ClearMove(string Case)
     {
         Clear("Clear_" + Case);
+    }
+
+    public void ClearHistory()
+    {
+        LongHistory = new();
     }
 }

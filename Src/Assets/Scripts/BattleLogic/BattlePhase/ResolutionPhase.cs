@@ -3,13 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-//�غϽ���׶νű�
-//����ű����ڵ����⣺����������Player����ڲ��ṹ��һ��Player�෢���ı䣬�����������������ö���Ҫ������
-//�ؼ����������ⲻֹ������ű����棬�����ϵ������У�Player���ڲ���Status��ActionҲ����������ϡ�
-//��ô���أ�
-//����Ѵ���ֿ���һ�㣬��Player������ר�ŷ�һ��������������ز������������������Ĺ��ܾͻ�򵥺ܶ࣬
-//��Ϊ���˽���׶Σ�һЩ�����ط�Ҳ���õ����㺯����������һ
-//Player���Լ��ĺ����������Լ��ڲ��ṹ�����û���κ����⣬������������ⲿ�������������
+
 public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
 {
     public void OnEnteringPhase()
@@ -20,15 +14,13 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         Resolution();
         PrintEvent.Instance.PrintResult();
         PrintResult_Debug();
-        //����׶β��ȴ����
         BattleManager.Instance.PhaseAdvance();
     }
     public void OnExitingPhase()
     {
-
+        ClearPossibleKillers();
     }
-    //����׶Σ������ҵ��ж�
-    //����Ŀǰ��û�������buff�����Խ���׶ξ���д������
+
     public void Resolution()
     {
         foreach (var player in PlayerManager.Instance.Players.Values)
@@ -49,12 +41,22 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             player.Supply();
             player.Attack();
         }
-        //����֮�����ް취��������
+
         KnockofDeath();
 
-        //��Ӯ�ж�
         CheckofDeath();
         CheckofVictory();
+
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            foreach(var skill in player.hero.skills)
+            {
+                if(skill is PhasebasedSkill phasebased)
+                {
+                    phasebased.AfterResolution(player);
+                }
+            }
+        }
 
         PrintResult_Debug();
     }
@@ -83,7 +85,8 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         {
             if (player.status.life.Value == LifeStatus.EdgeofDeath)
             {
-                if (player.hero.ID == "Zhongkui")
+                ///
+/*                if (player.hero.ID == "Zhongkui")
                 {
                  
                     var nukeAction = (AttackDefine)ActionDataBase.Instance.ActionDictionary["nuclear_bomb"];
@@ -100,6 +103,12 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
                 //交互按钮亮起
                 //��ťOnclick+(){������˵�}
                 //发动大核弹
+*/
+                foreach(var killerID in player.possibleKillers)
+                {
+                    PlayerManager.Instance.Players.TryGetValue(killerID, out var killer);
+                    killer.status.resources.Bullet.Get(HeadGain(player.status.MaxHP));
+                }
                 player.status.life.DieOut();
             }
         }
@@ -125,5 +134,18 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             }
         }
         BattleManager.Instance.OnWinning.Invoke();
+    }
+
+    public void ClearPossibleKillers()
+    {
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            player.possibleKillers.Clear();
+        }
+    }
+    
+    private int HeadGain(int HP)
+    {
+        return HP / 5 + 2;
     }
 }

@@ -270,10 +270,6 @@ public static class RuleCheck
                         ActionDefine targetedAction = (ActionDefine)actionDefine.Clone();
                         int target = player.ID_inGame;
                         targetedAction.Target = target;
-                        if (targetedAction.ID == "provoke")
-                        {
-                            Debug.Log("Find you");
-                        }
                         if (thisPlayer.isActionLegal(targetedAction) && !thisPlayer.isActionFoolish(targetedAction))
                             ActionsWithinRules.Add(targetedAction);
                     }
