@@ -1198,11 +1198,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8366030100586586317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdeea2b478beb7940bf9c17472400fe9, type: 3}
+  m_Script: {fileID: 11500000, guid: cc3db8c2284e8924bae0c971ef752fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Glow: {fileID: 8451157574520831295}
-  OnHover: 0
 --- !u!210 &1080148712981099101
 SortingGroup:
   m_ObjectHideFlags: 0

@@ -895,13 +895,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2879334617743548941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51557e4e6fd2d2243a8c9232c02fe777, type: 3}
+  m_Script: {fileID: 11500000, guid: 426ed732bca570247a6788b095c35ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CanbeSelected: 1
   ReadyToSelectGlow: {fileID: 7731456888086681510}
   SelectionCompletedGlow: {fileID: 2766565920385926276}
-  onHover: 0
 --- !u!65 &6491656153353715801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -938,6 +937,7 @@ MonoBehaviour:
   playerUIText: {fileID: -713886484286432495}
   playerEffectController: {fileID: 8529584079215910508}
   AvailableActions: []
+  is_stun: 0
 --- !u!114 &8529584079215910508
 MonoBehaviour:
   m_ObjectHideFlags: 0

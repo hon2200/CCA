@@ -68,7 +68,7 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
         {
             CardArranger newCardArranger = new();
             newCardArranger.handCards = cards.Value;
-            newCardArranger.ArrangeCards();
+            newCardArranger.ArrangeRadius();
         }
     }
     //处理每一个MenuButton的Onclick
@@ -157,14 +157,34 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
 public class CardArranger
 {
     public List<GameObject> handCards = new();
-    private const float CenterRadius = 16.0f;
-    private Vector3 centerPoint = new Vector3(0.0f, -19.8f, 0.0f);
-    public void ArrangeCards()
+    private Vector3 CenterPoint = new Vector3(0, -4f, 0);
+
+    public void ArrangeLine(float spacing = 1.5f)
     {
-        ArrangePosition();
+        int count = handCards.Count;
+        if (count == 0) return;
+
+        int order = 0;
+        // Calculate start X so cards are centered
+        float startX = CenterPoint.x - (spacing * (count - 1) / 2f);
+
+        for (int i = 0; i < count; i++)
+        {
+            var card = handCards[i];
+            // Position each card along the x-axis
+            Vector3 position = new Vector3(startX + i * spacing, CenterPoint.y, 0f);
+            // Keep rotation flat
+            Quaternion rotation = Quaternion.identity;
+
+            order += 10;
+            card.transform.position = position;
+            card.transform.rotation = rotation;
+            card.GetComponent<CardUI>().PromoteLayerTo(order);
+        }
     }
-    private void ArrangePosition(float angle = 5.0f)
+    public void ArrangeRadius(float angle = 5.0f, float centerRadius = 16.0f)
     {
+        var centerPoint = CenterPoint - new Vector3(0, centerRadius, 0);
         var cardAngle = (handCards.Count - 1) * angle / 2;
         int order = 0;
         for (var i = 0; i < handCards.Count; ++i)
@@ -174,7 +194,7 @@ public class CardArranger
             // Move.
             //高度值决定了卡牌的层级，但是UI的显示依然可能出问题
             order += 10;
-            var position = CalculateCardPosition(cardAngle - i * angle);
+            var position = CalculateCardPosition(cardAngle - i * angle, centerPoint, centerRadius);
             //Give Value.
             handCards[i].transform.position = position;
             handCards[i].transform.rotation = rotation;
@@ -182,11 +202,12 @@ public class CardArranger
             handCards[i].GetComponent<CardUI>().PromoteLayerTo(order);
         }
     }
-    private Vector3 CalculateCardPosition(float angle)
+
+    private Vector3 CalculateCardPosition(float angle, Vector3 centerPoint, float centerRadius)
     {
         return new Vector3(
-            centerPoint.x - CenterRadius * Mathf.Sin(Mathf.Deg2Rad * angle),
-            centerPoint.y + CenterRadius * Mathf.Cos(Mathf.Deg2Rad * angle),
+            centerPoint.x - centerRadius * Mathf.Sin(Mathf.Deg2Rad * angle),
+            centerPoint.y + centerRadius * Mathf.Cos(Mathf.Deg2Rad * angle),
             0.0f);
     }
 }
