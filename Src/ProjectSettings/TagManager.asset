@@ -16,8 +16,8 @@ TagManager:
   - Card
   - Player
   - CardEffectiveArea
-  - CardDemo
-  - 
+  - CardPlayed
+  - CardView
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: CardPicture
     uniqueID: 3562457987
+    locked: 0
+  - name: Pop up Panel
+    uniqueID: 3096689059
     locked: 0
