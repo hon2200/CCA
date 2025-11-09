@@ -31,6 +31,7 @@ public class LevelAttribute : ObservableString
             LevelManager.Instance.AdvanceButton.SetActive(false);
             PlayerManager.Instance.CreateCurrentLevelWave();
             BattleManager.Instance.OnNewWave?.Invoke();
+            Debug.Log("New Wave");
         }
 
         //过关大吉
@@ -42,6 +43,7 @@ public class LevelAttribute : ObservableString
             Name = newLevelData.Name;
             SetLevel();
             PlayerManager.Instance.CreateCurrentLevelWave();
+            CardViewSystem.Instance.Show(newLevelData);
             BattleManager.Instance.OnRestarting?.Invoke();
         }
         SaveLevel ();

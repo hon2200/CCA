@@ -11,7 +11,7 @@ public class PlayedCardSelection : CardSelection
     public override void OnHoverEnter(Vector3? scaleMultiplier, Quaternion? rotationOffset, Vector3? positionOffset, Quaternion? rotationFinal, Vector3? positionFinal)
     {
         base.OnHoverEnter(scaleMultiplier, rotationOffset, positionOffset, rotationFinal, positionFinal);
-        if(base.HaveTarget())
+        if (target != -1)
         {
             //显示目标：
             PlayerManager.Instance.Players.TryGetValue(target, out var player);

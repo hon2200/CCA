@@ -37,6 +37,7 @@ class BattleManager: MonoSingleton<BattleManager>
         OnNewWave += () =>
         {
             CurrentPhaseIndex = 0;
+            Turn.Clear();
             StartPhase.Instance.OnEnteringPhase();
         };
     }

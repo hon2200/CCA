@@ -159,7 +159,7 @@ public class CardArranger
     public List<GameObject> handCards = new();
     private Vector3 CenterPoint = new Vector3(0, -4f, 0);
 
-    public void ArrangeLine(float spacing = 1.5f)
+    public void ArrangeLine(float spacing = 1.5f, float yOffset = 1f)
     {
         int count = handCards.Count;
         if (count == 0) return;
@@ -172,7 +172,7 @@ public class CardArranger
         {
             var card = handCards[i];
             // Position each card along the x-axis
-            Vector3 position = new Vector3(startX + i * spacing, CenterPoint.y, 0f);
+            Vector3 position = new Vector3(startX + i * spacing, CenterPoint.y+yOffset, 0f);
             // Keep rotation flat
             Quaternion rotation = Quaternion.identity;
 

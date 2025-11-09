@@ -18,8 +18,8 @@ public class HumanPlayer : Player
     //创建闯关过程的玩家
     public void InitializePlayer(int ID_inGame, LevelDefine Level)
     {
-        base.Initialize(ID_inGame, PlayerType.Human, 
-            Level.PlayerHP, Level.PlayerInitialResource, Level.UnlockedAction);
+        base.Initialize(ID_inGame, PlayerType.Human,
+            Level.PlayerHP, Level.PlayerInitialResource, Level.GetAllUnlockedActions());
         OnBirth?.Invoke();
         HumanPlayerListenUp();
     }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static UnityEngine.GraphicsBuffer;
 
 public class CardViewSystem : MonoSingleton<CardViewSystem>
@@ -40,14 +41,21 @@ public class CardViewSystem : MonoSingleton<CardViewSystem>
             GameObject newCard = CardPresentSystem.Instance.CreateCard(card, CardPanel.transform);
             //移动到card外图层
             newCard.layer = LayerMask.NameToLayer("CardView");
+            SortingGroup sg = newCard.GetComponent<SortingGroup>();
+            sg.sortingLayerName = "Pop up Panel";
             Cards.Add(newCard);
+            // Promote Order
+            CardUI cardUI = newCard.GetComponent<CardUI>();
+            cardUI.PromoteLayer(2);
+            //Smaller
+            newCard.transform.localScale *= 0.6f;
         }
     }
     public void ArrangeCards()
     {
         CardArranger newCardArranger = new();
         newCardArranger.handCards = Cards;
-        newCardArranger.ArrangeLine();
+        newCardArranger.ArrangeLine(5f);
     }
 
 }

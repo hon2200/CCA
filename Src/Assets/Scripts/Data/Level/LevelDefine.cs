@@ -19,4 +19,20 @@ public class LevelDefine
     public List<int> PlayerInitialResource { get; set; }
     public string NextLevel { get; set; }
     public string PreviousLevel { get; set; }
+
+    public List<string> GetAllUnlockedActions()
+    {
+        List<string> availableActions = new();
+        List<LevelDefine> previousLevels = new();
+        LevelDataBase.Instance.LevelDictionary.TryGetValue(ID, out var currentLevel);
+        previousLevels.Add(currentLevel);
+        availableActions.AddRange(currentLevel.UnlockedAction);
+        while (previousLevels[previousLevels.Count - 1].PreviousLevel != null)
+        {
+            LevelDataBase.Instance.LevelDictionary.TryGetValue(previousLevels[previousLevels.Count - 1].PreviousLevel, out var anotherLevel);
+            previousLevels.Add(anotherLevel);
+            availableActions.AddRange(anotherLevel.UnlockedAction);
+        }
+        return availableActions;
+    }
 }

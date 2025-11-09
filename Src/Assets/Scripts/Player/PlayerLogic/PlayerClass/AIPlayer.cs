@@ -19,7 +19,7 @@ public class AIPlayer : Player
     //创造闯关过程中的AI
     public void Initialize(int ID_inGame, AIDefine aIDefine, bool isFriend, LevelDefine Level)
     {
-        var availableAction = Level.UnlockedAction
+        var availableAction = Level.GetAllUnlockedActions()
             .Concat(aIDefine.EnabledAction)
             .Except(aIDefine.DisabledAction)
             .ToList();

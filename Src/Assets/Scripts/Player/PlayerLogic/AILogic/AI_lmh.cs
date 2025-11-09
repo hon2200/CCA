@@ -44,6 +44,8 @@ public class AI_lmh
     }
     public ActionDefine SmartSelectAction(ActionType actionType, List<ActionDefine> availableActionList)
     {
+        if (availableActionList.Count == 0 || availableActionList == null)
+            Debug.Assert(false, "No Available");
         System.Random rand = new System.Random();
         switch (actionType)
         {
@@ -272,6 +274,7 @@ public class AI_lmh
 
         // 第三步：从选定的类别中通过权重的方式选择一个行动
         var mySelection = SmartSelectAction(selectedActionType, availableActionsByCategory[selectedActionType]);
+        
         AIThinkingProcess.Append($"\n最终选择: {selectedActionType} 类别的 {mySelection.ID}");
         MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
         return mySelection;

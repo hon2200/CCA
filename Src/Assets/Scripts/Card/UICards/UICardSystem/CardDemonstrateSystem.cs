@@ -24,12 +24,20 @@ public class CardDemonstrateSystem : MonoSingleton<CardDemonstrateSystem>
         {
             CardPresentSystem.Instance.FindCard(action.ID, out var card);
             if (card != null)
-                CreateDemonstratingCard(card, action.Target);
+            {
+                var cardSelection = card.GetComponent<CardSelection>();
+                bool haveTarget = cardSelection.HaveTarget();
+                if (haveTarget)
+                    CreateDemonstratingCard(card, action.Target);
+                else
+                    CreateDemonstratingCard(card);
+            }
+
         }
         ArrangePosition();
     }
     //复制一个卡牌用于展示
-    private void CreateDemonstratingCard(GameObject oriCard, int target)
+    private void CreateDemonstratingCard(GameObject oriCard, int target = -1)
     {
         //Copy卡牌
         GameObject playedCard = Instantiate(oriCard, transform);
