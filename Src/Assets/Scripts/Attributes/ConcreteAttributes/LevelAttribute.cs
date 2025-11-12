@@ -28,8 +28,6 @@ public class LevelAttribute : ObservableString
         {
             Wave++;
             SetLevel();
-            LevelManager.Instance.AdvanceButton.SetActive(false);
-            PlayerManager.Instance.CreateCurrentLevelWave();
             BattleManager.Instance.OnNewWave?.Invoke();
             Debug.Log("New Wave");
         }
@@ -42,9 +40,8 @@ public class LevelAttribute : ObservableString
             Wave = 0;
             Name = newLevelData.Name;
             SetLevel();
-            PlayerManager.Instance.CreateCurrentLevelWave();
             CardViewSystem.Instance.Show(newLevelData);
-            BattleManager.Instance.OnRestarting?.Invoke();
+            BattleManager.Instance.OnStartGame?.Invoke("Level");
             SaveLevel();
         }
         

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
+using UnityEngine.UIElements;
 using static UnityEngine.ParticleSystem;
 
 /// <summary>
@@ -19,6 +19,10 @@ public class VFXBase : MonoBehaviour
 
     [Tooltip("预定配置")]
     public VFXConfig currentConfig;
+
+    public void Update()
+    {
+    }
 
     public virtual void Init()
     {
@@ -54,33 +58,50 @@ public class VFXBase : MonoBehaviour
     /// <summary>
     /// 播放轨迹特效
     /// </summary>
-    public virtual void PlayTrailEffect(Vector3 start, Vector3 end, float duration)
+    public virtual void PlayTrailEffect(Vector3 origin, Vector3 target)
     {
+        var ps = GetComponent<ParticleSystem>();
+        if (ps == null)
+        {
+            Debug.LogWarning("No ParticleSystem found on VFXBase!");
+            return;
+        }
 
-        transform.position = start;
-        if (PSystem == null) return;            
-        float distance = Vector3.Distance(start, end);            
-        var main = PSystem.main;            
-        main.startSpeed = distance / duration;            
-        main.startLifetime = duration;           
-        main.gravityModifier = 0f;            
-        main.simulationSpace = ParticleSystemSimulationSpace.World;            
-        transform.rotation = Quaternion.LookRotation(end - start);            
-        PSystem.Play();
-        StartCoroutine(DestroyAfterDuration(duration));
+
+        transform.position = origin;
+        transform.rotation = Quaternion.LookRotation(target - origin);
+        // Project onto XY plane
+        origin.z = 0;
+        target.z = 0;
+
+        // Compute direction & distance
+        Vector3 dir = (target - origin).normalized;
+        float distance = Vector3.Distance(origin, target);
+
+        // Orient system to point toward target
+        
+
+        // Get particle speed (assuming constant startSpeed)
+        var main = ps.main;
+        float startSpeed = main.startSpeed.constantMax;
+        float travelTime = distance / startSpeed;
+
+        // Play system
+        ps.Play();
+
+        // Destroy after travel time + lifetime buffer
+        float destroyDelay = travelTime;
+
+        Destroy(gameObject, destroyDelay);
     }
 
     /// <summary>
     /// 播放定点特效
     /// </summary>
-    public virtual void PlayPointEffect(Vector3 position, float duration)
+    public virtual void PlayPointEffect(Vector3 position, float duration = 10)
     {
         transform.position = position;
-        if (PSystem == null) return;
-        var main = PSystem.main;
-        main.startLifetime = duration;
-        PSystem.Play();
-        IsFinished = false;
+
         StartCoroutine(DestroyAfterDuration(duration));
     }
 
@@ -156,10 +177,6 @@ public class VFXBase : MonoBehaviour
     private IEnumerator DestroyAfterDuration(float duration)
     {
         yield return new WaitForSeconds(duration);
-        while (PSystem.isPlaying == true)
-        {
-            yield return new WaitForSeconds(0.5f);
-        }
         IsFinished = true;
     }
 }

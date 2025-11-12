@@ -26,7 +26,7 @@ public class HumanPlayer : Player
     //创建英雄模式的玩家
     public void InitializePlayer(int ID_inGame, HeroDefine heroDefine)
     {
-        base.Initialize(ID_inGame, "Player", PlayerType.Human, heroDefine.MaxHP, null, null, heroDefine);
+        base.Initialize(ID_inGame, "Player", PlayerType.Human, heroDefine.MaxHP, null, null, heroDefine.ID, heroDefine.SkillIDList);
         OnBirth?.Invoke();
         HumanPlayerListenUp();
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    public bool global = true;
+    public bool global = false;
     static T instance;
     public static T Instance
     {

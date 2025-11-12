@@ -10,10 +10,10 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     {
         EventPanelLogic.Instance.OpenEventPanel();
         PrintEvent.Instance.ClearText();
-        PrintEvent.Instance.PrintAction();
+        PrintEvent.Instance.LogAction();
         Resolution();
-        PrintEvent.Instance.PrintResult();
         PrintResult_Debug();
+        PrintEvent.Instance.PrintResult();
         BattleManager.Instance.PhaseAdvance();
     }
     public void OnExitingPhase()
@@ -25,8 +25,8 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     {
         foreach (var player in PlayerManager.Instance.Players.Values)
         {
-            player.Consume();
-            player.CoolDownSword();
+            player.ConsumeAndCD();
+            player.CoolDown();
         }
         foreach (var player in PlayerManager.Instance.Players.Values)
         {
@@ -43,7 +43,6 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         }
 
         KnockofDeath();
-
         CheckofDeath();
         CheckofVictory();
 
@@ -76,44 +75,46 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             MyLog.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
                 "action", "Log/InGame/PlayerAction.txt",false);
         }
-
     }
 
     public void KnockofDeath()
     {
-        foreach(var player in PlayerManager.Instance.Players.Values)
+        var playersSnapshot = PlayerManager.Instance.Players.Values.ToList();
+
+        foreach (var player in playersSnapshot)
         {
             if (player.status.life.Value == LifeStatus.EdgeofDeath)
             {
-                ///
-/*                if (player.hero.ID == "Zhongkui")
-                {
-                 
-                    var nukeAction = (AttackDefine)ActionDataBase.Instance.ActionDictionary["nuclear_bomb"];
+                bool reallyDie = true;
 
-                    foreach (var victim in PlayerManager.Instance.Players.Values)
+                var skillsSnapshot = player.hero.skills.ToList();
+                foreach (var skill in skillsSnapshot)
+                {
+                    if (skill is TriggerSkill triggered)
                     {
-                        if (victim.ID_inGame != player.ID_inGame) // 避免自伤
-                        {
-                            nukeAction.HowtoAttack(player, victim);
-                        }
+                        if (triggered.OnDeath(player))
+                            reallyDie = false;
                     }
                 }
-                //if是钟馗
-                //交互按钮亮起
-                //��ťOnclick+(){������˵�}
-                //发动大核弹
-*/
-                foreach(var killerID in player.possibleKillers)
+
+                if (reallyDie)
                 {
-                    PlayerManager.Instance.Players.TryGetValue(killerID, out var killer);
-                    killer.status.resources.Bullet.Get(HeadGain(player.status.MaxHP));
+                    int reward = HeadGain(player.status.MaxHP);
+
+                    foreach (var killerID in player.possibleKillers)
+                    {
+                        if (PlayerManager.Instance.Players.TryGetValue(killerID, out var killer))
+                        {
+                            killer.status.resources.Bullet.Get(reward);
+                        }
+                    }
+
+                    player.status.life.DieOut();
+                    PrintEvent.Instance.LogKiller(player, reward);
                 }
-                player.status.life.DieOut();
             }
         }
     }
-
     public void CheckofDeath()
     {
         foreach (var player in PlayerManager.Instance.Players.Values)

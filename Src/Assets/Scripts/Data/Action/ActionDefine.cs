@@ -64,25 +64,57 @@ public class ActionDefine : ICloneable
     public string Description { get; set; } // 行动描述
     public List<int> Costs { get; set; } // 行动消耗
     public int CD { get; set; } //冷却时间
+    public int remainedCD { get; set; }
     public TargetType TargetType { get; set; } // 目标类型//未来可能在读取行动上面有用
-
     public int Target { get; set; } //目标
+    public bool isCopy { get; set; } //是否是“过来”产生的复制体，等价于：是否响应过来
     public bool isBasic { get; set; } //是否是每一个玩家都可以拥有的基础行动
-    
     public ActionType actionType { get => GetActionType(); }
+    public virtual void Copy(ActionDefine target)
+    {
+        var type = GetType(); // e.g. NuclearBomb, not just ActionDefine
+
+        // Get all instance properties (public and non-public) that can be written to
+        var props = type.GetProperties(
+            System.Reflection.BindingFlags.Instance |
+            System.Reflection.BindingFlags.Public |
+            System.Reflection.BindingFlags.NonPublic);
+
+        foreach (var prop in props)
+        {
+            if (!prop.CanWrite) continue; // skip read-only
+            var value = prop.GetValue(this);
+
+            if (value == null)
+            {
+                prop.SetValue(target, null);
+                continue;
+            }
+
+            if (value is System.Collections.IList list)
+            {
+                // Create a new list of the same type and copy elements
+                var listType = list.GetType();
+                var newList = (System.Collections.IList)Activator.CreateInstance(listType);
+                foreach (var item in list)
+                    newList.Add(item);
+                prop.SetValue(target, newList);
+            }
+            else
+            {
+                // Shallow copy for primitives, strings, etc.
+                prop.SetValue(target, value);
+            }
+        }
+    }
     // 实现 ICloneable 接口（深拷贝）
     public virtual object Clone()
     {
-        return new ActionDefine
-        {
-            ID = this.ID,                // int 是值类型，直接复制
-            Name = this.Name,            // string 是不可变的，直接赋值即可
-            Description = this.Description,
-            Costs = new List<int>(this.Costs), // 创建新 List，复制所有元素
-            CD = this.CD,
-            TargetType = this.TargetType,
-            Target = this.Target,
-        };
+        // Use runtime type constructor instead of hardcoded ActionDefine
+        var type = GetType();
+        var clone = (ActionDefine)Activator.CreateInstance(type);
+        Copy(clone);
+        return clone;
     }
     public virtual ActionType GetActionType() { return ActionType.Origin; }
 }
@@ -91,14 +123,6 @@ public class ActionDefine : ICloneable
 public class SupplyDefine : ActionDefine
 {
     public List<int> SupplyNumber { get; set; }
-    public bool isCopy { get; set; }//是否是“过来”产生的复制体，等价于：是否响应过来
-    public override object Clone()
-    {
-        SupplyDefine copy = TypeConverter.ShallowConvertToChild<SupplyDefine,ActionDefine>
-            ((ActionDefine)base.Clone());
-        copy.SupplyNumber = new List<int>(this.SupplyNumber); // 创建新 List，复制所有元素
-        return copy;
-    }
     public override ActionType GetActionType()
     {
         return ActionType.Supply;
@@ -111,22 +135,13 @@ public class AttackDefine : ActionDefine
     public float Level { get; set; } //攻击力
     public int Damage { get; set; } //伤害
     public int AttackType { get; set; } //攻击类别
-    public bool isCopy { get; set; } //是否是“过来”产生的复制体，等价于：是否响应过来
     public int Victim { get; set; } //受害者，不一定是Target
+    public virtual void OnDefended(Player attacker, Player victim) { }
+    public virtual void OnCountered(Player attacker, Player victim, CounterMethod counter) { }
+    public virtual void OnAttacking(Player attacker, Player victim) { }
+    public virtual void OnOverwhelmed(Player attacker, Player victim) { }
+    public Action OnBlocking { get; set; }//攻击被防御时
     // 实现 ICloneable 接口
-    public override object Clone()
-    {
-        // 先调用基类的 Clone() 复制基类属性
-        AttackDefine copy = TypeConverter.ShallowConvertToChild<AttackDefine, ActionDefine>
-            ((ActionDefine)base.Clone());
-
-        // 复制子类新增的属性
-        copy.Level = this.Level;
-        copy.Damage = this.Damage;
-        copy.AttackType = this.AttackType;
-        copy.isCopy = this.isCopy;
-        return copy;
-    }
     public void LaserCannon()
     {
         PlayerManager.Instance.Players.TryGetValue(Target, out var targetPlayer);
@@ -142,12 +157,6 @@ public class AttackDefine : ActionDefine
 //防御类行动
 public class DefendDefine : ActionDefine
 {
-    public override object Clone()
-    {
-        DefendDefine copy = TypeConverter.ShallowConvertToChild<DefendDefine, ActionDefine>
-            ((ActionDefine)base.Clone());
-        return copy;
-    }
     public override ActionType GetActionType()
     {
         return ActionType.Defend;
@@ -157,29 +166,9 @@ public class DefendDefine : ActionDefine
 //反制类行动
 public class CounterDefine : ActionDefine
 {
-    public override object Clone()
-    {
-        CounterDefine copy = TypeConverter.ShallowConvertToChild<CounterDefine, ActionDefine>
-            ((ActionDefine)base.Clone());
-        return copy;
-    }
-    public override ActionType GetActionType()
-    {
-        return ActionType.Counter;
-    }
 }
 
 //特殊行动，单独定义
 public class SpecialDefine : ActionDefine
 {
-    public override object Clone()
-    {
-        SpecialDefine copy = TypeConverter.ShallowConvertToChild<SpecialDefine, ActionDefine>
-            ((ActionDefine)base.Clone());
-        return copy;
-    }
-    public override ActionType GetActionType()
-    {
-        return ActionType.Special;
-    }
 }

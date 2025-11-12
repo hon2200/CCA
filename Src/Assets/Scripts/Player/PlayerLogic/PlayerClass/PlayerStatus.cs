@@ -21,7 +21,6 @@ public class PlayerStatus
         HP = new();
         resources = new();
         life = new();
-        life.Born();
         Buffs = new BuffManager(); // 初始化 Buff 管理器
         Marks = new MarkManager();  // 初始化印记管理器
         
@@ -33,7 +32,6 @@ public class PlayerStatus
         HP = new();
         resources = new();
         life = new();
-        life.Born();
         HP.Set(MaxHP);
         HP.OnValueChanged += (oldVal, newVal, opType) =>
             DeadCheck(newVal);
@@ -48,7 +46,6 @@ public class PlayerStatus
     {
         if (HP <= 0)
             life.Dying();
-        Debug.Log("Someone is Dying");
     }
     public void SaveStatus()
     {

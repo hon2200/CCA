@@ -10,7 +10,9 @@ class ActionPhase : Singleton<ActionPhase>, Phase
 {
     public void OnEnteringPhase()
     {
-        foreach(var player in PlayerManager.Instance.Players)
+        //有一些开始阶段的内容需要看
+        PrintEvent.Instance.PrintResult();
+        foreach (var player in PlayerManager.Instance.Players)
         {
             //保存每个玩家的状态，在ActionPhase无论Player还是AI都会对其进行非最终的改动
             player.Value.status.SaveStatus();
@@ -58,7 +60,7 @@ class ActionPhase : Singleton<ActionPhase>, Phase
     //这里集合的功能：读入行动，读入历史行动，打印行动结果，考虑使用委托？
     public void ReadinAllActs_Debug(string path = "Common/Data/ReadinMove_Debug/MovesData.json")
     {
-        string combinedPath = Path.Combine(Application.dataPath, path);
+        string combinedPath = Path.Combine(Application.streamingAssetsPath, path);
         Dictionary<int, List<(string, int)>> Movedict
             = JsonLoader.DeserializeObject<Dictionary<int, List<(string, int)>>>(combinedPath, true);
         foreach (var player in PlayerManager.Instance.Players)

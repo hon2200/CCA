@@ -19,5 +19,6 @@ public abstract class TriggerSkill : Skill
 
     //在反弹生效调用
     public virtual void OnCounterTakeEffect() { }
-    public virtual void OnDeath(Player self) { }
+    //死亡的时候调用，若玩家因改函数而脱离濒死，则返回true
+    public virtual bool OnDeath(Player self) { return false; }
 }

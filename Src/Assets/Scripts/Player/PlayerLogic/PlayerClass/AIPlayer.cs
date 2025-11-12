@@ -16,6 +16,7 @@ public class AIPlayer : Player
     private Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory { get; set; }
     //告诉玩家的行动类别
     public Intention IntendedType { get; set; }
+    public List<string> preferedAction { get; set; }
     //创造闯关过程中的AI
     public void Initialize(int ID_inGame, AIDefine aIDefine, bool isFriend, LevelDefine Level)
     {
@@ -24,7 +25,7 @@ public class AIPlayer : Player
             .Except(aIDefine.DisabledAction)
             .ToList();
         base.Initialize(ID_inGame, aIDefine.Name, PlayerType.AI, aIDefine.MaxHP, aIDefine.InitialResource,
-            availableAction);
+            availableAction, aIDefine.ID, aIDefine.SkillList);
         //赋值性格
         CharacterDataBase.Instance.CharacterDictionary.TryGetValue(aIDefine.CharacterID, out var characterDefine);
         if (characterDefine == null)
@@ -41,6 +42,7 @@ public class AIPlayer : Player
         //赋值诚实
         Honest = new();
         Honest.Set(characterDefine.IniHonesty);
+        preferedAction = aIDefine.PreferedAction == null ? new() : aIDefine.PreferedAction;
         this.isFriend = isFriend;
         IntendedType = new();
         OnBirth?.Invoke();
@@ -48,7 +50,7 @@ public class AIPlayer : Player
     //创造英雄模式中的AI
     public void Initialize(int ID_inGame, HeroDefine heroDefine)
     {
-        base.Initialize(ID_inGame, heroDefine.Name, PlayerType.AI, heroDefine.MaxHP, null, null, heroDefine);
+        base.Initialize(ID_inGame, heroDefine.Name, PlayerType.AI, heroDefine.MaxHP, null, null, heroDefine.ID, heroDefine.SkillIDList);
         //赋值性格
         CharacterDataBase.Instance.CharacterDictionary.TryGetValue("Friendly", out var characterDefine);
         if (characterDefine == null)
@@ -78,7 +80,6 @@ public class AIPlayer : Player
         };
         OnBirth?.Invoke();
     }
-
     public List<Player> GetEnemy()
     {
         List<Player> enemy = new List<Player>();

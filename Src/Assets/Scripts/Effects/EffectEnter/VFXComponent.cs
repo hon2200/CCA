@@ -61,28 +61,9 @@ public class VFXComponent : VFXBase
     /// <summary>
     /// 播放轨迹特效
     /// </summary>
-    public override void PlayTrailEffect(Vector3 start, Vector3 end, float duration)
+    public override void PlayTrailEffect(Vector3 start, Vector3 end)
     {
-        base.PlayTrailEffect(start, end, duration);
-
-        // 为每个子组件计算参数并播放
-        for (int i = 0; i < ChildComponents.Count; i++)
-        {
-            VFXBase component = ChildComponents[i];
-
-            // 计算组件特定的持续时间
-            float componentDuration = duration * ComponentDurationMultipliers[i];
-
-            // 使用协程处理延迟播放
-            if (ComponentDelays[i] > 0)
-            {
-                StartCoroutine(DelayedPlayComponent(component, start, end, componentDuration, ComponentDelays[i]));
-            }
-            else
-            {
-                component.PlayTrailEffect(start, end, componentDuration);
-            }
-        }
+        base.PlayTrailEffect(start, end);
     }
 
     /// <summary>
@@ -162,7 +143,7 @@ public class VFXComponent : VFXBase
     private IEnumerator DelayedPlayComponent(VFXBase component, Vector3 start, Vector3 end, float duration, float delay)
     {
         yield return new WaitForSeconds(delay);
-        component.PlayTrailEffect(start, end, duration);
+        component.PlayTrailEffect(start, end);
     }
 
     /// <summary>

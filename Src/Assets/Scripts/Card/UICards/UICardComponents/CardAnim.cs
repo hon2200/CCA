@@ -16,6 +16,7 @@ public class 卡牌动画 : MonoBehaviour
     [SerializeField] private float lerpSpeed = 5f;   // 动画插值速度
 
     private int currentTurn;
+    private string levelValue;
 
     // 卡牌缓存相关
     [Header("卡牌缓存")]
@@ -49,10 +50,12 @@ public class 卡牌动画 : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
+        
         // 这个地方需要修改，因为我会删除和新增Card，这里只初始化一次会出问题
-        if (BattleManager.Instance.Turn.Value != currentTurn)
+        if (BattleManager.Instance.Turn.Value != currentTurn || LevelManager.Instance.Level.Value!= levelValue)
         {
             currentTurn = BattleManager.Instance.Turn.Value;
+            levelValue = LevelManager.Instance.Level.Value;
             InitializeCardCache();
         }
         // 如果卡牌缓存未初始化，先进行初始化

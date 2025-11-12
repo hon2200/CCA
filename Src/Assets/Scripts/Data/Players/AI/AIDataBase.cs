@@ -16,7 +16,7 @@ public class AIDataBase : MonoSingleton<AIDataBase>
     //读入所有玩家
     public void LoadingAI()
     {
-        path = Path.Combine(Application.dataPath, "Common/Tables/Data/Levels/AI.json");
+        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Levels/AI.json");
         AIDictionary = JsonLoader.DeserializeObject<Dictionary<string, AIDefine>>(path);
         //打印行动类到日志
         MyLog.PrintLoadedDictionary(AIDictionary,"Log/Loading/AILog.txt");

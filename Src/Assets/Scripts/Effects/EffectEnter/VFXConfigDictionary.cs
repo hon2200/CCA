@@ -51,7 +51,7 @@ public class VFXConfigDictionary:Singleton<VFXConfigDictionary>
     /// </summary>
     public void Load()
     {
-        DataPath = Path.Combine(Application.dataPath, "Common/Tables/Data/VFX/");
+        DataPath = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/VFX/");
         string json = File.ReadAllText(this.DataPath + "VFXBase.json");
         this.config = JsonConvert.DeserializeObject<Dictionary<string, VFXConfig>>(json);
         VFXManager.Instance.configs = config;

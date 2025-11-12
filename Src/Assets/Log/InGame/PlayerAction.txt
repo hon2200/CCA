@@ -1,4 +1,4 @@
-Dict 内容 (Count: 2) - 仅显示属性路径: action
+Dict 内容 (Count: 3) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
@@ -6,20 +6,784 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
       Target:         1
-      isBasic:         False
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 2)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+    [1]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 2)
+    [0]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+    [1]: 
+      ID:         provoke
+      Name:         挑衅
+      Description:         下回合你不打我就掉血
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         3
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         3
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
       actionType:         Supply
 ------------------------------------
 Key: 2
@@ -34,9 +798,1667 @@ action:
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
       Target:         0
-      isBasic:         False
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         counterblade
+      Name:         亮剑
+      Description:         可以反弹“刺类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         counterblade
+      Name:         亮剑
+      Description:         可以反弹“刺类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 3) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         2
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
       actionType:         Defend
 ------------------------------------
 Dict 内容 (Count: 2) - 仅显示属性路径: action
@@ -47,130 +2469,41 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
       Target:         1
-      isBasic:         False
+      isCopy:         False
+      isBasic:         True
       actionType:         Supply
 ------------------------------------
-Key: 2
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
-      TargetType:         Self
-      Target:         2
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         2
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 2) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      TargetType:         Self
-      Target:         1
-      isBasic:         False
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
+      remainedCD:         0
       TargetType:         Self
       Target:         0
-      isBasic:         False
-      actionType:         Counter
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
 ------------------------------------
 Dict 内容 (Count: 2) - 仅显示属性路径: action
 ====================================
@@ -178,40 +2511,142 @@ Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
-      Target:         1
-      isBasic:         False
+      Target:         4
+      isCopy:         False
+      isBasic:         True
       actionType:         Supply
 ------------------------------------
-Key: 2
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
       Costs: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
       TargetType:         Self
       Target:         0
-      isBasic:         False
-      actionType:         Counter
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
 ------------------------------------
 Dict 内容 (Count: 2) - 仅显示属性路径: action
 ====================================
@@ -219,44 +2654,92 @@ Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      SupplyNumber: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
       isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         heavy_block
+      Name:         重挡
+      Description:         可以挡住“刀类”攻击
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
-      Target:         1
-      isBasic:         False
-      actionType:         Supply
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
 ------------------------------------
-Key: 2
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
-      Target:         2
-      isBasic:         False
+      Target:         4
+      isCopy:         False
+      isBasic:         True
       actionType:         Supply
 ------------------------------------
 Dict 内容 (Count: 2) - 仅显示属性路径: action
@@ -265,25 +2748,266 @@ Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      isCopy:         False
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
-      Target:         1
-      isBasic:         False
+      Target:         4
+      isCopy:         False
+      isBasic:         True
       actionType:         Supply
 ------------------------------------
-Key: 2
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -291,7 +3015,6 @@ action:
         List`1 (Count: 2)
           [0]:             1
           [1]:             0
-      isCopy:         False
       ID:         bullet
       Name:         补给
       Description:         获得一颗子弹
@@ -300,8 +3023,329 @@ action:
           [0]:             0
           [1]:             0
       CD:         0
+      remainedCD:         0
       TargetType:         Self
-      Target:         2
-      isBasic:         False
+      Target:         4
+      isCopy:         False
+      isBasic:         True
       actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         4
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         shoot
+      Name:         给枪
+      Description:         对应防御：挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Dict 内容 (Count: 2) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         4
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
 ------------------------------------

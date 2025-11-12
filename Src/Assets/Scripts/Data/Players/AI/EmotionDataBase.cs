@@ -17,7 +17,7 @@ public class EmotionDataBase : MonoSingleton<EmotionDataBase>
     //读入所有玩家
     public void LoadingEmotion()
     {
-        path = Path.Combine(Application.dataPath, "Common/Tables/Data/Levels/Emotion.json");
+        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Levels/Emotion.json");
         EmotionDictionary = JsonLoader.DeserializeObject<Dictionary<EmotionType, EmotionDefine>>(path);
         //打印行动类到日志
         MyLog.PrintLoadedDictionary(EmotionDictionary, "Log/Loading/EmotionLog.txt");

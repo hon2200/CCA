@@ -14,7 +14,7 @@ public static class MyLog
     //目前无法用于打印玩家字典，玩家的Attribute感觉继承可能过于复杂了，或是一些其他未知原因
     public static void PrintLoadedDictionary<key, Type>(Dictionary<key, Type> Dict, string LogPath = "Log/log.txt", bool overwrite = true)
     {
-        string filePath = Path.Combine(Application.dataPath, LogPath);
+        string filePath = Path.Combine(Application.streamingAssetsPath, LogPath);
         StringBuilder logContent = new StringBuilder();
 
         logContent.AppendLine($"Dict 内容 (Count: {Dict.Count})");
@@ -32,7 +32,7 @@ public static class MyLog
     //打印玩家状态专用函数，复用性不强
     public static void PrintSimplifiedPlayerStatus(string LogPath = "Log/log.txt", bool overwrite = true)
     {
-        string filePath = Path.Combine(Application.dataPath, LogPath);
+        string filePath = Path.Combine(Application.streamingAssetsPath, LogPath);
         StringBuilder logContent = new StringBuilder();
         logContent.AppendLine($"PlayerStatus 内容");
         logContent.AppendLine("====================================");
@@ -52,7 +52,7 @@ public static class MyLog
     string LogPath = "Log/log.txt",
     bool overwrite = true)
     {
-        string filePath = Path.Combine(Application.dataPath, LogPath);
+        string filePath = Path.Combine(Application.streamingAssetsPath, LogPath);
         StringBuilder logContent = new StringBuilder();
 
         logContent.AppendLine($"Dict 内容 (Count: {Dict.Count}) - 仅显示属性: {propertyName}");
@@ -87,7 +87,7 @@ public static class MyLog
         string LogPath = "Log/log.txt",
         bool overwrite = true)
     {
-        string filePath = Path.Combine(Application.dataPath, LogPath);
+        string filePath = Path.Combine(Application.streamingAssetsPath, LogPath);
         StringBuilder logContent = new StringBuilder();
 
         logContent.AppendLine($"Dict 内容 (Count: {Dict.Count}) - 显示属性: {string.Join(", ", propertyNames)}");
@@ -124,7 +124,7 @@ public static class MyLog
     string LogPath = "Log/log.txt",
     bool overwrite = true)
     {
-        string filePath = Path.Combine(Application.dataPath, LogPath);
+        string filePath = Path.Combine(Application.streamingAssetsPath, LogPath);
         StringBuilder logContent = new StringBuilder();
 
         logContent.AppendLine($"Dict 内容 (Count: {Dict.Count}) - 仅显示属性路径: {nestedPropertyPath}");

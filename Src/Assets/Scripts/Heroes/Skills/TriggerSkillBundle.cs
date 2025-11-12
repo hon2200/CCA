@@ -30,7 +30,7 @@ namespace Heroes.Skills
             this.ID = "Deathrattle";
         }
 
-        public override void OnDeath(Player self)
+        public override bool OnDeath(Player self)
         {
             Debug.Log($"💀 钟馗({self.ID_inGame}) 的【死亡爆发】发动！");
 
@@ -41,6 +41,7 @@ namespace Heroes.Skills
                 // 直接对所有其他玩家造成 3 点伤害
                 player.status.HP.Damage(3, self, player, null);
             }
+            return false;
         }
     }
     

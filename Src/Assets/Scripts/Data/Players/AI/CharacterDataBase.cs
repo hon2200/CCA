@@ -17,7 +17,7 @@ public class CharacterDataBase : MonoSingleton<CharacterDataBase>
     //读入所有玩家
     public void LoadingCharacter()
     {
-        path = Path.Combine(Application.dataPath, "Common/Tables/Data/Levels/Character.json");
+        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Levels/Character.json");
         CharacterDictionary = JsonLoader.DeserializeObject<Dictionary<string, CharacterDefine>>(path);
         //打印行动类到日志
         MyLog.PrintLoadedDictionary(CharacterDictionary, "Log/Loading/CharacterLog.txt");

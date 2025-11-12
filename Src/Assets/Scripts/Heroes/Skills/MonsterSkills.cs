@@ -16,3 +16,104 @@ public class ProtectingAlly : PhasebasedSkill
             BattleManager.Instance.OnDefeated.Invoke();
     }
 }
+
+public class ToyAssemblyLine : PhasebasedSkill
+{
+    List<string> Sequence = new() { "Toy Warrior", "Toy Guardian", "Toy Minion" };
+    int whichOne = 0;
+    List<int> Cost = new() { 3, 3, 1 };
+    public ToyAssemblyLine()
+    {
+        ID = "Toy Assembly Line";
+    }
+    public override void OnStartPhase(Player Factory)
+    {
+        if (PlayerManager.Instance.ReachMaxNumber())
+            return;
+        if (Factory.status.resources.Bullet.Value >= Cost[whichOne] && PlayerManager.Instance.ThereisAvailablePositions())
+        {
+            Factory.status.resources.Bullet.Use(Cost[whichOne]);
+            AIDataBase.Instance.AIDictionary.TryGetValue(Sequence[whichOne], out var aIDefine);
+            PlayerManager.Instance.CreateAI(aIDefine, false, LevelManager.Instance.GetCurrentLevel());
+            PrintEvent.Instance.log += ("工厂制造了" + Sequence[whichOne] + "消耗" + Cost[whichOne] + "子弹");
+            whichOne++;
+            whichOne %= 3;
+        }
+    }
+}
+
+public class CastleGuardian :TriggerSkill
+{
+    private bool isUsed;
+    public CastleGuardian()
+    {
+        ID = "Castle Guardian";
+        isUsed = false;
+    }
+
+    public override bool OnDeath(Player castle)
+    {
+        if (isUsed)
+            return false;
+        castle.status.HP.Heal(castle.status.MaxHP);
+        castle.status.life.Revive();
+
+        var toRemove = new List<Skill>();
+
+        foreach (Skill skill in castle.hero.skills)
+        {
+            if (skill.ID == "Toy Assembly Line")
+                toRemove.Add(skill);
+        }
+
+        foreach (Skill skill in toRemove)
+            castle.hero.skills.Remove(skill);
+
+        castle.AvailableActions.AddRange(new List<string> { "shoot", "double_shoot" });
+
+        if (castle is AIPlayer aiCastle)
+        {
+            CharacterDataBase.Instance.CharacterDictionary.TryGetValue("Bellicose", out var bellicose);
+            aiCastle.CharacterDefine = bellicose;
+        }
+
+        PrintEvent.Instance.log += ("再生...\n");
+        isUsed = true;
+        return true;
+    }
+}
+
+public class FightAgain : TriggerSkill
+{
+    private bool isUsed;
+    public FightAgain()
+    {
+        ID = "Fight Again";
+        isUsed = false;
+    }
+    public override bool OnDeath(Player fighter)
+    {
+        if (isUsed)
+            return false;
+        fighter.status.HP.Heal(fighter.status.MaxHP / 2);
+        fighter.status.life.Revive();
+
+        fighter.AvailableActions.AddRange(new List<string> { "cleave" });
+
+        PrintEvent.Instance.log += ("再战...\n");
+        isUsed = true;
+        return true;
+    }
+
+}
+
+public class WaraxeDanceSkill : ActionSkill
+{
+    public WaraxeDanceSkill()
+    {
+        ID = "Waraxe Dance";
+        ActionID = "waraxe_dance";
+    }
+
+
+}

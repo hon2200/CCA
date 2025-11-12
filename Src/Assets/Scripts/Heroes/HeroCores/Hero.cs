@@ -31,4 +31,26 @@ public class Hero
             UnityEngine.Debug.LogWarning($"英雄ID不存在: {heroDefine.ID}");
         }
     }
+
+    public Hero(Player thisPlayer, string heroID, List<string> skillList)
+    {
+        ID = heroID;
+        skills = new List<Skill>();
+
+        if (skillList == null)
+            return;
+        // 添加英雄技能
+        foreach (var skillID in skillList)
+        {
+            if (SkillLibrary.Instance.skillDic.TryGetValue(skillID, out var skill))
+            {
+                skills.Add(skill);
+            }
+            else
+            {
+                UnityEngine.Debug.LogWarning($"技能ID不存在: {skillID}");
+            }
+        }
+    }
+
 }

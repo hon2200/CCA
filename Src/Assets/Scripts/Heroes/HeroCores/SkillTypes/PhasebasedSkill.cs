@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 //写了一个函数，但是也可能不是最优的做法
 public abstract class PhasebasedSkill : Skill
 {
-    // 在回合或阶段开始前调用
-    public virtual void OnPhaseStart(Player thisPlayer) { }
+    // 在开始阶段调用
+    public virtual void OnStartPhase(Player thisPlayer) { }
 
     // 在回合或阶段结束时调用
     public virtual void OnPhaseEnd(Player thisPlayer) { }

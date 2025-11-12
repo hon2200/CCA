@@ -18,12 +18,13 @@ public class Player : MonoBehaviour
     public PlayerEffectController playerEffectController;
     public List<string> AvailableActions { get; set; }
     public List<int> possibleKillers { get; set; }
-    public Action OnBirth;
+    public Action OnBirth { get; set; }
     public bool is_stun = false;
+    public Dictionary<string,int> ActionsinCD { get; set; }
 
     protected void Initialize(int ID_inGame, string Name, PlayerType playerType,
         int MaxHP, List<int> InitialResource = null, List<string> AvailableActions = null,
-         HeroDefine heroDefine = null)
+         string heroID = "Blank" , List<string> skills = null)
     {
         this.ID_inGame = ID_inGame;
         this.Name = Name;
@@ -32,13 +33,7 @@ public class Player : MonoBehaviour
         this.status = new(MaxHP, InitialResource);
         this.action = new();
         this.playerType = playerType;
-        if (heroDefine != null)
-            this.hero = new(this, heroDefine);
-        else
-        {
-            HeroDataBase.Instance.HeroDictionary.TryGetValue("Blank", out var blank);
-            this.hero = new(this, blank);
-        }
+        hero = new(this, heroID, skills);
         isReady = new ReadyAttribute();
         isReady.Cancel();
         if (AvailableActions != null)
@@ -67,6 +62,7 @@ public class Player : MonoBehaviour
         {
             playerUIText.Initialize();
             playerEffectController.Initialize();
+            status.life.Born();
         };
 
         status.HP.OnValueChanged += (oldHP,newHP,meassage) =>
@@ -75,6 +71,6 @@ public class Player : MonoBehaviour
         };
 
         possibleKillers = new();
-
+        ActionsinCD = new();
     }
 }

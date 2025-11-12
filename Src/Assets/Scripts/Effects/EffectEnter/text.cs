@@ -65,7 +65,7 @@ public class text : MonoBehaviour
                 targetPosition = hit.point;
             }
             target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
-            VFXManager.Instance.PlayPointEffect(false, "Shield", target, duration);
+            VFXManager.Instance.PlayPointEffect(false, "Shield", target, duration, offset: new Vector3(-0.5f, 0.5f, 0));
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {

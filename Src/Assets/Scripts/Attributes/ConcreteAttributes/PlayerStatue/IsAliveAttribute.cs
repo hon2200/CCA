@@ -13,6 +13,7 @@ public class IsAliveAttribute : ObservableAttribute<LifeStatus>
         PlayerManager.Instance.AlivePlayerNumber--;
         SetValue(LifeStatus.Death, "Dieout");
     }
+    public void Revive() => SetValue(LifeStatus.Alive, "Revive");
 }
 
 public enum LifeStatus

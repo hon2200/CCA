@@ -12,6 +12,7 @@ public class HPAttribute : ObservableAttribute<int>
     public void Heal(int amount) => SetValue(Value + amount, "Heal");
     public void Damage(int amount, Player attacker , Player victim, AttackDefine attack)
     {
+        PrintEvent.Instance.LogDamage(attacker, victim, amount);
         foreach (var skill in victim.hero.skills)
         {
             if (skill is TriggerSkill triggerSkill)

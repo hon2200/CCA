@@ -9,13 +9,16 @@ public class StartPhase : Singleton<StartPhase>, Phase
     public void OnEnteringPhase()
     {
         BattleManager.Instance.Turn.Advance();
-        foreach (var player in PlayerManager.Instance.Players.Values)
+        var playersSnapshot = PlayerManager.Instance.Players.Values.ToList();
+        //There might be some players created in the process
+
+        foreach (var player in playersSnapshot)
         {
             foreach (var skill in player.hero.skills)
             {
                 if (skill is PhasebasedSkill phasebasedSkill)
                 {
-                    phasebasedSkill.OnPhaseStart(player);
+                    phasebasedSkill.OnStartPhase(player);
                 }
             }
         }

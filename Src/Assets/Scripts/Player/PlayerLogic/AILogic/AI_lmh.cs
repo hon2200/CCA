@@ -10,11 +10,13 @@ using System;
 public class AI_lmh
 {
     public AIPlayer thisPlayer { get; set; }
+    private List<string> preferedAction { get; set; }
     //所有人的可用行动字典，分类别存放
     private Dictionary<(int,ActionType),List<ActionDefine>> AvailableActions { get; set; }
     public AI_lmh(AIPlayer thisPlayer)
     {
         this.thisPlayer = thisPlayer;
+        preferedAction = thisPlayer.preferedAction;
         AvailableActions = new();
         InitializeAvailableActions();
     }
@@ -51,6 +53,9 @@ public class AI_lmh
         {
             case ActionType.Supply:
                 var supply = availableActionList[rand.Next(availableActionList.Count)];
+                //没有选到就再选一次//目前只先处理supply
+                if (!preferedAction.Contains(supply.ID) && preferedAction.Count != 0)
+                    supply = availableActionList[rand.Next(availableActionList.Count)];
                 supply.Target = thisPlayer.ID_inGame;
                 return supply;
             case ActionType.Attack:
@@ -276,6 +281,22 @@ public class AI_lmh
         var mySelection = SmartSelectAction(selectedActionType, availableActionsByCategory[selectedActionType]);
         
         AIThinkingProcess.Append($"\n最终选择: {selectedActionType} 类别的 {mySelection.ID}");
+
+        // 最后，检查一下是不是应该挑衅
+        System.Random rand = new System.Random();
+        var provokers = CheckProvoke();
+        if (provokers.Count > 0)
+        {
+            var attack = SpecificAttack(provokers[rand.Next(provokers.Count)]);
+            if (attack != null)
+            {
+                AIThinkingProcess.Append($"\n不行,我被挑衅了——我必须反击！");
+                mySelection = attack;
+                Debug.Log("给他的颜色看看！");
+            }
+        }
+        
+
         MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
         return mySelection;
     }
@@ -325,6 +346,36 @@ public class AI_lmh
         }
 
         return weightedCategories[0].actionType; // fallback
+    }
+
+    private List<int> CheckProvoke()
+    {
+        List<int> provokers = new();
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            player.action.LongHistory.TryGetValue((BattleManager.Instance.Turn.Value - 1, false), out var actions);
+            if(actions != null)
+            {
+                foreach(var action in actions)
+                {
+                    if (action.ID == "provoke" && action.Target == thisPlayer.ID_inGame)
+                        provokers.Add(player.ID_inGame); 
+                }
+            }
+        }
+        return provokers;
+    }
+
+    private ActionDefine SpecificAttack(int target)
+    {
+        List<AttackDefine> specificAttacks = new();
+        PlayerManager.Instance.Players.TryGetValue(target, out var player);
+        if (player == null || player.status.life.Value == LifeStatus.Death)
+            return null;
+        else if (thisPlayer.CheckAction(ActionType.Attack, target).Count == 0)
+            return null;
+        else
+            return RandomSelection(CalculateAttackActionProb(target));
     }
 }
 

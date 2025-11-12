@@ -17,7 +17,7 @@ public class LevelDataBase : MonoSingleton<LevelDataBase>
     //读入所有玩家
     public void LoadingLevel()
     {
-        path = Path.Combine(Application.dataPath, "Common/Tables/Data/Levels/Level.json");
+        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Levels/Level.json");
         LevelDictionary = JsonLoader.DeserializeObject<Dictionary<string, LevelDefine>>(path);
         //打印行动类到日志
         MyLog.PrintLoadedDictionary(LevelDictionary, "Log/Loading/LevelLog.txt");

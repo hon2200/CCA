@@ -11,6 +11,8 @@ public class PlayerUIText : MonoBehaviour
     public Player player;
     //玩家的图像
     public SpriteRenderer spriteRenderer;
+    //玩家的高亮
+    public GameObject Glow;
     [SerializeField]
     public SerializedDictionary<PlayerUITextName, TextMeshPro> UIText;
     public void Initialize()
@@ -84,12 +86,51 @@ public class PlayerUIText : MonoBehaviour
             {
                 OntheEdgeofDeath();
             }
+            if(opType == "Revive")
+            {
+                OnRivive();
+            }
+            if(opType == "Born")
+            {
+                OnBorn();
+            }
         };
     }
     private void OntheEdgeofDeath()
     {
         spriteRenderer.color = Color.gray;
         Debug.Log("Player" + player.ID_inGame + "Have done it now...");
+    }
+    private void OnRivive()
+    {
+        spriteRenderer.color = Color.red;
+        Debug.Log("Player" + player.ID_inGame + "Revives!");
+    }
+    private void OnBorn()
+    {
+        Debug.Log("Player" + player.ID_inGame + "is Born");
+        StartCoroutine(ShineEffect());
+    }
+    private IEnumerator ShineEffect()
+    {
+        SpriteRenderer glowRenderer = Glow.GetComponent<SpriteRenderer>();
+        Color baseColor = glowRenderer.color;
+
+        float duration = 1f;
+        float elapsed = 0f;
+        Glow.SetActive(true);
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            float alpha = Mathf.PingPong(t * 2f, 1f); // fade in/out
+            glowRenderer.color = new Color(baseColor.r, baseColor.g, baseColor.b, alpha);
+            yield return null;
+        }
+
+        glowRenderer.color = baseColor;
+        Glow.SetActive(false);
     }
     // 辅助方法：更新文本显示
     private void UpdatePlayerText(TextMeshPro textElement, object value, object maxValue = null)

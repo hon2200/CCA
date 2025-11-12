@@ -95,11 +95,12 @@ public class VFXManager : MonoSingleton<VFXManager>
         }else Debug.LogError($"找不到特效: {id}");
         if (playnow)
         {
-            effect.PlayTrailEffect(originposition, targetposition, duration);
+            effect.PlayTrailEffect(originposition, targetposition);
         }
         else
         {
-            onPlayEffect.AddListener(() => effect.PlayTrailEffect(originposition, targetposition, duration));
+            Debug.Log("Ready to play");
+            onPlayEffect.AddListener(() => effect.PlayTrailEffect(originposition, targetposition));
         }
         return effect;
     }

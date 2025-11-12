@@ -7,10 +7,10 @@ using TMPro;
 
 class BattleManager: MonoSingleton<BattleManager>
 {
-    public Action OnDefeated;
-    public Action OnWinning;
+    public Action OnDefeated { get; set; }
+    public Action OnWinning { get; set; }
     //已经创建好游戏玩家的情况下，要重新开始需要进行的内容
-    public Action OnRestarting;
+    public Action<string> OnStartGame { get; set; }
     //新的一波来袭
     public Action OnNewWave;
     public TextMeshPro Text;
@@ -30,21 +30,29 @@ class BattleManager: MonoSingleton<BattleManager>
         {
             Text.text = "Turn" + Turn.Value.ToString();
         };
-        OnRestarting += () =>
-        {
-            StartGame();
-        };
         OnNewWave += () =>
         {
             CurrentPhaseIndex = 0;
+            PlayerManager.Instance.CreateCurrentLevelWave();
+            StartPhase.Instance.OnEnteringPhase();
+        };
+
+        OnStartGame += (string message) =>
+        {
+            CurrentPhaseIndex = 0;
+            Turn.Clear();
+            PlayerManager.Instance.NextPlayerID = 1;
+            if (message == "Hero")
+                PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
+            else if (message == "Level")
+                PlayerManager.Instance.CreateCurrentLevelWave();
             StartPhase.Instance.OnEnteringPhase();
         };
     }
-    public void StartGame()
+    //这个函数好像只给那个按钮用
+    public void StartGame(string Type)
     {
-        CurrentPhaseIndex = 0;
-        Turn.Clear();
-        StartPhase.Instance.OnEnteringPhase();
+        OnStartGame?.Invoke(Type);
     }
 
     public void PhaseAdvance()

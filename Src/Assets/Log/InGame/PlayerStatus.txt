@@ -1,19 +1,2930 @@
-Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
 ====================================
 Key: 1
 ID_inGame:   1
 status: 
-  MaxHP:     4
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       6
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
   HP: 
     onObserve:       True
     Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         6
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         6
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         6
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         3
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         6
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         6
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         7
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         7
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         4
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
   resources: 
     Bullet: 
       onObserve:         True
       Value:         3
     Sword: 
       onObserve:         True
-      Value:         0
+      Value:         4
     AvailableSword: 
       onObserve:         True
       Value:         0
@@ -25,6 +2936,148 @@ status:
 ------------------------------------
 Key: 2
 ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 3) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         4
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 2
+ID_inGame:   2
+status: 
+  MaxHP:     5
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         7
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 3
+ID_inGame:   3
+status: 
+  MaxHP:     2
+  HP: 
+    onObserve:       True
+    Value:       0
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Death
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
 status: 
   MaxHP:     7
   HP: 
@@ -51,46 +3104,862 @@ Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
 Key: 1
 ID_inGame:   1
 status: 
-  MaxHP:     4
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       7
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         0
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       6
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       6
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       6
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       6
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         1
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         3
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       5
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
   HP: 
     onObserve:       True
     Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       4
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         3
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       3
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         0
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         1
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         2
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         0
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         5
+    AvailableSword: 
+      onObserve:         True
+      Value:         5
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Key: 4
+ID_inGame:   4
+status: 
+  MaxHP:     7
+  HP: 
+    onObserve:       True
+    Value:       1
+  resources: 
+    Bullet: 
+      onObserve:         True
+      Value:         1
+    Sword: 
+      onObserve:         True
+      Value:         2
+    AvailableSword: 
+      onObserve:         True
+      Value:         2
+  life: 
+    onObserve:       True
+    Value:       Alive
+  Buffs:     null
+  Marks:     null
+------------------------------------
+Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
+====================================
+Key: 1
+ID_inGame:   1
+status: 
+  MaxHP:     6
+  HP: 
+    onObserve:       True
+    Value:       2
   resources: 
     Bullet: 
       onObserve:         True
       Value:         4
     Sword: 
       onObserve:         True
-      Value:         0
+      Value:         5
     AvailableSword: 
       onObserve:         True
-      Value:         0
+      Value:         3
   life: 
     onObserve:       True
     Value:       Alive
   Buffs:     null
   Marks:     null
 ------------------------------------
-Key: 2
-ID_inGame:   2
+Key: 4
+ID_inGame:   4
 status: 
   MaxHP:     7
   HP: 
     onObserve:       True
-    Value:       7
+    Value:       0
   resources: 
     Bullet: 
       onObserve:         True
       Value:         1
     Sword: 
       onObserve:         True
-      Value:         0
+      Value:         2
     AvailableSword: 
       onObserve:         True
-      Value:         0
+      Value:         2
   life: 
     onObserve:       True
-    Value:       Alive
+    Value:       Death
   Buffs:     null
   Marks:     null
 ------------------------------------
@@ -99,238 +3968,46 @@ Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
 Key: 1
 ID_inGame:   1
 status: 
-  MaxHP:     4
+  MaxHP:     6
   HP: 
     onObserve:       True
-    Value:       4
+    Value:       2
   resources: 
     Bullet: 
       onObserve:         True
       Value:         4
     Sword: 
       onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Key: 2
-ID_inGame:   2
-status: 
-  MaxHP:     7
-  HP: 
-    onObserve:       True
-    Value:       7
-  resources: 
-    Bullet: 
-      onObserve:         True
-      Value:         1
-    Sword: 
-      onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
-====================================
-Key: 1
-ID_inGame:   1
-status: 
-  MaxHP:     4
-  HP: 
-    onObserve:       True
-    Value:       4
-  resources: 
-    Bullet: 
-      onObserve:         True
       Value:         5
-    Sword: 
-      onObserve:         True
-      Value:         0
     AvailableSword: 
       onObserve:         True
-      Value:         0
+      Value:         3
   life: 
     onObserve:       True
     Value:       Alive
   Buffs:     null
   Marks:     null
 ------------------------------------
-Key: 2
-ID_inGame:   2
+Key: 4
+ID_inGame:   4
 status: 
   MaxHP:     7
   HP: 
     onObserve:       True
-    Value:       7
-  resources: 
-    Bullet: 
-      onObserve:         True
-      Value:         0
-    Sword: 
-      onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
-====================================
-Key: 1
-ID_inGame:   1
-status: 
-  MaxHP:     4
-  HP: 
-    onObserve:       True
-    Value:       4
-  resources: 
-    Bullet: 
-      onObserve:         True
-      Value:         5
-    Sword: 
-      onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Key: 2
-ID_inGame:   2
-status: 
-  MaxHP:     7
-  HP: 
-    onObserve:       True
-    Value:       7
-  resources: 
-    Bullet: 
-      onObserve:         True
-      Value:         0
-    Sword: 
-      onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
-====================================
-Key: 1
-ID_inGame:   1
-status: 
-  MaxHP:     4
-  HP: 
-    onObserve:       True
-    Value:       4
-  resources: 
-    Bullet: 
-      onObserve:         True
-      Value:         6
-    Sword: 
-      onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Key: 2
-ID_inGame:   2
-status: 
-  MaxHP:     7
-  HP: 
-    onObserve:       True
-    Value:       7
+    Value:       0
   resources: 
     Bullet: 
       onObserve:         True
       Value:         1
     Sword: 
       onObserve:         True
-      Value:         0
+      Value:         2
     AvailableSword: 
       onObserve:         True
-      Value:         0
+      Value:         2
   life: 
     onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Dict 内容 (Count: 2) - 显示属性: ID_inGame, status
-====================================
-Key: 1
-ID_inGame:   1
-status: 
-  MaxHP:     4
-  HP: 
-    onObserve:       True
-    Value:       4
-  resources: 
-    Bullet: 
-      onObserve:         True
-      Value:         6
-    Sword: 
-      onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
-  Buffs:     null
-  Marks:     null
-------------------------------------
-Key: 2
-ID_inGame:   2
-status: 
-  MaxHP:     7
-  HP: 
-    onObserve:       True
-    Value:       7
-  resources: 
-    Bullet: 
-      onObserve:         True
-      Value:         1
-    Sword: 
-      onObserve:         True
-      Value:         0
-    AvailableSword: 
-      onObserve:         True
-      Value:         0
-  life: 
-    onObserve:       True
-    Value:       Alive
+    Value:       Death
   Buffs:     null
   Marks:     null
 ------------------------------------

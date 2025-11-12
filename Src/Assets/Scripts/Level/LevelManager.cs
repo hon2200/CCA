@@ -10,6 +10,7 @@ using TMPro;
 public class LevelManager : MonoSingleton<LevelManager>
 {
     public LevelAttribute Level;
+    
     public TextMeshPro Text;
     public GameObject VictoryPanel;
     public GameObject AdvanceButton;
@@ -30,12 +31,24 @@ public class LevelManager : MonoSingleton<LevelManager>
         {
             AdvanceButton.SetActive(true);
         };
-        BattleManager.Instance.OnRestarting += () =>
+        BattleManager.Instance.OnStartGame += (string message) =>
         {
-            VictoryPanel.SetActive(false);
-            DefeatPanel.SetActive(false);
+            if(message == "Level")
+            {
+                VictoryPanel.SetActive(false);
+                DefeatPanel.SetActive(false);
+                AdvanceButton.SetActive(false);
+            }
+        };
+        BattleManager.Instance.OnNewWave += () =>
+        {
             AdvanceButton.SetActive(false);
         };
+    }
+    public LevelDefine GetCurrentLevel()
+    {
+        LevelDataBase.Instance.LevelDictionary.TryGetValue(Level.ID, out var levelDefine);
+        return levelDefine;
     }
     public void Advance()
     {
@@ -44,13 +57,12 @@ public class LevelManager : MonoSingleton<LevelManager>
     public void Backward()
     {
         Level.Backward();
-        BattleManager.Instance.OnRestarting?.Invoke();
+        BattleManager.Instance.OnStartGame?.Invoke("Level");
     }
     //重新开始
     public void Restart()
     {
         Level.FirstWave();
-        PlayerManager.Instance.CreateCurrentLevelWave();
-        BattleManager.Instance.OnRestarting?.Invoke();
+        BattleManager.Instance.OnStartGame?.Invoke("Level");
     }
 }
