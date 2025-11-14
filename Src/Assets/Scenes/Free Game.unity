@@ -1606,6 +1606,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 677357744}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SceneAudioPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &510685402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7170626008830330633, guid: 27661a3ea4b619a45b23ad43d8680d54, type: 3}
@@ -2163,7 +2175,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2272,15 +2284,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005a054f3fac5ed4d857ef501ebdcaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSources:
-  - {fileID: 8300000, guid: ba7260585742ede45926429b5cae0d14, type: 3}
-  - {fileID: 8300000, guid: ef72a2b495acc7041aff01bb2067c429, type: 3}
-  - {fileID: 8300000, guid: a9adcabc611a0dd49ba8fbec96cdc6d7, type: 3}
-  - {fileID: 8300000, guid: 8c3c3d2795769644589be94d452617d0, type: 3}
-  - {fileID: 8300000, guid: 61b4d37f34170e2408b0f81a63e642eb, type: 3}
+  global: 0
+  audioClips:
+  - {fileID: 8300000, guid: a9a2c60d187df774cb6b5a3dcd9ef512, type: 3}
+  - {fileID: 8300000, guid: cf0ebb8c64eb20b40bf50dad2254ebfa, type: 3}
+  - {fileID: 8300000, guid: 0fbc95c685950b9499175753eb39bd1f, type: 3}
+  - {fileID: 8300000, guid: 3dffcdfb25e57a248a855423e650183a, type: 3}
+  - {fileID: 8300000, guid: 9a41a9ec86fa57d44a9184e85d7772d2, type: 3}
   - {fileID: 0}
+  victoryAudio: {fileID: 8300000, guid: ac4df26227022b140a84ac234b82ca69, type: 3}
   audioSource: {fileID: 677357742}
-  currentPlaying: 0
+  currentPlayingOrder: 0
+  currentPlayingType: 0
 --- !u!1 &742470082
 GameObject:
   m_ObjectHideFlags: 0

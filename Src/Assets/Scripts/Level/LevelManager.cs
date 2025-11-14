@@ -30,6 +30,7 @@ public class LevelManager : MonoSingleton<LevelManager>
         BattleManager.Instance.OnWinning += () =>
         {
             AdvanceButton.SetActive(true);
+            AudioManager.Instance.VictoryAudioPlay();
         };
         BattleManager.Instance.OnStartGame += (string message) =>
         {

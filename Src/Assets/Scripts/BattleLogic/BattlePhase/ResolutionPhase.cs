@@ -147,6 +147,8 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     
     private int HeadGain(int HP)
     {
+        if (HP == 1)
+            return 1;
         return HP / 5 + 2;
     }
 }

@@ -122,6 +122,17 @@ public static class PlayerActionLogic
             player.Consume(action);
             if (action.CD > 0 && !player.ActionsinCD.ContainsKey(action.ID))
                 player.ActionsinCD.Add(action.ID, action.CD);
+            //挑衅使得所有反弹行动进入CD
+            if (action.ID == "provoke")
+            {
+                var counterDefineList = ActionDataBase.Instance.GetActionType<CounterDefine>().Values;
+                foreach(var counter in counterDefineList)
+                {
+                    if (!player.ActionsinCD.ContainsKey(counter.ID))
+                        player.ActionsinCD.Add(counter.ID, 1);
+                }
+            }
+                
         }
     }
 
