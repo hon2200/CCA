@@ -28,9 +28,9 @@ public class ToyAssemblyLine : PhasebasedSkill
     }
     public override void OnStartPhase(Player Factory)
     {
-        if (PlayerManager.Instance.ReachMaxNumber())
+        if (PlayerManager.Instance.EnemyReachMaxNumber())
             return;
-        if (Factory.status.resources.Bullet.Value >= Cost[whichOne] && PlayerManager.Instance.ThereisAvailablePositions())
+        if (Factory.status.resources.Bullet.Value >= Cost[whichOne] && PlayerManager.Instance.ThereisAvailablePositions(true))
         {
             Factory.status.resources.Bullet.Use(Cost[whichOne]);
             AIDataBase.Instance.AIDictionary.TryGetValue(Sequence[whichOne], out var aIDefine);

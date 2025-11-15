@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public List<int> possibleKillers { get; set; }
     public Action OnBirth { get; set; }
     public bool is_stun = false;
-    public Dictionary<string,int> ActionsinCD { get; set; }
+    public CDManager CDmanager { get; set; }
 
     protected void Initialize(int ID_inGame, string Name, PlayerType playerType,
         int MaxHP, List<int> InitialResource = null, List<string> AvailableActions = null,
@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
         };
 
         possibleKillers = new();
-        ActionsinCD = new();
+
+        CDmanager = new();
     }
 }

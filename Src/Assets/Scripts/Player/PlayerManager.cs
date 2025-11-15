@@ -7,14 +7,22 @@ using UnityEngine;
 
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
-    private Dictionary<Vector2,Player> availablePositions { get; set; }
-    private int maxPlayerCount { get { return 6; } }
+    public List<GameObject> EnemyPositionList;
+    public List<GameObject> friendPositionList;
+    public GameObject humanPosition;
+    private Dictionary<Vector2, Player> availablePositions_enemy { get; set; }
+    private Dictionary<Vector2, Player> availablePositions_friend { get; set; }
+    private Vector2 availablePostion_human { get; set; }
     public int NextPlayerID { get; set; }
     public int AlivePlayerNumber { get; set; }
 
     public GameObject AIPrefab;
     public GameObject HumanPrefab;
     public Dictionary<int, Player> Players;
+    public void Start()
+    {
+        ReadSpacingData();
+    }
     public List<Player> GetAlivePlayers()
     {
         List<Player> liveones = new();
@@ -25,13 +33,24 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         }
         return liveones;
     }
-    public bool ThereisAvailablePositions()
+    public bool ThereisAvailablePositions(bool enemy)
     {
         ClearDeadPeople();
-        foreach(var position in availablePositions)
+        if(enemy)
         {
-            if (position.Value == null)
-                return true;
+            foreach (var position in availablePositions_enemy)
+            {
+                if (position.Value == null)
+                    return true;
+            }
+        }
+        else
+        {
+            foreach (var position in availablePositions_friend)
+            {
+                if (position.Value == null)
+                    return true;
+            }
         }
         return false;
     }
@@ -49,11 +68,6 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         {
             ClearAll();
             Player newPlayerH = CreateHuman_BasedOnLevel(levelDefine);
-            foreach(var avai in availablePositions)
-            {
-                if (avai.Value == null)
-                    Debug.Log(avai);
-            }
         }
 
         else
@@ -175,26 +189,26 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     }
     #endregion
     #region Spacing Things
-    public bool ReachMaxNumber()
+    public bool EnemyReachMaxNumber()
     {
-        if (AlivePlayerNumber >= maxPlayerCount)
-            return true;
-        else
+        if (availablePositions_enemy.ContainsValue(null))
             return false;
+        else
+            return true;
     }
     public void ReadSpacingData()
     {
-        if (!PlayerSpacingDataBase.Instance.playerSpacingDictionary.TryGetValue(maxPlayerCount, out var spacingData))
+        availablePositions_enemy = new();
+        availablePositions_friend = new();
+        foreach(var spot in EnemyPositionList)
         {
-            Debug.LogError($"No spacing data found for player count: {maxPlayerCount}");
-            return;
+            availablePositions_enemy.Add(new Vector2(spot.transform.localPosition.x, spot.transform.localPosition.y), null);
         }
-
-        availablePositions = new();
-        for (int i = 0; i < spacingData.Player_X.Count; i++)
+        foreach(var spot in friendPositionList)
         {
-            availablePositions.Add(new Vector2(spacingData.Player_X[i], spacingData.Player_Y[i]), null);
+            availablePositions_friend.Add(new Vector2(spot.transform.localPosition.x, spot.transform.localPosition.y), null);
         }
+        availablePostion_human = new Vector2(humanPosition.transform.localPosition.x, humanPosition.transform.localPosition.y);
     }
     private void InitializeHumanPlayerSpace(Player human)
     {
@@ -203,14 +217,28 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     private void ArrangeNewPlayer(Player newPlayer)
     {
         ClearDeadPeople();
+        if(newPlayer is AIPlayer ai && ai.isFriend)
+        {
+            foreach (var kvp in availablePositions_friend)
+            {
+                if (kvp.Value == null)
+                {
+                    var pos = kvp.Key;
+                    newPlayer.transform.localPosition = new Vector3(pos.x, pos.y, 1);
+                    availablePositions_friend[pos] = newPlayer; // mark as occupied
+                    return;
+                }
+            }
+            Debug.Assert(false, "No Available positions");
+        }
         //At this moment, the player haven't been added into Players;
-        foreach (var kvp in availablePositions)
+        foreach (var kvp in availablePositions_enemy)
         {
             if (kvp.Value == null)
             {
                 var pos = kvp.Key;
                 newPlayer.transform.localPosition = new Vector3(pos.x, pos.y, 1);
-                availablePositions[pos] = newPlayer; // mark as occupied
+                availablePositions_enemy[pos] = newPlayer; // mark as occupied
                 return;
             }
         }
@@ -229,10 +257,22 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             {
                 Destroy(player.gameObject);
                 Players.Remove(id);
-
-                // Find its position key(if any)
+                // Find its spot key(if any)
                 Vector2? foundKey = null;
-                foreach (var kvp in availablePositions)
+                if(player is AIPlayer ai && ai.isFriend)
+                {
+                    foreach (var kvp in availablePositions_friend)
+                    {
+                        if (kvp.Value == player)
+                        {
+                            foundKey = kvp.Key;
+                        }
+                    }
+                    // Mark spot available again
+                    if (foundKey.HasValue)
+                        availablePositions_friend[foundKey.Value] = null;
+                }
+                foreach (var kvp in availablePositions_enemy)
                 {
                     if (kvp.Value == player)
                     {
@@ -240,10 +280,9 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                         break;
                     }
                 }
-
-                // Mark position available again
+                // Mark spot available again
                 if (foundKey.HasValue)
-                    availablePositions[foundKey.Value] = null;
+                    availablePositions_enemy[foundKey.Value] = null;
             }
         }
 
@@ -269,9 +308,9 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             // Safely destroy player object
             Destroy(player.gameObject);
 
-            // Find its position key (if any)
+            // Find its spot key (if any)
             Vector2? foundKey = null;
-            foreach (var kvp in availablePositions)
+            foreach (var kvp in availablePositions_enemy)
             {
                 if (kvp.Value == player)
                 {
@@ -280,9 +319,9 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 }
             }
 
-            // Mark position available again
+            // Mark spot available again
             if (foundKey.HasValue)
-                availablePositions[foundKey.Value] = null;
+                availablePositions_enemy[foundKey.Value] = null;
         }
 
         // Clear player dictionary

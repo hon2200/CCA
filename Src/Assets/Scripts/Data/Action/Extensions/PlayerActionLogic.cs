@@ -106,13 +106,7 @@ public static class PlayerActionLogic
             player.status.resources.AvailableSword.CoolDown(player.status.resources.Sword.Value);
         }
         //Deal with CD of actions
-        var actionsinNewCD = new Dictionary<string, int>();
-        foreach(var actioninCD in player.ActionsinCD)
-        {
-            if (actioninCD.Value > 0)
-                actionsinNewCD.Add(actioninCD.Key, actioninCD.Value - 1);
-        }
-        player.ActionsinCD = actionsinNewCD;
+        player.CDmanager.CoolDown();
     }
 
     public static void ConsumeAndCD(this Player player)
@@ -120,16 +114,14 @@ public static class PlayerActionLogic
         foreach (var action in player.action)
         {
             player.Consume(action);
-            if (action.CD > 0 && !player.ActionsinCD.ContainsKey(action.ID))
-                player.ActionsinCD.Add(action.ID, action.CD);
+            player.CDmanager.ActionEnterCD(action);
             //挑衅使得所有反弹行动进入CD
             if (action.ID == "provoke")
             {
                 var counterDefineList = ActionDataBase.Instance.GetActionType<CounterDefine>().Values;
                 foreach(var counter in counterDefineList)
                 {
-                    if (!player.ActionsinCD.ContainsKey(counter.ID))
-                        player.ActionsinCD.Add(counter.ID, 1);
+                    player.CDmanager.AddAction(counter.ID, 1);
                 }
             }
                 

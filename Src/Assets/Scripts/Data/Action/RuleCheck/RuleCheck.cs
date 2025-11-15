@@ -57,34 +57,13 @@ public static class RuleCheck
         if (player.status.resources.AvailableSword.Value - actionDefine.Costs[1] < 0)
             return false;
         //CD检查
-        if (player.ActionsinCD.ContainsKey(actionDefine.ID))
+        if (player.CDmanager.ActionsinCD.ContainsKey(actionDefine.ID))
             return false;
-        //目前过来和挑衅单独判定，之后会把CD对行动合法性的印象单独写出来
-        if (actionDefine.ID == "comeon")
+        //过来和挑衅，第一回合不能用
+        if(BattleManager.Instance.Turn.Value == 1)
         {
-            player.action.LongHistory.TryGetValue((BattleManager.Instance.Turn.Value - 1, false),
-                out var actions);
-            //此前没有行动，说明刚上场
-            if (actions == null)
+            if (actionDefine.ID == "provoke" || actionDefine.ID == "comeon")
                 return false;
-            foreach (var action in actions)
-            {
-                if (action.ID == "comeon")
-                    return false;
-            }
-        }
-        if (actionDefine.ID == "provoke")
-        {
-            player.action.LongHistory.TryGetValue((BattleManager.Instance.Turn.Value - 1, false),
-                out var actions);
-            //此前没有行动，说明刚上场
-            if (actions == null)
-                return false;
-            foreach (var action in actions)
-            {
-                if (action.ID == "provoke" && action.Target == actionDefine.Target)
-                    return false;
-            }
         }
         //激光炮也单独判定，因为激光炮的赋值在PreResolution，which在Action之后
         if(actionDefine.ID == "laser_cannon")
