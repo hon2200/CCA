@@ -10,11 +10,14 @@ using TMPro;
 public class LevelManager : MonoSingleton<LevelManager>
 {
     public LevelAttribute Level;
-    
     public TextMeshPro Text;
-    public GameObject VictoryPanel;
-    public GameObject AdvanceButton;
+
     public GameObject DefeatPanel;
+    public GameObject WinningPanel;
+    
+    public Button AdvanceButton; // AdvanceButton should be within the winning panel
+    public Button RestartButton; // RestartButton should be within the defeat panel
+    public Button BackwarButton;
     public void Start()
     {
         Level = new();
@@ -29,41 +32,63 @@ public class LevelManager : MonoSingleton<LevelManager>
         };
         BattleManager.Instance.OnWinning += () =>
         {
-            AdvanceButton.SetActive(true);
-            AudioManager.Instance.VictoryAudioPlay();
-        };
-        BattleManager.Instance.OnStartGame += (string message) =>
-        {
-            if(message == "Level")
+            if (Level.IsLastWave())
             {
-                VictoryPanel.SetActive(false);
-                DefeatPanel.SetActive(false);
-                AdvanceButton.SetActive(false);
+                AdvanceButton.gameObject.SetActive(true);
+                AudioManager.Instance.VictoryAudioPlay();
+                WinningPanel.SetActive(true);
+            }
+            else//EnterNextWave, startGame right away
+            {
+                Level.NewWave();
+                BattleManager.Instance.OnNewWave.Invoke();
             }
         };
-        BattleManager.Instance.OnNewWave += () =>
-        {
-            AdvanceButton.SetActive(false);
-        };
+        RestartButton.onClick.AddListener(Restart);
+        RestartButton.onClick.AddListener(() => { DefeatPanel.SetActive(false); });
+        BackwarButton.onClick.AddListener(Backward);
+        AdvanceButton.onClick.AddListener(OpenBattleRewards); //Display unlockedSkill
+    }
+    public void OpenBattleRewards()
+    {
+        WinningPanel.SetActive(false);
+        BattleRewardManager.Instance.OpenBattleReward();
     }
     public LevelDefine GetCurrentLevel()
     {
         LevelDataBase.Instance.LevelDictionary.TryGetValue(Level.ID, out var levelDefine);
         return levelDefine;
     }
+    public LevelDefine GetPreviousLevel()
+    {
+        LevelDataBase.Instance.LevelDictionary.TryGetValue(GetCurrentLevel().PreviousLevel, out var levelDefine);
+        return levelDefine;
+    }
+    public LevelDefine GetNextLevel()
+    {
+        LevelDataBase.Instance.LevelDictionary.TryGetValue(GetCurrentLevel().NextLevel, out var levelDefine);
+        return levelDefine;
+    }
     public void Advance()
     {
         Level.Advance();
+        LevelStart();
     }
     public void Backward()
     {
         Level.Backward();
-        BattleManager.Instance.OnStartGame?.Invoke("Level");
+        LevelStart();
     }
     //重新开始
     public void Restart()
     {
         Level.FirstWave();
-        BattleManager.Instance.OnStartGame?.Invoke("Level");
+        LevelStart();
+    }
+    //新的一关正式开始
+    public void LevelStart()
+    {
+        AudioManager.Instance.SceneAudioPlay();
+        CardViewSystem.Instance.Show(GetCurrentLevel());
     }
 }

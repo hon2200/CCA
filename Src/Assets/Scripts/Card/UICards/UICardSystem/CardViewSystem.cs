@@ -6,20 +6,29 @@ using System.Threading.Tasks;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public class CardViewSystem : MonoSingleton<CardViewSystem>
 {
     public GameObject CardPanel;
     public List<GameObject> Cards;
+    public Button AdvanceButton;
+    public void Start()
+    {
+        AdvanceButton.onClick.AddListener(Clear);
+        AdvanceButton.onClick.AddListener(() =>
+        {
+            PlayerSkillManager.Instance.OpenSkillPanel();
+        });
+    }
     public void Show(LevelDefine levelDefine)
     {
         CardPanel.SetActive(true);
         CreateAllCards(levelDefine);
         ArrangeCards();
     }
-
-    public void Clear()
+    private void Clear()
     {
         // This is safe, because destroy won't destroy at once--from GPT
         foreach (var card in Cards)
@@ -32,8 +41,7 @@ public class CardViewSystem : MonoSingleton<CardViewSystem>
         Cards.Clear();
         CardPanel.SetActive(false);
     }
-
-    public void CreateAllCards(LevelDefine levelDefine)
+    private void CreateAllCards(LevelDefine levelDefine)
     {
         foreach(var cardID in levelDefine.UnlockedAction)
         {
@@ -51,11 +59,10 @@ public class CardViewSystem : MonoSingleton<CardViewSystem>
             newCard.transform.localScale *= 0.6f;
         }
     }
-    public void ArrangeCards()
+    private void ArrangeCards()
     {
         CardArranger newCardArranger = new();
         newCardArranger.handCards = Cards;
         newCardArranger.ArrangeLine(5f);
     }
-
 }

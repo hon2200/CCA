@@ -52,18 +52,14 @@ public class 卡牌动画 : MonoBehaviour
     {
         
         // 这个地方需要修改，因为我会删除和新增Card，这里只初始化一次会出问题
-        if (BattleManager.Instance.Turn.Value != currentTurn || LevelManager.Instance.Level.Value!= levelValue)
+        bool needIni = false;
+        foreach(var child in ChildrenCards)
         {
-            currentTurn = BattleManager.Instance.Turn.Value;
-            levelValue = LevelManager.Instance.Level.Value;
-            InitializeCardCache();
+            if (child == null)
+                needIni = true;
         }
-        // 如果卡牌缓存未初始化，先进行初始化
-        int currentCount = transform.childCount;
-        if (ChildrenCards == null || currentCount == 0)
-        {
+        if(needIni)
             InitializeCardCache();
-        }
 
         // 检测当前悬停状态并更新CardOnHover
         CardOnHover = CheckHoverState();

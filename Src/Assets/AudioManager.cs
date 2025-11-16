@@ -18,7 +18,6 @@ public class AudioManager : MonoSingleton<AudioManager>
         audioSource.clip = audioClips[currentPlayingOrder];
         audioSource.Play();
     }
-
     public void Silence()
     {
         silence = true;
@@ -29,7 +28,6 @@ public class AudioManager : MonoSingleton<AudioManager>
         silence = false;
         audioSource.Play();
     }
-
     public void SceneAudioPlay()
     {
         if (silence || currentPlayingType == 0)
@@ -38,7 +36,6 @@ public class AudioManager : MonoSingleton<AudioManager>
         audioSource.clip = audioClips[currentPlayingOrder];
         audioSource.Play();
     }
-
     public void VictoryAudioPlay()
     {
         if (silence || currentPlayingType == 1)

@@ -24,9 +24,8 @@ public class LevelDefine
     {
         List<string> availableActions = new();
         List<LevelDefine> previousLevels = new();
-        LevelDataBase.Instance.LevelDictionary.TryGetValue(ID, out var currentLevel);
-        previousLevels.Add(currentLevel);
-        availableActions.AddRange(currentLevel.UnlockedAction);
+        previousLevels.Add(this);
+        availableActions.AddRange(UnlockedAction);
         while (previousLevels[previousLevels.Count - 1].PreviousLevel != null)
         {
             LevelDataBase.Instance.LevelDictionary.TryGetValue(previousLevels[previousLevels.Count - 1].PreviousLevel, out var anotherLevel);
@@ -34,5 +33,30 @@ public class LevelDefine
             availableActions.AddRange(anotherLevel.UnlockedAction);
         }
         return availableActions;
+    }
+
+    public List<string> GetAllUnlockedSkills()
+    {
+        List<string> unlockedSkills = new();
+        List<LevelDefine> previousLevels = new();
+        previousLevels.Add(this);
+        while (previousLevels[previousLevels.Count - 1].PreviousLevel != null)
+        {
+            LevelDataBase.Instance.LevelDictionary.TryGetValue(previousLevels[previousLevels.Count - 1].PreviousLevel, out var anotherLevel);
+            previousLevels.Add(anotherLevel);
+            unlockedSkills.AddRange(anotherLevel.UnlockedSkillFinal);
+        }
+        return unlockedSkills;
+    }
+
+    public int GetIncreasedSkillSlots()
+    {
+        LevelDataBase.Instance.LevelDictionary.TryGetValue(PreviousLevel, out var previousLevel);
+        return -previousLevel.PlayerSkillSlots + PlayerSkillSlots;
+    }
+    public int GetIncreasedMaxHP()
+    {
+        LevelDataBase.Instance.LevelDictionary.TryGetValue(PreviousLevel, out var previousLevel);
+        return -previousLevel.PlayerHP + PlayerHP;
     }
 }
