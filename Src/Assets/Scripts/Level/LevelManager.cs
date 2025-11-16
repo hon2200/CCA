@@ -14,7 +14,8 @@ public class LevelManager : MonoSingleton<LevelManager>
 
     public GameObject DefeatPanel;
     public GameObject WinningPanel;
-    
+
+    public Button NextWaveButton;
     public Button AdvanceButton; // AdvanceButton should be within the winning panel
     public Button RestartButton; // RestartButton should be within the defeat panel
     public Button BackwarButton;
@@ -40,14 +41,20 @@ public class LevelManager : MonoSingleton<LevelManager>
             }
             else//EnterNextWave, startGame right away
             {
-                Level.NewWave();
-                BattleManager.Instance.OnNewWave.Invoke();
+                NextWaveButton.gameObject.SetActive(true);
             }
         };
         RestartButton.onClick.AddListener(Restart);
         RestartButton.onClick.AddListener(() => { DefeatPanel.SetActive(false); });
         BackwarButton.onClick.AddListener(Backward);
         AdvanceButton.onClick.AddListener(OpenBattleRewards); //Display unlockedSkill
+        NextWaveButton.onClick.AddListener(OnNextWave);
+    }
+    public void OnNextWave()
+    {
+        Level.NewWave();
+        BattleManager.Instance.OnNewWave.Invoke();
+        NextWaveButton.gameObject?.SetActive(false);
     }
     public void OpenBattleRewards()
     {

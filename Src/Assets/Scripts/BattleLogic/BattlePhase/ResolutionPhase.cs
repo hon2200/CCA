@@ -20,7 +20,6 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     {
         ClearPossibleKillers();
     }
-
     public void Resolution()
     {
         foreach (var player in PlayerManager.Instance.Players.Values)
@@ -76,7 +75,6 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
                 "action", "Log/InGame/PlayerAction.txt",false);
         }
     }
-
     public void KnockofDeath()
     {
         var playersSnapshot = PlayerManager.Instance.Players.Values.ToList();

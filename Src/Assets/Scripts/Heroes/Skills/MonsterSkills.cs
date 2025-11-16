@@ -114,6 +114,5 @@ public class WaraxeDanceSkill : ActionSkill
         ID = "Waraxe Dance";
         ActionID = "waraxe_dance";
     }
-
-
 }
+
