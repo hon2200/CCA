@@ -6,11 +6,11 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -98,11 +98,11 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -121,14 +121,14 @@ Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
       Costs: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             0
           [1]:             0
-      CD:         0
+      CD:         1
       remainedCD:         0
       TargetType:         Self
       Target:         1
@@ -159,61 +159,13 @@ Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         3
-      OnBlocking:         null
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         4
-      OnBlocking:         null
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -221,75 +173,11 @@ action:
       CD:         0
       remainedCD:         0
       TargetType:         Self
-      Target:         5
+      Target:         1
       isCopy:         False
       isBasic:         True
       actionType:         Supply
 ------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Origin
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         block
-      Name:         挡
-      Description:         可以挡住“刺类”攻击和单发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         0
-      isCopy:         False
-      isBasic:         True
-      actionType:         Defend
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         3
-      OnBlocking:         null
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
 Key: 4
 action: 
   PlayerAction (Count: 1)
@@ -297,7 +185,7 @@ action:
       Level:         4
       Damage:         1
       AttackType:         0
-      Victim:         4
+      Victim:         1
       OnBlocking:         null
       ID:         shoot
       Name:         给枪
@@ -315,181 +203,6 @@ action:
       actionType:         Attack
 ------------------------------------
 Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         5
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Origin
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         2
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         5
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Origin
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         2
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         5
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -503,12 +216,75 @@ action:
       CD:         0
       remainedCD:         0
       TargetType:         Self
-      Target:         1
+      Target:         0
       isCopy:         False
       isBasic:         True
       actionType:         Defend
 ------------------------------------
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+------------------------------------
 Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -532,41 +308,7 @@ action:
       isBasic:         True
       actionType:         Attack
 ------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
 Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         0
-      OnBlocking:         null
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -580,204 +322,6 @@ action:
       CD:         0
       remainedCD:         0
       TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Defend
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         1
-      OnBlocking:         null
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         0
-      OnBlocking:         null
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Origin
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         2
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         block
-      Name:         挡
-      Description:         可以挡住“刺类”攻击和单发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         0
-      isCopy:         False
-      isBasic:         True
-      actionType:         Defend
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         rebounce
-      Name:         反弹
-      Description:         可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Origin
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         2
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         block
-      Name:         挡
-      Description:         可以挡住“刺类”攻击和单发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
       Target:         0
       isCopy:         False
       isBasic:         True
@@ -791,11 +335,11 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -814,11 +358,11 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -833,302 +377,8 @@ action:
 ------------------------------------
 Key: 3
 action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
   PlayerAction (Count: 1)
     [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         5
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         2
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         5
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         1
-      OnBlocking:         null
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         1
-      OnBlocking:         null
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 2
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         1
-      OnBlocking:         null
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 5
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         1
-      OnBlocking:         null
-      ID:         double_shoot
-      Name:         双枪
-      Description:         对应防御：双挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             2
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         1
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-------------------------------------
-Dict 内容 (Count: 5) - 仅显示属性路径: action
-====================================
-Key: 1
-action: 
-  PlayerAction (Count: 2)
-    [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         5
-      OnBlocking:         null
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Enemy
-      Target:         5
-      isCopy:         False
-      isBasic:         True
-      actionType:         Attack
-    [1]: 
       Level:         4
       Damage:         1
       AttackType:         0
@@ -1149,17 +399,13 @@ action:
       isBasic:         True
       actionType:         Attack
 ------------------------------------
-Key: 2
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -1167,18 +413,10 @@ action:
       CD:         0
       remainedCD:         0
       TargetType:         Self
-      Target:         2
+      Target:         0
       isCopy:         False
       isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
+      actionType:         Defend
 ------------------------------------
 Key: 5
 action: 
@@ -1186,11 +424,11 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -1207,28 +445,54 @@ Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
 action: 
-  PlayerAction (Count: 2)
+  PlayerAction (Count: 1)
     [0]: 
-      Level:         4
-      Damage:         1
-      AttackType:         0
-      Victim:         5
-      OnBlocking:         null
-      ID:         shoot
-      Name:         给枪
-      Description:         对应防御：挡
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
-          [0]:             1
+          [0]:             0
           [1]:             0
       CD:         0
       remainedCD:         0
-      TargetType:         Enemy
-      Target:         5
+      TargetType:         Self
+      Target:         1
       isCopy:         False
       isBasic:         True
-      actionType:         Attack
-    [1]: 
+      actionType:         Supply
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         2
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
       Level:         4
       Damage:         1
       AttackType:         0
@@ -1249,17 +513,13 @@ action:
       isBasic:         True
       actionType:         Attack
 ------------------------------------
-Key: 2
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -1267,18 +527,10 @@ action:
       CD:         0
       remainedCD:         0
       TargetType:         Self
-      Target:         2
+      Target:         0
       isCopy:         False
       isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 3
-action: 
-  PlayerAction (Count: 0)
-------------------------------------
-Key: 4
-action: 
-  PlayerAction (Count: 0)
+      actionType:         Defend
 ------------------------------------
 Key: 5
 action: 
@@ -1286,11 +538,11 @@ action:
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -1303,9 +555,32 @@ action:
       isBasic:         True
       actionType:         Supply
 ------------------------------------
-Dict 内容 (Count: 4) - 仅显示属性路径: action
+Dict 内容 (Count: 5) - 仅显示属性路径: action
 ====================================
 Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -1328,74 +603,7 @@ action:
       isBasic:         True
       actionType:         Supply
 ------------------------------------
-Key: 8
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         8
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Key: 7
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      ID:         double_block
-      Name:         双挡
-      Description:         可以挡住双发子弹类攻击
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         0
-      isCopy:         False
-      isBasic:         True
-      actionType:         Defend
-------------------------------------
-Key: 6
-action: 
-  PlayerAction (Count: 1)
-    [0]: 
-      SupplyNumber: 
-        List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
-      Costs: 
-        List`1 (Count: 2)
-          [0]:             0
-          [1]:             0
-      CD:         0
-      remainedCD:         0
-      TargetType:         Self
-      Target:         6
-      isCopy:         False
-      isBasic:         True
-      actionType:         Supply
-------------------------------------
-Dict 内容 (Count: 4) - 仅显示属性路径: action
-====================================
-Key: 1
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -1418,7 +626,56 @@ action:
       isBasic:         True
       actionType:         Supply
 ------------------------------------
-Key: 8
+Key: 5
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         comeon
+      Name:         万象天引
+      Description:         吸收所有场上所有补给和攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         1
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Origin
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Key: 3
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -1436,12 +693,148 @@ action:
       CD:         0
       remainedCD:         0
       TargetType:         Self
-      Target:         8
+      Target:         1
       isCopy:         False
       isBasic:         True
       actionType:         Supply
 ------------------------------------
-Key: 7
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             1
+          [1]:             0
+      ID:         bullet
+      Name:         补给
+      Description:         获得一颗子弹
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Key: 5
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      Level:         3
+      Damage:         1
+      AttackType:         0
+      Victim:         1
+      OnBlocking:         null
+      ID:         cleave
+      Name:         砍
+      Description:         对应防御：重挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             2
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         1
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 3)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+    [1]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+    [2]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         5
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         5
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 4
 action: 
   PlayerAction (Count: 1)
     [0]: 
@@ -1460,17 +853,17 @@ action:
       isBasic:         True
       actionType:         Defend
 ------------------------------------
-Key: 6
+Key: 5
 action: 
   PlayerAction (Count: 1)
     [0]: 
       SupplyNumber: 
         List`1 (Count: 2)
-          [0]:             1
-          [1]:             0
-      ID:         bullet
-      Name:         补给
-      Description:         获得一颗子弹
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
       Costs: 
         List`1 (Count: 2)
           [0]:             0
@@ -1478,7 +871,138 @@ action:
       CD:         0
       remainedCD:         0
       TargetType:         Self
-      Target:         6
+      Target:         5
+      isCopy:         False
+      isBasic:         True
+      actionType:         Supply
+------------------------------------
+Dict 内容 (Count: 5) - 仅显示属性路径: action
+====================================
+Key: 1
+action: 
+  PlayerAction (Count: 3)
+    [0]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         4
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+    [1]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         0
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         3
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+    [2]: 
+      Level:         2
+      Damage:         1
+      AttackType:         0
+      Victim:         5
+      OnBlocking:         null
+      ID:         stab
+      Name:         刺
+      Description:         对应防御：挡，双挡
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      CD:         0
+      remainedCD:         0
+      TargetType:         Enemy
+      Target:         5
+      isCopy:         False
+      isBasic:         True
+      actionType:         Attack
+------------------------------------
+Key: 2
+action: 
+  PlayerAction (Count: 0)
+------------------------------------
+Key: 3
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         block
+      Name:         挡
+      Description:         可以挡住“刺类”攻击和单发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 4
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      ID:         double_block
+      Name:         双挡
+      Description:         可以挡住双发子弹类攻击
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         0
+      isCopy:         False
+      isBasic:         True
+      actionType:         Defend
+------------------------------------
+Key: 5
+action: 
+  PlayerAction (Count: 1)
+    [0]: 
+      SupplyNumber: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             1
+      ID:         sword
+      Name:         拔剑
+      Description:         获得一把剑
+      Costs: 
+        List`1 (Count: 2)
+          [0]:             0
+          [1]:             0
+      CD:         0
+      remainedCD:         0
+      TargetType:         Self
+      Target:         5
       isCopy:         False
       isBasic:         True
       actionType:         Supply

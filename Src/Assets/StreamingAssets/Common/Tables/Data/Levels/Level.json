@@ -159,13 +159,7 @@
             ]
         ],
         "FriendList": [],
-        "DisabledAction": [
-            "bullet",
-            "shoot",
-            "double_shoot",
-            "double_block",
-            "rebounce"
-        ],
+        "DisabledAction": [],
         "UnlockedAction": [
             "sword",
             "stab",
@@ -202,13 +196,7 @@
             ]
         ],
         "FriendList": [],
-        "DisabledAction": [
-            "bullet",
-            "shoot",
-            "double_shoot",
-            "double_block",
-            "rebounce"
-        ],
+        "DisabledAction": [],
         "UnlockedAction": [
             "cleave",
             "heavy_block"
@@ -237,7 +225,9 @@
                 "Skunk Slave"
             ],
             [
-                "Skunk Chieftain"
+                "Skunk Chieftain",
+                "Black Coat",
+                "Black Coat"
             ]
         ],
         "FriendList": [],
@@ -270,11 +260,7 @@
                 "Mnemosyne Hand"
             ]
         ],
-        "FriendList": [
-            [
-                "Entity of Will"
-            ]
-        ],
+        "FriendList": [],
         "DisabledAction": [],
         "UnlockedAction": [
             "comeon"

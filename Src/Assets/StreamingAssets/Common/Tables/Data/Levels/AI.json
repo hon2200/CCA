@@ -143,6 +143,9 @@
         "CharacterID": "Bellicose",
         "MonsterType": "Commmon",
         "IsFriend": false,
+        "PreferedAction": [
+            "stab"
+        ],
         "DisabledAction": [
             "bullet"
         ],
@@ -163,6 +166,9 @@
         "CharacterID": "Fucked",
         "MonsterType": "Commmon",
         "IsFriend": false,
+        "PreferedAction": [
+            "stab"
+        ],
         "DisabledAction": [
             "bullet"
         ],
@@ -220,7 +226,7 @@
     "Skunk Chieftain": {
         "ID": "Skunk Chieftain",
         "Name": "臭鼬头领",
-        "CharacterID": "Fucked",
+        "CharacterID": "Bellicose",
         "MonsterType": "Elite",
         "IsFriend": false,
         "PreferedAction": [
@@ -232,7 +238,7 @@
         "InitialHP": 7,
         "InitialResource": [
             0,
-            0,
+            3,
             0
         ],
         "MonsterDescription": "需要补完",
@@ -257,10 +263,10 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Intimidation",
+            "Time Distortion",
             "Void Servant",
-            "Devour the Stars",
-            "Morphing Remains"
+            "Devouring Stars",
+            "Morphing Remain"
         ]
     },
     "Void Beast": {
@@ -312,7 +318,7 @@
     "Mnemosyne Hand": {
         "ID": "Mnemosyne Hand",
         "Name": "谟涅摩叙涅之手",
-        "CharacterID": "Arrogant",
+        "CharacterID": "Protective",
         "MonsterType": "Elite",
         "IsFriend": false,
         "PreferedAction": [
@@ -329,7 +335,7 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Cocooning"
+            "Time Fasting"
         ]
     },
     "Entity of Will": {

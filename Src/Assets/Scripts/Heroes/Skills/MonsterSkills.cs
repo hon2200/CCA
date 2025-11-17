@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 
 public class ProtectingAlly : PhasebasedSkill
 {
@@ -116,3 +117,38 @@ public class WaraxeDanceSkill : ActionSkill
     }
 }
 
+public class TimeDistortion : PhasebasedSkill
+{
+    int CD = 0;
+    bool isUsed = false;
+    public TimeDistortion()
+    {
+        ID = "Time Distortion";
+    }
+    //感觉CD，ID，还有这个log都可以进行整合，之后看一看
+    public override void OnStartPhase(Player thisPlayer)
+    {
+        if (CD == 0)
+        {
+            PrintEvent.Instance.log += "时间扭曲.. 本回合行动翻倍";
+            isUsed = true;
+            CD = 5;
+        }
+        else
+            CD--;
+    }
+    public override void BeforeResolution(Player thisPlayer)
+    {
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            List<ActionDefine> duplicatedList = new();
+            foreach(var action in player.action)
+            {
+                var newAction = (ActionDefine)action.Clone();
+                action.Costs = new();
+                duplicatedList.Add(newAction);
+            }
+            player.action.AddRange(duplicatedList);
+        }
+    }
+}

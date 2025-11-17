@@ -243,8 +243,10 @@ Key: 2-3
           [0]:             Furious Skunk
           [1]:             Skunk Slave
       [1]: 
-        List`1 (Count: 1)
+        List`1 (Count: 3)
           [0]:             Skunk Chieftain
+          [1]:             Black Coat
+          [2]:             Black Coat
   FriendList: 
     List`1 (Count: 0)
   UnlockedAction: 
@@ -276,10 +278,7 @@ Key: 2-4
           [1]:             Chronos Hand
           [2]:             Mnemosyne Hand
   FriendList: 
-    List`1 (Count: 1)
-      [0]: 
-        List`1 (Count: 1)
-          [0]:             Entity of Will
+    List`1 (Count: 0)
   UnlockedAction: 
     List`1 (Count: 1)
       [0]:         comeon

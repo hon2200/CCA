@@ -188,7 +188,9 @@ Key: Novice Assassin
       [0]:         bullet
   EnabledAction: 
     List`1 (Count: 0)
-  PreferedAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         stab
   SkillList: 
     List`1 (Count: 0)
 ------------------------------------
@@ -212,7 +214,9 @@ Key: Black Coat
       [0]:         bullet
   EnabledAction: 
     List`1 (Count: 0)
-  PreferedAction:     null
+  PreferedAction: 
+    List`1 (Count: 1)
+      [0]:         stab
   SkillList: 
     List`1 (Count: 0)
 ------------------------------------
@@ -275,10 +279,10 @@ Key: Skunk Chieftain
   InitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         0
+      [1]:         3
       [2]:         0
   MonsterDescription:     需要补完
-  CharacterID:     Fucked
+  CharacterID:     Bellicose
   DisabledAction: 
     List`1 (Count: 0)
   EnabledAction: 
@@ -312,10 +316,10 @@ Key: Shadow of Void
   PreferedAction:     null
   SkillList: 
     List`1 (Count: 4)
-      [0]:         Intimidation
+      [0]:         Time Distortion
       [1]:         Void Servant
-      [2]:         Devour the Stars
-      [3]:         Morphing Remains
+      [2]:         Devouring Stars
+      [3]:         Morphing Remain
 ------------------------------------
 Key: Void Beast
 
@@ -383,7 +387,7 @@ Key: Mnemosyne Hand
       [1]:         0
       [2]:         0
   MonsterDescription:     需要补完
-  CharacterID:     Arrogant
+  CharacterID:     Protective
   DisabledAction: 
     List`1 (Count: 0)
   EnabledAction: 
@@ -393,7 +397,7 @@ Key: Mnemosyne Hand
       [0]:         sword
   SkillList: 
     List`1 (Count: 1)
-      [0]:         Cocooning
+      [0]:         Time Fasting
 ------------------------------------
 Key: Entity of Will
 

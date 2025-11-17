@@ -22,6 +22,7 @@ public class BattleRewardManager : MonoSingleton<BattleRewardManager>
     public void OpenBattleReward()
     {
         BattleRewardPanel.SetActive(true);
+        skillText.text = "";
         foreach (var skill in LevelManager.Instance.GetCurrentLevel().UnlockedSkillFinal)
             skillText.text += $"获得新技能 {skill} \n";
         skillText.text += $"获得新技能槽 {LevelManager.Instance.GetNextLevel().GetIncreasedSkillSlots()} \n";

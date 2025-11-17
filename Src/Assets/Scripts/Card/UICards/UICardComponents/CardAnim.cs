@@ -15,9 +15,6 @@ public class 卡牌动画 : MonoBehaviour
     [SerializeField] private float angle = 5f;      // 悬停时卡牌的旋转角度偏移量
     [SerializeField] private float lerpSpeed = 5f;   // 动画插值速度
 
-    private int currentTurn;
-    private string levelValue;
-
     // 卡牌缓存相关
     [Header("卡牌缓存")]
     [SerializeField] private CardSelection_[] ChildrenCards; // 所有子卡牌的CardSelection组件缓存
@@ -58,7 +55,7 @@ public class 卡牌动画 : MonoBehaviour
             if (child == null)
                 needIni = true;
         }
-        if(needIni)
+        if (ChildrenCards == null || ChildrenCards.Length == 0 || needIni)
             InitializeCardCache();
 
         // 检测当前悬停状态并更新CardOnHover
