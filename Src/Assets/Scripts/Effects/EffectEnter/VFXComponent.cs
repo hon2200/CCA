@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Events;
+using static UnityEngine.UI.Image;
 
 /// <summary>
 /// 特效组
@@ -10,175 +12,79 @@ public class VFXComponent : VFXBase
 {
     [Tooltip("组合ID")]
     public string CompositionId;
+    public VFXComConfigs comConfigs;
+    public UnityEvent onPlayEffect = new UnityEvent();
+
+    public float playtime = 0;
 
     [Tooltip("包含的组件")]
     public List<VFXBase> ChildComponents = new List<VFXBase>();
-    public List<VFXConfig> CompsConfigs = new List<VFXConfig>();
 
-    [Tooltip("组件延迟时间")]
-    public float[] ComponentDelays;
-    public float TotalDelay;
 
-    [Tooltip("组件持续时间乘数")]
-    public float[] ComponentDurationMultipliers;
-
-    /// <summary>
-    /// 初始化组合
-    /// </summary>
-    public void InitializeComposition()
+    public void SetConfigs(VFXComConfigs configs, Vector3 origin, Vector3 target = new Vector3())
     {
-        // 收集所有子组件
+        comConfigs = configs;
         ChildComponents.Clear();
-        CompsConfigs.Clear();
-        foreach (Transform child in transform)
+        CompositionId = configs.id;
+        for (int i = 0; i < configs.components.Length; i++)
         {
-            VFXBase component = child.GetComponent<VFXBase>();
-            if (component != null)
+            if (VFXDictionary.Instance.configs.TryGetValue(configs.components[i], out VFXConfig vFXConfig))
             {
-                ChildComponents.Add(component);
-            }
-        }
-
-        // 初始化延迟和持续时间数组
-        ComponentDelays = new float[ChildComponents.Count];
-        ComponentDurationMultipliers = new float[ChildComponents.Count];
-
-        for (int i = 0; i < ChildComponents.Count; i++)
-        {
-            ComponentDelays[i] = 0f;
-            ComponentDurationMultipliers[i] = 1f;
-        }
-    }
-
-    public void SetConfigs(List<VFXConfig> configs)
-    {
-        CompsConfigs = configs;
-    }
-
-
-
-
-    /// <summary>
-    /// 播放轨迹特效
-    /// </summary>
-    public override void PlayTrailEffect(Vector3 start, Vector3 end)
-    {
-        base.PlayTrailEffect(start, end);
-    }
-
-    /// <summary>
-    /// 播放定点特效
-    /// </summary>
-    public override void PlayPointEffect(Vector3 position, float duration)
-    {
-        base.PlayPointEffect(position, duration);
-
-        // 为每个子组件计算参数并播放
-        for (int i = 0; i < ChildComponents.Count; i++)
-        {
-            VFXBase component = ChildComponents[i];
-
-            // 计算组件特定的持续时间
-            float componentDuration = duration * ComponentDurationMultipliers[i];
-
-            // 使用协程处理延迟播放
-            if (ComponentDelays[i] > 0)
-            {
-                StartCoroutine(DelayedPlayComponent(component, position, componentDuration, ComponentDelays[i]));
-            }
-            else
-            {
-                component.PlayPointEffect(position, componentDuration);
-            }
-        }
-    }
-
-    /// <summary>
-    /// 设置组件延迟时间
-    /// </summary>
-    public void SetComponentDelay(int index, float delay)
-    {
-        if (index >= 0 && index < ComponentDelays.Length)
-        {
-            ComponentDelays[index] = delay;
-        }
-    }
-
-    /// <summary>
-    /// 设置组件持续时间乘数
-    /// </summary>
-    public void SetComponentDurationMultiplier(int index, float multiplier)
-    {
-        if (index >= 0 && index < ComponentDurationMultipliers.Length)
-        {
-            ComponentDurationMultipliers[index] = multiplier;
-        }
-    }
-
-    /// <summary>
-    /// 设置所有组件的颜色
-    /// </summary>
-    public void SetAllParticleColors(Color color)
-    {
-        foreach (VFXBase component in ChildComponents)
-        {
-            component.SetColor(color);
-        }
-    }
-
-    /// <summary>
-    /// 设置所有组件的粒子大小
-    /// </summary>
-    public void SetAllParticleSizes(float size)
-    {
-        foreach (VFXBase component in ChildComponents)
-        {
-            component.SetSize(size);
-        }
-    }
-
-    /// <summary>
-    /// 延迟播放组件
-    /// </summary>
-    private IEnumerator DelayedPlayComponent(VFXBase component, Vector3 start, Vector3 end, float duration, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        component.PlayTrailEffect(start, end);
-    }
-
-    /// <summary>
-    /// 延迟播放组件
-    /// </summary>
-    private IEnumerator DelayedPlayComponent(VFXBase component, Vector3 position, float duration, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        component.PlayPointEffect(position, duration);
-    }
-
-    /// <summary>
-    /// 更新特效状态
-    /// </summary>
-    public void Update()
-    {
-
-        // 检查所有子组件是否完成
-        if (!IsFinished)
-        {
-            bool allFinished = true;
-
-            foreach (VFXBase component in ChildComponents)
-            {
-                if (!component.IsFinished)
+                VFXBase effect;
+                if (VFXManager.Instance.TrailDictionary.TryGetValue(vFXConfig.id, out VFXBase vFX))
                 {
-                    allFinished = false;
-                    break;
+                    effect = Instantiate(VFXManager.Instance.TrailDictionary[vFXConfig.id], origin, gameObject.transform.rotation);
                 }
-            }
-
-            if (allFinished)
-            {
-                IsFinished = true;
+                else
+                {
+                    effect = Instantiate(VFXManager.Instance.SpotDictionary[vFXConfig.id], origin, gameObject.transform.rotation);
+                }
+                float angle = Quaternion.Angle(Quaternion.LookRotation(target - origin), Quaternion.identity);
+                Vector3 rotatedVector = Quaternion.Euler(0, 0, angle) * configs.offects[i];
+                effect.gameObject.transform.SetParent(this.transform);
+                vFXConfig.duration = configs.duration;
+                vFXConfig.delay = configs.delay;
+                effect.origin = origin + rotatedVector;
+                effect.target = target + rotatedVector;
+                effect.SetConfig(vFXConfig);
+                onPlayEffect.AddListener(() => effect.PlayEffect());
+                ChildComponents.Add(effect);
             }
         }
     }
+
+    public override void SetDuration(float duration)
+    {
+        foreach (var kv in ChildComponents)
+        {
+            kv.SetDuration(duration);
+        }
+    }
+
+    public override void SetDelay(float delay)
+    {
+        foreach (var kv in ChildComponents)
+        {
+            kv.SetDelay(delay);
+        }
+    }
+
+
+    public override void PlayEffect()
+    {
+        playtime = Time.time;
+        foreach (var kv in ChildComponents)
+        {
+            kv.PlayEffect();
+        }
+
+        onPlayEffect?.Invoke();
+        onPlayEffect.RemoveAllListeners();
+    }
+
+    public override bool IsFinished()
+    {
+        return base.IsFinished() || Time.time >= playtime + comConfigs.duration + 1;
+    }
+
 }

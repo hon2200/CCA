@@ -15,7 +15,7 @@ public class text : MonoBehaviour
 
     void Start()
     {
-        VFXConfigDictionary.Instance.Load();
+        VFXDictionary.Instance.Load();
     }
     void Update()
     {
@@ -29,7 +29,7 @@ public class text : MonoBehaviour
                 targetPosition = hit.point;
             }
             target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
-            VFXManager.Instance.PlayTrailEffect(false, "DoubleBullet", gameObject, target, duration);
+            VFXManager.Instance.PlayEffect(false, "DoubleBullet", gameObject, target);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
@@ -41,7 +41,7 @@ public class text : MonoBehaviour
                 targetPosition = hit.point;
             }
             target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
-            VFXManager.Instance.PlayTrailEffect(false, "LaserCannon", gameObject, target, duration);
+            VFXManager.Instance.PlayEffect(false, "LaserCannon", gameObject, target);
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -53,7 +53,7 @@ public class text : MonoBehaviour
                 targetPosition = hit.point;
             }
             target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
-            VFXManager.Instance.PlayPointEffect(false, "Hit", target, duration);
+            VFXManager.Instance.PlayEffect(false, "Hit", target);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
@@ -65,7 +65,7 @@ public class text : MonoBehaviour
                 targetPosition = hit.point;
             }
             target.transform.position = new Vector3(targetPosition.x, targetPosition.y, 0);
-            VFXManager.Instance.PlayPointEffect(false, "Shield", target, duration, offset: new Vector3(-0.5f, 0.5f, 0));
+            VFXManager.Instance.PlayEffect(false, "Shield", target);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {

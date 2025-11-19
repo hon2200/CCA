@@ -70,7 +70,7 @@ public static class DefendLogic
     public static void HowtoDefend(this DefendDefine defend,AttackDefine attack, Player victim)
     {
         //创建并添加防御
-        VFXManager.Instance.PlayPointEffect(false, "Shield", victim.gameObject);
+        VFXManager.Instance.PlayEffect(false, "Shield", victim.gameObject);
     }
 }
 

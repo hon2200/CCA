@@ -1,22 +1,24 @@
 {
+  "Bullet": {
+    "id": "Bullet"
+  },
+  "Shield": {
+    "id": "Shield"
+  },
+  "Hit": {
+    "id": "Hit"
+  },
+  "Blade": {
+    "id": "Blade"
+  },
   "LaserCannon": {
     "name": "¼¤¹âÅÚ",
     "id": "Bullet",
     "duration": 0.5,
     "delay": 0.0,
     "3DSize": [ 1, 0.5, 1 ],
-    "count": [1],
+    "count": [ 1 ],
     "rateOverTime": 150,
     "speedFactor": 1
-  },
-  "DoubleBullet": {
-    "name": "Ë«Ç¹",
-    "id": "Bullet",
-    "duration": 0.5,
-    "delay": 0.0,
-    "size": 0.5,
-    "bursttime": [ 0, 0.2 ],
-    "count": [ 1, 1 ],
-    "speedFactor": 1.0
   }
 }

@@ -31,20 +31,37 @@ public class VFXConfig
     public int[] count;
     public int rateOverTime;
     public float[] color;
-    public float speedFactor;
+}
+/// <summary>
+/// 组合预设属性
+/// <para>name : 用于我们快速查找</para>
+/// <para>id : 用于我们快速查找</para>
+/// <para>baseids : 所有支持的基础组件</para>
+/// <para>offects : 偏移</para>
+/// <para>duration : 持续时间</para>
+/// <para>delay : 延迟</para>
+/// </summary>
+public class VFXComConfigs
+{
+    public string name;
+    public string id;
+    public string[] components;
+    public Vector3[] offects;
+    public float duration;
+    public float delay;
 }
 
 /// <summary>
 /// 特效预设字典
 /// </summary>
-public class VFXConfigDictionary:Singleton<VFXConfigDictionary>
+public class VFXDictionary : Singleton<VFXDictionary>
 {
     [Tooltip("配置路径")]
     public string DataPath;
 
     [Tooltip("单特效配置字典")]
-    public Dictionary<string, VFXConfig> config=new Dictionary<string, VFXConfig>();
-
+    public Dictionary<string, VFXConfig> configs = new Dictionary<string, VFXConfig>();
+    public Dictionary<string, VFXComConfigs> ComConfigs = new Dictionary<string, VFXComConfigs>();
 
     /// <summary>
     /// 读取
@@ -53,7 +70,8 @@ public class VFXConfigDictionary:Singleton<VFXConfigDictionary>
     {
         DataPath = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/VFX/");
         string json = File.ReadAllText(this.DataPath + "VFXBase.json");
-        this.config = JsonConvert.DeserializeObject<Dictionary<string, VFXConfig>>(json);
-        VFXManager.Instance.configs = config;
-    } 
+        this.configs = JsonConvert.DeserializeObject<Dictionary<string, VFXConfig>>(json);
+        json = File.ReadAllText(this.DataPath + "VFXComponent.json");
+        this.ComConfigs = JsonConvert.DeserializeObject<Dictionary<string, VFXComConfigs>>(json);
+    }
 }

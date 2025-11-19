@@ -1,55 +1,19 @@
 {
-    "DoubleBullet": {
-      "name": "Ë«Ç¹",
-      "components": [
-        {
-          "id": "Bullet",
-          "type": "trail",
-          "delay": 0.0,
-          "size": 0.5,
-          "length": 10.0,
-          "speedFactor": 1.0,
-          "offset": [0.0, 0.5, 0.0],
-          "color": [1.0, 0.0, 0.0, 1.0]
-        },
-        {
-          "id": "Bullet",
-          "type": "trail",
-          "delay": 0.5,
-          "size": 0.5,
-          "length": 10.0,
-          "speedFactor": 1.0,
-          "offset": [0.0, -0.5, 0.0],
-          "color": [0.0, 0.0, 1.0, 1.0]
-        }
-      ]
-    },
-    "LaserGun": {
-      "name": "¼¤¹âÇ¹",
-      "components": [
-        {
-          "id": "Bullet",
-          "delay": 0.0,
-          "duration": 2.0,
-          "color": [0.0, 1.0, 1.0, 1.0],
-          "size": 0.8,
-          "count": 1,
-          "length": 20.0,
-          "speedFactor": 1.2
-        }
-      ]
-    },
-    "LaserCannon": {
-      "name": "¼¤¹âÅÚ",
-      "components": [
-        {
-          "id": "Bullet",
-          "duration": 0.5,
-          "size": 1.5,
-          "count": 15,
-          "length": 30.0,
-          "speedFactor": 0.8
-        }
-      ]
-    }
+  "DoubleBullet": {
+    "name": "DoubleBullet",
+    "id": "DoubleBullet",
+    "components": [ "Bullet", "Bullet" ],
+    "offects": [
+      {
+        "x": -0.5,
+        "y": 0,
+        "z": 0
+      },
+      {
+        "x": 0.5,
+        "y": 0,
+        "z": 0
+      }
+    ]
+  }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
@@ -24,13 +25,6 @@ public class VFXManager : MonoSingleton<VFXManager>
     public SerializedDictionary<string, VFXBase> TrailDictionary = new SerializedDictionary<string, VFXBase>();
     public SerializedDictionary<string, VFXBase> SpotDictionary = new SerializedDictionary<string, VFXBase>();
 
-    [Tooltip("组合预制体字典")]
-    public SerializedDictionary<string, VFXComponent> ComposDictionary = new SerializedDictionary<string, VFXComponent>();
-
-    [Tooltip("单特效配置字典")]
-    public Dictionary<string, VFXConfig> configs = new Dictionary<string, VFXConfig>();
-    public Dictionary<string, List<VFXConfig>> composconfigs = new Dictionary<string, List<VFXConfig>>();
-
     [Tooltip("活跃特效列表")]
     public List<VFXBase> activeEffects = new List<VFXBase>();
 
@@ -47,9 +41,49 @@ public class VFXManager : MonoSingleton<VFXManager>
         onPlayEffect.RemoveAllListeners();
     }
     /// <summary>
-    /// 播放轨迹特效
+    /// 播放预制特效
     /// <para>playnow : 是否立刻播放</para>
     /// <para>id : 特效ID</para>
+    /// <para>start : 起点</para>
+    /// <para>end : 终点</para>
+    /// </summary>
+    public VFXBase PlayEffect(bool playnow, string id, GameObject origin, GameObject target = null)
+    {
+        VFXBase effect = null;
+        Vector3 targetposition = target != null ? target.transform.position : Vector3.zero;
+        Vector3 originposition = origin.transform.position;
+        if (VFXDictionary.Instance.ComConfigs.TryGetValue(id, out VFXComConfigs composconfig))
+        {
+            GameObject componentObject = new GameObject(composconfig.id);
+            componentObject.transform.position = originposition;
+            componentObject.transform.rotation = Quaternion.identity;
+            VFXComponent component = componentObject.AddComponent<VFXComponent>();
+            component.SetConfigs(composconfig, originposition, targetposition);
+            activeEffects.Add(component);
+            effect = component;
+            if (playnow) { component.PlayEffect(); return component; }
+        }
+        else if (VFXDictionary.Instance.configs.TryGetValue(id, out VFXConfig vFXConfig))
+        {
+            VFXBase component;
+            if (target == null) { component = Instantiate(SpotDictionary[vFXConfig.id], targetposition, SpotDictionary[vFXConfig.id].gameObject.transform.rotation); }
+            else { component = Instantiate(TrailDictionary[vFXConfig.id], originposition, Quaternion.LookRotation(targetposition - originposition)); }
+            component.origin = originposition;
+            component.target = targetposition;
+            component.SetConfig(vFXConfig);
+            activeEffects.Add(component);
+            effect = component;
+            if (playnow) { effect.PlayEffect(); return effect; }
+        }
+        else { Debug.LogError($"找不到特效: {id}"); return null; }
+
+        onPlayEffect.AddListener(() => effect.PlayEffect());
+
+        return effect;
+    }
+    /// <summary>
+    /// 播放特效
+    /// <para>playnow : 是否立刻播放</para>
     /// <para>id : 特效ID</para>
     /// <para>start : 起点</para>
     /// <para>end : 终点</para>
@@ -57,113 +91,49 @@ public class VFXManager : MonoSingleton<VFXManager>
     /// <para>Delay : 延迟时间</para>
     /// <para>offset : 相对目标的偏移量</para>
     /// </summary>
-    public VFXBase PlayTrailEffect(bool playnow, string id, GameObject origin ,GameObject target, float duration=0.7f, float Delay = 0, Vector3 offset = new Vector3())
+    public VFXBase PlayTrailEffect(bool playnow, string id, GameObject origin, GameObject target, float duration = 0.7f, float Delay = 0, Vector3 offset = new Vector3())
     {
-        VFXBase effect = null;
-        Vector3 targetposition = target.transform.position + offset;
-        Vector3 originposition = origin.transform.position;
-        if (ComposDictionary.TryGetValue(id,out VFXComponent Trailcompos))
+
+        VFXBase effect = PlayEffect(false, id, origin, target);
+        if (effect == null) return effect;
+        VFXComponent vFX = effect.gameObject.GetComponent<VFXComponent>();
+        effect.gameObject.transform.position += offset;
+        if (vFX != null)
         {
-            VFXComponent composition = Instantiate(Trailcompos, originposition, Quaternion.LookRotation(targetposition - originposition));
-            composition.TotalDelay = Delay;
-            activeEffects.Add(composition);
-            effect = composition;
-        }
-        else if (composconfigs.TryGetValue(id, out List<VFXConfig> composconfig))
-        {
-            VFXComponent component = new VFXComponent();
-            component = Instantiate(component, originposition, Quaternion.LookRotation(targetposition - originposition));
-            component.SetConfigs(composconfig);
-            component.SetDelay(Delay);
-            activeEffects.Add(component);
-            effect = component;
-        }
-        else if (TrailDictionary.TryGetValue(id, out VFXBase TrailBase))
-        {
-            VFXBase component = Instantiate(TrailBase, originposition, Quaternion.LookRotation(targetposition - originposition));
-            component.SetDelay(Delay);
-            activeEffects.Add(component);
-            effect = component;
-        }
-        else if (configs.TryGetValue(id,out VFXConfig vFXConfig))
-        {
-            VFXBase component = Instantiate(TrailDictionary[vFXConfig.id], originposition, Quaternion.LookRotation(targetposition - originposition));
-            component.SetConfig(vFXConfig);
-            component.SetDelay(Delay);
-            activeEffects.Add(component);
-            effect = component;
-        }else Debug.LogError($"找不到特效: {id}");
-        if (playnow)
-        {
-            effect.PlayTrailEffect(originposition, targetposition);
+            vFX.SetDuration(duration);
+            vFX.SetDelay(Delay);
+            if (playnow) vFX.PlayEffect();
         }
         else
         {
-            Debug.Log("Ready to play");
-            onPlayEffect.AddListener(() => effect.PlayTrailEffect(originposition, targetposition));
+            effect.SetDuration(duration);
+            effect.SetDelay(Delay);
+            if (playnow) effect.PlayEffect();
         }
         return effect;
     }
-    /// <summary>
-    /// 播放定点特效
-    /// <para>playnow : 是否立刻播放</para>
-    /// <para>id : 特效ID</para>
-    /// <para>target : 目标</para>
-    /// <para>duration : 持续时间 , 默认为0.7</para>
-    /// <para>Delay : 延迟时间</para>
-    /// <para>order : z坐标偏移量</para>
-    /// <para>offset : 相对目标的偏移量</para>
-    /// </summary>
-    public VFXBase PlayPointEffect(bool playnow, string id, GameObject target, float duration = 0.2f, float order =4, float Delay = 0, Vector3 offset = new Vector3())
+
+    public VFXBase PlayPointEffect(bool playnow, string id, GameObject origin, float duration = 0.7f, float Delay = 0, Vector3 offset = new Vector3())
     {
 
-        VFXBase effect = null;
-        Vector3 targetposition = target.transform.position+ new Vector3(0, 0, order) + offset;
-
-        if (ComposDictionary.TryGetValue(id,out VFXComponent Pointcompos))
+        VFXBase effect = PlayEffect(false, id, origin, null);
+        if (effect == null) return effect;
+        VFXComponent vFX = effect.gameObject.GetComponent<VFXComponent>();
+        effect.gameObject.transform.position += offset;
+        if (vFX != null)
         {
-            VFXComponent composition = Instantiate(Pointcompos, targetposition, Quaternion.identity);
-            composition.TotalDelay = Delay;
-            activeEffects.Add(composition);
-            effect = composition;
-        }
-        else if (composconfigs.TryGetValue(id, out List<VFXConfig> composconfig))
-        {
-            VFXComponent component = new VFXComponent();
-            component = Instantiate(component, targetposition, Quaternion.identity);
-            component.SetConfigs(composconfig);
-            component.SetDelay(Delay);
-            activeEffects.Add(component);
-            effect = component;
-        }
-        else if (SpotDictionary.TryGetValue(id,out VFXBase PointBase))
-        {
-            VFXBase component = Instantiate(PointBase, targetposition, Quaternion.identity);
-            component.SetDelay(Delay);
-            activeEffects.Add(component);
-            effect = component;
-        }
-        else if (configs.TryGetValue(id, out VFXConfig vFXConfig))
-        {
-            VFXBase component = Instantiate(SpotDictionary[vFXConfig.id], targetposition, Quaternion.identity);
-            component.SetConfig(vFXConfig);
-            component.SetDelay(Delay);
-            activeEffects.Add(component);
-            effect = component;
-        }
-        else Debug.LogError($"找不到特效: {id}");
-        if (playnow)
-        {
-            effect.PlayPointEffect(targetposition, duration);
+            vFX.SetDuration(duration);
+            vFX.SetDelay(Delay);
+            if (playnow) vFX.PlayEffect();
         }
         else
         {
-            onPlayEffect.AddListener(() => effect.PlayPointEffect(targetposition, duration));
+            effect.SetDuration(duration);
+            effect.SetDelay(Delay);
+            if (playnow) effect.PlayEffect();
         }
-        
         return effect;
     }
-
     #endregion
 
     #region 私有方法
@@ -178,9 +148,9 @@ public class VFXManager : MonoSingleton<VFXManager>
     {
         for (int i = 0; i <= activeEffects.Count - 1; i++)
         {
-            if (activeEffects[i].IsFinished)
+            if (activeEffects[i].IsFinished())
             {
-                Destroy(activeEffects[i].gameObject);
+                activeEffects[i].Destroy();
                 RemoveEffect(activeEffects[i]);
             }
         }
