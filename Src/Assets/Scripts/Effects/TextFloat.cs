@@ -2,18 +2,18 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 
-//×ÖÌåµÄ¶¶¶¯
+//ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
 public class CustomFont : MonoBehaviour
 {
     public TMP_Text tmp;
-    public float jitterIntensity = 4f;  // ¶¶¶¯Ç¿¶È
-    public float jitterSpeed = 1f;        // ¶¶¶¯ËÙ¶È
-    public float twistIntensity = 0.25f;  // Å¤ÇúÇ¿¶È
-    public float omiga = 0.5f; //²¨¶¯ÆµÂÊ
-    public float k = 0.5f; //²¨¶¯²¨Ê¸
-    public float amplitude = 0.02f; //Õñ·ù
+    public float jitterIntensity = 4f;  // ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½
+    public float jitterSpeed = 1f;        // ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
+    public float twistIntensity = 0.25f;  // Å¤ï¿½ï¿½Ç¿ï¿½ï¿½
+    public float omiga = 0.5f; //ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½
+    public float k = 0.5f; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¸
+    public float amplitude = 0.02f; //ï¿½ï¿½ï¿½
 
-    private Vector3[][] originalVertices; // ´æ´¢Ô­Ê¼¶¥µã
+    private Vector3[][] originalVertices; // ï¿½æ´¢Ô­Ê¼ï¿½ï¿½ï¿½ï¿½
     private bool initialized = false;
 
     void Start()
@@ -49,41 +49,41 @@ public class CustomFont : MonoBehaviour
             var verts = textInfo.meshInfo[charInfo.materialReferenceIndex].vertices;
             int vertexIndex = charInfo.vertexIndex;
 
-            // »ñÈ¡Ô­Ê¼¶¥µãÎ»ÖÃ£¨±ÜÃâÀÛ»ýÆ«ÒÆ£©
+            // ï¿½ï¿½È¡Ô­Ê¼ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û»ï¿½Æ«ï¿½Æ£ï¿½
             Vector3[] originalVerts = new Vector3[4];
             for (int j = 0; j < 4; j++)
             {
                 originalVerts[j] = originalVertices[charInfo.materialReferenceIndex][vertexIndex + j];
             }
 
-            // ¼ÆËãÅ¤ÇúÖÐÐÄ£¨×Ö·ûÖÐÐÄµã£©
+            // ï¿½ï¿½ï¿½ï¿½Å¤ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Äµã£©
             Vector3 center = (originalVerts[0] + originalVerts[2]) * 0.5f;
 
             for (int j = 0; j < 4; j++)
             {
                 Vector3 orig = originalVerts[j];
-                float timeOffset = Time.time * jitterSpeed + i * 0.2f; // Ã¿¸ö×Ö·û²»Í¬ÏàÎ»
+                float timeOffset = Time.time * jitterSpeed + i * 0.2f; // Ã¿ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Î»
 
-                // Ëæ»ú¶¶¶¯£¨»ùÓÚ Perlin ÔëÉù£¬Æ½»¬Ëæ»ú£©
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Perlin ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 float randomX = Mathf.PerlinNoise(timeOffset, j * 10) * 2f - 1f;
                 float randomY = Mathf.PerlinNoise(timeOffset + 5f, j * 10) * 2f - 1f;
                 Vector3 jitter = new Vector3(randomX, randomY, 0) * jitterIntensity * 0.01f;
 
-                // Å¤ÇúÐ§¹û£¨¶¥µãÈÆÖÐÐÄÐý×ª£©
+                // Å¤ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
                 Vector3 dir = orig - center;
                 float angle = Mathf.PerlinNoise(timeOffset * 0.3f, j * 5) * twistIntensity;
                 Quaternion twistRot = Quaternion.Euler(0, 0, angle * 10f);
                 Vector3 twistedPos = center + twistRot * dir;
 
-                //²¨ÀËÐ§¹û
+                //ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
                 Vector3 wavePos = new(0, Mathf.Sin(Time.time * omiga + orig.x * k) * amplitude, 0);
 
-                // ×îÖÕÎ»ÖÃ = Ô­Ê¼Î»ÖÃ + ¶¶¶¯ + Å¤Çú
+                // ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ = Ô­Ê¼Î»ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ + Å¤ï¿½ï¿½
                 verts[vertexIndex + j] = twistedPos + jitter + wavePos;
             }
         }
 
-        // ¸üÐÂËùÓÐÍø¸ñ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i < textInfo.meshInfo.Length; i++)
         {
             var meshInfo = textInfo.meshInfo[i];
