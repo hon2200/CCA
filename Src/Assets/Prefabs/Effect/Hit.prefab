@@ -9896,7 +9896,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 0.4
       minScalar: 3
       maxCurve:
         serializedVersion: 2
@@ -14681,7 +14681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsFinished: 0
-  PSystem: {fileID: 0}
+  particleSystem: {fileID: 8493656248331792189}
 --- !u!1 &5851750320872722308
 GameObject:
   m_ObjectHideFlags: 0
