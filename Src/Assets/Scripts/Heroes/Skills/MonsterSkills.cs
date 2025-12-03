@@ -84,6 +84,7 @@ public class CastleGuardian :TriggerSkill
     }
 }
 
+
 public class FightAgain : TriggerSkill
 {
     private bool isUsed;
