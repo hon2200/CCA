@@ -10,12 +10,17 @@ class ActionPhase : Singleton<ActionPhase>, Phase
 {
     public void OnEnteringPhase()
     {
-        //有一些开始阶段的内容需要看
-        PrintEvent.Instance.PrintResult();
         foreach (var player in PlayerManager.Instance.Players)
         {
             //保存每个玩家的状态，在ActionPhase无论Player还是AI都会对其进行非最终的改动
             player.Value.status.SaveStatus();
+        }
+        foreach (var player in PlayerManager.Instance.Players.Values)
+        {
+            foreach (var buff in player.status.buffs)
+            {
+                buff.BeforeAction(player);
+            }
         }
         CardSelectionManager.Instance.Enable();
         //反正AI是要行动的对吧，AI就先行动了。这回不玩赖的了
@@ -25,9 +30,21 @@ class ActionPhase : Singleton<ActionPhase>, Phase
         {
             player.Value.isReady.Cancel();
         }
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            foreach(var skill in player.hero.skills)
+            {
+                if(skill is PhasebasedSkill phasebasedSkill)
+                {
+                    phasebasedSkill.InvokeAfterSelectingAction(player);
+                }
+            }
+        }
+        PrintEvent.Instance.PrintResult();
     }
     public void OnExitingPhase()
     {
+        PrintEvent.Instance.ClearText();
         //上传历史行动记录：没有预先处理过的
         UpdateHistory();
         foreach (var player in PlayerManager.Instance.Players)
@@ -35,7 +52,13 @@ class ActionPhase : Singleton<ActionPhase>, Phase
             //读取每个玩家的状态，在ActionPhase无论Player还是AI都会对其进行非最终的改动
             player.Value.status.LoadStatus();
         }
+        //结算消耗
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            player.ConsumeAndCD();
+        }
         CardSelectionManager.Instance.Disable();
+        
     }
     public void AIMoveTogether()
     {

@@ -13,7 +13,7 @@ public class PlayerStatus
     public NewPlayerResource resources { get; set; }
     public IsAliveAttribute life { get; set; }
     // ✅ 新增：状态管理系统
-    public BuffManager Buffs { get; private set; }
+    public BuffManager buffs { get; private set; }
     public MarkManager Marks { get; private set; }
     
     public PlayerStatus()
@@ -21,7 +21,7 @@ public class PlayerStatus
         HP = new();
         resources = new();
         life = new();
-        Buffs = new BuffManager(); // 初始化 Buff 管理器
+        buffs = new(); // 初始化 Buff 管理器
         Marks = new MarkManager();  // 初始化印记管理器
         
         HP.OnValueChanged += (oldVal, newVal, opType) =>
@@ -32,13 +32,13 @@ public class PlayerStatus
         HP = new();
         resources = new();
         life = new();
+        buffs = new();
         HP.Set(MaxHP);
         HP.OnValueChanged += (oldVal, newVal, opType) =>
             DeadCheck(newVal);
         this.MaxHP = MaxHP;
         resources.Bullet.Set(iniReources[0]);
         resources.Sword.Set(iniReources[1]);
-        resources.AvailableSword.Set(iniReources[1] - iniReources[2]);
     }
 
     //将这个函数添加到HPAttribute的订阅中，一旦HP的值发生改变，立刻检查是否死亡。
@@ -65,23 +65,19 @@ public class NewPlayerResource
 {
     public BulletAttibute Bullet;
     public SwordAttribute Sword;
-    public AvailableSwordAttribute AvailableSword;
     public NewPlayerResource()
     {
         Bullet = new();
         Sword = new();
-        AvailableSword = new();
     }
     public void Save()
     {
         Bullet.Save();
         Sword.Save();
-        AvailableSword.Save();
     }
     public void Load()
     {
         Bullet.Load();
         Sword.Load();
-        AvailableSword.Load();
     }
 }

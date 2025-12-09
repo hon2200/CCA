@@ -295,7 +295,6 @@ public class AI_lmh
                 Debug.Log("给他的颜色看看！");
             }
         }
-        
 
         MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
         return mySelection;

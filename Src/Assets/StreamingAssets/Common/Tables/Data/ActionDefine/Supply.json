@@ -5,11 +5,14 @@
         "Description": "获得一颗子弹",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "SupplyNumber": [
+            0,
             1,
             0
         ],
@@ -23,11 +26,14 @@
         "Description": "获得两颗子弹",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "SupplyNumber": [
+            0,
             2,
             0
         ],
@@ -41,11 +47,14 @@
         "Description": "获得一把剑",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "SupplyNumber": [
+            0,
             0,
             1
         ],
@@ -59,11 +68,14 @@
         "Description": "获得两把剑",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "SupplyNumber": [
+            0,
             0,
             2
         ],
@@ -77,11 +89,14 @@
         "Description": "获得五颗子弹",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "SupplyNumber": [
+            0,
             5,
             0
         ],
@@ -95,11 +110,14 @@
         "Description": "获得三颗子弹",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "SupplyNumber": [
+            0,
             3,
             0
         ],
@@ -113,11 +131,14 @@
         "Description": "获得三拔剑",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "SupplyNumber": [
+            0,
             0,
             3
         ],

@@ -19,6 +19,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     public GameObject AIPrefab;
     public GameObject HumanPrefab;
     public Dictionary<int, Player> Players;
+    public HumanPlayer HumanPlayer { get; private set; }
     public void Start()
     {
         ReadSpacingData();
@@ -53,6 +54,16 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             }
         }
         return false;
+    }
+    public List<Player> FindSomeone(string HeroID)
+    {
+        List<Player> specificPlayers = new();
+        foreach(var player in Players.Values)
+        {
+            if (player.hero.ID == HeroID && player.status.life.Value == LifeStatus.Alive)
+                specificPlayers.Add(player);
+        }
+        return specificPlayers;
     }
 
     #region AI Things
@@ -130,6 +141,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         InitializeHumanPlayerSpace(newPlayer);
         NextPlayerID++;
         Players.Add(newPlayer.ID_inGame, newPlayer);
+        HumanPlayer = newPlayer;
         return newPlayer;
     }
     #endregion
@@ -185,6 +197,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         newPlayer.InitializePlayer(ID_inGame, heroDefine);
         InitializeHumanPlayerSpace(newPlayer);
         Players.Add(newPlayer.ID_inGame, newPlayer);
+        HumanPlayer = newPlayer;
         return newPlayer;
     }
     #endregion
@@ -308,7 +321,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             // Safely destroy player object
             Destroy(player.gameObject);
 
-            // Find its spot key (if any)
+            // Find its spot key for enemies
             Vector2? foundKey = null;
             foreach (var kvp in availablePositions_enemy)
             {
@@ -322,6 +335,18 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             // Mark spot available again
             if (foundKey.HasValue)
                 availablePositions_enemy[foundKey.Value] = null;
+
+            // Find its spot key for friends
+            foreach (var kvp in availablePositions_friend)
+            {
+                if (kvp.Value == player)
+                {
+                    foundKey = kvp.Key;
+                }
+            }
+            // Mark spot available again
+            if (foundKey.HasValue)
+                availablePositions_friend[foundKey.Value] = null;
         }
 
         // Clear player dictionary

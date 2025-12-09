@@ -2,12 +2,14 @@
     "block": {
         "ID": "block",
         "Name": "挡",
-        "Description": "可以挡住“刺类”攻击和单发子弹类攻击",
+        "Description": "可以挡住刺类进攻和单发子弹类攻击",
         "Costs": [
+            0,
             0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "Target": 0,
         "isCopy": false,
@@ -19,9 +21,11 @@
         "Description": "可以挡住双发子弹类攻击",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "Target": 0,
         "isCopy": false,
@@ -30,12 +34,14 @@
     "heavy_block": {
         "ID": "heavy_block",
         "Name": "重挡",
-        "Description": "可以挡住“刀类”攻击",
+        "Description": "可以挡住刀类进攻",
         "Costs": [
+            0,
             0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "Target": 0,
         "isCopy": false,
@@ -44,12 +50,14 @@
     "deflect": {
         "ID": "deflect",
         "Name": "偏折",
-        "Description": "可以挡住“斩类”攻击",
+        "Description": "可以挡住斩类攻击",
         "Costs": [
+            0,
             0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "CD": 0,
         "Target": 0,
         "isCopy": false,

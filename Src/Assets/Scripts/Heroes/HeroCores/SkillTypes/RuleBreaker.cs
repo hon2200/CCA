@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 //有些英雄是改变规则
 //没有一个一般的做法
-public class RuleBreaker : Skill
+public abstract class RuleBreaker : Skill
 {
+    protected RuleBreaker(string id) : base(id) { }
 }

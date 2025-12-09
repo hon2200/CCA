@@ -23,6 +23,8 @@ class BattleManager: MonoSingleton<BattleManager>
         PhaseList = new();
         PhaseList.Add(StartPhase.Instance);
         PhaseList.Add(ActionPhase.Instance);
+        PhaseList.Add(ChasePhase.Instance);
+        PhaseList.Add(PreResolutionPhase.Instance);
         PhaseList.Add(ResolutionPhase.Instance);
         PhaseList.Add(EndPhase.Instance);
         Turn = new();

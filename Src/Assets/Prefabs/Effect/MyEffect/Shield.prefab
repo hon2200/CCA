@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3334062473523563828}
   - component: {fileID: 3922721887954498662}
   - component: {fileID: 369629440776646969}
-  - component: {fileID: -4248824363513773074}
+  - component: {fileID: -1568710990789442617}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -51,7 +51,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -117,7 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1054,82 +1054,46 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0.07640808
         - serializedVersion: 3
-          time: 0.10009517
+          time: 0.096867934
           value: 1
-          inSlope: -3.028769
-          outSlope: -3.028769
+          inSlope: -0.48212588
+          outSlope: -0.48212588
           tangentMode: 0
           weightedMode: 0
           inWeight: 1
+          outWeight: 0.7364941
+        - serializedVersion: 3
+          time: 0.30075014
+          value: 1
+          inSlope: 0.19623858
+          outSlope: 0.19623858
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.64446586
           outWeight: 1
         - serializedVersion: 3
-          time: 0.19999984
+          time: 0.5017586
           value: 1
-          inSlope: 1.7721553
-          outSlope: 1.7721553
+          inSlope: -0.50915223
+          outSlope: -0.50915223
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 1
         - serializedVersion: 3
-          time: 0.30179772
-          value: 1
-          inSlope: -2.9509308
-          outSlope: -2.9509308
+          time: 0.73576087
+          value: 0.99103165
+          inSlope: 0.4430167
+          outSlope: 0.4430167
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.51890886
           outWeight: 1
         - serializedVersion: 3
-          time: 0.40242893
-          value: 1
-          inSlope: 1.8713804
-          outSlope: 1.8713804
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.96126044
-        - serializedVersion: 3
-          time: 0.49873066
-          value: 1
-          inSlope: -2.5511026
-          outSlope: -2.5511026
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 1
-          outWeight: 1
-        - serializedVersion: 3
-          time: 0.5975183
-          value: 1
-          inSlope: 2.7055936
-          outSlope: 2.7055936
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 1
-        - serializedVersion: 3
-          time: 0.70337296
-          value: 1
-          inSlope: -2.7531261
-          outSlope: -2.7531261
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 1
-        - serializedVersion: 3
-          time: 0.80189246
-          value: 1
-          inSlope: 2.897494
-          outSlope: 2.897494
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 1
-        - serializedVersion: 3
-          time: 0.9007709
-          value: 1
-          inSlope: -2.6241095
-          outSlope: -2.6241095
+          time: 0.92819023
+          value: 0.9932736
+          inSlope: -0.50333935
+          outSlope: -0.50333935
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -4970,7 +4934,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &-4248824363513773074
+--- !u!114 &-1568710990789442617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4979,8 +4943,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9178071811743212453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0b59fc52ff4e6478a650e2e30853b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 96e552345e182a24ab09513744316b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsFinished: 0
-  particleSystem: {fileID: 3922721887954498662}
+  effect: {fileID: 3922721887954498662}

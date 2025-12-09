@@ -22,42 +22,51 @@ public class WaraxeDance : AttackDefine
     public WaraxeDance()
     {
         ID = "waraxe_dance";
-    }
 
-    //附加命中两次
-    public override void OnAttacking(Player attacker, Player victim)
-    {
-        this.HowtoAttack(attacker, victim);
-        this.HowtoAttack(attacker, victim);
-        PrintEvent.Instance.log += (attacker.Name + attacker.ID_inGame + "三连击！");
-    }
-    //命中一次
-    public override void OnOverwhelmed(Player attacker, Player enemy)
-    {
-        var counters = this.WatchoutforCounter(enemy);
-        var defends = this.WatchoutforDefend(enemy);
-        //对应防御反击判断
-        if (counters.Count > 0)
+        // === Attacking: hit twice + print 三连击
+        OnAttackingAction = (attacker, victim) =>
         {
-            foreach (var counter in counters)
+            this.HowtoAttack(attacker, victim);
+            this.HowtoAttack(attacker, victim);
+
+            PrintEvent.Instance.log +=
+                $"{attacker.Name}{attacker.ID_inGame} 三连击！";
+        };
+
+        // === Overwhelmed: counter → defend → normal attack
+        OnOverwhelmedAction = (attacker, enemy) =>
+        {
+            var counters = this.WatchoutforCounter(enemy);
+            var defends = this.WatchoutforDefend(enemy);
+
+            // 1. If countered
+            if (counters.Count > 0)
             {
-                counter.Item1.HowtoCounter(counter.Item2, attacker, enemy, this);
-                this.OnCountered(attacker, enemy, counter.Item2);
+                foreach (var counter in counters)
+                {
+                    counter.Item1.HowtoCounter(counter.Item2, attacker, enemy, this);
+
+                    // Trigger AttackDefine wrapper → Action
+                    OnCountered(attacker, enemy, counter.Item2);
+                }
+                return;
             }
-        }
-        else if (defends.Count > 0)
-        {
-            foreach (var defend in defends)
+
+            // 2. If blocked
+            if (defends.Count > 0)
             {
-                defend.HowtoDefend(this, enemy);
-                this.OnDefended(attacker, enemy);
+                foreach (var defend in defends)
+                {
+                    defend.HowtoDefend(this, enemy);
+                    OnDefended(attacker, enemy);
+                }
+                return;
             }
-        }
-        //总算是命中了！
-        else
-        {
+
+            // 3. Hit normally
             this.HowtoAttack(attacker, enemy);
-        }
+        };
     }
 }
+
 

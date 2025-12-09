@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class PreResolutionPhase : Phase
+public class PreResolutionPhase : Singleton<PreResolutionPhase>, Phase
 {
     public void OnEnteringPhase()
     {
         PreResolution();
+        BattleManager.Instance.PhaseAdvance();
     }
     public void OnExitingPhase()
     {
@@ -23,8 +24,15 @@ public class PreResolutionPhase : Phase
             {
                 if(skill is PhasebasedSkill phasebasedSkill)
                 {
-                    phasebasedSkill.BeforeResolution(player);
+                    phasebasedSkill.InvokeBeforeResolution(player);
                 }
+            }
+        }
+        foreach (var player in PlayerManager.Instance.Players.Values)
+        {
+            foreach (var buff in player.status.buffs)
+            {
+                buff.BeforeResolution(player);
             }
         }
     }

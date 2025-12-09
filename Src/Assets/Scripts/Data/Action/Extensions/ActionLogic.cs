@@ -70,7 +70,7 @@ public static class DefendLogic
     public static void HowtoDefend(this DefendDefine defend,AttackDefine attack, Player victim)
     {
         //创建并添加防御
-        VFXManager.Instance.PlayEffect(false, "Shield", victim.gameObject);
+        EffectManager.Instance.PlaySpotEffect(false, "Shield", victim.gameObject);
     }
 }
 
@@ -83,18 +83,18 @@ public static class CounterLogic
         {
             case CounterMethod.Block:
                 //创建并添加防御
-                VFXManager.Instance.PlayPointEffect(true,"Shield", victim.gameObject);
+                EffectManager.Instance.PlaySpotEffect(false,"Shield", victim.gameObject);
                 break;
             case CounterMethod.Disarm:
                 //创建并添加防御
-                VFXManager.Instance.PlayPointEffect(true, "Shield", victim.gameObject);
-                attacker.status.resources.AvailableSword.Set(0);
+                EffectManager.Instance.PlaySpotEffect(false, "Shield", victim.gameObject);
+                attacker.status.resources.Sword.ForcedCD(attacker.status.resources.Sword.Value);
                 break;
             case CounterMethod.Rebounce:
                 //创建并添加防御
-                VFXManager.Instance.PlayPointEffect(true, "Shield", victim.gameObject);
+                EffectManager.Instance.PlaySpotEffect(false, "Shield", victim.gameObject);
                 //创建并添加反击路线
-                VFXManager.Instance.PlayTrailEffect(true, "Bullet", victim.gameObject, attacker.gameObject,0,0.3f);
+                EffectManager.Instance.PlayTrailEffect(false, "Bullet", victim.gameObject, attacker.gameObject);
                 attack.HowtoAttack(attacker, attacker, victim);
                 break;
             default:
@@ -112,9 +112,9 @@ public static class SupplyLogic
         if(receiver != null)
         {
             //理论上这里也可以把resource改成一个list<int>，但是考虑到resource里面还有swordinCD，所以就不改了
-            receiver.status.resources.Bullet.Get(supply.SupplyNumber[0]);
-            receiver.status.resources.Sword.Get(supply.SupplyNumber[1]);
-            receiver.status.resources.AvailableSword.Get(supply.SupplyNumber[1]);
+            receiver.status.HP.Heal(supply.SupplyNumber[0]);
+            receiver.status.resources.Bullet.Get(supply.SupplyNumber[1]);
+            receiver.status.resources.Sword.Get(supply.SupplyNumber[2]);
         }    
         else
         {

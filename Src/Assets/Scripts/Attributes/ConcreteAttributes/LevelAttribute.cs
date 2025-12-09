@@ -11,7 +11,7 @@ public class LevelAttribute : ObservableString
     public string ID { get; private set; }
     public int Wave { get; private set; }
     public string Name { get; private set; }
-    private string savePath = "Assets/Common/Tables/Data/CurrentLevel.json";
+    public string savePath = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/CurrentLevel.json");
     public LevelAttribute()
     {
         LoadLevel();

@@ -98,10 +98,9 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 {
                     if (area != null)
                     {
-                        var newMove = player1.action.ReadinMove(
+                        var newMove = player1.action.ReadinMoveAndConsume(
                             lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
-                            player1.ID_inGame, "Player");
-                        player1.Consume(newMove);
+                            player1.ID_inGame, "Player", player1);
                         lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         rayStatus = RayStatus.ChooseCard;
                     }
@@ -126,10 +125,9 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     if (player != null && player.GetComponent<PlayerSelection>().CanbeSelected)
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
-                        var newMove = player1.action.ReadinMove(
+                        var newMove = player1.action.ReadinMoveAndConsume(
                             lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
-                            target, "Player");
-                        player1.Consume(newMove);
+                            target, "Player",player1);
                         lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         Arrow.Instance.DeActive();
                         rayStatus = RayStatus.ChooseMultiTarget;
@@ -153,10 +151,9 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                     if (player != null && player.GetComponent<PlayerSelection>().CanbeSelected)
                     {
                         int target = player.GetComponent<Player>().ID_inGame;
-                        var newMove = player1.action.ReadinMove(
+                        var newMove = player1.action.ReadinMoveAndConsume(
                             lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID,
-                            target, "Player");
-                        player1.Consume(newMove);
+                            target, "Player", player1);
                         Debug.Log("ReadinMove" + lastHoveredCard.GetComponent<RunTimeCard>().actionDefine.ID);
                         player.GetComponent<PlayerSelection>().OnSelect();
                     }

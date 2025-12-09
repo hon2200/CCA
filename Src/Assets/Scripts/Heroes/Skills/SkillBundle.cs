@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +12,7 @@ using UnityEngine;
 //猴子的技能
 public class MoutainCrusher: PhasebasedSkill
 {
-    public MoutainCrusher()
-    {
-        ID = "MountainCrusher";
-    }
+    public MoutainCrusher() : base("MountainCrusher") { }
     public override void BeforeResolution(Player thisPlayer)
     {
         foreach(var action in thisPlayer.action)
@@ -25,17 +22,13 @@ public class MoutainCrusher: PhasebasedSkill
                 attack.Damage *= 3;
             }
         }
-        Debug.Log("猴子触发技能");
     }
 }
 
 //吕布的技能
 public class LegionBreaker : PhasebasedSkill
 {
-    public LegionBreaker()
-    {
-        ID = "LegionBreaker";
-    }
+    public LegionBreaker() : base("LegionBreaker"){ }
     public override void BeforeResolution(Player thisPlayer)
     {
         foreach(var action in thisPlayer.action)
@@ -46,23 +39,19 @@ public class LegionBreaker : PhasebasedSkill
                 attack.Level += (0.5f * n);
             }
         }
-        Debug.Log("吕布触发技能");
     }
 }
 
 //逃犯比尔
 public class DaringBounty : TriggerSkill
 {
-    public DaringBounty()
-    {
-        ID = "DaringBounty";
-    }
+    public DaringBounty() : base("DaringBounty") { }
     public override void OnDamaged(Player attacker, int damage)
     {
         attacker.status.resources.Bullet.Get(damage);
-        Debug.Log("比尔触发技能" + attacker.ID_inGame + "玩家获得了" + damage);
     }
 }
 
 
 
+*/

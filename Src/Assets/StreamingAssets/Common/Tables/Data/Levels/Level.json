@@ -225,9 +225,7 @@
                 "Skunk Slave"
             ],
             [
-                "Skunk Chieftain",
-                "Black Coat",
-                "Black Coat"
+                "Skunk Chieftain"
             ]
         ],
         "FriendList": [],
@@ -256,11 +254,15 @@
         "EnemyList": [
             [
                 "Shadow of Void",
-                "Chronos Hand",
-                "Mnemosyne Hand"
+                "Shadow of Domination",
+                "Shadow of Deception"
             ]
         ],
-        "FriendList": [],
+        "FriendList": [
+            [
+                "Entity of Will"
+            ]
+        ],
         "DisabledAction": [],
         "UnlockedAction": [
             "comeon"
@@ -303,7 +305,7 @@
         "PlayerHP": 7,
         "PlayerInitialResource": [
             0,
-            6,
+            0,
             0
         ],
         "PreviousLevel": "2-4",
@@ -331,7 +333,7 @@
         "PlayerHP": 7,
         "PlayerInitialResource": [
             0,
-            0,
+            6,
             0
         ],
         "PreviousLevel": "2-5",

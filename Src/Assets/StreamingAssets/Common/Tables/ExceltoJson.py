@@ -403,6 +403,7 @@ def main():
         excel_to_json_Dictionary("Tables/Hero.xlsx","Data")
         excel_to_json_Dictionary("Tables/Levels.xlsx","Data")
         excel_to_json_2dArray("Tables/Versus.xlsx","Data")
+        excel_to_json_Dictionary("Tables/Skill&Buff.xlsx","Data")
 
 
 if __name__ == "__main__":

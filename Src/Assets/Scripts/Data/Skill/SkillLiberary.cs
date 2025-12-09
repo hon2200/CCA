@@ -12,6 +12,7 @@ public class SkillLibrary : MonoSingleton<SkillLibrary>
     private void Awake()
     {
         // 游戏开始时自动扫描并注册技能
+        SkillDataBase.Instance.LoadingSkills();
         RegisterAllSkills();
     }
 

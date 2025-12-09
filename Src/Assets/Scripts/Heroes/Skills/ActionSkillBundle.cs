@@ -1,44 +1,41 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//ID:是英雄的技能的ID
-//ActionID:行动的ID
-//种瓜得瓜
+// 种瓜得瓜 I
 public class GatheringFoodI : ActionSkill
 {
     public GatheringFoodI()
+        : base("Gathering Food I", "triple_bullet")
     {
-        ID = "Gathering FoodI";
-        ActionID = "triple_bullet";
     }
 }
 
+// 种瓜得瓜 II
 public class GatheringFoodII : ActionSkill
 {
     public GatheringFoodII()
+        : base("Gathering Food II", "triple_sword")
     {
-        ID = "Gathering FoodII";
-        ActionID = "triple_sword";
     }
 }
 
-//火药桶
+// 火药桶
 public class PowderKeg : ActionSkill
 {
     public PowderKeg()
+        : base("Powder Keg", "powder_keg")
     {
-        ID = "Powder Keg";
-        ActionID = "powder_keg";
     }
 }
+
+// EXcalibur
 public class EXcalibur : ActionSkill
 {
     public EXcalibur()
+        : base("EXcalibur", "EXcalibur")
     {
-        ID = "EXcalibur";
-        ActionID = "EXcalibur";
     }
-}
+}*/

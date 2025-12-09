@@ -40,7 +40,7 @@ public static class MyLog
         {
             logContent.AppendLine($"player ID : {player.ID_inGame} MaxHP : {player.status.HP.Value} " +
                 $"Bullet : {player.status.resources.Bullet.Value} Sword : {player.status.resources.Sword.Value} " + 
-                $"SwordAvailable : {player.status.resources.AvailableSword.Value}");
+                $"SwordAvailable : {player.status.resources.Sword.AvailableSword.Value}");
             logContent.AppendLine();
         }
 

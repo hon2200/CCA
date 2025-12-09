@@ -3,8 +3,6 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
-using static UnityEngine.ParticleSystem;
 
 /// <summary>
 /// 特效基类
@@ -177,7 +175,6 @@ public class VFXBase : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
         }
-
     }
 
     public virtual bool IsFinished()

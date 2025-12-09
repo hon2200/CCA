@@ -8,7 +8,12 @@ public class StartPhase : Singleton<StartPhase>, Phase
 {
     public void OnEnteringPhase()
     {
+        PrintEvent.Instance.log += $"\n进入下一回合\n";
         BattleManager.Instance.Turn.Advance();
+        //刷新剑的使用情况
+        SwordUseRefresh();
+        //刷新不可用行动
+        ForbiddenActionRefresh();
         var playersSnapshot = PlayerManager.Instance.Players.Values.ToList();
         //There might be some players created in the process
 
@@ -16,9 +21,11 @@ public class StartPhase : Singleton<StartPhase>, Phase
         {
             foreach (var skill in player.hero.skills)
             {
+                if (skill is PhasebasedSkill || skill is TriggerSkill)
+                    skill.CDCountDown();
                 if (skill is PhasebasedSkill phasebasedSkill)
                 {
-                    phasebasedSkill.OnStartPhase(player);
+                    phasebasedSkill.InvokeStartPhase(player);
                 }
             }
         }
@@ -34,5 +41,21 @@ public class StartPhase : Singleton<StartPhase>, Phase
     public void OnExitingPhase()
     {
 
+    }
+
+    private void SwordUseRefresh()
+    {
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            player.status.resources.Sword.OnNewTurn();
+        }
+    }
+
+    private void ForbiddenActionRefresh()
+    {
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            player.ForbiddenActions.Clear();
+        }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 //而是希望所有修改这个List的方式都传递一个相应的message，以便这个List知道，并且通知委托的订阅
 public class ObservableList<T> : List<T>
 {
-    public event Action<List<T>, string> OnListChanged; // 当前列表, 操作类型描述
+    public Action<List<T>, string> OnListChanged { get; set; } // 当前列表, 操作类型描述
     public bool IsObserving { get; private set; } = true; // 默认开启观察
     private List<T> _savedState; // 保存的状态
 
@@ -35,6 +35,12 @@ public class ObservableList<T> : List<T>
     public void Add(T item, string message)
     {
         base.Add(item);
+        if (IsObserving)
+            OnListChanged?.Invoke(this, message);
+    }
+    public void AddRange(IEnumerable<T> collection, string message)
+    {
+        base.AddRange(collection);
         if (IsObserving)
             OnListChanged?.Invoke(this, message);
     }

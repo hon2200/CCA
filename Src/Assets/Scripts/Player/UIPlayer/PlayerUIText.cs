@@ -40,12 +40,12 @@ public class PlayerUIText : MonoBehaviour
                     break;
                 case PlayerUITextName.Sword:
                     // 绑定剑和可用剑变化事件
-                    player.status.resources.AvailableSword.OnValueChanged += (oldVal, newVal, opType) =>
+                    player.status.resources.Sword.AvailableSword.OnValueChanged += (oldVal, newVal, opType) =>
                         UpdatePlayerText(text.Value, newVal, player.status.resources.Sword.Value);
                     player.status.resources.Sword.OnValueChanged += (oldVal, newVal, opType) =>
-                        UpdatePlayerText(text.Value, player.status.resources.AvailableSword.Value, newVal);
+                        UpdatePlayerText(text.Value, player.status.resources.Sword.AvailableSword.Value, newVal);
                     // 初始更新
-                    UpdatePlayerText(text.Value, player.status.resources.AvailableSword.Value,
+                    UpdatePlayerText(text.Value, player.status.resources.Sword.AvailableSword.Value,
                         player.status.resources.Sword.Value);
                     break;
                 case PlayerUITextName.ID:

@@ -243,10 +243,8 @@ Key: 2-3
           [0]:             Furious Skunk
           [1]:             Skunk Slave
       [1]: 
-        List`1 (Count: 3)
+        List`1 (Count: 1)
           [0]:             Skunk Chieftain
-          [1]:             Black Coat
-          [2]:             Black Coat
   FriendList: 
     List`1 (Count: 0)
   UnlockedAction: 
@@ -275,10 +273,13 @@ Key: 2-4
       [0]: 
         List`1 (Count: 3)
           [0]:             Shadow of Void
-          [1]:             Chronos Hand
-          [2]:             Mnemosyne Hand
+          [1]:             Shadow of Domination
+          [2]:             Shadow of Deception
   FriendList: 
-    List`1 (Count: 0)
+    List`1 (Count: 1)
+      [0]: 
+        List`1 (Count: 1)
+          [0]:             Entity of Will
   UnlockedAction: 
     List`1 (Count: 1)
       [0]:         comeon
@@ -320,7 +321,7 @@ Key: 2-5
   PlayerInitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         6
+      [1]:         0
       [2]:         0
   NextLevel:     2-6
   PreviousLevel:     2-4
@@ -349,7 +350,7 @@ Key: 2-6
   PlayerInitialResource: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         0
+      [1]:         6
       [2]:         0
   NextLevel:     3-1
   PreviousLevel:     2-5

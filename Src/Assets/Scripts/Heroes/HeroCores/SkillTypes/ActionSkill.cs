@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 //行动信息(ActionDataBase.cs)
 public abstract class ActionSkill : Skill
 {
+    public ActionSkill(string skillID, string actionID) : base(skillID) 
+    { 
+        ActionID = actionID;
+    }
     public string ActionID { get; protected set; }
     public virtual void AddingAvailableAction(Player thisPlayer)
     {

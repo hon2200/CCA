@@ -54,12 +54,17 @@ public static class PlayerActionLogic
         {
             //获取到攻击目标，以Target为键值，找到enemy
             PlayerManager.Instance.Players.TryGetValue(attack.Target, out Player enemy);
+            foreach (var skill in enemy.hero.skills)
+            {
+                if (skill is TriggerSkill triggerSkill)
+                    triggerSkill.InvokeOnAttacked(attacker, enemy, attack);
+            }
             var enemy_attacks = enemy.SelectActionType<AttackDefine>();
-            //创建并添加攻击特效
-            VFXManager.Instance.PlayTrailEffect(true, "Bullet", attacker.gameObject, enemy.gameObject);
             //攻击力等级判断
             if (attack.Level > enemy.MaxLevel(attacker))
             {
+                //创建并添加攻击特效
+                EffectManager.Instance.PlayTrailEffect(false, "Bullet", attacker.gameObject, enemy.gameObject);
                 var counters = attack.WatchoutforCounter(enemy);
                 var defends = attack.WatchoutforDefend(enemy);
                 //对应防御反击判断
@@ -84,27 +89,27 @@ public static class PlayerActionLogic
                 {
                     attack.HowtoAttack(attacker, enemy);
                     attack.OnAttacking(attacker, enemy);
+                    foreach(var skill in attacker.hero.skills)
+                    {
+                        if (skill is TriggerSkill triggerSkill)
+                            triggerSkill.InvokeOnAttackTakeEffect(attacker, enemy, attack);
+                    }
                 }
             }
             else
             {
                 attack.OnOverwhelmed(attacker, enemy);
+                foreach (var skill in attacker.hero.skills)
+                {
+                    if (skill is TriggerSkill triggerSkill)
+                        triggerSkill.InvokeOnAttackOverwhelmed(attacker, enemy, attack);
+                }
             }
         }
     }
-    
     public static void CoolDown(this Player player)
     {
-        bool useSword = false;
-        foreach (var action in player.action)
-        {
-            if (action.Costs[1] != 0)
-                useSword = true;
-        }
-        if (!useSword)
-        {
-            player.status.resources.AvailableSword.CoolDown(player.status.resources.Sword.Value);
-        }
+        player.status.resources.Sword.CoolDown();
         //Deal with CD of actions
         player.CDmanager.CoolDown();
     }
@@ -113,6 +118,9 @@ public static class PlayerActionLogic
     {
         foreach (var action in player.action)
         {
+            if (action.isConsumed)
+                continue;
+            action.isConsumed = true;
             player.Consume(action);
             player.CDmanager.ActionEnterCD(action);
             //挑衅使得所有反弹行动进入CD
@@ -124,20 +132,19 @@ public static class PlayerActionLogic
                     player.CDmanager.AddAction(counter.ID, 1);
                 }
             }
-                
         }
     }
 
     public static void Consume(this Player player,ActionDefine action)
     {
-        player.status.resources.Bullet.Use(action.Costs[0]);
-        player.status.resources.AvailableSword.Use(action.Costs[1]);
+        player.status.resources.Bullet.Use(action.Costs[1]);
+        player.status.resources.Sword.Use(action.Costs[2]);
     }
     
     public static void RevokeConsume(this Player player, ActionDefine action)
     {
-        player.status.resources.Bullet.Get(action.Costs[0]);
-        player.status.resources.AvailableSword.Get(action.Costs[1]);
+        player.status.resources.Bullet.Use(-action.Costs[1]);
+        player.status.resources.Sword.Use(-action.Costs[2]);
     }
 
     #endregion

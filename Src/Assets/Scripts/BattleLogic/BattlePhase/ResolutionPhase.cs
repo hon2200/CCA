@@ -9,11 +9,11 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     public void OnEnteringPhase()
     {
         EventPanelLogic.Instance.OpenEventPanel();
-        PrintEvent.Instance.ClearText();
         PrintEvent.Instance.LogAction();
         Resolution();
-        PrintResult_Debug();
+        //PrintResult_Debug();
         PrintEvent.Instance.PrintResult();
+        EffectManager.Instance.PlayAll();
         BattleManager.Instance.PhaseAdvance();
     }
     public void OnExitingPhase()
@@ -22,9 +22,10 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     }
     public void Resolution()
     {
+        CheatManager.Instance.OnResolution?.Invoke();
+        CheatManager.Instance.OnResolution = null;
         foreach (var player in PlayerManager.Instance.Players.Values)
         {
-            player.ConsumeAndCD();
             player.CoolDown();
         }
         foreach (var player in PlayerManager.Instance.Players.Values)
@@ -51,13 +52,26 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             {
                 if(skill is PhasebasedSkill phasebased)
                 {
-                    phasebased.AfterResolution(player);
+                    phasebased.InvokeAfterResolution(player);
                 }
             }
         }
 
-        PrintResult_Debug();
+        foreach(var player in PlayerManager.Instance.Players.Values)
+        {
+            var buffSnapShot = player.status.buffs.ToList();
+            foreach (var buff in buffSnapShot)
+            {
+                buff.OnResulution(player);
+                buff.Fade(player);
+                PrintEvent.Instance.log += $"{player.Name}现在有{buff.Value}层{buff.ID}\n";
+            }
+        }
+
+        //PrintResult_Debug();
     }
+
+    //加入Buff之后有bug！
     public void PrintResult_Debug()
     {
         if (BattleManager.Instance.Turn.Value == 1)
@@ -90,8 +104,11 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
                 {
                     if (skill is TriggerSkill triggered)
                     {
-                        if (triggered.OnDeath(player))
-                            reallyDie = false;
+                        if (triggered.InvokeOnDeath(player))
+                        {
+                            if (player.status.life.Value != LifeStatus.EdgeofDeath)
+                                reallyDie = false;
+                        }
                     }
                 }
 
@@ -134,7 +151,6 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         }
         BattleManager.Instance.OnWinning.Invoke();
     }
-
     public void ClearPossibleKillers()
     {
         foreach(var player in PlayerManager.Instance.Players.Values)
@@ -142,7 +158,6 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             player.possibleKillers.Clear();
         }
     }
-    
     private int HeadGain(int HP)
     {
         if (HP == 1)

@@ -18,7 +18,7 @@ public class Hero
             {
                 if (SkillLibrary.Instance.skillDic.TryGetValue(skillID, out var skill))
                 {
-                    skills.Add(skill);
+                    skills.Add(skill.Clone());
                 }
                 else
                 {
@@ -44,13 +44,24 @@ public class Hero
         {
             if (SkillLibrary.Instance.skillDic.TryGetValue(skillID, out var skill))
             {
-                skills.Add(skill);
+                skills.Add(skill.Clone());
             }
             else
             {
                 UnityEngine.Debug.LogWarning($"技能ID不存在: {skillID}");
             }
         }
+    }
+
+    //记得要用？调用防止Null
+    public T GetSkill<T>() where T : Skill
+    {
+        foreach (var skill in skills)
+        {
+            if (skill is T en)
+                return en;
+        }
+        return null;
     }
 
 }

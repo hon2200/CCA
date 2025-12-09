@@ -35,12 +35,12 @@ public abstract class ObservableAttribute<T> where T : struct
                 OnValueChanged?.Invoke(oldValue, _value, operationType);
         }
     }
-    public void Save()
+    public virtual void Save()
     {
         save = _value;
         onObserve = false;
     }
-    public void Load()
+    public virtual void Load()
     {
         _value = save;
         onObserve = true;

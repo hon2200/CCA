@@ -51,10 +51,41 @@ public static class RuleCheck
             }
 
         }
+        else if (actionDefine.TargetType == TargetType.Friend)
+        {
+            PlayerManager.Instance.Players.TryGetValue(actionDefine.Target, out var targerPlayer);
+            //当然，如果这个攻击行动还没有选择对象，那其实没有关系
+            if (targerPlayer != null)
+            {
+                if (actionDefine.Target == player.ID_inGame || targerPlayer.status.life.Value == LifeStatus.Death)
+                    return false;
+                //目前只有一个粗糙的组队检测方法
+                if (targerPlayer is AIPlayer aiTargetPlayer)
+                {
+                    if (aiTargetPlayer.isFriend)
+                    {
+                        if (player is AIPlayer aiPlayer && !aiPlayer.isFriend)
+                            return false;
+                    }
+                    if (!aiTargetPlayer.isFriend)
+                    {
+                        if (player.playerType == PlayerType.Human)
+                            return false;
+                        if (player is AIPlayer aiPlayer && aiPlayer.isFriend)
+                            return false;
+                    }
+                }
+                if (targerPlayer.playerType == PlayerType.Human)
+                {
+                    if (player is AIPlayer aiPlayer && !aiPlayer.isFriend)
+                        return false;
+                }
+            }
+        }
         //资源消耗检查
-        if (player.status.resources.Bullet.Value - actionDefine.Costs[0] < 0)
+        if (player.status.resources.Bullet.Value - actionDefine.Costs[1] < 0)
             return false;
-        if (player.status.resources.AvailableSword.Value - actionDefine.Costs[1] < 0)
+        if (player.status.resources.Sword.AvailableSword.Value - actionDefine.Costs[2] < 0)
             return false;
         //CD检查
         if (player.CDmanager.ActionsinCD.ContainsKey(actionDefine.ID))
@@ -132,7 +163,8 @@ public static class RuleCheck
         }
         else
         {
-            if (thisPlayer.AvailableActions.Contains(actionDefine.ID))
+            if (thisPlayer.AvailableActions.Contains(actionDefine.ID) 
+                && !thisPlayer.ForbiddenActions.Contains(actionDefine.ID))
                 return true;
             return false;
         }
@@ -144,7 +176,7 @@ public static class RuleCheck
     public static List<T> CheckAction<T>(this Player thisPlayer) where T : ActionDefine
     {
         List<T> ActionsWithinRules = new();
-        foreach (var actionID in thisPlayer.AvailableActions)
+        foreach (var actionID in thisPlayer.AvailableActions.Except(thisPlayer.ForbiddenActions))
         {
             ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
             if (actionDefine == null)
@@ -159,7 +191,7 @@ public static class RuleCheck
     {
         List<T> ActionTargeting = new();
 
-        foreach (var actionID in thisPlayer.AvailableActions)
+        foreach (var actionID in thisPlayer.AvailableActions.Except(thisPlayer.ForbiddenActions))
         {
             ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
             if (actionDefine == null)
@@ -177,7 +209,7 @@ public static class RuleCheck
     public static List<ActionDefine> CheckAction(this Player thisPlayer, ActionType actionType)
     {
         List<ActionDefine> ActionsWithinRules = new();
-        foreach (var actionID in thisPlayer.AvailableActions)
+        foreach (var actionID in thisPlayer.AvailableActions.Except(thisPlayer.ForbiddenActions))
         {
             ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
             if (actionDefine == null)
@@ -192,7 +224,7 @@ public static class RuleCheck
     {
         List<ActionDefine> ActionTargeting = new();
 
-        foreach (var actionID in thisPlayer.AvailableActions)
+        foreach (var actionID in thisPlayer.AvailableActions.Except(thisPlayer.ForbiddenActions))
         {
             ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
             if (actionDefine == null)
@@ -210,7 +242,7 @@ public static class RuleCheck
     public static List<T> CheckAllAction<T>(this Player thisPlayer) where T: ActionDefine
     {
         List<T> ActionsWithinRules = new();
-        foreach (var actionID in thisPlayer.AvailableActions)
+        foreach (var actionID in thisPlayer.AvailableActions.Except(thisPlayer.ForbiddenActions))
         {
             ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
             if (actionDefine == null)
@@ -245,7 +277,7 @@ public static class RuleCheck
     public static List<ActionDefine> CheckAllAction(this Player thisPlayer, ActionType actionType)
     {
         List<ActionDefine> ActionsWithinRules = new();
-        foreach (var actionID in thisPlayer.AvailableActions)
+        foreach (var actionID in thisPlayer.AvailableActions.Except(thisPlayer.ForbiddenActions))
         {
             ActionDataBase.Instance.ActionDictionary.TryGetValue(actionID, out var actionDefine);
             if (actionDefine == null)

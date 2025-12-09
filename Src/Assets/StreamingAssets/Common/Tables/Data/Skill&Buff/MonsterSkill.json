@@ -1,0 +1,1588 @@
+{
+    "Save Me!!!": {
+        "ID": "Save Me!!!",
+        "Name": "救我！！！",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "当你战败时，游戏失败",
+        "Explanation": "无",
+        "Bubble": "救救我，求你了",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Toy Assembly Line": {
+        "ID": "Toy Assembly Line",
+        "Name": "玩具流水线",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "若你拥有足够子弹资源，你依次在每个回合开始阶段进行以下操作：                                                                                                        ①消耗3发子弹，制造一个玩具盾卫                                                                                                                                 ②消耗3发子弹，制造一个玩具战士                                                                                                                                                                            ③消耗1发子弹，制造一个玩具跟班",
+        "Explanation": "无",
+        "Bubble": "制造……这个这个……还有这个",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Castle Guardian": {
+        "ID": "Castle Guardian",
+        "Name": "城堡守护者",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "当你第一次被击败时，失去所有资源，生命值恢复到上限，解除行动限制，失去织梦玩具流水线。变为好战性格",
+        "Explanation": "无",
+        "Bubble": "不许……破坏……大家的玩具城堡！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Fight Again": {
+        "ID": "Fight Again",
+        "Name": "再战",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "当你第一次被击败时，获得砍，生命值立刻恢复至上限。                                                                                                                                 在玩家没有子弹时砍的欲望大幅提高",
+        "Explanation": "无",
+        "Bubble": "真正的游戏，才刚刚开始",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Waraxe Dance": {
+        "ID": "Waraxe Dance",
+        "Name": "战斧之舞",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "选定一名目标，对其连续使用3次攻击力为4、伤害为1的攻击。根据对方的行动情况执行以下三种效果的其中之一：                                                                                                                                 ①目标使用攻击力＜4的攻击，命中三次                                                                                                                                 ②目标使用攻击力=4的攻击，仅命中一次                                                                                                                                                                            ③目标使用攻击力＞4的攻击，不命中                                                                                                            该攻击可被重挡防御",
+        "Explanation": "在玩家子弹数小等于2的时候发动概率极高（80%）                                                      其余概率较低（30%）",
+        "Bubble": "力不竭、战不止",
+        "Costs": [
+            0,
+            0,
+            5
+        ],
+        "CD": 4,
+        "ForeKnow": true
+    },
+    "Void Servant": {
+        "ID": "Void Servant",
+        "Name": "虚空仆从",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "召唤一单位虚空兽，场上最多同时存在4只虚空兽",
+        "Explanation": "CD好了就会用",
+        "Bubble": "我的子民，为我而战",
+        "Costs": [
+            0,
+            0,
+            1
+        ],
+        "CD": 2,
+        "ForeKnow": false
+    },
+    "Bite You to Death!": {
+        "ID": "Bite You to Death!",
+        "Name": "全军出击我咬死你",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "场上所有虚空兽本回合对玩家追击一次无消耗的刺，每命中一次，为目标叠加2层流血",
+        "Explanation": "CD好了，场上有虚空兽就会用",
+        "Bubble": "相信……虚空真身",
+        "Costs": [
+            0,
+            0,
+            1
+        ],
+        "CD": 4,
+        "ForeKnow": false
+    },
+    "Morphing Remain": {
+        "ID": "Morphing Remain",
+        "Name": "残躯化形",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "支配之影与欺瞒之影全部战败时，你无条件召唤2只虚空兽",
+        "Explanation": "无",
+        "Bubble": "我的子民，为我再战！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Charge": {
+        "ID": "Charge",
+        "Name": "冲锋",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "行动改为刺一下玩家",
+        "Explanation": "无",
+        "Bubble": "（低吼声……）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Chronos Hand": {
+        "ID": "Chronos Hand",
+        "Name": "克洛诺斯之手",
+        "SkillType": "Free Skill",
+        "IsLimited": true,
+        "LimitedTimes": 3,
+        "Description": "场上所有单位上回合的所有行动与追击行动将会无消耗地在本回合追加执行一次",
+        "Explanation": "这个技能要配合使用！！！                                                                                                                                                                                        我方单位上回合发动攻击与补给行动的单位数目越多，发动概率越高                                       （这两种行动每个提供20%概率，将追击行动计入其中）",
+        "Bubble": "让我们重新演绎这场闹剧",
+        "Costs": [
+            1,
+            0,
+            0
+        ],
+        "CD": 2,
+        "ForeKnow": false
+    },
+    "Mnemosyne Hand": {
+        "ID": "Mnemosyne Hand",
+        "Name": "谟涅摩叙涅之手",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "当你生命值为≤0时，若场上有虚空兽存在，一只虚空兽立刻变为生命值为4，不可行动的茧，三回合后你借此茧重生，你复活时，获得玩家持有数目一半的剑（向上取整）",
+        "Explanation": "无",
+        "Bubble": "丝线编织成茧，我将重新归来",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Strengthen with Battle": {
+        "ID": "Strengthen with Battle",
+        "Name": "愈战愈勇",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 4,
+        "Description": "敌方每有一个单位战败，你获得1点随机资源，上限4次",
+        "Explanation": "无",
+        "Bubble": "“……”",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "ForeKnow": true
+    },
+    "Dark Embrace": {
+        "ID": "Dark Embrace",
+        "Name": "黑暗拥抱",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "回合开始时，你获得玩家的所有剑，玩家失去所有子弹",
+        "Explanation": "第一回合用",
+        "Bubble": "只会痛苦一会儿的（狞笑——）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Enlightenment on High Fort1": {
+        "ID": "Enlightenment on High Fort1",
+        "Name": "高寨悟道，连击+1",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你的刀剑类攻击命中一目标时，叠加一点Combo，受伤则失去所有Combo",
+        "Explanation": "无",
+        "Bubble": "为何执剑？如何执剑？皆匿于剑客本心……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Enlightenment on High Fort2": {
+        "ID": "Enlightenment on High Fort2",
+        "Name": "高寨悟道",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "每有一层Combo，你的攻击力+1，刀剑行动额外执行一次",
+        "Explanation": "无",
+        "Bubble": "为何执剑？如何执剑？皆匿于剑客本心……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 5,
+        "ForeKnow": false
+    },
+    "Critical Strike": {
+        "ID": "Critical Strike",
+        "Name": "会心一击",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你进入会心",
+        "Explanation": "在Combo=1时发动",
+        "Bubble": "宁心凝神，砺我剑魂",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Adjudication": {
+        "ID": "Adjudication",
+        "Name": "裁决",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "替代行动，我方所有单位接下来2回合行动消耗-1",
+        "Explanation": "CD好了就用",
+        "Bubble": "我是“手”所制定律法的执行者",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 4,
+        "ForeKnow": false
+    },
+    "Judgement": {
+        "ID": "Judgement",
+        "Name": "审断法",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "替代行动,令玩家下一回合无法使用进攻行动。叠加3层晶化",
+        "Explanation": "CD好了就用",
+        "Bubble": "我是“手”所制定律法的审判者",
+        "Costs": [
+            0,
+            1,
+            0
+        ],
+        "CD": 2,
+        "ForeKnow": true
+    },
+    "Prismatic Essence": {
+        "ID": "Prismatic Essence",
+        "Name": "棱晶质",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你的光属性攻击造成伤害时为目标叠加2层晶化",
+        "Explanation": "无",
+        "Bubble": "疼痛是长久的，死亡是一瞬间的（狞笑）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Tactical Turtle1": {
+        "ID": "Tactical Turtle1",
+        "Name": "战术龟缩",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你力量-2，龟缩状态无法攻击",
+        "Explanation": "无",
+        "Bubble": "别打我，别打我",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Tactical Turtle2": {
+        "ID": "Tactical Turtle2",
+        "Name": "战术龟缩",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你受到来自进攻行动与进攻技能的伤害时，受伤-1。受伤时进入龟缩状态",
+        "Explanation": "无",
+        "Bubble": "别打我，别打我",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Blazing Armor": {
+        "ID": "Blazing Armor",
+        "Name": "炽热铠甲",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "攻击你的目标叠加2层灼烧，你免疫光属性伤害",
+        "Explanation": "无",
+        "Bubble": "（因为畏惧高温与烈焰，没有人敢与他正面格斗）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Beat Down": {
+        "ID": "Beat Down",
+        "Name": "殴打",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "本场战斗余下回合中，你的进攻行动无法被进攻抵消。攻击造成伤害使得目标力量-1",
+        "Explanation": "无",
+        "Bubble": "揍他，往死里打！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Ready to Beat Down": {
+        "ID": "Ready to Beat Down",
+        "Name": "开始殴打",
+        "SkillType": "Free Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "本场战斗余下回合中，你进入殴打状态",
+        "Explanation": "好了就立刻用",
+        "Bubble": "揍他，往死里打！",
+        "Costs": [
+            0,
+            0,
+            5
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Simulacrum": {
+        "ID": "Simulacrum",
+        "Name": "拟像",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "第二回合开始阶段，你获得玩家的所有织梦，但发动时需移除1点资源（优先移除刀剑）",
+        "Explanation": "无",
+        "Bubble": "万象，变幻寻常",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Loot in Chaos": {
+        "ID": "Loot in Chaos",
+        "Name": "趁火打劫",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你更喜欢发动万象天引。                                                                                                                                                                                               当你发动万象天引时，你获得敌方受影响失去资源单位的2点随机资源并对其造成1点伤害。",
+        "Explanation": "权重直接*2吧",
+        "Bubble": "拿来吧你！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 2,
+        "ForeKnow": false
+    },
+    "Blessing": {
+        "ID": "Blessing",
+        "Name": "赐福",
+        "SkillType": "Free Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "使用此技能后的2回合内，你方单位受到的伤害于技能结束时一次性结算，所结算伤害总量-2",
+        "Explanation": "玩家资源高，我方资源低",
+        "Bubble": "谨代表塑造万物的神明，为你赐福",
+        "Costs": [
+            0,
+            2,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Divine Retribution": {
+        "ID": "Divine Retribution",
+        "Name": "神罚",
+        "SkillType": "Free Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "使用此技能后的3回合内，敌方所有单位失去2层力量",
+        "Explanation": "我方资源高，敌方资源低",
+        "Bubble": "亵渎神明者，必须受到应有之惩戒",
+        "Costs": [
+            0,
+            0,
+            5
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Dual Genesis": {
+        "ID": "Dual Genesis",
+        "Name": "两仪",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "游戏开始时，棱镜舞者处于“实体”状态：                                                                                                                                两棱镜舞者优先攻击同一目标且往往选择不同攻击，当两舞者命中同一目标时，两舞者获得2点棱镜碎片",
+        "Explanation": "不会发动能被同一种防御行动抵挡的进攻行动，进攻选择同一目标的概率为70%",
+        "Bubble": "舞会——拉开序幕",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Fluid Dance Morphology": {
+        "ID": "Fluid Dance Morphology",
+        "Name": "舞流形",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当舞者生命值≤0时，舞者无法行动，不会战败。                                                                                                                                  两位舞者于“实体”状态生命值≤0时，下回合开始时舞者们转进“实像”状态，并在一回合内无敌且不可行动：                                                                 棱镜舞者受到的伤害会1：4转化为棱镜碎片",
+        "Explanation": "此状态下，舞者使用防御行动的最终计算权重*50%",
+        "Bubble": "请，牵着我的手，我们共舞一曲",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Mirror Shred": {
+        "ID": "Mirror Shred",
+        "Name": "镜像绞杀",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "两棱镜舞者不会同时发动进攻。                                                                                                                                                                                                   棱镜舞者发动光属性行动后下回合会匿于镜中：不可使用行动且无敌。                                                                                                                                                                                                                                                                    当有舞者匿于镜中时，棱镜碎片可被当作行动资源且舞者对同一目标可连续使用2次相同的进攻行动，第二次进攻行动攻击力+0.5",
+        "Explanation": "舞者选择进攻行动依然不会选择可被同种防御抵挡的",
+        "Bubble": "剑影无踪——",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Ethereal Emergence": {
+        "ID": "Ethereal Emergence",
+        "Name": "无像生",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当舞者生命值≤0时，舞者无法行动，不会战败。                                                                                                                                                                                                   任一位舞者于“实像”状态生命值≤1时，下回合开始时两舞者转进“虚像”状态，并在一回合内无敌且不可行动：                                                                                                                                                                                                   ①棱镜舞者受伤改为用“棱镜碎片”抵消；                                                                                                                                             ②棱镜碎片可被当作两种行动资源使用；                                                                                                                                                      ③每回合开始时，移除1点“棱镜碎片”",
+        "Explanation": "优先被利用为子弹类行动的资源（70%）",
+        "Bubble": "歌声没有停歇——舞蹈永不谢幕！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Crystal Bloom": {
+        "ID": "Crystal Bloom",
+        "Name": "棱晶绽放",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "①棱镜舞者的攻击欲望大幅提高，会频繁发动高等级的攻击；                                                                                                                         ②棱镜舞者每造成1点伤害，为受伤目标叠加1层晶化。                                                                                                                                                                                                   ③当有单位被眩晕时，棱镜舞者获得2点棱镜碎片",
+        "Explanation": "优先发动攻击等级＞4或伤害＞2的行动（70%)",
+        "Bubble": "唯有……刀锋……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Final Curtain": {
+        "ID": "Final Curtain",
+        "Name": "谢幕",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当场上所有棱镜碎片耗尽时，棱镜舞者进入“碎镜”状态：                                                                                                                        ①一名棱镜舞者直接战败。（注释：Prism Dancer_1的效果）                                                                                                                                       ②另一棱镜舞者情绪值锁定为2，失去2层力量。（注释：Prism Dancer_2的效果）                                                                                                                        每回合开始时，余下的棱镜舞者失去1666点体力",
+        "Explanation": "无",
+        "Bubble": "碎镜……难圆……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Water Warding Incantation": {
+        "ID": "Water Warding Incantation",
+        "Name": "避水咒言",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "下一回合开始，我方所有单位获得2层力量，进攻与反制行动消耗+1，不受到任何伤害但受到挑衅后解除此状态。",
+        "Explanation": "我方或玩家资源其中一个高",
+        "Bubble": "#￥%@&@)(*&@)&&",
+        "Costs": [
+            0,
+            2,
+            3
+        ],
+        "CD": 3,
+        "ForeKnow": false
+    },
+    "Supply Line": {
+        "ID": "Supply Line",
+        "Name": "补给线",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你战败时，击败你的单位获得你的所有子弹",
+        "Bubble": "快一点！不要停下",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "88mm Tank Gun": {
+        "ID": "88mm Tank Gun",
+        "Name": "88mm坦克炮",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "获得1层力量，你的所有子弹类攻击消耗+1，命中后为目标叠加1层流血、2层灼烧",
+        "Explanation": "乐于进行高频低攻的行动（子弹、双枪这类）",
+        "Bubble": "击穿敌人装甲！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Body of Steel": {
+        "ID": "Body of Steel",
+        "Name": "钢铁之躯",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "受到来自刀剑类行动造成的伤害-1",
+        "Bubble": "（这头巨兽的装甲令人生畏……）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Will-o'-the-Wisp Rekindled": {
+        "ID": "Will-o'-the-Wisp Rekindled",
+        "Name": "鬼火再燃",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你生命值≤0时于回合结束阶段变为鬼火，所有剑进入可用状态。                                                                                                                                                                                                                       1回合内若你受到伤害，你复活；反之，你战败",
+        "Explanation": "非常高的发动“过来”的概率",
+        "Bubble": "不死……战斗……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "800mm Railgun": {
+        "ID": "800mm Railgun",
+        "Name": "800mm轨道炮",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你的所有子弹类进攻行动均改为消耗炮弹。你使用子弹类攻击时获得2层力量，造成伤害+1",
+        "Bubble": "（哦伙计……这玩意儿真可怕）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Assemble": {
+        "ID": "Assemble",
+        "Name": "集结",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "本回合结束阶段，召唤2名炮兵",
+        "Explanation": "一定立即发动",
+        "Bubble": "让巨炮炸烂他们的战线！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 3,
+        "ForeKnow": false
+    },
+    "Load Shells": {
+        "ID": "Load Shells",
+        "Name": "装填炮弹",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "回合结束阶段为古斯塔夫轨道炮装填3发炮弹。在使用此织梦回合战败时，装填炮弹失败且击败你的单位额外获得3点子弹。",
+        "Explanation": "当玩家资源量较高时发动概率低",
+        "Bubble": "炮兵们——装填炮弹——",
+        "Costs": [
+            0,
+            3,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "White Specter's Tear": {
+        "ID": "White Specter's Tear",
+        "Name": "白魂泪",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你每次使用进攻行动与受到伤害时可积攒1点泪。                                                                                                                                                                    当你积攒5点泪时，你的情绪值锁定为满，获得1层力量，每进行1次进攻行动移除1点泪。                                                                                      （注释：当积攒满5点泪时玩家才能知道技能效果）泪耗尽时，情绪值退为2，失去1层力量",
+        "Bubble": "恶魔的泪……是在忏悔，还是在难过呢？",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Shared Origin_Pale": {
+        "ID": "Shared Origin_Pale",
+        "Name": "同源相生",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你的攻击被抵消或反制时，你令黑使徒的生命值上限+1，生命值+1",
+        "Bubble": "你我本自一源而生",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Black Specter's Wing": {
+        "ID": "Black Specter's Wing",
+        "Name": "黑魂翼",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "选定一名敌方单位，对其发动一次攻击力为6，伤害为2的攻击。此攻击被挡防御，被反弹反制（注释：实际上就是RPG）",
+        "Explanation": "RPG级别",
+        "Bubble": "娃儿莫哭……我们归梦里",
+        "Costs": [
+            0,
+            2,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Shared Origin_Abyss": {
+        "ID": "Shared Origin_Abyss",
+        "Name": "同源相生",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你的攻击被防御时，你令白使徒的生命值上限+1，生命值+1",
+        "Bubble": "你我本自一源而生",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Animism": {
+        "ID": "Animism",
+        "Name": "万物有灵",
+        "SkillType": "Free Skill",
+        "IsLimited": true,
+        "LimitedTimes": 8,
+        "Description": "使用时在豪猪、树灵、丛林狼中随机召唤1只，场上最多存在4只召唤物（注释：次序按序填充进2、3、4、5）",
+        "Explanation": "技能好了就发动",
+        "Bubble": "把生命，灌注进这腐坏的世界！",
+        "Costs": [
+            0,
+            0,
+            3
+        ],
+        "CD": 2,
+        "ForeKnow": false
+    },
+    "Run Wild and Crash": {
+        "ID": "Run Wild and Crash",
+        "Name": "乱跑乱撞",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "发动万象天引的概率大幅提高",
+        "Explanation": "最终权重*2",
+        "Bubble": "哼哼哼——",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Entangle": {
+        "ID": "Entangle",
+        "Name": "缠绕",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "使用此技能后，当你存活时，你每回合为敌方一名目标叠加2层流血",
+        "Explanation": "立刻用",
+        "Bubble": "藤蔓生长——",
+        "Costs": [
+            0,
+            3,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Pouncing Strike": {
+        "ID": "Pouncing Strike",
+        "Name": "扑袭",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "登场后的下一回合，追击一次无消耗的砍",
+        "Bubble": "（嘶吼声……）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Left Hand": {
+        "ID": "Left Hand",
+        "Name": "左手",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你获得玩家占用梦意志≤4的所有织梦。                                                                                                                                                        第1回合你无法行动，第2回合开始，你执行玩家1回合前的行为，若无法执行，则视为执行双补。",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Right Hand": {
+        "ID": "Right Hand",
+        "Name": "右手",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你获得玩家占用梦意志≤3的所有织梦。                                                                                                                                                                第1、2回合你无法行动，第3回合开始，你执行玩家2回合前的行为，若无法执行，则视为执行双补。",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Linked Hearts": {
+        "ID": "Linked Hearts",
+        "Name": "连心",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当勇者·左手、勇者·右手在场时，你每受到1点由进攻行动造成的伤害，玩家失去1点体力",
+        "Bubble": "别害怕……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Fear No More!": {
+        "ID": "Fear No More!",
+        "Name": "不再畏惧！",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你生命值≤0时，本回合结束时你变为不屈",
+        "Bubble": "我们——同行——",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Wavebreaker": {
+        "ID": "Wavebreaker",
+        "Name": "碎浪",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你对同一名目标造成伤害时，下次对其进攻时锁定持有2层力量。对同一名目标最多叠加4层力量。                                                                                                                一个回合没有对同一进攻，对此目标进攻时清除叠加的力量层数",
+        "Bubble": "此招，力克千钧",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Heroic Soul Endures": {
+        "ID": "Heroic Soul Endures",
+        "Name": "英魂未逝",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你战败时，勇者先灵与誓约之剑登场（注释：不属于波次转换）",
+        "Bubble": "历代勇者的先灵，请再次护我前行",
+        "Costs": [
+            0,
+            0,
+            2
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Determined Strike": {
+        "ID": "Determined Strike",
+        "Name": "锐意一击",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "使用此技能时，进入会心。                                                                                                                                                                                                                       你的下两次进攻，受伤单位每受到1点伤害叠加1层流血",
+        "Explanation": "在未造成过伤害时不会发动此技能。                                                                                                                                        在资源量＞5的时候更容易发动（70%）且会在发动技能后处于会心状态每回合进攻的概率为50%，在会心状态下，你不会使用防御与反制行动                                                               当玩家发动挑衅没有让你失去会心时下一回合一定响应挑衅，且使用高伤害行动（也就是进攻）",
+        "Bubble": "心、剑、意念合一",
+        "Costs": [
+            0,
+            0,
+            2
+        ],
+        "CD": 3,
+        "ForeKnow": false
+    },
+    "Dragon Slaying Blade": {
+        "ID": "Dragon Slaying Blade",
+        "Name": "屠龙之刃",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你在场时，你方单位的断魂斩升级为屠龙斩（注释：消耗5，攻击6，伤害2，被偏折防御，被缴械反制）",
+        "Bubble": "（传说这柄剑的第一代主人曾拿着它斩杀恶龙）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Echo of Legend": {
+        "ID": "Echo of Legend",
+        "Name": "传说回响",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你与勇者先灵每受到1点伤害，你获得1点共鸣。                                                                                                                                                                            每满4点共鸣，勇者先灵的技能CD减少1回合",
+        "Bubble": "（这柄传说之剑正在等待新的勇者与他签订契约）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Prison Cage": {
+        "ID": "Prison Cage",
+        "Name": "囚笼",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "所有以你为目标的进攻行动所需资源消耗+1，你受到伤害时，获得1点与该进攻资料类型相同的资源",
+        "Bubble": "亲爱的，我建议你不要再往前走了……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Shackles": {
+        "ID": "Shackles",
+        "Name": "枷锁",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你受到来自进攻行动或进攻技能的伤害时，伤害来源移除4-x点与此进攻资源类型相同的资源（x为此次进攻行动消耗的资源数目）",
+        "Bubble": "自由并不是属于每个人的权利，亲爱的……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Run Amok": {
+        "ID": "Run Amok",
+        "Name": "乱窜",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "进攻行动命中时为受伤目标叠加2层流血",
+        "Bubble": "吱吱——",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Rat Swarm Rampage": {
+        "ID": "Rat Swarm Rampage",
+        "Name": "鼠群暴动",
+        "SkillType": "Free Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "下回合开始阶段开始时，使所有友方单位情绪值锁定为满",
+        "Explanation": "在我方资源较多时用",
+        "Bubble": "鼠群！不要沦为实验的耗材！",
+        "Costs": [
+            3,
+            4,
+            7
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Reflex Arc": {
+        "ID": "Reflex Arc",
+        "Name": "反射弧",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "你的生命值不会低于1，生命值=1时，获得3回合锁血，3回合后的结束阶段你战败",
+        "Bubble": "呱——呱——",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Stem Cell": {
+        "ID": "Stem Cell",
+        "Name": "干细胞",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你每受到2点伤害为其他所有友方单位增加1点生命值与生命值上限",
+        "Bubble": "（嘶鸣声——）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Endless": {
+        "ID": "Endless",
+        "Name": "无穷无尽",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 4,
+        "Description": "在你战败回合的回合结束阶段复活，获得持续1回合的无敌，仅可使用补给行动。                                                                                                                        击败你的单位持续两回合失去1层力量。",
+        "Bubble": "嗡嗡——",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Grow": {
+        "ID": "Grow",
+        "Name": "生长",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "游戏开始的第7回合开始阶段，若你仍未战败，变为常青（注释：资源继承，下两个同）",
+        "Bubble": "（先扎根，然后发芽……）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Guardian's Shade": {
+        "ID": "Guardian's Shade",
+        "Name": "守护之荫",
+        "SkillType": "Action Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "未破壳的圣灵与未熄灭的薪火生命值与生命上限+2。                                                                                                                                   本场战斗余下时间内，当你存活时，友方单位受到的伤害-1",
+        "Explanation": "立刻用",
+        "Bubble": "在这秽壤之中，我会成为最后一片荫蔽",
+        "Costs": [
+            4,
+            3,
+            3
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Hatch": {
+        "ID": "Hatch",
+        "Name": "破壳",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "游戏开始的第10回合开始阶段，若你仍未战败，你变为白鸽",
+        "Bubble": "（冲破黑暗……）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Song of Peace": {
+        "ID": "Song of Peace",
+        "Name": "和平之歌",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你受伤时，若你有资源，移除3点资源抵消1点伤害（优先移除子弹）",
+        "Bubble": "（衔着橄榄而来，飞向阳光而去）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Born of Blazing Fire": {
+        "ID": "Born of Blazing Fire",
+        "Name": "生于烈火",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "游戏开始的第16回合开始阶段，若你仍未战败，变为凤凰",
+        "Bubble": "旅人——驻足休息一下吧",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Immolation": {
+        "ID": "Immolation",
+        "Name": "焚身",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你每次造成伤害时，为其叠加1层灼烧。对你造成伤害的单位叠加1层灼烧",
+        "Bubble": "（祂生于业火，祂是神迹）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Raging Lotus Flame": {
+        "ID": "Raging Lotus Flame",
+        "Name": "红莲怒焰",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "带有灼烧效果的单位移除所有灼烧层数，每移除3层失去1点体力（向上取整）",
+        "Explanation": "每3层每回合提供30%概率",
+        "Bubble": "（祂……愤怒了，祂在咆哮……）",
+        "Costs": [
+            0,
+            8,
+            8
+        ],
+        "CD": 8,
+        "ForeKnow": false
+    },
+    "Hello World!": {
+        "ID": "Hello World!",
+        "Name": "Hello World!",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "第二回合开始，每2回合你给予玩家1点随机资源",
+        "Bubble": "我也能成为向你一样的勇者吗？",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Toward Tomorrow": {
+        "ID": "Toward Tomorrow",
+        "Name": "向明天",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "每回合开始时你获得1点淬炼；你每赠予玩家1点资源，你获得1点淬炼。                                                                                                                                 当你拥有的淬炼≥12时，在回合结束阶段，你变为生命值为5，无法行动的茧，三回合后重生为勇者先灵",
+        "Bubble": "我会成为誓约之剑的主人，成为梦世界的守护者！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Trial by Fire": {
+        "ID": "Trial by Fire",
+        "Name": "历练",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你先于孩提战败时，孩提获得10点淬炼，孩提转变为勇者先灵的化茧时间减少2回合。                                                                                                                                 当孩提因生命值归0战败退场时，你立刻变为生命值为999的茧，下回合开始阶段立刻重生变为深渊之影，场景立即切换为断魂道",
+        "Bubble": "谁可断言生命将走向何处？",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Deathrattle": {
+        "ID": "Deathrattle",
+        "Name": "亡语",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "当你战败时，你于本回合结束阶段变为亡魂",
+        "Bubble": "我……不会死……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Soul Severance": {
+        "ID": "Soul Severance",
+        "Name": "断魂",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你战败时，人斩下回合追击阶段发动1次无消耗的断魂斩（最多发动1次）",
+        "Bubble": "永无宁日——！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Fiend on Earth": {
+        "ID": "Fiend on Earth",
+        "Name": "人间恶鬼",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "游戏开始阶段，你选定一名敌方单位，其每次使用刀剑类进攻行动，你获得1点鬼，每积攒7点鬼，你的鬼斩攻击力+0.5",
+        "Bubble": "执行……杀戮……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Soul Severance Field": {
+        "ID": "Soul Severance Field",
+        "Name": "断魂领域",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你方有单位战败时（包括你自己），场景切换为断魂道：余下所有单位的断魂斩攻击力+0.5，拔剑时可以额外拔1把刀剑。                                                                                      你使用断魂斩所消耗的刀剑-3",
+        "Bubble": "抽魂剥骨，无生无息",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Energy-Converging Armor": {
+        "ID": "Energy-Converging Armor",
+        "Name": "聚能装甲",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你的子弹补给+1。                                                                                                                                    你的进攻行动与攻击技能命中时目标叠加1层晶化",
+        "Bubble": "（由机械师用能量密度极高的矿石打造而成……）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Over-Limit Strike": {
+        "ID": "Over-Limit Strike",
+        "Name": "超限制打击",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "下一回合你对所有目标都可以执行两次不同的进攻行动",
+        "Explanation": "必须在可以强制破防前提下使用",
+        "Bubble": "奋战无休——",
+        "Costs": [
+            1,
+            1,
+            1
+        ],
+        "CD": 3,
+        "ForeKnow": false
+    },
+    "Core Eruption": {
+        "ID": "Core Eruption",
+        "Name": "核心喷发",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你的生命值降低至8以下时，你获得2层力量，造成伤害+1，每执行1次进攻与进攻技能失去1点生命值。                                                                    你的所有进攻无法被反制",
+        "Bubble": "死亡之前，再战一番……",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "FX-9 Incendiary Bomb": {
+        "ID": "FX-9 Incendiary Bomb",
+        "Name": "fx-9式燃烧弹",
+        "SkillType": "Free Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "下回合开始时，战斗场景切换至红莲真域：所有单位每回合结束时叠加2层灼烧",
+        "Explanation": "立刻用，且为这个技能不惜一切攒资源",
+        "Bubble": "于这业火之下，忏悔你的罪过",
+        "Costs": [
+            4,
+            8,
+            4
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Dance of Combustion": {
+        "ID": "Dance of Combustion",
+        "Name": "燃舞",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "选定一名带有灼烧效果的目标，使其灼烧层数翻倍，翻倍时每超出最大上限3层，目标立刻损失1点随机可用资源（不足2层按2层计）",
+        "Explanation": "在目标灼烧层数低于4时不会用",
+        "Bubble": "于此烈火之中，永远舞下去",
+        "Costs": [
+            0,
+            0,
+            6
+        ],
+        "CD": 4,
+        "ForeKnow": true
+    },
+    "True Form of Crimson Lotus": {
+        "ID": "True Form of Crimson Lotus",
+        "Name": "红莲真影",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "当你在场时，灼烧效果不影响友方单位（注释：但是依然会挂载层数）。                                                                                     当你战败时，清除场上所有单位的灼烧",
+        "Bubble": "（无惧烈火考验，才能淬炼出真正的勇气）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "FX-1 Flammable Agent": {
+        "ID": "FX-1 Flammable Agent",
+        "Name": "fx-1式易燃药物",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "每当你造成伤害时，受伤目标叠加1层灼烧效果，受伤目标灭火时仅减少2层灼烧",
+        "Bubble": "（无从追溯的发明）",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "FX-5 Shotgun": {
+        "ID": "FX-5 Shotgun",
+        "Name": "fx-5式霰弹炮",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "对最多3个目标发动1次攻击力为3，伤害为1的攻击。                                                                                                                                                                                                                                                                                                                                                                                                                         若命中前目标带有2层及以上灼烧，命中后其叠加1层流血。（注释：该攻击可被挡防御，被反弹反制，反制只反制伤害效果）",
+        "Explanation": "优先选择子弹资源少，有不低于2层灼烧效果的单位。发动概率为每满足一个可优先选择单位，每回合发动概率提升30%",
+        "Bubble": "（额……到底是谁发明的这种如此疯狂的武器？）",
+        "Costs": [
+            1,
+            3,
+            0
+        ],
+        "CD": 3,
+        "ForeKnow": false
+    },
+    "Fallen Creator God": {
+        "ID": "Fallen Creator God",
+        "Name": "堕天的创世神",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你在执行补给时可以额外获得1点对应资源。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         每回合，你移除1点刀剑、1点子弹，获得1点灵魂碎片",
+        "Bubble": "我即为不朽",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Creation": {
+        "ID": "Creation",
+        "Name": "造物",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "每次使用时依次执行以下三种效果：                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ①消耗1点灵魂碎片、1点生命值，随机召唤1只普通怪物。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ②消耗4点灵魂碎片、2点生命值，随机召唤1只精英与一只普通怪物。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ③消耗8点灵魂碎片、4点生命值，随机召唤1只领袖怪物。",
+        "Explanation": "立刻",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Power to Rule the World": {
+        "ID": "Power to Rule the World",
+        "Name": "权御天下",
+        "SkillType": "Free Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你方所有单位下一次进攻时造成伤害+1，锁定增加1层力量",
+        "Explanation": "在我方单位可用资源较多时使用",
+        "Bubble": "众生因我之存在而欢呼",
+        "Costs": [
+            0,
+            2,
+            2
+        ],
+        "CD": 3,
+        "ForeKnow": false
+    },
+    "Lash the Universe": {
+        "ID": "Lash the Universe",
+        "Name": "鞭笞宇内",
+        "SkillType": "Action Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "除你之外的所有单位下一次使用织梦后陷入1回合的眩晕（不可叠加）",
+        "Explanation": "好了就立刻用",
+        "Bubble": "孽畜，臣服于我！",
+        "Costs": [
+            1,
+            0,
+            0
+        ],
+        "CD": 3,
+        "ForeKnow": false
+    },
+    "Annihilate, Slay, Destroy": {
+        "ID": "Annihilate, Slay, Destroy",
+        "Name": "消灭，杀戮，摧毁",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "每回合开始阶段，你失去1点生命值。                                                                                                                  当你的生命值≤8时，你失去织梦造物与堕天的创世神。                                                                                                      所有友方单位战败退场，你获得所有友方单位生命值上限、剩余生命值与资源之和的一半（向上取整）。",
+        "Bubble": "无用的造物，成为我的养料吧！",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": false
+    },
+    "Photophobia": {
+        "ID": "Photophobia",
+        "Name": "惧光性",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你受到光属性进攻造成的伤害+2",
+        "Bubble": "“光！不要不要”",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "Counter-Blade": {
+        "ID": "Counter-Blade",
+        "Name": "逆锋之刃",
+        "SkillType": "Locked Skill",
+        "IsLimited": true,
+        "LimitedTimes": 1,
+        "Description": "当友方单位单位受到致命伤害时，你立即进入一回合无敌，将此次致命伤害的目标转移为你。                                                                           你对造成伤害的目标立刻发动一次屠龙斩",
+        "Bubble": "此刃出鞘，不为见血，但为守护",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    },
+    "\tNine-Headed Dragon Flash": {
+        "ID": "Nine-Headed Dragon Flash",
+        "Name": "九头龙闪",
+        "SkillType": "Locked Skill",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你的进攻行动优先选择高生命值单位为目标，造成伤害时获得1层力量。                                                                                         你对生命值低于2的单位进攻时失去3层力量",
+        "Bubble": "飞天御剑流的杀招",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0,
+        "ForeKnow": true
+    }
+}

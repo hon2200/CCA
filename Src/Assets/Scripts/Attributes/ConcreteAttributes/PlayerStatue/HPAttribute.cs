@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
+//Delegates do not guarantee order unless you manually manage invocation lists, which becomes messy.
+//So, in the things related to game core logic, don't use delegation.
 public class HPAttribute : ObservableAttribute<int>
 {
     public void Set(int amount) => SetValue(amount, "Set");
@@ -17,14 +19,14 @@ public class HPAttribute : ObservableAttribute<int>
         {
             if (skill is TriggerSkill triggerSkill)
             {
-                triggerSkill.OnDamaged(attacker, amount);
+                triggerSkill.InvokeOnDamaged(attacker, victim, amount);
             }
         }
         foreach (var skill in attacker.hero.skills)
         {
             if (skill is TriggerSkill triggerSkill)
             {
-                triggerSkill.OnDamaging(attacker, victim, amount);
+                triggerSkill.InvokeOnDamaging(attacker, victim, amount);
             }
         }
         if(attacker is AIPlayer aiAttacker)

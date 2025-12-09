@@ -145,8 +145,13 @@ public class AIPlayer : Player
     {
         AI_lmh ai = new(this);
         var newAction = ai.GenerateAction();
-        action.ReadinMove(newAction.ID, newAction.Target, "AI");
-        this.Consume(newAction);
+        if (newAction == null)
+        {
+            Debug.Log($"{Name}Don't Have Available Actions");
+            return;
+        }
+
+        action.ReadinMoveAndConsume(newAction.ID, newAction.Target, "AI", this);
         EmotionDataBase.Instance.EmotionDictionary.TryGetValue(Emo.emotionType, out var emotion);
         int count = 0;
         //多重攻击
@@ -157,8 +162,7 @@ public class AIPlayer : Player
                 if (this.CheckAllAction<AttackDefine>().Count > 0)
                 {
                     var secondAction = ai.SmartSelectAction(ActionType.Attack, this.CheckAllAction(ActionType.Attack));
-                    action.ReadinMove(secondAction.ID, secondAction.Target, "AI");
-                    this.Consume(newAction);
+                    action.ReadinMoveAndConsume(secondAction.ID, secondAction.Target, "AI", this);
                 }
                 else
                 {

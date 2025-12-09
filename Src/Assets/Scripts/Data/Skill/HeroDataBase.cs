@@ -20,7 +20,6 @@ public class HeroDataBase : MonoSingleton<HeroDataBase>
     public void LoadingHeroes()
     {
         path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Hero/Hero.json");
-        Debug.Log($"[HeroDataBase] Loading Hero.json from: {path}");
 
         HeroDictionary = JsonLoader.DeserializeObject<Dictionary<string, HeroDefine>>(path);
 

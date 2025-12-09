@@ -41,6 +41,7 @@ public class PlayerAction : ObservableList<ActionDefine>
         LongHistory = new();
     }
     //通过动态类型构造，实现简洁漂亮的代码
+    //在ActionPhase调用这个，有些地方手动进行了资源的预演消耗
     public ActionDefine ReadinMove(string ID, int Target, string Case)
     {
         if (ActionDataBase.Instance.ActionDictionary.TryGetValue(ID, out var value))
@@ -59,7 +60,12 @@ public class PlayerAction : ObservableList<ActionDefine>
             return null;
         }
     }
-
+    public ActionDefine ReadinMoveAndConsume(string ID, int Target, string Case, Player thisPlayer)
+    {
+        var newAction = ReadinMove(ID, Target, Case);
+        thisPlayer.Consume(newAction);
+        return newAction;
+    }
     public ActionDefine DeleteMove(ActionDefine actionBase, string Case)
     {
         Remove(actionBase, "Remove_" + Case);

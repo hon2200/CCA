@@ -88,7 +88,7 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Save Me"
+            "Save Me!!!"
         ]
     },
     "Toy Factory": {
@@ -102,8 +102,8 @@
             "double_shoot"
         ],
         "EnabledAction": [],
-        "MaxHP": 7,
-        "InitialHP": 7,
+        "MaxHP": 6,
+        "InitialHP": 6,
         "InitialResource": [
             4,
             0,
@@ -193,8 +193,8 @@
             "bullet"
         ],
         "EnabledAction": [],
-        "MaxHP": 5,
-        "InitialHP": 5,
+        "MaxHP": 4,
+        "InitialHP": 4,
         "InitialResource": [
             0,
             0,
@@ -234,11 +234,11 @@
         ],
         "DisabledAction": [],
         "EnabledAction": [],
-        "MaxHP": 7,
-        "InitialHP": 7,
+        "MaxHP": 5,
+        "InitialHP": 5,
         "InitialResource": [
             0,
-            3,
+            4,
             0
         ],
         "MonsterDescription": "需要补完",
@@ -248,7 +248,7 @@
     },
     "Shadow of Void": {
         "ID": "Shadow of Void",
-        "Name": "虚空之影",
+        "Name": "深渊之影",
         "CharacterID": "Arrogant",
         "MonsterType": "BOSS",
         "IsFriend": false,
@@ -263,9 +263,8 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Time Distortion",
-            "Void Servant",
-            "Devouring Stars",
+            "Chronos Hand",
+            "Mnemosyne Hand",
             "Morphing Remain"
         ]
     },
@@ -292,19 +291,18 @@
             "Charge"
         ]
     },
-    "Chronos Hand": {
-        "ID": "Chronos Hand",
-        "Name": "克罗诺斯之手",
+    "Shadow of Domination": {
+        "ID": "Shadow of Domination",
+        "Name": "支配之影",
         "CharacterID": "Protective",
         "MonsterType": "Elite",
         "IsFriend": false,
-        "PreferedAction": [
+        "DisabledAction": [
             "bullet"
         ],
-        "DisabledAction": [],
         "EnabledAction": [],
-        "MaxHP": 3,
-        "InitialHP": 3,
+        "MaxHP": 4,
+        "InitialHP": 4,
         "InitialResource": [
             0,
             0,
@@ -312,13 +310,13 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Time Reversal"
+            "Void Servant"
         ]
     },
-    "Mnemosyne Hand": {
-        "ID": "Mnemosyne Hand",
-        "Name": "谟涅摩叙涅之手",
-        "CharacterID": "Protective",
+    "Shadow of Deception": {
+        "ID": "Shadow of Deception",
+        "Name": "欺瞒之影",
+        "CharacterID": "Arrogant",
         "MonsterType": "Elite",
         "IsFriend": false,
         "PreferedAction": [
@@ -326,8 +324,8 @@
         ],
         "DisabledAction": [],
         "EnabledAction": [],
-        "MaxHP": 3,
-        "InitialHP": 3,
+        "MaxHP": 2,
+        "InitialHP": 2,
         "InitialResource": [
             0,
             0,
@@ -335,7 +333,7 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Time Fasting"
+            "Bite You to Death!"
         ]
     },
     "Entity of Will": {
@@ -346,6 +344,8 @@
         "IsFriend": true,
         "DisabledAction": [],
         "EnabledAction": [],
+        "MaxHP": 4,
+        "InitialHP": 4,
         "InitialResource": [
             0,
             0,
@@ -388,8 +388,8 @@
         "EnabledAction": [
             "ghost_sever"
         ],
-        "MaxHP": 2,
-        "InitialHP": 2,
+        "MaxHP": 3,
+        "InitialHP": 3,
         "InitialResource": [
             0,
             6,
@@ -412,16 +412,17 @@
         ],
         "DisabledAction": [],
         "EnabledAction": [],
-        "MaxHP": 16,
-        "InitialHP": 16,
+        "MaxHP": 6,
+        "InitialHP": 6,
         "InitialResource": [
             0,
-            3,
+            5,
             0
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Enlightenment on High Fort",
+            "Enlightenment on High Fort1",
+            "Enlightenment on High Fort2",
             "Critical Strike"
         ]
     },
@@ -468,7 +469,7 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Judgment"
+            "Judgement"
         ]
     },
     "Butaro": {
@@ -549,7 +550,8 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
-            "Tactical Turtle"
+            "Tactical Turtle1",
+            "Tactical Turtle2"
         ]
     },
     "Weasel Lackey": {
@@ -680,6 +682,7 @@
         ],
         "MonsterDescription": "需要补完",
         "SkillList": [
+            "Ready to Beat Down",
             "Beat Down",
             "Photophobia"
         ]

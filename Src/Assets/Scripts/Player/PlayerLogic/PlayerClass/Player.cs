@@ -16,7 +16,10 @@ public class Player : MonoBehaviour
 
     public PlayerUIText playerUIText;
     public PlayerEffectController playerEffectController;
+    //Available Actions是玩家目前已经解锁的行动，在平时就是，所有基础行动+技能允许的行动
     public List<string> AvailableActions { get; set; }
+    //禁止行动最好是去编译AvailableActions取出。一般是被眩晕之类的导致不能进行的行动
+    public List<string> ForbiddenActions { get; set; }
     public List<int> possibleKillers { get; set; }
     public Action OnBirth { get; set; }
     public bool is_stun = false;
@@ -53,6 +56,7 @@ public class Player : MonoBehaviour
                     this.AvailableActions.Add(action.ID);
             }
         }
+        ForbiddenActions = new();
         foreach(var skill in hero.skills)
         {
             if (skill is ActionSkill actionSkill)

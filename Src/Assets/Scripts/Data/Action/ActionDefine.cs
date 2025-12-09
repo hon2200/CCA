@@ -29,8 +29,10 @@ public enum ActionType
 //目标的类别
 public enum TargetType
 {
+    Null = -1,
     Self = 0,  //默认目标是自己，如补给，防御，反制，过来
     Enemy = 1, //默认目标是敌人，如攻击和挑衅
+    Friend = 2,
 }
     
 //补给or消耗资源的类别
@@ -68,6 +70,8 @@ public class ActionDefine : ICloneable
     public TargetType TargetType { get; set; } // 目标类型//未来可能在读取行动上面有用
     public int Target { get; set; } //目标
     public bool isCopy { get; set; } //是否是“过来”产生的复制体，等价于：是否响应过来
+    public bool isConsumed { get; set; } 
+    //避免二次结算消耗，在行动阶段结束后会结算一次消耗，在追击阶段结束后会再结算一次消耗
     public bool isBasic { get; set; } //是否是每一个玩家都可以拥有的基础行动
     public ActionType actionType { get => GetActionType(); }
     public virtual void Copy(ActionDefine target)
@@ -129,29 +133,55 @@ public class SupplyDefine : ActionDefine
     }
 }
 
-//攻击类行动
 public class AttackDefine : ActionDefine
 {
-    public float Level { get; set; } //攻击力
-    public int Damage { get; set; } //伤害
-    public int AttackType { get; set; } //攻击类别
-    public int Victim { get; set; } //受害者，不一定是Target
-    public virtual void OnDefended(Player attacker, Player victim) { }
-    public virtual void OnCountered(Player attacker, Player victim, CounterMethod counter) { }
-    public virtual void OnAttacking(Player attacker, Player victim) { }
-    public virtual void OnOverwhelmed(Player attacker, Player victim) { }
-    public Action OnBlocking { get; set; }//攻击被防御时
-    // 实现 ICloneable 接口
+    // ==== Core Attack Properties ====
+    public float Level { get; set; }
+    public int Damage { get; set; }
+    public int AttackType { get; set; }
+    public int Victim { get; set; }
+
+    // ==== Action Event Delegates ====
+    public Action<Player, Player> OnAttackingAction { get; set; }
+    public Action<Player, Player, CounterMethod> OnCounteredAction { get; set; }
+    public Action<Player, Player> OnDefendedAction { get; set; }
+    public Action<Player, Player> OnOverwhelmedAction { get; set; }
+    public Action OnBlocking { get; set; }
+
+
+    // ======================================================
+    // === EXTERNAL API: Called by combat flow =============
+    // ======================================================
+    // but now simply invoke the assigned Action delegates.
+
+    public virtual void OnAttacking(Player attacker, Player victim)
+    {
+        OnAttackingAction?.Invoke(attacker, victim);
+    }
+
+    public virtual void OnCountered(Player attacker, Player victim, CounterMethod counter)
+    {
+        OnCounteredAction?.Invoke(attacker, victim, counter);
+    }
+
+    public virtual void OnDefended(Player attacker, Player victim)
+    {
+        OnDefendedAction?.Invoke(attacker, victim);
+    }
+
+    public virtual void OnOverwhelmed(Player attacker, Player victim)
+    {
+        OnOverwhelmedAction?.Invoke(attacker, victim);
+    }
+
     public void LaserCannon()
     {
         PlayerManager.Instance.Players.TryGetValue(Target, out var targetPlayer);
         Damage = targetPlayer.status.HP.Value;
-        Costs[0] = Math.Max(2, targetPlayer.status.HP.Value);
+        Costs[1] = Math.Max(2, targetPlayer.status.HP.Value);
     }
-    public override ActionType GetActionType()
-    {
-        return ActionType.Attack;
-    }
+
+    public override ActionType GetActionType() => ActionType.Attack;
 }
 
 //防御类行动

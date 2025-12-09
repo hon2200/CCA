@@ -5,9 +5,11 @@
         "Description": "对应防御：挡，双挡",
         "Costs": [
             0,
+            0,
             1
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 2,
         "Damage": 1,
@@ -21,9 +23,11 @@
         "Description": "对应防御：重挡",
         "Costs": [
             0,
+            0,
             2
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 3,
         "Damage": 1,
@@ -37,9 +41,11 @@
         "Description": "对应防御：挡，双挡",
         "Costs": [
             0,
+            0,
             3
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 2,
         "Damage": 2,
@@ -53,9 +59,11 @@
         "Description": "对应防御：重挡",
         "Costs": [
             0,
+            0,
             5
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 3,
         "Damage": 2,
@@ -69,9 +77,11 @@
         "Description": "对应防御：巨盾",
         "Costs": [
             0,
+            0,
             6
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 5,
         "Damage": 1,
@@ -85,9 +95,11 @@
         "Description": "对应防御：巨盾",
         "Costs": [
             0,
+            0,
             10
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 5,
         "Damage": 2,
@@ -101,9 +113,11 @@
         "Description": "不可以被防御",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 7,
         "Damage": 3,
@@ -116,10 +130,12 @@
         "Name": "给枪",
         "Description": "对应防御：挡",
         "Costs": [
+            0,
             1,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 4,
         "Damage": 1,
@@ -132,10 +148,12 @@
         "Name": "双枪",
         "Description": "对应防御：双挡",
         "Costs": [
+            0,
             2,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 4,
         "Damage": 1,
@@ -148,10 +166,12 @@
         "Name": "激光枪",
         "Description": "对应防御：挡",
         "Costs": [
+            0,
             2,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 4,
         "Damage": 2,
@@ -165,9 +185,11 @@
         "Description": "对应防御：任意防御",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 1,
         "Target": 0,
@@ -179,10 +201,12 @@
         "Name": "火箭炮",
         "Description": "对应防御：挡",
         "Costs": [
+            0,
             3,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 6,
         "Damage": 2,
@@ -195,10 +219,12 @@
         "Name": "双火箭炮",
         "Description": "对应防御：双挡",
         "Costs": [
+            0,
             6,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 6,
         "Damage": 3,
@@ -211,10 +237,12 @@
         "Name": "和平",
         "Description": "不可以被防御",
         "Costs": [
+            0,
             5,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 0,
         "Level": 7,
         "Damage": 3,
@@ -228,12 +256,50 @@
         "Description": "对应防御：重挡",
         "Costs": [
             0,
+            0,
             5
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "CD": 5,
         "Level": 4,
         "Damage": 1,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": false
+    },
+    "FX5_shotgun": {
+        "ID": "FX5_shotgun",
+        "Name": "fx-5式霰弹炮",
+        "Description": "对最多3个目标发动1次攻击力为3，伤害为1的攻击。若命中前目标带有2层以上“灼烧”效果，命中后为其叠加1层“流血”效果。该攻击可被“挡”防御，被“反弹”反制，反制只反制伤害效果",
+        "Costs": [
+            1,
+            3,
+            0
+        ],
+        "TargetType": "Enemy",
+        "MaxTarget": 3,
+        "CD": 3,
+        "Level": 3,
+        "Damage": 1,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": false
+    },
+    "black_specters_wing": {
+        "ID": "black_specters_wing",
+        "Name": "黑魂翼",
+        "Description": "选定一名敌方单位，对其发动一次攻击力为6，伤害为2的攻击。此攻击可被“挡”防御，被“反弹”反制（实际上就是RPG）",
+        "Costs": [
+            0,
+            2,
+            0
+        ],
+        "TargetType": "Enemy",
+        "MaxTarget": 1,
+        "CD": 0,
+        "Level": 6,
+        "Damage": 2,
         "Target": 0,
         "isCopy": false,
         "isBasic": false

@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +10,7 @@ namespace Heroes.Skills
     //华雄技能耀武
     public class Courage : TriggerSkill
     {
-        public Courage()
-        {
-            this.ID = "Courage";
-        }
+        public Courage(): base("Courage") { }
 
         public override void OnDamaged(Player attacker, int damage)
         {
@@ -25,10 +22,7 @@ namespace Heroes.Skills
     //钟馗技能亡语
     public class Deathrattle : TriggerSkill
     {
-        public Deathrattle()
-        {
-            this.ID = "Deathrattle";
-        }
+        public Deathrattle() : base("Deathrattle") { }
 
         public override bool OnDeath(Player self)
         {
@@ -48,7 +42,7 @@ namespace Heroes.Skills
     //妲己技能魅惑
     public class BewitchingHex : TriggerSkill
     {
-        public BewitchingHex() => this.ID = "Bewitching Hex";
+        public BewitchingHex() : base("Bewitching Hex") { }
 
         public override void OnDamaging(Player attacker, Player victim, int damage)
         {
@@ -59,7 +53,7 @@ namespace Heroes.Skills
     //诸葛亮的技能连弩
     public class RepeatingCrossbow : TriggerSkill
     {
-        public RepeatingCrossbow() => this.ID = "Volley Cycle";
+        public RepeatingCrossbow() : base("Volley Cycle") { }
 
         public override void OnDamaging(Player attacker, Player victim, int damage)
         {
@@ -73,10 +67,7 @@ namespace Heroes.Skills
     //扁鹊技能
     public class TerminalAffliction : TriggerSkill
     {
-        public TerminalAffliction()
-        {
-            this.ID = "Terminal Affliction";
-        }
+        public TerminalAffliction() : base("Terminal Affliction") { }
 
         public override void OnDamaging(Player attacker, Player victim, int damage)
         {
@@ -86,4 +77,4 @@ namespace Heroes.Skills
             Debug.Log($"☠️ 扁鹊对 {victim.ID_inGame} 造成 {damage} 点伤害并附加中毒，中毒持续 2 回合，每回合伤害 {damage}");
         }
     }
-}
+}*/

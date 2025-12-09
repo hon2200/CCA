@@ -1,0 +1,44 @@
+{
+    "Bleeding": {
+        "ID": "Bleeding",
+        "Name": "流血",
+        "Type": "DeBuff",
+        "Stack": "Intensity",
+        "Description": "每回合损失1/5x点生命值                                                                                           包扎：可以随非进攻行动同时使用。移除3点刀剑，清除流血状态"
+    },
+    "Burning": {
+        "ID": "Burning",
+        "Name": "灼烧",
+        "Type": "DeBuff",
+        "Stack": "Intensity",
+        "Description": "每回合损失1/10x点随机资源                                                                                                                                         灭火：可伴随防御行动同时使用。移除1点刀剑清除4层灼烧状态"
+    },
+    "Stunned": {
+        "ID": "Stunned",
+        "Name": "眩晕",
+        "Type": "DeBuff",
+        "Stack": "Duration",
+        "Description": "仅可使用防御行动与挑衅"
+    },
+    "Critical": {
+        "ID": "Critical",
+        "Name": "会心",
+        "Type": "Buff",
+        "Stack": "Trigger",
+        "Description": "不可叠加。你的攻击使选定目标的攻击、防御、反制行动无效化，如果所选定目标使用了挑衅行动，你的攻击无效。当你发动了会心效果后，下回合退出会心状态"
+    },
+    "Crystallized": {
+        "ID": "Crystallized",
+        "Name": "晶化",
+        "Type": "DeBuff",
+        "Stack": "Mod",
+        "Description": "叠加满4层后，结晶爆发，你被眩晕2回合，清除晶化。                                                                                  每使用一次进攻行动追加一层晶化                                                                                        每使用一次非进攻行动失去一层晶化"
+    },
+    "Cocooned": {
+        "ID": "Cocooned",
+        "Name": "茧化",
+        "Type": "Buff",
+        "Stack": "Duration",
+        "Description": "x回合后复生"
+    }
+}

@@ -1,149 +1,170 @@
-Dict 内容 (Count: 32)
+Dict 内容 (Count: 46)
 ====================================
 Key: bullet
 
   SupplyNumber: 
-    List`1 (Count: 2)
-      [0]:         1
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         1
+      [2]:         0
   ID:     bullet
   Name:     补给
   Description:     获得一颗子弹
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Supply
 ------------------------------------
 Key: double_bullet
 
   SupplyNumber: 
-    List`1 (Count: 2)
-      [0]:         2
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         2
+      [2]:         0
   ID:     double_bullet
   Name:     双补
   Description:     获得两颗子弹
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Supply
 ------------------------------------
 Key: sword
 
   SupplyNumber: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         1
+      [1]:         0
+      [2]:         1
   ID:     sword
   Name:     拔剑
   Description:     获得一把剑
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Supply
 ------------------------------------
 Key: double_sword
 
   SupplyNumber: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         2
+      [1]:         0
+      [2]:         2
   ID:     double_sword
   Name:     双拔
   Description:     获得两把剑
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Supply
 ------------------------------------
 Key: powder_keg
 
   SupplyNumber: 
-    List`1 (Count: 2)
-      [0]:         5
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         5
+      [2]:         0
   ID:     powder_keg
   Name:     火药桶
   Description:     获得五颗子弹
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     False
   actionType:     Supply
 ------------------------------------
 Key: triple_bullet
 
   SupplyNumber: 
-    List`1 (Count: 2)
-      [0]:         3
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         3
+      [2]:         0
   ID:     triple_bullet
   Name:     三补
   Description:     获得三颗子弹
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     False
   actionType:     Supply
 ------------------------------------
 Key: triple_sword
 
   SupplyNumber: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         3
+      [1]:         0
+      [2]:         3
   ID:     triple_sword
   Name:     三拔
   Description:     获得三拔剑
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     False
   actionType:     Supply
 ------------------------------------
@@ -153,19 +174,25 @@ Key: stab
   Damage:     1
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     stab
   Name:     刺
   Description:     对应防御：挡，双挡
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         1
+      [1]:         0
+      [2]:         1
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -175,19 +202,25 @@ Key: cleave
   Damage:     1
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     cleave
   Name:     砍
   Description:     对应防御：重挡
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         2
+      [1]:         0
+      [2]:         2
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -197,19 +230,25 @@ Key: laser_stab
   Damage:     2
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     laser_stab
   Name:     光剑
   Description:     对应防御：挡，双挡
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         3
+      [1]:         0
+      [2]:         3
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -219,19 +258,25 @@ Key: laser_cleave
   Damage:     2
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     laser_cleave
   Name:     光刀
   Description:     对应防御：重挡
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         5
+      [1]:         0
+      [2]:         5
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -241,19 +286,25 @@ Key: ghost_sever
   Damage:     1
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     ghost_sever
   Name:     鬼斩
   Description:     对应防御：巨盾
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         6
+      [1]:         0
+      [2]:         6
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -263,19 +314,25 @@ Key: spirit_sever
   Damage:     2
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     spirit_sever
   Name:     断魂斩
   Description:     对应防御：巨盾
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         10
+      [1]:         0
+      [2]:         10
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -285,19 +342,25 @@ Key: Excalibur
   Damage:     3
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     EXcalibur
   Name:     大宝剑
   Description:     不可以被防御
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     False
   actionType:     Attack
 ------------------------------------
@@ -307,19 +370,25 @@ Key: shoot
   Damage:     1
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     shoot
   Name:     给枪
   Description:     对应防御：挡
   Costs: 
-    List`1 (Count: 2)
-      [0]:         1
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         1
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -329,19 +398,25 @@ Key: double_shoot
   Damage:     1
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     double_shoot
   Name:     双枪
   Description:     对应防御：双挡
   Costs: 
-    List`1 (Count: 2)
-      [0]:         2
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         2
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -351,19 +426,25 @@ Key: laser_shoot
   Damage:     2
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     laser_shoot
   Name:     激光枪
   Description:     对应防御：挡
   Costs: 
-    List`1 (Count: 2)
-      [0]:         2
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         2
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -373,19 +454,25 @@ Key: laser_cannon
   Damage:     0
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     laser_cannon
   Name:     激光炮
   Description:     对应防御：任意防御
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -395,19 +482,25 @@ Key: RPG
   Damage:     2
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     RPG
   Name:     火箭炮
   Description:     对应防御：挡
   Costs: 
-    List`1 (Count: 2)
-      [0]:         3
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         3
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -417,19 +510,25 @@ Key: double_RPG
   Damage:     3
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     double_RPG
   Name:     双火箭炮
   Description:     对应防御：双挡
   Costs: 
-    List`1 (Count: 2)
-      [0]:         6
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         6
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -440,19 +539,25 @@ Key: nuclear_bomb
   Damage:     3
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     nuclear_bomb
   Name:     和平
   Description:     不可以被防御
   Costs: 
-    List`1 (Count: 2)
-      [0]:         5
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         5
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Attack
 ------------------------------------
@@ -462,19 +567,81 @@ Key: waraxe_dance
   Damage:     1
   AttackType:     0
   Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
   OnBlocking:     null
   ID:     waraxe_dance
   Name:     战斧之舞
   Description:     对应防御：重挡
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         5
+      [1]:         0
+      [2]:         5
   CD:     5
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
+  isBasic:     False
+  actionType:     Attack
+------------------------------------
+Key: FX5_shotgun
+
+  Level:     3
+  Damage:     1
+  AttackType:     0
+  Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
+  OnBlocking:     null
+  ID:     FX5_shotgun
+  Name:     fx-5式霰弹炮
+  Description:     对最多3个目标发动1次攻击力为3，伤害为1的攻击。若命中前目标带有2层以上“灼烧”效果，命中后为其叠加1层“流血”效果。该攻击可被“挡”防御，被“反弹”反制，反制只反制伤害效果
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         3
+      [2]:         0
+  CD:     3
+  remainedCD:     0
+  TargetType:     Enemy
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     False
+  actionType:     Attack
+------------------------------------
+Key: black_specters_wing
+
+  Level:     6
+  Damage:     2
+  AttackType:     0
+  Victim:     0
+  OnAttackingAction:     null
+  OnCounteredAction:     null
+  OnDefendedAction:     null
+  OnOverwhelmedAction:     null
+  OnBlocking:     null
+  ID:     black_specters_wing
+  Name:     黑魂翼
+  Description:     选定一名敌方单位，对其发动一次攻击力为6，伤害为2的攻击。此攻击可被“挡”防御，被“反弹”反制（实际上就是RPG）
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         2
+      [2]:         0
+  CD:     0
+  remainedCD:     0
+  TargetType:     Enemy
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
   isBasic:     False
   actionType:     Attack
 ------------------------------------
@@ -482,16 +649,18 @@ Key: block
 
   ID:     block
   Name:     挡
-  Description:     可以挡住“刺类”攻击和单发子弹类攻击
+  Description:     可以挡住刺类进攻和单发子弹类攻击
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Defend
 ------------------------------------
@@ -501,14 +670,16 @@ Key: double_block
   Name:     双挡
   Description:     可以挡住双发子弹类攻击
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Defend
 ------------------------------------
@@ -516,16 +687,18 @@ Key: heavy_block
 
   ID:     heavy_block
   Name:     重挡
-  Description:     可以挡住“刀类”攻击
+  Description:     可以挡住刀类进攻
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Defend
 ------------------------------------
@@ -533,16 +706,18 @@ Key: deflect
 
   ID:     deflect
   Name:     偏折
-  Description:     可以挡住“斩类”攻击
+  Description:     可以挡住斩类攻击
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Defend
 ------------------------------------
@@ -550,16 +725,18 @@ Key: rebounce
 
   ID:     rebounce
   Name:     反弹
-  Description:     可以反弹单挡对应的子弹类攻击以及和平，可以挡刺
+  Description:     可以反弹为单挡防御的子弹进攻，可以防御刺
   Costs: 
-    List`1 (Count: 2)
-      [0]:         1
-      [1]:         0
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         1
+      [2]:         0
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Origin
 ------------------------------------
@@ -567,16 +744,18 @@ Key: counterblade
 
   ID:     counterblade
   Name:     亮剑
-  Description:     可以反弹“刺类”攻击
+  Description:     可以反弹刺类进攻
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         1
+      [1]:         0
+      [2]:         1
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Origin
 ------------------------------------
@@ -584,16 +763,18 @@ Key: disarm
 
   ID:     disarm
   Name:     缴械
-  Description:     可以防御鬼斩以下的刀剑类攻击，生效时使得攻击方所有剑进入不可用状态
+  Description:     可以防御鬼斩以下的刀剑进攻，生效时使得攻击方所有剑进入不可用状态
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         4
+      [1]:         0
+      [2]:         4
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Origin
 ------------------------------------
@@ -601,16 +782,18 @@ Key: spectral_reflection
 
   ID:     spectral_reflection
   Name:     镜面反射
-  Description:     可以反弹“光类”攻击
+  Description:     可以反弹光属性进攻
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
-      [1]:         3
+      [1]:         0
+      [2]:         3
   CD:     0
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Origin
 ------------------------------------
@@ -620,14 +803,16 @@ Key: comeon
   Name:     万象天引
   Description:     吸收所有场上所有补给和攻击
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     1
   remainedCD:     0
   TargetType:     Self
   Target:     0
   isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Origin
 ------------------------------------
@@ -637,14 +822,244 @@ Key: provoke
   Name:     挑衅
   Description:     下回合你不打我就掉血
   Costs: 
-    List`1 (Count: 2)
+    List`1 (Count: 3)
       [0]:         0
       [1]:         0
+      [2]:         0
   CD:     1
   remainedCD:     0
   TargetType:     Enemy
   Target:     0
   isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: attract_misfortune
+
+  ID:     attract_misfortune
+  Name:     引灾
+  Description:     行动阶段结束后，所有未消耗/移除资源的敌方单位失去1点生命值
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         2
+  CD:     0
+  remainedCD:     0
+  TargetType:     Self
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: bite_you_to_death
+
+  ID:     bite_you_to_death
+  Name:     全军出击我咬死你
+  Description:     场上所有虚空兽本回合追击一次无消耗的“刺”
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         1
+      [2]:         2
+  CD:     4
+  remainedCD:     0
+  TargetType:     Self
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: adjudication
+
+  ID:     adjudication
+  Name:     裁决法
+  Description:     选定一名敌方目标，令其下一次技能无效。为该目标叠加1层“晶化”
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         3
+  CD:     2
+  remainedCD:     0
+  TargetType:     Enemy
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: judgment
+
+  ID:     judgment
+  Name:     审断法
+  Description:     选定一名敌方目标，令其下一回合无法使用进攻行动。为该目标叠加1层“晶化”
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         2
+      [2]:         0
+  CD:     2
+  remainedCD:     0
+  TargetType:     Enemy
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: water_warding_incantation
+
+  ID:     water_warding_incantation
+  Name:     避水咒言
+  Description:     下一回合开始，我方所有单位发动所有行动消耗+1，进攻行动攻击力+1，不受到任何伤害，受到“挑衅”后解除此状态且免疫“挑衅”本身效果
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         2
+      [2]:         3
+  CD:     3
+  remainedCD:     0
+  TargetType:     Self
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: assemble
+
+  ID:     assemble
+  Name:     集结
+  Description:     本回合结束阶段，召唤2名炮兵
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     3
+  remainedCD:     0
+  TargetType:     Self
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: load_shells
+
+  ID:     load_shells
+  Name:     装填炮弹
+  Description:     回合结束阶段为“古斯塔夫轨道炮”装填2发炮弹。当你在使用此技能回合战败，击败你的单位获得3点子弹且本次装填炮弹失败。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         3
+      [2]:         0
+  CD:     0
+  remainedCD:     0
+  TargetType:     Friend
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: guardian_shade
+
+  ID:     guardian_shade
+  Name:     守护之荫
+  Description:     “未破壳的圣灵”与“未熄灭的薪火”生命值与生命上限+2。本场战斗余下时间内，当你存活时，两友方单位受到的所有攻击行动与攻击技能攻击力-1
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         4
+      [1]:         3
+      [2]:         3
+  CD:     0
+  remainedCD:     0
+  TargetType:     Friend
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: raging_lotus_flame
+
+  ID:     raging_lotus_flame
+  Name:     红莲怒焰
+  Description:     带有“灼烧”效果的单位移除所有“灼烧”层数，每移除3点“灼烧”，失去1点体力
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         8
+      [2]:         8
+  CD:     8
+  remainedCD:     0
+  TargetType:     Self
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: dance_of_combustion
+
+  ID:     dance_of_combustion
+  Name:     燃舞
+  Description:     选定一名带有灼烧效果的目标，使其灼烧层数翻倍，翻倍每超出最大上限2层，目标立刻损失1点随机可用资源（不足2层不计）
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         6
+  CD:     5
+  remainedCD:     0
+  TargetType:     Enemy
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: creation
+
+  ID:     creation
+  Name:     造物
+  Description:     你每次使用技能依次执行以下三种效果：                                                                                                             ①消耗1点“灵魂碎片”、1点生命值，随机召唤1只普通怪物。                                                                                                       ②消耗4点“灵魂碎片”、2点生命值，随机召唤1只精英与一只普通怪物。                                                                              ③消耗8点“灵魂碎片”、4点生命值，随机召唤1只领袖怪物。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+  remainedCD:     0
+  TargetType:     Self
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
+  isBasic:     True
+  actionType:     Origin
+------------------------------------
+Key: lash_the_universe
+
+  ID:     lash_the_universe
+  Name:     鞭笞宇内
+  Description:     除你之外的所有单位下一次技能生效时令其无效（不可叠加）
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         1
+      [1]:         0
+      [2]:         0
+  CD:     3
+  remainedCD:     0
+  TargetType:     Self
+  Target:     0
+  isCopy:     False
+  isConsumed:     False
   isBasic:     True
   actionType:     Origin
 ------------------------------------

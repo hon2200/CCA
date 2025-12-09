@@ -5,9 +5,11 @@
         "Description": "吸收所有场上所有补给和攻击",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Self",
+        "MaxTarget": 1,
         "ItemType": "Special",
         "CD": 1,
         "Target": 0,
@@ -20,11 +22,217 @@
         "Description": "下回合你不打我就掉血",
         "Costs": [
             0,
+            0,
             0
         ],
         "TargetType": "Enemy",
+        "MaxTarget": 1,
         "ItemType": "Special",
         "CD": 1,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "attract_misfortune": {
+        "ID": "attract_misfortune",
+        "Name": "引灾",
+        "Description": "行动阶段结束后，所有未消耗/移除资源的敌方单位失去1点生命值",
+        "Costs": [
+            0,
+            0,
+            2
+        ],
+        "TargetType": "Self",
+        "MaxTarget": 0,
+        "ItemType": "Special",
+        "CD": 0,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "bite_you_to_death": {
+        "ID": "bite_you_to_death",
+        "Name": "全军出击我咬死你",
+        "Description": "场上所有虚空兽本回合追击一次无消耗的“刺”",
+        "Costs": [
+            0,
+            1,
+            2
+        ],
+        "TargetType": "Self",
+        "MaxTarget": 0,
+        "ItemType": "Special",
+        "CD": 4,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "adjudication": {
+        "ID": "adjudication",
+        "Name": "裁决法",
+        "Description": "选定一名敌方目标，令其下一次技能无效。为该目标叠加1层“晶化”",
+        "Costs": [
+            0,
+            0,
+            3
+        ],
+        "TargetType": "Enemy",
+        "MaxTarget": 1,
+        "ItemType": "Special",
+        "CD": 2,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "judgment": {
+        "ID": "judgment",
+        "Name": "审断法",
+        "Description": "选定一名敌方目标，令其下一回合无法使用进攻行动。为该目标叠加1层“晶化”",
+        "Costs": [
+            0,
+            2,
+            0
+        ],
+        "TargetType": "Enemy",
+        "MaxTarget": 1,
+        "ItemType": "Special",
+        "CD": 2,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "water_warding_incantation": {
+        "ID": "water_warding_incantation",
+        "Name": "避水咒言",
+        "Description": "下一回合开始，我方所有单位发动所有行动消耗+1，进攻行动攻击力+1，不受到任何伤害，受到“挑衅”后解除此状态且免疫“挑衅”本身效果",
+        "Costs": [
+            0,
+            2,
+            3
+        ],
+        "TargetType": "Self",
+        "MaxTarget": 0,
+        "ItemType": "Special",
+        "CD": 3,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "assemble": {
+        "ID": "assemble",
+        "Name": "集结",
+        "Description": "本回合结束阶段，召唤2名炮兵",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "MaxTarget": 0,
+        "ItemType": "Special",
+        "CD": 3,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "load_shells": {
+        "ID": "load_shells",
+        "Name": "装填炮弹",
+        "Description": "回合结束阶段为“古斯塔夫轨道炮”装填2发炮弹。当你在使用此技能回合战败，击败你的单位获得3点子弹且本次装填炮弹失败。",
+        "Costs": [
+            0,
+            3,
+            0
+        ],
+        "TargetType": "Friend",
+        "MaxTarget": 1,
+        "ItemType": "Special",
+        "CD": 0,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "guardian_shade": {
+        "ID": "guardian_shade",
+        "Name": "守护之荫",
+        "Description": "“未破壳的圣灵”与“未熄灭的薪火”生命值与生命上限+2。本场战斗余下时间内，当你存活时，两友方单位受到的所有攻击行动与攻击技能攻击力-1",
+        "Costs": [
+            4,
+            3,
+            3
+        ],
+        "TargetType": "Friend",
+        "MaxTarget": 2,
+        "ItemType": "Special",
+        "CD": 0,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "raging_lotus_flame": {
+        "ID": "raging_lotus_flame",
+        "Name": "红莲怒焰",
+        "Description": "带有“灼烧”效果的单位移除所有“灼烧”层数，每移除3点“灼烧”，失去1点体力",
+        "Costs": [
+            0,
+            8,
+            8
+        ],
+        "TargetType": "Self",
+        "MaxTarget": 0,
+        "ItemType": "Special",
+        "CD": 8,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "dance_of_combustion": {
+        "ID": "dance_of_combustion",
+        "Name": "燃舞",
+        "Description": "选定一名带有灼烧效果的目标，使其灼烧层数翻倍，翻倍每超出最大上限2层，目标立刻损失1点随机可用资源（不足2层不计）",
+        "Costs": [
+            0,
+            0,
+            6
+        ],
+        "TargetType": "Enemy",
+        "MaxTarget": 1,
+        "ItemType": "Special",
+        "CD": 5,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "creation": {
+        "ID": "creation",
+        "Name": "造物",
+        "Description": "你每次使用技能依次执行以下三种效果：                                                                                                             ①消耗1点“灵魂碎片”、1点生命值，随机召唤1只普通怪物。                                                                                                       ②消耗4点“灵魂碎片”、2点生命值，随机召唤1只精英与一只普通怪物。                                                                              ③消耗8点“灵魂碎片”、4点生命值，随机召唤1只领袖怪物。",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "MaxTarget": 0,
+        "ItemType": "Special",
+        "CD": 0,
+        "Target": 0,
+        "isCopy": false,
+        "isBasic": true
+    },
+    "lash_the_universe": {
+        "ID": "lash_the_universe",
+        "Name": "鞭笞宇内",
+        "Description": "除你之外的所有单位下一次技能生效时令其无效（不可叠加）",
+        "Costs": [
+            1,
+            0,
+            0
+        ],
+        "TargetType": "Self",
+        "MaxTarget": 0,
+        "ItemType": "Special",
+        "CD": 3,
         "Target": 0,
         "isCopy": false,
         "isBasic": true
