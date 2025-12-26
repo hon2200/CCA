@@ -6,43 +6,24 @@ using System.Threading.Tasks;
 using System.IO;
 using UnityEngine;
 
-class ActionPhase : Singleton<ActionPhase>, Phase
+class ActionPhase : Phase
 {
-    public void OnEnteringPhase()
+    public override void OnEnteringPhase()
     {
         foreach (var player in PlayerManager.Instance.Players)
         {
             //保存每个玩家的状态，在ActionPhase无论Player还是AI都会对其进行非最终的改动
             player.Value.status.SaveStatus();
         }
-        foreach (var player in PlayerManager.Instance.Players.Values)
-        {
-            foreach (var buff in player.status.buffs)
-            {
-                buff.BeforeAction(player);
-            }
-        }
         CardSelectionManager.Instance.Enable();
         //反正AI是要行动的对吧，AI就先行动了。这回不玩赖的了
         AIMoveTogether();
-        //进入选择行动阶段，等待玩家准备
-        foreach (var player in PlayerManager.Instance.Players)
-        {
-            player.Value.isReady.Cancel();
-        }
-        foreach(var player in PlayerManager.Instance.Players.Values)
-        {
-            foreach(var skill in player.hero.skills)
-            {
-                if(skill is PhasebasedSkill phasebasedSkill)
-                {
-                    phasebasedSkill.InvokeAfterSelectingAction(player);
-                }
-            }
-        }
+        //进入选择行动阶段，等待玩家准备，加入一个待解决请求
+        ChoiceBarrier.Instance.Add();
+        ActionCallSkills();
         PrintEvent.Instance.PrintResult();
     }
-    public void OnExitingPhase()
+    public override void OnExitingPhase()
     {
         PrintEvent.Instance.ClearText();
         //上传历史行动记录：没有预先处理过的
@@ -58,7 +39,6 @@ class ActionPhase : Singleton<ActionPhase>, Phase
             player.ConsumeAndCD();
         }
         CardSelectionManager.Instance.Disable();
-        
     }
     public void AIMoveTogether()
     {
@@ -75,6 +55,21 @@ class ActionPhase : Singleton<ActionPhase>, Phase
         foreach (var player in PlayerManager.Instance.Players)
         {
             player.Value.action.ReadinHistory(false);
+        }
+    }
+
+    public void ActionCallSkills()
+    {
+        var playerSnapShot = PlayerManager.Instance.Players.Values.ToList();
+        foreach (var player in playerSnapShot)
+        {
+            foreach (var skill in player.hero.skills)
+            {
+                if (skill is IActionReplacer phasedSkill)
+                {
+                    phasedSkill.ReplaceAction(player);
+                }
+            }
         }
     }
 

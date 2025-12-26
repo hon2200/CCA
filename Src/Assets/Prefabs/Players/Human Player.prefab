@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 6261765621365568356}
     - target: {fileID: 2879334617743548941, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: m_Name
-      value: Player Variant
+      value: Human Player
       objectReference: {fileID: 0}
     - target: {fileID: 7332335724126448534, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -110,4 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUIText: {fileID: 2631864470038702019}
   playerEffectController: {fileID: 2652247770567189182}
-  AvailableActions: []
+  is_stun: 0

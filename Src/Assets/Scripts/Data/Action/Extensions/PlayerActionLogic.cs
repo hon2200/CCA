@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 
 //这个类只装一些Player用于结算行动的方法，拓展功能，避免Player类过于臃肿
@@ -54,56 +55,21 @@ public static class PlayerActionLogic
         {
             //获取到攻击目标，以Target为键值，找到enemy
             PlayerManager.Instance.Players.TryGetValue(attack.Target, out Player enemy);
-            foreach (var skill in enemy.hero.skills)
-            {
-                if (skill is TriggerSkill triggerSkill)
-                    triggerSkill.InvokeOnAttacked(attacker, enemy, attack);
-            }
-            var enemy_attacks = enemy.SelectActionType<AttackDefine>();
+            // Notify OnAttacking triggers
+            CombatDispatcher.Dispatch(new(CombatEventType.Attacking, attacker, enemy, attack), attacker);
+            CombatDispatcher.Dispatch(new(CombatEventType.Attacked, attacker, enemy, attack), enemy);
+            //创建并添加攻击特效
+            EffectManager.Instance.PlayTrailEffect(false, attack.ID, attacker.gameObject, enemy.gameObject);
             //攻击力等级判断
             if (attack.Level > enemy.MaxLevel(attacker))
             {
-                //创建并添加攻击特效
-                EffectManager.Instance.PlayTrailEffect(false, "Bullet", attacker.gameObject, enemy.gameObject);
-                var counters = attack.WatchoutforCounter(enemy);
-                var defends = attack.WatchoutforDefend(enemy);
-                //对应防御反击判断
-                if (counters.Count > 0)
-                {
-                    foreach (var counter in counters)
-                    {
-                        counter.Item1.HowtoCounter(counter.Item2, attacker, enemy, attack);
-                        attack.OnCountered(attacker, enemy, counter.Item2);
-                    }
-                }
-                else if (defends.Count > 0)
-                {
-                    foreach (var defend in defends)
-                    {
-                        defend.HowtoDefend(attack, enemy);
-                        attack.OnDefended(attacker, enemy);
-                    }
-                }
-                //总算是命中了！
-                else
-                {
-                    attack.HowtoAttack(attacker, enemy);
-                    attack.OnAttacking(attacker, enemy);
-                    foreach(var skill in attacker.hero.skills)
-                    {
-                        if (skill is TriggerSkill triggerSkill)
-                            triggerSkill.InvokeOnAttackTakeEffect(attacker, enemy, attack);
-                    }
-                }
+                attack.HowtoAttack(attacker, enemy);
             }
             else
             {
                 attack.OnOverwhelmed(attacker, enemy);
-                foreach (var skill in attacker.hero.skills)
-                {
-                    if (skill is TriggerSkill triggerSkill)
-                        triggerSkill.InvokeOnAttackOverwhelmed(attacker, enemy, attack);
-                }
+                EffectManager.Instance.PlaySpotEffect(false, "AttackDefend", enemy.gameObject, enemy.MaxLevel(attacker));
+                CombatDispatcher.Dispatch(new(CombatEventType.AttackOverwhelmed, attacker, enemy, attack), attacker);
             }
         }
     }

@@ -21,9 +21,11 @@ public class SwordAttribute : ObservableAttribute<int>
         SetValue(amount, "Set");
         AvailableSword.Set(amount);
     }
-    public void Get(int number)
+    public void Get(Player thisPlayer, int number)
     {
         SetValue(Value + number, "Get");
+        if (onObserve && number > 0)
+            EffectManager.Instance.PlaySpotEffect(false, "SwordSupply", thisPlayer.gameObject, number);
         AvailableSword.Get(number);
     }
     public void Use(int number)

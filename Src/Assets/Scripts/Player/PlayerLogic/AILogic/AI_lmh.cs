@@ -144,8 +144,9 @@ public class AI_lmh
             var newAttack = (AttackDefine)originAttack.Clone();
             newAttack.Target = target;
             double base_score = newAttack.Damage + newAttack.Level * 0.5;
-            double cost_term = (newAttack.Costs.Sum()) *
-                (thisPlayer.status.resources.Bullet.Value + thisPlayer.status.resources.Sword.Value) / 2;
+            double cost_term = (newAttack.Costs.Sum()) * Math.Min
+                (thisPlayer.status.resources.Bullet.Value + thisPlayer.status.resources.Sword.Value,
+                newAttack.Costs.Sum() * 2) / 10;
             double enemy_health_term = (enemy.status.HP.Value < 3 ? 1 : 0) * 0.5 * newAttack.Damage;
             double defense_panelty_term = CalculateDefensePenalty(newAttack);
             double score = base_score + cost_term + enemy_health_term - defense_panelty_term;

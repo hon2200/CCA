@@ -17,16 +17,16 @@ public class HPAttribute : ObservableAttribute<int>
         PrintEvent.Instance.LogDamage(attacker, victim, amount);
         foreach (var skill in victim.hero.skills)
         {
-            if (skill is TriggerSkill triggerSkill)
+            if (skill is IDamagingHandler triggerSkill)
             {
-                triggerSkill.InvokeOnDamaged(attacker, victim, amount);
+                triggerSkill.OnDamaging(attacker, victim, amount);
             }
         }
         foreach (var skill in attacker.hero.skills)
         {
-            if (skill is TriggerSkill triggerSkill)
+            if (skill is IDamagedHandler triggerSkill)
             {
-                triggerSkill.InvokeOnDamaging(attacker, victim, amount);
+                triggerSkill.OnDamaged(attacker, victim, amount);
             }
         }
         if(attacker is AIPlayer aiAttacker)

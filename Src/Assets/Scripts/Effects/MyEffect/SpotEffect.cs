@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using TMPro;
 
 
 public class SpotEffect : MonoBehaviour
 {
     public ParticleSystem effect;
-    public float PlayEffect(Vector3 position, float duration)
+    public virtual float PlayEffect(Vector3 position, float duration, float number = 0)
     {
         transform.position = position;
         effect.Play();
@@ -17,3 +18,4 @@ public class SpotEffect : MonoBehaviour
         return effect.main.startLifetime.constant;
     }
 }
+

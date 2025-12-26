@@ -1,4 +1,4 @@
-Dict 内容 (Count: 96)
+Dict 内容 (Count: 93)
 ====================================
 Key: Save Me!!!
 
@@ -234,27 +234,9 @@ Key: Dark Embrace
   CD:     0
   ForeKnow:     False
 ------------------------------------
-Key: Enlightenment on High Fort1
+Key: Enlightenment on High Fort
 
-  ID:     Enlightenment on High Fort1
-  Name:     高寨悟道，连击+1
-  SkillType:     Locked Skill
-  IsLimited:     False
-  LimitedTimes:     0
-  Discription:     null
-  Explanation:     无
-  Bubble:     为何执剑？如何执剑？皆匿于剑客本心……
-  Costs: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         0
-      [2]:         0
-  CD:     0
-  ForeKnow:     False
-------------------------------------
-Key: Enlightenment on High Fort2
-
-  ID:     Enlightenment on High Fort2
+  ID:     Enlightenment on High Fort
   Name:     高寨悟道
   SkillType:     Locked Skill
   IsLimited:     False
@@ -267,7 +249,7 @@ Key: Enlightenment on High Fort2
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     5
+  CD:     0
   ForeKnow:     False
 ------------------------------------
 Key: Critical Strike
@@ -288,10 +270,10 @@ Key: Critical Strike
   CD:     0
   ForeKnow:     False
 ------------------------------------
-Key: Adjudication
+Key: Ode to Majesty
 
-  ID:     Adjudication
-  Name:     裁决
+  ID:     Ode to Majesty
+  Name:     颂威
   SkillType:     Free Skill
   IsLimited:     False
   LimitedTimes:     0
@@ -342,27 +324,9 @@ Key: Prismatic Essence
   CD:     0
   ForeKnow:     False
 ------------------------------------
-Key: Tactical Turtle1
+Key: Tactical Turtle
 
-  ID:     Tactical Turtle1
-  Name:     战术龟缩
-  SkillType:     Locked Skill
-  IsLimited:     False
-  LimitedTimes:     0
-  Discription:     null
-  Explanation:     无
-  Bubble:     别打我，别打我
-  Costs: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         0
-      [2]:         0
-  CD:     0
-  ForeKnow:     True
-------------------------------------
-Key: Tactical Turtle2
-
-  ID:     Tactical Turtle2
+  ID:     Tactical Turtle
   Name:     战术龟缩
   SkillType:     Locked Skill
   IsLimited:     False
@@ -409,25 +373,7 @@ Key: Beat Down
   Costs: 
     List`1 (Count: 3)
       [0]:         0
-      [1]:         0
-      [2]:         0
-  CD:     0
-  ForeKnow:     False
-------------------------------------
-Key: Ready to Beat Down
-
-  ID:     Ready to Beat Down
-  Name:     开始殴打
-  SkillType:     Free Skill
-  IsLimited:     True
-  LimitedTimes:     1
-  Discription:     null
-  Explanation:     好了就立刻用
-  Bubble:     揍他，往死里打！
-  Costs: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         0
+      [1]:         2
       [2]:         5
   CD:     0
   ForeKnow:     False

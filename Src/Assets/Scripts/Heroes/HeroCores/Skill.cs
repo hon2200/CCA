@@ -20,7 +20,7 @@ public abstract class Skill
         Init();                 // ← ALWAYS init at creation
     }
     //目前就只是从MonsterSkill里面寻找
-    private void Init()
+    protected void Init()
     {
         SkillDataBase.Instance.MonsterSkillDic.TryGetValue(ID, out var skillDefine);
         CD = skillDefine.CD;
@@ -38,7 +38,7 @@ public abstract class Skill
             LimitedTimes = 0;
         }
     }
-    public bool IsAvailable(Player thisPlayer)
+    protected virtual bool IsAvailable(Player thisPlayer)
     {
         if (CDProgress > 0)
             return false;
@@ -56,7 +56,11 @@ public abstract class Skill
             CDProgress--;
     }
     //调用时，日志记录，并且进入CD
-    protected void OnEvoke(Player thisPlayer)
+    private void Log(Player thisPlayer)
+    {
+        PrintEvent.Instance.log += (thisPlayer.Name + "使用了" + Name + "\n");
+    }
+    private void PayCosts(Player thisPlayer)
     {
         CDProgress = CD;
         if (IsLimited)
@@ -64,9 +68,19 @@ public abstract class Skill
         thisPlayer.status.HP.Drain(Costs[0]);
         thisPlayer.status.resources.Bullet.Use(Costs[1]);
         thisPlayer.status.resources.Sword.Use(Costs[2]);
-        PrintEvent.Instance.log += (thisPlayer.Name + "使用了" + Name + "\n");
     }
-
+    protected bool CheckAndEvoke(Player thisPlayer)
+    {
+        if(IsAvailable(thisPlayer))
+        {
+            Log(thisPlayer);
+            PayCosts(thisPlayer);
+            Envoke(thisPlayer);
+            return true;
+        }
+        return false;
+    }
+    protected virtual void Envoke(Player thisPlayer) { }
     public void Copy(Skill target)
     {
         var type = GetType(); // e.g. NuclearBomb, not just ActionDefine
@@ -113,4 +127,10 @@ public abstract class Skill
         Copy(clone);
         return clone;
     }
+}
+
+public abstract class ActiveSkill : Skill
+{
+    public ActiveSkill(string id) : base(id) { }
+    public abstract void SkillEffect();
 }

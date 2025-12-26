@@ -21232,11 +21232,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 625645030045140111, guid: b952299f6b5fd3743b5f7c9a376ca8a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.69
+      value: -7.92
       objectReference: {fileID: 0}
     - target: {fileID: 625645030045140111, guid: b952299f6b5fd3743b5f7c9a376ca8a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 625645030045140111, guid: b952299f6b5fd3743b5f7c9a376ca8a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21797,26 +21797,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1952882935}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: ReadyUpAll
+      - m_Target: {fileID: 1952882939}
+        m_TargetAssemblyTypeName: ChoiceBarrier, Assembly-CSharp
+        m_MethodName: Resolve
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1952882935}
-        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
-        m_MethodName: CheckReady
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -21897,7 +21885,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1198278237
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 7066e0747291df44fa5c2bf93bee3a6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -22350,7 +22338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1720739694
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23123,7 +23111,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1198278237
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 7066e0747291df44fa5c2bf93bee3a6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23330,9 +23318,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   global: 0
   audioClips:
+  - {fileID: 8300000, guid: 0fbc95c685950b9499175753eb39bd1f, type: 3}
   - {fileID: 8300000, guid: a9a2c60d187df774cb6b5a3dcd9ef512, type: 3}
   - {fileID: 8300000, guid: cf0ebb8c64eb20b40bf50dad2254ebfa, type: 3}
-  - {fileID: 8300000, guid: 0fbc95c685950b9499175753eb39bd1f, type: 3}
   - {fileID: 8300000, guid: 3dffcdfb25e57a248a855423e650183a, type: 3}
   - {fileID: 8300000, guid: 9a41a9ec86fa57d44a9184e85d7772d2, type: 3}
   victoryAudio: {fileID: 8300000, guid: ac4df26227022b140a84ac234b82ca69, type: 3}
@@ -23524,7 +23512,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1198278237
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 7066e0747291df44fa5c2bf93bee3a6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23920,6 +23908,7 @@ GameObject:
   - component: {fileID: 1952882936}
   - component: {fileID: 1952882937}
   - component: {fileID: 1952882938}
+  - component: {fileID: 1952882939}
   m_Layer: 0
   m_Name: -- GameManager --
   m_TagString: Untagged
@@ -23955,6 +23944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0
+  isRunning: 0
   Text: {fileID: 1528863725}
 --- !u!114 &1952882936
 MonoBehaviour:
@@ -23986,14 +23976,46 @@ MonoBehaviour:
   global: 0
   TrailDictionary:
     _serializedList:
-    - Key: Bullet
+    - Key: shoot
       Value: {fileID: 2077808072206671020, guid: 9a2818510f364d04a88172a6a9ddf93e, type: 3}
+    - Key: double_shoot
+      Value: {fileID: 2232135031430420154, guid: e60297e3b653cf142b6bb5512b566e49, type: 3}
+    - Key: laser_shoot
+      Value: {fileID: 3477338005382600610, guid: 7709a5fe37bdac14f93fc52c2314cecd, type: 3}
+    - Key: laser_cannon
+      Value: {fileID: 2847848446848587797, guid: fa98b316d806c7449a3040d3d8ac0f97, type: 3}
+    - Key: RPG
+      Value: {fileID: 7174658558562846528, guid: 810f535664db03946b747a003e5e5812, type: 3}
+    - Key: double_RPG
+      Value: {fileID: 8667674818958745143, guid: da099b99f082baa41b07d1746999180b, type: 3}
+    - Key: nuclear_bomb
+      Value: {fileID: 8688266383152887740, guid: cae550a452f6724488fb20fc9a938c7c, type: 3}
+    - Key: stab
+      Value: {fileID: 6862047894033870454, guid: 728cd20b2f7c0434f9b245130ad7f61a, type: 3}
+    - Key: cleave
+      Value: {fileID: 755996087554243296, guid: 824948ff5b3725b4a88cbff43be6c8e5, type: 3}
+    - Key: laser_stab
+      Value: {fileID: 686480785371572023, guid: a85adb214667c33468e8aee3cc5f9245, type: 3}
+    - Key: laser_cleave
+      Value: {fileID: 5968983854747489626, guid: 0e8ef151a655ba047901df21ab45bb46, type: 3}
+    - Key: ghost_sever
+      Value: {fileID: 3570924883993766100, guid: df3dbcd58a98351428cfca45c7cb0ae7, type: 3}
+    - Key: spirit_sever
+      Value: {fileID: 4050247338889580960, guid: 2270c7e066cb3834cb9a0d006027e2ba, type: 3}
   SpotDictionary:
     _serializedList:
-    - Key: Hit
-      Value: {fileID: -2358984460319128969, guid: 8995acd5e6728d547a6adb4f551ec6e2, type: 3}
+    - Key: HitAndHPLose
+      Value: {fileID: 7086619351194219027, guid: 7ff667506eb33384f87e32ffc403819e, type: 3}
     - Key: Shield
       Value: {fileID: -1568710990789442617, guid: cb831017a41365c44ae3834df527affa, type: 3}
+    - Key: AttackDefend
+      Value: {fileID: 2643402609899117361, guid: 066f1671b370b6940b44ff72ad8edca1, type: 3}
+    - Key: BulletSupply
+      Value: {fileID: 7312608428002298300, guid: c3a578f9393921e4c861b92677958a94, type: 3}
+    - Key: SwordSupply
+      Value: {fileID: 7312608428002298300, guid: 694854db2f05b594599e0c58b1641921, type: 3}
+    - Key: HPLose
+      Value: {fileID: 7312608428002298300, guid: ebda3445a93d4944ea1dbe8373a7fc89, type: 3}
 --- !u!114 &1952882938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24004,6 +24026,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec482e661c643104b88623a451c35e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+--- !u!114 &1952882939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952882930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be960af3b1f10f84fa0ae5e77850d6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0

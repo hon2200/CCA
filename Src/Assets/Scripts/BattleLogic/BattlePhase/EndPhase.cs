@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class EndPhase : Singleton<EndPhase>, Phase
+public class EndPhase : Phase
 {
-    public void OnEnteringPhase()
+    public override void OnEnteringPhase()
     {
         ChangeEmotionAndHonesty();
-        //进入回合结束阶段，不等待玩家（目前的）
-        BattleManager.Instance.PhaseAdvance();
     }
-    public void OnExitingPhase()
+    public override void OnExitingPhase()
     {
         UpdateHistory();
         ClearMove();

@@ -4,12 +4,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public static class AttackLogic
 {
+    public static void HowtoAttack(this AttackDefine attack, Player attacker,Player enemy)
+    {
+        CombatDispatcher.Dispatch(new(CombatEventType.AttackOverwhelming, attacker, enemy, attack), attacker);
+        
+        var counters = attack.WatchoutforCounter(enemy);
+        var defends = attack.WatchoutforDefend(enemy);
+        //对应防御反击判断
+        if (counters.Count > 0)
+        {
+            foreach (var counter in counters)
+            {
+                counter.Item1.HowtoCounter(counter.Item2, attacker, enemy, attack);
+                attack.OnCountered(attacker, enemy, counter.Item2);
+
+            }
+        }
+        else if (defends.Count > 0)
+        {
+            foreach (var defend in defends)
+            {
+                defend.HowtoDefend(attack, enemy);
+                attack.OnDefended(attacker, enemy);
+            }
+        }
+        //总算是命中了！
+        else
+        {
+            attack.AttackTakeEffect(attacker, enemy);
+            attack.OnAttacking(attacker, enemy);
+            CombatDispatcher.Dispatch(new(CombatEventType.AttackTakeEffect, attacker, enemy, attack), attacker);
+        }
+    }
+
     //假设攻击生效后调用这个函数
-    public static void HowtoAttack(this AttackDefine attack ,Player attacker, Player victim, Player rebouncer = null)
+    public static void AttackTakeEffect(this AttackDefine attack ,Player attacker, Player victim, Player rebouncer = null)
     {
         victim.status.HP.Damage(attack.Damage, attacker, victim, attack);
         attack.Victim = victim.ID_inGame;
@@ -95,7 +130,7 @@ public static class CounterLogic
                 EffectManager.Instance.PlaySpotEffect(false, "Shield", victim.gameObject);
                 //创建并添加反击路线
                 EffectManager.Instance.PlayTrailEffect(false, "Bullet", victim.gameObject, attacker.gameObject);
-                attack.HowtoAttack(attacker, attacker, victim);
+                attack.AttackTakeEffect(attacker, attacker, victim);
                 break;
             default:
                 throw new Exception("Wrong Counter Type");
@@ -113,8 +148,8 @@ public static class SupplyLogic
         {
             //理论上这里也可以把resource改成一个list<int>，但是考虑到resource里面还有swordinCD，所以就不改了
             receiver.status.HP.Heal(supply.SupplyNumber[0]);
-            receiver.status.resources.Bullet.Get(supply.SupplyNumber[1]);
-            receiver.status.resources.Sword.Get(supply.SupplyNumber[2]);
+            receiver.status.resources.Bullet.Get(receiver,supply.SupplyNumber[1]);
+            receiver.status.resources.Sword.Get(receiver,supply.SupplyNumber[2]);
         }    
         else
         {

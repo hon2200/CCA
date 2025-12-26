@@ -15,9 +15,6 @@ public class Buff
         Value = value;
         IsDebuff = isDebuff;
     }
-    public virtual void BeforeAction(Player thisPlayer) { }
-    public virtual void BeforeResolution(Player thisPlayer) { }
     //在结算阶段的最后，会结算Buff
-    public virtual void OnResulution(Player thisPlayer) { }
     public virtual void Fade(Player thisPlayer) { }
 }

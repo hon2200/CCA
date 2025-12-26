@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TMPro;
+using static UnityEditor.ShaderData;
 
 class BattleManager: MonoSingleton<BattleManager>
 {
+    public bool isRunning = false;
     public Action OnDefeated { get; set; }
     public Action OnWinning { get; set; }
     //已经创建好游戏玩家的情况下，要重新开始需要进行的内容
@@ -21,12 +24,11 @@ class BattleManager: MonoSingleton<BattleManager>
     private void Start()
     {
         PhaseList = new();
-        PhaseList.Add(StartPhase.Instance);
-        PhaseList.Add(ActionPhase.Instance);
-        PhaseList.Add(ChasePhase.Instance);
-        PhaseList.Add(PreResolutionPhase.Instance);
-        PhaseList.Add(ResolutionPhase.Instance);
-        PhaseList.Add(EndPhase.Instance);
+        PhaseList.Add(new StartPhase());
+        PhaseList.Add(new ActionPhase());
+        PhaseList.Add(new ChasePhase());
+        PhaseList.Add(new ResolutionPhase());
+        PhaseList.Add(new EndPhase());
         Turn = new();
         Turn.OnValueChanged += (oldVal, newVal, message) =>
         {
@@ -34,55 +36,65 @@ class BattleManager: MonoSingleton<BattleManager>
         };
         OnNewWave += () =>
         {
-            CurrentPhaseIndex = 0;
             PlayerManager.Instance.CreateCurrentLevelWave();
-            StartPhase.Instance.OnEnteringPhase();
+            StartRunPhase();
         };
 
         OnStartGame += (string message) =>
         {
-            CurrentPhaseIndex = 0;
             Turn.Clear();
             PlayerManager.Instance.NextPlayerID = 1;
             if (message == "Hero")
                 PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
             else if (message == "Level")
                 PlayerManager.Instance.CreateCurrentLevelWave();
-            StartPhase.Instance.OnEnteringPhase();
+            StartRunPhase();
         };
+        OnDefeated += () => isRunning = false;
+        OnWinning += () => isRunning = false;
     }
     //这个函数好像只给那个按钮用
     public void StartGame(string Type)
     {
         OnStartGame?.Invoke(Type);
     }
+    public void StartRunPhase()
+    {
+        CurrentPhaseIndex = 0;
+        isRunning = true;
+        StartCoroutine(GameLoop());
+    }
+    private IEnumerator RunPhase(Phase phase)
+    {
 
-    public void PhaseAdvance()
-    {
-        PhaseList[CurrentPhaseIndex].OnExitingPhase();
-        CurrentPhaseIndex++;
-        if (CurrentPhaseIndex >= PhaseList.Count)
-            CurrentPhaseIndex = CurrentPhaseIndex % PhaseList.Count;
-        PhaseList[CurrentPhaseIndex].OnEnteringPhase();
+        // 1. phase logic
+        phase.OnEnteringPhase();
+
+
+        // 2. let skills / UI register choices
+        phase.EnteringCallSkills();
+
+        // 3. wait for player decisions
+        yield return WaitForChoices();
+
+        // 4. exit
+        phase.OnExitingPhase();
+        phase.ExitingCallSkills();
+        yield return null;
     }
-    public void ReadyUpAll()
+
+    private IEnumerator WaitForChoices()
     {
-        foreach(var player in PlayerManager.Instance.Players)
-        {
-            player.Value.isReady.ReadyUp();
-        }
+        while (!ChoiceBarrier.Instance.IsComplete)
+            yield return null;
     }
-    public void CheckReady()
+    private IEnumerator GameLoop()
     {
-        bool allReady = true;
-        foreach(var player in PlayerManager.Instance.Players)
+        while (isRunning)
         {
-            if (player.Value.isReady.Value == false)
-                allReady = false;
-        }
-        if(allReady)
-        {
-            PhaseAdvance();
+            var phase = PhaseList[CurrentPhaseIndex];
+            yield return RunPhase(phase);
+            CurrentPhaseIndex = (CurrentPhaseIndex + 1) % PhaseList.Count;
         }
     }
 }

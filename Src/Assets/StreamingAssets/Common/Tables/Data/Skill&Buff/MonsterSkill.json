@@ -219,13 +219,13 @@
         "CD": 0,
         "ForeKnow": false
     },
-    "Enlightenment on High Fort1": {
-        "ID": "Enlightenment on High Fort1",
-        "Name": "高寨悟道，连击+1",
+    "Enlightenment on High Fort": {
+        "ID": "Enlightenment on High Fort",
+        "Name": "高寨悟道",
         "SkillType": "Locked Skill",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "当你的刀剑类攻击命中一目标时，叠加一点Combo，受伤则失去所有Combo",
+        "Description": "当你的刀剑类攻击命中一目标时，叠加一点Combo，受伤则失去所有Combo；每有一层Combo，你的攻击力+1，刀剑行动额外执行一次",
         "Explanation": "无",
         "Bubble": "为何执剑？如何执剑？皆匿于剑客本心……",
         "Costs": [
@@ -234,23 +234,6 @@
             0
         ],
         "CD": 0,
-        "ForeKnow": false
-    },
-    "Enlightenment on High Fort2": {
-        "ID": "Enlightenment on High Fort2",
-        "Name": "高寨悟道",
-        "SkillType": "Locked Skill",
-        "IsLimited": false,
-        "LimitedTimes": 0,
-        "Description": "每有一层Combo，你的攻击力+1，刀剑行动额外执行一次",
-        "Explanation": "无",
-        "Bubble": "为何执剑？如何执剑？皆匿于剑客本心……",
-        "Costs": [
-            0,
-            0,
-            0
-        ],
-        "CD": 5,
         "ForeKnow": false
     },
     "Critical Strike": {
@@ -270,13 +253,13 @@
         "CD": 0,
         "ForeKnow": false
     },
-    "Adjudication": {
-        "ID": "Adjudication",
-        "Name": "裁决",
+    "Ode to Majesty": {
+        "ID": "Ode to Majesty",
+        "Name": "颂威",
         "SkillType": "Free Skill",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "替代行动，我方所有单位接下来2回合行动消耗-1",
+        "Description": "替代行动，我方所有单位接下来2回合行动消耗资源时回复一点体力",
         "Explanation": "CD好了就用",
         "Bubble": "我是“手”所制定律法的执行者",
         "Costs": [
@@ -321,30 +304,13 @@
         "CD": 0,
         "ForeKnow": false
     },
-    "Tactical Turtle1": {
-        "ID": "Tactical Turtle1",
+    "Tactical Turtle": {
+        "ID": "Tactical Turtle",
         "Name": "战术龟缩",
         "SkillType": "Locked Skill",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "你力量-2，龟缩状态无法攻击",
-        "Explanation": "无",
-        "Bubble": "别打我，别打我",
-        "Costs": [
-            0,
-            0,
-            0
-        ],
-        "CD": 0,
-        "ForeKnow": true
-    },
-    "Tactical Turtle2": {
-        "ID": "Tactical Turtle2",
-        "Name": "战术龟缩",
-        "SkillType": "Locked Skill",
-        "IsLimited": false,
-        "LimitedTimes": 0,
-        "Description": "当你受到来自进攻行动与进攻技能的伤害时，受伤-1。受伤时进入龟缩状态",
+        "Description": "你失去2层力量，受到伤害-1。当你受到来自进攻行动与进攻技能的伤害时，你下一回合无法使用进攻与特殊行动且不受伤害",
         "Explanation": "无",
         "Bubble": "别打我，别打我",
         "Costs": [
@@ -383,24 +349,7 @@
         "Bubble": "揍他，往死里打！",
         "Costs": [
             0,
-            0,
-            0
-        ],
-        "CD": 0,
-        "ForeKnow": false
-    },
-    "Ready to Beat Down": {
-        "ID": "Ready to Beat Down",
-        "Name": "开始殴打",
-        "SkillType": "Free Skill",
-        "IsLimited": true,
-        "LimitedTimes": 1,
-        "Description": "本场战斗余下回合中，你进入殴打状态",
-        "Explanation": "好了就立刻用",
-        "Bubble": "揍他，往死里打！",
-        "Costs": [
-            0,
-            0,
+            2,
             5
         ],
         "CD": 0,

@@ -354,7 +354,7 @@ Key: Excalibur
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
-      [2]:         0
+      [2]:         20
   CD:     0
   remainedCD:     0
   TargetType:     Enemy

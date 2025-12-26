@@ -3,17 +3,20 @@ using System;
 
 
 //All The Buffs
-public class Stunned: Buff
+public class Stunned: Buff, IPhaseEnterHandler
 {
     public Stunned(int duration) : base("Stunned", duration, true) { }
-    public override void BeforeAction(Player thisPlayer)
+    public void OnPhase(Phase phase,Player thisPlayer)
     {
-        foreach(var action in thisPlayer.AvailableActions)
+        if(phase is StartPhase)
         {
-            if (ActionUtil.IsAction<DefendDefine>(action) || action == "provoke") ;
-            else
+            foreach (var action in thisPlayer.AvailableActions)
             {
-                thisPlayer.ForbiddenActions.Add(action);
+                if (ActionUtil.IsAction<DefendDefine>(action) || action == "provoke") ;
+                else
+                {
+                    thisPlayer.ForbiddenActions.Add(action);
+                }
             }
         }
     }
@@ -25,11 +28,11 @@ public class Stunned: Buff
     }
 }
 
-public class Bleeding : Buff
+public class Bleeding : Buff, IResolutionHandler
 {
     public int LostFractionalHP;//Max 5, and lose one HP;
     public Bleeding(int value) : base("Bleeding", value, true) { }
-    public override void OnResulution(Player thisPlayer)
+    public void AfterResolution(Player thisPlayer)
     {
         FractionalDrain(thisPlayer, Value);
     }
@@ -45,11 +48,11 @@ public class Bleeding : Buff
     }
 }
 
-public class Burning : Buff
+public class Burning : Buff, IResolutionHandler
 {
     public int Burned;
     public Burning(int value) : base("Burning", value, true) { }
-    public override void OnResulution(Player thisPlayer)
+    public void AfterResolution(Player thisPlayer)
     {
         Burned += Value;
         PrintEvent.Instance.log += ("现有灼烧" + Value + "\n");
@@ -101,7 +104,7 @@ public class Burning : Buff
 
 }
 
-public class Crystallized : Buff 
+public class Crystallized : Buff , IResolutionHandler
 {
     public Crystallized(int value) : base("Crystallized", value, true) { }
     public override void Fade(Player thisPlayer)
@@ -121,7 +124,7 @@ public class Crystallized : Buff
         }
 
     }
-    public override void OnResulution(Player thisPlayer)
+    public void AfterResolution(Player thisPlayer)
     {
         int stunDuration = 0;
         while (Value >= 4)
@@ -137,7 +140,7 @@ public class Crystallized : Buff
     }
 }
 
-public class Cocooned : Buff
+public class Cocooned : Buff, IResolutionHandler, IPhaseEnterHandler
 {
     public Cocooned(int value): base("Cocooned", value, false) { }
     public override void Fade(Player thisPlayer)
@@ -146,7 +149,7 @@ public class Cocooned : Buff
         if(Value < 0)
             thisPlayer.status.buffs.Remove(this);
     }
-    public override void OnResulution(Player thisPlayer)
+    public void AfterResolution(Player thisPlayer)
     {
         if(Value <= 0)
         {
@@ -155,11 +158,14 @@ public class Cocooned : Buff
             OnRevive(thisPlayer);
         }
     }
-    public override void BeforeAction(Player thisPlayer)
+    public void OnPhase(Phase phase,Player thisPlayer)
     {
-        foreach(var action in thisPlayer.AvailableActions)
+        if(phase is StartPhase)
         {
-            thisPlayer.ForbiddenActions.Add(action);
+            foreach (var action in thisPlayer.AvailableActions)
+            {
+                thisPlayer.ForbiddenActions.Add(action);
+            }
         }
     }
 
@@ -168,15 +174,18 @@ public class Cocooned : Buff
 }
 
 //Strength的Buff定义需要完善
-public class Strength : Buff
+public class Strength : Buff, IPhaseExitHandler
 {
     public Strength(int value) : base("Strength", value, false) { }
-    public override void BeforeResolution(Player thisPlayer)
+    public void ExitingPhase(Phase phase,Player thisPlayer)
     {
-        foreach(var attack in thisPlayer.SelectActionType<AttackDefine>())
+        if(phase is ChasePhase)
         {
-            attack.Level += Value * 0.5f;
+            foreach (var attack in thisPlayer.SelectActionType<AttackDefine>())
+            {
+                attack.Level += Value * 0.5f;
+            }
+            Debug.Log("Strength" + Value);
         }
-        Debug.Log("Strength" + Value);
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AYellowpaper.SerializedCollections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
@@ -25,24 +26,42 @@ public class EffectManager : MonoSingleton<EffectManager>
     public void PlayTrailEffect(bool playnow, string id, GameObject origin, GameObject target)
     {
         TrailDictionary.TryGetValue(id, out var effectPrefab);
+        if (effectPrefab == null)
+        {
+            TrailDictionary.TryGetValue("shoot", out var defaultPrefab);
+            effectPrefab = defaultPrefab;
+        }
         var effect = Instantiate(effectPrefab);
         Vector3 originPosition = origin.transform.position;
         Vector3 targetPosition = target.transform.position;
         if (playnow)
             effect.PlayEffect(originPosition, targetPosition);
         else
-            effectQueue.Enqueue(() => effect.PlayEffect(originPosition, targetPosition));
+        {
+            effect.gameObject.SetActive(false);
+            effectQueue.Enqueue(() =>
+            {
+                effect.gameObject.SetActive(true);
+                return effect.PlayEffect(originPosition, targetPosition);
+            });
+        }
+
     }
 
-    public void PlaySpotEffect(bool playnow, string id, GameObject origin)
+    public void PlaySpotEffect(bool playnow, string id, GameObject origin, float number =0)
     {
         SpotDictionary.TryGetValue(id, out var effectPrefab);
         var effect = Instantiate(effectPrefab);
         Vector3 originPosition = origin.transform.position;
         if (playnow)
             effect.PlayEffect(originPosition, 10);
-        else
-            effectQueue.Enqueue(() => effect.PlayEffect(originPosition, 10));
+        effect.gameObject.SetActive(false);
+        effectQueue.Enqueue(() =>
+        {
+            effect.gameObject.SetActive(true);
+            return effect.PlayEffect(originPosition, 10, number);
+        });
+
     }
 
     private IEnumerator RunEffects()

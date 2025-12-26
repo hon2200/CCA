@@ -4,19 +4,17 @@ using UnityEngine;
 using System.Linq;
 
 
-public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
+public class ResolutionPhase : Phase
 {
-    public void OnEnteringPhase()
+    public override void OnEnteringPhase()
     {
-        EventPanelLogic.Instance.OpenEventPanel();
         PrintEvent.Instance.LogAction();
         Resolution();
         //PrintResult_Debug();
         PrintEvent.Instance.PrintResult();
         EffectManager.Instance.PlayAll();
-        BattleManager.Instance.PhaseAdvance();
     }
-    public void OnExitingPhase()
+    public override void OnExitingPhase()
     {
         ClearPossibleKillers();
     }
@@ -32,11 +30,11 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         {
             player.Provoke();
         }
-        foreach(var player in PlayerManager.Instance.Players.Values)
+        foreach (var player in PlayerManager.Instance.Players.Values)
         {
             player.Comeon();
         }
-        foreach(var player in PlayerManager.Instance.Players.Values)
+        foreach (var player in PlayerManager.Instance.Players.Values)
         {
             player.Supply();
             player.Attack();
@@ -46,23 +44,13 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         CheckofDeath();
         CheckofVictory();
 
-        foreach(var player in PlayerManager.Instance.Players.Values)
-        {
-            foreach(var skill in player.hero.skills)
-            {
-                if(skill is PhasebasedSkill phasebased)
-                {
-                    phasebased.InvokeAfterResolution(player);
-                }
-            }
-        }
-
-        foreach(var player in PlayerManager.Instance.Players.Values)
+        foreach (var player in PlayerManager.Instance.Players.Values)
         {
             var buffSnapShot = player.status.buffs.ToList();
             foreach (var buff in buffSnapShot)
             {
-                buff.OnResulution(player);
+                if (buff is IResolutionHandler resolutionBuff)
+                    resolutionBuff.AfterResolution(player);
                 buff.Fade(player);
                 PrintEvent.Instance.log += $"{player.Name}œ÷‘⁄”–{buff.Value}≤„{buff.ID}\n";
             }
@@ -76,8 +64,8 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     {
         if (BattleManager.Instance.Turn.Value == 1)
         {
-            MyLog.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players, 
-                new string[] {"ID_inGame", "status"},"Log/InGame/PlayerStatus.txt");
+            MyLog.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
+                new string[] { "ID_inGame", "status" }, "Log/InGame/PlayerStatus.txt");
             MyLog.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
                 "action", "Log/InGame/PlayerAction.txt");
         }
@@ -86,7 +74,7 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
             MyLog.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
                 new string[] { "ID_inGame", "status" }, "Log/InGame/PlayerStatus.txt", false);
             MyLog.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
-                "action", "Log/InGame/PlayerAction.txt",false);
+                "action", "Log/InGame/PlayerAction.txt", false);
         }
     }
     public void KnockofDeath()
@@ -102,9 +90,9 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
                 var skillsSnapshot = player.hero.skills.ToList();
                 foreach (var skill in skillsSnapshot)
                 {
-                    if (skill is TriggerSkill triggered)
+                    if (skill is IDeathHandler deathSkill)
                     {
-                        if (triggered.InvokeOnDeath(player))
+                        if (deathSkill.OnDeath(player))
                         {
                             if (player.status.life.Value != LifeStatus.EdgeofDeath)
                                 reallyDie = false;
@@ -120,7 +108,7 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
                     {
                         if (PlayerManager.Instance.Players.TryGetValue(killerID, out var killer))
                         {
-                            killer.status.resources.Bullet.Get(reward);
+                            killer.status.resources.Bullet.Get(killer,reward);
                         }
                     }
 
@@ -153,7 +141,7 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
     }
     public void ClearPossibleKillers()
     {
-        foreach(var player in PlayerManager.Instance.Players.Values)
+        foreach (var player in PlayerManager.Instance.Players.Values)
         {
             player.possibleKillers.Clear();
         }
@@ -163,5 +151,20 @@ public class ResolutionPhase : Singleton<ResolutionPhase>, Phase
         if (HP == 1)
             return 1;
         return HP / 5 + 2;
+    }
+
+    public void ResolutionCallSkills()
+    {
+        var playerSnapShot = PlayerManager.Instance.Players.Values.ToList();
+        foreach (var player in playerSnapShot)
+        {
+            foreach (var skill in player.hero.skills)
+            {
+                if (skill is IResolutionHandler phasedSkill)
+                {
+                    phasedSkill.AfterResolution(player);
+                }
+            }
+        }
     }
 }

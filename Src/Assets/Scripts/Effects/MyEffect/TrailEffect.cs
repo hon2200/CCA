@@ -9,7 +9,7 @@ using UnityEngine;
 public class TrailEffect : MonoBehaviour
 {
     public ParticleSystem effect;
-    public float PlayEffect(Vector3 start, Vector3 end)
+    public virtual float PlayEffect(Vector3 start, Vector3 end)
     {
         transform.position = start;
         float distance = Vector3.Distance(start, end);

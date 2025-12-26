@@ -26,8 +26,8 @@ public class WaraxeDance : AttackDefine
         // === Attacking: hit twice + print 三连击
         OnAttackingAction = (attacker, victim) =>
         {
-            this.HowtoAttack(attacker, victim);
-            this.HowtoAttack(attacker, victim);
+            this.AttackTakeEffect(attacker, victim);
+            this.AttackTakeEffect(attacker, victim);
 
             PrintEvent.Instance.log +=
                 $"{attacker.Name}{attacker.ID_inGame} 三连击！";
@@ -64,7 +64,7 @@ public class WaraxeDance : AttackDefine
             }
 
             // 3. Hit normally
-            this.HowtoAttack(attacker, enemy);
+            this.AttackTakeEffect(attacker, enemy);
         };
     }
 }
