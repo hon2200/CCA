@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 public class Map
 {
     public long seed;//种子
-    public List<MapNode> Nodes { get; set; }
+    public List<List<MapNode>> Nodes { get; set; }
 
 }

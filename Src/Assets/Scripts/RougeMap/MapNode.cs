@@ -16,5 +16,6 @@ public class MapNode
     public int possibility;
     //图像
     public Sprite image;
+    public List<MapNode> NextNodes;
 }
 
