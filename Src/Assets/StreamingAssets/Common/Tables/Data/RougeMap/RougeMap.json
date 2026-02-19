@@ -1,0 +1,121 @@
+{
+    "Boss": {
+        "ID": "Boss",
+        "Name": "Boss",
+        "Is_fixed": 1,
+        "Value": 0,
+        "Possibility": 0
+    },
+    "Elite": {
+        "ID": "Elite",
+        "Name": "精英",
+        "Is_fixed": 1,
+        "Value": 0,
+        "Possibility": 0
+    },
+    "Sanctuary": {
+        "ID": "Sanctuary",
+        "Name": "庇护所",
+        "Is_fixed": 1,
+        "Value": 0,
+        "Possibility": 0
+    },
+    "Soul Spring": {
+        "ID": "Soul Spring",
+        "Name": "灵魂之泉",
+        "Is_fixed": 1,
+        "Value": 0,
+        "Possibility": 0
+    },
+    "Minion": {
+        "ID": "Minion",
+        "Name": "小怪",
+        "Is_fixed": 0,
+        "Value": -2,
+        "Possibility": 1
+    },
+    "Demon Altar": {
+        "ID": "Demon Altar",
+        "Name": "恶魔祭坛",
+        "Is_fixed": 0,
+        "Value": -1,
+        "Possibility": 0.5
+    },
+    "Primitive Altar": {
+        "ID": "Primitive Altar",
+        "Name": "原始祭坛",
+        "Is_fixed": 0,
+        "Value": -1,
+        "Possibility": 1
+    },
+    "Unknown Event": {
+        "ID": "Unknown Event",
+        "Name": "未知事件",
+        "Is_fixed": 0,
+        "Value": 0,
+        "Possibility": 1
+    },
+    "Alchemy Workshop": {
+        "ID": "Alchemy Workshop",
+        "Name": "炼金工坊",
+        "Is_fixed": 0,
+        "Value": 1,
+        "Possibility": 1
+    },
+    "Tailor Shop": {
+        "ID": "Tailor Shop",
+        "Name": "裁缝铺",
+        "Is_fixed": 0,
+        "Value": 1,
+        "Possibility": 0.5
+    },
+    "Shop": {
+        "ID": "Shop",
+        "Name": "商店",
+        "Is_fixed": 0,
+        "Value": 2,
+        "Possibility": 0.66
+    },
+    "Talent Market": {
+        "ID": "Talent Market",
+        "Name": "人才市场",
+        "Is_fixed": 0,
+        "Value": 2,
+        "Possibility": 0.66
+    },
+    "Antique Market": {
+        "ID": "Antique Market",
+        "Name": "古玩市场",
+        "Is_fixed": 0,
+        "Value": 2,
+        "Possibility": 0.66
+    },
+    "Tavern": {
+        "ID": "Tavern",
+        "Name": "酒馆",
+        "Is_fixed": 0,
+        "Value": 3,
+        "Possibility": 1
+    },
+    "Sacred Cemetery": {
+        "ID": "Sacred Cemetery",
+        "Name": "神圣墓地",
+        "Is_fixed": 0,
+        "Value": 3,
+        "Possibility": 1
+    },
+    "Curse Fusion": {
+        "ID": "Curse Fusion",
+        "Name": "诅咒融合",
+        "Is_fixed": 0,
+        "Value": 4,
+        "Possibility": 0.5
+    },
+    "Evil Forge": {
+        "ID": "Evil Forge",
+        "Name": "邪恶熔炉",
+        "Is_fixed": 0,
+        "Value": 4,
+        "Possibility": 0.5
+    }
+}

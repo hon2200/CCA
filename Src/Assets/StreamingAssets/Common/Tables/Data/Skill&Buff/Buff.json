@@ -40,5 +40,6 @@
         "Type": "Buff",
         "Stack": "Duration",
         "Description": "x回合后复生"
-    }
+    },
+    "Strength": {}
 }
