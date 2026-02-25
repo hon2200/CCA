@@ -2333,7 +2333,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1952882935}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 5
@@ -16158,7 +16158,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1952882935}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 5
@@ -21798,7 +21798,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1952882939}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChoiceBarrier, Assembly-CSharp
         m_MethodName: Resolve
         m_Mode: 1
@@ -23905,11 +23905,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952882932}
-  - component: {fileID: 1952882935}
   - component: {fileID: 1952882936}
   - component: {fileID: 1952882937}
   - component: {fileID: 1952882938}
-  - component: {fileID: 1952882939}
+  - component: {fileID: 1952882940}
+  - component: {fileID: 1952882941}
   m_Layer: 0
   m_Name: -- GameManager --
   m_TagString: Untagged
@@ -23932,21 +23932,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1952882935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952882930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3058b82a6a2b824f8d1108b9be0caa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  global: 0
-  isRunning: 0
-  Text: {fileID: 1528863725}
 --- !u!114 &1952882936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24030,7 +24015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0
---- !u!114 &1952882939
+--- !u!114 &1952882940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24039,7 +24024,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1952882930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be960af3b1f10f84fa0ae5e77850d6bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e5965a98cd0aee4bbdd44fc562009ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+  isRunning: 0
+  Text: {fileID: 1528863725}
+--- !u!114 &1952882941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952882930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0809200556dd5f84484aa904d37b285e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0

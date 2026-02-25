@@ -18,11 +18,15 @@ public class MapCreator: MonoBehaviour
     public GameObject RoomPrefab;
     public GameObject MapRoot;
     public GameObject lineRenderer;
+    //房间总数（起始房除外）
+    private int totalFloor = 18;
     //房间表
     public List<List<Room>> RoomsbyFloor;
-    //诅咒房间的可能性
-    private int CursedPossibility = 0;
+    //额外分支生产概率
+    private int additionalRouteProb = 10;
     //x方向随机波动和y方向随机波动
+    public float x_float;
+    public float y_float;
     //生成地图
     public void Start()
     {
@@ -31,62 +35,17 @@ public class MapCreator: MonoBehaviour
     }
     public void GenerateMap()
     {
-        CursedPossibility = 0;
         RoomsbyFloor = new();
         //生成起始房间
         Room firstRoom = CreateRoom(0, 0, 0, RoomID.StartRoom);
         List<Room> firstRooms = new() { firstRoom };
         RoomsbyFloor.Add(firstRooms);
         //生成发育路线
-        GenerateGrowthRoutes(17, firstRooms, out var finalRooms, new(0, 0));
-        //赋值发育路线
-        for (int i = 1; i <= 17; i++)
-        {
-            foreach (var room in RoomsbyFloor[i])
-            {
-                switch (i)
-                {
-                    //第一、三层小怪
-                    case 1:
-                    case 3:
-                    case 7:
-                    case 9:
-                    case 13:
-                    case 15:
-                        AssignRoom(room, "Minion", CurseAvailable: true);break;
-                    //第五层，进Boss或精英前小怪
-                    case 5:
-                    case 11:
-                    case 17:
-                        AssignRoom(room,"Minion",CurseAvailable: false);break;
-                    //第二层发育节点
-                    case 2:
-                    case 8:
-                    case 14:
-                        AssignRoom(room, "LowClassRoom");break;
-                    //第四层发育节点
-                    case 4:
-                    case 10:
-                    case 16:
-                        AssignRoom(room, "HighClassRoom"); break;
-                    //精英
-                    case 6:
-                    case 12:
-                        AssignRoom(room, "Elite"); break;
-                    default:
-                        Debug.Assert(false,"Not expected such a floor");
-                        break;
-                }
-
-            }
-        }
-        //生产Boss房间
-        Room BossRoom = CreateRoom(0, 18 * y_unit, 18, RoomID.Boss);
-        foreach (var room in RoomsbyFloor[17])
-        {
-            room.NextNodes.Add(BossRoom);
-        }
-        RoomsbyFloor.Add(new List<Room>() { BossRoom });
+        GenerateGrowthRoutes(firstRooms, out var finalRooms, new(0, 0));
+        //分配房间
+        MapDesigner.Instance.AssignAllRooms(RoomsbyFloor);
+        //浮动房间
+        FloatingRooms();
         //画出地图
         DrawMap(RoomsbyFloor.SelectMany(x => x).ToList());
     }
@@ -105,21 +64,47 @@ public class MapCreator: MonoBehaviour
         }
     }
     //AllRooms, starterRooms excluded
-    public void GenerateGrowthRoutes(int floor,
-        List<Room> StartRooms, out List<Room> finalRooms, Vector2 StartPosition)
+    public void GenerateGrowthRoutes(List<Room> StartRooms, out List<Room> finalRooms, Vector2 StartPosition)
     {
         List<Room> previousRooms = StartRooms;
-        for (int i = 0; i < floor; i++)
+        int previousNumber = 1;
+        for (int i = 1; i <= totalFloor; i++)
         {
             List<Room> rooms = new();
-            //生产随机2~5个节点
-            int number = Random.Range(2, 6);
+            //开始处理房间数
+            int number = 0;
+            //精英和Boss只有一个节点(i=6,i=12,i=18)
+            //精英和Boss前后必须有选择，不能只是一个节点。
+            //其他地方的节点数为原先节点加减1
+            if (i % 6 == 0)
+            {
+                number = 1;
+            }
+            //出精英后可能两个可能三个节点
+            else if (i % 6 == 1)
+            {
+                number = Random.Range(2, 4);
+            }
+            //进精英Boss前锁定两个节点
+            else if (i % 6 == 5)
+            {
+                number = 2;
+            }
+            else
+            {
+                //可能正负1
+                int numberShift = Random.Range(-1, 2);
+                //最大三个，最小一个
+                number = Mathf.Clamp(previousNumber + numberShift, 2, 4);
+            }
+            previousNumber = number;
+            //开始生成房间
             for(int j = 0; j < number; j++)
             {
                 //平移数
                 float x_shift = ((j + 1) - (1 + number) / 2.0f) * x_unit;
-                float y_shift = (i + 1) * y_unit;
-                Room room = CreateRoom(StartPosition.x + x_shift, StartPosition.y + y_shift, i + 1, RoomID.Undecided);
+                float y_shift = i * y_unit;
+                Room room = CreateRoom(StartPosition.x + x_shift, StartPosition.y + y_shift, i, RoomID.Undecided);
                 rooms.Add(room);
             }
             //处理节点问题//保证每一个Previous Room都能链接到现在的Room
@@ -128,53 +113,10 @@ public class MapCreator: MonoBehaviour
             previousRooms = new(rooms);
             //加入大数组
             RoomsbyFloor.Add(rooms);
+            Debug.Log("第" + i + "层" + rooms.Count + "个");
         }
         finalRooms = previousRooms;
     }
-    //维护这个函数和RoomID的数字大小关系
-    private void AssignRoom(Room room, string Catagory, bool overRide = false, bool CurseAvailable = false)
-    {
-        if (!overRide && room.roomID != RoomID.Undecided)
-            return;
-        int number = 0;
-        switch(Catagory)
-        {
-            case "Minion":
-                number = Random.Range(0, 100);
-                if (number < CursedPossibility && CurseAvailable)
-                {
-                    room.roomID = RoomID.DemonAlter;
-                    foreach(Room nextRoom in room.NextNodes)
-                    {
-                        AssignRoom(nextRoom, "CursedRoom");
-                    }
-                    CursedPossibility -= 30;
-                }
-                else
-                {
-                    room.roomID = RoomID.Minion;
-                    CursedPossibility += 3;
-                }
-                break;
-            case "Elite":
-                room.roomID = RoomID.Elite; break;
-            case "Boss":
-                room.roomID = RoomID.Boss; break;
-            case "LowClassRoom":
-                number = Random.Range(10, 17);
-                room.roomID = (RoomID)(number); break;
-            case "HighClassRoom":
-                number = Random.Range(20, 22);
-                room.roomID = (RoomID)(number); break;
-            case "CursedRoom":
-                number = Random.Range(40, 42);
-                room.roomID = (RoomID)(number); break;
-            default:
-                Debug.Assert(false, $"未知的房间类别: {Catagory}");
-                break;
-        }
-    }
-
     private Room CreateRoom(float x, float y, int floor, RoomID roomID)
     {
         GameObject roomObject = Instantiate(RoomPrefab, MapRoot.transform);
@@ -182,7 +124,7 @@ public class MapCreator: MonoBehaviour
         room.x = x;
         room.y = y;
         room.floor = floor;
-        room.roomID = roomID;
+        room.AssignRoom(roomID);
         room.NextNodes = new();
         return room;
     }
@@ -207,17 +149,25 @@ public class MapCreator: MonoBehaviour
                 reversedTargetRoom.NextNodes.Add(room);
             }
         }
-        /*        foreach(var room in targetRooms)
+        foreach(var room in starterRooms)
+        {
+            int number = Random.Range(0, 100);
+            if (number < additionalRouteProb)
+            {
+                Room additionalRoom = FindNextNearestRoom(room, starterRooms, targetRooms);
+                if (additionalRoom != null)
                 {
-                    Room targetRoom = FindNextNearestRoom(room, targetRooms, 0.1f);
-                    if (targetRoom != null)
-                    {
-                        if (Random.Range(0, 10) > 7)
-                            room.NextNodes.Add(targetRoom);
-                    }
-                }*/
+                    room.NextNodes.Add(additionalRoom);
+                    additionalRouteProb -= 20;
+                    break;
+                }
+            }
+            else
+            {
+                additionalRouteProb += 4;
+            }
+        }
     }
-    
     //寻找最近的房间
     private Room FindNearestRoom(Room room, List<Room> targetRooms)
     {
@@ -237,7 +187,7 @@ public class MapCreator: MonoBehaviour
         }
         return NearestRoom;
     }
-    private Room FindNextNearestRoom(Room room, List<Room> targetRooms, float tolerence)
+    private Room FindNextNearestRoom(Room room, List<Room> startRooms, List<Room> targetRooms)
     {
         if (targetRooms.Count == 0 || targetRooms == null)
         {
@@ -246,10 +196,29 @@ public class MapCreator: MonoBehaviour
         //必须是只链接一个的才给它找，TargetRooms里面必须不止一个
         if (room.NextNodes.Count != 1 || targetRooms.Count == 1)
             return null;
+        if (!MapDesigner.Instance.IsOnlyTarget(room.NextNodes[0], startRooms))
+            return null;
         List<Room> targetRoomsCopy = new(targetRooms);
         targetRoomsCopy.Remove(room.NextNodes[0]);
         Room targetRoom = FindNearestRoom(room, targetRoomsCopy);
-        //先不实装tolerance
+        if (!MapDesigner.Instance.IsOnlyTarget(targetRoom, startRooms))
+            return null;
         return targetRoom;
+    }
+    private void FloatingRooms()
+    {
+        foreach(var rooms in RoomsbyFloor)
+        {
+            if(rooms.Count == 1) 
+                continue;
+            foreach(var room in rooms)
+            {
+                float x_shift = Random.Range(-1.0f, 1.0f) * x_float;
+                float y_shift = Random.Range(-1.0f, 1.0f) * y_float;
+                room.x += x_shift;
+                room.y += y_shift;
+            }
+        }
+
     }
 }

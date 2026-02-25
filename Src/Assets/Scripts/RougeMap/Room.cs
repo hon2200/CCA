@@ -13,18 +13,27 @@ public class Room : MonoBehaviour
     public float x;
     public float y;
     public int floor;
-    public RoomID roomID;
+    public RoomID roomID { get; private set; }
     public List<Room> NextNodes;
     public void InitializeRoom()
     {
         transform.localPosition = new Vector3(x, y);
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         RoomLiberary.Instance.RoomDictionary.TryGetValue(roomID, out var roomTemplete);
-        if(roomTemplete == null )
+        if(roomTemplete == null)
         {
             Debug.Assert(false, "Can't find RoomID" + roomID);
         }
         sprite.sprite = roomTemplete.image;
+    }
+    //被赋值一次，则概率变为原本的1/5
+    public void AssignRoom(RoomID roomID)
+    {
+        this.roomID = roomID;
+        if (MapDesigner.Instance.RoomProbabilityDic.ContainsKey(roomID))
+        {
+            MapDesigner.Instance.RoomProbabilityDic[roomID] /= 5;
+        }
     }
     
 }

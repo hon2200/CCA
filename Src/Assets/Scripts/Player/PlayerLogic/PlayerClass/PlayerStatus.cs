@@ -14,7 +14,6 @@ public class PlayerStatus
     public IsAliveAttribute life { get; set; }
     // ✅ 新增：状态管理系统
     public BuffManager buffs { get; private set; }
-    public MarkManager Marks { get; private set; }
     
     public PlayerStatus()
     {
@@ -22,7 +21,6 @@ public class PlayerStatus
         resources = new();
         life = new();
         buffs = new(); // 初始化 Buff 管理器
-        Marks = new MarkManager();  // 初始化印记管理器
         
         HP.OnValueChanged += (oldVal, newVal, opType) =>
             DeadCheck(newVal);

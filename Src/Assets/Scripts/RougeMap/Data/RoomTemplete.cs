@@ -36,8 +36,8 @@ public enum RoomID
     GoldBank = 15,
     Unknown = 16,
 
-    Tavern = 20,
-    SacredCemetery = 21,
+    Tavern = 17,
+    SacredCemetery = 18,
 
     DemonAlter = 30,
 
