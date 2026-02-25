@@ -1,0 +1,3 @@
+这两个脚本用于寻找文件的相关依赖
+AssetDependencyFinder还不能work。
+ResourceReferenceChecker用于输入路径，寻找这个文件夹里面所有文件是否被引用到
