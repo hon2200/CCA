@@ -20,8 +20,6 @@ public class ResolutionPhase : Phase
     }
     public void Resolution()
     {
-        CheatManager.Instance.OnResolution?.Invoke();
-        CheatManager.Instance.OnResolution = null;
         foreach (var player in PlayerManager.Instance.Players.Values)
         {
             player.CoolDown();
@@ -125,6 +123,13 @@ public class ResolutionPhase : Phase
             if (player.status.life.Value == LifeStatus.Death && player.playerType == PlayerType.Human)
             {
                 BattleManager.Instance.OnDefeated.Invoke();
+                foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+                {
+                    if(relic is IBattleEndHandler end)
+                    {
+                        end.OnBattleEnd(player);
+                    }
+                }
             }
         }
     }
@@ -138,6 +143,7 @@ public class ResolutionPhase : Phase
             }
         }
         BattleManager.Instance.OnWinning.Invoke();
+
     }
     public void ClearPossibleKillers()
     {

@@ -22,6 +22,7 @@ public abstract class Skill
     //目前就只是从MonsterSkill里面寻找
     protected void Init()
     {
+        //需要修改！！
         SkillDataBase.Instance.MonsterSkillDic.TryGetValue(ID, out var skillDefine);
         CD = skillDefine.CD;
         CDProgress = 0;

@@ -405,6 +405,7 @@ def main():
         excel_to_json_2dArray("Tables/Versus.xlsx","Data")
         excel_to_json_Dictionary("Tables/Skill&Buff.xlsx","Data")
         excel_to_json_Dictionary("Tables/RougeMap.xlsx","Data")
+        excel_to_json_Dictionary("Tables/Relic.xlsx","Data")
 
 
 if __name__ == "__main__":

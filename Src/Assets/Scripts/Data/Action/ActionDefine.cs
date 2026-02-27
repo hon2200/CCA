@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using static UnityEngine.EventSystems.EventTrigger;
 using UnityEngine;
+using Unity.Collections;
 
 //行动类别
 [Serializable]
@@ -58,6 +59,13 @@ public enum CounterMethod
     Disarm = 3,
 }
 
+public enum ActionTag
+{
+    Sword = 0,
+    Bullet = 1,
+    Light = 2
+}
+
 //父类，行动基础信息
 public class ActionDefine : ICloneable
 {
@@ -65,6 +73,7 @@ public class ActionDefine : ICloneable
     public string Name { get; set; } // 行动名称
     public string Description { get; set; } // 行动描述
     public List<int> Costs { get; set; } // 行动消耗
+    public List<ActionTag> Tags { get; set; }//行动Tag
     public int CD { get; set; } //冷却时间
     public int remainedCD { get; set; }
     public TargetType TargetType { get; set; } // 目标类型//未来可能在读取行动上面有用
@@ -202,3 +211,5 @@ public class CounterDefine : ActionDefine
 public class SpecialDefine : ActionDefine
 {
 }
+
+

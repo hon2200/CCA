@@ -1,33 +1,13 @@
 ﻿using UnityEngine;
 using System;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*//All The Buffs
-public class Stunned: Buff, IPhaseEnterHandler
+//All The Buffs
+public class Stunned : Buff, IPhaseEnterHandler
 {
     public Stunned(int duration) : base("Stunned", duration, true) { }
-    public void OnPhase(Phase phase,Player thisPlayer)
+    public void OnPhase(Phase phase, Player thisPlayer)
     {
-        if(phase is StartPhase)
+        if (phase is StartPhase)
         {
             foreach (var action in thisPlayer.AvailableActions)
             {
@@ -123,16 +103,16 @@ public class Burning : Buff, IResolutionHandler
 
 }
 
-public class Crystallized : Buff , IResolutionHandler
+public class Crystallized : Buff, IResolutionHandler
 {
     public Crystallized(int value) : base("Crystallized", value, true) { }
     public override void Fade(Player thisPlayer)
     {
-        foreach(var action in thisPlayer.action)
+        foreach (var action in thisPlayer.action)
         {
             if (action is AttackDefine)
                 Value += 1;
-            else 
+            else
                 Value -= 1;
         }
         PrintEvent.Instance.log += ($"{Value} 层晶化Now\n");
@@ -161,25 +141,25 @@ public class Crystallized : Buff , IResolutionHandler
 
 public class Cocooned : Buff, IResolutionHandler, IPhaseEnterHandler
 {
-    public Cocooned(int value): base("Cocooned", value, false) { }
+    public Cocooned(int value) : base("Cocooned", value, false) { }
     public override void Fade(Player thisPlayer)
     {
         Value -= 1;
-        if(Value < 0)
+        if (Value < 0)
             thisPlayer.status.buffs.Remove(this);
     }
     public void AfterResolution(Player thisPlayer)
     {
-        if(Value <= 0)
+        if (Value <= 0)
         {
             thisPlayer.status.HP.Set(thisPlayer.status.MaxHP);
             PrintEvent.Instance.log += $"{thisPlayer.Name}重生于茧";
             OnRevive(thisPlayer);
         }
     }
-    public void OnPhase(Phase phase,Player thisPlayer)
+    public void OnPhase(Phase phase, Player thisPlayer)
     {
-        if(phase is StartPhase)
+        if (phase is StartPhase)
         {
             foreach (var action in thisPlayer.AvailableActions)
             {
@@ -196,9 +176,9 @@ public class Cocooned : Buff, IResolutionHandler, IPhaseEnterHandler
 public class Strength : Buff, IPhaseExitHandler
 {
     public Strength(int value) : base("Strength", value, false) { }
-    public void ExitingPhase(Phase phase,Player thisPlayer)
+    public void ExitingPhase(Phase phase, Player thisPlayer)
     {
-        if(phase is ChasePhase)
+        if (phase is ChasePhase)
         {
             foreach (var attack in thisPlayer.SelectActionType<AttackDefine>())
             {
@@ -207,4 +187,4 @@ public class Strength : Buff, IPhaseExitHandler
             Debug.Log("Strength" + Value);
         }
     }
-}*/
+}

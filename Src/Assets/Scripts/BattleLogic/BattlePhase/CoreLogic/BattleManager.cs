@@ -44,8 +44,8 @@ class BattleManager: MonoSingleton<BattleManager>
         {
             Turn.Clear();
             PlayerManager.Instance.NextPlayerID = 1;
-            if (message == "Hero")
-                PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
+            if (message == "Hero") ;
+            //PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
             else if (message == "Level")
                 PlayerManager.Instance.CreateCurrentLevelWave();
             StartRunPhase();

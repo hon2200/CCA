@@ -78,15 +78,21 @@ public interface IDeathHandler
 
 public interface IDamagingHandler
 {
-    public void OnDamaging(Player attacker, Player victim, int damage);
+    public void OnDamaging(Player attacker, Player victim, int damage, out int increasedDamage);
 }
 
 public interface IDamagedHandler
 {
-    public void OnDamaged(Player attacker, Player victim, int damage);
+    public void OnDamaged(Player attacker, Player victim, int damage, out int blockDamage);
 }
 
 public interface IActionReplacer
 {
     public void ReplaceAction(Player player);
+}
+
+
+public interface IBattleEndHandler
+{
+    public void OnBattleEnd(Player player);
 }

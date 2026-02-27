@@ -19,14 +19,32 @@ public class HPAttribute : ObservableAttribute<int>
         {
             if (skill is IDamagingHandler triggerSkill)
             {
-                triggerSkill.OnDamaging(attacker, victim, amount);
+                triggerSkill.OnDamaging(attacker, victim, amount, out var increasedDamage);
+                amount = Mathf.Max(amount + increasedDamage, 0);
+            }
+        }
+        foreach (var relic in RougeManager.Instance.rougePlayer.Relics)
+        {
+            if (relic is IDamagingHandler triggerRelic)
+            {
+                triggerRelic.OnDamaging(attacker, victim, amount, out var increasedDamage);
+                amount = Mathf.Max(amount + increasedDamage, 0);
             }
         }
         foreach (var skill in attacker.hero.skills)
         {
             if (skill is IDamagedHandler triggerSkill)
             {
-                triggerSkill.OnDamaged(attacker, victim, amount);
+                triggerSkill.OnDamaged(attacker, victim, amount, out int blockedDamage);
+                amount = Mathf.Max(amount - blockedDamage, 0);
+            }
+        }
+        foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+        {
+            if(relic is IDamagedHandler triggerRelic)
+            {
+                triggerRelic.OnDamaged(attacker, victim, amount, out int blockedDamage);
+                amount = Mathf.Max(amount - blockedDamage, 0);
             }
         }
         if(attacker is AIPlayer aiAttacker)

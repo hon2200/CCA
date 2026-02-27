@@ -19,7 +19,10 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     public GameObject AIPrefab;
     public GameObject HumanPrefab;
     public Dictionary<int, Player> Players;
-    public HumanPlayer HumanPlayer { get; private set; }
+    public List<HumanPlayer> HumanPlayers { get; private set; }
+    public List<AIPlayer> AIPlayers { get; private set; }
+    public List<Player> FriendlyPlayers { get; private set; }
+    public List<Player> HostilePlayers { get;private set;  }
     public void Start()
     {
         ReadSpacingData();
@@ -141,40 +144,11 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         InitializeHumanPlayerSpace(newPlayer);
         NextPlayerID++;
         Players.Add(newPlayer.ID_inGame, newPlayer);
-        HumanPlayer = newPlayer;
         return newPlayer;
     }
     #endregion
 
     #region Heroes Things
-    public void CreatingPlayers_BasedOnGameSetting_Heroes()
-    {
-        if (GameSetting.Instance == null)
-        {
-            return;
-        }
-        Players = new Dictionary<int, Player>();
-        List<HeroDefine> heroDefines = new();
-
-        foreach (var heroID in GameSetting.Instance.HeroIDDictionary)
-        {
-            HeroDataBase.Instance.HeroDictionary.TryGetValue(heroID, out var heroDefine);
-            if (heroDefine != null)
-                heroDefines.Add(heroDefine);
-            else
-                Debug.Assert(false, "Can't fine Hero");
-        }
-        int totalNumber = heroDefines.Count;
-        var newHumanPlayer = CreateHumanHero(1, heroDefines[0]);
-        Players.Add(1, newHumanPlayer);
-        for (int i = 2; i <= totalNumber; i++)
-        {
-            var newPlayer = CreateAIHero(i, heroDefines[i - 1]);
-            Players.Add(i, newPlayer);
-        }
-        AlivePlayerNumber = totalNumber;
-        //MyLog.PrintLoadedDictionary(Players, "MyLog/Loading/PlayerTable_Debug.txt");
-    }
     private Player CreateAIHero(int ID_inGame, HeroDefine heroDefine)
     {
 
@@ -197,7 +171,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         newPlayer.InitializePlayer(ID_inGame, heroDefine);
         InitializeHumanPlayerSpace(newPlayer);
         Players.Add(newPlayer.ID_inGame, newPlayer);
-        HumanPlayer = newPlayer;
+        HumanPlayers.Add(newPlayer);
         return newPlayer;
     }
     #endregion
@@ -351,6 +325,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
         // Clear player dictionary
         Players.Clear();
+        HumanPlayers.Clear();
     }
     #endregion
 }

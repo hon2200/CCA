@@ -16,7 +16,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 5
+        "Tags": "[Sword]"
     },
     "cleave": {
         "ID": "cleave",
@@ -35,7 +35,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 6
+        "Tags": "[Sword]"
     },
     "laser_stab": {
         "ID": "laser_stab",
@@ -54,7 +54,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 10
+        "Tags": "[Sword,Light]"
     },
     "laser_cleave": {
         "ID": "laser_cleave",
@@ -73,7 +73,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 12
+        "Tags": "[Sword,Light]"
     },
     "ghost_sever": {
         "ID": "ghost_sever",
@@ -92,7 +92,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 12
+        "Tags": "[Sword]"
     },
     "spirit_sever": {
         "ID": "spirit_sever",
@@ -111,7 +111,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 16
+        "Tags": "[Sword]"
     },
     "Excalibur": {
         "ID": "EXcalibur",
@@ -130,7 +130,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": false,
-        "Possibility": 16
+        "Tags": "[Sword,Light]"
     },
     "shoot": {
         "ID": "shoot",
@@ -149,7 +149,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 5
+        "Tags": "[Bullet]"
     },
     "double_shoot": {
         "ID": "double_shoot",
@@ -168,7 +168,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 6
+        "Tags": "[Bullet]"
     },
     "laser_shoot": {
         "ID": "laser_shoot",
@@ -187,7 +187,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 7
+        "Tags": "[Bullet,Light]"
     },
     "laser_cannon": {
         "ID": "laser_cannon",
@@ -205,7 +205,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 0
+        "Tags": "[Bullet,Light]"
     },
     "RPG": {
         "ID": "RPG",
@@ -224,7 +224,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 10
+        "Tags": "[Bullet]"
     },
     "double_RPG": {
         "ID": "double_RPG",
@@ -243,7 +243,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 15
+        "Tags": "[Bullet]"
     },
     "nuclear_bomb": {
         "ID": "nuclear_bomb",
@@ -262,7 +262,7 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Possibility": 15
+        "Tags": "[Bullet]"
     },
     "waraxe_dance": {
         "ID": "waraxe_dance",
@@ -280,8 +280,7 @@
         "Damage": 1,
         "Target": 0,
         "isCopy": false,
-        "isBasic": false,
-        "Possibility": 100
+        "isBasic": false
     },
     "FX5_shotgun": {
         "ID": "FX5_shotgun",
@@ -299,8 +298,7 @@
         "Damage": 1,
         "Target": 0,
         "isCopy": false,
-        "isBasic": false,
-        "Possibility": 100
+        "isBasic": false
     },
     "black_specters_wing": {
         "ID": "black_specters_wing",
@@ -318,7 +316,6 @@
         "Damage": 2,
         "Target": 0,
         "isCopy": false,
-        "isBasic": false,
-        "Possibility": 100
+        "isBasic": false
     }
 }

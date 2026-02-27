@@ -1,32 +1,4 @@
 {
-    "Boss": {
-        "ID": "Boss",
-        "Name": "Boss",
-        "Is_fixed": 1,
-        "Value": 0,
-        "Possibility": 0
-    },
-    "Elite": {
-        "ID": "Elite",
-        "Name": "精英",
-        "Is_fixed": 1,
-        "Value": 0,
-        "Possibility": 0
-    },
-    "Sanctuary": {
-        "ID": "Sanctuary",
-        "Name": "庇护所",
-        "Is_fixed": 1,
-        "Value": 0,
-        "Possibility": 0
-    },
-    "Soul Spring": {
-        "ID": "Soul Spring",
-        "Name": "灵魂之泉",
-        "Is_fixed": 1,
-        "Value": 0,
-        "Possibility": 0
-    },
     "Minion": {
         "ID": "Minion",
         "Name": "小怪",
