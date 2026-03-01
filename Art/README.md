@@ -20,14 +20,15 @@ Git 是一个分布式版本控制系统，广泛用于代码管理和团队协�
 
 ```bash
 git config --global user.name “你的名字”
-
 git config --global user.email “你的邮箱”
+```
 
 查看配置信息
 
+```bash
 git config --list
-
 git config user.name
+```
 
 通过上面的命令设置的信息会保存在~/.gitconfig文件中
 
@@ -37,3 +38,7 @@ git config user.name
 
 命令形式为：git clone 远程Git仓库地址
 
+在你想要放置CCA的文件夹中，右键Git Bash，输入以下命令
+```bash
+git clone 
+```
