@@ -18,6 +18,7 @@ Git 是一个分布式版本控制系统，广泛用于代码管理和团队协�
 
 设置用户信息
 
+```bash
 git config --global user.name “你的名字”
 
 git config --global user.email “你的邮箱”
@@ -31,3 +32,8 @@ git config user.name
 通过上面的命令设置的信息会保存在~/.gitconfig文件中
 
 ### 远程拉取仓库
+
+可以通过Git提供的命令从远程仓库进行克隆，将远程仓库克隆到本地
+
+命令形式为：git clone 远程Git仓库地址
+
