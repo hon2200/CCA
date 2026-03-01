@@ -1,6 +1,6 @@
 ## Git使用方法——写给美术
 Git 是一个分布式版本控制系统，广泛用于代码管理和团队协作。下面是 Git 的常见使用方法：
-### 本地安装 Git
+### 第一步：本地安装 Git
 下载地址： https://git-scm.com/download
 
 下载完成后可以得到如下安装文件
@@ -32,13 +32,89 @@ git config user.name
 
 通过上面的命令设置的信息会保存在~/.gitconfig文件中
 
+### 第二步：注册Github账号
+这一步相对简单，访问Github官方网站（可能需要梯子）：https://github.com
+
+按照引导完成注册即可
+
 ### 远程拉取仓库
 
 可以通过Git提供的命令从远程仓库进行克隆，将远程仓库克隆到本地
 
-命令形式为：git clone 远程Git仓库地址
+命令形式为：git clone 远程仓库地址
 
 在你想要放置CCA的文件夹中，右键Git Bash，输入以下命令
+
+拉取方式1：SSH协议，需要先配置SSH协议，如果不想麻烦可以使用方式2
 ```bash
-git clone 
+git clone git@github.com:hon2200/CCA.git
 ```
+拉取方式2：HTTP协议
+```bash
+git clone
+```
+
+#### SSH协议配置说明
+要通过 SSH 协议从 GitHub 拉取（clone）远程仓库，需要以下几个步骤和要求：
+
+1. 生成 SSH 密钥对
+
+如果你还没有 SSH 密钥，你需要生成一对新的 SSH 密钥。
+
+生成 SSH 密钥对：
+
+打开终端（Terminal）或命令行工具。
+
+执行以下命令来生成一个新的 SSH 密钥对（请确保替换邮箱地址为你自己的 GitHub 账户邮箱）：
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+当系统提示你选择文件保存位置时，直接按 Enter 以使用默认位置（`~/.ssh/id_rsa`），或者指定一个路径。
+
+你会被要求输入一个 passphrase（密码短语），这是一个额外的安全层，但也可以直接按 Enter 跳过。
+
+生成后，你的 SSH 密钥对将保存在 `~/.ssh/` 目录下，包含两个文件：
+
+`id_rsa`：私钥（保密，不可泄露）
+
+`id_rsa.pub`：公钥（需要添加到 GitHub）
+
+2. 将 SSH 公钥添加到 GitHub 账户
+
+复制你的 SSH 公钥内容。你可以使用以下命令来查看并复制公钥：
+
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+登录到 GitHub 账户，在右上角点击 头像，然后选择 Settings（设置）。
+
+在左侧栏中，选择 SSH and GPG keys。
+
+点击 New SSH key，然后在弹出的页面中：
+
+在 Title 中为该密钥取个名字（例如："My Laptop SSH"）。
+
+将你复制的公钥粘贴到 Key 输入框中。
+
+点击 Add SSH key 完成添加。
+
+3. 测试 SSH 连接
+
+确保 GitHub 正确地识别了你的 SSH 密钥，可以通过以下命令测试连接：
+
+```bash
+ssh -T git@github.com
+```
+
+你应该会看到类似以下的输出：
+
+```bash
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+这表示你的 SSH 密钥成功地与 GitHub 账户配对。
+
+
