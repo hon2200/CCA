@@ -122,7 +122,7 @@ public class VoidServant : Skill, IPhaseEnterHandler
         AIDataBase.Instance.AIDictionary.TryGetValue("Void Beast", out var aIDefine);
         PlayerManager.Instance.CreateAI(aIDefine, false, LevelManager.Instance.GetCurrentLevel());
     }
-    public void OnPhase(Phase phase,Player thisPlayer)
+    public void OnPhase(Phase phase, Player thisPlayer)
     {
         if (phase is StartPhase)
         {
@@ -131,7 +131,7 @@ public class VoidServant : Skill, IPhaseEnterHandler
     }
 }
 
-public class Charge: Skill, IPhaseExitHandler
+public class Charge : Skill, IPhaseExitHandler
 {
     public Charge() : base("Charge") { }
     protected override void Envoke(Player thisPlayer)
@@ -175,13 +175,13 @@ public class ChronosHand : Skill, IPhaseEnterHandler
     }
     public void OnPhase(Phase phase, Player thisPlayer)
     {
-        if(phase is StartPhase)
+        if (phase is StartPhase)
         {
             CheckAndEvoke(thisPlayer);
         }
-        else if(phase is ChasePhase)
+        else if (phase is ChasePhase)
         {
-            if(AddingActions != null)
+            if (AddingActions != null)
             {
                 foreach (var kvp in AddingActions)
                 {
@@ -318,7 +318,7 @@ public class EnlightenmentonHighFort : Skill, ICombatHandler, IDamagedHandler, I
     public EnlightenmentonHighFort() : base("Enlightenment on High Fort") { }
     public void OnCombatEvent(CombatEvent combatEvent)
     {
-        if(combatEvent.Type == CombatEventType.AttackTakeEffect)
+        if (combatEvent.Type == CombatEventType.AttackTakeEffect)
         {
             //刀剑类攻击
             if (combatEvent.Attack.Costs[2] > 0)
@@ -360,9 +360,9 @@ public class EnlightenmentonHighFort : Skill, ICombatHandler, IDamagedHandler, I
             }
         }
     }
-    public void ExitingPhase(Phase phase , Player thisPlayer)
+    public void ExitingPhase(Phase phase, Player thisPlayer)
     {
-        if(phase is ActionPhase)
+        if (phase is ActionPhase)
         {
             CheckAndEvoke(thisPlayer);
         }
@@ -380,9 +380,9 @@ public class CriticalStrike : Skill, IPhaseExitHandler, IPhaseEnterHandler
         //只在不是会心状态以及连击第二次时发动
         return base.IsAvailable(thisPlayer) && GetCombo(thisPlayer) == 1 && !Critical;
     }
-    public void ExitingPhase(Phase phase ,Player thisPlayer)
+    public void ExitingPhase(Phase phase, Player thisPlayer)
     {
-        if(phase is ActionPhase)
+        if (phase is ActionPhase)
         {
             if (Critical)
             {
@@ -441,7 +441,7 @@ public class OdetoMajesty : Skill, IActionReplacer, IResolutionHandler
     }
     public void ReplaceAction(Player thisPlayer)
     {
-        if(IsAvailable(thisPlayer))
+        if (IsAvailable(thisPlayer))
         {
             CheckAndEvoke(thisPlayer);
         }
@@ -480,12 +480,12 @@ public class Judgement : Skill, IActionReplacer, IPhaseEnterHandler
     //在前一回合发动时申明
     public void ReplaceAction(Player thisPlayer)
     {
-        if(IsAvailable(thisPlayer))
+        if (IsAvailable(thisPlayer))
         {
             Envoke(thisPlayer);
         }
     }
-    public void OnPhase(Phase phase,Player thisPlayer)
+    public void OnPhase(Phase phase, Player thisPlayer)
     {
         if (phase is StartPhase && Active)
         {
@@ -509,7 +509,7 @@ public class PrismaticEssence : Skill, ICombatHandler
     }
 }
 
-public class TacticalTurtle : Skill ,ICombatHandler, IPhaseEnterHandler, IDamagedHandler
+public class TacticalTurtle : Skill, ICombatHandler, IPhaseEnterHandler, IDamagedHandler
 {
     public int Turtling = 0;
     public bool LoseAttack = false;
@@ -574,7 +574,7 @@ public class BeatDown : Skill, ICombatHandler, IPhaseEnterHandler
     public BeatDown() : base("Beat Down") { }
     public void OnCombatEvent(CombatEvent combatEvent)
     {
-        if(beating)
+        if (beating)
         {
             if (combatEvent.Type == CombatEventType.AttackOverwhelmed)
             {
@@ -588,7 +588,7 @@ public class BeatDown : Skill, ICombatHandler, IPhaseEnterHandler
     }
     public void OnPhase(Phase phase, Player thisPlayer)
     {
-        if(phase is StartPhase)
+        if (phase is StartPhase)
         {
             CheckAndEvoke(thisPlayer);
         }
@@ -602,7 +602,7 @@ public class BeatDown : Skill, ICombatHandler, IPhaseEnterHandler
 public class Photophobia : Skill, ICombatHandler
 {
     public Photophobia() : base("Photophobia") { }
-    
+
     public void OnCombatEvent(CombatEvent combatEvent)
     {
         if (combatEvent.Type == CombatEventType.Attacked)

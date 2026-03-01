@@ -69,7 +69,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         return specificPlayers;
     }
 
-    #region AI Things
+    #region Level Things
     public void CreateCurrentLevelWave()
     {
         Debug.Log("Level ID" + LevelManager.Instance.Level.ID + "Wave " + LevelManager.Instance.Level.Wave);
@@ -149,6 +149,34 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     #endregion
 
     #region Heroes Things
+    public void CreatingPlayers_BasedOnGameSetting_Heroes()
+    {
+        if (GameSetting.Instance == null)
+        {
+            return;
+        }
+        Players = new Dictionary<int, Player>();
+        List<HeroDefine> heroDefines = new();
+
+        foreach (var heroID in GameSetting.Instance.HeroIDDictionary)
+        {
+            HeroDataBase.Instance.HeroDictionary.TryGetValue(heroID, out var heroDefine);
+            if (heroDefine != null)
+                heroDefines.Add(heroDefine);
+            else
+                Debug.Assert(false, "Can't fine Hero");
+        }
+        int totalNumber = heroDefines.Count;
+        var newHumanPlayer = CreateHumanHero(1, heroDefines[0]);
+        Players.Add(1, newHumanPlayer);
+        for (int i = 2; i <= totalNumber; i++)
+        {
+            var newPlayer = CreateAIHero(i, heroDefines[i - 1]);
+            Players.Add(i, newPlayer);
+        }
+        AlivePlayerNumber = totalNumber;
+        //MyLog.PrintLoadedDictionary(Players, "MyLog/Loading/PlayerTable_Debug.txt");
+    }
     private Player CreateAIHero(int ID_inGame, HeroDefine heroDefine)
     {
 

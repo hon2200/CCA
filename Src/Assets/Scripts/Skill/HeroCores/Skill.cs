@@ -14,10 +14,16 @@ public abstract class Skill
     public bool IsLimited { get; protected set; }
     public int LimitedTimes { get; protected set; }
     public int UsedTimes { get; protected set; }
-    protected Skill(string id)
+    public Player Owner { get; protected set;  }
+    /// <summary>
+    /// Set the owning player. Call after cloning a skill onto a hero (e.g. in Hero constructor).
+    /// </summary>
+    public void SetOwner(Player owner) { Owner = owner; }
+    protected Skill(string id, Player owner = null)
     {
         ID = id;
         Init();                 // ← ALWAYS init at creation
+        Owner = owner;
     }
     //目前就只是从MonsterSkill里面寻找
     protected void Init()

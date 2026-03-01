@@ -1,0 +1,107 @@
+Dict 内容 (Count: 15)
+====================================
+Key: IMI Desert Eagle
+
+  ID:     IMI Desert Eagle
+  Name:     沙漠之鹰
+  Description:     你的子弹攻击伤害+1
+  Rarity:     Common
+------------------------------------
+Key: Longquan Sword
+
+  ID:     Longquan Sword
+  Name:     龙泉剑
+  Description:     你的刀剑攻击伤害+1
+  Rarity:     Common
+------------------------------------
+Key: Summoning Scripture
+
+  ID:     Summoning Scripture
+  Name:     唤神之书
+  Description:     第30回合开始时，所有敌方单位受到无来源的30点伤害。
+  Rarity:     Rare
+------------------------------------
+Key: Nameless Broken Sword
+
+  ID:     Nameless Broken Sword
+  Name:     无名残剑
+  Description:     当你的一名英雄连续3次攻击命中目标时，其攻击力+0.5。
+  Rarity:     Common
+------------------------------------
+Key: Holy Light Protection
+
+  ID:     Holy Light Protection
+  Name:     圣光之护
+  Description:     你的英雄在前三回合不会受到伤害。
+  Rarity:     Common
+------------------------------------
+Key: Iron Hat
+
+  ID:     Iron Hat
+  Name:     铁斗笠
+  Description:     当你防御时，受到的伤害-1。
+  Rarity:     Common
+------------------------------------
+Key: Chaos Heart
+
+  ID:     Chaos Heart
+  Name:     混沌之心
+  Description:     你的敌人因攻击外的方式受到的伤害*2。
+  Rarity:     Rare
+------------------------------------
+Key: Ammo Production Line
+
+  ID:     Ammo Production Line
+  Name:     火药生产线
+  Description:     当你使用"补"时，补给量+1。
+  Rarity:     Common
+------------------------------------
+Key: Auto Press
+
+  ID:     Auto Press
+  Name:     自动冲压机
+  Description:     当你使用"拔"时，补给量+1。
+  Rarity:     Common
+------------------------------------
+Key: Shock Glove
+
+  ID:     Shock Glove
+  Name:     震荡拳套
+  Description:     当你的英雄令一名敌方单位眩晕时，对其造成一点伤害。
+  Rarity:     Common
+------------------------------------
+Key: Earthbreaker Hammer
+
+  ID:     Earthbreaker Hammer
+  Name:     裂地重锤
+  Description:     你的英雄攻击力等级+(n-1)/2（n为其血量十位数）。
+  Rarity:     Common
+------------------------------------
+Key: Depleted Uranium Rose
+
+  ID:     Depleted Uranium Rose
+  Name:     贫铀玫瑰
+  Description:     当你的一名英雄进入濒死阶段时，对所有敌人造成3点伤害。
+  Rarity:     Common
+------------------------------------
+Key: Undying Heart
+
+  ID:     Undying Heart
+  Name:     不灭之心
+  Description:     每场战斗结束后，你的所有英雄回复2点血量。
+  Rarity:     Common
+------------------------------------
+Key: Mortician License
+
+  ID:     Mortician License
+  Name:     入殓师执照
+  Description:     一场战斗中，每个死亡的单位令你获得2金币。
+  Rarity:     Common
+------------------------------------
+Key: Taie's Alchemy Furnace
+
+  ID:     Taie's Alchemy Furnace
+  Name:     太乙的炼丹炉
+  Description:     你可以拥有5个一次性道具栏位。
+  Rarity:     Common
+------------------------------------

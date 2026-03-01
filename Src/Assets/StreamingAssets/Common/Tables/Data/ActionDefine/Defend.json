@@ -13,7 +13,8 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "double_block": {
         "ID": "double_block",
@@ -29,7 +30,8 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "heavy_block": {
         "ID": "heavy_block",
@@ -45,7 +47,8 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "deflect": {
         "ID": "deflect",
@@ -61,6 +64,7 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     }
 }

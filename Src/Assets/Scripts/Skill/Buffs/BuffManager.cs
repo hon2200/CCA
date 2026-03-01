@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +7,11 @@ using UnityEngine;
 
 public class BuffManager : ObservableList<Buff>
 {
+    /// <summary>
+    /// The player who owns this buff list. Set by the owning Player/PlayerStatus so that applied buffs get Owner set.
+    /// </summary>
+    public Player BuffOwner { get; set; }
+
     //施加Buff
     public void Apply(Buff newBuff)
     {
@@ -22,7 +27,16 @@ public class BuffManager : ObservableList<Buff>
             }
         }
         if(!hasBuff)
+        {
             Add(newBuff);
+        }
         Debug.Log($"施加了buff{newBuff.ID}\n");
+    }
+
+    public new void Add(Buff item)
+    {
+        if (item != null && BuffOwner != null)
+            item.Owner = BuffOwner;
+        base.Add(item);
     }
 }

@@ -16,7 +16,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Sword]"
+        "Tags": [
+            "Sword"
+        ]
     },
     "cleave": {
         "ID": "cleave",
@@ -35,7 +37,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Sword]"
+        "Tags": [
+            "Sword"
+        ]
     },
     "laser_stab": {
         "ID": "laser_stab",
@@ -54,7 +58,10 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Sword,Light]"
+        "Tags": [
+            "Sword",
+            "Light"
+        ]
     },
     "laser_cleave": {
         "ID": "laser_cleave",
@@ -73,7 +80,10 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Sword,Light]"
+        "Tags": [
+            "Sword",
+            "Light"
+        ]
     },
     "ghost_sever": {
         "ID": "ghost_sever",
@@ -92,7 +102,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Sword]"
+        "Tags": [
+            "Sword"
+        ]
     },
     "spirit_sever": {
         "ID": "spirit_sever",
@@ -111,7 +123,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Sword]"
+        "Tags": [
+            "Sword"
+        ]
     },
     "Excalibur": {
         "ID": "EXcalibur",
@@ -130,7 +144,10 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": false,
-        "Tags": "[Sword,Light]"
+        "Tags": [
+            "Sword",
+            "Light"
+        ]
     },
     "shoot": {
         "ID": "shoot",
@@ -149,7 +166,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Bullet]"
+        "Tags": [
+            "Bullet"
+        ]
     },
     "double_shoot": {
         "ID": "double_shoot",
@@ -168,7 +187,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Bullet]"
+        "Tags": [
+            "Bullet"
+        ]
     },
     "laser_shoot": {
         "ID": "laser_shoot",
@@ -187,7 +208,10 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Bullet,Light]"
+        "Tags": [
+            "Bullet",
+            "Light"
+        ]
     },
     "laser_cannon": {
         "ID": "laser_cannon",
@@ -205,7 +229,10 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Bullet,Light]"
+        "Tags": [
+            "Bullet",
+            "Light"
+        ]
     },
     "RPG": {
         "ID": "RPG",
@@ -224,7 +251,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Bullet]"
+        "Tags": [
+            "Bullet"
+        ]
     },
     "double_RPG": {
         "ID": "double_RPG",
@@ -243,7 +272,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Bullet]"
+        "Tags": [
+            "Bullet"
+        ]
     },
     "nuclear_bomb": {
         "ID": "nuclear_bomb",
@@ -262,7 +293,9 @@
         "Target": 0,
         "isCopy": false,
         "isBasic": true,
-        "Tags": "[Bullet]"
+        "Tags": [
+            "Bullet"
+        ]
     },
     "waraxe_dance": {
         "ID": "waraxe_dance",
@@ -280,7 +313,10 @@
         "Damage": 1,
         "Target": 0,
         "isCopy": false,
-        "isBasic": false
+        "isBasic": false,
+        "Tags": [
+            "Bullet"
+        ]
     },
     "FX5_shotgun": {
         "ID": "FX5_shotgun",
@@ -298,7 +334,10 @@
         "Damage": 1,
         "Target": 0,
         "isCopy": false,
-        "isBasic": false
+        "isBasic": false,
+        "Tags": [
+            "Bullet"
+        ]
     },
     "black_specters_wing": {
         "ID": "black_specters_wing",
@@ -316,6 +355,9 @@
         "Damage": 2,
         "Target": 0,
         "isCopy": false,
-        "isBasic": false
+        "isBasic": false,
+        "Tags": [
+            "Bullet"
+        ]
     }
 }

@@ -3,16 +3,18 @@ using UnityEngine;
 
 public class RougePlayer : MonoBehaviour
 {
-    public int money;
+    public int coins;
     public List<Relic> Relics;
     public List<Hero> Heroes;
     public List<Potion> Potions;
+    public int PotionMax;
 
     private void Awake()
     {
         if (Relics == null) Relics = new List<Relic>();
         if (Heroes == null) Heroes = new List<Hero>();
         if (Potions == null) Potions = new List<Potion>();
+        PotionMax = 3;
     }
 
     #region Hero Management
@@ -43,7 +45,7 @@ public class RougePlayer : MonoBehaviour
             return null;
         }
 
-        if (cost > 0 && money < cost)
+        if (cost > 0 && coins < cost)
         {
             Debug.LogWarning("RecruitHero failed: not enough money.");
             return null;
@@ -59,7 +61,7 @@ public class RougePlayer : MonoBehaviour
             Heroes = new List<Hero>();
 
         if (cost > 0)
-            money -= cost;
+            coins -= cost;
 
         // Hero constructor currently does not require a valid Player reference for meta usage.
         Hero newHero = new Hero(null, heroDefine);
@@ -80,7 +82,7 @@ public class RougePlayer : MonoBehaviour
             return false;
 
         if (refund > 0)
-            money += refund;
+            coins += refund;
 
         return true;
     }
@@ -250,11 +252,11 @@ public class RougePlayer : MonoBehaviour
         if (!allowDuplicate && HasRelic(relic.ID))
             return false;
 
-        if (cost > 0 && money < cost)
+        if (cost > 0 && coins < cost)
             return false;
 
         if (cost > 0)
-            money -= cost;
+            coins -= cost;
 
         Relics.Add(relic);
         return true;

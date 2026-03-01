@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 #region PhaseBasedHandler
 public interface IPhaseEnterHandler
 {
-    public void OnPhase(Phase phase, Player player);
+    public void OnPhase(Phase phase);
 }
 
 public interface IPhaseExitHandler
 {
-    public void ExitingPhase(Phase phase, Player player);
+    public void ExitingPhase(Phase phase);
 }
 
 public interface IResolutionHandler
 {
-    public void AfterResolution(Player player);
+    public void AfterResolution();
 }
 
 #endregion
@@ -86,13 +86,26 @@ public interface IDamagedHandler
     public void OnDamaged(Player attacker, Player victim, int damage, out int blockDamage);
 }
 
-public interface IActionReplacer
+public interface IStunningHandler
 {
-    public void ReplaceAction(Player player);
+    public void OnStunning(Player attacker, Player victim);
+}
+
+public interface IStunnedHandler
+{
+    public void OnStunned(Player attacker, Player victim);
+}
+
+public interface IActionModifier
+{
+    public void ModifyAction(Player player);
 }
 
 
+# region OutofBattleHandler
 public interface IBattleEndHandler
 {
     public void OnBattleEnd(Player player);
 }
+
+#endregion

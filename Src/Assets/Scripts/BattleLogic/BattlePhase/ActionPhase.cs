@@ -65,10 +65,17 @@ class ActionPhase : Phase
         {
             foreach (var skill in player.hero.skills)
             {
-                if (skill is IActionReplacer phasedSkill)
+                if (skill is IActionModifier phasedSkill)
                 {
-                    phasedSkill.ReplaceAction(player);
+                    phasedSkill.ModifyAction(player);
                 }
+            }
+        }
+        foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+        {
+            if (relic is IActionModifier actionRelic)
+            {
+                actionRelic.ModifyAction(null);
             }
         }
     }

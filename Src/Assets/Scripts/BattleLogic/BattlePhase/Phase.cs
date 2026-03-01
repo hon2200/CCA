@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +19,7 @@ public abstract class Phase
             {
                 if (skill is IPhaseEnterHandler phasedSkill)
                 {
-                    phasedSkill.OnPhase(this, player);
+                    phasedSkill.OnPhase(this);
                 }
             }
         }
@@ -33,7 +33,7 @@ public abstract class Phase
             {
                 if (skill is IPhaseExitHandler phasedSkill)
                 {
-                    phasedSkill.ExitingPhase(this, player);
+                    phasedSkill.ExitingPhase(this);
                 }
             }
         }

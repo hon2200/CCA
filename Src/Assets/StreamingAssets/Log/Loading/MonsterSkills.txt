@@ -1,4 +1,4 @@
-Dict 内容 (Count: 93)
+Dict 内容 (Count: 94)
 ====================================
 Key: Save Me!!!
 
@@ -1673,4 +1673,18 @@ Key: 	Nine-Headed Dragon Flash
       [2]:         0
   CD:     0
   ForeKnow:     True
+------------------------------------
+Key: Nameless Broken Sword
+
+  ID:     Nameless Broken Sword
+  Name:     null
+  SkillType:     null
+  IsLimited:     False
+  LimitedTimes:     0
+  Discription:     null
+  Explanation:     null
+  Bubble:     null
+  Costs:     null
+  CD:     0
+  ForeKnow:     False
 ------------------------------------

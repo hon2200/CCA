@@ -15,6 +15,9 @@ Key: bullet
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -39,6 +42,9 @@ Key: double_bullet
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -63,6 +69,9 @@ Key: sword
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Sword
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -87,6 +96,9 @@ Key: double_sword
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Sword
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -111,6 +123,9 @@ Key: powder_keg
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -135,6 +150,9 @@ Key: triple_bullet
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -159,6 +177,9 @@ Key: triple_sword
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Sword
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -187,6 +208,9 @@ Key: stab
       [0]:         0
       [1]:         0
       [2]:         1
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Sword
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -215,6 +239,9 @@ Key: cleave
       [0]:         0
       [1]:         0
       [2]:         2
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Sword
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -243,6 +270,10 @@ Key: laser_stab
       [0]:         0
       [1]:         0
       [2]:         3
+  Tags: 
+    List`1 (Count: 2)
+      [0]:         Sword
+      [1]:         Light
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -271,6 +302,10 @@ Key: laser_cleave
       [0]:         0
       [1]:         0
       [2]:         5
+  Tags: 
+    List`1 (Count: 2)
+      [0]:         Sword
+      [1]:         Light
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -299,6 +334,9 @@ Key: ghost_sever
       [0]:         0
       [1]:         0
       [2]:         6
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Sword
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -327,6 +365,9 @@ Key: spirit_sever
       [0]:         0
       [1]:         0
       [2]:         10
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Sword
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -355,6 +396,10 @@ Key: Excalibur
       [0]:         0
       [1]:         0
       [2]:         20
+  Tags: 
+    List`1 (Count: 2)
+      [0]:         Sword
+      [1]:         Light
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -383,6 +428,9 @@ Key: shoot
       [0]:         0
       [1]:         1
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -411,6 +459,9 @@ Key: double_shoot
       [0]:         0
       [1]:         2
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -439,6 +490,10 @@ Key: laser_shoot
       [0]:         0
       [1]:         2
       [2]:         0
+  Tags: 
+    List`1 (Count: 2)
+      [0]:         Bullet
+      [1]:         Light
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -467,6 +522,10 @@ Key: laser_cannon
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 2)
+      [0]:         Bullet
+      [1]:         Light
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -495,6 +554,9 @@ Key: RPG
       [0]:         0
       [1]:         3
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -523,6 +585,9 @@ Key: double_RPG
       [0]:         0
       [1]:         6
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -552,6 +617,9 @@ Key: nuclear_bomb
       [0]:         0
       [1]:         5
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -580,6 +648,9 @@ Key: waraxe_dance
       [0]:         0
       [1]:         0
       [2]:         5
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     5
   remainedCD:     0
   TargetType:     Enemy
@@ -608,6 +679,9 @@ Key: FX5_shotgun
       [0]:         1
       [1]:         3
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     3
   remainedCD:     0
   TargetType:     Enemy
@@ -636,6 +710,9 @@ Key: black_specters_wing
       [0]:         0
       [1]:         2
       [2]:         0
+  Tags: 
+    List`1 (Count: 1)
+      [0]:         Bullet
   CD:     0
   remainedCD:     0
   TargetType:     Enemy
@@ -655,6 +732,8 @@ Key: block
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -674,6 +753,8 @@ Key: double_block
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -693,6 +774,8 @@ Key: heavy_block
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -712,6 +795,8 @@ Key: deflect
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -731,6 +816,8 @@ Key: rebounce
       [0]:         0
       [1]:         1
       [2]:         0
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -750,6 +837,8 @@ Key: counterblade
       [0]:         0
       [1]:         0
       [2]:         1
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -769,6 +858,8 @@ Key: disarm
       [0]:         0
       [1]:         0
       [2]:         4
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -788,6 +879,8 @@ Key: spectral_reflection
       [0]:         0
       [1]:         0
       [2]:         3
+  Tags: 
+    List`1 (Count: 0)
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -807,6 +900,8 @@ Key: comeon
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 0)
   CD:     1
   remainedCD:     0
   TargetType:     Self
@@ -826,6 +921,8 @@ Key: provoke
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags: 
+    List`1 (Count: 0)
   CD:     1
   remainedCD:     0
   TargetType:     Enemy
@@ -845,6 +942,7 @@ Key: attract_misfortune
       [0]:         0
       [1]:         0
       [2]:         2
+  Tags:     null
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -864,6 +962,7 @@ Key: bite_you_to_death
       [0]:         0
       [1]:         1
       [2]:         2
+  Tags:     null
   CD:     4
   remainedCD:     0
   TargetType:     Self
@@ -883,6 +982,7 @@ Key: adjudication
       [0]:         0
       [1]:         0
       [2]:         3
+  Tags:     null
   CD:     2
   remainedCD:     0
   TargetType:     Enemy
@@ -902,6 +1002,7 @@ Key: judgment
       [0]:         0
       [1]:         2
       [2]:         0
+  Tags:     null
   CD:     2
   remainedCD:     0
   TargetType:     Enemy
@@ -921,6 +1022,7 @@ Key: water_warding_incantation
       [0]:         0
       [1]:         2
       [2]:         3
+  Tags:     null
   CD:     3
   remainedCD:     0
   TargetType:     Self
@@ -940,6 +1042,7 @@ Key: assemble
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags:     null
   CD:     3
   remainedCD:     0
   TargetType:     Self
@@ -959,6 +1062,7 @@ Key: load_shells
       [0]:         0
       [1]:         3
       [2]:         0
+  Tags:     null
   CD:     0
   remainedCD:     0
   TargetType:     Friend
@@ -978,6 +1082,7 @@ Key: guardian_shade
       [0]:         4
       [1]:         3
       [2]:         3
+  Tags:     null
   CD:     0
   remainedCD:     0
   TargetType:     Friend
@@ -997,6 +1102,7 @@ Key: raging_lotus_flame
       [0]:         0
       [1]:         8
       [2]:         8
+  Tags:     null
   CD:     8
   remainedCD:     0
   TargetType:     Self
@@ -1016,6 +1122,7 @@ Key: dance_of_combustion
       [0]:         0
       [1]:         0
       [2]:         6
+  Tags:     null
   CD:     5
   remainedCD:     0
   TargetType:     Enemy
@@ -1035,6 +1142,7 @@ Key: creation
       [0]:         0
       [1]:         0
       [2]:         0
+  Tags:     null
   CD:     0
   remainedCD:     0
   TargetType:     Self
@@ -1054,6 +1162,7 @@ Key: lash_the_universe
       [0]:         1
       [1]:         0
       [2]:         0
+  Tags:     null
   CD:     3
   remainedCD:     0
   TargetType:     Self

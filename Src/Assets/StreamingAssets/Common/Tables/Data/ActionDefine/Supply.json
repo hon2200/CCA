@@ -18,7 +18,10 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": [
+            "Bullet"
+        ]
     },
     "double_bullet": {
         "ID": "double_bullet",
@@ -39,7 +42,10 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": [
+            "Bullet"
+        ]
     },
     "sword": {
         "ID": "sword",
@@ -60,7 +66,10 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": [
+            "Sword"
+        ]
     },
     "double_sword": {
         "ID": "double_sword",
@@ -81,7 +90,10 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": [
+            "Sword"
+        ]
     },
     "powder_keg": {
         "ID": "powder_keg",
@@ -102,7 +114,10 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": false
+        "isBasic": false,
+        "Tags": [
+            "Bullet"
+        ]
     },
     "triple_bullet": {
         "ID": "triple_bullet",
@@ -123,7 +138,10 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": false
+        "isBasic": false,
+        "Tags": [
+            "Bullet"
+        ]
     },
     "triple_sword": {
         "ID": "triple_sword",
@@ -144,6 +162,9 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": false
+        "isBasic": false,
+        "Tags": [
+            "Sword"
+        ]
     }
 }

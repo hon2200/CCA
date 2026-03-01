@@ -14,7 +14,8 @@
         "CD": 1,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "provoke": {
         "ID": "provoke",
@@ -31,7 +32,8 @@
         "CD": 1,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "attract_misfortune": {
         "ID": "attract_misfortune",

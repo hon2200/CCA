@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 public class Hero
@@ -30,6 +30,7 @@ public class Hero
         {
             UnityEngine.Debug.LogWarning($"英雄ID不存在: {heroDefine.ID}");
         }
+        SetSkillOwners(thisPlayer);
     }
 
     public Hero(Player thisPlayer, string heroID, List<string> skillList)
@@ -38,7 +39,10 @@ public class Hero
         skills = new List<Skill>();
 
         if (skillList == null)
+        {
+            SetSkillOwners(thisPlayer);
             return;
+        }
         // 添加英雄技能
         foreach (var skillID in skillList)
         {
@@ -51,6 +55,13 @@ public class Hero
                 UnityEngine.Debug.LogWarning($"技能ID不存在: {skillID}");
             }
         }
+        SetSkillOwners(thisPlayer);
+    }
+    private void SetSkillOwners(Player thisPlayer)
+    {
+        if (thisPlayer == null || skills == null) return;
+        foreach (var skill in skills)
+            skill?.SetOwner(thisPlayer);
     }
 
     //记得要用？调用防止Null

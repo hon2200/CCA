@@ -13,7 +13,8 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "counterblade": {
         "ID": "counterblade",
@@ -29,7 +30,8 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "disarm": {
         "ID": "disarm",
@@ -45,7 +47,8 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     },
     "spectral_reflection": {
         "ID": "spectral_reflection",
@@ -61,6 +64,7 @@
         "CD": 0,
         "Target": 0,
         "isCopy": false,
-        "isBasic": true
+        "isBasic": true,
+        "Tags": []
     }
 }

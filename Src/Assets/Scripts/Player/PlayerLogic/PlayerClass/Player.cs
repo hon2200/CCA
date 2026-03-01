@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
         this.status = new(MaxHP, InitialResource);
         this.action = new();
         this.playerType = playerType;
+        this.status.buffs.BuffOwner = this;
         hero = new(this, heroID, skills);
         isReady = new ReadyAttribute();
         isReady.Cancel();

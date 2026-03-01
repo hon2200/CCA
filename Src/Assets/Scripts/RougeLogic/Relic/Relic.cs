@@ -10,6 +10,7 @@ public class Relic
     public int Price;
     public int PriceFloat;
     public Rarity Rarity;
+    public List<int> counts;
     protected Relic(string id)
     {
         ID = id;
@@ -37,5 +38,7 @@ public class Relic
                 PriceFloat = 50;
                 break;
         }
+        counts = new();
     }
+    public virtual void OnPickup() { }
 }

@@ -48,16 +48,16 @@ public class ResolutionPhase : Phase
             foreach (var buff in buffSnapShot)
             {
                 if (buff is IResolutionHandler resolutionBuff)
-                    resolutionBuff.AfterResolution(player);
-                buff.Fade(player);
-                PrintEvent.Instance.log += $"{player.Name}现在有{buff.Value}层{buff.ID}\n";
+                    resolutionBuff.AfterResolution();
+                buff.Fade();
+                PrintEvent.Instance.log += $"{player.Name}??????{buff.Value}??{buff.ID}\n";
             }
         }
 
         //PrintResult_Debug();
     }
 
-    //加入Buff之后有bug！
+    //????Buff?????bug??
     public void PrintResult_Debug()
     {
         if (BattleManager.Instance.Turn.Value == 1)
@@ -91,6 +91,17 @@ public class ResolutionPhase : Phase
                     if (skill is IDeathHandler deathSkill)
                     {
                         if (deathSkill.OnDeath(player))
+                        {
+                            if (player.status.life.Value != LifeStatus.EdgeofDeath)
+                                reallyDie = false;
+                        }
+                    }
+                }
+                foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+                {
+                    if(relic is IDeathHandler deathRelic)
+                    {
+                        if (deathRelic.OnDeath(player))
                         {
                             if (player.status.life.Value != LifeStatus.EdgeofDeath)
                                 reallyDie = false;
@@ -168,7 +179,7 @@ public class ResolutionPhase : Phase
             {
                 if (skill is IResolutionHandler phasedSkill)
                 {
-                    phasedSkill.AfterResolution(player);
+                    phasedSkill.AfterResolution();
                 }
             }
         }
