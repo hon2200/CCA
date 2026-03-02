@@ -11,6 +11,7 @@ public class RelicDropDownController : MonoBehaviour
 
     private void Start()
     {
+
         RelicDropDown.options.Add(new TMP_Dropdown.OptionData());
         foreach (var relic in RelicDatabase.Instance.RelicDictionary.Values)
         {
@@ -22,6 +23,7 @@ public class RelicDropDownController : MonoBehaviour
 
     private void OnRelicSelected(int selectedIndex)
     {
+
         if (RelicDropDown.options[selectedIndex] is RelicOptionData relicOption)
         {
             CurrentRelicID = relicOption.RelicId;
@@ -31,15 +33,19 @@ public class RelicDropDownController : MonoBehaviour
     private void AddSelectedRelic()
     {
         if (string.IsNullOrEmpty(CurrentRelicID)) return;
-        var rougePlayer = RougeManager.Instance?.rougePlayer;
-        if (rougePlayer == null) return;
+
+        
+        var rougePlayer = RougeManager.Instance.rougePlayer;
+
         if (rougePlayer.Relics != null && rougePlayer.Relics.Count >= 10) return;
 
-        RelicDefine relic = RelicDatabase.Instance?.GetRelic(CurrentRelicID);
-        if (relic == null) return;
+        RelicDefine relic = RelicDatabase.Instance.GetRelic(CurrentRelicID);
+        Debug.Assert(relic != null, $"[RelicDropDownController] GetRelic returned null for ID: {CurrentRelicID}");
 
         if (rougePlayer.GetRelic(relic))
+        {
             RelicControlPanel.Instance.RefreshText();
+        }
     }
 }
 

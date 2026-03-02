@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,6 +65,7 @@ class BattleManager: MonoSingleton<BattleManager>
 
 
         // 2. let skills / UI register choices
+        phase.EnteringCallRelics();
         phase.EnteringCallSkills();
 
         // 3. wait for player decisions
@@ -72,6 +73,7 @@ class BattleManager: MonoSingleton<BattleManager>
 
         // 4. exit
         phase.OnExitingPhase();
+        phase.ExitingCallRelics();
         phase.ExitingCallSkills();
         yield return null;
     }

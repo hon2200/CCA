@@ -7,7 +7,7 @@ public class DeleteRelic : MonoBehaviour
     {
         var relics = RougeManager.Instance?.rougePlayer?.Relics;
         if (relics == null || relics.Count == 0) return;
-        relics.RemoveAt(relics.Count - 1);
+        relics.RemoveAt(relics.Count - 1, "RemoveAt");
         RelicControlPanel.Instance.RefreshText();
     }
 

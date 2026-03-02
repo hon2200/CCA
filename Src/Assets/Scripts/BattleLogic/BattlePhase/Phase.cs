@@ -38,6 +38,30 @@ public abstract class Phase
             }
         }
     }
+
+    public void EnteringCallRelics()
+    {
+        var relics = RougeManager.Instance?.rougePlayer?.Relics;
+        if (relics == null) return;
+        foreach (var relic in relics)
+        {
+            if (relic == null) continue;
+            if (relic is IPhaseEnterHandler phaseRelic)
+                phaseRelic.OnPhase(this);
+        }
+    }
+
+    public void ExitingCallRelics()
+    {
+        var relics = RougeManager.Instance?.rougePlayer?.Relics;
+        if (relics == null) return;
+        foreach (var relic in relics)
+        {
+            if (relic == null) continue;
+            if (relic is IPhaseExitHandler phaseRelic)
+                phaseRelic.ExitingPhase(this);
+        }
+    }
 }
 
 

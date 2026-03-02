@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RougePlayer
 {
     public int coins;
-    public List<RelicDefine> Relics;
+    public ObservableList<RelicDefine> Relics;
     public List<Hero> Heroes;
     public List<Potion> Potions;
     public int PotionMax;
@@ -15,7 +16,7 @@ public class RougePlayer
     }
     public void Init()
     {
-        if (Relics == null) Relics = new List<RelicDefine>();
+        if (Relics == null) Relics = new ObservableList<RelicDefine>();
         if (Heroes == null) Heroes = new List<Hero>();
         if (Potions == null) Potions = new List<Potion>();
         PotionMax = 3;
@@ -252,18 +253,12 @@ public class RougePlayer
             return false;
 
         if (Relics == null)
-            Relics = new List<RelicDefine>();
+            Relics = new ObservableList<RelicDefine>();
 
         if (!allowDuplicate && HasRelic(relic.ID))
             return false;
 
-        if (cost > 0 && coins < cost)
-            return false;
-
-        if (cost > 0)
-            coins -= cost;
-
-        Relics.Add(relic);
+        Relics.Add(relic, "GetRelic");
         return true;
     }
 
@@ -275,7 +270,7 @@ public class RougePlayer
         if (Relics == null || relic == null)
             return false;
 
-        return Relics.Remove(relic);
+        return Relics.Remove(relic, "LoseRelic");
     }
 
     /// <summary>

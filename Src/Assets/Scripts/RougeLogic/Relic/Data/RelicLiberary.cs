@@ -7,3 +7,4 @@ public class RelicLiberary : MonoSingleton<RelicLiberary>
     [SerializeField]
     public SerializedDictionary<string, RelicTemplete> RelicDictionary;
 }
+
