@@ -206,7 +206,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
     public void CreatingPlayers_BasedOnGameSetting_Heroes()
     {
-        if (GameSetting.Instance == null)
+        if (HeroControlPanel.Instance == null)
         {
             return;
         }
@@ -218,7 +218,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
         List<HeroDefine> heroDefines = new();
 
-        foreach (var heroID in GameSetting.Instance.HeroIDDictionary)
+        foreach (var heroID in HeroControlPanel.Instance.HeroIDDictionary)
         {
             HeroDataBase.Instance.HeroDictionary.TryGetValue(heroID, out var heroDefine);
             if (heroDefine != null)
