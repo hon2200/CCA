@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 //行动技：技能就是新增一个行动
 //还需要卡牌的UI(Card Liberary.cs)
 //行动信息(ActionDataBase.cs)
-public abstract class ActionSkill : Skill
+public abstract class ActionSkill : SkillDefine
 {
     public ActionSkill(string skillID, string actionID) : base(skillID) 
     { 

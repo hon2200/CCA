@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+
+
 // The same problem as ActionDefine, how to make it safe, what if I forgot to Clone?
-public abstract class Skill
+public abstract class SkillDefine
 {
     public string ID { get; protected set; }
     public int CD { get; protected set; }
@@ -13,37 +15,40 @@ public abstract class Skill
     public string Name { get; protected set; }
     public bool IsLimited { get; protected set; }
     public int LimitedTimes { get; protected set; }
+    public string Description { get; protected set;  }
     public int UsedTimes { get; protected set; }
     public Player Owner { get; protected set;  }
     /// <summary>
     /// Set the owning player. Call after cloning a skill onto a hero (e.g. in Hero constructor).
     /// </summary>
     public void SetOwner(Player owner) { Owner = owner; }
-    protected Skill(string id, Player owner = null)
+    protected SkillDefine(string id, Player owner = null)
     {
         ID = id;
-        Init();                 // ← ALWAYS init at creation
+        Init();                 // ?? ALWAYS init at creation
         Owner = owner;
     }
-    //目前就只是从MonsterSkill里面寻找
-    protected void Init()
+    protected virtual void Init()
     {
-        //需要修改！！
-        SkillDataBase.Instance.MonsterSkillDic.TryGetValue(ID, out var skillDefine);
-        CD = skillDefine.CD;
+        // Base: reset runtime state. Data (CD, Costs, Name, etc.) is filled by derived Init() from JSON.
         CDProgress = 0;
-        Costs = skillDefine.Costs;
-        Name = skillDefine.Name;
-        IsLimited = skillDefine.IsLimited;
         UsedTimes = 0;
-        if (IsLimited)
-        {
-            LimitedTimes = skillDefine.LimitedTimes;
-        }
-        else
-        {
-            LimitedTimes = 0;
-        }
+        Costs = Costs ?? new List<int> { 0, 0, 0 };
+    }
+
+    /// <summary>
+    /// Applies data from a JSON-loaded define (SkillDefineData) into this instance.
+    /// Used by MonsterSkill/HeroSkill.Init() to complete from SkillDatabaseOrigin's Original* dictionaries.
+    /// </summary>
+    protected void ApplyDataFrom(SkillDefineOrigin data)
+    {
+        if (data == null) return;
+        CD = data.CD;
+        Name = data.Name ?? ID;
+        IsLimited = data.IsLimited;
+        LimitedTimes = data.LimitedTimes;
+        Description = data.Description;
+        Costs = data.Costs != null ? new List<int>(data.Costs) : new List<int> { 0, 0, 0 };
     }
     protected virtual bool IsAvailable(Player thisPlayer)
     {
@@ -62,10 +67,10 @@ public abstract class Skill
         if (CDProgress > 0)
             CDProgress--;
     }
-    //调用时，日志记录，并且进入CD
+    //??????????????????????CD
     private void Log(Player thisPlayer)
     {
-        PrintEvent.Instance.log += (thisPlayer.Name + "使用了" + Name + "\n");
+        PrintEvent.Instance.log += (thisPlayer.Name + "?????" + Name + "\n");
     }
     private void PayCosts(Player thisPlayer)
     {
@@ -88,7 +93,7 @@ public abstract class Skill
         return false;
     }
     protected virtual void Envoke(Player thisPlayer) { }
-    public void Copy(Skill target)
+    public void Copy(SkillDefine target)
     {
         var type = GetType(); // e.g. NuclearBomb, not just ActionDefine
 
@@ -126,18 +131,50 @@ public abstract class Skill
         }
     }
 
-    public Skill Clone()
+    public SkillDefine Clone()
     {
         // Use runtime type constructor instead of hardcoded ActionDefine
         var type = GetType();
-        var clone = (Skill)Activator.CreateInstance(type);
+        var clone = (SkillDefine)Activator.CreateInstance(type);
         Copy(clone);
         return clone;
     }
 }
 
-public abstract class ActiveSkill : Skill
+public abstract class ActiveSkill : SkillDefine
 {
     public ActiveSkill(string id) : base(id) { }
     public abstract void SkillEffect();
+}
+
+/// <summary>
+/// Base type for monster skills. Init() loads CD, Costs, Name, etc. from SkillDatabase.OriginalMonsterSkillDic.
+/// </summary>
+public class MonsterSkill : SkillDefine
+{
+    public MonsterSkill(string id, Player owner = null) : base(id, owner) { }
+
+    protected override void Init()
+    {
+        base.Init();
+        if (SkillDatabaseOrigin.Instance.OriginalMonsterSkillDic != null
+            && SkillDatabaseOrigin.Instance.OriginalMonsterSkillDic.TryGetValue(ID, out SkillDefineOrigin data))
+            ApplyDataFrom(data);
+    }
+}
+
+/// <summary>
+/// Base type for hero skills. Init() loads CD, Costs, Name, etc. from SkillDatabase.OriginalHeroSkillDic.
+/// </summary>
+public class HeroSkill : SkillDefine
+{
+    public HeroSkill(string id, Player owner = null) : base(id, owner) { }
+
+    protected override void Init()
+    {
+        base.Init();
+        if (SkillDatabaseOrigin.Instance?.OriginalHeroSkillDic != null
+            && SkillDatabaseOrigin.Instance.OriginalHeroSkillDic.TryGetValue(ID, out SkillDefineOrigin data))
+            ApplyDataFrom(data);
+    }
 }

@@ -242,7 +242,7 @@ public class TaieAlchemyFurnace : Relic
 
 
 //???
-public class NamelessBrokenSwordSkill : Skill
+public class NamelessBrokenSwordSkill : SkillDefine
 {
     public NamelessBrokenSwordSkill() : base("Nameless Broken Sword") { }
 }

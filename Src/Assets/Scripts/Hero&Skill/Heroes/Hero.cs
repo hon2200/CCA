@@ -4,19 +4,19 @@ using System.Collections.Generic;
 public class Hero
 {
     public string ID { get; set; }
-    public List<Skill> skills;
+    public List<SkillDefine> skills;
 
     public Hero(Player thisPlayer, HeroDefine heroDefine)
     {
         ID = heroDefine.ID;
-        skills = new List<Skill>();
+        skills = new List<SkillDefine>();
 
         // 添加英雄技能
         if (HeroDataBase.Instance.HeroDictionary.TryGetValue(heroDefine.ID, out var heroData))
         {
             foreach (var skillID in heroData.SkillIDList)
             {
-                if (SkillLibrary.Instance.skillDic.TryGetValue(skillID, out var skill))
+                if (SkillDatabase.Instance.skillDic.TryGetValue(skillID, out var skill))
                 {
                     skills.Add(skill.Clone());
                 }
@@ -36,7 +36,7 @@ public class Hero
     public Hero(Player thisPlayer, string heroID, List<string> skillList)
     {
         ID = heroID;
-        skills = new List<Skill>();
+        skills = new List<SkillDefine>();
 
         if (skillList == null)
         {
@@ -46,7 +46,7 @@ public class Hero
         // 添加英雄技能
         foreach (var skillID in skillList)
         {
-            if (SkillLibrary.Instance.skillDic.TryGetValue(skillID, out var skill))
+            if (SkillDatabase.Instance.skillDic.TryGetValue(skillID, out var skill))
             {
                 skills.Add(skill.Clone());
             }
@@ -65,7 +65,7 @@ public class Hero
     }
 
     //记得要用？调用防止Null
-    public T GetSkill<T>() where T : Skill
+    public T GetSkill<T>() where T : SkillDefine
     {
         foreach (var skill in skills)
         {
