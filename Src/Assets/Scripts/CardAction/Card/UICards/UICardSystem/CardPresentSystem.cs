@@ -1,0 +1,213 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
+using AYellowpaper.SerializedCollections;
+using UnityEngine.UI;
+
+//UI互相遮挡关系管理说明：
+
+/*
+ * 不要通过z方向管理，通过Canvas的Sorting Order（对UI元素生效）和
+ * 挂在Card上面的SortingGroup（对Sprite元素生效）进行管理
+ * 卡牌之间的Order差为10，卡牌内部Order以1的step跳跃
+ */
+
+//很不喜欢这里的引用，需要赋值Player1，但是Player1又是后面生成的...
+
+public class CardPresentSystem : MonoSingleton<CardPresentSystem>
+{
+    [SerializeField]
+    public SerializedDictionary<CardType, GameObject> CardMenu;
+    [SerializeField]
+    public SerializedDictionary<CardType, Button> MenuButtons;
+    [SerializeField]
+    public  SerializedDictionary<CardType, List<GameObject>> Cards_inType;
+    public Player player1;
+    //卡牌是否创建完毕
+    private bool CardReady = false;
+
+    //依据CardLiberary，按照类型创建卡牌
+    public void CreateCards()
+    {
+        //先对每个类别卡牌清零
+        foreach(var cards in Cards_inType)
+        {
+            foreach(var card in cards.Value)
+            {
+                Destroy(card);
+            }
+            cards.Value.Clear();
+        }
+        //开始创建卡牌
+        foreach(var card in CardLiberary.Instance.CardDictionary)
+        {
+            //如果行动不可用，则不创建
+            if (!player1.AvailableActions.Contains(card.Key))
+                continue;
+            //获得卡牌的actiondata
+            ActionDataBase.Instance.ActionDictionary.TryGetValue(card.Key, out var actionData);
+            if (actionData == null)
+                Debug.Assert(false, "Wrong Key" + card.Key);
+            //获得卡牌的类型所在的父物体
+            CardMenu.TryGetValue(card.Value.actionType, out var menu);
+            if (menu == null)
+                Debug.Assert(false, "Can't fine Menu");
+            var newCard = CreateCard(card.Value, menu.transform);
+            //加入分类管理的卡牌资源
+            Cards_inType.TryGetValue(card.Value.actionType, out var cards);
+            cards.Add(newCard);
+        }
+    }
+    //组织卡牌按扇形打开，具体实现下放到CardArranger类中
+    public void ArrangeCards()
+    {
+        foreach(var cards in Cards_inType)
+        {
+            CardArranger newCardArranger = new();
+            newCardArranger.handCards = cards.Value;
+            newCardArranger.ArrangeRadius();
+        }
+    }
+    //处理每一个MenuButton的Onclick
+    public void MenuButtonsReady()
+    {
+        foreach(var button in MenuButtons)
+        {
+            button.Value.onClick.AddListener(() =>
+            OpenPenal(button.Key));               
+        }
+    }
+    //检查卡牌是否可用
+    public void CheckCards()
+    {
+        if (player1 != null)
+        {
+            foreach (var cards_inType in Cards_inType)
+            {
+                foreach (var card in cards_inType.Value)
+                {
+                    var runTimeCard = card.GetComponent<RunTimeCard>();
+                    if (RuleCheck.isActionLegal(player1, runTimeCard.actionDefine)
+                        && RuleCheck.isActionAvailable(player1, runTimeCard.actionDefine))
+                        runTimeCard.isAvailable = true;
+                    else
+                        runTimeCard.isAvailable = false;
+                }
+            }
+        }
+    }
+
+    //根据Key键查找卡牌
+    public void FindCard(string key, out GameObject cardFinded)
+    {
+        cardFinded = null;
+        foreach(var cards_inType in Cards_inType)
+        {
+            foreach (var card in cards_inType.Value)
+            {
+                if (card.GetComponent<RunTimeCard>().actionDefine.ID == key)
+                    cardFinded = card;
+            }
+        }
+    }
+    public void CreateAndArrangeCards()
+    {
+        CreateCards();
+        ArrangeCards();
+        MenuButtonsReady();
+        OpenPenal(CardType.Supply);
+        CardReady = true;
+    }
+    public void Update()
+    {
+        if(CardReady)
+            CheckCards();
+    }
+    public GameObject CreateCard(CardTemplete cardTemplete, Transform parent)
+    {
+        var newCard = Instantiate(cardTemplete.prefab, parent);
+        newCard.name = cardTemplete.name;
+        //赋值Card组件
+        var card = newCard.GetComponent<RunTimeCard>();
+        ActionDataBase.Instance.ActionDictionary.TryGetValue(cardTemplete.ID, out var actionDefine);
+        card.actionDefine = actionDefine;
+        card.cardTemplete = cardTemplete;
+        //赋值CardUI组件
+        var cardUIText = newCard.GetComponent<CardUI>();
+        cardUIText.Initialize(cardTemplete);
+        return newCard;
+    }
+    //打开某一个卡牌菜单。
+    private void OpenPenal(CardType actionType)
+    {
+        foreach (var menu in CardMenu)
+        {
+            if (menu.Key != actionType)
+                menu.Value.SetActive(false);
+            else
+                menu.Value.SetActive(true);
+        }
+    }
+}
+
+//按次序扇形打开卡牌
+public class CardArranger
+{
+    public List<GameObject> handCards = new();
+    private Vector3 CenterPoint = new Vector3(0, -4f, 0);
+
+    public void ArrangeLine(float spacing = 1.5f, float yOffset = 1f)
+    {
+        int count = handCards.Count;
+        if (count == 0) return;
+
+        int order = 0;
+        // Calculate start X so cards are centered
+        float startX = CenterPoint.x - (spacing * (count - 1) / 2f);
+
+        for (int i = 0; i < count; i++)
+        {
+            var card = handCards[i];
+            // Position each card along the x-axis
+            Vector3 position = new Vector3(startX + i * spacing, CenterPoint.y+yOffset, 0f);
+            // Keep rotation flat
+            Quaternion rotation = Quaternion.identity;
+
+            order += 10;
+            card.transform.position = position;
+            card.transform.rotation = rotation;
+            card.GetComponent<CardUI>().PromoteLayerTo(order);
+        }
+    }
+    public void ArrangeRadius(float angle = 5.0f, float centerRadius = 16.0f)
+    {
+        var centerPoint = CenterPoint - new Vector3(0, centerRadius, 0);
+        var cardAngle = (handCards.Count - 1) * angle / 2;
+        int order = 0;
+        for (var i = 0; i < handCards.Count; ++i)
+        {
+            // Rotate.
+            var rotation = Quaternion.Euler(0, 0, cardAngle - i * angle);
+            // Move.
+            //高度值决定了卡牌的层级，但是UI的显示依然可能出问题
+            order += 10;
+            var position = CalculateCardPosition(cardAngle - i * angle, centerPoint, centerRadius);
+            //Give Value.
+            handCards[i].transform.position = position;
+            handCards[i].transform.rotation = rotation;
+            //PromoteLayer后面包括了对position的移动，所以要在这个后面执行
+            handCards[i].GetComponent<CardUI>().PromoteLayerTo(order);
+        }
+    }
+
+    private Vector3 CalculateCardPosition(float angle, Vector3 centerPoint, float centerRadius)
+    {
+        return new Vector3(
+            centerPoint.x - centerRadius * Mathf.Sin(Mathf.Deg2Rad * angle),
+            centerPoint.y + centerRadius * Mathf.Cos(Mathf.Deg2Rad * angle),
+            0.0f);
+    }
+}
