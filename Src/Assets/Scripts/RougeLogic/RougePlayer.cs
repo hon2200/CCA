@@ -1,20 +1,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RougePlayer : MonoBehaviour
+public class RougePlayer
 {
     public int coins;
-    public List<Relic> Relics;
+    public List<RelicDefine> Relics;
     public List<Hero> Heroes;
     public List<Potion> Potions;
     public int PotionMax;
 
-    private void Awake()
+    public RougePlayer()
     {
-        if (Relics == null) Relics = new List<Relic>();
+        Init();
+    }
+    public void Init()
+    {
+        if (Relics == null) Relics = new List<RelicDefine>();
         if (Heroes == null) Heroes = new List<Hero>();
         if (Potions == null) Potions = new List<Potion>();
         PotionMax = 3;
+        coins = 0;
     }
 
     #region Hero Management
@@ -241,13 +246,13 @@ public class RougePlayer : MonoBehaviour
     /// <summary>
     /// Obtain a relic and optionally pay a cost.
     /// </summary>
-    public bool GetRelic(Relic relic, int cost = 0, bool allowDuplicate = true)
+    public bool GetRelic(RelicDefine relic, int cost = 0, bool allowDuplicate = true)
     {
         if (relic == null)
             return false;
 
         if (Relics == null)
-            Relics = new List<Relic>();
+            Relics = new List<RelicDefine>();
 
         if (!allowDuplicate && HasRelic(relic.ID))
             return false;
@@ -265,7 +270,7 @@ public class RougePlayer : MonoBehaviour
     /// <summary>
     /// Lose a relic instance.
     /// </summary>
-    public bool LoseRelic(Relic relic)
+    public bool LoseRelic(RelicDefine relic)
     {
         if (Relics == null || relic == null)
             return false;
@@ -281,7 +286,7 @@ public class RougePlayer : MonoBehaviour
         if (Relics == null || string.IsNullOrEmpty(relicID))
             return false;
 
-        Relic target = null;
+        RelicDefine target = null;
         foreach (var relic in Relics)
         {
             if (relic != null && relic.ID == relicID)

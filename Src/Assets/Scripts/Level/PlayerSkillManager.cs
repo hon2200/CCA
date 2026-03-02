@@ -414,7 +414,7 @@ public class PlayerSkillManager : MonoSingleton<PlayerSkillManager>
         }
         
         SkillLoadingPanel.SetActive(false);
-        BattleManager.Instance.OnStartGame("Level");
+        //BattleManager.Instance.OnStartGame("Level");
     }
     
     /// <summary>

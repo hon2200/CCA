@@ -18,11 +18,19 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
     public GameObject AIPrefab;
     public GameObject HumanPrefab;
-    public Dictionary<int, Player> Players;
-    public List<HumanPlayer> HumanPlayers { get; private set; }
-    public List<AIPlayer> AIPlayers { get; private set; }
-    public List<Player> FriendlyPlayers { get; private set; }
-    public List<Player> HostilePlayers { get;private set;  }
+
+    private Dictionary<int, Player> _players = new Dictionary<int, Player>();
+    private List<HumanPlayer> _humanPlayers = new List<HumanPlayer>();
+    private List<AIPlayer> _aiPlayers = new List<AIPlayer>();
+    private List<Player> _friendlyPlayers = new List<Player>();
+    private List<Player> _hostilePlayers = new List<Player>();
+
+    /// <summary>Read-only. Modify only via AddPlayer (Heroes path) or Level creation methods.</summary>
+    public IReadOnlyDictionary<int, Player> Players => _players;
+    public IReadOnlyList<HumanPlayer> HumanPlayers => _humanPlayers;
+    public IReadOnlyList<AIPlayer> AIPlayers => _aiPlayers;
+    public IReadOnlyList<Player> FriendlyPlayers => _friendlyPlayers;
+    public IReadOnlyList<Player> HostilePlayers => _hostilePlayers;
     public void Start()
     {
         ReadSpacingData();
@@ -131,7 +139,8 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         newPlayer.Initialize(ID_inGame, aIDefine, isFriend, levelDefine);
         ArrangeNewPlayer(newPlayer);
         NextPlayerID++;
-        Players.Add(newPlayer.ID_inGame, newPlayer);
+        _players.Add(newPlayer.ID_inGame, newPlayer);
+        AddPlayerToCollections(newPlayer, isFriend, isHuman: false);
         return newPlayer;
     }
     private Player CreateHuman_BasedOnLevel(LevelDefine level)
@@ -143,19 +152,70 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         newPlayer.InitializePlayer(ID_inGame, level);
         InitializeHumanPlayerSpace(newPlayer);
         NextPlayerID++;
-        Players.Add(newPlayer.ID_inGame, newPlayer);
+        _players.Add(newPlayer.ID_inGame, newPlayer);
+        AddPlayerToCollections(newPlayer, isFriend: true, isHuman: true);
         return newPlayer;
     }
     #endregion
 
     #region Heroes Things
+    /// <summary>
+    /// Adds a player to Players and the appropriate Human/AI and Friendly/Hostile lists. Call only from inside PlayerManager.
+    /// </summary>
+    private void AddPlayerToCollections(Player player, bool isFriend, bool isHuman)
+    {
+        _players[player.ID_inGame] = player;
+        if (isHuman)
+            _humanPlayers.Add((HumanPlayer)player);
+        else
+            _aiPlayers.Add((AIPlayer)player);
+        if (isFriend)
+            _friendlyPlayers.Add(player);
+        else
+            _hostilePlayers.Add(player);
+    }
+
+    /// <summary>
+    /// Creates one player from hero data and adds them to Players and the correct Human/AI and Friendly/Hostile lists.
+    /// </summary>
+    public Player AddPlayer(bool isFriend, bool isHuman, HeroDefine heroDefine)
+    {
+        int id = NextPlayerID++;
+        if (isHuman)
+        {
+            var newPlayerObject = Instantiate(HumanPrefab, this.transform);
+            newPlayerObject.name = "Player" + id;
+            var newPlayer = newPlayerObject.GetComponent<HumanPlayer>();
+            newPlayer.InitializePlayer(id, heroDefine);
+            InitializeHumanPlayerSpace(newPlayer);
+            AddPlayerToCollections(newPlayer, isFriend, isHuman: true);
+            return newPlayer;
+        }
+        else
+        {
+            var newPlayerObject = Instantiate(AIPrefab, this.transform);
+            newPlayerObject.name = "Player" + id;
+            var newPlayer = newPlayerObject.GetComponent<AIPlayer>();
+            newPlayer.Initialize(id, heroDefine);
+            newPlayer.isFriend = isFriend;
+            ArrangeNewPlayer(newPlayer);
+            AddPlayerToCollections(newPlayer, isFriend, isHuman: false);
+            return newPlayer;
+        }
+    }
+
     public void CreatingPlayers_BasedOnGameSetting_Heroes()
     {
         if (GameSetting.Instance == null)
         {
             return;
         }
-        Players = new Dictionary<int, Player>();
+        _players.Clear();
+        _humanPlayers.Clear();
+        _aiPlayers.Clear();
+        _friendlyPlayers.Clear();
+        _hostilePlayers.Clear();
+
         List<HeroDefine> heroDefines = new();
 
         foreach (var heroID in GameSetting.Instance.HeroIDDictionary)
@@ -164,43 +224,17 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             if (heroDefine != null)
                 heroDefines.Add(heroDefine);
             else
-                Debug.Assert(false, "Can't fine Hero");
+                Debug.Assert(false, "Can't find Hero");
         }
         int totalNumber = heroDefines.Count;
-        var newHumanPlayer = CreateHumanHero(1, heroDefines[0]);
-        Players.Add(1, newHumanPlayer);
+        if (totalNumber == 0) return;
+
+        AddPlayer(isFriend: true, isHuman: true, heroDefines[0]);
         for (int i = 2; i <= totalNumber; i++)
         {
-            var newPlayer = CreateAIHero(i, heroDefines[i - 1]);
-            Players.Add(i, newPlayer);
+            AddPlayer(isFriend: false, isHuman: false, heroDefines[i - 1]);
         }
         AlivePlayerNumber = totalNumber;
-        //MyLog.PrintLoadedDictionary(Players, "MyLog/Loading/PlayerTable_Debug.txt");
-    }
-    private Player CreateAIHero(int ID_inGame, HeroDefine heroDefine)
-    {
-
-        var newPlayerObject = Instantiate(AIPrefab, this.transform);
-        newPlayerObject.name = "Player" + ID_inGame;
-
-        var newPlayer = newPlayerObject.GetComponent<AIPlayer>();
-        newPlayer.Initialize(ID_inGame, heroDefine);
-        ArrangeNewPlayer(newPlayer);
-        Players.Add(newPlayer.ID_inGame, newPlayer);
-        return newPlayer;
-    }
-    private Player CreateHumanHero(int ID_inGame, HeroDefine heroDefine)
-    {
-
-        var newPlayerObject = Instantiate(HumanPrefab, this.transform);
-        newPlayerObject.name = "Player" + ID_inGame;
-
-        var newPlayer = newPlayerObject.GetComponent<HumanPlayer>();
-        newPlayer.InitializePlayer(ID_inGame, heroDefine);
-        InitializeHumanPlayerSpace(newPlayer);
-        Players.Add(newPlayer.ID_inGame, newPlayer);
-        HumanPlayers.Add(newPlayer);
-        return newPlayer;
     }
     #endregion
     #region Spacing Things
@@ -261,17 +295,21 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     }
     private int ClearDeadPeople()
     {
-        var deadPlayers = Players
+        var deadPlayers = _players
                         .Where(p => p.Value.status.life.Value == LifeStatus.Death)
                         .Select(p => p.Key)
                         .ToList(); // Make a copy of the keys to remove
 
         foreach (var id in deadPlayers)
         {
-            if (Players.TryGetValue(id, out var player))
+            if (_players.TryGetValue(id, out var player))
             {
                 Destroy(player.gameObject);
-                Players.Remove(id);
+                _players.Remove(id);
+                _humanPlayers.Remove(player as HumanPlayer);
+                _aiPlayers.Remove(player as AIPlayer);
+                _friendlyPlayers.Remove(player);
+                _hostilePlayers.Remove(player);
                 // Find its spot key(if any)
                 Vector2? foundKey = null;
                 if(player is AIPlayer ai && ai.isFriend)
@@ -302,19 +340,23 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         }
 
         // Count remaining non-human players
-        int remains = Players.Values.Count(p => p.playerType != PlayerType.Human);
+        int remains = _players.Values.Count(p => p.playerType != PlayerType.Human);
         return remains;
     }
 
     private void ClearAll()
     {
-        if (Players == null)
+        if (_players == null)
         {
-            Players = new();
+            _players = new Dictionary<int, Player>();
+            _humanPlayers = new List<HumanPlayer>();
+            _aiPlayers = new List<AIPlayer>();
+            _friendlyPlayers = new List<Player>();
+            _hostilePlayers = new List<Player>();
             return;
         }
 
-        List<Player> playersSnapshot = Players.Values.ToList(); // snapshot to avoid modification issues
+        List<Player> playersSnapshot = _players.Values.ToList(); // snapshot to avoid modification issues
 
         foreach (var player in playersSnapshot)
         {
@@ -351,9 +393,12 @@ public class PlayerManager : MonoSingleton<PlayerManager>
                 availablePositions_friend[foundKey.Value] = null;
         }
 
-        // Clear player dictionary
-        Players.Clear();
-        HumanPlayers.Clear();
+        // Clear player dictionary and lists
+        _players.Clear();
+        _humanPlayers.Clear();
+        _aiPlayers.Clear();
+        _friendlyPlayers.Clear();
+        _hostilePlayers.Clear();
     }
     #endregion
 }

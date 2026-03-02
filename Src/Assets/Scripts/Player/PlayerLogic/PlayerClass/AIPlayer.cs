@@ -67,6 +67,7 @@ public class AIPlayer : Player
         //赋值诚实
         Honest = new();
         Honest.Set(characterDefine.IniHonesty);
+        preferedAction = new List<string>();
         this.isFriend = false;
         IntendedType = new();
         //警戒：情绪值对受伤应激激动

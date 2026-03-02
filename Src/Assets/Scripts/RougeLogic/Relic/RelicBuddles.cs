@@ -4,7 +4,7 @@ using System.Linq;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
-public class DesertEagle : Relic, IPhaseExitHandler
+public class DesertEagle : RelicDefine, IPhaseExitHandler
 {
     public DesertEagle() : base("IMI Desert Eagle") { }
     public void ExitingPhase(Phase phase)
@@ -26,7 +26,7 @@ public class DesertEagle : Relic, IPhaseExitHandler
     }
 }
 
-public class DragonSword : Relic, IPhaseExitHandler
+public class DragonSword : RelicDefine, IPhaseExitHandler
 {
     public DragonSword() : base ("Longquan Sword") { }
     public void ExitingPhase(Phase phase)
@@ -48,7 +48,7 @@ public class DragonSword : Relic, IPhaseExitHandler
     }
 }
 
-public class SummoningScripture : Relic, IPhaseEnterHandler
+public class SummoningScripture : RelicDefine, IPhaseEnterHandler
 {
     public SummoningScripture() : base("Summoning Scripture") { }
     public void OnPhase(Phase phase)
@@ -61,7 +61,7 @@ public class SummoningScripture : Relic, IPhaseEnterHandler
     }
 }
 
-public class NamelessBrokenSword : Relic, IPhaseEnterHandler
+public class NamelessBrokenSword : RelicDefine, IPhaseEnterHandler
 {
     public NamelessBrokenSword() : base("Nameless Broken Sword") { }
     public void OnPhase(Phase phase)
@@ -83,7 +83,7 @@ public class NamelessBrokenSword : Relic, IPhaseEnterHandler
     }
 }
 
-public class HolyLightProtection : Relic, IPhaseEnterHandler
+public class HolyLightProtection : RelicDefine, IPhaseEnterHandler
 {
     public HolyLightProtection() : base("Holy Light Protection") { }
     public bool isUsed = false;
@@ -99,7 +99,7 @@ public class HolyLightProtection : Relic, IPhaseEnterHandler
     }
 }
 
-public class IronHat : Relic, IDamagedHandler
+public class IronHat : RelicDefine, IDamagedHandler
 {
     public IronHat() : base("Iron Hat") { }
     public void OnDamaged(Player attacker, Player victim, int amount, out int block)
@@ -111,7 +111,7 @@ public class IronHat : Relic, IDamagedHandler
     }
 }
 
-public class ChaosHeart : Relic, IDamagingHandler
+public class ChaosHeart : RelicDefine, IDamagingHandler
 {
     public ChaosHeart() : base("Chaos Heart") { }
     public void OnDamaging(Player attacker, Player victim, int amount, out int increasedDamage)
@@ -123,7 +123,7 @@ public class ChaosHeart : Relic, IDamagingHandler
     }
 }
 
-public class AmmoProductionLine : Relic, IActionModifier
+public class AmmoProductionLine : RelicDefine, IActionModifier
 {
     public AmmoProductionLine() : base("Ammo Production Line"){}
     public void ModifyAction(Player player_ = null)
@@ -141,7 +141,7 @@ public class AmmoProductionLine : Relic, IActionModifier
     }
 }
 
-public class AutoPress : Relic, IActionModifier
+public class AutoPress : RelicDefine, IActionModifier
 {
     public AutoPress() : base("Auto Press") { }
     public void ModifyAction(Player player_ = null)
@@ -159,7 +159,7 @@ public class AutoPress : Relic, IActionModifier
     }
 }
 
-public class ShockGlove : Relic, IStunningHandler
+public class ShockGlove : RelicDefine, IStunningHandler
 {
     public ShockGlove(): base("Shock Glove") { }
     public void OnStunning(Player attacker, Player victim)
@@ -168,7 +168,7 @@ public class ShockGlove : Relic, IStunningHandler
     }
 }
 
-public class EarthbreakerHammer : Relic, IActionModifier
+public class EarthbreakerHammer : RelicDefine, IActionModifier
 {
     public EarthbreakerHammer() : base("Earthbreaker Hammer") { }
     public void ModifyAction(Player player_ = null)
@@ -187,7 +187,7 @@ public class EarthbreakerHammer : Relic, IActionModifier
     }
 }
 
-public class DepletedUraniumRose : Relic, IDeathHandler
+public class DepletedUraniumRose : RelicDefine, IDeathHandler
 {
     public DepletedUraniumRose() : base("Depleted Uranium Rose") { }
     public bool OnDeath(Player player)
@@ -203,7 +203,7 @@ public class DepletedUraniumRose : Relic, IDeathHandler
     }
 }
 
-public class UndyingHeart : Relic, IBattleEndHandler
+public class UndyingHeart : RelicDefine, IBattleEndHandler
 {
     public UndyingHeart() : base("Undying Heart") { }
     public void OnBattleEnd(Player player)
@@ -215,7 +215,7 @@ public class UndyingHeart : Relic, IBattleEndHandler
     }
 }
 
-public class MorticianLicense : Relic, IBattleEndHandler, IDeathHandler
+public class MorticianLicense : RelicDefine, IBattleEndHandler, IDeathHandler
 {
     public MorticianLicense() : base("Morticien License") { counts.Add(0); }
     public bool OnDeath(Player player)
@@ -230,7 +230,7 @@ public class MorticianLicense : Relic, IBattleEndHandler, IDeathHandler
     }
 }
 
-public class TaieAlchemyFurnace : Relic
+public class TaieAlchemyFurnace : RelicDefine
 {
     public TaieAlchemyFurnace() : base("Taie's Alchemy Furnace") { }
     public override void OnPickup()

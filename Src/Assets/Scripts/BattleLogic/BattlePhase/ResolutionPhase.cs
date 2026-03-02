@@ -56,25 +56,6 @@ public class ResolutionPhase : Phase
 
         //PrintResult_Debug();
     }
-
-    //????Buff?????bug??
-    public void PrintResult_Debug()
-    {
-        if (BattleManager.Instance.Turn.Value == 1)
-        {
-            MyLog.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
-                new string[] { "ID_inGame", "status" }, "Log/InGame/PlayerStatus.txt");
-            MyLog.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
-                "action", "Log/InGame/PlayerAction.txt");
-        }
-        else
-        {
-            MyLog.PrintSpecificPropertiesInDictionary(PlayerManager.Instance.Players,
-                new string[] { "ID_inGame", "status" }, "Log/InGame/PlayerStatus.txt", false);
-            MyLog.PrintNestedPropertyInDictionary(PlayerManager.Instance.Players,
-                "action", "Log/InGame/PlayerAction.txt", false);
-        }
-    }
     public void KnockofDeath()
     {
         var playersSnapshot = PlayerManager.Instance.Players.Values.ToList();

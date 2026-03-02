@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TMPro;
+using UnityEditor.VersionControl;
 using static UnityEditor.ShaderData;
 
 class BattleManager: MonoSingleton<BattleManager>
@@ -12,8 +13,6 @@ class BattleManager: MonoSingleton<BattleManager>
     public bool isRunning = false;
     public Action OnDefeated { get; set; }
     public Action OnWinning { get; set; }
-    //已经创建好游戏玩家的情况下，要重新开始需要进行的内容
-    public Action<string> OnStartGame { get; set; }
     //新的一波来袭
     public Action OnNewWave;
     public TextMeshPro Text;
@@ -23,12 +22,14 @@ class BattleManager: MonoSingleton<BattleManager>
     //初始化PhaseList
     private void Start()
     {
-        PhaseList = new();
-        PhaseList.Add(new StartPhase());
-        PhaseList.Add(new ActionPhase());
-        PhaseList.Add(new ChasePhase());
-        PhaseList.Add(new ResolutionPhase());
-        PhaseList.Add(new EndPhase());
+        PhaseList = new()
+        {
+            new StartPhase(),
+            new ActionPhase(),
+            new ChasePhase(),
+            new ResolutionPhase(),
+            new EndPhase()
+        };
         Turn = new();
         Turn.OnValueChanged += (oldVal, newVal, message) =>
         {
@@ -39,24 +40,16 @@ class BattleManager: MonoSingleton<BattleManager>
             PlayerManager.Instance.CreateCurrentLevelWave();
             StartRunPhase();
         };
-
-        OnStartGame += (string message) =>
-        {
-            Turn.Clear();
-            PlayerManager.Instance.NextPlayerID = 1;
-            if (message == "Hero") 
-                PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
-            else if (message == "Level")
-                PlayerManager.Instance.CreateCurrentLevelWave();
-            StartRunPhase();
-        };
         OnDefeated += () => isRunning = false;
         OnWinning += () => isRunning = false;
     }
     //这个函数好像只给那个按钮用
     public void StartGame(string Type)
     {
-        OnStartGame?.Invoke(Type);
+        Turn.Clear();
+        PlayerManager.Instance.NextPlayerID = 1;
+        PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
+        StartRunPhase();
     }
     public void StartRunPhase()
     {
