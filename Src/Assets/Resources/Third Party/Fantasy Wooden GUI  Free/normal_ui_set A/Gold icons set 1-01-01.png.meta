@@ -244,8 +244,8 @@ TextureImporter:
       name: Gold icons set 1-01-01_5
       rect:
         serializedVersion: 2
-        x: 2256
-        y: 1457
+        x: 5641
+        y: 5869
         width: 447
         height: 419
       alignment: 0
@@ -265,12 +265,12 @@ TextureImporter:
       name: Gold icons set 1-01-01_6
       rect:
         serializedVersion: 2
-        x: 4880
-        y: 5916
-        width: 285
-        height: 314
+        x: 6516
+        y: 5881
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

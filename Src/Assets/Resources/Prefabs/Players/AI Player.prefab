@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &793676380564769790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8223913376671817987
 RectTransform:
   m_ObjectHideFlags: 0
@@ -732,6 +732,10 @@ PrefabInstance:
       propertyPath: UIText._serializedList.Array.data[8].Value
       value: 
       objectReference: {fileID: 6658138746605266879}
+    - target: {fileID: 1635785316980288246, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
+      propertyPath: targetPlayer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2879334617743548941, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: m_Name
       value: AI Player
