@@ -400,10 +400,9 @@ def main():
         # 默认转换逻辑
         excel_to_json_Dictionary("Tables/Space.xlsx","Data")
         excel_to_json_Dictionary("Tables/ActionDefine.xlsx","Data")
-        excel_to_json_Dictionary("Tables/Hero.xlsx","Data")
         excel_to_json_Dictionary("Tables/Levels.xlsx","Data")
         excel_to_json_2dArray("Tables/Versus.xlsx","Data")
-        excel_to_json_Dictionary("Tables/Skill&Buff.xlsx","Data")
+        excel_to_json_Dictionary("Tables/Hero&Enemy.xlsx","Data")
         excel_to_json_Dictionary("Tables/RougeMap.xlsx","Data")
         excel_to_json_Dictionary("Tables/Relic.xlsx","Data")
 

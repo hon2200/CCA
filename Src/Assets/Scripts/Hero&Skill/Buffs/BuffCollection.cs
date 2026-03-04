@@ -1,5 +1,7 @@
-using UnityEngine;
 using System;
+using System.Collections.Generic;
+using UnityEngine;
+using static BuffOperator;
 
 //All The Buffs
 public class Stunned : Buff, IPhaseEnterHandler
@@ -48,6 +50,41 @@ public class Invincible : Buff
 {
     public Invincible(int value, Player thisPlayer) : base("Invincible", value, false, thisPlayer) { }
 }
+
+public class DamagingOperator : BuffOperator, IDamagingHandler
+{
+    public DamagingOperator(List<Step> steps, Player player) : base("Damaging Operator", steps, player) { }
+    public DamagingOperator(Step step, Player player) : base("Damaging Operator", step, player) { }
+    public void OnDamaging(Player attacker, Player victim, int damage, out int outcome)
+    {
+        outcome = ApplyOperatorInt(damage);
+    }
+}
+
+public class DamagedOperator : BuffOperator, IDamagedHandler
+{
+    public DamagedOperator(List<Step> steps, Player player) : base("Damaged Operator", steps, player) { }
+    public DamagedOperator(Step step, Player player) : base("Damaged Operator", step, player) { }
+    public void OnDamaged(Player attacker, Player victim, int damage, out int outcome)
+    {
+        outcome = ApplyOperatorInt(damage);
+    }
+}
+
+public class AttackingLevelOperator : BuffOperator, ICombatHandler
+{
+    public AttackingLevelOperator(List<Step> steps, Player player) : base("Attacking Level Operator", steps, player) { }
+    public AttackingLevelOperator(Step step, Player player) : base("Attacking Level Operator", step, player) { }
+    public void OnCombatEvent(CombatEvent combatEvent)
+    {
+        if(combatEvent.Type == CombatEventType.Attacking)
+        {
+            combatEvent.Attack.Level = ApplyOperatorFloat(combatEvent.Attack.Level);
+        }
+    }
+}
+
+
 
 /*public class Bleeding : Buff, IResolutionHandler
 {

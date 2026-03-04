@@ -1,0 +1,1178 @@
+Dict 内容 (Count: 84)
+====================================
+Key: Molten Cast
+
+  ID:     Molten Cast
+  Name:     熔铸
+  IsLimited:     True
+  LimitedTimes:     1
+  Description:     第9回合，你击杀场上所有存活的青铜小鬼，并获得它们的资源，你每击杀一个青铜小鬼，你的伤害*2，攻击力+0.5。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Deathbound
+
+  ID:     Deathbound
+  Name:     殉亡
+  IsLimited:     True
+  LimitedTimes:     1
+  Description:     青铜镇守者死亡时，你也死亡。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Sow
+
+  ID:     Sow
+  Name:     播种
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     从第2回合起每隔3回合，你失去3点血量，召唤两个小树灵。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Lush Growth
+
+  ID:     Lush Growth
+  Name:     枝繁叶茂
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     若你连续4回合未受到伤害，你回复5点血量，然后重置此技能计数。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Rapid Growth
+
+  ID:     Rapid Growth
+  Name:     快速生长
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     回合结束时，你的伤害+1（可叠加）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Tsunami
+
+  ID:     Tsunami
+  Name:     海啸
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     第5回合起每5回合，所有有可用资源的无形之水会对同一目标发动攻击，且此次攻击伤害*2。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Scorched Oblivion
+
+  ID:     Scorched Oblivion
+  Name:     焚烧殆尽
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你第一次补给时获得10个"焚"标记，每回合结束时你失去一个"焚"标记，当你击杀一名角色时你获得3个"焚"标记。每拥有一个"焚"标记，你的伤害+1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Fertile Blessing
+
+  ID:     Fertile Blessing
+  Name:     丰壤祝福
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你造成一次伤害后，你可以获得一个伤害护盾（抵消一次伤害），该护盾可叠加。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Return to Earth
+
+  ID:     Return to Earth
+  Name:     回归大地
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你对一名角色造成伤害时，若其血量小于自身血量上限的1/3，你直接将其击杀。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Miasma
+
+  ID:     Miasma
+  Name:     瘴气
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     第3回合，你对全体敌方成员施加一层"尸毒"标记。当你对其他角色造成伤害时令其获得一层"尸毒"标记，当拥有"尸毒"标记的角色攻击你且未对你造成伤害时你可令其获得一个标记，当拥有标记的角色对你造成伤害时其失去所有标记。回合结束时，你对拥有n个标记的角色造成n点伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: City Burn
+
+  ID:     City Burn
+  Name:     焚城
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     第3回合起的每一个回合中，没有消耗资源的其他角色均受到来源于你的1点伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Conqueror
+
+  ID:     Conqueror
+  Name:     征服者
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     奇数回合，你的攻击造成的伤害*4，攻击力+0.5。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Invader
+
+  ID:     Invader
+  Name:     侵略者
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     偶数回合，你造成伤害时掠夺目标的一半资源（向下取整）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Magnate
+
+  ID:     Magnate
+  Name:     巨贾
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你开局拥有子弹20，剑10。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Slayer
+
+  ID:     Slayer
+  Name:     斩杀者
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你对敌方角色造成伤害时，若其剩余血量不大于n/3，你将其斩杀。（n为你们的资源数之差）
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Scorched Earth
+
+  ID:     Scorched Earth
+  Name:     赤地千里
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你攻击时，场上所有其他角色的补给无效。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Mirage
+
+  ID:     Mirage
+  Name:     虚像
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你使用"过来"时，最多受到5点伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Death Incarnate
+
+  ID:     Death Incarnate
+  Name:     死亡化身
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     第4回合起，你每隔4回合进入一次"生命收割"状态。"生命收割"状态下你不受到任何伤害，且伤害*4。该状态持续3回合。若你在一次"生命收割"状态下未能击杀任何目标，你下回合眩晕。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Clear Mirror
+
+  ID:     Clear Mirror
+  Name:     明镜
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的防御拥有反弹效果。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Encore
+
+  ID:     Encore
+  Name:     重演
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你造成的伤害+n（n为你上次受到的伤害值）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Death Sense
+
+  ID:     Death Sense
+  Name:     死亡感应
+  IsLimited:     True
+  LimitedTimes:     1
+  Description:     限定技，若正常判定下你将要死亡，你可以使用一次"逆转决策"。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Critical Strike
+
+  ID:     Critical Strike
+  Name:     会心
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你的刀剑攻击命中时发动，你的下次攻击基础攻击力为10且无视一切防御和反弹效果，若此次攻击发动时目标使用了"挑衅"，则其不受到任何伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Sword Momentum
+
+  ID:     Sword Momentum
+  Name:     剑势
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你每造成一次伤害，都可获得一层"剑势"，每层"剑势"使你的攻击力+1，且刀剑攻击可以额外执行一次。当你受到伤害时，你的剑势清零。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Unattainable
+
+  ID:     Unattainable
+  Name:     求不得
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     若你最近的3次攻击都未对敌方单位造成伤害，你眩晕。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Letting Go
+
+  ID:     Letting Go
+  Name:     断舍离
+  IsLimited:     True
+  LimitedTimes:     1
+  Description:     限定技，当你的血量值降低到10以下，你的下次攻击消耗你的所有子弹和（m-6）把剑，且此次攻击的攻击力和伤害均+n。（m为你当前的刀剑数，n为你此次攻击消耗的资源。）
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Magic Bullet
+
+  ID:     Magic Bullet
+  Name:     魔弹
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你开局拥有6颗"魔弹"，你的每次子弹攻击会消耗一颗"魔弹"。若你一次消耗了魔弹的攻击成功命中了敌方目标，则你直接将其击杀。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Demonic Rite
+
+  ID:     Demonic Rite
+  Name:     恶魔祭礼
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的第7n次子弹攻击拥有"恶魔祭品"效果，若此次攻击命中敌方目标，则你获得6颗"魔弹"；若此次攻击被反弹，则反弹伤害为你当前血量的一半（向上取整）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Divine Blade
+
+  ID:     Divine Blade
+  Name:     神锋
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的刀剑攻击造成的伤害*n（n为该攻击消耗的刀剑数）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Shared Fate
+
+  ID:     Shared Fate
+  Name:     同命
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你的同伴受到伤害时，你令此伤害减半（向下取整），同时你受到等量伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Tempered Edge
+
+  ID:     Tempered Edge
+  Name:     淬刃
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的刀剑攻击可以指定全体敌方单位为目标，且攻击力+1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Benediction
+
+  ID:     Benediction
+  Name:     庇佑
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当干将与莫邪造成伤害时，你回复等量的血量。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Vengeance
+
+  ID:     Vengeance
+  Name:     复仇
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当干将与莫邪都死亡时，你失去【庇佑】，获得【神锋】和【淬刃】。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Mephisto's Pact
+
+  ID:     Mephisto's Pact
+  Name:     梅菲斯特的契约
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你每回合最多受到1点伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Fallen Striver
+
+  ID:     Fallen Striver
+  Name:     堕落的进取者
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     若本回合场上进行补给的角色为多数，你下回合拥有【寻欢】。若场上进行攻击的角色为多数，你下回合拥有技能【好斗】。若场上防御的角色为多数，你下回合拥有技能【安逸】。若场上进行特殊行动的角色为多数，你下回合拥有技能【求爱】。若场上进行每类行动的角色数相同，你下回合拥有技能【求知】。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Pleasure Seeking
+
+  ID:     Pleasure Seeking
+  Name:     寻欢
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你因补给获得的资源*3。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Combativeness
+
+  ID:     Combativeness
+  Name:     好斗
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你造成的伤害*3，攻击力+1.5。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Ease
+
+  ID:     Ease
+  Name:     安逸
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你可以使用2种防御，且若你如此做，视为你额外使用了一次"过来"。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Courtship
+
+  ID:     Courtship
+  Name:     求爱
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你造成伤害时，你可以获取对方3个资源（子弹优先）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Knowledge Seeking
+
+  ID:     Knowledge Seeking
+  Name:     求知
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你其他技能中的基础数值+1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Collapse
+
+  ID:     Collapse
+  Name:     崩坏
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你是场上血量最多的角色时，你每回合失去2点血量。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Hell Gather
+
+  ID:     Hell Gather
+  Name:     地狱集结
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     每隔5回合，你召唤3个堕落天使。场上最多同时存在7个堕落天使。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Desperate Struggle
+
+  ID:     Desperate Struggle
+  Name:     奋不顾身
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你的血量小于20时，你失去【地狱集结】，获得【你死我活】。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Life or Death
+
+  ID:     Life or Death
+  Name:     你死我活
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     当你造成伤害时，你失去一半的血量（向下取整），对目标额外造成2n点伤害（n为你失去的血量）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Deceptive Trick
+
+  ID:     Deceptive Trick
+  Name:     诡异戏法
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     敌方英雄每进行一次攻击，你的伤害+1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Rampage Stomp
+
+  ID:     Rampage Stomp
+  Name:     冲撞践踏
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     敌方英雄每进行一次防御，你的伤害+1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Flying Flower
+
+  ID:     Flying Flower
+  Name:     飞花剑
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你每造成一次伤害，获得一个"飞花"标记，在场上召唤一名"剑冢"（最多8个）。每个"飞花"标记使你的攻击力+0.5。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Flower Farewell
+
+  ID:     Flower Farewell
+  Name:     花辞树
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的血量不大于7时，你摧毁场上的所有"剑冢"，失去所有"飞花"标记，每个被摧毁的剑冢使你的伤害+1，受伤-1，且此回合起你每回合失去1点体力。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Silence
+
+  ID:     Silence
+  Name:     沉默
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你不能补给和攻击。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Totem Call
+
+  ID:     Totem Call
+  Name:     图腾召唤
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     每三回合随机召唤一个图腾，场上有空余格子时为低攻击欲望，场上没有空余格子时为高攻击欲望。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Devotion
+
+  ID:     Devotion
+  Name:     虔诚
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     受到图腾的Buff翻倍。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Rebirth
+
+  ID:     Rebirth
+  Name:     涅槃
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你死亡后以一半的血量复活，并获得等于复活后血量数的"焚"标记。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Emberize
+
+  ID:     Emberize
+  Name:     化烬
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你对一名单位造成伤害后，可获得其一发子弹。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Fabrication
+
+  ID:     Fabrication
+  Name:     罗织
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你开局获得n层伤害护盾（n为玩家拥有的装备总数）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Armor Forging
+
+  ID:     Armor Forging
+  Name:     铸甲
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你每3回合给除你以外的所有友方单位增加n点护甲（n为玩家拥有的装备总数）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Tempering
+
+  ID:     Tempering
+  Name:     百炼
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的伤害+n。（n为玩家拥有的升级卡牌总数）
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Blade Forging
+
+  ID:     Blade Forging
+  Name:     铸刃
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你每3回合令除你以外的所有友方单位下次攻击伤害+1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Potion Stockpiling
+
+  ID:     Potion Stockpiling
+  Name:     药品囤积
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你开局拥有n发子弹，n把剑（n为玩家拥有的一次性道具总数）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Potion Rationing
+
+  ID:     Potion Rationing
+  Name:     药品配给
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你每3回合令除你以外的所有友方单位获得剑1，子弹1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Golden Vault
+
+  ID:     Golden Vault
+  Name:     王之财宝
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     锁定技，你拥有无限资源。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Divine Pride
+
+  ID:     Divine Pride
+  Name:     王之傲慢
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     锁定技，你第一回合无法攻击，你无法受到负面效果控制，挑衅对你无效，且你无视本回合受到你伤害的角色对你造成的伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Heavenly Punishment
+
+  ID:     Heavenly Punishment
+  Name:     天罚
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     每20回合，你对敌方场上的所有单位造成20点伤害。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Cicada Shell
+
+  ID:     Cicada Shell
+  Name:     金蝉脱壳
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你死亡时，你在当前拥有资源最多的士兵雕像身上重生，血量不变，眩晕一回合。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Ferocity
+
+  ID:     Ferocity
+  Name:     凶暴
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你造成的伤害*2。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Revival
+
+  ID:     Revival
+  Name:     复苏
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你每受到一次伤害，你造成的伤害+1。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Redemption
+
+  ID:     Redemption
+  Name:     救赎
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     第10回合，你死亡，并令所有未死亡的己方单位回满血量，并净化所有负面效果。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Silent Kill
+
+  ID:     Silent Kill
+  Name:     默杀
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你第n次造成伤害时可以给目标叠加n个"凶"标记。拥有"凶"标记的角色每回合失去n点资源和一个"凶"标记。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Wolf Howl
+
+  ID:     Wolf Howl
+  Name:     狼嚎
+  IsLimited:     True
+  LimitedTimes:     2
+  Description:     你在开局和生命值首次降低到5以下时会召唤幼狼1，狼母1，狼*2。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Bloodlust
+
+  ID:     Bloodlust
+  Name:     嗜血
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的攻击造成伤害时，你回复等量生命值。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Mountain Crusher
+
+  ID:     Mountain Crusher
+  Name:     千钧棒
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你造成的伤害*3。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Clone Technique
+
+  ID:     Clone Technique
+  Name:     毫毛术
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     第三回合起每隔6个回合，你分裂为3个分身，血量不变且每个单位分得1/3资源（向上取整），并失去【千钧棒】。该状态持续3回合，复原时六耳猕猴获得分身的所有资源与分身血量之和的1/3血量（向下取整）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Venom
+
+  ID:     Venom
+  Name:     毒液
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的攻击造成伤害时，对目标施加一层"中毒"标记。中毒：每回合失去一点生命值，每回合-1层。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Two Heads
+
+  ID:     Two Heads
+  Name:     双头
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的每次攻击进行两次结算。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Well Equipped
+
+  ID:     Well Equipped
+  Name:     装备精良
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你开局拥有子弹5，剑5。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Melee Disability
+
+  ID:     Melee Disability
+  Name:     近战苦手
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你不能拔剑。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Holy Sword
+
+  ID:     Holy Sword
+  Name:     圣剑
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你不能补子弹。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Ritual
+
+  ID:     Ritual
+  Name:     仪式
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     每隔两回合，你造成的伤害+1（可叠加）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Inviolable
+
+  ID:     Inviolable
+  Name:     不可侵犯
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     若场上的图腾被破坏，立刻进入高攻击欲望状态。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Ominous Feather
+
+  ID:     Ominous Feather
+  Name:     不吉之羽
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你造成一次伤害时，对目标附加一个"凶"标记，拥有"凶"标记的角色每回合失去n点资源和一个"凶"标记，（n为该角色拥有的"凶"标记数）。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Relentless
+
+  ID:     Relentless
+  Name:     无休
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     高攻击欲望，你的攻击命中时，返回此次攻击消耗的资源。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Sturdy Shield
+
+  ID:     Sturdy Shield
+  Name:     坚盾
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     低攻击欲望，你的防御行为生效于全体友方。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Overconfidence
+
+  ID:     Overconfidence
+  Name:     不自量力
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     每隔两回合，你将在补刀阶段额外对所有敌人进行一次"挑衅"。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Agile Ape
+
+  ID:     Agile Ape
+  Name:     灵猿
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你造成的伤害*2。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Nurture
+
+  ID:     Nurture
+  Name:     哺育
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你入场的第三回合，成长为狼。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Wolf Grudge
+
+  ID:     Wolf Grudge
+  Name:     狼怨
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     受伤叠加一层复仇，造成伤害失去一点复仇，幼狼死亡获得三点复仇，其他狼死亡获得两点复仇。你每有一层复仇，伤害+1，有复仇时为高攻击欲望。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------

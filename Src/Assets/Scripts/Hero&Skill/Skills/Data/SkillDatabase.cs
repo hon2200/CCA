@@ -9,8 +9,8 @@ public class SkillDatabase : MonoSingleton<SkillDatabase>
     // 存储所有技能实例
     public Dictionary<string, SkillDefine> skillDic = new Dictionary<string, SkillDefine>();
 
-    /// <summary>Skills loaded from MonsterSkill.json.</summary>
-    public Dictionary<string, MonsterSkill> monsterSkillDic = new Dictionary<string, MonsterSkill>();
+    /// <summary>Skills loaded from EnemySkill.json.</summary>
+    public Dictionary<string, EnemySkill> enemySkillDic = new Dictionary<string, EnemySkill>();
 
     /// <summary>Skills loaded from HeroSkill.json.</summary>
     public Dictionary<string, HeroSkill> heroSkillDic = new Dictionary<string, HeroSkill>();
@@ -32,18 +32,18 @@ public class SkillDatabase : MonoSingleton<SkillDatabase>
 
     /// <summary>
     /// 自动扫描并注册所有继承自 Skill 的类；技能数据由各类型的 Init() 从 JSON 字典填入。
-    /// 将怪物技能与英雄技能分别放入 monsterSkillDic 与 heroSkillDic。
+    /// 将怪物技能与英雄技能分别放入 enemySkillDic 与 heroSkillDic。
     /// </summary>
     private void RegisterAllSkills()
     {
         skillDic.Clear();
-        monsterSkillDic.Clear();
+        enemySkillDic.Clear();
         heroSkillDic.Clear();
 
-        // 获取当前程序集里的所有类型（排除抽象基类 MonsterSkill / HeroSkill，它们无参构造）
+        // 获取当前程序集里的所有类型（排除抽象基类 EnemySkill / HeroSkill，它们无参构造）
         var skillTypes = Assembly.GetExecutingAssembly().GetTypes()
             .Where(t => t.IsClass && !t.IsAbstract && typeof(SkillDefine).IsAssignableFrom(t)
-                && t != typeof(MonsterSkill) && t != typeof(HeroSkill));
+                && t != typeof(EnemySkill) && t != typeof(HeroSkill));
 
         foreach (var type in skillTypes)
         {
@@ -55,8 +55,8 @@ public class SkillDatabase : MonoSingleton<SkillDatabase>
                 {
                     skillDic[skillInstance.ID] = skillInstance;
 
-                    if (skillInstance is MonsterSkill monsterSkill)
-                        monsterSkillDic[monsterSkill.ID] = monsterSkill;
+                    if (skillInstance is EnemySkill enemySkill)
+                        enemySkillDic[enemySkill.ID] = enemySkill;
                     else if (skillInstance is HeroSkill heroSkill)
                         heroSkillDic[heroSkill.ID] = heroSkill;
 
@@ -69,7 +69,7 @@ public class SkillDatabase : MonoSingleton<SkillDatabase>
             }
         }
 
-        Debug.Log($"[SkillDatabase] 总共注册 {skillDic.Count} 个技能 (怪物: {monsterSkillDic.Count}, 英雄: {heroSkillDic.Count})");
+        Debug.Log($"[SkillDatabase] 总共注册 {skillDic.Count} 个技能 (怪物: {enemySkillDic.Count}, 英雄: {heroSkillDic.Count})");
     }
 
     /// <summary>

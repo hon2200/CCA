@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class SkillDatabaseOrigin : MonoSingleton<SkillDatabaseOrigin>
 {
-    public Dictionary<string, SkillDefineOrigin> OriginalMonsterSkillDic { get; private set; }
+    public Dictionary<string, SkillDefineOrigin> OriginalEnemySkillDic { get; private set; }
     public Dictionary<string, SkillDefineOrigin> OriginalHeroSkillDic { get; private set; }
 
     /// <summary>
@@ -16,11 +16,11 @@ public class SkillDatabaseOrigin : MonoSingleton<SkillDatabaseOrigin>
     /// </summary>
     public void LoadingSkills()
     {
-        string path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Skill&Buff/MonsterSkill.json");
-        OriginalMonsterSkillDic = JsonLoader.DeserializeObject<Dictionary<string, SkillDefineOrigin>>(path);
-        MyLog.PrintLoadedDictionary(OriginalMonsterSkillDic, "Log/Loading/MonsterSkills.txt");
+        string path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Hero&Enemy/EnemySkill.json");
+        OriginalEnemySkillDic = JsonLoader.DeserializeObject<Dictionary<string, SkillDefineOrigin>>(path);
+        MyLog.PrintLoadedDictionary(OriginalEnemySkillDic, "Log/Loading/EnemySkills.txt");
 
-        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Skill&Buff/HeroSkill.json");
+        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Hero&Enemy/HeroSkill.json");
         OriginalHeroSkillDic = JsonLoader.DeserializeObject<Dictionary<string, SkillDefineOrigin>>(path);
         MyLog.PrintLoadedDictionary(OriginalHeroSkillDic, "Log/Loading/HeroSkills.txt");
     }

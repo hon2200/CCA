@@ -13,7 +13,7 @@ public class BuffDataBase : MonoSingleton<BuffDataBase>
     //读入所有玩家
     public void LoadingSkills()
     {
-        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Skill&Buff/Buff.json");
+        path = Path.Combine(Application.streamingAssetsPath, "Common/Tables/Data/Hero&Enemy/Buff.json");
         BuffDictionary = JsonLoader.DeserializeObject<Dictionary<string, BuffDefine>>(path);
         //打印行动类到日志
         MyLog.PrintLoadedDictionary(BuffDictionary, "Log/Loading/Buff.txt");

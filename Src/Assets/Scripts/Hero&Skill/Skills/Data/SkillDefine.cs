@@ -150,15 +150,15 @@ public abstract class ActiveSkill : SkillDefine
 /// <summary>
 /// Base type for monster skills. Init() loads CD, Costs, Name, etc. from SkillDatabase.OriginalMonsterSkillDic.
 /// </summary>
-public class MonsterSkill : SkillDefine
+public class EnemySkill : SkillDefine
 {
-    public MonsterSkill(string id, Player owner = null) : base(id, owner) { }
+    public EnemySkill(string id, Player owner = null) : base(id, owner) { }
 
     protected override void Init()
     {
         base.Init();
-        if (SkillDatabaseOrigin.Instance.OriginalMonsterSkillDic != null
-            && SkillDatabaseOrigin.Instance.OriginalMonsterSkillDic.TryGetValue(ID, out SkillDefineOrigin data))
+        if (SkillDatabaseOrigin.Instance.OriginalEnemySkillDic != null
+            && SkillDatabaseOrigin.Instance.OriginalEnemySkillDic.TryGetValue(ID, out SkillDefineOrigin data))
             ApplyDataFrom(data);
     }
 }
