@@ -627,34 +627,40 @@ using UnityEngine;
 public class MoltenCast : EnemySkill, IPhaseEnterHandler
 {
     public MoltenCast() : base("Molten Cast") { }
+    protected override void Envoke()
+    {
+        if (BattleManager.Instance.Turn.Value == 9)
+        {
+            var players = PlayerManager.Instance.FindSomeone("Bronze Imp");
+            foreach (var imp in players)
+            {
+                imp.status.HP.Damage(999, Owner, imp, null);
+                Owner.status.buffs.Add(new DamagingOperator(
+                    new BuffOperator.Step(BuffOperator.OpType.Multiply, 2), Owner));
+                Owner.status.buffs.Add(new AttackingLevelOperator(
+                    new BuffOperator.Step(BuffOperator.OpType.Add, 0.5f), Owner));
+            }
+        }
+    } 
     public void OnPhase(Phase phase)
     {
         if(phase is StartPhase)
         {
-            if (BattleManager.Instance.Turn.Value == 9)
-            {
-                var players = PlayerManager.Instance.FindSomeone("Bronze Imp");
-                foreach (var imp in players)
-                {
-                    imp.status.HP.Damage(999, Owner, imp, null);
-                    Owner.status.buffs.Add(new DamagingOperator(
-                        new BuffOperator.Step(BuffOperator.OpType.Multiply, 2), Owner));
-                    Owner.status.buffs.Add(new AttackingLevelOperator(
-                        new BuffOperator.Step(BuffOperator.OpType.Add, 0.5f), Owner));
-                }
-            }
+            CheckAndEvoke();
         }
     }
 }
 
-public class Sow : EnemySkill, IPhaseEnterHandler
+public class Sow : SummoningSkill, IPhaseEnterHandler
 {
-    public Sow() : base("Sow") { }
+    private int count = 1;
+    public Sow() : base("Sow") { CDProgress = 1; }
+    protected override void Envoke()
+    {
+        Summon("Imp");
+    }
     public void OnPhase(Phase phase)
     {
-        if(phase is StartPhase)
-        {
-
-        }
+        CheckAndEvoke();
     }
 }

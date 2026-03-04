@@ -50,15 +50,15 @@ public abstract class SkillDefine
         Description = data.Description;
         Costs = data.Costs != null ? new List<int>(data.Costs) : new List<int> { 0, 0, 0 };
     }
-    protected virtual bool IsAvailable(Player thisPlayer)
+    protected virtual bool IsAvailable()
     {
         if (CDProgress > 0)
             return false;
         if (IsLimited && UsedTimes >= LimitedTimes)
             return false;
-        if (thisPlayer.status.resources.Bullet.Value < Costs[1])
+        if (Owner.status.resources.Bullet.Value < Costs[1])
             return false;
-        if (thisPlayer.status.resources.Sword.AvailableSword.Value < Costs[2])
+        if (Owner.status.resources.Sword.AvailableSword.Value < Costs[2])
             return false;
         return true;
     }
@@ -68,31 +68,31 @@ public abstract class SkillDefine
             CDProgress--;
     }
     //??????????????????????CD
-    private void Log(Player thisPlayer)
+    private void Log()
     {
-        PrintEvent.Instance.log += (thisPlayer.Name + "?????" + Name + "\n");
+        PrintEvent.Instance.log += (Owner.Name + "?????" + Name + "\n");
     }
-    private void PayCosts(Player thisPlayer)
+    private void PayCosts()
     {
         CDProgress = CD;
         if (IsLimited)
             UsedTimes += 1;
-        thisPlayer.status.HP.Drain(Costs[0]);
-        thisPlayer.status.resources.Bullet.Use(Costs[1]);
-        thisPlayer.status.resources.Sword.Use(Costs[2]);
+        Owner.status.HP.Drain(Costs[0]);
+        Owner.status.resources.Bullet.Use(Costs[1]);
+        Owner.status.resources.Sword.Use(Costs[2]);
     }
-    protected bool CheckAndEvoke(Player thisPlayer)
+    protected bool CheckAndEvoke()
     {
-        if(IsAvailable(thisPlayer))
+        if(IsAvailable())
         {
-            Log(thisPlayer);
-            PayCosts(thisPlayer);
-            Envoke(thisPlayer);
+            Log();
+            PayCosts();
+            Envoke();
             return true;
         }
         return false;
     }
-    protected virtual void Envoke(Player thisPlayer) { }
+    protected virtual void Envoke() { }
     public void Copy(SkillDefine target)
     {
         var type = GetType(); // e.g. NuclearBomb, not just ActionDefine
