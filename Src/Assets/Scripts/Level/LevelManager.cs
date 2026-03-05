@@ -36,7 +36,7 @@ public class LevelManager : MonoSingleton<LevelManager>
             if (Level.IsLastWave())
             {
                 AdvanceButton.gameObject.SetActive(true);
-                AudioManager.Instance.VictoryAudioPlay();
+                //AudioManager.Instance.VictoryAudioPlay();
                 WinningPanel.SetActive(true);
             }
             else//EnterNextWave, startGame right away
@@ -95,7 +95,7 @@ public class LevelManager : MonoSingleton<LevelManager>
     //新的一关正式开始
     public void LevelStart()
     {
-        AudioManager.Instance.SceneAudioPlay();
+        //AudioManager.Instance.SceneAudioPlay();
         CardViewSystem.Instance.Show(GetCurrentLevel());
     }
 }

@@ -20,7 +20,7 @@ public class HeroControlPanel : MonoSingleton<HeroControlPanel>
         SelectedHeroText.text = "";
         if (HeroIDDictionary.Count == 0)
             SelectedHeroText.text = "No Heroes";
-        else if (HeroIDDictionary.Count >= 5)
+        else if (HeroIDDictionary.Count > 6)
             SelectedHeroText.text = "Too Many";
         else
         {

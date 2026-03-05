@@ -261,7 +261,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     }
     private void InitializeHumanPlayerSpace(Player human)
     {
-        human.transform.localPosition = new Vector3(7.5f, -4.5f, 1);
+        human.transform.localPosition = humanPosition.transform.localPosition;
     }
     private void ArrangeNewPlayer(Player newPlayer)
     {

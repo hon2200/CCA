@@ -732,6 +732,18 @@ PrefabInstance:
       propertyPath: UIText._serializedList.Array.data[8].Value
       value: 
       objectReference: {fileID: 6658138746605266879}
+    - target: {fileID: 853102180368559767, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 853102180368559767, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 853102180368559767, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1635785316980288246, guid: da70a32224e191e4aa354d16a9e107e7, type: 3}
       propertyPath: targetPlayer
       value: 
