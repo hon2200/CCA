@@ -16,7 +16,7 @@ public class SpriteGlowController : MonoBehaviour, IPointerClickHandler
 
     void Awake()
     {
-        // 获取SpriteRenderer组件，并保存发光材质引用
+/*        // 获取SpriteRenderer组件，并保存发光材质引用
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _glowMaterial = _spriteRenderer.material; // 实例化材质，避免影响其他对象
 
@@ -34,7 +34,7 @@ public class SpriteGlowController : MonoBehaviour, IPointerClickHandler
         else
         {
             Debug.LogError("SpriteGlowController：未找到发光材质！请检查SpriteRenderer的Material是否赋值", this);
-        }
+        }*/
     }
 
     /// <summary>

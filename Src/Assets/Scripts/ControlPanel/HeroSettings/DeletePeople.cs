@@ -8,16 +8,14 @@ public class DeletePeople : MonoBehaviour
     // Start is called before the first frame update
     public void DeleteOnePeople()
     {
-        HeroControlPanel.Instance.HeroIDDictionary.RemoveAt(HeroControlPanel.Instance.HeroIDDictionary.Count - 1);
-        HeroControlPanel.Instance.RefreshText();
+        if (PlayerManager.Instance != null)
+            PlayerManager.Instance.RemoveAllHumanPlayers();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (HeroControlPanel.Instance.HeroIDDictionary.Count == 0)
-            GetComponent<Button>().interactable = false;
-        else
-            GetComponent<Button>().interactable = true; 
+        var btn = GetComponent<Button>();
+        if (btn != null)
+            btn.interactable = PlayerManager.Instance != null && PlayerManager.Instance.HumanPlayers.Count > 0;
     }
 }

@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6382299494056082243, guid: ebda3445a93d4944ea1dbe8373a7fc89, type: 3}
       propertyPath: m_Name
-      value: HPLose Variant
+      value: HitAndHPLose
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73,6 +73,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1915169523655655308}
     m_Modifications:
+    - target: {fileID: 2520121652900391774, guid: 8995acd5e6728d547a6adb4f551ec6e2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06d16d267f89d884fb7f356fcb6d4597, type: 2}
     - target: {fileID: 3826759674495339984, guid: 8995acd5e6728d547a6adb4f551ec6e2, type: 3}
       propertyPath: m_Name
       value: Hit

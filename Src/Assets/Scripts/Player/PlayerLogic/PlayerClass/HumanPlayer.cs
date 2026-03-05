@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +26,8 @@ public class HumanPlayer : Player
     //创建英雄模式的玩家
     public void InitializePlayer(int ID_inGame, HeroDefine heroDefine)
     {
-        base.Initialize(ID_inGame, "Player", PlayerType.Human, heroDefine.MaxHP, null, null, heroDefine.ID, heroDefine.SkillIDList);
+        var initialResource = new List<int> { 0, 0, 0 };
+        base.Initialize(ID_inGame, "Player", PlayerType.Human, heroDefine.MaxHP, initialResource, null, heroDefine.ID, heroDefine.SkillIDList);
         OnBirth?.Invoke();
         HumanPlayerListenUp();
     }

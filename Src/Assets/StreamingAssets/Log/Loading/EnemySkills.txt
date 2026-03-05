@@ -1,4 +1,4 @@
-Dict 内容 (Count: 84)
+Dict 内容 (Count: 85)
 ====================================
 Key: Molten Cast
 
@@ -40,7 +40,7 @@ Key: Sow
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     3
 ------------------------------------
 Key: Lush Growth
 
@@ -54,7 +54,7 @@ Key: Lush Growth
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     4
 ------------------------------------
 Key: Rapid Growth
 
@@ -82,7 +82,7 @@ Key: Tsunami
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     5
 ------------------------------------
 Key: Scorched Oblivion
 
@@ -956,9 +956,9 @@ Key: Mountain Crusher
 
   ID:     Mountain Crusher
   Name:     千钧棒
-  IsLimited:     False
-  LimitedTimes:     0
-  Description:     你造成的伤害*3。
+  IsLimited:     True
+  LimitedTimes:     1
+  Description:     获得伤害*3算子
   Costs: 
     List`1 (Count: 3)
       [0]:         0
@@ -972,7 +972,7 @@ Key: Clone Technique
   Name:     毫毛术
   IsLimited:     False
   LimitedTimes:     0
-  Description:     第三回合起每隔6个回合，你分裂为3个分身，血量不变且每个单位分得1/3资源（向上取整），并失去【千钧棒】。该状态持续3回合，复原时六耳猕猴获得分身的所有资源与分身血量之和的1/3血量（向下取整）。
+  Description:     第三回合起每隔6个回合，你分裂为3个分身，血量不变且每个单位分得1/3资源（向上取整），并失去【千钧棒】。该状态持续3回合，复原时六耳猕猴获得分身的所有资源与分身血量之和的1/3血量（向下取整）。（先不装）
   Costs: 
     List`1 (Count: 3)
       [0]:         0
@@ -1012,8 +1012,8 @@ Key: Well Equipped
 
   ID:     Well Equipped
   Name:     装备精良
-  IsLimited:     False
-  LimitedTimes:     0
+  IsLimited:     True
+  LimitedTimes:     1
   Description:     你开局拥有子弹5，剑5。
   Costs: 
     List`1 (Count: 3)
@@ -1062,7 +1062,7 @@ Key: Ritual
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     1
 ------------------------------------
 Key: Inviolable
 
@@ -1070,7 +1070,7 @@ Key: Inviolable
   Name:     不可侵犯
   IsLimited:     False
   LimitedTimes:     0
-  Description:     若场上的图腾被破坏，立刻进入高攻击欲望状态。
+  Description:     若场上的图腾被破坏，立刻进入高攻击欲望状态。（先不装）
   Costs: 
     List`1 (Count: 3)
       [0]:         0
@@ -1098,7 +1098,7 @@ Key: Relentless
   Name:     无休
   IsLimited:     False
   LimitedTimes:     0
-  Description:     高攻击欲望，你的攻击命中时，返回此次攻击消耗的资源。
+  Description:     高攻击欲望（先不装），你的攻击命中时，返回此次攻击消耗的资源。
   Costs: 
     List`1 (Count: 3)
       [0]:         0
@@ -1112,7 +1112,7 @@ Key: Sturdy Shield
   Name:     坚盾
   IsLimited:     False
   LimitedTimes:     0
-  Description:     低攻击欲望，你的防御行为生效于全体友方。
+  Description:     低攻击欲望（先不装），你的防御行为生效于全体友方。
   Costs: 
     List`1 (Count: 3)
       [0]:         0
@@ -1132,7 +1132,7 @@ Key: Overconfidence
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     1
 ------------------------------------
 Key: Agile Ape
 
@@ -1152,15 +1152,15 @@ Key: Nurture
 
   ID:     Nurture
   Name:     哺育
-  IsLimited:     False
-  LimitedTimes:     0
-  Description:     你入场的第三回合，成长为狼。
+  IsLimited:     True
+  LimitedTimes:     1
+  Description:     你入场的第三回合，成长为狼（暂时不装）
   Costs: 
     List`1 (Count: 3)
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     3
 ------------------------------------
 Key: Wolf Grudge
 
@@ -1168,7 +1168,21 @@ Key: Wolf Grudge
   Name:     狼怨
   IsLimited:     False
   LimitedTimes:     0
-  Description:     受伤叠加一层复仇，造成伤害失去一点复仇，幼狼死亡获得三点复仇，其他狼死亡获得两点复仇。你每有一层复仇，伤害+1，有复仇时为高攻击欲望。
+  Description:     受伤叠加一层复仇，造成伤害失去一点复仇，幼狼死亡获得三点复仇，其他狼死亡获得两点复仇。你每有一层复仇，伤害+1，有复仇时为高攻击欲望。（暂时没有实装后半段）
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Leader Catch
+
+  ID:     Leader Catch
+  Name:     擒贼先擒王
+  IsLimited:     True
+  LimitedTimes:     1
+  Description:     当场上所有类型为Boss和Elite的单位全部死亡时，玩家赢得此局游戏。
   Costs: 
     List`1 (Count: 3)
       [0]:         0

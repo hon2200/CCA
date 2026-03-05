@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Enemy skill that summons a unit by hero ID via PlayerManager.AddPlayer.
 /// </summary>
-public class SummoningSkill : EnemySkill
+public abstract class SummoningSkill : EnemySkill
 {
     public SummoningSkill(string id, Player owner = null) : base(id, owner) { }
 

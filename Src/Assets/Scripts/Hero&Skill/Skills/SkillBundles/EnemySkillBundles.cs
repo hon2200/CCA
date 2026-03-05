@@ -586,7 +586,7 @@ public class Bloodlust : EnemySkill, IDamagingHandler
 
 public class MountainCrusherEnemy : EnemySkill, IPhaseEnterHandler
 {
-    public MountainCrusherEnemy() : base("Mountain Crusher") { }
+    public MountainCrusherEnemy() : base("Mountain Crusher_Enemy") { }
     protected override void Envoke() { }
     public void OnPhase(Phase phase)
     {

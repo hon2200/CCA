@@ -486,14 +486,18 @@ public class Judgement : Skill, IActionReplacer, IPhaseEnterHandler
             Envoke(thisPlayer);
         }
     }
-    public void OnPhase(Phase phase, Player thisPlayer)
+    public void OnPhase(Phase phase)
     {
         if (phase is StartPhase && Active)
         {
             Active = false;
-            foreach (var actionID in PlayerManager.Instance.HumanPlayer.AvailableActions)
-                if (ActionUtil.IsAction<AttackDefine>(actionID))
-                    PlayerManager.Instance.HumanPlayer.ForbiddenActions.Add(actionID);
+            var human = PlayerManager.Instance?.HumanPlayer;
+            if (human != null)
+            {
+                foreach (var actionID in human.AvailableActions)
+                    if (ActionUtil.IsAction<AttackDefine>(actionID))
+                        human.ForbiddenActions.Add(actionID);
+            }
         }
     }
 }

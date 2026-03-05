@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
         }
         _actualUIVolume = Mathf.Clamp(_actualUIVolume, 0.01f, 1f);
         AudioSource.PlayClipAtPoint(uiClickSound, Vector3.zero, _actualUIVolume);
-        Debug.Log($"当前UI点击音效音量：{_actualUIVolume}");
+        //Debug.Log($"当前UI点击音效音量：{_actualUIVolume}");
     }
 
     public void PlayUIHoverSound()

@@ -5,7 +5,8 @@
         "Description": "【熔铸】第9回合，你击杀场上所有存活的青铜小鬼，并获得它们的资源，你每击杀一个青铜小鬼，你的伤害*2，攻击力+0.5。",
         "MaxHP": 40,
         "SkillIDList": [
-            "MoltenCast"
+            "MoltenCast",
+            "Leader Catch"
         ],
         "EnemyType": "Boss"
     },
@@ -24,12 +25,13 @@
         "MaxHP": 30,
         "SkillIDList": [
             "Sow",
-            "LushGrowth"
+            "LushGrowth",
+            "Leader Catch"
         ],
         "EnemyType": "Boss"
     },
-    "FormlessWater": {
-        "ID": "FormlessWater",
+    "IntangibleWater": {
+        "ID": "IntangibleWater",
         "Name": "无形之水",
         "Description": "【海啸】第5回合起每5回合，所有有可用资源的无形之水会对同一目标发动攻击，且此次攻击伤害*2。",
         "MaxHP": 10,
@@ -109,7 +111,8 @@
         "Description": "【死亡化身】第4回合起，你每隔4回合进入一次'生命收割'状态。'生命收割'状态下你不受到任何伤害，且伤害*4。该状态持续3回合。若你在一次'生命收割'状态下未能击杀任何目标，你下回合眩晕。",
         "MaxHP": 40,
         "SkillIDList": [
-            "DeathIncarnate"
+            "DeathIncarnate",
+            "Leader Catch"
         ],
         "EnemyType": "Boss"
     },
@@ -219,7 +222,8 @@
             "Collapse",
             "HellGather",
             "DesperateStruggle",
-            "LifeOrDeath"
+            "LifeOrDeath",
+            "Leader Catch"
         ],
         "EnemyType": "Boss"
     },
@@ -280,7 +284,8 @@
         "Description": "【图腾召唤】每三回合随机召唤一个图腾，场上有空余格子时为低攻击欲望，场上没有空余格子时为高攻击欲望。",
         "MaxHP": 20,
         "SkillIDList": [
-            "TotemCall"
+            "TotemCall",
+            "Leader Catch"
         ],
         "EnemyType": "Elite"
     },
@@ -407,7 +412,8 @@
         "MaxHP": 10,
         "SkillIDList": [
             "WolfHowl",
-            "Bloodlust"
+            "Bloodlust",
+            "Leader Catch"
         ],
         "EnemyType": "Elite"
     },
@@ -439,7 +445,8 @@
         "Description": "【装备精良】你开局拥有子弹5，剑5。",
         "MaxHP": 15,
         "SkillIDList": [
-            "WellEquipped"
+            "WellEquipped",
+            "Leader Catch"
         ],
         "EnemyType": "Elite"
     },

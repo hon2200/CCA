@@ -56,11 +56,16 @@ public class SkillDatabase : MonoSingleton<SkillDatabase>
                     skillDic[skillInstance.ID] = skillInstance;
 
                     if (skillInstance is EnemySkill enemySkill)
+                    {
                         enemySkillDic[enemySkill.ID] = enemySkill;
+                        Debug.Log($"[SkillDatabase] 已注册敌人技能: {skillInstance.ID} ({type.Name})");
+                    }
+                        
                     else if (skillInstance is HeroSkill heroSkill)
+                    {
                         heroSkillDic[heroSkill.ID] = heroSkill;
-
-                    Debug.Log($"[SkillDatabase] 已注册技能: {skillInstance.ID} ({type.Name})");
+                        Debug.Log($"[SkillDatabase] 已注册英雄技能: {skillInstance.ID} ({type.Name})");
+                    }
                 }
             }
             catch (Exception e)

@@ -27,6 +27,8 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
     /// <summary>Read-only. Modify only via AddPlayer (Heroes path) or Level creation methods.</summary>
     public IReadOnlyDictionary<int, Player> Players => _players;
+    /// <summary>First human player, or null if none. Used by skills/UI that assume a single human.</summary>
+    public HumanPlayer HumanPlayer => _humanPlayers.Count > 0 ? _humanPlayers[0] : null;
     public IReadOnlyList<HumanPlayer> HumanPlayers => _humanPlayers;
     public IReadOnlyList<AIPlayer> AIPlayers => _aiPlayers;
     public IReadOnlyList<Player> FriendlyPlayers => _friendlyPlayers;
@@ -176,11 +178,39 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     }
 
     /// <summary>
+    /// Removes and destroys all human players (e.g. to replace the chosen hero in setup).
+    /// </summary>
+    public void RemoveAllHumanPlayers()
+    {
+        var humansSnapshot = new List<HumanPlayer>(_humanPlayers);
+        foreach (var human in humansSnapshot)
+        {
+            if (human == null) continue;
+            _players.Remove(human.ID_inGame);
+            _humanPlayers.Remove(human);
+            _friendlyPlayers.Remove(human);
+            Destroy(human.gameObject);
+        }
+    }
+
+    /// <summary>
     /// Creates one player from hero data and adds them to Players and the correct Human/AI and Friendly/Hostile lists.
     /// </summary>
     public Player AddPlayer(bool isFriend, bool isHuman, HeroDefine heroDefine)
     {
-        int id = NextPlayerID++;
+        int id;
+        if (isHuman && _humanPlayers.Count == 0)
+        {
+            id = 1;
+            if (NextPlayerID <= 1)
+                NextPlayerID = 2;
+        }
+        else
+        {
+            id = NextPlayerID++;
+            if (id == 1)
+                id = NextPlayerID++;
+        }
         if (isHuman)
         {
             var newPlayerObject = Instantiate(HumanPrefab, this.transform);
@@ -206,35 +236,10 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
     public void CreatingPlayers_BasedOnGameSetting_Heroes()
     {
-        if (HeroControlPanel.Instance == null)
-        {
-            return;
-        }
-        _players.Clear();
-        _humanPlayers.Clear();
-        _aiPlayers.Clear();
-        _friendlyPlayers.Clear();
-        _hostilePlayers.Clear();
-
-        List<HeroDefine> heroDefines = new();
-
-        foreach (var heroID in HeroControlPanel.Instance.HeroIDDictionary)
-        {
-            HeroDataBase.Instance.HeroDictionary.TryGetValue(heroID, out var heroDefine);
-            if (heroDefine != null)
-                heroDefines.Add(heroDefine);
-            else
-                Debug.Assert(false, "Can't find Hero");
-        }
-        int totalNumber = heroDefines.Count;
-        if (totalNumber == 0) return;
-
-        AddPlayer(isFriend: true, isHuman: true, heroDefines[0]);
-        for (int i = 2; i <= totalNumber; i++)
-        {
-            AddPlayer(isFriend: false, isHuman: false, heroDefines[i - 1]);
-        }
-        AlivePlayerNumber = totalNumber;
+        // Hero and monsters are already added by DropDownController and MonsterAddController.
+        if (_players.Count > 0)
+            NextPlayerID = _players.Keys.Max() + 1;
+        AlivePlayerNumber = _players.Count;
     }
     #endregion
     #region Spacing Things
