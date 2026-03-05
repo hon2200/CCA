@@ -314,3 +314,48 @@ public class BurnMark : Buff
             Owner.status.buffs.Remove(this, "BurnMarkFade");
     }
 }
+
+/// <summary>Poison: each turn drain 1 HP from the owner and decrease Value by 1; removed when Value &lt;= 0.</summary>
+public class Poison : Buff
+{
+    public const string Id = "Poison";
+
+    public Poison(int value, Player owner) : base(Id, value, true, owner) { }
+
+    public override void Fade()
+    {
+        if (Owner == null || Value <= 0) return;
+        Owner.status.HP.Drain(1);
+        Value--;
+        if (Value <= 0)
+            Owner.status.buffs.Remove(this, "PoisonFade");
+    }
+}
+
+/// <summary>凶 (Omen): each turn the character loses n resources and one 凶 stack, where n = current 凶 stacks. Resources drained from Bullet first, then Sword.</summary>
+public class Omen : Buff
+{
+    public const string Id = "Omen";
+
+    public Omen(int value, Player owner) : base(Id, value, true, owner) { }
+
+    public override void Fade()
+    {
+        if (Owner == null || Value <= 0) return;
+        int n = Value;
+        for (int i = 0; i < n; i++)
+        {
+            int bullet = Owner.status.resources.Bullet.Value;
+            int sword = Owner.status.resources.Sword.Value;
+            if (bullet > 0)
+                Owner.status.resources.Bullet.Lost(1);
+            else if (sword > 0)
+                Owner.status.resources.Sword.Lost(1);
+            else
+                break;
+        }
+        Value--;
+        if (Value <= 0)
+            Owner.status.buffs.Remove(this, "OmenFade");
+    }
+}

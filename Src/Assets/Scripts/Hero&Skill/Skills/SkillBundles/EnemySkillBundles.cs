@@ -186,7 +186,10 @@ public class DeathIncarnate : EnemySkill, IPhaseEnterHandler
 public class Ritual : EnemySkill, IPhaseEnterHandler
 {
     public Ritual() : base("Ritual") { }
-    protected override void Envoke() { }
+    protected override void Envoke()
+    {
+        Owner.status.buffs.Apply(new DamagingOperator(1, Owner, BuffOperator.StepSlot.Third));
+    }
     public void OnPhase(Phase phase)
     {
         if (phase is StartPhase)
@@ -589,12 +592,12 @@ public class MountainCrusherEnemy : EnemySkill, IPhaseEnterHandler
     {
         if(phase is StartPhase)
         {
-            Owner.status.buffs.Apply(new DamagedOperator(3, Owner, BuffOperator.StepSlot.Second));
+            Owner.status.buffs.Apply(new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second));
         }
     }
     protected override void OnDisabled()
     {
-        Owner.status.buffs.Apply(new DamagedOperator(1 / 3f, Owner, BuffOperator.StepSlot.Second));
+        Owner.status.buffs.Apply(new DamagingOperator(1 / 3f, Owner, BuffOperator.StepSlot.Second));
     }
 }
 
@@ -604,17 +607,29 @@ public class Venom : EnemySkill, ICombatHandler
     protected override void Envoke() { }
     public void OnCombatEvent(CombatEvent combatEvent)
     {
-        // TODO: Attack that deals damage applies 1 中毒; 中毒: 1 damage/turn, -1 layer/turn
+        if(combatEvent.Type == CombatEventType.AttackTakeEffect)
+        {
+            combatEvent.Victim.status.buffs.Apply(new Poison(1, combatEvent.Victim));
+        }
     }
 }
 
-public class TwoHeads : EnemySkill, ICombatHandler
+public class TwoHeads : EnemySkill, IActionModifier
 {
     public TwoHeads() : base("Two Heads") { }
     protected override void Envoke() { }
-    public void OnCombatEvent(CombatEvent combatEvent)
+    public void ModifyAction(Player player)
     {
-        // TODO: Owner's each attack resolves twice
+        foreach(var action in Owner.action)
+        {
+            if (action is AttackDefine attack)
+            {
+                var attackCopy = attack.Clone();
+                Owner.action.Add((AttackDefine)attackCopy);
+            }
+
+        }
+
     }
 }
 
@@ -670,13 +685,20 @@ public class Ferocity : EnemySkill, ICombatHandler
     }
 }
 
-public class AgileApe : EnemySkill, ICombatHandler
+public class AgileApe : EnemySkill, IPhaseEnterHandler
 {
     public AgileApe() : base("Agile Ape") { }
     protected override void Envoke() { }
-    public void OnCombatEvent(CombatEvent combatEvent)
+    public void OnPhase(Phase phase)
     {
-        // TODO: Owner's damage * 2
+        if (phase is StartPhase)
+        {
+            Owner.status.buffs.Apply(new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second));
+        }
+    }
+    protected override void OnDisabled()
+    {
+        Owner.status.buffs.Apply(new DamagingOperator(1 / 3f, Owner, BuffOperator.StepSlot.Second));
     }
 }
 
@@ -697,7 +719,11 @@ public class Relentless : EnemySkill, ICombatHandler
     protected override void Envoke() { }
     public void OnCombatEvent(CombatEvent combatEvent)
     {
-        // TODO: High attack desire; on hit return consumed resources
+        if(combatEvent.Type == CombatEventType.AttackTakeEffect)
+        {
+            combatEvent.Attacker.status.resources.Bullet.Get(Owner, combatEvent.Attack.Costs[1]);
+            combatEvent.Attacker.status.resources.Sword.Get(Owner, combatEvent.Attack.Costs[2]);
+        }
     }
 }
 
@@ -711,18 +737,19 @@ public class Inviolable : EnemySkill, ICombatHandler
     }
 }
 
-public class WolfGrudge : EnemySkill, ICombatHandler, IDamagedHandler
+public class WolfGrudge : EnemySkill, IDamagedHandler, IDamagingHandler
 {
     public WolfGrudge() : base("Wolf Grudge") { }
     protected override void Envoke() { }
-    public void OnCombatEvent(CombatEvent combatEvent)
+    public void OnDamaged(Player attacker, Player victim, int damage, out int finalDamage)
     {
-        // TODO: Damage stacks 复仇; on damage -1 复仇; 幼狼 death +3 复仇, other wolf death +2; damage +1 per 复仇; has 复仇 = high attack desire
+        victim.status.buffs.Apply(new DamagedOperator(1, victim, BuffOperator.StepSlot.Third));
+        finalDamage = damage;
     }
-    public void OnDamaged(Player attacker, Player victim, int damage, out int blockDamage)
+    public void OnDamaging(Player attacker, Player victim, int damage, out int finalDamage)
     {
-        blockDamage = 0;
-        // TODO: On damaged add 复仇
+        attacker.status.buffs.Apply(new DamagingOperator(-1, attacker, BuffOperator.StepSlot.Third));
+        finalDamage = damage;
     }
 }
 
@@ -749,7 +776,8 @@ public class WellEquipped : EnemySkill, IPhaseEnterHandler
     public WellEquipped() : base("Well Equipped") { }
     protected override void Envoke()
     {
-        // TODO: Game start — bullet 5, sword 5
+        Owner.status.resources.Sword.Get(Owner, 5);
+        Owner.status.resources.Bullet.Get(Owner, 5);
     }
     public void OnPhase(Phase phase)
     {
@@ -859,6 +887,22 @@ public class TotemCall : SummoningSkill, IPhaseEnterHandler
 #endregion
 
 #region Death / limited / special
+
+public class LeaderCatch : EnemySkill, IDeathHandler
+{
+    public LeaderCatch() : base("Leader Catch") { }
+    protected override void Envoke() { }
+
+    /// <summary>
+    /// When this unit dies, immediately trigger a win for the player.
+    /// Returns false so normal death processing still happens.
+    /// </summary>
+    public bool OnDeath(Player thisPlayer)
+    {
+        BattleManager.Instance.OnWinning?.Invoke();
+        return false;
+    }
+}
 
 public class DeathSense : EnemySkill, IDeathHandler
 {
@@ -1031,30 +1075,61 @@ public class DivinePride : EnemySkill
     }
 }
 
-public class MeleeDisability : EnemySkill
+public class MeleeDisability : EnemySkill, IActionModifier
 {
     public MeleeDisability() : base("Melee Disability") { }
-    protected override void Envoke()
+    protected override void Envoke() { }
+    public void ModifyAction(Player player)
     {
-        // TODO: Cannot draw sword
+        var actionListCopy = new List<ActionDefine>(Owner.action.ToList());
+        foreach (var action in actionListCopy)
+        {
+            if (action is SupplyDefine supply)
+            {
+                Owner.action.Remove(action);
+                Owner.action.ReadinMove("bullet", Owner.ID_inGame, "AI");
+            }
+        }
     }
 }
 
-public class HolySword : EnemySkill
+public class HolySword : EnemySkill, IActionModifier
 {
     public HolySword() : base("Holy Sword") { }
-    protected override void Envoke()
+    protected override void Envoke() { }
+    public void ModifyAction(Player player)
     {
-        // TODO: Cannot supply bullet
+        var actionListCopy = new List<ActionDefine>(Owner.action.ToList());
+        foreach (var action in actionListCopy)
+        {
+            if (action is SupplyDefine supply)
+            {
+                Owner.action.Remove(action);
+                Owner.action.ReadinMove("sword", Owner.ID_inGame, "AI");
+            }
+        }
     }
 }
 
-public class SturdyShield : EnemySkill
+public class SturdyShield : EnemySkill, IActionModifier
 {
     public SturdyShield() : base("Sturdy Shield") { }
     protected override void Envoke()
     {
-        // TODO: Low attack desire; defense applies to all allies
+        
+    }
+    public void ModifyAction(Player player)
+    {
+        foreach(var friend in PlayerManager.Instance.HostilePlayers)
+        {
+            foreach (var action in Owner.action)
+            {
+                if (action is DefendDefine defend)
+                {
+                    friend.action.Add((DefendDefine)defend.Clone());
+                }
+            }
+        }
     }
 }
 #endregion
