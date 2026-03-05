@@ -29,6 +29,9 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
     private GameObject lastHoveredCardPlayed;
     private GameObject lastHoveredCardView;
     public Player player1;
+
+    // 新增：记录上一个悬停/选中的玩家（用于清理高亮）
+    private GameObject _lastHoveredPlayerForHighlight;
     public void Update()
     {
         MouseAndRayUtil.Hit("Card", out var card);
@@ -112,6 +115,8 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 }
                 break;
             case RayStatus.ChosseFirstTarget:
+
+                //UpdatePlayerHoverHighlight(player);
                 MouseAndRayUtil.RenewHitting(ref lastHoveredPlayer, player);
                 CheckPlayer(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine);
                 //按住拖动箭头
@@ -138,11 +143,17 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                         lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         Arrow.Instance.DeActive();
                         rayStatus = RayStatus.ChooseCard;
+
+                        //ClearAllPlayerHighlight();
+
                     }
                 }
                 
                 break;
             case RayStatus.ChooseMultiTarget:
+
+                //UpdatePlayerHoverHighlight(player);
+
                 MouseAndRayUtil.RenewHitting(ref lastHoveredPlayer, player);
                 CheckPlayer(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine);
                 //鼠标按下读入
@@ -162,12 +173,14 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 if (card != null)
                 {
                     UnSelectAllPlayers();
+                    //ClearAllPlayerHighlight();
                     rayStatus = RayStatus.ChooseCard;
                 }
                 //如果点击鼠标右键，则进入选牌状态
                 if (Input.GetMouseButtonDown(1))
                 {
                     UnSelectAllPlayers();
+                    //ClearAllPlayerHighlight();
                     rayStatus = RayStatus.ChooseCard;
                 }
                 break;
@@ -199,6 +212,48 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
         {
             player.Value.GetComponent<PlayerSelection>().OnUnSelect();
         }
+    }
+
+    private void UpdatePlayerHoverHighlight(GameObject currentPlayer)
+    {
+        // 1. 当前有可选中的玩家
+        if (currentPlayer != null && currentPlayer.GetComponent<PlayerSelection>().CanbeSelected)
+        {
+            // 不是上一个悬停的玩家 → 清理上一个，高亮当前
+            if (_lastHoveredPlayerForHighlight != currentPlayer)
+            {
+                // 清理上一个玩家的悬停高亮
+                if (_lastHoveredPlayerForHighlight != null)
+                {
+                    _lastHoveredPlayerForHighlight.GetComponent<PlayerSelection>().OnHoverExit();
+                }
+                // 高亮当前玩家
+                currentPlayer.GetComponent<PlayerSelection>().OnHoverEnter(null, null, null, null, null);
+                _lastHoveredPlayerForHighlight = currentPlayer;
+            }
+        }
+        // 2. 无悬停玩家 → 清理上一个的高亮
+        else
+        {
+            if (_lastHoveredPlayerForHighlight != null)
+            {
+                _lastHoveredPlayerForHighlight.GetComponent<PlayerSelection>().OnHoverExit();
+                _lastHoveredPlayerForHighlight = null;
+            }
+        }
+    }
+
+    // ========== 新增方法2：清理所有玩家的悬停/选中高亮 ==========
+    private void ClearAllPlayerHighlight()
+    {
+        // 清理悬停高亮
+        if (_lastHoveredPlayerForHighlight != null)
+        {
+            _lastHoveredPlayerForHighlight.GetComponent<PlayerSelection>().OnHoverExit();
+            _lastHoveredPlayerForHighlight = null;
+        }
+        // 清理选中高亮
+        UnSelectAllPlayers();
     }
     public void Disable()
     {

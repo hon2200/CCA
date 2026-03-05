@@ -51,4 +51,8 @@ public class PlayerSelection : HoverableBase
         SelectionCompletedGlow.SetActive(false);
     }
     #endregion
+
+
+    [SerializeField] private GameObject _glowLayer;
+
 }
