@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +19,14 @@ public static class PlayerActionLogic
         foreach (var supply in supplys)
         {
             supply.HowtoSupply();
+        }
+        if (supplys.Count > 0)
+        {
+            foreach (var skill in player.hero.skills)
+            {
+                if (skill is ISupplyHandler h)
+                    h.OnSupplied(player);
+            }
         }
     }
 

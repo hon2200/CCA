@@ -99,6 +99,16 @@ public class ResolutionPhase : Phase
                         if (PlayerManager.Instance.Players.TryGetValue(killerID, out var killer))
                         {
                             killer.status.resources.Bullet.Get(killer,reward);
+                            foreach (var skill in killer.hero.skills)
+                            {
+                                if (skill is IOnKillHandler killH)
+                                    killH.OnKill(killer, player);
+                            }
+                            foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+                            {
+                                if(relic is IOnKillHandler killR)
+                                    killR.OnKill(killer,player);
+                            }
                         }
                     }
 

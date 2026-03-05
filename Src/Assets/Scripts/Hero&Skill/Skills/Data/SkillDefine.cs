@@ -35,6 +35,11 @@ public abstract class SkillDefine
         UsedTimes = 0;
         Costs = Costs ?? new List<int> { 0, 0, 0 };
     }
+    //当这个技能失去或者禁用的时候调用
+    protected virtual void OnDisabled()
+    {
+
+    }
 
     /// <summary>
     /// Applies data from a JSON-loaded define (SkillDefineData) into this instance.

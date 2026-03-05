@@ -93,7 +93,7 @@ public class HolyLightProtection : RelicDefine, IPhaseEnterHandler
         {
             foreach (var player in PlayerManager.Instance.FriendlyPlayers)
             {
-                player.status.buffs.Add(new Invincible(3, player));
+                player.status.buffs.Apply(new Invincible(3, player));
             }
         }
     }
@@ -114,12 +114,12 @@ public class IronHat : RelicDefine, IDamagedHandler
 public class ChaosHeart : RelicDefine, IDamagingHandler
 {
     public ChaosHeart() : base("Chaos Heart") { }
-    public void OnDamaging(Player attacker, Player victim, int amount, out int increasedDamage)
+    public void OnDamaging(Player attacker, Player victim, int amount, out int finalDamage)
     {
         if (attacker == null && PlayerManager.Instance.HostilePlayers.Contains(victim))
-            increasedDamage = amount;
+            finalDamage = amount;
         else
-            increasedDamage = 0;
+            finalDamage = 0;
     }
 }
 

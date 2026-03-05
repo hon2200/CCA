@@ -78,12 +78,12 @@ public interface IDeathHandler
 
 public interface IDamagingHandler
 {
-    public void OnDamaging(Player attacker, Player victim, int damage, out int increasedDamage);
+    public void OnDamaging(Player attacker, Player victim, int damage, out int finalDamage);
 }
 
 public interface IDamagedHandler
 {
-    public void OnDamaged(Player attacker, Player victim, int damage, out int blockDamage);
+    public void OnDamaged(Player attacker, Player victim, int damage, out int finalDamage);
 }
 
 public interface IStunningHandler
@@ -99,6 +99,18 @@ public interface IStunnedHandler
 public interface IActionModifier
 {
     public void ModifyAction(Player player);
+}
+
+/// <summary>Called when a player executes at least one supply action in resolution.</summary>
+public interface ISupplyHandler
+{
+    public void OnSupplied(Player supplier);
+}
+
+/// <summary>Called when a player gets a kill (victim died and killer is in possibleKillers).</summary>
+public interface IOnKillHandler
+{
+    public void OnKill(Player killer, Player victim);
 }
 
 

@@ -71,6 +71,29 @@ public class DamagedOperator : BuffOperator, IDamagedHandler
     }
 }
 
+/// <summary>DamageShield: when victim receives non-zero damage, consume one stack and reduce that damage to 0. Uses IDamagingHandler (runs after Skills and Relics).</summary>
+public class DamageShield : Buff, IDamagedHandler
+{
+    public const string Id = "DamageShield";
+
+    public DamageShield(int value, Player owner) : base(Id, value, false, owner) { }
+
+    public void OnDamaged(Player attacker, Player victim, int damage, out int finalDamage)
+    {
+        if (damage > 0 && Value > 0)
+        {
+            Value -= 1;
+            finalDamage = 0;
+            if (Value <= 0 && Owner != null)
+                Owner.status.buffs.Remove(this, "DamageShieldConsumed");
+        }
+        else
+        {
+            finalDamage = damage;
+        }
+    }
+}
+
 public class AttackingLevelOperator : BuffOperator, ICombatHandler
 {
     public AttackingLevelOperator(List<Step> steps, Player player) : base("Attacking Level Operator", steps, player) { }
@@ -251,3 +274,46 @@ public class Strength : Buff, IPhaseExitHandler
         }
     }
 }*/
+
+/// <summary>焚 (BurnMark): +1 DamagingOperator per stack when applied, -1 when lost. Each turn lose one stack in Fade().</summary>
+public class BurnMark : Buff
+{
+    public const string Id = "BurnMark";
+
+    public BurnMark(int value, Player owner) : base(Id, value, true, owner) { }
+
+    public override bool ApplyTo(Buff existing)
+    {
+        int added = Value;
+        base.ApplyTo(existing);
+        if (existing is BurnMark bm && added > 0)
+            bm.OnStacksApplied(added);
+        return true;
+    }
+
+    /// <summary>Called when stacks are added (merge or first add). Applies +1 DamagingOperator per stack.</summary>
+    public void OnStacksApplied(int count)
+    {
+        if (Owner?.status?.buffs == null || count <= 0) return;
+        for (int i = 0; i < count; i++)
+            Owner.status.buffs.Apply(new DamagingOperator(new BuffOperator.Step(BuffOperator.OpType.Add, 1), Owner));
+    }
+
+    /// <summary>Called when stacks are lost. Applies -1 DamagingOperator per stack.</summary>
+    public void OnStackLost(int count)
+    {
+        if (Owner?.status?.buffs == null || count <= 0) return;
+        for (int i = 0; i < count; i++)
+            Owner.status.buffs.Apply(new DamagingOperator(new BuffOperator.Step(BuffOperator.OpType.Subtract, 1), Owner));
+    }
+
+    /// <summary>Each turn lose one stack (OnFade). Apply -1 DamagingOperator and remove if no stacks left.</summary>
+    public override void Fade()
+    {
+        if (Value <= 0) return;
+        Value--;
+        OnStackLost(1);
+        if (Value <= 0 && Owner != null)
+            Owner.status.buffs.Remove(this, "BurnMarkFade");
+    }
+}

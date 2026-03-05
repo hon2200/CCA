@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,35 +19,43 @@ public class HPAttribute : ObservableAttribute<int>
         {
             if (skill is IDamagingHandler triggerSkill)
             {
-                triggerSkill.OnDamaging(attacker, victim, amount, out var increasedDamage);
-                amount = Mathf.Max(amount + increasedDamage, 0);
+                triggerSkill.OnDamaging(attacker, victim, amount, out var finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
             }
         }
         foreach (var relic in RougeManager.Instance.rougePlayer.Relics)
         {
             if (relic is IDamagingHandler triggerRelic)
             {
-                triggerRelic.OnDamaging(attacker, victim, amount, out var increasedDamage);
-                amount = Mathf.Max(amount + increasedDamage, 0);
+                triggerRelic.OnDamaging(attacker, victim, amount, out var finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
             }
         }
         foreach (var skill in attacker.hero.skills)
         {
             if (skill is IDamagedHandler triggerSkill)
             {
-                triggerSkill.OnDamaged(attacker, victim, amount, out int blockedDamage);
-                amount = Mathf.Max(amount - blockedDamage, 0);
+                triggerSkill.OnDamaged(attacker, victim, amount, out int finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
             }
         }
         foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
         {
             if(relic is IDamagedHandler triggerRelic)
             {
-                triggerRelic.OnDamaged(attacker, victim, amount, out int blockedDamage);
-                amount = Mathf.Max(amount - blockedDamage, 0);
+                triggerRelic.OnDamaged(attacker, victim, amount, out int finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
             }
         }
-        if(attacker is AIPlayer aiAttacker)
+        foreach (var buff in victim.status.buffs)
+        {
+            if (buff is IDamagedHandler damageShieldBuff)
+            {
+                damageShieldBuff.OnDamaged(attacker, victim, amount, out var finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
+            }
+        }
+        if (attacker is AIPlayer aiAttacker)
         {
             aiAttacker.DamagingReaction(amount);
         }
