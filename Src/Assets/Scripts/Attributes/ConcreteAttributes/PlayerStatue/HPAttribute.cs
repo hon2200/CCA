@@ -12,10 +12,10 @@ public class HPAttribute : ObservableAttribute<int>
 {
     public void Set(int amount) => SetValue(amount, "Set");
     public void Heal(int amount) => SetValue(Value + amount, "Heal");
-    public void Damage(int amount, Player attacker , Player victim, AttackDefine attack)
+    public void Damage(int amount, Player attacker, Player victim, AttackDefine attack)
     {
         PrintEvent.Instance.LogDamage(attacker, victim, amount);
-        foreach (var skill in victim.hero.skills)
+        foreach (var skill in attacker.hero.skills)
         {
             if (skill is IDamagingHandler triggerSkill)
             {
@@ -31,7 +31,15 @@ public class HPAttribute : ObservableAttribute<int>
                 amount = Mathf.Max(finalDamage, 0);
             }
         }
-        foreach (var skill in attacker.hero.skills)
+        foreach (var buff in attacker.status.buffs)
+        {
+            if (buff is IDamagingHandler triggerBuff)
+            {
+                triggerBuff.OnDamaging(attacker, victim, amount, out var finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
+            }
+        }
+        foreach (var skill in victim.hero.skills)
         {
             if (skill is IDamagedHandler triggerSkill)
             {
@@ -49,9 +57,9 @@ public class HPAttribute : ObservableAttribute<int>
         }
         foreach (var buff in victim.status.buffs)
         {
-            if (buff is IDamagedHandler damageShieldBuff)
+            if (buff is IDamagedHandler triggerBuff)
             {
-                damageShieldBuff.OnDamaged(attacker, victim, amount, out var finalDamage);
+                triggerBuff.OnDamaged(attacker, victim, amount, out var finalDamage);
                 amount = Mathf.Max(finalDamage, 0);
             }
         }

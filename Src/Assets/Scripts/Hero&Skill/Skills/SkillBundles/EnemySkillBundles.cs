@@ -20,10 +20,8 @@ public class MoltenCast : EnemySkill, IPhaseEnterHandler
             foreach (var imp in players)
             {
                 imp.status.HP.Damage(999, Owner, imp, null);
-                Owner.status.buffs.Apply(new DamagingOperator(
-                    new BuffOperator.Step(BuffOperator.OpType.Multiply, 2), Owner));
-                Owner.status.buffs.Apply(new AttackingLevelOperator(
-                    new BuffOperator.Step(BuffOperator.OpType.Add, 0.5f), Owner));
+                Owner.status.buffs.Apply(new DamagingOperator(2f, Owner, BuffOperator.StepSlot.Second));
+                Owner.status.buffs.Apply(new AttackingLevelOperator(0.5f, Owner, BuffOperator.StepSlot.Third));
             }
         }
     }
@@ -72,8 +70,7 @@ public class RapidGrowth : EnemySkill, IPhaseExitHandler
     public RapidGrowth() : base("Rapid Growth") { }
     protected override void Envoke() 
     {
-        Owner.status.buffs.Apply(new DamagingOperator
-            (new BuffOperator.Step(BuffOperator.OpType.Add, 1), Owner));
+        Owner.status.buffs.Apply(new DamagingOperator(1f, Owner, BuffOperator.StepSlot.Third));
     }
     public void ExitingPhase(Phase phase)
     {
@@ -93,8 +90,7 @@ public class Tsunami : EnemySkill, IActionModifier
         {
             if (water.status.life.Value != LifeStatus.Alive)
                 continue;
-            water.status.buffs.Apply(new DamagingOperator(
-                new BuffOperator.Step(BuffOperator.OpType.Multiply, 2), water));
+            water.status.buffs.Apply(new DamagingOperator(2f, water, BuffOperator.StepSlot.Second));
             // All waters do attack action if available
             var alive = PlayerManager.Instance.GetAlivePlayers();
             foreach (var target in alive)
@@ -585,13 +581,20 @@ public class Bloodlust : EnemySkill, IDamagingHandler
     }
 }
 
-public class MountainCrusher : EnemySkill, ICombatHandler
+public class MountainCrusherEnemy : EnemySkill, IPhaseEnterHandler
 {
-    public MountainCrusher() : base("Mountain Crusher") { }
+    public MountainCrusherEnemy() : base("Mountain Crusher") { }
     protected override void Envoke() { }
-    public void OnCombatEvent(CombatEvent combatEvent)
+    public void OnPhase(Phase phase)
     {
-        // TODO: Owner's damage * 3
+        if(phase is StartPhase)
+        {
+            Owner.status.buffs.Apply(new DamagedOperator(3, Owner, BuffOperator.StepSlot.Second));
+        }
+    }
+    protected override void OnDisabled()
+    {
+        Owner.status.buffs.Apply(new DamagedOperator(1 / 3f, Owner, BuffOperator.StepSlot.Second));
     }
 }
 

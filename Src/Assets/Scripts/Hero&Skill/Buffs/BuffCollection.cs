@@ -53,8 +53,7 @@ public class Invincible : Buff
 
 public class DamagingOperator : BuffOperator, IDamagingHandler
 {
-    public DamagingOperator(List<Step> steps, Player player) : base("Damaging Operator", steps, player) { }
-    public DamagingOperator(Step step, Player player) : base("Damaging Operator", step, player) { }
+    public DamagingOperator(float value, Player player, StepSlot step) : base("Damaging Operator", value, player, step) { }
     public void OnDamaging(Player attacker, Player victim, int damage, out int outcome)
     {
         outcome = ApplyOperatorInt(damage);
@@ -63,8 +62,7 @@ public class DamagingOperator : BuffOperator, IDamagingHandler
 
 public class DamagedOperator : BuffOperator, IDamagedHandler
 {
-    public DamagedOperator(List<Step> steps, Player player) : base("Damaged Operator", steps, player) { }
-    public DamagedOperator(Step step, Player player) : base("Damaged Operator", step, player) { }
+    public DamagedOperator(float value, Player player, StepSlot step) : base("Damaged Operator", value, player, step) { }
     public void OnDamaged(Player attacker, Player victim, int damage, out int outcome)
     {
         outcome = ApplyOperatorInt(damage);
@@ -96,8 +94,7 @@ public class DamageShield : Buff, IDamagedHandler
 
 public class AttackingLevelOperator : BuffOperator, ICombatHandler
 {
-    public AttackingLevelOperator(List<Step> steps, Player player) : base("Attacking Level Operator", steps, player) { }
-    public AttackingLevelOperator(Step step, Player player) : base("Attacking Level Operator", step, player) { }
+    public AttackingLevelOperator(float value, Player player, StepSlot step) : base("Attacking Level Operator", value, player, step) { }
     public void OnCombatEvent(CombatEvent combatEvent)
     {
         if(combatEvent.Type == CombatEventType.Attacking)
@@ -296,7 +293,7 @@ public class BurnMark : Buff
     {
         if (Owner?.status?.buffs == null || count <= 0) return;
         for (int i = 0; i < count; i++)
-            Owner.status.buffs.Apply(new DamagingOperator(new BuffOperator.Step(BuffOperator.OpType.Add, 1), Owner));
+            Owner.status.buffs.Apply(new DamagingOperator(1f, Owner, StepSlot.Third));
     }
 
     /// <summary>Called when stacks are lost. Applies -1 DamagingOperator per stack.</summary>
@@ -304,7 +301,7 @@ public class BurnMark : Buff
     {
         if (Owner?.status?.buffs == null || count <= 0) return;
         for (int i = 0; i < count; i++)
-            Owner.status.buffs.Apply(new DamagingOperator(new BuffOperator.Step(BuffOperator.OpType.Subtract, 1), Owner));
+            Owner.status.buffs.Apply(new DamagingOperator(-1f, Owner, StepSlot.Third));
     }
 
     /// <summary>Each turn lose one stack (OnFade). Apply -1 DamagingOperator and remove if no stacks left.</summary>
