@@ -20,6 +20,7 @@ public class PlayerUIText : MonoBehaviour
     public HPFilling HPFilling;
     public void Initialize()
     {
+        InitializeImagesFromLibrary();
         foreach(var text in UIText)
         {
             switch (text.Key)
@@ -101,6 +102,42 @@ public class PlayerUIText : MonoBehaviour
                 OnBorn();
             }
         };
+    }
+
+    /// <summary>
+    /// Load character sprite from HeroLiberary or EnemyLiberary by player.hero.ID.
+    /// Hero vs enemy: ID is looked up in HeroDataBase.HeroDictionary (hero) or HeroDataBase.EnemyDictionary (enemy); enemy type uses EnemyDefine.EnemyType.
+    /// Uses template "Default" when ID has no template; for enemies, uses "BossDefault" when EnemyType is Boss.
+    /// Sets spriteRenderer.sprite when the template is available.
+    /// </summary>
+    public void InitializeImagesFromLibrary()
+    {
+        if (player?.hero == null || spriteRenderer == null) return;
+        string id = player.hero.ID;
+        Sprite spriteToSet = null;
+
+        if (HeroDataBase.Instance?.HeroDictionary != null && HeroDataBase.Instance.HeroDictionary.TryGetValue(id, out _))
+        {
+            var lib = HeroLiberary.Instance?.HeroDictionary;
+            if (lib != null && (lib.TryGetValue(id, out var t) || lib.TryGetValue("Default", out t)))
+                spriteToSet = t?.image;
+        }
+        else if (HeroDataBase.Instance?.EnemyDictionary != null && HeroDataBase.Instance.EnemyDictionary.TryGetValue(id, out var enemyDefine))
+        {
+            var lib = EnemyLiberary.Instance?.EnemyDictionary;
+            if (lib != null)
+            {
+                if (lib.TryGetValue(id, out var t))
+                    spriteToSet = t?.image;
+                if (spriteToSet == null && string.Equals(enemyDefine.EnemyType, "Boss", System.StringComparison.OrdinalIgnoreCase) && lib.TryGetValue("BossDefault", out var bossT))
+                    spriteToSet = bossT?.image;
+                if (spriteToSet == null && lib.TryGetValue("Default", out var defaultT))
+                    spriteToSet = defaultT?.image;
+            }
+        }
+
+        if (spriteToSet != null)
+            spriteRenderer.sprite = spriteToSet;
     }
     private void OntheEdgeofDeath()
     {

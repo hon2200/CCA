@@ -13,8 +13,11 @@ public class RelicDropDownController : MonoBehaviour
     {
 
         RelicDropDown.options.Add(new TMP_Dropdown.OptionData());
+        var relicLibrary = RelicLiberary.Instance != null ? RelicLiberary.Instance.RelicDictionary : null;
         foreach (var relic in RelicDatabase.Instance.RelicDictionary.Values)
         {
+            if (relicLibrary != null && !relicLibrary.ContainsKey(relic.ID))
+                continue;
             RelicDropDown.options.Add(new RelicOptionData(relic.Name, relic.ID));
         }
         RelicDropDown.onValueChanged.AddListener(OnRelicSelected);

@@ -19,8 +19,11 @@ public class MonsterAddController : MonoBehaviour
         MonsterDropDown.options.Add(new TMP_Dropdown.OptionData("-- Select monster --"));
         if (HeroDataBase.Instance != null && HeroDataBase.Instance.EnemyDictionary != null)
         {
+            var enemyLibrary = EnemyLiberary.Instance != null ? EnemyLiberary.Instance.EnemyDictionary : null;
             foreach (var enemy in HeroDataBase.Instance.EnemyDictionary.Values)
             {
+                if (enemyLibrary != null && !enemyLibrary.ContainsKey(enemy.ID))
+                    continue;
                 MonsterDropDown.options.Add(new MonsterOptionData(enemy.Name, enemy.ID));
             }
         }

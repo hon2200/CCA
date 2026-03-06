@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Desert Eagle
   m_EditorClassIdentifier: 
   ID: IMI Desert Eagle
-  Image: {fileID: 21300000, guid: f029dd5dab8030a47ae39256ba538624, type: 3}
+  Image: {fileID: 21300000, guid: 9ec77bce9b2f222409fddb2183bfcd70, type: 3}
   counts: 

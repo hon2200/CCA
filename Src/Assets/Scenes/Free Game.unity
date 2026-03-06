@@ -847,12 +847,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2536790721574332755, guid: 3094b90bbf7fc5940a63ae30ff8d2bab, type: 2}
     - target: {fileID: 4900191258255694985, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900191258255694985, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900191258255694985, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900191258255694985, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.08
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4900191258255694985, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.66
+      value: 2.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900191258255694985, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5035790811129528100, guid: b7f980da1d3110f4c9139b402b1fc700, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5209,6 +5225,81 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &663431815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 663431816}
+  - component: {fileID: 663431818}
+  - component: {fileID: 663431817}
+  - component: {fileID: 663431819}
+  m_Layer: 0
+  m_Name: HeroDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &663431816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663431815}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917504223}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663431817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663431815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192745f57807e37438684ee33900269f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+--- !u!114 &663431818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663431815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24e9b7f51acde34fa80719cf3431822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+  _resourcesPath: Scriptables/HeroScriptables
+--- !u!114 &663431819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663431815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9c523af597ffb4880abb187f38d9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+  _resourcesPath: Scriptables/EnemyScriptables
 --- !u!1001 &666523368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8312,10 +8403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0
-  RelicDictionary:
-    _serializedList:
-    - Key: IMI Desert Eagle
-      Value: {fileID: 11400000, guid: 1789188a1528d00499b12b790d628723, type: 2}
+  _resourcesPath: Scriptables/RelicScriptables
 --- !u!1 &1060658303
 GameObject:
   m_ObjectHideFlags: 0
@@ -15472,7 +15560,6 @@ GameObject:
   - component: {fileID: 1917504216}
   - component: {fileID: 1917504215}
   - component: {fileID: 1917504214}
-  - component: {fileID: 1917504226}
   m_Layer: 0
   m_Name: -- GameDatabase --
   m_TagString: Untagged
@@ -15549,70 +15636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0
-  CardDictionary:
-    _serializedList:
-    - Key: bullet
-      Value: {fileID: 11400000, guid: bdeb239122708734a8f266b9483149d5, type: 2}
-    - Key: double_bullet
-      Value: {fileID: 11400000, guid: 167cee275e198794bb8ef6be504ac889, type: 2}
-    - Key: sword
-      Value: {fileID: 11400000, guid: 700681d47e2728347bc7d9d647c48ae0, type: 2}
-    - Key: double_sword
-      Value: {fileID: 11400000, guid: 96d6df6d87bd1f645bbff6a55c339b5d, type: 2}
-    - Key: shoot
-      Value: {fileID: 11400000, guid: 29829906c343e9340a893ce66a276eab, type: 2}
-    - Key: double_shoot
-      Value: {fileID: 11400000, guid: 809476b6faced7d43a809092ba5c7126, type: 2}
-    - Key: laser_shoot
-      Value: {fileID: 11400000, guid: 9225c175eb783aa4295ef9b60a76e5d3, type: 2}
-    - Key: laser_cannon
-      Value: {fileID: 11400000, guid: e8bbf861a6e52c441b95013252c813b9, type: 2}
-    - Key: RPG
-      Value: {fileID: 11400000, guid: ed231828d236d864c9282b949c257362, type: 2}
-    - Key: double_RPG
-      Value: {fileID: 11400000, guid: d5fff3bc253ba44409fae3c7c93bdff4, type: 2}
-    - Key: nuclear_bomb
-      Value: {fileID: 11400000, guid: 8d9e0c484725f1842a4771d291d40abf, type: 2}
-    - Key: stab
-      Value: {fileID: 11400000, guid: 13eaffb0718e66443ae6735d263c3d29, type: 2}
-    - Key: cleave
-      Value: {fileID: 11400000, guid: ae07db70217664d4cb3a903d4a445d55, type: 2}
-    - Key: laser_stab
-      Value: {fileID: 11400000, guid: 19528c173bcf0c14f85898ef6fb6d097, type: 2}
-    - Key: laser_cleave
-      Value: {fileID: 11400000, guid: d72482426f55a164bab73a98156a40f9, type: 2}
-    - Key: ghost_sever
-      Value: {fileID: 11400000, guid: fcb20204e5e303f4f886b8a4c3025306, type: 2}
-    - Key: spirit_sever
-      Value: {fileID: 11400000, guid: 5a0808b34ca813b42bca6de1de969b5b, type: 2}
-    - Key: block
-      Value: {fileID: 11400000, guid: 8cc20b780e494824880efa08fcd1e5ab, type: 2}
-    - Key: double_block
-      Value: {fileID: 11400000, guid: 75469922abe19d646b8c8a68cf9f7eec, type: 2}
-    - Key: heavy_block
-      Value: {fileID: 11400000, guid: 835b102e229c7354d8547a3511f15efa, type: 2}
-    - Key: deflect
-      Value: {fileID: 11400000, guid: 94b07096b307d4b4cb9a666c857fb959, type: 2}
-    - Key: rebounce
-      Value: {fileID: 11400000, guid: 02086c0dc3189a74fb64826c76ac8bd0, type: 2}
-    - Key: counterblade
-      Value: {fileID: 11400000, guid: ba8babfb02c978346a868aec848857b1, type: 2}
-    - Key: spectral_reflection
-      Value: {fileID: 11400000, guid: fb7cac989c3cbde4695f2d917ea6dce9, type: 2}
-    - Key: disarm
-      Value: {fileID: 11400000, guid: b94fa16ae545e8a4485cba80af791a83, type: 2}
-    - Key: comeon
-      Value: {fileID: 11400000, guid: feed6a4728fd86647b7298209ca8371a, type: 2}
-    - Key: provoke
-      Value: {fileID: 11400000, guid: e24db1c625dfbcf4a886aa719d6aa431, type: 2}
-    - Key: powder_keg
-      Value: {fileID: 11400000, guid: e1bae89f4dc030748a20bebb43baac7b, type: 2}
-    - Key: triple_bullet
-      Value: {fileID: 11400000, guid: 7c88065af15351542939dd4edb735e28, type: 2}
-    - Key: EXcalibur
-      Value: {fileID: 11400000, guid: b8b0a95885e65a740b06f44ad840783c, type: 2}
-    - Key: triple_sword
-      Value: {fileID: 11400000, guid: f9676dca91ac9e141929eff32bd5cf3b, type: 2}
+  _resourcesPath: Scriptables/CardScriptables
 --- !u!114 &1917504221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15641,21 +15665,9 @@ Transform:
   m_Children:
   - {fileID: 1223953760}
   - {fileID: 1059343830}
+  - {fileID: 663431816}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1917504226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917504213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 192745f57807e37438684ee33900269f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  global: 0
 --- !u!1 &1940710028
 GameObject:
   m_ObjectHideFlags: 0
@@ -17460,11 +17472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 625645030045140111, guid: b952299f6b5fd3743b5f7c9a376ca8a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.48
+      value: 8.24
       objectReference: {fileID: 0}
     - target: {fileID: 625645030045140111, guid: b952299f6b5fd3743b5f7c9a376ca8a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.18
+      value: -2.92
       objectReference: {fileID: 0}
     - target: {fileID: 625645030045140111, guid: b952299f6b5fd3743b5f7c9a376ca8a3, type: 3}
       propertyPath: m_LocalPosition.z

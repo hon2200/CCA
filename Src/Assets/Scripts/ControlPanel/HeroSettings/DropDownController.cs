@@ -14,8 +14,11 @@ public class DropDownController : MonoBehaviour
     {
         HeroDropDown.options.Clear();
         HeroDropDown.options.Add(new TMP_Dropdown.OptionData("-- Select hero --"));
+        var heroLibrary = HeroLiberary.Instance != null ? HeroLiberary.Instance.HeroDictionary : null;
         foreach (var hero in HeroDataBase.Instance.HeroDictionary.Values)
         {
+            if (heroLibrary != null && !heroLibrary.ContainsKey(hero.ID))
+                continue;
             HeroDropDown.options.Add(new HeroOptionData(hero.Name, hero.ID));
         }
         HeroDropDown.onValueChanged.AddListener(OnHeroSelected);

@@ -1,40 +1,42 @@
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
 /// <summary>
 /// UI for a single relic: image and count display. Acts like CardUI for relics.
 /// Expects RuntimeRelic on the same GameObject (connects RelicDefine + RelicTemplete).
+/// Reads template from RelicLiberary by relic ID; uses "Default" if no template is found.
 /// </summary>
 public class RelicUI : MonoBehaviour
 {
-    [Header("Image")]
     public SpriteRenderer sprite;
 
-    [Header("Count display (optional)")]
     public TextMeshProUGUI countText;
 
-    /// <summary>
-    /// Initialize image from template. Call after RuntimeRelic.relicTemplete is set.
-    /// </summary>
-    public void Initialize(RelicTemplete template)
+    private void Start()
     {
-        if (template == null) return;
-        if (sprite != null && template.Image != null)
-            sprite.sprite = template.Image;
-        UpdateCount();
+        InitializeFromLibrary();
     }
 
     /// <summary>
-    /// Initialize image from template and update count from define. Call when both RuntimeRelic.relicTemplete and relicDefine are set.
+    /// Load image and count from RelicLiberary using RuntimeRelic.relicDefine.ID; fallback template ID is "Default".
     /// </summary>
-    public void Initialize(RelicTemplete template, RelicDefine define)
+    public void InitializeFromLibrary()
     {
-        if (template == null) return;
+        var runtimeRelic = GetComponent<RuntimeRelic>();
+        if (runtimeRelic?.relicDefine == null) return;
+
+        var library = RelicLiberary.Instance?.RelicDictionary;
+        if (library == null) return;
+
+        string id = runtimeRelic.relicDefine.ID;
+        if (!library.TryGetValue(id, out var template) && !library.TryGetValue("Default", out template))
+            return;
+
         if (sprite != null && template.Image != null)
             sprite.sprite = template.Image;
-        UpdateCount(define);
+        runtimeRelic.relicTemplete = template;
+        UpdateCount(runtimeRelic.relicDefine);
     }
 
     /// <summary>
