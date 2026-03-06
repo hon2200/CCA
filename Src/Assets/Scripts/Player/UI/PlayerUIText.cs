@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -60,7 +61,7 @@ public class PlayerUIText : MonoBehaviour
                     text.Value.text = player.Name.ToString();
                     break;
                 case PlayerUITextName.AvailableAction:
-                    string result = string.Join("\n", player.AvailableActions);
+                    string result = string.Join("\n", player.hero.skills.Select(skill => skill.Name));
                     text.Value.text = result;
                     break;
             }
