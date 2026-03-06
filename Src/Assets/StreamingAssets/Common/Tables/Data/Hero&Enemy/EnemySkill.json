@@ -36,7 +36,7 @@
             0,
             0
         ],
-        "CD": 3
+        "CD": 0
     },
     "Lush Growth": {
         "ID": "Lush Growth",
@@ -49,7 +49,7 @@
             0,
             0
         ],
-        "CD": 4
+        "CD": 0
     },
     "Rapid Growth": {
         "ID": "Rapid Growth",
@@ -75,7 +75,7 @@
             0,
             0
         ],
-        "CD": 5
+        "CD": 0
     },
     "Scorched Oblivion": {
         "ID": "Scorched Oblivion",
@@ -886,9 +886,9 @@
     "Mountain Crusher": {
         "ID": "Mountain Crusher",
         "Name": "千钧棒",
-        "IsLimited": true,
-        "LimitedTimes": 1,
-        "Description": "获得伤害*3算子",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你造成的伤害*3。",
         "Costs": [
             0,
             0,
@@ -901,7 +901,7 @@
         "Name": "毫毛术",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "第三回合起每隔6个回合，你分裂为3个分身，血量不变且每个单位分得1/3资源（向上取整），并失去【千钧棒】。该状态持续3回合，复原时六耳猕猴获得分身的所有资源与分身血量之和的1/3血量（向下取整）。（先不装）",
+        "Description": "第三回合起每隔6个回合，你分裂为3个分身，血量不变且每个单位分得1/3资源（向上取整），并失去【千钧棒】。该状态持续3回合，复原时六耳猕猴获得分身的所有资源与分身血量之和的1/3血量（向下取整）。",
         "Costs": [
             0,
             0,
@@ -938,8 +938,8 @@
     "Well Equipped": {
         "ID": "Well Equipped",
         "Name": "装备精良",
-        "IsLimited": true,
-        "LimitedTimes": 1,
+        "IsLimited": false,
+        "LimitedTimes": 0,
         "Description": "你开局拥有子弹5，剑5。",
         "Costs": [
             0,
@@ -985,14 +985,14 @@
             0,
             0
         ],
-        "CD": 1
+        "CD": 0
     },
     "Inviolable": {
         "ID": "Inviolable",
         "Name": "不可侵犯",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "若场上的图腾被破坏，立刻进入高攻击欲望状态。（先不装）",
+        "Description": "若场上的图腾被破坏，立刻进入高攻击欲望状态。",
         "Costs": [
             0,
             0,
@@ -1018,7 +1018,7 @@
         "Name": "无休",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "高攻击欲望（先不装），你的攻击命中时，返回此次攻击消耗的资源。",
+        "Description": "高攻击欲望，你的攻击命中时，返回此次攻击消耗的资源。",
         "Costs": [
             0,
             0,
@@ -1031,7 +1031,7 @@
         "Name": "坚盾",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "低攻击欲望（先不装），你的防御行为生效于全体友方。",
+        "Description": "低攻击欲望，你的防御行为生效于全体友方。",
         "Costs": [
             0,
             0,
@@ -1050,7 +1050,7 @@
             0,
             0
         ],
-        "CD": 1
+        "CD": 0
     },
     "Agile Ape": {
         "ID": "Agile Ape",
@@ -1068,22 +1068,22 @@
     "Nurture": {
         "ID": "Nurture",
         "Name": "哺育",
-        "IsLimited": true,
-        "LimitedTimes": 1,
-        "Description": "你入场的第三回合，成长为狼（暂时不装）",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你入场的第三回合，成长为狼。",
         "Costs": [
             0,
             0,
             0
         ],
-        "CD": 3
+        "CD": 0
     },
     "Wolf Grudge": {
         "ID": "Wolf Grudge",
         "Name": "狼怨",
         "IsLimited": false,
         "LimitedTimes": 0,
-        "Description": "受伤叠加一层复仇，造成伤害失去一点复仇，幼狼死亡获得三点复仇，其他狼死亡获得两点复仇。你每有一层复仇，伤害+1，有复仇时为高攻击欲望。（暂时没有实装后半段）",
+        "Description": "受伤叠加一层复仇，造成伤害失去一点复仇，幼狼死亡获得三点复仇，其他狼死亡获得两点复仇。你每有一层复仇，伤害+1，有复仇时为高攻击欲望。",
         "Costs": [
             0,
             0,
@@ -1097,6 +1097,19 @@
         "IsLimited": true,
         "LimitedTimes": 1,
         "Description": "当场上所有类型为Boss和Elite的单位全部死亡时，玩家赢得此局游戏。",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0
+    },
+    "Daily Growing": {
+        "ID": "Daily Growing",
+        "Name": "快速生长",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "每回合结束时，你造成的伤害+1（可叠加）。",
         "Costs": [
             0,
             0,

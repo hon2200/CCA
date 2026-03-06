@@ -1,37 +1,46 @@
 {
-    "BronzeGuardian": {
-        "ID": "BronzeGuardian",
+    "Bronze Guardian": {
+        "ID": "Bronze Guardian",
         "Name": "青铜镇守者",
         "Description": "【熔铸】第9回合，你击杀场上所有存活的青铜小鬼，并获得它们的资源，你每击杀一个青铜小鬼，你的伤害*2，攻击力+0.5。",
         "MaxHP": 40,
         "SkillIDList": [
-            "MoltenCast",
+            "Molten Cast",
             "Leader Catch"
         ],
         "EnemyType": "Boss"
     },
-    "BronzeImp": {
-        "ID": "BronzeImp",
+    "Bronze Imp": {
+        "ID": "Bronze Imp",
         "Name": "青铜小鬼",
         "Description": "【殉亡】青铜镇守者死亡时，你也死亡。",
         "MaxHP": 8,
         "SkillIDList": [],
         "EnemyType": "Minion"
     },
-    "AncientTree": {
-        "ID": "AncientTree",
+    "Ancient Tree": {
+        "ID": "Ancient Tree",
         "Name": "古老树木",
         "Description": "【播种】从第2回合起每隔3回合，你失去3点血量，召唤两个小树领。【枝繁叶茂】若你连续4回合未受到伤害，你回复5点血量，然后重置此技能计数。",
         "MaxHP": 30,
         "SkillIDList": [
             "Sow",
-            "LushGrowth",
+            "Lush Growth",
             "Leader Catch"
         ],
         "EnemyType": "Boss"
     },
-    "IntangibleWater": {
-        "ID": "IntangibleWater",
+    "Little Tree": {
+        "ID": "Little Tree",
+        "Name": "小树灵",
+        "MaxHP": 3,
+        "SkillIDList": [
+            "Daily Growing"
+        ],
+        "EnemyType": "Minion"
+    },
+    "Formless Water": {
+        "ID": "Formless Water",
         "Name": "无形之水",
         "Description": "【海啸】第5回合起每5回合，所有有可用资源的无形之水会对同一目标发动攻击，且此次攻击伤害*2。",
         "MaxHP": 10,
@@ -40,40 +49,40 @@
         ],
         "EnemyType": "Boss"
     },
-    "BurningAvenger": {
-        "ID": "BurningAvenger",
+    "Burning Avenger": {
+        "ID": "Burning Avenger",
         "Name": "焚烧复仇者",
         "Description": "【焚烧殆尽】你第一次补给时获得10个'焚'标记，每回合结束时你失去一个'焚'标记，当你击杀一名角色时你获得3个'焚'标记。每拥有一个'焚'标记，你的伤害+1。",
         "MaxHP": 25,
         "SkillIDList": [
-            "ScorchedOblivion"
+            "Scorched Oblivion"
         ],
         "EnemyType": "Boss"
     },
-    "EarthBurier": {
-        "ID": "EarthBurier",
+    "Earth Burier": {
+        "ID": "Earth Burier",
         "Name": "大地送葬者",
         "Description": "【丰壤祝福】当你造成一次伤害后，你可以获得一个伤害护盾（抵消一次伤害），该护盾可叠加。【回归大地】当你对一名角色造成伤害时，若其血量小于自身血量上限的1/3，你直接将其击杀。",
         "MaxHP": 35,
         "SkillIDList": [
-            "FertileBlessing",
-            "ReturnToEarth"
+            "Fertile Blessing",
+            "Return to Earth"
         ],
         "EnemyType": "Boss"
     },
-    "PlagueIncarnation": {
-        "ID": "PlagueIncarnation",
+    "Plague Incarnation": {
+        "ID": "Plague Incarnation",
         "Name": "瘟疫化身",
         "Description": "【瘴气】第3回合，你对全体敌方成员施加一层'尸毒'标记。当你对其他角色造成伤害时令其获得一层'尸毒'标记，当拥有'尸毒'标记的角色攻击你且未对你造成伤害时你可令其获得一个标记，当拥有标记的角色对你造成伤害时其失去所有标记。回合结束时，你对拥有n个标记的角色造成n点伤害。【焚城】第3回合起的每一个回合中，没有消耗资源的其他角色均受到来源于你的1点伤害。",
         "MaxHP": 50,
         "SkillIDList": [
             "Miasma",
-            "CityBurn"
+            "City Burn"
         ],
         "EnemyType": "Boss"
     },
-    "WarKing": {
-        "ID": "WarKing",
+    "War King": {
+        "ID": "War King",
         "Name": "战争之王",
         "Description": "【征服者】奇数回合，你的攻击造成的伤害*4，攻击力+0.5。【侵略者】偶数回合，你造成伤害时掠夺目标的一半资源（向下取整）。",
         "MaxHP": 55,
@@ -83,8 +92,8 @@
         ],
         "EnemyType": "Boss"
     },
-    "FamineReaper": {
-        "ID": "FamineReaper",
+    "Famine Reaper": {
+        "ID": "Famine Reaper",
         "Name": "饥民收割者",
         "Description": "【巨贾】你开局拥有子弹20，剑10。【斩杀者】当你对敌方角色造成伤害时，若其剩余血量不大于n/3，你将其斩杀。（n为你们的资源数之差）",
         "MaxHP": 35,
@@ -100,7 +109,7 @@
         "Description": "【赤地千里】当你攻击时，场上所有其他角色的补给无效。【虚像】当你使用'过来'时，最多受到5点伤害。",
         "MaxHP": 30,
         "SkillIDList": [
-            "ScorchedEarth",
+            "Scorched Earth",
             "Mirage"
         ],
         "EnemyType": "Boss"
@@ -111,7 +120,7 @@
         "Description": "【死亡化身】第4回合起，你每隔4回合进入一次'生命收割'状态。'生命收割'状态下你不受到任何伤害，且伤害*4。该状态持续3回合。若你在一次'生命收割'状态下未能击杀任何目标，你下回合眩晕。",
         "MaxHP": 40,
         "SkillIDList": [
-            "DeathIncarnate",
+            "Death Incarnate",
             "Leader Catch"
         ],
         "EnemyType": "Boss"
@@ -122,7 +131,7 @@
         "Description": "无技能。",
         "MaxHP": 4,
         "SkillIDList": [
-            "DeathBound"
+            "Deathbound"
         ],
         "EnemyType": "Minion"
     },
@@ -132,33 +141,33 @@
         "Description": "【明镜】你的防御拥有反弹效果。【重演】你造成的伤害+n（n为你上次受到的伤害值）。【死亡感应】限定技，若正常判定下你将要死亡，你可以使用一次'逆转决策'。",
         "MaxHP": 30,
         "SkillIDList": [
-            "ClearMirror",
+            "Clear Mirror",
             "Encore",
-            "DeathSense"
+            "Death Sense"
         ],
         "EnemyType": "Boss"
     },
-    "NamelessSwordsaint": {
-        "ID": "NamelessSwordsaint",
+    "Nameless Swordsaint": {
+        "ID": "Nameless Swordsaint",
         "Name": "无名剑圣",
         "Description": "【会心】当你的刀剑攻击命中时发动，你的下次攻击基础攻击力为10且无视一切防御和反弹效果，若此次攻击发动时目标使用了'挑衅'，则其不受到任何伤害。【剑势】你每造成一次伤害，都可获得一层'剑势'，每层'剑势'使你的攻击力+1，且刀剑攻击可以额外执行一次。当你受到伤害时，你的剑势清零。【求不得】若你最近的3次攻击都未对敌方单位造成伤害，你眩晕。【断舍离】限定技，当你的血量值降低到10以下，你的下次攻击消耗你的所有子弹和（m-6）把剑，且此次攻击的攻击力和伤害均+n。（m为你当前的刀剑数，n为你此次攻击消耗的资源。）",
         "MaxHP": 70,
         "SkillIDList": [
-            "CriticalStrike",
-            "SwordMomentum",
+            "Critical Strike",
+            "Sword Momentum",
             "Unattainable",
-            "LettingGo"
+            "Letting Go"
         ],
         "EnemyType": "Boss"
     },
-    "MagicBulletShooter": {
-        "ID": "MagicBulletShooter",
+    "Magic Bullet Shooter": {
+        "ID": "Magic Bullet Shooter",
         "Name": "魔弹射手",
         "Description": "【魔弹】你开局拥有6颗'魔弹'，你的每次子弹攻击会消耗一颗'魔弹'。若你一次消耗了魔弹的攻击成功命中了敌方目标，则你直接将其击杀。【恶魔祭礼】你的第7n次子弹攻击拥有'恶魔祭品'效果，若此次攻击命中敌方目标，则你获得6颗'魔弹'；若此次攻击被反弹，则反弹伤害为你当前血量的一半（向上取整）。",
         "MaxHP": 60,
         "SkillIDList": [
-            "MagicBullet",
-            "DemonicRite"
+            "Magic Bullet",
+            "Demonic Rite"
         ],
         "EnemyType": "Boss"
     },
@@ -168,8 +177,8 @@
         "Description": "【神锋】你的刀剑攻击造成的伤害*n（n为该攻击消耗的刀剑数）。【同命】莫邪受到伤害时，你令此伤害减半（向下取整），同时你受到等量伤害。",
         "MaxHP": 30,
         "SkillIDList": [
-            "DivineBlade",
-            "SharedFate"
+            "Divine Blade",
+            "Shared Fate"
         ],
         "EnemyType": "Boss"
     },
@@ -179,8 +188,8 @@
         "Description": "【淬刃】你的刀剑攻击可以指定全体敌方单位为目标，且攻击力+1。【同命】干将受到伤害时，你令此伤害减半（向下取整），同时你受到等量伤害。",
         "MaxHP": 30,
         "SkillIDList": [
-            "TemperedEdge",
-            "SharedFate"
+            "Tempered Edge",
+            "Shared Fate"
         ],
         "EnemyType": "Boss"
     },
@@ -192,8 +201,8 @@
         "SkillIDList": [
             "Benediction",
             "Vengeance",
-            "DivineBlade",
-            "TemperedEdge"
+            "Divine Blade",
+            "Tempered Edge"
         ],
         "EnemyType": "Boss"
     },
@@ -203,13 +212,13 @@
         "Description": "【梅菲斯特的契约】你每回合最多受到1点伤害。【堕落的进取者】若本回合场上进行补给的角色为多数，你下回合拥有【寻欢】。若场上进行攻击的角色为多数，你下回合拥有技能【好斗】。若场上防御的角色为多数，你下回合拥有技能【安逸】。若场上进行特殊行动的角色为多数，你下回合拥有技能【求爱】。若场上进行每类行动的角色数相同，你下回合拥有技能【求知】。其中【寻欢】你因补给获得的资源3；【好斗】你造成的伤害3，攻击力+1.5；【安逸】你可以使用2种防御，且若你如此做，视为你额外使用了一次'过来'；【求爱】当你造成伤害时，你可以获取对方3个资源（子弹优先）；【求知】你其他技能中的基础数值+1。",
         "MaxHP": 20,
         "SkillIDList": [
-            "MephistosPact",
-            "FallenStriver",
-            "PleasureSeeking",
+            "Mephisto's Pact",
+            "Fallen Striver",
+            "Pleasure Seeking",
             "Combativeness",
             "Ease",
             "Courtship",
-            "KnowledgeSeeking"
+            "Knowledge Seeking"
         ],
         "EnemyType": "Boss"
     },
@@ -220,56 +229,56 @@
         "MaxHP": 100,
         "SkillIDList": [
             "Collapse",
-            "HellGather",
-            "DesperateStruggle",
-            "LifeOrDeath",
+            "Hell Gather",
+            "Desperate Struggle",
+            "Life or Death",
             "Leader Catch"
         ],
         "EnemyType": "Boss"
     },
-    "FallenAngel": {
-        "ID": "FallenAngel",
+    "Fallen Angel": {
+        "ID": "Fallen Angel",
         "Name": "堕落天使",
         "Description": "【你死我活】当你造成伤害时，你失去一半的血量（向下取整），对目标额外造成2n点伤害（n为你失去的血量）。",
         "MaxHP": 10,
         "SkillIDList": [
-            "LifeOrDeath"
+            "Life or Death"
         ],
         "EnemyType": "Minion"
     },
-    "CunningJester": {
-        "ID": "CunningJester",
+    "Cunning Jester": {
+        "ID": "Cunning Jester",
         "Name": "狡诈小丑",
         "Description": "【诡异戏法】敌方英雄每进行一次攻击，你的伤害+1。",
         "MaxHP": 20,
         "SkillIDList": [
-            "DeceptiveTrick"
+            "Deceptive Trick"
         ],
         "EnemyType": "Elite"
     },
-    "RagingGiant": {
-        "ID": "RagingGiant",
+    "Raging Giant": {
+        "ID": "Raging Giant",
         "Name": "狂怒巨人",
         "Description": "【冲撞践踏】敌方英雄每进行一次防御，你的伤害+1。",
         "MaxHP": 20,
         "SkillIDList": [
-            "RampageStomp"
+            "Rampage Stomp"
         ],
         "EnemyType": "Elite"
     },
-    "FallingBlossomGeneral": {
-        "ID": "FallingBlossomGeneral",
+    "Falling Blossom General": {
+        "ID": "Falling Blossom General",
         "Name": "落英飞将",
         "Description": "【飞花剑】你每造成一次伤害，获得一个\"飞花\"标记，在场上召唤一名\"剑冢\"（最多8个）。每个\"飞花\"标记使你的攻击力+0.5。【花辞树】你的血量不大于7时，你摧毁场上的所有\"剑冢\"，失去所有\"飞花\"标记，每个被摧毁的剑冢使你的伤害+1，受伤-1，且此回合起你每回合失去1点体力。",
         "MaxHP": 35,
         "SkillIDList": [
-            "FlyingFlower",
-            "FlowerFarewell"
+            "Flying Flower",
+            "Flower Farewell"
         ],
         "EnemyType": "Elite"
     },
-    "SwordTomb": {
-        "ID": "SwordTomb",
+    "Sword Tomb": {
+        "ID": "Sword Tomb",
         "Name": "剑冢",
         "Description": "【沉默】你不能补给和攻击。",
         "MaxHP": 50,
@@ -278,13 +287,13 @@
         ],
         "EnemyType": "Elite"
     },
-    "CultLeader": {
-        "ID": "CultLeader",
+    "Cult Leader": {
+        "ID": "Cult Leader",
         "Name": "密教领袖",
         "Description": "【图腾召唤】每三回合随机召唤一个图腾，场上有空余格子时为低攻击欲望，场上没有空余格子时为高攻击欲望。",
         "MaxHP": 20,
         "SkillIDList": [
-            "TotemCall",
+            "Totem Call",
             "Leader Catch"
         ],
         "EnemyType": "Elite"
@@ -299,8 +308,8 @@
         ],
         "EnemyType": "Minion"
     },
-    "BlackPhoenix": {
-        "ID": "BlackPhoenix",
+    "Black Phoenix": {
+        "ID": "Black Phoenix",
         "Name": "黑炎凤凰",
         "Description": "【涅槃】你死亡后以一半的血量复活，并获得等于复活后血量数的\"焚\"标记。【化烬】你对一名单位造成伤害后，可获得其一发子弹。",
         "MaxHP": 20,
@@ -310,41 +319,41 @@
         ],
         "EnemyType": "Elite"
     },
-    "CorruptedTailor": {
-        "ID": "CorruptedTailor",
+    "Corrupted Tailor": {
+        "ID": "Corrupted Tailor",
         "Name": "堕落裁缝",
         "Description": "【罗织】你开局获得n层伤害护盾（n为玩家拥有的装备总数）。【铸甲】你每3回合给除你以外的所有友方单位增加n点护甲。",
         "MaxHP": 15,
         "SkillIDList": [
             "Fabrication",
-            "ArmorForging"
+            "Armor Forging"
         ],
         "EnemyType": "Elite"
     },
-    "CorruptedBlacksmith": {
-        "ID": "CorruptedBlacksmith",
+    "Corrupted Blacksmith": {
+        "ID": "Corrupted Blacksmith",
         "Name": "堕落铁匠",
         "Description": "【百炼】你的伤害+n。（n为玩家拥有的升级卡牌总数）。【铸刃】你每3回合令除你以外的所有友方单位下次攻击伤害+1。",
         "MaxHP": 15,
         "SkillIDList": [
             "Tempering",
-            "BladeForging"
+            "Blade Forging"
         ],
         "EnemyType": "Elite"
     },
-    "CorruptedAlchemist": {
-        "ID": "CorruptedAlchemist",
+    "Corrupted Alchemist": {
+        "ID": "Corrupted Alchemist",
         "Name": "堕落炼金师",
         "Description": "【药品囤积】你开局拥有n发子弹，n把剑（n为玩家拥有的一次性道具总数）。【药品配给】你每3回合令除你以外的所有友方单位获得剑1，子弹1。",
         "MaxHP": 15,
         "SkillIDList": [
-            "PotionStockpiling",
-            "PotionRationing"
+            "Potion Stockpiling",
+            "Potion Rationing"
         ],
         "EnemyType": "Elite"
     },
-    "KingPhantom": {
-        "ID": "KingPhantom",
+    "King Phantom": {
+        "ID": "King Phantom",
         "Name": "王者虚像",
         "Description": "【王之财宝】锁定技，你拥有无限资源。【王之傲慢】锁定技，你第一回合无法攻击，你无法受到负面效果控制，挑衅对你无效，且你无视本回合受到你伤害的角色对你造成的伤害。",
         "MaxHP": 5,
@@ -354,29 +363,29 @@
         ],
         "EnemyType": "Elite"
     },
-    "DisasterMaster": {
-        "ID": "DisasterMaster",
+    "Disaster Master": {
+        "ID": "Disaster Master",
         "Name": "灾祸掌管者",
         "Description": "【天罚】每20回合，你对敌方场上的所有单位造成20点伤害。",
         "MaxHP": 25,
         "SkillIDList": [
-            "HeavenlyPunishment"
+            "Heavenly Punishment"
         ],
         "EnemyType": "Elite"
     },
-    "PuppetMaster": {
-        "ID": "PuppetMaster",
+    "Puppet Master": {
+        "ID": "Puppet Master",
         "Name": "傀儡之王",
         "Description": "【金蝉脱壳】你死亡时，你在当前拥有资源最多的士兵雕像身上重生，血量不变，眩晕一回合。【凶暴】你造成的伤害*2。",
         "MaxHP": 10,
         "SkillIDList": [
-            "CicadaShell",
+            "Cicada Shell",
             "Ferocity"
         ],
         "EnemyType": "Elite"
     },
-    "SoldierStatue": {
-        "ID": "SoldierStatue",
+    "Soldier Statue": {
+        "ID": "Soldier Statue",
         "Name": "士兵雕像",
         "Description": "【复苏】你每受到一次伤害，你造成的伤害+1。",
         "MaxHP": 8,
@@ -385,8 +394,8 @@
         ],
         "EnemyType": "Minion"
     },
-    "SagePhantom": {
-        "ID": "SagePhantom",
+    "Sage Phantom": {
+        "ID": "Sage Phantom",
         "Name": "圣人虚像",
         "Description": "【救赎】第10回合，你死亡，并令所有未死亡的己方单位回满血量，并净化所有负面效果。",
         "MaxHP": 100,
@@ -395,57 +404,57 @@
         ],
         "EnemyType": "Elite"
     },
-    "DarkCrow": {
-        "ID": "DarkCrow",
+    "Dark Crow": {
+        "ID": "Dark Crow",
         "Name": "暗鸦",
         "Description": "【默杀】你第n次造成伤害时可以给目标叠加n个\"凶\"标记。拥有\"凶\"标记的角色每回合失去n点资源和一个\"凶\"标记。",
         "MaxHP": 20,
         "SkillIDList": [
-            "SilentKill"
+            "Silent Kill"
         ],
         "EnemyType": "Elite"
     },
-    "WhiteWolfKing": {
-        "ID": "WhiteWolfKing",
+    "White Wolf King": {
+        "ID": "White Wolf King",
         "Name": "白狼王",
         "Description": "【狼嚎】你在开局和生命值首次降低到5以下时会召唤幼狼1，狼母1，狼*2。【嗜血】你的攻击造成伤害时回复等量生命值。",
         "MaxHP": 10,
         "SkillIDList": [
-            "WolfHowl",
+            "Wolf Howl",
             "Bloodlust",
             "Leader Catch"
         ],
         "EnemyType": "Elite"
     },
-    "SixEarMacaque": {
-        "ID": "SixEarMacaque",
+    "Six Ear Macaque": {
+        "ID": "Six Ear Macaque",
         "Name": "六耳猕猴",
         "Description": "【千钧棒】你造成的伤害*3。【毫毛术】第三回合起每隔6个回合，你分裂为3个分身，血量不变且每个单位分得1/3资源（向上取整），并失去【千钧棒】。该状态持续3回合，复原时六耳猕猴获得分身的所有资源与分身血量之和的1/3血量（向下取整）。",
         "MaxHP": 10,
         "SkillIDList": [
-            "MightyStrike",
-            "CloneTechnique"
+            "Mountain Crusher",
+            "Clone Technique"
         ],
         "EnemyType": "Elite"
     },
-    "TwoHeadedSnake": {
-        "ID": "TwoHeadedSnake",
+    "Two Headed Snake": {
+        "ID": "Two Headed Snake",
         "Name": "两头蛇",
         "Description": "【毒液】你的攻击造成伤害时，对目标施加一层\"中毒\"标记。中毒：每回合失去一点生命值，每回合-1层。【双头】你的每次攻击进行两次结算。",
         "MaxHP": 12,
         "SkillIDList": [
             "Venom",
-            "TwoHeads"
+            "Two Heads"
         ],
         "EnemyType": "Elite"
     },
-    "BanditLeader": {
-        "ID": "BanditLeader",
+    "Bandit Leader": {
+        "ID": "Bandit Leader",
         "Name": "强盗首领",
         "Description": "【装备精良】你开局拥有子弹5，剑5。",
         "MaxHP": 15,
         "SkillIDList": [
-            "WellEquipped",
+            "Well Equipped",
             "Leader Catch"
         ],
         "EnemyType": "Elite"
@@ -458,23 +467,23 @@
         "SkillIDList": [],
         "EnemyType": "Elite"
     },
-    "ClumsyGunner": {
-        "ID": "ClumsyGunner",
+    "Clumsy Gunner": {
+        "ID": "Clumsy Gunner",
         "Name": "拙劣枪手",
         "Description": "【近战苦手】你不能拔剑。",
         "MaxHP": 3,
         "SkillIDList": [
-            "MeleeDisability"
+            "Melee Disability"
         ],
         "EnemyType": "Minion"
     },
-    "MountainBanditCluster": {
-        "ID": "MountainBanditCluster",
+    "Mountain Bandit Cluster": {
+        "ID": "Mountain Bandit Cluster",
         "Name": "山匪",
         "Description": "【圣剑】你不能补子弹。",
         "MaxHP": 2,
         "SkillIDList": [
-            "Royal Knight"
+            "Holy Sword"
         ],
         "EnemyType": "Minion"
     },
@@ -495,20 +504,20 @@
         "Description": "【不吉之羽】你造成一次伤害时，对目标附加一个\"凶\"标记，拥有\"凶\"标记的角色每回合失去n点资源和一个\"凶\"标记，（n为该角色拥有的\"凶\"标记数）。",
         "MaxHP": 4,
         "SkillIDList": [
-            "OminousFeather"
+            "Ominous Feather"
         ],
         "EnemyType": "Minion"
     },
-    "MercenarySoldier": {
-        "ID": "MercenarySoldier",
+    "Mercenary Soldier": {
+        "ID": "Mercenary Soldier",
         "Name": "佣兵士兵",
         "Description": "无技能。",
         "MaxHP": 3,
         "SkillIDList": [],
         "EnemyType": "Minion"
     },
-    "MercenaryWarrior": {
-        "ID": "MercenaryWarrior",
+    "Mercenary Warrior": {
+        "ID": "Mercenary Warrior",
         "Name": "佣兵战士",
         "Description": "【无休】高攻击欲望，你的攻击命中时，返回此次攻击消耗的资源。",
         "MaxHP": 4,
@@ -517,18 +526,18 @@
         ],
         "EnemyType": "Minion"
     },
-    "MercenaryShieldGuard": {
-        "ID": "MercenaryShieldGuard",
+    "Mercenary Shield Guard": {
+        "ID": "Mercenary Shield Guard",
         "Name": "佣兵盾卫",
         "Description": "【坚盾】低攻击欲望，你的防御行为生效于全体友方。",
         "MaxHP": 4,
         "SkillIDList": [
-            "SturdyShield"
+            "Sturdy Shield"
         ],
         "EnemyType": "Minion"
     },
-    "MercenaryEmployer": {
-        "ID": "MercenaryEmployer",
+    "Mercenary Employer": {
+        "ID": "Mercenary Employer",
         "Name": "佣兵雇主",
         "Description": "【不自量力】每隔两回合，你将在补刀阶段额外对所有敌人进行一次\"挑衅\"。",
         "MaxHP": 6,
@@ -537,18 +546,18 @@
         ],
         "EnemyType": "Minion"
     },
-    "LittleMonkey": {
-        "ID": "LittleMonkey",
+    "Little Monkey": {
+        "ID": "Little Monkey",
         "Name": "小猴",
         "Description": "【灵猿】你造成的伤害*2。",
         "MaxHP": 2,
         "SkillIDList": [
-            "AgileApe"
+            "Agile Ape"
         ],
         "EnemyType": "Minion"
     },
-    "WolfCub": {
-        "ID": "WolfCub",
+    "Wolf Cub": {
+        "ID": "Wolf Cub",
         "Name": "幼狼",
         "Description": "【哺育】你入场的第三回合，成长为狼。",
         "MaxHP": 2,
@@ -567,13 +576,13 @@
         ],
         "EnemyType": "Minion"
     },
-    "WolfMother": {
-        "ID": "WolfMother",
+    "Wolf Mother": {
+        "ID": "Wolf Mother",
         "Name": "狼母",
         "Description": "【狼怨】受伤叠加一层复仇，造成伤害失去一点复仇，幼狼死亡获得三点复仇，其他狼死亡获得两点复仇。你每有一层复仇，伤害+1，有复仇时为高攻击欲望。",
         "MaxHP": 3,
         "SkillIDList": [
-            "WolfGrudge"
+            "Wolf Grudge"
         ],
         "EnemyType": "Minion"
     }
