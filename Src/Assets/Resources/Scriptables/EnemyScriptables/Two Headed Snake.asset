@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
   m_Name: Two Headed Snake
   m_EditorClassIdentifier: 
-  ID: 
-  image: {fileID: 0}
+  ID: Two Headed Snake
+  image: {fileID: 21300000, guid: 4526a51bb91f3114dafe2cb5e8150e13, type: 3}
