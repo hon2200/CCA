@@ -14,6 +14,7 @@ public class CardViewSystem : MonoSingleton<CardViewSystem>
     public GameObject CardPanel;
     public List<GameObject> Cards;
     public Button AdvanceButton;
+    public CardArranger CardArranger;
     public void Start()
     {
         AdvanceButton.onClick.AddListener(Clear);
@@ -61,8 +62,7 @@ public class CardViewSystem : MonoSingleton<CardViewSystem>
     }
     private void ArrangeCards()
     {
-        CardArranger newCardArranger = new();
-        newCardArranger.handCards = Cards;
-        newCardArranger.ArrangeLine(5f);
+        CardArranger.handCards = Cards;
+        CardArranger.ArrangeLine();
     }
 }

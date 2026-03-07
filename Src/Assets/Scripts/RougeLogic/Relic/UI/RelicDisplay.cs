@@ -10,7 +10,7 @@ public class RelicDisplay : MonoSingleton<RelicDisplay>
 {
     [SerializeField] private GameObject relicPrefab;
     [SerializeField] private Transform container;
-    [SerializeField] private float spacing = 1.5f;
+    [SerializeField] private float spacing;
 
     private readonly List<GameObject> _spawnedRelics = new List<GameObject>();
 

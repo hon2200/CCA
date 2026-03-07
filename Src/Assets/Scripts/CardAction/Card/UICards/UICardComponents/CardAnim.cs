@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 /// 卡牌动画控制器，负责管理卡牌的悬停旋转效果
 /// 优化建议：可以将直接获取改为事件通知方式，可能减少性能开销
 /// </summary>
-public class 卡牌动画 : MonoBehaviour
+public class CardAnim : MonoBehaviour
 {
     // 旋转相关参数
     [Header("旋转参数")]
@@ -26,6 +26,9 @@ public class 卡牌动画 : MonoBehaviour
     [Header("内部状态变量")]
     [SerializeField] private int cardOnHover; // 当前悬停的卡牌索引
     [SerializeField] private float RoundTime; // 强制回正时间计数器
+
+    public float amplitude;
+    public float yMove;
 
     // 卡牌悬停索引属性
     public int CardOnHover
@@ -70,6 +73,7 @@ public class 卡牌动画 : MonoBehaviour
         // 根据是否有卡牌悬停执行不同动画
         if (CardOnHover >= 0)
         {
+            CountTarget(); // 每次都用当前 yMove 等参数重算目标位置，便于运行时调整
             RotateAroundCenter(); // 有卡牌悬停时的旋转动画
         }
         else
@@ -137,7 +141,7 @@ public class 卡牌动画 : MonoBehaviour
                 Quaternion.Euler(0, 0, Roundangle);
 
             // 设置目标缩放（悬停卡牌放大）
-            float targetlocalscale = (i == cardOnHover) ? 0.8f : 0.6f;
+            float targetlocalscale = (i == cardOnHover) ?  amplitude : 0.6f;
 
             // 平滑移动到目标位置（线性插值）                  
             ChildrenCards[i].transform.position = Vector3.Lerp(
@@ -205,8 +209,8 @@ public class 卡牌动画 : MonoBehaviour
             TargetPositions[i] = RotatePointAroundPivot(Positions[i], rotationCenter, Roundangle);
         }
 
-        // 悬停卡牌稍微上移
-        TargetPositions[cardOnHover] = Positions[cardOnHover] + new Vector3(0, 0.4f, 0);
+        // 悬停卡牌上移（Y 轴偏移由 yMove 控制）
+        TargetPositions[cardOnHover] = Positions[cardOnHover] + new Vector3(0, yMove, 0);
     }
 
     /// <summary>

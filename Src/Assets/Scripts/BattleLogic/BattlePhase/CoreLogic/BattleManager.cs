@@ -44,12 +44,17 @@ class BattleManager: MonoSingleton<BattleManager>
         OnWinning += () => isRunning = false;
     }
     //这个函数好像只给那个按钮用
-    public void StartGame(string Type)
+    public void StartGame()
     {
         Turn.Clear();
         PlayerManager.Instance.NextPlayerID = 1;
         PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
         StartRunPhase();
+    }
+    public void CheckandStartGame()
+    {
+        if (isRunning == false)
+            StartGame();
     }
     public void StartRunPhase()
     {

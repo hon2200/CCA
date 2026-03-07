@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +28,8 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
     public Player player1;
     //卡牌是否创建完毕
     private bool CardReady = false;
+    [SerializeField]
+    public CardArranger CardArranger;
 
     //依据CardLiberary，按照类型创建卡牌
     public void CreateCards()
@@ -66,9 +68,8 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
     {
         foreach(var cards in Cards_inType)
         {
-            CardArranger newCardArranger = new();
-            newCardArranger.handCards = cards.Value;
-            newCardArranger.ArrangeRadius();
+            CardArranger.handCards = cards.Value;
+            CardArranger.ArrangeRadius();
         }
     }
     //处理每一个MenuButton的Onclick
@@ -154,12 +155,16 @@ public class CardPresentSystem : MonoSingleton<CardPresentSystem>
 }
 
 //按次序扇形打开卡牌
+[Serializable]
 public class CardArranger
 {
     public List<GameObject> handCards = new();
-    private Vector3 CenterPoint = new Vector3(0, -4f, 0);
+    public Vector3 CenterPoint = new Vector3(0, -6f, 0);
+    public float angle = 5.0f;
+    public float centerRadius = 16.0f;
+    public float spacing = 1.5f;
 
-    public void ArrangeLine(float spacing = 1.5f, float yOffset = 1f)
+    public void ArrangeLine()
     {
         int count = handCards.Count;
         if (count == 0) return;
@@ -172,7 +177,7 @@ public class CardArranger
         {
             var card = handCards[i];
             // Position each card along the x-axis
-            Vector3 position = new Vector3(startX + i * spacing, CenterPoint.y+yOffset, 0f);
+            Vector3 position = new Vector3(startX + i * spacing, CenterPoint.y, 0f);
             // Keep rotation flat
             Quaternion rotation = Quaternion.identity;
 
@@ -182,7 +187,7 @@ public class CardArranger
             card.GetComponent<CardUI>().PromoteLayerTo(order);
         }
     }
-    public void ArrangeRadius(float angle = 5.0f, float centerRadius = 16.0f)
+    public void ArrangeRadius()
     {
         var centerPoint = CenterPoint - new Vector3(0, centerRadius, 0);
         var cardAngle = (handCards.Count - 1) * angle / 2;
