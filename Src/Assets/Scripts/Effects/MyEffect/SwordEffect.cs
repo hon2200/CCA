@@ -21,6 +21,7 @@ public class SwordEffect : TrailEffect
 
     public override float PlayEffect(Vector3 start, Vector3 end)
     {
+        AudioSource.PlayClipAtPoint(sound, Vector3.zero, AudioManager.Instance.battleVolume);
         transform.position = start;
         transform.rotation = Quaternion.LookRotation(end - start);
 

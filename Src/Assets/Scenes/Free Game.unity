@@ -15478,6 +15478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005a054f3fac5ed4d857ef501ebdcaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  global: 0
   bgmAudioSource: {fileID: 1859061012}
   defaultBGM: {fileID: 8300000, guid: ebf9d195c83dadd4a99f5ed773eda22a, type: 3}
   bgmVolume: 0.2
@@ -15485,6 +15486,8 @@ MonoBehaviour:
   uiSoundVolume: 1
   uiHoverSound: {fileID: 8300000, guid: 10445b0560b8ab742a8e52ab1d0ba166, type: 3}
   uiHoverVolume: 1
+  battleSound: {fileID: 0}
+  battleVolume: 1
 --- !u!1 &1860236385
 GameObject:
   m_ObjectHideFlags: 0

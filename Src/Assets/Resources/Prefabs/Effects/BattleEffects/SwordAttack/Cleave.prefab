@@ -4894,9 +4894,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 8611285747335674353}
+  sound: {fileID: 8300000, guid: 63ce7824a0c82c94e966c3646c97d066, type: 3}
   speed: 20
   Trail: {fileID: 5937144097623218962}
   waitTime: 0.3
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &7763196493686014426
 PrefabInstance:
   m_ObjectHideFlags: 0
