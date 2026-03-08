@@ -1,9 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : MonoSingleton<AudioManager>
 {
-    public static AudioManager Instance { get; private set; }
 
     [Header("BGM设置")]
     [SerializeField] private AudioSource bgmAudioSource;
@@ -18,6 +17,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip uiHoverSound;
     [Range(0.01f, 1f)] public float uiHoverVolume = 1f;
 
+    [Header("战斗音效设置")]
+    [SerializeField] public AudioClip battleSound;
+    [Range(0.01f, 1f)] public float battleVolume = 1f;
+
+
     private float _actualUIVolume;
     private float _actualHoverVolume;
     // 新增：标记是否是首次加载场景
@@ -25,21 +29,11 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            _actualUIVolume = uiSoundVolume;
-            _actualHoverVolume = uiHoverVolume;
+        _actualUIVolume = uiSoundVolume;
+        _actualHoverVolume = uiHoverVolume;
 
-            // 注册场景加载事件
-            SceneManager.sceneLoaded += OnSceneLoaded;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        // 注册场景加载事件
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
         // BGM初始化
         if (bgmAudioSource == null)

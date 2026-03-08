@@ -4845,6 +4845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 3481977277994979250}
+<<<<<<< HEAD
 --- !u!82 &4298166270101111541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4941,3 +4942,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+  sound: {fileID: 8300000, guid: e207c3aa7f56d174caaa112a3a8e0bce, type: 3}
+>>>>>>> 522e321e1b0167cbffd31afee9406a8a41584046

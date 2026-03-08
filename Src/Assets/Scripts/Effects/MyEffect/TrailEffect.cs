@@ -9,6 +9,8 @@ using UnityEngine;
 public class TrailEffect : MonoBehaviour
 {
     public ParticleSystem effect;
+    public AudioClip sound;
+
     public virtual float PlayEffect(Vector3 start, Vector3 end)
     {
         transform.position = start;
@@ -18,6 +20,8 @@ public class TrailEffect : MonoBehaviour
         main.startLifetime = duration;
         transform.rotation = Quaternion.LookRotation(end - start);
         effect.Play();
+
+        AudioSource.PlayClipAtPoint(sound, Vector3.zero, AudioManager.Instance.battleVolume );
         Destroy(gameObject, duration);
         return duration;
     }
