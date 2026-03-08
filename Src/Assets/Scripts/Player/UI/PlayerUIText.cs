@@ -76,25 +76,6 @@ public class PlayerUIText : MonoBehaviour
                     UpdateAttackingLevelOperatorDisplay();
                     break;
             }
-            if (player is AIPlayer aiPlayer)
-            {
-                switch (text.Key)
-                {
-                    case PlayerUITextName.Character:
-                        text.Value.text = aiPlayer.CharacterDefine.Name;
-                        break;
-                    case PlayerUITextName.Intention:
-                        aiPlayer.IntendedType.OnValueChanged += (oldVal, newVal, opType) =>
-                        UpdatePlayerText(text.Value, aiPlayer.IntendedType.Value);
-                        UpdatePlayerText(text.Value, aiPlayer.IntendedType.Value);
-                        break;
-                    case PlayerUITextName.Emotion:
-                        aiPlayer.Emo.OnValueChanged += (oldVal, newVal, opType) =>
-                        UpdatePlayerText(text.Value, aiPlayer.Emo.emotionType);
-                        UpdatePlayerText(text.Value, aiPlayer.Emo.emotionType);
-                        break;
-                }
-            }
         }
 
         player.status.buffs.OnListChanged += (list, message) =>
@@ -276,7 +257,4 @@ public enum PlayerUITextName
     AvailableAction = 5,
     ATK = 6,
     DMG = 7,
-    Character = 6,
-    Emotion = 7,
-    Intention = 8
 }

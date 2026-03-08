@@ -32,11 +32,11 @@
         "LimitedTimes": 0,
         "Description": "从第2回合起每隔3回合，你失去3点血量，召唤两个小树灵。",
         "Costs": [
-            0,
+            3,
             0,
             0
         ],
-        "CD": 0
+        "CD": 3
     },
     "Lush Growth": {
         "ID": "Lush Growth",
@@ -49,7 +49,7 @@
             0,
             0
         ],
-        "CD": 0
+        "CD": 4
     },
     "Rapid Growth": {
         "ID": "Rapid Growth",
@@ -75,7 +75,7 @@
             0,
             0
         ],
-        "CD": 0
+        "CD": 5
     },
     "Scorched Oblivion": {
         "ID": "Scorched Oblivion",
@@ -870,19 +870,6 @@
         ],
         "CD": 0
     },
-    "Bloodlust": {
-        "ID": "Bloodlust",
-        "Name": "嗜血",
-        "IsLimited": false,
-        "LimitedTimes": 0,
-        "Description": "你的攻击造成伤害时，你回复等量生命值。",
-        "Costs": [
-            0,
-            0,
-            0
-        ],
-        "CD": 0
-    },
     "Mountain Crusher": {
         "ID": "Mountain Crusher",
         "Name": "千钧棒",
@@ -938,8 +925,8 @@
     "Well Equipped": {
         "ID": "Well Equipped",
         "Name": "装备精良",
-        "IsLimited": false,
-        "LimitedTimes": 0,
+        "IsLimited": true,
+        "LimitedTimes": 1,
         "Description": "你开局拥有子弹5，剑5。",
         "Costs": [
             0,
@@ -985,7 +972,7 @@
             0,
             0
         ],
-        "CD": 0
+        "CD": 1
     },
     "Inviolable": {
         "ID": "Inviolable",
@@ -1050,7 +1037,7 @@
             0,
             0
         ],
-        "CD": 0
+        "CD": 1
     },
     "Agile Ape": {
         "ID": "Agile Ape",
@@ -1078,6 +1065,19 @@
         ],
         "CD": 0
     },
+    "Bloodlust": {
+        "ID": "Bloodlust",
+        "Name": "嗜血",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "你的攻击造成伤害时，你回复等量生命值。",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0
+    },
     "Wolf Grudge": {
         "ID": "Wolf Grudge",
         "Name": "狼怨",
@@ -1097,19 +1097,6 @@
         "IsLimited": true,
         "LimitedTimes": 1,
         "Description": "当场上所有类型为Boss和Elite的单位全部死亡时，玩家赢得此局游戏。",
-        "Costs": [
-            0,
-            0,
-            0
-        ],
-        "CD": 0
-    },
-    "Daily Growing": {
-        "ID": "Daily Growing",
-        "Name": "快速生长",
-        "IsLimited": false,
-        "LimitedTimes": 0,
-        "Description": "每回合结束时，你造成的伤害+1（可叠加）。",
         "Costs": [
             0,
             0,

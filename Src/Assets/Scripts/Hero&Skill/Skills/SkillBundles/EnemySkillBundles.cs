@@ -12,7 +12,7 @@ using UnityEngine;
 public class MoltenCast : EnemySkill, IPhaseEnterHandler
 {
     public MoltenCast() : base("Molten Cast") { }
-    protected override void Envoke()
+    public void OnPhase(Phase phase)
     {
         if (BattleManager.Instance.Turn.Value == 9)
         {
@@ -25,11 +25,6 @@ public class MoltenCast : EnemySkill, IPhaseEnterHandler
             }
         }
     }
-    public void OnPhase(Phase phase)
-    {
-        if (phase is StartPhase)
-            CheckAndEvoke();
-    }
 }
 
 public class Sow : SummoningSkill, IPhaseEnterHandler
@@ -38,7 +33,7 @@ public class Sow : SummoningSkill, IPhaseEnterHandler
     public Sow() : base("Sow") { CDProgress = 1; }
     protected override void Envoke()
     {
-        Summon("Imp");
+        Summon("Little Tree");
     }
     public void OnPhase(Phase phase)
     {
@@ -80,38 +75,40 @@ public class RapidGrowth : EnemySkill, IPhaseExitHandler
 }
 
 //注：如果未来要写一个强制敌人攻击的逻辑，这个可用
-public class Tsunami : EnemySkill, IActionModifier
+public class Tsunami : EnemySkill, IActionModifier,  IPhaseExitHandler
 {
-    public Tsunami() : base("Tsunami") { }
+    DamagingOperator ts;
+    public Tsunami() : base("Tsunami") { CDProgress = CD; }
     protected override void Envoke()
     {
-        var waters = PlayerManager.Instance.FindSomeone("Intangible Water");
-        foreach (var water in waters)
+        ts = new DamagingOperator(2f, Owner, BuffOperator.StepSlot.Second);
+        Owner.status.buffs.Apply(ts);
+        // All waters do attack action if available
+        var alive = PlayerManager.Instance.GetAlivePlayers();
+        foreach (var target in alive)
         {
-            if (water.status.life.Value != LifeStatus.Alive)
+            if (target.ID_inGame == Owner.ID_inGame)
                 continue;
-            water.status.buffs.Apply(new DamagingOperator(2f, water, BuffOperator.StepSlot.Second));
-            // All waters do attack action if available
-            var alive = PlayerManager.Instance.GetAlivePlayers();
-            foreach (var target in alive)
-            {
-                if (target.ID_inGame == water.ID_inGame)
-                    continue;
-                if (water.CheckAction(ActionType.Attack, target.ID_inGame).Count == 0)
-                    continue;
-                var attacks = water.CheckAction<AttackDefine>(target.ID_inGame);
-                if (attacks.Count == 0)
-                    continue;
-                water.action.ClearMove("Tsunami");
-                var attack = attacks[UnityEngine.Random.Range(0, attacks.Count)];
-                water.action.ReadinMoveAndConsume(attack.ID, target.ID_inGame, "Tsunami", water);
-                break;
-            }
+            if (Owner.CheckAction(ActionType.Attack, target.ID_inGame).Count == 0)
+                continue;
+            var attacks = Owner.CheckAction<AttackDefine>(target.ID_inGame);
+            if (attacks.Count == 0)
+                continue;
+            Owner.action.ClearMove("Tsunami");
+            var attack = attacks[UnityEngine.Random.Range(0, attacks.Count)];
+            Owner.action.ReadinMoveAndConsume(attack.ID, target.ID_inGame, "Tsunami", Owner);
+            break;
         }
     }
     public void ModifyAction(Player player)
     {
         CheckAndEvoke();
+    }
+    public void ExitingPhase(Phase phase)
+    {
+        if(phase is EndPhase)
+            if (ts != null) 
+                Owner.status.buffs.Remove(ts,"ts");
     }
 }
 
@@ -341,6 +338,7 @@ public class ReturnToEarth : EnemySkill, IDamagingHandler
         if (victim.status.HP.Value < victim.status.MaxHP / 3)
         {
             finalDamage = victim.status.HP.Value;
+            return;
         }
         finalDamage = damage;
     }
@@ -631,16 +629,11 @@ public class TwoHeads : EnemySkill, IActionModifier
     protected override void Envoke() { }
     public void ModifyAction(Player player)
     {
-        foreach(var action in Owner.action)
+        var attacksToDuplicate = Owner.action.OfType<AttackDefine>().ToList();
+        foreach (var attack in attacksToDuplicate)
         {
-            if (action is AttackDefine attack)
-            {
-                var attackCopy = attack.Clone();
-                Owner.action.Add((AttackDefine)attackCopy);
-            }
-
+            Owner.action.Add((AttackDefine)attack.Clone());
         }
-
     }
 }
 
@@ -784,16 +777,16 @@ public class Magnate : EnemySkill, IPhaseEnterHandler
 
 public class WellEquipped : EnemySkill, IPhaseEnterHandler
 {
+    bool isUsed = false;
     public WellEquipped() : base("Well Equipped") { }
-    protected override void Envoke()
-    {
-        Owner.status.resources.Sword.Get(Owner, 5);
-        Owner.status.resources.Bullet.Get(Owner, 5);
-    }
     public void OnPhase(Phase phase)
     {
-        if (phase is StartPhase)
-            CheckAndEvoke();
+        if (phase is StartPhase && !isUsed)
+        {
+            Owner.status.resources.Sword.Get(Owner, 5);
+            Owner.status.resources.Bullet.Get(Owner, 5);
+            isUsed = true;
+        }
     }
 }
 
@@ -1131,14 +1124,12 @@ public class SturdyShield : EnemySkill, IActionModifier
     }
     public void ModifyAction(Player player)
     {
-        foreach(var friend in PlayerManager.Instance.HostilePlayers)
+        var defendsToShare = Owner.action.OfType<DefendDefine>().ToList();
+        foreach (var friend in PlayerManager.Instance.HostilePlayers)
         {
-            foreach (var action in Owner.action)
+            foreach (var defend in defendsToShare)
             {
-                if (action is DefendDefine defend)
-                {
-                    friend.action.Add((DefendDefine)defend.Clone());
-                }
+                friend.action.Add((DefendDefine)defend.Clone());
             }
         }
     }

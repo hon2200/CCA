@@ -35,7 +35,7 @@
         "Name": "小树灵",
         "MaxHP": 3,
         "SkillIDList": [
-            "Daily Growing"
+            "Rapid Growth"
         ],
         "EnemyType": "Minion"
     },

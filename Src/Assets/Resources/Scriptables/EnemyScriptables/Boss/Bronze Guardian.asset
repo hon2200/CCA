@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae25570a79ed824c9839d82ed729893, type: 3}
+  m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
   m_Name: Bronze Guardian
   m_EditorClassIdentifier: 
   ID: Bronze Guardian

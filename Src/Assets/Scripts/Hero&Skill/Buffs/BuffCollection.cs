@@ -325,7 +325,7 @@ public class Poison : Buff
     public override void Fade()
     {
         if (Owner == null || Value <= 0) return;
-        Owner.status.HP.Drain(1);
+        Owner.status.HP.Drain(Value);
         Value--;
         if (Value <= 0)
             Owner.status.buffs.Remove(this, "PoisonFade");

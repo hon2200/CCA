@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
-  m_Name: Mercenary Shield Guard
+  m_Name: Bronze Imp
   m_EditorClassIdentifier: 
-  ID: Mercenary Shield Guard
-  image: {fileID: 21300000, guid: f13bef69043fe7947955ab9149ea1034, type: 3}
+  ID: 
+  image: {fileID: 0}

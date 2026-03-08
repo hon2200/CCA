@@ -44,7 +44,7 @@ Key: Little Tree
   MaxHP:     3
   SkillIDList: 
     List`1 (Count: 1)
-      [0]:         Daily Growing
+      [0]:         Rapid Growth
 ------------------------------------
 Key: Formless Water
 
