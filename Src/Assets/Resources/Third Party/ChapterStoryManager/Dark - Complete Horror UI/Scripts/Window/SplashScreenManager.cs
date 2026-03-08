@@ -31,9 +31,31 @@ namespace Michsky.UI.Dark
         GameObject currentTitleObj;
         int currentTitleIndex;
         float currentTitleDuration;
+        private float originalMusicVolume; // 记录原始音乐音量，用于淡出
+        private bool isLastTitle = false; // 标记是否是最后一个标题页
+
+
+
+
+        // 【新增】音频相关配置
+        [Header("音频设置")]
+        public AudioSource splashMusicSource; // 播放启动界面音乐的AudioSource
+        public AudioClip splashBackgroundMusic; // 启动界面背景音乐
+        public AudioClip transitionSound; // 界面过渡音效（可选）
+        [Range(0, 1)] public float musicVolume = 0.8f; // 音乐音量
+        [Range(0, 1)] public float soundVolume = 1f; // 音效音量
+        public bool loopBackgroundMusic = true; // 是否循环播放背景音乐
+        public bool fadeOutMusicOnEnd = true; // 过渡时是否淡出音乐
+        [Range(0.5f, 3f)] public float fadeOutDuration = 1f; // 音乐淡出时长
+
+
 
         void OnEnable()
         {
+
+            // 初始化音频源（自动创建/配置）
+            InitAudioSource();
+
             if (showOnlyOnce && GameObject.Find("[Dark UI - Splash Screen Helper]") != null) 
             { 
                 disableSplashScreen = true; 
@@ -57,6 +79,10 @@ namespace Michsky.UI.Dark
 
             else
             {
+
+                // 启动界面激活：立即播放背景音乐
+                PlaySplashMusicOnStart();
+
                 splashScreen.SetActive(true);
                 modalWindowParent.SetActive(false);
 
@@ -89,6 +115,62 @@ namespace Michsky.UI.Dark
             }
         }
 
+
+        // 初始化音频源（自动创建，避免手动添加）
+        private void InitAudioSource()
+        {
+            if (splashMusicSource == null)
+            {
+                splashMusicSource = GetComponent<AudioSource>();
+                if (splashMusicSource == null)
+                {
+                    splashMusicSource = gameObject.AddComponent<AudioSource>();
+                }
+            }
+
+            // 核心配置：不自动播放、设置音量、循环
+            splashMusicSource.volume = musicVolume;
+            splashMusicSource.loop = loopBackgroundMusic;
+            splashMusicSource.playOnAwake = false;
+            splashMusicSource.clip = splashBackgroundMusic;
+            originalMusicVolume = musicVolume;
+        }
+
+        // 启动界面开始时立即播放音乐
+        private void PlaySplashMusicOnStart()
+        {
+            if (splashBackgroundMusic != null && splashMusicSource != null)
+            {
+                splashMusicSource.Play();
+                Debug.Log("启动界面背景音乐开始播放");
+            }
+        }
+
+        // 最后一个标题页结束时停止音乐（支持淡出）
+        private IEnumerator StopMusicOnLastTitleEnd()
+        {
+            if (splashMusicSource == null || !splashMusicSource.isPlaying)
+            {
+                yield break;
+            }
+
+            // 淡出音乐（更自然）
+            if (fadeOutMusicOnEnd)
+            {
+                float elapsedTime = 0f;
+                while (elapsedTime < fadeOutDuration)
+                {
+                    splashMusicSource.volume = Mathf.Lerp(originalMusicVolume, 0, elapsedTime / fadeOutDuration);
+                    elapsedTime += Time.deltaTime;
+                    yield return null;
+                }
+            }
+
+            // 停止音乐并恢复音量（方便后续复用）
+            splashMusicSource.Stop();
+            splashMusicSource.volume = originalMusicVolume;
+            Debug.Log("最后一个启动界面消失，背景音乐停止");
+        }
         public void SkipSplashScreen()
         {
             if (!splashScreen.activeInHierarchy)
@@ -136,6 +218,10 @@ namespace Michsky.UI.Dark
             StartCoroutine("InitializeTitleDuration");
         }
 
+
+
+
+
         IEnumerator ProcessStartDelay()
         {
             yield return new WaitForSecondsRealtime(startDelay);
@@ -170,6 +256,10 @@ namespace Michsky.UI.Dark
         IEnumerator DisableSplashScreen()
         {
             yield return new WaitForSecondsRealtime(disableTimer);
+
+             // 最后一个标题页消失时，停止背景音乐
+            StartCoroutine(StopMusicOnLastTitleEnd());
+
 
             splashScreen.SetActive(false);
             modalWindowParent.SetActive(true);
