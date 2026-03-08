@@ -11,10 +11,13 @@ public class SceneSwitcherManager : MonoBehaviour
     // 【可在Inspector面板绑定】跳转到Free Game场景的按钮
     [Header("场景跳转按钮绑定")]
     public Button freeGameJumpButton;
+    public Button mapJumpButton;
 
     // 【可配置】Free Game场景名称（确保和Build Settings中一致）
     [Header("场景名称配置")]
     public string freeGameSceneName = "Free Game";
+    public string RougeMapSceneName = "RougeMap";
+
 
     private void Awake()
     {
@@ -39,6 +42,19 @@ public class SceneSwitcherManager : MonoBehaviour
         {
             Debug.LogWarning("未绑定Free Game跳转按钮，请在Inspector面板赋值！");
         }
+
+        // 绑定Free Game跳转按钮的点击事件
+        if (mapJumpButton != null)
+        {
+            // 先移除已有事件（避免重复绑定）
+            mapJumpButton.onClick.RemoveAllListeners();
+            // 添加跳转逻辑
+            mapJumpButton.onClick.AddListener(OnRougeMapButtonClicked);
+        }
+        else
+        {
+            Debug.LogWarning("未绑定RougeMap跳转按钮，请在Inspector面板赋值！");
+        }
     }
 
     /// <summary>
@@ -62,6 +78,26 @@ public class SceneSwitcherManager : MonoBehaviour
 
         // 直接同步跳转场景（无加载过渡）
         SceneManager.LoadScene(freeGameSceneName);
+    }
+
+    public void OnRougeMapButtonClicked()
+    {
+        // 验证场景名称有效性
+        if (string.IsNullOrEmpty(RougeMapSceneName))
+        {
+            Debug.LogError("RoughMap场景名称为空，请检查配置！");
+            return;
+        }
+
+        // 验证场景是否在Build Settings中
+        if (!IsSceneInBuildSettings(RougeMapSceneName))
+        {
+            Debug.LogError($"场景「{RougeMapSceneName}」未添加到Build Settings，请先添加！");
+            return;
+        }
+
+        // 直接同步跳转场景（无加载过渡）
+        SceneManager.LoadScene(RougeMapSceneName);
     }
 
     /// <summary>
@@ -118,5 +154,10 @@ public class SceneSwitcherManager : MonoBehaviour
     public void JumpToFreeGameScene()
     {
         OnFreeGameButtonClicked();
+    }
+
+    public void JumpToRougeMap()
+    {
+        OnRougeMapButtonClicked();
     }
 }
