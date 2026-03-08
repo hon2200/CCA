@@ -18,7 +18,7 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": true,
+        "isBasic": false,
         "Tags": [
             "Bullet"
         ]
@@ -66,7 +66,7 @@
         ],
         "Target": 0,
         "isCopy": false,
-        "isBasic": true,
+        "isBasic": false,
         "Tags": [
             "Sword"
         ]

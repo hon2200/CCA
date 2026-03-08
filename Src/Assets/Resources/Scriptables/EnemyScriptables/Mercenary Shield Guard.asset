@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
-  m_Name: Mercanary Employer
+  m_Script: {fileID: 11500000, guid: 8ae25570a79ed824c9839d82ed729893, type: 3}
+  m_Name: Mercenary Shield Guard
   m_EditorClassIdentifier: 
-  ID: Mercanary Employer
-  image: {fileID: 21300000, guid: 4fb6b81e0769e1d4fa001fcb9b948cc2, type: 3}
+  ID: Mercenary Shield Guard
+  image: {fileID: 21300000, guid: f13bef69043fe7947955ab9149ea1034, type: 3}

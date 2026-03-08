@@ -24,7 +24,7 @@ Key: bullet
   Target:     0
   isCopy:     False
   isConsumed:     False
-  isBasic:     True
+  isBasic:     False
   actionType:     Supply
 ------------------------------------
 Key: double_bullet
@@ -78,7 +78,7 @@ Key: sword
   Target:     0
   isCopy:     False
   isConsumed:     False
-  isBasic:     True
+  isBasic:     False
   actionType:     Supply
 ------------------------------------
 Key: double_sword

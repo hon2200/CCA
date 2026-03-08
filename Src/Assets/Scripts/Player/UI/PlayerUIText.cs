@@ -11,8 +11,12 @@ using AYellowpaper.SerializedCollections;
 public class PlayerUIText : MonoBehaviour
 {
     public Player player;
-    //???????
+    //Player Sprite
     public SpriteRenderer spriteRenderer;
+    public List<SpriteRenderer> highlightRenderer;
+    //攻击力和伤害加成
+    public SpriteRenderer ATK;
+    public SpriteRenderer DMG;
     //???????
     public GameObject Glow;
     [SerializeField]
@@ -65,6 +69,12 @@ public class PlayerUIText : MonoBehaviour
                     string result = string.Join("\n", player.hero.skills.Select(skill => skill.Name));
                     text.Value.text = result;
                     break;
+                case PlayerUITextName.DMG:
+                    UpdateDamagingOperatorDisplay();
+                    break;
+                case PlayerUITextName.ATK:
+                    UpdateAttackingLevelOperatorDisplay();
+                    break;
             }
             if (player is AIPlayer aiPlayer)
             {
@@ -86,6 +96,14 @@ public class PlayerUIText : MonoBehaviour
                 }
             }
         }
+
+        player.status.buffs.OnListChanged += (list, message) =>
+        {
+            UpdateDamagingOperatorDisplay();
+            UpdateAttackingLevelOperatorDisplay();
+        };
+        UpdateDamagingOperatorDisplay();
+        UpdateAttackingLevelOperatorDisplay();
 
         player.status.life.OnValueChanged += (oldVal, newVal, opType) =>
         {
@@ -137,7 +155,14 @@ public class PlayerUIText : MonoBehaviour
         }
 
         if (spriteToSet != null)
+        {
             spriteRenderer.sprite = spriteToSet;
+            foreach(var renderer in highlightRenderer)
+            {
+                renderer.sprite = spriteToSet;
+            }
+        }
+            
     }
     private void OntheEdgeofDeath()
     {
@@ -191,6 +216,34 @@ public class PlayerUIText : MonoBehaviour
             ? $"{value}/{maxValue}"
             : value.ToString();
     }
+
+    /// <summary>
+    /// If player's status.buffs has no DamagingOperator or effective value is zero, set DMG sprite inactive.
+    /// Otherwise set active and display the damaging operator in the DMG text.
+    /// </summary>
+    private void UpdateDamagingOperatorDisplay()
+    {
+        if (DMG == null) return;
+        var damagingOps = player?.status?.buffs?.OfType<DamagingOperator>().ToList() ?? new List<DamagingOperator>();
+        bool hasNonZero = damagingOps.Count > 0;
+        DMG.gameObject.SetActive(hasNonZero);
+        if (UIText != null && UIText.TryGetValue(PlayerUITextName.DMG, out var dmgText) && dmgText != null)
+            dmgText.text = hasNonZero ? damagingOps.Count.ToString() : "";
+    }
+
+    /// <summary>
+    /// If player's status.buffs has no AttackingLevelOperator or effective value is zero, set ATK sprite inactive.
+    /// Otherwise set active and display the attack operator in the ATK text.
+    /// </summary>
+    private void UpdateAttackingLevelOperatorDisplay()
+    {
+        if (ATK == null) return;
+        var attackOps = player?.status?.buffs?.OfType<AttackingLevelOperator>().ToList() ?? new List<AttackingLevelOperator>();
+        bool hasNonZero = attackOps.Count > 0;
+        ATK.gameObject.SetActive(hasNonZero);
+        if (UIText != null && UIText.TryGetValue(PlayerUITextName.ATK, out var atkText) && atkText != null)
+            atkText.text = hasNonZero ? attackOps.Count.ToString() : "";
+    }
 }
 //????????binding name??????????UI Text???????????????????
 [System.Serializable]
@@ -212,6 +265,8 @@ public enum PlayerUITextName
     Bullet = 3,
     Sword = 4,
     AvailableAction = 5,
+    ATK = 6,
+    DMG = 7,
     Character = 6,
     Emotion = 7,
     Intention = 8

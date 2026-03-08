@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0711834fd7771384390e74eefbc9d942, type: 3}
   m_Name: Earthbreaker Hammer
   m_EditorClassIdentifier: 
-  ID: 
-  Image: {fileID: 0}
+  ID: Earthbreaker Hammer
+  Image: {fileID: 21300000, guid: f45f713d2d4c8a943b9641cf5c7e39f2, type: 3}
   counts: 

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -274,7 +274,7 @@ public class AI_lmh
         if (selectedActionType == ActionType.Origin) // 假设有None作为默认值
         {
             AIThinkingProcess.Append("\n所有类别都没有可用行动！");
-            MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
+            // MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
             return null;
         }
 
@@ -297,7 +297,7 @@ public class AI_lmh
             }
         }
 
-        MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
+        // MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
         return mySelection;
     }
     private ActionType SelectCategoryByWeight(List<int> tendency, Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory)

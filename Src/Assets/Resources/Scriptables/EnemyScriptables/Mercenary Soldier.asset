@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0711834fd7771384390e74eefbc9d942, type: 3}
-  m_Name: Depleted Uranium Rose
+  m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
+  m_Name: Mercenary Soldier
   m_EditorClassIdentifier: 
-  ID: Depleted Uranium Rose
-  Image: {fileID: 21300000, guid: 032f319837d74db49b7d5a45c691b498, type: 3}
-  counts: 
+  ID: Mercenary Soldier
+  image: {fileID: 21300000, guid: 94358c0d629b65a4bb9526c0244090e9, type: 3}

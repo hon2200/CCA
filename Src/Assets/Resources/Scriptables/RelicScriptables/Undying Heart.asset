@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0711834fd7771384390e74eefbc9d942, type: 3}
   m_Name: Undying Heart
   m_EditorClassIdentifier: 
-  ID: 
+  ID: Undying Heart
   Image: {fileID: 0}
   counts: 
