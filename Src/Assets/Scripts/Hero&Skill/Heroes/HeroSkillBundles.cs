@@ -50,18 +50,29 @@ public class ThespianCurse : HeroSkill
 
 public class MountainCrusher : HeroSkill, IPhaseEnterHandler
 {
+    private DamagingOperator _mountainCrusherDmgBuff;
+    bool isUsed = false;
+
     public MountainCrusher() : base("Mountain Crusher") { }
     protected override void Envoke() { }
+
     public void OnPhase(Phase phase)
     {
-        if (phase is StartPhase)
+        if (phase is StartPhase && !isUsed)
         {
-            Owner.status.buffs.Apply(new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second));
+            _mountainCrusherDmgBuff = new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second);
+            Owner.status.buffs.Apply(_mountainCrusherDmgBuff);
+            isUsed = true;
         }
     }
+
     protected override void OnDisabled()
     {
-        Owner.status.buffs.Apply(new DamagingOperator(1 / 3f, Owner, BuffOperator.StepSlot.Second));
+        if (Owner != null && _mountainCrusherDmgBuff != null)
+        {
+            Owner.status.buffs.Remove(_mountainCrusherDmgBuff, "MountainCrusherDisabled");
+            _mountainCrusherDmgBuff = null;
+        }
     }
 }
 

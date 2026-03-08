@@ -219,7 +219,7 @@ public class PlayerUIText : MonoBehaviour
 
     /// <summary>
     /// If player's status.buffs has no DamagingOperator or effective value is zero, set DMG sprite inactive.
-    /// Otherwise set active and display the damaging operator in the DMG text.
+    /// Otherwise set active and display the damaging operator in the DMG text (e.g. "*3", "+1*2", "+2*3+1").
     /// </summary>
     private void UpdateDamagingOperatorDisplay()
     {
@@ -228,12 +228,12 @@ public class PlayerUIText : MonoBehaviour
         bool hasNonZero = damagingOps.Count > 0;
         DMG.gameObject.SetActive(hasNonZero);
         if (UIText != null && UIText.TryGetValue(PlayerUITextName.DMG, out var dmgText) && dmgText != null)
-            dmgText.text = hasNonZero ? damagingOps.Count.ToString() : "";
+            dmgText.text = hasNonZero ? GetOperatorDisplayString(damagingOps.Cast<BuffOperator>().ToList()) : "";
     }
 
     /// <summary>
     /// If player's status.buffs has no AttackingLevelOperator or effective value is zero, set ATK sprite inactive.
-    /// Otherwise set active and display the attack operator in the ATK text.
+    /// Otherwise set active and display the attack operator in the ATK text (e.g. "*3", "+1*2", "+2*3+1").
     /// </summary>
     private void UpdateAttackingLevelOperatorDisplay()
     {
@@ -242,7 +242,16 @@ public class PlayerUIText : MonoBehaviour
         bool hasNonZero = attackOps.Count > 0;
         ATK.gameObject.SetActive(hasNonZero);
         if (UIText != null && UIText.TryGetValue(PlayerUITextName.ATK, out var atkText) && atkText != null)
-            atkText.text = hasNonZero ? attackOps.Count.ToString() : "";
+            atkText.text = hasNonZero ? GetOperatorDisplayString(attackOps.Cast<BuffOperator>().ToList()) : "";
+    }
+
+    /// <summary>Builds a single display string from one or more BuffOperators (e.g. "*3", "+1*2", "+2*3+1").</summary>
+    private static string GetOperatorDisplayString(List<BuffOperator> ops)
+    {
+        if (ops == null || ops.Count == 0) return "";
+        if (ops.Count == 1) return ops[0].GetDisplayString();
+        // Multiple: join each buff's display with a space
+        return string.Join(" ", ops.Select(o => o.GetDisplayString()).Where(s => !string.IsNullOrEmpty(s)));
     }
 }
 //????????binding name??????????UI Text???????????????????

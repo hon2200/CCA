@@ -67,4 +67,17 @@ public class BuffOperator : Buff
         current += _lastAdditive;
         return current;
     }
+
+    /// <summary>Format for UI: e.g. "*3", "+1*2", "+2*3+1" (first additive, multiplier, last additive).</summary>
+    public string GetDisplayString()
+    {
+        var parts = new System.Collections.Generic.List<string>();
+        if (_firstAdditive != 0f)
+            parts.Add((_firstAdditive > 0 ? "+" : "") + _firstAdditive.ToString("0.##"));
+        if (_multiplier != 1f)
+            parts.Add("*" + _multiplier.ToString("0.##"));
+        if (_lastAdditive != 0f)
+            parts.Add((_lastAdditive > 0 ? "+" : "") + _lastAdditive.ToString("0.##"));
+        return parts.Count > 0 ? string.Join("", parts) : "";
+    }
 }

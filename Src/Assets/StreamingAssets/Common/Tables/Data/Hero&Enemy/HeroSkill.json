@@ -54,8 +54,8 @@
     "Mountain Crusher": {
         "ID": "Mountain Crusher",
         "Name": "千钧棒",
-        "IsLimited": "TURE",
-        "LimitedTimes": 1,
+        "IsLimited": false,
+        "LimitedTimes": 0,
         "Description": "你造成的伤害*3。",
         "Costs": [
             0,

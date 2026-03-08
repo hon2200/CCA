@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae25570a79ed824c9839d82ed729893, type: 3}
   m_Name: Wukong
   m_EditorClassIdentifier: 
-  ID: 
-  image: {fileID: 0}
+  ID: Wukong
+  image: {fileID: 21300000, guid: 903dffeef86e15948976a99d4a0928a7, type: 3}
