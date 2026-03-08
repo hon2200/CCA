@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -375,8 +374,9 @@ GameObject:
   - component: {fileID: 892888217}
   - component: {fileID: 892888216}
   - component: {fileID: 892888215}
+  - component: {fileID: 892888218}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Backward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,8 +399,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 837, y: 493}
-  m_SizeDelta: {x: 186.0684, y: 58.6753}
+  m_AnchoredPosition: {x: 811.4, y: 466}
+  m_SizeDelta: {x: 208.847, y: 87.396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892888215
 MonoBehaviour:
@@ -478,8 +478,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 937d4a3c883e1ae438a391f79d31434e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -496,6 +496,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892888213}
   m_CullTransparentMesh: 1
+--- !u!114 &892888218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892888213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06aa4b3770f3184a924141d7c449b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freeGameJumpButton: {fileID: 0}
+  mapJumpButton: {fileID: 0}
+  MainMenuJumpButton: {fileID: 892888215}
+  freeGameSceneName: Free Game
+  RougeMapSceneName: RougeMap
+  MainMenuSceneName: Main Menu (Desktop)
 --- !u!1 &1046155644
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,10 +562,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -931,7 +949,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u56DE\u4E3B\u83DC\u5355"
+  m_text: "\u8FD4 \u56DE"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2c2894a0ab61f4459363333a083aaa4, type: 2}
   m_sharedMaterial: {fileID: -4872919149489057040, guid: d2c2894a0ab61f4459363333a083aaa4, type: 2}
@@ -958,8 +976,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

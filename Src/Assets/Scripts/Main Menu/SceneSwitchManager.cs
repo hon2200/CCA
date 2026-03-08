@@ -12,11 +12,13 @@ public class SceneSwitcherManager : MonoBehaviour
     [Header("场景跳转按钮绑定")]
     public Button freeGameJumpButton;
     public Button mapJumpButton;
+    public Button MainMenuJumpButton;
 
     // 【可配置】Free Game场景名称（确保和Build Settings中一致）
     [Header("场景名称配置")]
     public string freeGameSceneName = "Free Game";
     public string RougeMapSceneName = "RougeMap";
+    public string MainMenuSceneName = "Main Menu (Desktop)";
 
 
     private void Awake()
@@ -43,7 +45,7 @@ public class SceneSwitcherManager : MonoBehaviour
             Debug.LogWarning("未绑定Free Game跳转按钮，请在Inspector面板赋值！");
         }
 
-        // 绑定Free Game跳转按钮的点击事件
+        // 绑定Rouge Map跳转按钮的点击事件
         if (mapJumpButton != null)
         {
             // 先移除已有事件（避免重复绑定）
@@ -54,6 +56,19 @@ public class SceneSwitcherManager : MonoBehaviour
         else
         {
             Debug.LogWarning("未绑定RougeMap跳转按钮，请在Inspector面板赋值！");
+        }
+
+        // 绑定Main Menu跳转按钮的点击事件
+        if (MainMenuJumpButton != null)
+        {
+            // 先移除已有事件（避免重复绑定）
+            MainMenuJumpButton.onClick.RemoveAllListeners();
+            // 添加跳转逻辑
+            MainMenuJumpButton.onClick.AddListener(OnMainMenuButtonClicked);
+        }
+        else
+        {
+            Debug.LogWarning("未绑定Main Menu跳转按钮，请在Inspector面板赋值！");
         }
     }
 
@@ -100,6 +115,25 @@ public class SceneSwitcherManager : MonoBehaviour
         SceneManager.LoadScene(RougeMapSceneName);
     }
 
+    public void OnMainMenuButtonClicked()
+    {
+        // 验证场景名称有效性
+        if (string.IsNullOrEmpty(MainMenuSceneName))
+        {
+            Debug.LogError("Main Menu场景名称为空，请检查配置！");
+            return;
+        }
+
+        // 验证场景是否在Build Settings中
+        if (!IsSceneInBuildSettings(MainMenuSceneName))
+        {
+            Debug.LogError($"场景「{MainMenuSceneName}」未添加到Build Settings，请先添加！");
+            return;
+        }
+
+        // 直接同步跳转场景（无加载过渡）
+        SceneManager.LoadScene(MainMenuSceneName);
+    }
     /// <summary>
     /// 扩展：添加新场景跳转按钮时，复制以下模板修改即可
     /// 示例：新场景按钮绑定 + 跳转函数
@@ -159,5 +193,10 @@ public class SceneSwitcherManager : MonoBehaviour
     public void JumpToRougeMap()
     {
         OnRougeMapButtonClicked();
+    }
+
+    public void JumpToMainMenu()
+    {
+        OnMainMenuButtonClicked();
     }
 }

@@ -1,4 +1,4 @@
-Dict 内容 (Count: 86)
+Dict 内容 (Count: 85)
 ====================================
 Key: Molten Cast
 
@@ -938,20 +938,6 @@ Key: Wolf Howl
       [2]:         0
   CD:     0
 ------------------------------------
-Key: Bloodlust
-
-  ID:     Bloodlust
-  Name:     嗜血
-  IsLimited:     False
-  LimitedTimes:     0
-  Description:     你的攻击造成伤害时，你回复等量生命值。
-  Costs: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         0
-      [2]:         0
-  CD:     0
-------------------------------------
 Key: Mountain Crusher
 
   ID:     Mountain Crusher
@@ -1012,8 +998,8 @@ Key: Well Equipped
 
   ID:     Well Equipped
   Name:     装备精良
-  IsLimited:     False
-  LimitedTimes:     0
+  IsLimited:     True
+  LimitedTimes:     1
   Description:     你开局拥有子弹5，剑5。
   Costs: 
     List`1 (Count: 3)
@@ -1062,7 +1048,7 @@ Key: Ritual
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     1
 ------------------------------------
 Key: Inviolable
 
@@ -1132,7 +1118,7 @@ Key: Overconfidence
       [0]:         0
       [1]:         0
       [2]:         0
-  CD:     0
+  CD:     1
 ------------------------------------
 Key: Agile Ape
 
@@ -1162,6 +1148,20 @@ Key: Nurture
       [2]:         0
   CD:     0
 ------------------------------------
+Key: Bloodlust
+
+  ID:     Bloodlust
+  Name:     嗜血
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     你的攻击造成伤害时，你回复等量生命值。
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
 Key: Wolf Grudge
 
   ID:     Wolf Grudge
@@ -1183,20 +1183,6 @@ Key: Leader Catch
   IsLimited:     True
   LimitedTimes:     1
   Description:     当场上所有类型为Boss和Elite的单位全部死亡时，玩家赢得此局游戏。
-  Costs: 
-    List`1 (Count: 3)
-      [0]:         0
-      [1]:         0
-      [2]:         0
-  CD:     0
-------------------------------------
-Key: Daily Growing
-
-  ID:     Daily Growing
-  Name:     快速生长
-  IsLimited:     False
-  LimitedTimes:     0
-  Description:     每回合结束时，你造成的伤害+1（可叠加）。
   Costs: 
     List`1 (Count: 3)
       [0]:         0
