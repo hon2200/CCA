@@ -70,8 +70,8 @@ namespace Michsky.UI.Dark
 
         void Update()
         {
-            if (Gamepad.current == null || gamepadManager == null)
-                return;
+/*            if (Gamepad.current == null || gamepadManager == null)
+                return;*/
 
             if (useSlider == true)
             {                        

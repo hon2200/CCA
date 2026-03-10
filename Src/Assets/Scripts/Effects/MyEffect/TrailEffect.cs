@@ -20,8 +20,8 @@ public class TrailEffect : MonoBehaviour
         main.startLifetime = duration;
         transform.rotation = Quaternion.LookRotation(end - start);
         effect.Play();
-
-        AudioSource.PlayClipAtPoint(sound, Vector3.zero, AudioManager.Instance.battleVolume );
+        if (sound != null)
+            AudioSource.PlayClipAtPoint(sound, Vector3.zero, AudioManager.Instance.battleVolume );
         Destroy(gameObject, duration);
         return duration;
     }
