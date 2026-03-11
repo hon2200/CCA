@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TMPro;
-using UnityEditor.VersionControl;
-using static UnityEditor.ShaderData;
 
 class BattleManager: MonoSingleton<BattleManager>
 {
