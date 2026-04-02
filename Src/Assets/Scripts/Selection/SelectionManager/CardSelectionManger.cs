@@ -115,7 +115,6 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 }
                 break;
             case RayStatus.ChosseFirstTarget:
-
                 //UpdatePlayerHoverHighlight(player);
                 MouseAndRayUtil.RenewHitting(ref lastHoveredPlayer, player);
                 CheckPlayer(lastHoveredCard.GetComponent<RunTimeCard>().actionDefine);
@@ -143,9 +142,7 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                         lastHoveredCard.GetComponent<CardSelection_>().OnHoverExit();
                         Arrow.Instance.DeActive();
                         rayStatus = RayStatus.ChooseCard;
-
                         //ClearAllPlayerHighlight();
-
                     }
                 }
                 

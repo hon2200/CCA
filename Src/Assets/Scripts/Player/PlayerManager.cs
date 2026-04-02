@@ -79,52 +79,30 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         return specificPlayers;
     }
 
-    #region Level Things
-    public void CreateCurrentLevelWave()
-    {
-        Debug.Log("Level ID" + LevelManager.Instance.Level.ID + "Wave " + LevelManager.Instance.Level.Wave);
-        CreatingPlayers_BasedOnLevels(LevelManager.Instance.GetCurrentLevel(), LevelManager.Instance.Level.Wave);
-    }
-    public void CreatingPlayers_BasedOnLevels(LevelDefine levelDefine, int Wave)
+    #region Tutorial Things
+    public void CreatingPlayers_BasedOnLevels(TutorialDefine tutorialDefine, int Wave = 0)
     {
         int friendCount = 0, enemyCount = 0, remains = 0;
         if (Wave == 0)
         {
             ClearAll();
-            Player newPlayerH = CreateHuman_BasedOnLevel(levelDefine);
+            CreateHuman_BasedOnLevel(tutorialDefine);
         }
 
         else
             remains = ClearDeadPeople();
-        if (levelDefine.FriendList.Count > Wave)
+        if (tutorialDefine.EnemyList.Count > Wave)
         {
-            friendCount = levelDefine.FriendList[Wave].Count;
-            for (int j = 0; j < friendCount; j++)
-            {
-                AIDataBase.Instance.AIDictionary.TryGetValue(levelDefine.FriendList[Wave][j], out var AI);
-                if (AI != null)
-                {
-                    Player newPlayer = CreateAI(AI, true, levelDefine);
-                }
-
-                else
-                    Debug.Assert(false, "Can't find AI" + levelDefine.FriendList[Wave][j]);
-            }
-        }
-        if (levelDefine.EnemyList.Count > Wave)
-        {
-            enemyCount = levelDefine.EnemyList[Wave].Count;
+            enemyCount = tutorialDefine.EnemyList[Wave].Count;
             for (int i = 0; i < enemyCount; i++)
             {
-                AIDataBase.Instance.AIDictionary.TryGetValue(levelDefine.EnemyList[Wave][i], out var AI);
+                HeroDataBase.Instance.EnemyDictionary.TryGetValue(tutorialDefine.EnemyList[Wave][i], out var AI);
                 if (AI != null)
                 {
-                    Player newPlayer = CreateAI(AI, false, levelDefine);
+                    AddPlayer(false, false, AI, tutorialDefine);
                 }
-
-                
                 else
-                    Debug.Assert(false, "Can't find AI" + levelDefine.EnemyList[Wave][i]);
+                    Debug.Assert(false, "Can't find AI" + tutorialDefine.EnemyList[Wave][i]);
             }
         }
         int totalNumber = 1 + friendCount + enemyCount + remains;
@@ -132,31 +110,10 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         //MyLog.PrintLoadedDictionary(Players, "MyLog/Loading/PlayerTable_Debug.txt");
 
     }
-    public Player CreateAI(AIDefine aIDefine, bool isFriend, LevelDefine levelDefine)
+    private void CreateHuman_BasedOnLevel(TutorialDefine tutorialDefine)
     {
-        int ID_inGame = NextPlayerID;
-        var newPlayerObject = Instantiate(AIPrefab, this.transform);
-        newPlayerObject.name = "Player" + ID_inGame;
-        var newPlayer = newPlayerObject.GetComponent<AIPlayer>();
-        newPlayer.Initialize(ID_inGame, aIDefine, isFriend, levelDefine);
-        ArrangeNewPlayer(newPlayer);
-        NextPlayerID++;
-        _players.Add(newPlayer.ID_inGame, newPlayer);
-        AddPlayerToCollections(newPlayer, isFriend, isHuman: false);
-        return newPlayer;
-    }
-    private Player CreateHuman_BasedOnLevel(LevelDefine level)
-    {
-        int ID_inGame = NextPlayerID;
-        var newPlayerObject = Instantiate(HumanPrefab, this.transform);
-        newPlayerObject.name = "Player" + ID_inGame;
-        var newPlayer = newPlayerObject.GetComponent<HumanPlayer>();
-        newPlayer.InitializePlayer(ID_inGame, level);
-        InitializeHumanPlayerSpace(newPlayer);
-        NextPlayerID++;
-        _players.Add(newPlayer.ID_inGame, newPlayer);
-        AddPlayerToCollections(newPlayer, isFriend: true, isHuman: true);
-        return newPlayer;
+        HeroDataBase.Instance.HeroDictionary.TryGetValue(tutorialDefine.HeroId, out var heroDefine);
+        AddPlayer(true, true, heroDefine, tutorialDefine);
     }
     #endregion
 
@@ -196,7 +153,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     /// <summary>
     /// Creates one player from hero data and adds them to Players and the correct Human/AI and Friendly/Hostile lists.
     /// </summary>
-    public Player AddPlayer(bool isFriend, bool isHuman, HeroDefine heroDefine)
+    public Player AddPlayer(bool isFriend, bool isHuman, HeroDefine heroDefine, TutorialDefine tutorialDefine = null)
     {
         int id;
         if (isHuman && _humanPlayers.Count == 0)
@@ -216,7 +173,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             var newPlayerObject = Instantiate(HumanPrefab, this.transform);
             newPlayerObject.name = "Player" + id;
             var newPlayer = newPlayerObject.GetComponent<HumanPlayer>();
-            newPlayer.InitializePlayer(id, heroDefine);
+            newPlayer.InitializePlayer(id, heroDefine, tutorialDefine);
             InitializeHumanPlayerSpace(newPlayer);
             AddPlayerToCollections(newPlayer, isFriend, isHuman: true);
             return newPlayer;
@@ -226,7 +183,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             var newPlayerObject = Instantiate(AIPrefab, this.transform);
             newPlayerObject.name = "Player" + id;
             var newPlayer = newPlayerObject.GetComponent<AIPlayer>();
-            newPlayer.Initialize(id, heroDefine);
+            newPlayer.Initialize(id, heroDefine, tutorialDefine);
             newPlayer.isFriend = isFriend;
             ArrangeNewPlayer(newPlayer);
             AddPlayerToCollections(newPlayer, isFriend, isHuman: false);

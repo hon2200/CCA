@@ -1103,5 +1103,31 @@
             0
         ],
         "CD": 0
+    },
+    "Tutorial": {
+        "ID": "Tutorial",
+        "Name": "教程",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "拥有的可用行动和玩家一致",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 0
+    },
+    "Summoning Scarecrow": {
+        "ID": "Summoning Scarecrow",
+        "Name": "召唤稻草人",
+        "IsLimited": false,
+        "LimitedTimes": 0,
+        "Description": "随机召唤一个稻草人1或者2",
+        "Costs": [
+            0,
+            0,
+            0
+        ],
+        "CD": 2
     }
 }

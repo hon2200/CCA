@@ -33,11 +33,6 @@ class BattleManager: MonoSingleton<BattleManager>
         {
             Text.text = "Turn" + Turn.Value.ToString();
         };
-        OnNewWave += () =>
-        {
-            PlayerManager.Instance.CreateCurrentLevelWave();
-            StartRunPhase();
-        };
         OnDefeated += () => isRunning = false;
         OnWinning += () => isRunning = false;
     }

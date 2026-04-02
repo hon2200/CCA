@@ -13,51 +13,97 @@ public class MapDesigner : MonoSingleton<MapDesigner>
 {
     public Dictionary<RoomID, float> RoomProbabilityDic;
     public int CursedPossibility = 0;
+
+    [Header("Temporary room stand-ins (not final content)")]
+    [Tooltip("When true: Alchemy/Tailor assign as Minion; curse branch uses Treasure instead of EvilForge. Set false when those rooms are implemented.")]
+    public bool useTemporaryRoomStandins = false;
+
+    private RoomID CurseBranchForgeOrTreasure()
+    {
+        return useTemporaryRoomStandins ? RoomID.Treasure : RoomID.EvilForge;
+    }
+
+    // Shop-type bonus rooms (markets, workshops, bank, tavern). Only floors i=11 and i=17 use these; other Bonus floors exclude them.
+    private static bool IsShopRoom(RoomID id)
+    {
+        switch (id)
+        {
+            case RoomID.TalentMarket:
+            case RoomID.AntiqueMarket:
+            case RoomID.CardMarket:
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    private Dictionary<RoomID, float> BuildProbabilityDic(bool shopsOnly)
+    {
+        var d = new Dictionary<RoomID, float>();
+        foreach (var kvp in RoomProbabilityDic)
+        {
+            if (IsShopRoom(kvp.Key) == shopsOnly)
+                d[kvp.Key] = kvp.Value;
+        }
+        return d;
+    }
+
     public void Awake()
     {
         InitializeRoomProbabilityDic();
     }
-    //初始化房间可能性
+
+    // Initialize per-room-type weights used when drawing Bonus / Shop assignments.
+    // Scan the numeric bonus band; only values that exist on RoomID are added (e.g. 16 is skipped).
     public void InitializeRoomProbabilityDic()
     {
         RoomProbabilityDic = new();
-        for (int i = 10; i <= 17; i++)
+        const int bonusPoolIdMin = 10;
+        const int bonusPoolIdMax = 19;
+        for (int v = bonusPoolIdMin; v <= bonusPoolIdMax; v++)
         {
-            RoomProbabilityDic.Add((RoomID)i, 1);
+            if (!Enum.IsDefined(typeof(RoomID), v))
+                continue;
+            RoomProbabilityDic[(RoomID)v] = 1f;
         }
     }
-    //分配除起始房之外的所有房间
+
+    // Assign room types for every floor except the start room (index 0).
     public void AssignAllRooms(List<List<Room>> roomByFloors)
     {
         for (int i = 1; i < roomByFloors.Count; i++)
         {
-            //小怪房
+            if (i == 11 || i == 17)
+            {
+                AssignRooms(roomByFloors[i], "Shop");
+                continue;
+            }
+            // Minion floors (odd index; curse rules differ when i % 6 == 5).
             if (i % 2 == 1)
                 if (i % 6 != 5)
                     AssignRooms(roomByFloors[i], "Minion", CurseAvailable: true);
                 else
                     AssignRooms(roomByFloors[i], "Minion", CurseAvailable: false);
-            //精英Boss房
+            // Elite or Boss on every 6th floor; floor 18 is Boss.
             else if (i % 6 == 0)
                 if (i == 18)
                     AssignRooms(roomByFloors[i], "Boss");
                 else
                     AssignRooms(roomByFloors[i], "Elite");
-            //发育房
+            // Bonus / growth floors (even, not divisible by 6).
             else
                 AssignRooms(roomByFloors[i], "Bonus");
         }
     }
 
-    //维护这个函数和RoomID的数字大小关系
+    // Keep Category strings and RoomID numeric ranges in sync when editing room tables.
     private void AssignRooms(List<Room> rooms, string Catagory, bool overRide = false, bool CurseAvailable = false)
     {
-        //选择到第几个BonusRooms了
+        // Index into the precomputed Bonus/Shop pick list for this floor.
         int count = 0;
-        //随机数
         int number = 0;
-        //BonusRoom的可选项
-        List<RoomID> BonusRoomsList = new(); 
+        // One draw list for all Bonus or Shop slots on this floor.
+        List<RoomID> BonusRoomsList = new();
         foreach (var room in rooms)
         {
             if (room.roomID != RoomID.Undecided && overRide == false)
@@ -68,14 +114,13 @@ public class MapDesigner : MonoSingleton<MapDesigner>
                     number = UnityEngine.Random.Range(0, 100);
                     if (number < CursedPossibility && CurseAvailable)
                     {
-                        //所有下一个房间都需要是被唯一链接的
+                        // Curse layout only if every linked next room is uniquely reachable from this floor.
                         bool onlyNextRoom = true;
-                        foreach(var nextRoom in room.NextNodes)
+                        foreach (var nextRoom in room.NextNodes)
                         {
                             if (!IsOnlyTarget(nextRoom, rooms))
                                 onlyNextRoom = false;
                         }
-                        //是，则变化
                         if (onlyNextRoom)
                         {
                             room.AssignRoom(RoomID.DemonAlter);
@@ -85,11 +130,10 @@ public class MapDesigner : MonoSingleton<MapDesigner>
                                 if (number > 50)
                                     nextRoom.AssignRoom(RoomID.CurseFusion);
                                 else
-                                    nextRoom.AssignRoom(RoomID.EvilForge);
+                                    nextRoom.AssignRoom(CurseBranchForgeOrTreasure());
                             }
                             CursedPossibility -= 20;
                         }
-                        //否，则不变
                         else
                         {
                             room.AssignRoom(RoomID.Minion);
@@ -107,59 +151,63 @@ public class MapDesigner : MonoSingleton<MapDesigner>
                 case "Boss":
                     room.AssignRoom(RoomID.Boss); break;
                 case "Bonus":
-                    //选择一下可用的BonusRooms
-                    if(BonusRoomsList.Count == 0)
+                    // Non-shop bonus pool; shops only on floors i=11 and i=17 (Shop category).
+                    if (BonusRoomsList.Count == 0)
                     {
-                        BonusRoomsList = SelectByFloatProbability<RoomID>(RoomProbabilityDic, rooms.Count);
+                        var bonusNoShops = BuildProbabilityDic(shopsOnly: false);
+                        BonusRoomsList = SelectByFloatProbability<RoomID>(bonusNoShops, rooms.Count);
+                    }
+                    room.AssignRoom(BonusRoomsList[count]);
+                    count++;
+                    break;
+                case "Shop":
+                    if (BonusRoomsList.Count == 0)
+                    {
+                        var shopDic = BuildProbabilityDic(shopsOnly: true);
+                        BonusRoomsList = SelectByFloatProbability<RoomID>(shopDic, rooms.Count);
                     }
                     room.AssignRoom(BonusRoomsList[count]);
                     count++;
                     break;
                 default:
-                    Debug.Assert(false, $"未知的房间类别: {Catagory}");
+                    Debug.Assert(false, $"Unknown room category: {Catagory}");
                     break;
             }
         }
 
     }
-    //按概率选择的方法函数
 
+    // Weighted random sample without replacement (m picks from the dictionary keys).
     private List<T> SelectByFloatProbability<T>(Dictionary<T, float> probabilityDict, int m)
     {
         if (probabilityDict == null || probabilityDict.Count == 0)
         {
-            Debug.LogError("概率字典不能为空");
+            Debug.LogError("Probability dictionary cannot be empty.");
             return new List<T>();
         }
 
         if (m > probabilityDict.Count)
         {
-            Debug.LogWarning($"请求选择 {m} 个元素，但字典只有 {probabilityDict.Count} 个元素");
+            Debug.LogWarning($"Requested {m} distinct picks but the dictionary only has {probabilityDict.Count} entries.");
             return probabilityDict.Keys.ToList();
         }
 
-        // 计算总概率（浮点数）
         float totalProbability = probabilityDict.Values.Sum();
 
-        // 可选：检查总概率是否接近1（如果是归一化概率）
         if (Mathf.Abs(totalProbability - 1f) > 0.01f)
         {
-            Debug.LogWarning($"总概率 {totalProbability} 不等于1，将进行归一化处理");
+            Debug.LogWarning($"Total weight is {totalProbability} (not 1); selection still uses raw weights.");
         }
 
-        // 创建临时字典副本
         Dictionary<T, float> tempDict = new Dictionary<T, float>(probabilityDict);
         List<T> result = new List<T>();
 
         for (int i = 0; i < m; i++)
         {
-            // 重新计算当前总概率
             float currentTotal = tempDict.Values.Sum();
 
-            // 生成 [0, currentTotal) 范围内的随机浮点数
             float randomValue = UnityEngine.Random.Range(0f, currentTotal);
 
-            // 轮盘赌选择
             float cumulative = 0f;
             T selected = default(T);
 
@@ -167,7 +215,6 @@ public class MapDesigner : MonoSingleton<MapDesigner>
             {
                 cumulative += kvp.Value;
 
-                // 使用容差处理浮点数精度问题
                 if (randomValue < cumulative || Mathf.Approximately(randomValue, cumulative))
                 {
                     selected = kvp.Key;
@@ -175,7 +222,6 @@ public class MapDesigner : MonoSingleton<MapDesigner>
                 }
             }
 
-            // 安全检查：如果没有选中（可能由于浮点精度），选第一个
             if (selected == null || selected.Equals(default(T)))
             {
                 selected = tempDict.Keys.First();
@@ -187,10 +233,10 @@ public class MapDesigner : MonoSingleton<MapDesigner>
 
         return result;
     }
-    //检查房间是否唯一
+
+    // True if exactly one room on this floor links to targetRoom (unique successor from this floor).
     public bool IsOnlyTarget(Room targetRoom, List<Room> startRooms)
     {
-        //查看是不是下一个房间是不是唯一相连
         int connectedNumber = 0;
         foreach (var otherRoom in startRooms)
         {
@@ -199,7 +245,6 @@ public class MapDesigner : MonoSingleton<MapDesigner>
                 connectedNumber++;
             }
         }
-        //如果相连是1返回真
         return connectedNumber == 1;
     }
 }

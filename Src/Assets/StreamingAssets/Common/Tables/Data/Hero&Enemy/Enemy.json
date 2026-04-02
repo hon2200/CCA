@@ -585,5 +585,42 @@
             "Wolf Grudge"
         ],
         "EnemyType": "Minion"
+    },
+    "Scarecrow1": {
+        "ID": "Scarecrow1",
+        "Name": "稻草人",
+        "MaxHP": 1,
+        "SkillIDList": [
+            "Tutorial"
+        ],
+        "EnemyType": "Minion"
+    },
+    "Scarecrow2": {
+        "ID": "Scarecrow2",
+        "Name": "稻草人",
+        "MaxHP": 2,
+        "SkillIDList": [
+            "Tutorial"
+        ],
+        "EnemyType": "Minion"
+    },
+    "Scarecrow3": {
+        "ID": "Scarecrow3",
+        "Name": "大稻草人",
+        "MaxHP": 3,
+        "SkillIDList": [
+            "Tutorial"
+        ],
+        "EnemyType": "Minion"
+    },
+    "Farmer": {
+        "ID": "Farmer",
+        "Name": "农民",
+        "MaxHP": 6,
+        "SkillIDList": [
+            "Summon Scarecrow",
+            "Tutorial"
+        ],
+        "EnemyType": "Boss"
     }
 }

@@ -1,4 +1,4 @@
-Dict 内容 (Count: 55)
+Dict 内容 (Count: 59)
 ====================================
 Key: Bronze Guardian
 
@@ -645,4 +645,49 @@ Key: Wolf Mother
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Wolf Grudge
+------------------------------------
+Key: Scarecrow1
+
+  EnemyType:     Minion
+  ID:     Scarecrow1
+  Name:     稻草人
+  Description:     null
+  MaxHP:     1
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Tutorial
+------------------------------------
+Key: Scarecrow2
+
+  EnemyType:     Minion
+  ID:     Scarecrow2
+  Name:     稻草人
+  Description:     null
+  MaxHP:     2
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Tutorial
+------------------------------------
+Key: Scarecrow3
+
+  EnemyType:     Minion
+  ID:     Scarecrow3
+  Name:     大稻草人
+  Description:     null
+  MaxHP:     3
+  SkillIDList: 
+    List`1 (Count: 1)
+      [0]:         Tutorial
+------------------------------------
+Key: Farmer
+
+  EnemyType:     Boss
+  ID:     Farmer
+  Name:     农民
+  Description:     null
+  MaxHP:     6
+  SkillIDList: 
+    List`1 (Count: 2)
+      [0]:         Summon Scarecrow
+      [1]:         Tutorial
 ------------------------------------

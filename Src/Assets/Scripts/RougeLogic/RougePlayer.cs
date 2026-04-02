@@ -10,6 +10,69 @@ public class RougePlayer
     public List<Potion> Potions;
     public int PotionMax;
 
+    /// <summary>
+    /// Custom battle action IDs for this run. When null or empty, <see cref="GetAvailableBattleActionIdsOrDefault"/> uses <see cref="GetDefaultBattleAvailableActionIds"/>.
+    /// </summary>
+    public List<string> availableAction;
+
+    /// <summary>
+    /// Same meaning as <see cref="Player.AvailableActions"/> / <see cref="Player.Initialize"/> when no explicit list is passed:
+    /// all basic action IDs from <see cref="ActionDataBase"/>. Used for non-tutorial runs (e.g. roguelike) so defaults live here.
+    /// </summary>
+    public static List<string> GetDefaultBattleAvailableActionIds()
+    {
+        var list = new List<string>();
+        if (ActionDataBase.Instance == null || ActionDataBase.Instance.ActionDictionary == null)
+            return list;
+
+        foreach (var action in ActionDataBase.Instance.ActionDictionary.Values)
+        {
+            if (action != null && action.isBasic)
+                list.Add(action.ID);
+        }
+        return list;
+    }
+
+    /// <summary>
+    /// Resolved battle action IDs: <see cref="availableAction"/> when non-null and non-empty; otherwise a fresh copy of <see cref="GetDefaultBattleAvailableActionIds"/>.
+    /// </summary>
+    public List<string> GetAvailableBattleActionIdsOrDefault()
+    {
+        if (availableAction != null && availableAction.Count > 0)
+            return new List<string>(availableAction);
+        return GetDefaultBattleAvailableActionIds();
+    }
+
+    /// <summary>
+    /// Adds an action ID. If <see cref="availableAction"/> is null or empty, it is first filled from <see cref="GetDefaultBattleAvailableActionIds"/> (copy), then the id is added if missing.
+    /// </summary>
+    public void AddAction(string actionId)
+    {
+        if (string.IsNullOrEmpty(actionId))
+            return;
+
+        if (availableAction == null || availableAction.Count == 0)
+            availableAction = new List<string>(GetDefaultBattleAvailableActionIds());
+
+        if (!availableAction.Contains(actionId))
+            availableAction.Add(actionId);
+    }
+
+    /// <summary>
+    /// Removes an action ID. If <see cref="availableAction"/> is null or empty, a copy of the default list is created first, then the id is removed.
+    /// </summary>
+    /// <returns>True if an element was removed.</returns>
+    public bool DeleteAction(string actionId)
+    {
+        if (string.IsNullOrEmpty(actionId))
+            return false;
+
+        if (availableAction == null || availableAction.Count == 0)
+            availableAction = new List<string>(GetDefaultBattleAvailableActionIds());
+
+        return availableAction.Remove(actionId);
+    }
+
     public RougePlayer()
     {
         Init();
@@ -21,6 +84,7 @@ public class RougePlayer
         if (Potions == null) Potions = new List<Potion>();
         PotionMax = 3;
         coins = 0;
+        availableAction = null;
     }
 
     #region Hero Management
@@ -298,4 +362,5 @@ public class RougePlayer
     }
 
     #endregion
+
 }

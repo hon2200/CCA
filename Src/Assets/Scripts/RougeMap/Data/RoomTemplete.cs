@@ -33,14 +33,15 @@ public enum RoomID
     CardMarket = 12,
     Alchemyworkshop = 13,
     TailorShop = 14,
-    GoldBank = 15,
-    Unknown = 16,
+    CardReward = 15,
 
     Tavern = 17,
     SacredCemetery = 18,
+    SoulFountain = 19,
 
     DemonAlter = 30,
 
     EvilForge = 40,
     CurseFusion = 41,
+    Treasure = 42
 }

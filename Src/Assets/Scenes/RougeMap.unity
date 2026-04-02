@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -908,6 +909,7 @@ GameObject:
   - component: {fileID: 1378991452}
   - component: {fileID: 1378991455}
   - component: {fileID: 1378991456}
+  - component: {fileID: 1378991457}
   m_Layer: 0
   m_Name: -----MapManager------
   m_TagString: Untagged
@@ -995,6 +997,19 @@ MonoBehaviour:
   scrollSpeed: 10
   minZoom: 5
   maxZoom: 20
+--- !u!114 &1378991457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378991451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb8184a603d58443889cbcd0bee24e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayStatus: 1
 --- !u!1 &1419036556
 GameObject:
   m_ObjectHideFlags: 0

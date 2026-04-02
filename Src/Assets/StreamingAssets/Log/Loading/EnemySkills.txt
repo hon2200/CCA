@@ -1,4 +1,4 @@
-Dict 内容 (Count: 85)
+Dict 内容 (Count: 87)
 ====================================
 Key: Molten Cast
 
@@ -1189,4 +1189,32 @@ Key: Leader Catch
       [1]:         0
       [2]:         0
   CD:     0
+------------------------------------
+Key: Tutorial
+
+  ID:     Tutorial
+  Name:     教程
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     拥有的可用行动和玩家一致
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     0
+------------------------------------
+Key: Summoning Scarecrow
+
+  ID:     Summoning Scarecrow
+  Name:     召唤稻草人
+  IsLimited:     False
+  LimitedTimes:     0
+  Description:     随机召唤一个稻草人1或者2
+  Costs: 
+    List`1 (Count: 3)
+      [0]:         0
+      [1]:         0
+      [2]:         0
+  CD:     2
 ------------------------------------

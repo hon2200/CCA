@@ -2,7 +2,7 @@
     "Blank": {
         "ID": "Blank",
         "Name": "白板",
-        "MaxHP": 25,
+        "MaxHP": 5,
         "SkillIDList": []
     },
     "Wukong": {

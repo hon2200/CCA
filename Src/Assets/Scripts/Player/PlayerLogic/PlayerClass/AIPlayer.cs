@@ -17,40 +17,16 @@ public class AIPlayer : Player
     //告诉玩家的行动类别
     public Intention IntendedType { get; set; }
     public List<string> preferedAction { get; set; }
-    //创造闯关过程中的AI
-    public void Initialize(int ID_inGame, AIDefine aIDefine, bool isFriend, LevelDefine Level)
-    {
-        var availableAction = Level.GetAllUnlockedActions()
-            .Concat(aIDefine.EnabledAction)
-            .Except(aIDefine.DisabledAction)
-            .ToList();
-        base.Initialize(ID_inGame, aIDefine.Name, PlayerType.AI, aIDefine.MaxHP, aIDefine.InitialResource,
-            availableAction, aIDefine.ID, aIDefine.SkillList);
-        //赋值性格
-        CharacterDataBase.Instance.CharacterDictionary.TryGetValue(aIDefine.CharacterID, out var characterDefine);
-        if (characterDefine == null)
-            Debug.Assert(false, "Can't find Character");
-        CharacterDefine = characterDefine;
-        //赋值情感
-        Emo = new();
-        //注意：情绪变化监听
-        Emo.OnValueChanged += (float oldEmo, float newEmo, string message) =>
-        {
-            OnEmoChange();
-        };
-        Emo.Set(characterDefine.IniEmotion);
-        //赋值诚实
-        Honest = new();
-        Honest.Set(characterDefine.IniHonesty);
-        preferedAction = aIDefine.PreferedAction == null ? new() : aIDefine.PreferedAction;
-        this.isFriend = isFriend;
-        IntendedType = new();
-        OnBirth?.Invoke();
-    }
     //创造英雄模式中的AI
-    public void Initialize(int ID_inGame, HeroDefine heroDefine)
+    public void Initialize(int ID_inGame, HeroDefine heroDefine, TutorialDefine tutorialDefine = null)
     {
-        base.Initialize(ID_inGame, heroDefine.Name, PlayerType.AI, heroDefine.MaxHP, null, null, heroDefine.ID, heroDefine.SkillIDList);
+        List<string> availableAction = null;
+        if(tutorialDefine != null)
+        {
+            availableAction = tutorialDefine.GetAllUnlockedActions().ToList();
+        }
+        base.Initialize(ID_inGame, heroDefine.Name, PlayerType.AI, heroDefine.MaxHP, 
+            null, availableAction, heroDefine.ID, heroDefine.SkillIDList);
         //赋值性格
         CharacterDataBase.Instance.CharacterDictionary.TryGetValue("Friendly", out var characterDefine);
         if (characterDefine == null)

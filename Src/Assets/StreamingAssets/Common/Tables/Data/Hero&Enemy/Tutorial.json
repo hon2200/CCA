@@ -1,0 +1,110 @@
+{
+    "1-1": {
+        "ID": "1-1",
+        "Chapter": 1,
+        "EnglishName": "Tutorial",
+        "Name": "教程",
+        "EnemyList": [
+            [
+                "Scarecrow1"
+            ]
+        ],
+        "FriendList": [],
+        "DisabledAction": [],
+        "UnlockedAction": [
+            "bullet",
+            "shoot",
+            "block"
+        ],
+        "UnlockedSkillFinal": [],
+        "HeroID": "Blank",
+        "NextLevel": "1-2"
+    },
+    "1-2": {
+        "ID": "1-2",
+        "Chapter": 1,
+        "EnglishName": "Tutorial",
+        "Name": "教程",
+        "EnemyList": [
+            [
+                "Scarecrow2"
+            ]
+        ],
+        "FriendList": [],
+        "DisabledAction": [],
+        "UnlockedAction": [
+            "double_shoot",
+            "double_block"
+        ],
+        "UnlockedSkillFinal": [],
+        "HeroID": "Blank",
+        "PreviousLevel": "1-1",
+        "NextLevel": "1-3"
+    },
+    "1-3": {
+        "ID": "1-3",
+        "Chapter": 1,
+        "EnglishName": "Tutorial",
+        "Name": "教程",
+        "EnemyList": [
+            [
+                "Scarecrow1",
+                "Scarecrow1",
+                "Scarecrow1"
+            ]
+        ],
+        "FriendList": [],
+        "DisabledAction": [],
+        "UnlockedAction": [
+            "rebounce",
+            "provoke"
+        ],
+        "UnlockedSkillFinal": [],
+        "HeroID": "Blank",
+        "PreviousLevel": "1-2",
+        "NextLevel": "1-4"
+    },
+    "1-4": {
+        "ID": "1-4",
+        "Chapter": 1,
+        "EnglishName": "Tutorial",
+        "Name": "教程",
+        "EnemyList": [
+            [
+                "Scarecrow Boss"
+            ]
+        ],
+        "FriendList": [],
+        "DisabledAction": [],
+        "UnlockedAction": [
+            "sword",
+            "stab",
+            "cleave",
+            "counterblade"
+        ],
+        "UnlockedSkillFinal": [
+            "Overdrive Rampage"
+        ],
+        "HeroID": "Blank",
+        "PreviousLevel": "1-3",
+        "NextLevel": "1-5"
+    },
+    "1-5": {
+        "ID": "1-5",
+        "Chapter": 1,
+        "EnglishName": "Tutorial",
+        "Name": "教程",
+        "EnemyList": [
+            [
+                "Farmer"
+            ]
+        ],
+        "FriendList": [],
+        "DisabledAction": [],
+        "UnlockedAction": [],
+        "UnlockedSkillFinal": [],
+        "HeroID": "Blank",
+        "PreviousLevel": "1-4",
+        "NextLevel": "#REF!"
+    }
+}

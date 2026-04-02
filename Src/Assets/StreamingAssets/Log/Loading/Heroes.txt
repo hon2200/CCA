@@ -5,7 +5,7 @@ Key: Blank
   ID:     Blank
   Name:     白板
   Description:     null
-  MaxHP:     25
+  MaxHP:     5
   SkillIDList: 
     List`1 (Count: 0)
 ------------------------------------
