@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +9,9 @@ using UnityEngine;
 //未来可以把Emotion写成Attribute，把OnEmotionChange写成委托
 public class AIPlayer : Player
 {
-    public CharacterDefine CharacterDefine { get; set; }
-    public Emotion Emo { get; set; }
     public bool isFriend { get; set; }
-    public Honesty Honest { get; set; }
     private Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory { get; set; }
     //告诉玩家的行动类别
-    public Intention IntendedType { get; set; }
     public List<string> preferedAction { get; set; }
     //创造英雄模式中的AI
     public void Initialize(int ID_inGame, HeroDefine heroDefine, TutorialDefine tutorialDefine = null)
@@ -25,36 +21,9 @@ public class AIPlayer : Player
         {
             availableAction = tutorialDefine.GetAllUnlockedActions().ToList();
         }
+        preferedAction = new();
         base.Initialize(ID_inGame, heroDefine.Name, PlayerType.AI, heroDefine.MaxHP, 
             null, availableAction, heroDefine.ID, heroDefine.SkillIDList);
-        //赋值性格
-        CharacterDataBase.Instance.CharacterDictionary.TryGetValue("Friendly", out var characterDefine);
-        if (characterDefine == null)
-            Debug.Assert(false, "Can't find Character");
-        CharacterDefine = characterDefine;
-        //赋值情感
-        Emo = new();
-        //注意：情绪变化监听
-        Emo.OnValueChanged += (float oldEmo, float newEmo, string message) =>
-        {
-            OnEmoChange();
-        };
-        Emo.Set(characterDefine.IniEmotion);
-        //赋值诚实
-        Honest = new();
-        Honest.Set(characterDefine.IniHonesty);
-        preferedAction = new List<string>();
-        this.isFriend = false;
-        IntendedType = new();
-        //警戒：情绪值对受伤应激激动
-        status.HP.OnValueChanged += (int oldHP, int newHP, string message) =>
-        {
-            if (message == "Damage")
-            {
-                int damageAmount = oldHP - newHP;
-                DamagedReaction(damageAmount);
-            }
-        };
         OnBirth?.Invoke();
     }
     public List<Player> GetEnemy()
@@ -86,35 +55,6 @@ public class AIPlayer : Player
         }
         return enemy;
     }
-    #region EmotionRelated
-    private void OnEmoChange()
-    {
-        if (Emo.Value >= CharacterDefine.MaxEmotion)
-            Emo.ChangeTo(CharacterDefine.MaxEmotion);
-        else if (Emo.Value <= CharacterDefine.MinEmotion)
-            Emo.ChangeTo(CharacterDefine.MinEmotion);
-        foreach(var emotion in EmotionDataBase.Instance.EmotionDictionary.Values)
-        {
-            if (emotion.EmotionalValueLowerLimit <= Emo.Value &&
-                emotion.EmotionalValueUpperLimit > Emo.Value)
-                Emo.emotionType = emotion.ID;
-        }
-    }
-    public void DamagedReaction(int damageNumber)
-    {
-        Emo.ChangeBy(damageNumber * CharacterDefine.EmotionChange_DamagedBased);
-        Honest.ChangeBy(damageNumber * CharacterDefine.HonestyChange_DamageBased);
-    }
-    public void DamagingReaction(int damageNummber)
-    {
-        Emo.ChangeBy(damageNummber * CharacterDefine.EmotionChange_DamagingBased);
-    }
-    public void TurnBasedChange()
-    {
-        Emo.ChangeBy(CharacterDefine.EmotionChange_TurnBased);
-        Honest.ChangeBy(CharacterDefine.HonestyChange_TurnBased);
-    }
-    #endregion
 
     #region MoveLogic
 
@@ -129,12 +69,11 @@ public class AIPlayer : Player
         }
 
         action.ReadinMoveAndConsume(newAction.ID, newAction.Target, "AI", this);
-        EmotionDataBase.Instance.EmotionDictionary.TryGetValue(Emo.emotionType, out var emotion);
         int count = 0;
         //多重攻击
         if (newAction.actionType == ActionType.Attack)
         {
-            while (UnityEngine.Random.Range(0f, 1f) < emotion.MultiAttackCheckValue)
+            while (UnityEngine.Random.Range(0f, 1f) < 0.5)
             {
                 if (this.CheckAllAction<AttackDefine>().Count > 0)
                 {
@@ -153,7 +92,7 @@ public class AIPlayer : Player
         //多重挑衅
         if (newAction.ID == "provoke")
         {
-            while (UnityEngine.Random.Range(0f, 1f) < emotion.MultiAttackCheckValue)
+            while (UnityEngine.Random.Range(0f, 1f) < 0.5)
             {
                 if (this.CheckAllAction<SpecialDefine>().Count > 0)
                 {

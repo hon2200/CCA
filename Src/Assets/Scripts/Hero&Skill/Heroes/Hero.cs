@@ -11,6 +11,9 @@ public class Hero
     public Hero(Player thisPlayer, HeroDefine heroDefine)
     {
         ID = heroDefine.ID;
+        MaxHP = heroDefine.MaxHP;
+        CurrentHP = new HPAttribute();
+        CurrentHP.Set(MaxHP);
         skills = new List<SkillDefine>();
         
 
@@ -41,6 +44,12 @@ public class Hero
         ID = heroID;
         skills = new List<SkillDefine>();
 
+        if (HeroDataBase.Instance != null && HeroDataBase.Instance.HeroDictionary != null
+            && HeroDataBase.Instance.HeroDictionary.TryGetValue(heroID, out var heroDef) && heroDef != null)
+            MaxHP = heroDef.MaxHP;
+        CurrentHP = new HPAttribute();
+        CurrentHP.Set(MaxHP);
+
         if (skillList == null)
         {
             SetSkillOwners(thisPlayer);
@@ -60,7 +69,7 @@ public class Hero
         }
         SetSkillOwners(thisPlayer);
     }
-    private void SetSkillOwners(Player thisPlayer)
+    public void SetSkillOwners(Player thisPlayer)
     {
         if (thisPlayer == null || skills == null) return;
         foreach (var skill in skills)

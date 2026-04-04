@@ -219,25 +219,15 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
         ClearAll();
         NextPlayerID = 1;
-
-        HeroDefine humanHeroDefine = null;
-        if (rougePlayer != null && rougePlayer.Heroes != null && rougePlayer.Heroes.Count > 0 && rougePlayer.Heroes[0] != null)
+        var humanHeroDefine = new HeroDefine("Blank", 20)
         {
-            HeroDataBase.Instance.HeroDictionary.TryGetValue(rougePlayer.Heroes[0].ID, out humanHeroDefine);
-        }
+            Name = "Blank",
+            Description = "Fallback hero for roguelike fight setup.",
+            SkillIDList = new List<string>(),
+        };
 
-        // Fallback "blank" hero when run has no hero or lookup fails.
-        if (humanHeroDefine == null)
-        {
-            humanHeroDefine = new HeroDefine("Blank", 20)
-            {
-                Name = "Blank",
-                Description = "Fallback hero for roguelike fight setup.",
-                SkillIDList = new List<string>(),
-            };
-        }
-
-        AddPlayer(isFriend: true, isHuman: true, humanHeroDefine);
+        var humanPlayer = AddPlayer(isFriend: true, isHuman: true, humanHeroDefine);
+        humanPlayer.SetHero(RougeManager.Instance.rougePlayer.Heroes[0]);
 
         if (pickedFight.Enemies != null)
         {

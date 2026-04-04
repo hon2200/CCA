@@ -14,7 +14,8 @@ public class TutorialManager : MonoSingleton<TutorialManager>
 
     public Button AdvanceButton; // AdvanceButton should be within the winning panel
     public Button RestartButton; // RestartButton should be within the defeat panel
-    public void Start()
+
+    void Start()
     {
         tutorial = new();
         tutorial.OnValueChanged += (oldVal, newVal, message) =>
@@ -22,19 +23,44 @@ public class TutorialManager : MonoSingleton<TutorialManager>
             Text.text = tutorial.Value;
         };
         Text.text = tutorial.Value;
-        BattleManager.Instance.OnDefeated += () =>
+        if (BattleManager.Instance != null)
         {
-            RestartButton.gameObject.SetActive(true);
-        };
-        BattleManager.Instance.OnWinning += () =>
-        {
-            AdvanceButton.gameObject.SetActive(true);
-        };
-        RestartButton.onClick.AddListener(Restart);
-        AdvanceButton.onClick.AddListener(Advance);
+            BattleManager.Instance.OnDefeated += OnBattleDefeated;
+            BattleManager.Instance.OnWinning += OnBattleWinning;
+        }
+        if (RestartButton != null)
+            RestartButton.onClick.AddListener(Restart);
+        if (AdvanceButton != null)
+            AdvanceButton.onClick.AddListener(Advance);
 
         LevelStart();
     }
+
+    void OnDestroy()
+    {
+        if (BattleManager.Instance != null)
+        {
+            BattleManager.Instance.OnDefeated -= OnBattleDefeated;
+            BattleManager.Instance.OnWinning -= OnBattleWinning;
+        }
+        if (RestartButton != null)
+            RestartButton.onClick.RemoveListener(Restart);
+        if (AdvanceButton != null)
+            AdvanceButton.onClick.RemoveListener(Advance);
+    }
+
+    void OnBattleDefeated()
+    {
+        if (RestartButton != null)
+            RestartButton.gameObject.SetActive(true);
+    }
+
+    void OnBattleWinning()
+    {
+        if (AdvanceButton != null)
+            AdvanceButton.gameObject.SetActive(true);
+    }
+
     public TutorialDefine GetCurrentLevel()
     {
         TutorialDatabase.Instance.TutorialDictionary.TryGetValue(tutorial.ID, out var levelDefine);

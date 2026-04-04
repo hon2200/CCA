@@ -16,9 +16,9 @@ public class Player : MonoBehaviour
 
     public PlayerUIText playerUIText;
     public PlayerEffectController playerEffectController;
-    //Available Actions是玩家目前已经解锁的行动，在平时就是，所有基础行动+技能允许的行动
+    //Available Actions?????????????????锟斤拷???????????????锟斤拷????锟斤拷?+???????????锟斤拷?
     public List<string> AvailableActions { get; set; }
-    //禁止行动最好是去编译AvailableActions取出。一般是被眩晕之类的导致不能进行的行动
+    //????锟斤拷???????????AvailableActions??????????????????????????锟斤拷??锟斤拷?
     public List<string> ForbiddenActions { get; set; }
     public List<int> possibleKillers { get; set; }
     public Action OnBirth { get; set; }
@@ -78,5 +78,29 @@ public class Player : MonoBehaviour
         possibleKillers = new();
 
         CDmanager = new();
+    }
+
+    public void SetHero(Hero hero)
+    {
+        if (hero == null)
+            return;
+        this.hero = hero;
+        hero.SetSkillOwners(this);
+        status.MaxHP = hero.MaxHP;
+        status.HP.Set(hero.CurrentHP.Value);
+    }
+
+    public void SwitchHero(Hero hero)
+    {
+        if (hero == null)
+            return;
+        if (ReferenceEquals(this.hero, hero))
+            return;
+        Hero oldHero = this.hero;
+        if (oldHero != null)
+        {
+            oldHero.CurrentHP.Set(status.HP.Value);
+        }
+        SetHero(hero);
     }
 }

@@ -17,10 +17,12 @@ class BattleManager: MonoSingleton<BattleManager>
     public TurnAttribute Turn { get; private set; }
     private List<Phase> PhaseList { get; set; }
     private int CurrentPhaseIndex { get; set; }
-    //初始化PhaseList
-    private void Start()
+    private bool initailized = false;
+    private void Initialize()
     {
-        PhaseList = new()
+        if(!initailized)
+        {
+            PhaseList = new()
         {
             new StartPhase(),
             new ActionPhase(),
@@ -28,30 +30,24 @@ class BattleManager: MonoSingleton<BattleManager>
             new ResolutionPhase(),
             new EndPhase()
         };
-        Turn = new();
-        Turn.OnValueChanged += (oldVal, newVal, message) =>
-        {
-            Text.text = "Turn" + Turn.Value.ToString();
-        };
-        OnDefeated += () => isRunning = false;
-        OnWinning += () => isRunning = false;
+            Turn = new();
+            Turn.OnValueChanged += (oldVal, newVal, message) =>
+            {
+                Text.text = "Turn" + Turn.Value.ToString();
+            };
+            OnDefeated += () => isRunning = false;
+            OnWinning += () => isRunning = false;
+        }
+        initailized = true;
     }
     //这个函数好像只给那个按钮用
     public void StartGame()
     {
+        Initialize();
         Turn.Clear();
         PlayerManager.Instance.NextPlayerID = 1;
         PlayerManager.Instance.CreatingPlayers_BasedOnGameSetting_Heroes();
         StartRunPhase();
-    }
-    public void CheckandStartGame()
-    {
-        if (isRunning == false)
-            StartGame();
-    }
-    public void StartBattle()
-    {
-        CheckandStartGame();
     }
     public void StartRunPhase()
     {

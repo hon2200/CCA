@@ -712,7 +712,7 @@ public class OminousFeather : EnemySkill, IDamagingHandler
     protected override void Envoke() { }
     public void OnDamaging(Player attacker, Player victim, int damage, out int finalDamage)
     {
-        finalDamage = 0;
+        finalDamage = damage;
         // TODO: On damage add one 凶 to target; each turn lose n resources and one 凶 (n = 凶 count)
     }
 }

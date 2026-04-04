@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ public class EndPhase : Phase
 {
     public override void OnEnteringPhase()
     {
-        ChangeEmotionAndHonesty();
+        //ChangeEmotionAndHonesty();
     }
     public override void OnExitingPhase()
     {
@@ -27,17 +27,6 @@ public class EndPhase : Phase
         foreach(var player in PlayerManager.Instance.Players)
         {
             player.Value.action.ClearMove("End");
-        }
-    }
-    //改变一下所有人机玩家的
-    public void ChangeEmotionAndHonesty()
-    {
-        foreach(var player in PlayerManager.Instance.Players.Values)
-        {
-            if(player is AIPlayer AI)
-            {
-                AI.TurnBasedChange();
-            }
         }
     }
 }

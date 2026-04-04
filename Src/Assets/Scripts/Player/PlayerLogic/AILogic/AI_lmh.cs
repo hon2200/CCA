@@ -234,7 +234,7 @@ public class AI_lmh
     //Select all none-empty catagories, gives a probabilty, and select one specific. If attack is selected, its target will be randomaized
     public ActionDefine GenerateAction()
     {
-        List<int> Tendency = thisPlayer.Emo.GetTendency();
+        List<int> Tendency = new List<int>() { 3, 5, 1, 1, 0 };
         StringBuilder AIThinkingProcess = new StringBuilder();
 
         // 检查输入有效性
@@ -250,9 +250,6 @@ public class AI_lmh
         {
             AIThinkingProcess.Append(action.ID + "目标 " + action.Target + "  ");
         }
-        AIThinkingProcess.Append("\n" + "我的情绪值是" + thisPlayer.Emo.Value +
-            "\n" + "我现在很" + thisPlayer.Emo.emotionType +
-            "\n" + "我开始思考......");
         // 第一步：为每个行动类别生成所有可用行动
         var availableActionsByCategory = new Dictionary<ActionType, List<ActionDefine>>();
         foreach (ActionType actionType in Enum.GetValues(typeof(ActionType)))

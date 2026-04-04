@@ -486,18 +486,14 @@ public class Judgement : Skill, IActionReplacer, IPhaseEnterHandler
             Envoke(thisPlayer);
         }
     }
-    public void OnPhase(Phase phase)
+    public void OnPhase(Phase phase, Player thisPlayer)
     {
         if (phase is StartPhase && Active)
         {
             Active = false;
-            var human = PlayerManager.Instance?.HumanPlayer;
-            if (human != null)
-            {
-                foreach (var actionID in human.AvailableActions)
-                    if (ActionUtil.IsAction<AttackDefine>(actionID))
-                        human.ForbiddenActions.Add(actionID);
-            }
+            foreach (var actionID in PlayerManager.Instance.HumanPlayer.AvailableActions)
+                if (ActionUtil.IsAction<AttackDefine>(actionID))
+                    PlayerManager.Instance.HumanPlayer.ForbiddenActions.Add(actionID);
         }
     }
 }
@@ -620,10 +616,3 @@ public class Photophobia : Skill, ICombatHandler
 
 }*/
 #endregion
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;

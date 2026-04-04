@@ -124,6 +124,15 @@ public class ResolutionPhase : Phase
         {
             if (player.status.life.Value == LifeStatus.Death && player.playerType == PlayerType.Human)
             {
+                //强制换人：正常换人会在行动阶段进行。
+                foreach(var hero in RougeManager.Instance.rougePlayer.Heroes)
+                {
+                    if(hero.CurrentHP.Value != 0)
+                    {
+                        player.SwitchHero(hero);
+                        break;
+                    }
+                }
                 BattleManager.Instance.OnDefeated.Invoke();
                 foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
                 {
@@ -144,6 +153,7 @@ public class ResolutionPhase : Phase
                 return;
             }
         }
+        PlayerManager.Instance.HumanPlayer.hero.CurrentHP.Set(PlayerManager.Instance.HumanPlayer.status.HP.Value);
         BattleManager.Instance.OnWinning.Invoke();
 
     }
