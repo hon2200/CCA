@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Minion
   m_EditorClassIdentifier: 
   ID: 3
-  image: {fileID: 21300000, guid: 01c221ed266bf284597c6c8d4812fb70, type: 3}
+  image: {fileID: 21300000, guid: b75a06c4a76c29942853de6413d30419, type: 3}

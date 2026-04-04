@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoomSelection : HoverableBase
 {
@@ -29,40 +30,56 @@ public class RoomSelection : HoverableBase
 
     public void EnterRoom()
     {
-        Debug.Log($"EnterRoom: {gameObject.name}");
         switch (room.roomID)
         {
-            case RoomID.Alchemyworkshop:
-            case RoomID.TailorShop:
-            case RoomID.EvilForge:
-            case RoomID.Treasure:
-                Debug.Log("Get Gold");
-                break;
-            case RoomID.AntiqueMarket:
-                Debug.Log("Enter AntiqueMarket");
-                break;
-            case RoomID.TalentMarket:
-                Debug.Log("Enter TalentMarket");
-                break;
-            case RoomID.CardMarket:
-                Debug.Log("Enter CardMarket");
-                break;
-            case RoomID.CurseFusion:
-                Debug.Log("Enter CurseFusion");
-                break;
-            case RoomID.DemonAlter:
-                Debug.Log("Enter DemonAlter");
-                break;
             case RoomID.Tavern:
                 Debug.Log("Enter Tavern");
+                RougeManager.SetPendingRoom(RoomID.Tavern);
+                if (WorkingOn.Instance != null)
+                    WorkingOn.Instance.LoadScene("Free Game");
+                else
+                    SceneManager.LoadScene("Free Game");
+                break;
+            case RoomID.SoulFountain:
+                Debug.Log("Enter SoulFountain");
+                RougeManager.SetPendingRoom(RoomID.SoulFountain);
+                if (WorkingOn.Instance != null)
+                    WorkingOn.Instance.LoadScene("Free Game");
+                else
+                    SceneManager.LoadScene("Free Game");
                 break;
             case RoomID.SacredCemetery:
                 Debug.Log("Enter SacredCemetery");
+                RougeManager.SetPendingRoom(RoomID.SacredCemetery);
+                if (WorkingOn.Instance != null)
+                    WorkingOn.Instance.LoadScene("Free Game");
+                else
+                    SceneManager.LoadScene("Free Game");
                 break;
             case RoomID.Minion:
             case RoomID.Elite:
             case RoomID.Boss:
-                Debug.Log("Enter Fight");
+                string fightType = room.roomID.ToString();
+                var db = RougeFightsDatabase.Instance;
+                if (db == null)
+                {
+                    Debug.LogError("[RoomSelection] RougeFightsDatabase.Instance is null.");
+                    return;
+                }
+
+                var pickedFight = db.PickRandomFightByType(fightType);
+                if (pickedFight == null)
+                {
+                    Debug.LogError($"[RoomSelection] No fight found for type: {fightType}");
+                    return;
+                }
+                RougeManager.SetPendingFight(pickedFight.ID);
+                RougeManager.SetPendingRoom(room.roomID);
+                Debug.Log($"Enter Fight queued: type={fightType}, id={pickedFight.ID}. Loading Free Game.");
+                if (WorkingOn.Instance != null)
+                    WorkingOn.Instance.LoadScene("Free Game");
+                else
+                    SceneManager.LoadScene("Free Game");
                 break;
         }
 

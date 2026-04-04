@@ -198,6 +198,69 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             NextPlayerID = _players.Keys.Max() + 1;
         AlivePlayerNumber = _players.Count;
     }
+
+    /// <summary>
+    /// Build a fresh combat roster for a roguelike fight: 1 human from the selected run hero (fallback to blank),
+    /// plus all enemies listed in the picked fight definition.
+    /// </summary>
+    public bool CreatePlayersForRougeFight(RougePlayer rougePlayer, RougeFightDefine pickedFight)
+    {
+        if (pickedFight == null)
+        {
+            Debug.LogError("[PlayerManager] CreatePlayersForRougeFight failed: pickedFight is null.");
+            return false;
+        }
+
+        if (HeroDataBase.Instance == null)
+        {
+            Debug.LogError("[PlayerManager] HeroDataBase.Instance is null.");
+            return false;
+        }
+
+        ClearAll();
+        NextPlayerID = 1;
+
+        HeroDefine humanHeroDefine = null;
+        if (rougePlayer != null && rougePlayer.Heroes != null && rougePlayer.Heroes.Count > 0 && rougePlayer.Heroes[0] != null)
+        {
+            HeroDataBase.Instance.HeroDictionary.TryGetValue(rougePlayer.Heroes[0].ID, out humanHeroDefine);
+        }
+
+        // Fallback "blank" hero when run has no hero or lookup fails.
+        if (humanHeroDefine == null)
+        {
+            humanHeroDefine = new HeroDefine("Blank", 20)
+            {
+                Name = "Blank",
+                Description = "Fallback hero for roguelike fight setup.",
+                SkillIDList = new List<string>(),
+            };
+        }
+
+        AddPlayer(isFriend: true, isHuman: true, humanHeroDefine);
+
+        if (pickedFight.Enemies != null)
+        {
+            foreach (var enemyId in pickedFight.Enemies)
+            {
+                if (string.IsNullOrEmpty(enemyId))
+                    continue;
+
+                if (!HeroDataBase.Instance.EnemyDictionary.TryGetValue(enemyId, out var enemyDefine) || enemyDefine == null)
+                {
+                    Debug.LogWarning($"[PlayerManager] Enemy id not found in EnemyDictionary: {enemyId}");
+                    continue;
+                }
+
+                AddPlayer(isFriend: false, isHuman: false, enemyDefine);
+            }
+        }
+
+        AlivePlayerNumber = _players.Count;
+        if (_players.Count > 0)
+            NextPlayerID = _players.Keys.Max() + 1;
+        return _players.Count > 0;
+    }
     #endregion
     #region Spacing Things
     public bool EnemyReachMaxNumber()

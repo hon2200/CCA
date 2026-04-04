@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55bac00433625f43b8c58a9f7268da5, type: 3}
   m_Name: CursedFusion
   m_EditorClassIdentifier: 
-  ID: 41
+  ID: 17
   image: {fileID: 21300000, guid: d2eb80b4d5f3b544e94238f27a217206, type: 3}

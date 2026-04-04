@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55bac00433625f43b8c58a9f7268da5, type: 3}
   m_Name: EvilForge
   m_EditorClassIdentifier: 
-  ID: 40
+  ID: 16
   image: {fileID: 21300000, guid: 3645915cd10ef5d43871261f61fb74d5, type: 3}

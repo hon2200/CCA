@@ -49,6 +49,10 @@ class BattleManager: MonoSingleton<BattleManager>
         if (isRunning == false)
             StartGame();
     }
+    public void StartBattle()
+    {
+        CheckandStartGame();
+    }
     public void StartRunPhase()
     {
         CurrentPhaseIndex = 0;

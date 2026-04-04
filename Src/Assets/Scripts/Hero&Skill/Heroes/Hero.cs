@@ -4,12 +4,15 @@ using System.Collections.Generic;
 public class Hero
 {
     public string ID { get; set; }
+    public int MaxHP { get; set; }
+    public HPAttribute CurrentHP { get; set; }
     public List<SkillDefine> skills;
 
     public Hero(Player thisPlayer, HeroDefine heroDefine)
     {
         ID = heroDefine.ID;
         skills = new List<SkillDefine>();
+        
 
         // 添加英雄技能
         if (HeroDataBase.Instance.HeroDictionary.TryGetValue(heroDefine.ID, out var heroData))
