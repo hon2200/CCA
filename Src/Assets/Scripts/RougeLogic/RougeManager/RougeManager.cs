@@ -23,7 +23,7 @@ public partial class RougeManager : MonoSingleton<RougeManager>
     {
         rougePlayer = new();
         rougePlayer.InitializeWithTwoWukongHeroes();
-        RougePlayerUI.Instance.Initialize();
+        RougePlayerUI.Instance?.Initialize();
     }
 }
 
