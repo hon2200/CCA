@@ -700,18 +700,20 @@ public class Ferocity : EnemySkill, ICombatHandler
 
 public class AgileApe : EnemySkill, IPhaseEnterHandler
 {
+    public bool isUsed = false;
     public AgileApe() : base("Agile Ape") { }
     protected override void Envoke() { }
     public void OnPhase(Phase phase)
     {
-        if (phase is StartPhase)
+        if (phase is StartPhase && !isUsed)
         {
-            Owner.status.buffs.Apply(new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second));
+            Owner.status.buffs.Apply(new DamagingOperator(2, Owner, BuffOperator.StepSlot.Second));
+            isUsed = true;
         }
     }
     public override void OnDisabled()
     {
-        Owner.status.buffs.Apply(new DamagingOperator(1 / 3f, Owner, BuffOperator.StepSlot.Second));
+        Owner.status.buffs.Apply(new DamagingOperator(1 / 2f, Owner, BuffOperator.StepSlot.Second));
     }
 }
 

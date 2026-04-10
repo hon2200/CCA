@@ -18,4 +18,5 @@ public class EventOptionButtonUI : MonoSingleton<EventOptionButtonUI>
     {
         Title.text = title;
     }
+
 }
