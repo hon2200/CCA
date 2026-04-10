@@ -16,14 +16,32 @@ using UnityEngine.SceneManagement;
 
 /// </summary>
 
-public partial class RougeManager : MonoSingleton<RougeManager>
+public class RougeManager : MonoSingleton<RougeManager>
 {
     public RougePlayer rougePlayer;
+    public Room CurrentRoom { get; private set; }
+
     void Start()
     {
         rougePlayer = new();
         rougePlayer.InitializeWithTwoWukongHeroes();
         RougePlayerUI.Instance.Initialize();
+    }
+
+    /// <summary>
+    /// Returns true if target can be selected from current room:
+    /// target must be on next floor and linked by CurrentRoom.NextNodes.
+    /// </summary>
+    public bool CanSelectRoom(Room targetRoom)
+    {
+        return CurrentRoom.NextNodes != null && CurrentRoom.NextNodes.Contains(targetRoom);
+    }
+
+    public void SetCurrentRoom(Room room)
+    {
+        if (room == null)
+            return;
+        CurrentRoom = room;
     }
 }
 

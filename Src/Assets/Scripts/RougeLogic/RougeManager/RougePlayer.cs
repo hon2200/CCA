@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RougePlayer
 {
-    public int coins;
+    public GoldAttribute gold;
     public ObservableList<RelicDefine> Relics;
-    public List<Hero> Heroes;
+    public ObservableList<Hero> Heroes;
     public List<Potion> Potions;
     public int PotionMax;
 
@@ -80,10 +80,11 @@ public class RougePlayer
     public void Init()
     {
         if (Relics == null) Relics = new ObservableList<RelicDefine>();
-        if (Heroes == null) Heroes = new List<Hero>();
+        if (Heroes == null) Heroes = new ();
         if (Potions == null) Potions = new List<Potion>();
         PotionMax = 3;
-        coins = 0;
+        gold = new();
+        gold.SetGold(100);
         availableAction = null;
     }
 
@@ -146,12 +147,6 @@ public class RougePlayer
             return null;
         }
 
-        if (cost > 0 && coins < cost)
-        {
-            Debug.LogWarning("RecruitHero failed: not enough money.");
-            return null;
-        }
-
         if (!allowDuplicate && HasHero(heroDefine.ID))
         {
             Debug.LogWarning($"RecruitHero skipped: already has hero {heroDefine.ID}.");
@@ -159,57 +154,27 @@ public class RougePlayer
         }
 
         if (Heroes == null)
-            Heroes = new List<Hero>();
-
-        if (cost > 0)
-            coins -= cost;
+            Heroes = new ();
 
         // Hero constructor currently does not require a valid Player reference for meta usage.
         Hero newHero = new Hero(null, heroDefine);
-        Heroes.Add(newHero);
+        Heroes.Add(newHero, "RecruitHero");
         return newHero;
     }
 
     /// <summary>
     /// Dismiss a hero by reference, optionally granting a refund.
     /// </summary>
-    public bool DismissHero(Hero hero, int refund = 0)
+    public bool DismissHero(Hero hero)
     {
         if (Heroes == null || hero == null)
             return false;
 
-        bool removed = Heroes.Remove(hero);
+        bool removed = Heroes.Remove(hero, "DismissHero");
         if (!removed)
             return false;
 
-        if (refund > 0)
-            coins += refund;
-
         return true;
-    }
-
-    /// <summary>
-    /// Dismiss a hero by ID, optionally granting a refund.
-    /// </summary>
-    public bool DismissHero(string heroID, int refund = 0)
-    {
-        if (Heroes == null || string.IsNullOrEmpty(heroID))
-            return false;
-
-        Hero target = null;
-        foreach (var hero in Heroes)
-        {
-            if (hero != null && hero.ID == heroID)
-            {
-                target = hero;
-                break;
-            }
-        }
-
-        if (target == null)
-            return false;
-
-        return DismissHero(target, refund);
     }
 
     #endregion

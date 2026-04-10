@@ -1,0 +1,58 @@
+Dict 内容 (Count: 5)
+====================================
+Key: Tavern
+
+  ID:     Tavern
+  Name:     酒馆
+  Options: 
+    List`1 (Count: 3)
+      [0]:         Hero1
+      [1]:         Hero1
+      [2]:         Hero3
+  Description:     选择英雄招募
+  NextEvent:     null
+------------------------------------
+Key: SoulFountain
+
+  ID:     SoulFountain
+  Name:     灵魂之泉
+  Options: 
+    List`1 (Count: 3)
+      [0]:         Card1
+      [1]:         Card2
+      [2]:         Card3
+  Description:     选择遗物
+  NextEvent:     null
+------------------------------------
+Key: SacredCemetery
+
+  ID:     SacredCemetery
+  Name:     神圣墓地
+  Options: 
+    List`1 (Count: 3)
+      [0]:         Relic1
+      [1]:         Relic2
+      [2]:         Relic3
+  Description:     选择卡牌
+  NextEvent:     null
+------------------------------------
+Key: Treasure
+
+  ID:     Treasure
+  Name:     宝箱
+  Options: 
+    List`1 (Count: 1)
+      [0]:         宝箱
+  Description:     宝藏！
+  NextEvent:     null
+------------------------------------
+Key: CurseFusion
+
+  ID:     CurseFusion
+  Name:     诅咒融合
+  Options: 
+    List`1 (Count: 1)
+      [0]:         开始融合
+  Description:     融合你的英雄
+  NextEvent:     null
+------------------------------------

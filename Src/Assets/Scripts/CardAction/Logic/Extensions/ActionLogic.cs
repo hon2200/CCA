@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -147,8 +147,8 @@ public static class SupplyLogic
         {
             //理论上这里也可以把resource改成一个list<int>，但是考虑到resource里面还有swordinCD，所以就不改了
             receiver.status.HP.Heal(supply.SupplyNumber[0]);
-            receiver.status.resources.Bullet.Get(receiver,supply.SupplyNumber[1]);
-            receiver.status.resources.Sword.Get(receiver,supply.SupplyNumber[2]);
+            receiver.status.resources.Bullet.Get(supply.SupplyNumber[1]);
+            receiver.status.resources.Sword.Get(supply.SupplyNumber[2]);
         }    
         else
         {

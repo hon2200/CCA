@@ -225,7 +225,7 @@ public class MorticianLicense : RelicDefine, IBattleEndHandler, IDeathHandler
     }
     public void OnBattleEnd(Player player = null)
     {
-        RougeManager.Instance.rougePlayer.coins += counts[0];
+        RougeManager.Instance.rougePlayer.gold.GetGold(counts[0]);
         counts[0] = 0;
     }
 }

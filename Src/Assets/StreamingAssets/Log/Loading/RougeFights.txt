@@ -157,12 +157,11 @@ Key: 1-16
 
   ID:     1-16
   Enemies: 
-    List`1 (Count: 5)
+    List`1 (Count: 4)
       [0]:         Bandit Leader
       [1]:         Clumsy Gunner
       [2]:         Clumsy Gunner
       [3]:         Mountain Bandit Cluster
-      [4]:         Mountain Bandit Cluster
   GoldReward:     100
   Type:     Elite
 ------------------------------------
@@ -200,12 +199,11 @@ Key: 1-20
 
   ID:     1-20
   Enemies: 
-    List`1 (Count: 5)
+    List`1 (Count: 4)
       [0]:         Formless Water
       [1]:         Formless Water
       [2]:         Formless Water
       [3]:         Formless Water
-      [4]:         Formless Water
   GoldReward:     0
   Type:     Boss
 ------------------------------------

@@ -3,7 +3,8 @@
         "ID": "Blank",
         "Name": "白板",
         "MaxHP": 5,
-        "SkillIDList": []
+        "SkillIDList": [],
+        "Enable": false
     },
     "Wukong": {
         "ID": "Wukong",
@@ -12,7 +13,8 @@
         "MaxHP": 12,
         "SkillIDList": [
             "Mountain Crusher"
-        ]
+        ],
+        "Enable": true
     },
     "Zhongkui": {
         "ID": "Zhongkui",
@@ -20,7 +22,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Deathrattle"
-        ]
+        ],
+        "Enable": false
     },
     "Huaxiong": {
         "ID": "Huaxiong",
@@ -28,7 +31,8 @@
         "MaxHP": 40,
         "SkillIDList": [
             "Courage"
-        ]
+        ],
+        "Enable": true
     },
     "Lvbu": {
         "ID": "Lvbu",
@@ -37,7 +41,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Peerless"
-        ]
+        ],
+        "Enable": true
     },
     "Diaochan": {
         "ID": "Diaochan",
@@ -46,7 +51,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Fracture Cascade"
-        ]
+        ],
+        "Enable": false
     },
     "Licunxu": {
         "ID": "Licunxu",
@@ -57,7 +63,8 @@
             "Triple Tribute Oath",
             "Decade's Dominance",
             "Thespian's Curse"
-        ]
+        ],
+        "Enable": true
     },
     "Houyi": {
         "ID": "Houyi",
@@ -66,7 +73,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Celestial Shatter"
-        ]
+        ],
+        "Enable": true
     },
     "Bianque": {
         "ID": "Bianque",
@@ -75,7 +83,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Terminal Affliction"
-        ]
+        ],
+        "Enable": false
     },
     "Arthur": {
         "ID": "Arthur",
@@ -85,7 +94,8 @@
         "SkillIDList": [
             "Royal Knight",
             "EXcalibur"
-        ]
+        ],
+        "Enable": true
     },
     "Daji": {
         "ID": "Daji",
@@ -94,7 +104,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Bewitching Hex"
-        ]
+        ],
+        "Enable": true
     },
     "Dianwei": {
         "ID": "Dianwei",
@@ -103,7 +114,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Dual Onslaught"
-        ]
+        ],
+        "Enable": false
     },
     "TheSepulchralGuardian": {
         "ID": "TheSepulchralGuardian",
@@ -112,7 +124,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Posthumous Retribution"
-        ]
+        ],
+        "Enable": false
     },
     "KingLeonidasI": {
         "ID": "KingLeonidasI",
@@ -121,7 +134,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Spartan Aegis"
-        ]
+        ],
+        "Enable": false
     },
     "Zhugeliang": {
         "ID": "Zhugeliang",
@@ -130,7 +144,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Volley Cycle"
-        ]
+        ],
+        "Enable": false
     },
     "Chengyaojin": {
         "ID": "Chengyaojin",
@@ -139,7 +154,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Threshold Fury"
-        ]
+        ],
+        "Enable": false
     },
     "Maxim": {
         "ID": "Maxim",
@@ -148,7 +164,8 @@
         "MaxHP": 12,
         "SkillIDList": [
             "Maxim Machine Gun"
-        ]
+        ],
+        "Enable": false
     },
     "Yingzheng": {
         "ID": "Yingzheng",
@@ -157,7 +174,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Blade Dominator"
-        ]
+        ],
+        "Enable": true
     },
     "Liru": {
         "ID": "Liru",
@@ -167,7 +185,8 @@
         "SkillIDList": [
             "Urban Inferno",
             "Counter Trap"
-        ]
+        ],
+        "Enable": false
     },
     "Zhuangzhou": {
         "ID": "Zhuangzhou",
@@ -176,7 +195,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Transcendence"
-        ]
+        ],
+        "Enable": false
     },
     "Zhouyu": {
         "ID": "Zhouyu",
@@ -185,7 +205,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Chain Deceit"
-        ]
+        ],
+        "Enable": false
     },
     "Xiaoqiao": {
         "ID": "Xiaoqiao",
@@ -194,7 +215,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Pandora's Torrent"
-        ]
+        ],
+        "Enable": false
     },
     "Lanlingwang": {
         "ID": "Lanlingwang",
@@ -203,7 +225,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Silent Fury"
-        ]
+        ],
+        "Enable": false
     },
     "Machao": {
         "ID": "Machao",
@@ -213,7 +236,8 @@
         "SkillIDList": [
             "Ferrum Charge",
             "Requital Blitz"
-        ]
+        ],
+        "Enable": false
     },
     "Jiangwei": {
         "ID": "Jiangwei",
@@ -223,7 +247,8 @@
         "SkillIDList": [
             "Strategic Gambit",
             "Collaborating Last Stand"
-        ]
+        ],
+        "Enable": false
     },
     "Lichunfeng": {
         "ID": "Lichunfeng",
@@ -238,7 +263,8 @@
             "Pacify Right",
             "War Left",
             "Divine Chastisement"
-        ]
+        ],
+        "Enable": false
     },
     "Gilgamesh": {
         "ID": "Gilgamesh",
@@ -248,7 +274,8 @@
         "SkillIDList": [
             "Golden Vault",
             "Divine Pride"
-        ]
+        ],
+        "Enable": false
     },
     "Gawain": {
         "ID": "Gawain",
@@ -257,7 +284,8 @@
         "MaxHP": 18,
         "SkillIDList": [
             "Solar Surge"
-        ]
+        ],
+        "Enable": false
     },
     "Heiwuchang": {
         "ID": "Heiwuchang",
@@ -266,7 +294,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Plague Reckoning"
-        ]
+        ],
+        "Enable": false
     },
     "Baiwuchang": {
         "ID": "Baiwuchang",
@@ -276,7 +305,8 @@
         "SkillIDList": [
             "Spirit Shackle",
             "Binding Passage"
-        ]
+        ],
+        "Enable": false
     },
     "Panguan": {
         "ID": "Panguan",
@@ -286,7 +316,8 @@
         "SkillIDList": [
             "Decree Approval",
             "Doom Edict"
-        ]
+        ],
+        "Enable": false
     },
     "Mengpo": {
         "ID": "Mengpo",
@@ -296,7 +327,8 @@
         "SkillIDList": [
             "Soul Reset",
             "Aftertaste"
-        ]
+        ],
+        "Enable": false
     },
     "Qinguangwang": {
         "ID": "Qinguangwang",
@@ -305,7 +337,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Royal Barricade"
-        ]
+        ],
+        "Enable": false
     },
     "Yuantiangang": {
         "ID": "Yuantiangang",
@@ -315,7 +348,8 @@
         "SkillIDList": [
             "Stellar Allocation",
             "Revolving Sky"
-        ]
+        ],
+        "Enable": false
     },
     "Lancelot": {
         "ID": "Lancelot",
@@ -325,7 +359,8 @@
         "SkillIDList": [
             "Tidal Knight",
             "Unbroken Loot"
-        ]
+        ],
+        "Enable": false
     },
     "Mordred": {
         "ID": "Mordred",
@@ -335,7 +370,8 @@
         "SkillIDList": [
             "Premeditated Usurpation",
             "Treason's Toll"
-        ]
+        ],
+        "Enable": false
     },
     "Spider": {
         "ID": "Spider",
@@ -346,7 +382,8 @@
             "SpitSilk",
             "SpinWeb",
             "LayEggs"
-        ]
+        ],
+        "Enable": false
     },
     "Huamulan": {
         "ID": "Huamulan",
@@ -357,7 +394,8 @@
             "Scribe's Mart",
             "Filial Campaign",
             "Bastion Sacrifice"
-        ]
+        ],
+        "Enable": false
     },
     "Wuzeitan": {
         "ID": "Wuzeitan",
@@ -368,7 +406,8 @@
             "Vindictive Script",
             "Death Decree",
             "Retribution of Empress"
-        ]
+        ],
+        "Enable": false
     },
     "Guiguzi": {
         "ID": "Guiguzi",
@@ -378,7 +417,8 @@
         "SkillIDList": [
             "Fate Swap",
             "Prudent Ward"
-        ]
+        ],
+        "Enable": false
     },
     "Houqing": {
         "ID": "Houqing",
@@ -390,7 +430,8 @@
             "Weeping Thorns",
             "Sanguine Ruin",
             "Bloody Substitution"
-        ]
+        ],
+        "Enable": false
     },
     "Yinggou": {
         "ID": "Yinggou",
@@ -399,7 +440,8 @@
         "MaxHP": 18,
         "SkillIDList": [
             "Cadaverous Barrier"
-        ]
+        ],
+        "Enable": false
     },
     "Hanba": {
         "ID": "Hanba",
@@ -409,7 +451,8 @@
         "SkillIDList": [
             "Scorched Dominion",
             "Famine Brand"
-        ]
+        ],
+        "Enable": false
     },
     "Jiangchen": {
         "ID": "Jiangchen",
@@ -419,7 +462,8 @@
         "SkillIDList": [
             "Eternal Specter",
             "Death's Crescendo"
-        ]
+        ],
+        "Enable": false
     },
     "WolfKing": {
         "ID": "WolfKing",
@@ -428,7 +472,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Spectral Pack"
-        ]
+        ],
+        "Enable": false
     },
     "Liyuanba": {
         "ID": "Liyuanba",
@@ -437,7 +482,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Sacrificial Fury"
-        ]
+        ],
+        "Enable": false
     },
     "Taiyizhenren": {
         "ID": "Taiyizhenren",
@@ -446,7 +492,8 @@
         "MaxHP": 12,
         "SkillIDList": [
             "Alchemic Synthesis"
-        ]
+        ],
+        "Enable": false
     },
     "Sunce": {
         "ID": "Sunce",
@@ -455,7 +502,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Overdrive Rampage"
-        ]
+        ],
+        "Enable": false
     },
     "ZhuBajie": {
         "ID": "ZhuBajie",
@@ -464,7 +512,8 @@
         "MaxHP": 40,
         "SkillIDList": [
             "Hog-Tied"
-        ]
+        ],
+        "Enable": false
     },
     "ShaSeng": {
         "ID": "ShaSeng",
@@ -473,7 +522,8 @@
         "MaxHP": 50,
         "SkillIDList": [
             "Void of Sustenance"
-        ]
+        ],
+        "Enable": false
     },
     "Tangseng": {
         "ID": "Tangseng",
@@ -482,7 +532,8 @@
         "MaxHP": 18,
         "SkillIDList": [
             "MonkProtection"
-        ]
+        ],
+        "Enable": false
     },
     "LiuBei": {
         "ID": "LiuBei",
@@ -491,7 +542,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Fertile Mercy"
-        ]
+        ],
+        "Enable": false
     },
     "SunQuan": {
         "ID": "SunQuan",
@@ -500,7 +552,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Ease Sanctuary"
-        ]
+        ],
+        "Enable": false
     },
     "HanXin": {
         "ID": "HanXin",
@@ -509,7 +562,8 @@
         "MaxHP": 12,
         "SkillIDList": [
             "Mass Mustering Master"
-        ]
+        ],
+        "Enable": false
     },
     "XiangYu": {
         "ID": "XiangYu",
@@ -518,7 +572,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Dominion Fervor"
-        ]
+        ],
+        "Enable": false
     },
     "LiuBang": {
         "ID": "LiuBang",
@@ -527,7 +582,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Royal Gambit"
-        ]
+        ],
+        "Enable": false
     },
     "SuQin": {
         "ID": "SuQin",
@@ -536,7 +592,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "VerticalAlliance"
-        ]
+        ],
+        "Enable": false
     },
     "ZhangYi": {
         "ID": "ZhangYi",
@@ -545,7 +602,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "HorizontalAlliance"
-        ]
+        ],
+        "Enable": false
     },
     "BillOnTheRun": {
         "ID": "BillOnTheRun",
@@ -554,7 +612,8 @@
         "MaxHP": 40,
         "SkillIDList": [
             "Daring Bounty"
-        ]
+        ],
+        "Enable": false
     },
     "CunningJack": {
         "ID": "CunningJack",
@@ -563,7 +622,8 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Powder Keg"
-        ]
+        ],
+        "Enable": false
     },
     "RedHandedRory": {
         "ID": "RedHandedRory",
@@ -572,7 +632,8 @@
         "MaxHP": 20,
         "SkillIDList": [
             "Ruthless Subsidization"
-        ]
+        ],
+        "Enable": false
     },
     "HenryTheFarmer": {
         "ID": "HenryTheFarmer",
@@ -582,7 +643,8 @@
         "SkillIDList": [
             "Gathering FoodI",
             "Gathering FoodII"
-        ]
+        ],
+        "Enable": false
     },
     "CalebTheThunderCultist": {
         "ID": "CalebTheThunderCultist",
@@ -592,7 +654,8 @@
         "SkillIDList": [
             "Thunder Command",
             "Heaven's Mandate"
-        ]
+        ],
+        "Enable": false
     },
     "TheGuardian": {
         "ID": "TheGuardian",
@@ -602,7 +665,8 @@
         "SkillIDList": [
             "Aegis Conversion",
             "Infinite Aegis"
-        ]
+        ],
+        "Enable": false
     },
     "TheUndead": {
         "ID": "TheUndead",
@@ -612,7 +676,8 @@
         "SkillIDList": [
             "Zombie lives forever",
             "Cannibalism"
-        ]
+        ],
+        "Enable": false
     },
     "TomTheCat": {
         "ID": "TomTheCat",
@@ -625,7 +690,8 @@
             "Rocket Specialist",
             "Blazing Fury",
             "Relentless Pursuit"
-        ]
+        ],
+        "Enable": false
     },
     "SorenTheSwordman": {
         "ID": "SorenTheSwordman",
@@ -636,7 +702,8 @@
             "Multistrike I",
             "Multistrike II",
             "Multistrike III"
-        ]
+        ],
+        "Enable": false
     },
     "SorenTheSwordMaster": {
         "ID": "SorenTheSwordMaster",
@@ -647,7 +714,8 @@
             "Swift",
             "Way of the Sword",
             "Multistrike"
-        ]
+        ],
+        "Enable": false
     },
     "LeoTheCowboy": {
         "ID": "LeoTheCowboy",
@@ -657,7 +725,8 @@
         "SkillIDList": [
             "Twin Pistols",
             "Marksmanship"
-        ]
+        ],
+        "Enable": false
     },
     "TheIronBlood": {
         "ID": "TheIronBlood",
@@ -666,7 +735,8 @@
         "MaxHP": 6,
         "SkillIDList": [
             "IronBlood"
-        ]
+        ],
+        "Enable": false
     },
     "Frankenstein": {
         "ID": "Frankenstein",
@@ -675,6 +745,7 @@
         "MaxHP": 15,
         "SkillIDList": [
             "Rampage"
-        ]
+        ],
+        "Enable": false
     }
 }

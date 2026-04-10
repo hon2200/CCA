@@ -234,17 +234,21 @@ public class AI_lmh
     //Select all none-empty catagories, gives a probabilty, and select one specific. If attack is selected, its target will be randomaized
     public ActionDefine GenerateAction()
     {
-        List<int> Tendency = new List<int>() { 3, 5, 1, 1, 0 };
+        if (thisPlayer.Tendency == null || thisPlayer.Tendency.Count != 5)
+        {
+            thisPlayer.Tendency = new List<float>() { 3f, 5f, 1f, 1f, 0f };
+        }
+        List<float> tendency = thisPlayer.Tendency;
         StringBuilder AIThinkingProcess = new StringBuilder();
 
         // 检查输入有效性
-        if (Tendency == null || Tendency.Count != 5)
+        if (tendency == null || tendency.Count != 5)
         {
             Debug.LogError("Tendency列表必须包含5个权重值");
             return null;
         }
         AIThinkingProcess.Append("\n\n" + "现在是第" + BattleManager.Instance.Turn.Value + "回合");
-        AIThinkingProcess.Append("\n" + thisPlayer.ID_inGame + "玩家我的行为倾向现在是" + string.Join(" ,", Tendency));
+        AIThinkingProcess.Append("\n" + thisPlayer.ID_inGame + "玩家我的行为倾向现在是" + string.Join(" ,", tendency));
         AIThinkingProcess.Append("\n" + "我已经做了以下行动：" + "\n");
         foreach(var action in thisPlayer.action)
         {
@@ -266,13 +270,20 @@ public class AI_lmh
             }
         }
         // 第二步：根据权重选择类别
-        ActionType selectedActionType = SelectCategoryByWeight(Tendency, availableActionsByCategory);
+        ActionType selectedActionType = SelectCategoryByWeight(tendency, availableActionsByCategory);
 
         if (selectedActionType == ActionType.Origin) // 假设有None作为默认值
         {
             AIThinkingProcess.Append("\n所有类别都没有可用行动！");
             // MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
             return null;
+        }
+
+        // 选中某个类别后，对应倾向减半，避免连续重复同一类行为
+        int tendencyIndex = (int)selectedActionType - 1;
+        if (tendencyIndex >= 0 && tendencyIndex < tendency.Count)
+        {
+            tendency[tendencyIndex] *= 0.5f;
         }
 
         // 第三步：从选定的类别中通过权重的方式选择一个行动
@@ -297,10 +308,10 @@ public class AI_lmh
         // MyLog.WriteToFile("Assets/Log/InGame/AIThinking.txt", AIThinkingProcess, false);
         return mySelection;
     }
-    private ActionType SelectCategoryByWeight(List<int> tendency, Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory)
+    private ActionType SelectCategoryByWeight(List<float> tendency, Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory)
     {
         // 创建带权重和可用行动数量的类别列表
-        List<(ActionType actionType, int weight, int availableCount)> weightedCategories = new List<(ActionType, int, int)>();
+        List<(ActionType actionType, float weight, int availableCount)> weightedCategories = new List<(ActionType, float, int)>();
 
         foreach (ActionType actionType in Enum.GetValues(typeof(ActionType)))
         {

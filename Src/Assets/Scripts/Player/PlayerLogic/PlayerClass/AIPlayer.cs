@@ -13,6 +13,8 @@ public class AIPlayer : Player
     private Dictionary<ActionType, List<ActionDefine>> availableActionsByCategory { get; set; }
     //告诉玩家的行动类别
     public List<string> preferedAction { get; set; }
+    // 行动类别倾向顺序: Attack, Defend, Counter, Supply, Special
+    public List<float> Tendency { get; set; }
     //创造英雄模式中的AI
     public void Initialize(int ID_inGame, HeroDefine heroDefine, TutorialDefine tutorialDefine = null)
     {
@@ -22,6 +24,7 @@ public class AIPlayer : Player
             availableAction = tutorialDefine.GetAllUnlockedActions().ToList();
         }
         preferedAction = new();
+        Tendency = new List<float>() { 3f, 5f, 1f, 1f, 0f };
         base.Initialize(ID_inGame, heroDefine.Name, PlayerType.AI, heroDefine.MaxHP, 
             null, availableAction, heroDefine.ID, heroDefine.SkillIDList);
         OnBirth?.Invoke();

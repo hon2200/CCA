@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +15,34 @@ public class Room : MonoBehaviour
     public int floor;
     public RoomID roomID { get; private set; }
     public List<Room> NextNodes;
+    [Header("Selectable Pulse")]
+    [SerializeField] private float selectablePulseAmplitude = 0.3f;
+    [SerializeField] private float selectablePulseSpeed = 3.5f;
+
+    private bool isSelectableVisual;
+    private Vector3 baseScale;
+    private float selectablePulsePhase;
+
+    private void Awake()
+    {
+        baseScale = transform.localScale;
+    }
+
+    private void Update()
+    {
+        if (RougeManager.Instance.CurrentRoom.NextNodes.Contains(this))
+        {
+            float pulse = 1f + Mathf.Sin(Time.time * selectablePulseSpeed + selectablePulsePhase) * selectablePulseAmplitude;
+            transform.localScale = baseScale * pulse;
+        }
+        else
+            transform.localScale = baseScale;
+    }
     public void InitializeRoom()
     {
+        // Each room gets a different sine phase so selectable nodes don't pulse in sync.
+        selectablePulsePhase = (x * 2.173f + y * 3.419f + floor * 0.812f);
+
         transform.localPosition = new Vector3(x, y);
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         RoomLiberary.Instance.RoomDictionary.TryGetValue(roomID, out var roomTemplete);
@@ -35,7 +61,16 @@ public class Room : MonoBehaviour
             MapDesigner.Instance.RoomProbabilityDic[roomID] /= 5;
         }
     }
-    
+
+    /// <summary>
+    /// Toggle selectable visual feedback. When true, room continuously scales up/down.
+    /// </summary>
+    public void SetSelectableVisual(bool selectable)
+    {
+        isSelectableVisual = selectable;
+        if (!isSelectableVisual)
+            transform.localScale = baseScale;
+    }
 }
 
 

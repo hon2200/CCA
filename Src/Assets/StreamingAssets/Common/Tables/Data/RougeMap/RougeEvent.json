@@ -1,0 +1,48 @@
+{
+    "Tavern": {
+        "ID": "Tavern",
+        "Name": "酒馆",
+        "Options": [
+            "Hero1",
+            "Hero1",
+            "Hero3"
+        ],
+        "Description": "选择英雄招募"
+    },
+    "SoulFountain": {
+        "ID": "SoulFountain",
+        "Name": "灵魂之泉",
+        "Options": [
+            "Card1",
+            "Card2",
+            "Card3"
+        ],
+        "Description": "选择遗物"
+    },
+    "SacredCemetery": {
+        "ID": "SacredCemetery",
+        "Name": "神圣墓地",
+        "Options": [
+            "Relic1",
+            "Relic2",
+            "Relic3"
+        ],
+        "Description": "选择卡牌"
+    },
+    "Treasure": {
+        "ID": "Treasure",
+        "Name": "宝箱",
+        "Options": [
+            "宝箱"
+        ],
+        "Description": "宝藏！"
+    },
+    "CurseFusion": {
+        "ID": "CurseFusion",
+        "Name": "诅咒融合",
+        "Options": [
+            "开始融合"
+        ],
+        "Description": "融合你的英雄"
+    }
+}

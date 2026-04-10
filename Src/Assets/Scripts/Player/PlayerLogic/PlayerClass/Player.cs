@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
         if (InitialResource == null)
             InitialResource = new() { 0, 0, 0 };
         this.status = new(MaxHP, InitialResource);
+        this.status.resources.Bullet.Owner = this;
+        this.status.resources.Sword.Owner = this;
         this.action = new();
         this.playerType = playerType;
         this.status.buffs.BuffOwner = this;
@@ -88,6 +90,7 @@ public class Player : MonoBehaviour
         hero.SetSkillOwners(this);
         status.MaxHP = hero.MaxHP;
         status.HP.Set(hero.CurrentHP.Value);
+        playerUIText?.UpdateSkillText();
     }
 
     public void SwitchHero(Hero hero)

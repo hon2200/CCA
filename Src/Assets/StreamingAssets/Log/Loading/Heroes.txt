@@ -8,6 +8,7 @@ Key: Blank
   MaxHP:     5
   SkillIDList: 
     List`1 (Count: 0)
+  Enable:     False
 ------------------------------------
 Key: Wukong
 
@@ -18,6 +19,7 @@ Key: Wukong
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Mountain Crusher
+  Enable:     True
 ------------------------------------
 Key: Zhongkui
 
@@ -28,6 +30,7 @@ Key: Zhongkui
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Deathrattle
+  Enable:     False
 ------------------------------------
 Key: Huaxiong
 
@@ -38,6 +41,7 @@ Key: Huaxiong
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Courage
+  Enable:     True
 ------------------------------------
 Key: Lvbu
 
@@ -48,6 +52,7 @@ Key: Lvbu
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Peerless
+  Enable:     True
 ------------------------------------
 Key: Diaochan
 
@@ -58,6 +63,7 @@ Key: Diaochan
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Fracture Cascade
+  Enable:     False
 ------------------------------------
 Key: Licunxu
 
@@ -70,6 +76,7 @@ Key: Licunxu
       [0]:         Triple Tribute Oath
       [1]:         Decade's Dominance
       [2]:         Thespian's Curse
+  Enable:     True
 ------------------------------------
 Key: Houyi
 
@@ -80,6 +87,7 @@ Key: Houyi
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Celestial Shatter
+  Enable:     True
 ------------------------------------
 Key: Bianque
 
@@ -90,6 +98,7 @@ Key: Bianque
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Terminal Affliction
+  Enable:     False
 ------------------------------------
 Key: Arthur
 
@@ -101,6 +110,7 @@ Key: Arthur
     List`1 (Count: 2)
       [0]:         Royal Knight
       [1]:         EXcalibur
+  Enable:     True
 ------------------------------------
 Key: Daji
 
@@ -111,6 +121,7 @@ Key: Daji
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Bewitching Hex
+  Enable:     True
 ------------------------------------
 Key: Dianwei
 
@@ -121,6 +132,7 @@ Key: Dianwei
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Dual Onslaught
+  Enable:     False
 ------------------------------------
 Key: TheSepulchralGuardian
 
@@ -131,6 +143,7 @@ Key: TheSepulchralGuardian
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Posthumous Retribution
+  Enable:     False
 ------------------------------------
 Key: KingLeonidasI
 
@@ -141,6 +154,7 @@ Key: KingLeonidasI
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Spartan Aegis
+  Enable:     False
 ------------------------------------
 Key: Zhugeliang
 
@@ -151,6 +165,7 @@ Key: Zhugeliang
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Volley Cycle
+  Enable:     False
 ------------------------------------
 Key: Chengyaojin
 
@@ -161,6 +176,7 @@ Key: Chengyaojin
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Threshold Fury
+  Enable:     False
 ------------------------------------
 Key: Maxim
 
@@ -171,6 +187,7 @@ Key: Maxim
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Maxim Machine Gun
+  Enable:     False
 ------------------------------------
 Key: Yingzheng
 
@@ -181,6 +198,7 @@ Key: Yingzheng
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Blade Dominator
+  Enable:     True
 ------------------------------------
 Key: Liru
 
@@ -192,6 +210,7 @@ Key: Liru
     List`1 (Count: 2)
       [0]:         Urban Inferno
       [1]:         Counter Trap
+  Enable:     False
 ------------------------------------
 Key: Zhuangzhou
 
@@ -202,6 +221,7 @@ Key: Zhuangzhou
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Transcendence
+  Enable:     False
 ------------------------------------
 Key: Zhouyu
 
@@ -212,6 +232,7 @@ Key: Zhouyu
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Chain Deceit
+  Enable:     False
 ------------------------------------
 Key: Xiaoqiao
 
@@ -222,6 +243,7 @@ Key: Xiaoqiao
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Pandora's Torrent
+  Enable:     False
 ------------------------------------
 Key: Lanlingwang
 
@@ -232,6 +254,7 @@ Key: Lanlingwang
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Silent Fury
+  Enable:     False
 ------------------------------------
 Key: Machao
 
@@ -243,6 +266,7 @@ Key: Machao
     List`1 (Count: 2)
       [0]:         Ferrum Charge
       [1]:         Requital Blitz
+  Enable:     False
 ------------------------------------
 Key: Jiangwei
 
@@ -254,6 +278,7 @@ Key: Jiangwei
     List`1 (Count: 2)
       [0]:         Strategic Gambit
       [1]:         Collaborating Last Stand
+  Enable:     False
 ------------------------------------
 Key: Lichunfeng
 
@@ -270,6 +295,7 @@ Key: Lichunfeng
       [4]:         Pacify Right
       [5]:         War Left
       [6]:         Divine Chastisement
+  Enable:     False
 ------------------------------------
 Key: Gilgamesh
 
@@ -281,6 +307,7 @@ Key: Gilgamesh
     List`1 (Count: 2)
       [0]:         Golden Vault
       [1]:         Divine Pride
+  Enable:     False
 ------------------------------------
 Key: Gawain
 
@@ -291,6 +318,7 @@ Key: Gawain
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Solar Surge
+  Enable:     False
 ------------------------------------
 Key: Heiwuchang
 
@@ -301,6 +329,7 @@ Key: Heiwuchang
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Plague Reckoning
+  Enable:     False
 ------------------------------------
 Key: Baiwuchang
 
@@ -312,6 +341,7 @@ Key: Baiwuchang
     List`1 (Count: 2)
       [0]:         Spirit Shackle
       [1]:         Binding Passage
+  Enable:     False
 ------------------------------------
 Key: Panguan
 
@@ -323,6 +353,7 @@ Key: Panguan
     List`1 (Count: 2)
       [0]:         Decree Approval
       [1]:         Doom Edict
+  Enable:     False
 ------------------------------------
 Key: Mengpo
 
@@ -334,6 +365,7 @@ Key: Mengpo
     List`1 (Count: 2)
       [0]:         Soul Reset
       [1]:         Aftertaste
+  Enable:     False
 ------------------------------------
 Key: Qinguangwang
 
@@ -344,6 +376,7 @@ Key: Qinguangwang
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Royal Barricade
+  Enable:     False
 ------------------------------------
 Key: Yuantiangang
 
@@ -355,6 +388,7 @@ Key: Yuantiangang
     List`1 (Count: 2)
       [0]:         Stellar Allocation
       [1]:         Revolving Sky
+  Enable:     False
 ------------------------------------
 Key: Lancelot
 
@@ -366,6 +400,7 @@ Key: Lancelot
     List`1 (Count: 2)
       [0]:         Tidal Knight
       [1]:         Unbroken Loot
+  Enable:     False
 ------------------------------------
 Key: Mordred
 
@@ -377,6 +412,7 @@ Key: Mordred
     List`1 (Count: 2)
       [0]:         Premeditated Usurpation
       [1]:         Treason's Toll
+  Enable:     False
 ------------------------------------
 Key: Spider
 
@@ -389,6 +425,7 @@ Key: Spider
       [0]:         SpitSilk
       [1]:         SpinWeb
       [2]:         LayEggs
+  Enable:     False
 ------------------------------------
 Key: Huamulan
 
@@ -401,6 +438,7 @@ Key: Huamulan
       [0]:         Scribe's Mart
       [1]:         Filial Campaign
       [2]:         Bastion Sacrifice
+  Enable:     False
 ------------------------------------
 Key: Wuzeitan
 
@@ -413,6 +451,7 @@ Key: Wuzeitan
       [0]:         Vindictive Script
       [1]:         Death Decree
       [2]:         Retribution of Empress
+  Enable:     False
 ------------------------------------
 Key: Guiguzi
 
@@ -424,6 +463,7 @@ Key: Guiguzi
     List`1 (Count: 2)
       [0]:         Fate Swap
       [1]:         Prudent Ward
+  Enable:     False
 ------------------------------------
 Key: Houqing
 
@@ -437,6 +477,7 @@ Key: Houqing
       [1]:         Weeping Thorns
       [2]:         Sanguine Ruin
       [3]:         Bloody Substitution
+  Enable:     False
 ------------------------------------
 Key: Yinggou
 
@@ -447,6 +488,7 @@ Key: Yinggou
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Cadaverous Barrier
+  Enable:     False
 ------------------------------------
 Key: Hanba
 
@@ -458,6 +500,7 @@ Key: Hanba
     List`1 (Count: 2)
       [0]:         Scorched Dominion
       [1]:         Famine Brand
+  Enable:     False
 ------------------------------------
 Key: Jiangchen
 
@@ -469,6 +512,7 @@ Key: Jiangchen
     List`1 (Count: 2)
       [0]:         Eternal Specter
       [1]:         Death's Crescendo
+  Enable:     False
 ------------------------------------
 Key: WolfKing
 
@@ -479,6 +523,7 @@ Key: WolfKing
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Spectral Pack
+  Enable:     False
 ------------------------------------
 Key: Liyuanba
 
@@ -489,6 +534,7 @@ Key: Liyuanba
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Sacrificial Fury
+  Enable:     False
 ------------------------------------
 Key: Taiyizhenren
 
@@ -499,6 +545,7 @@ Key: Taiyizhenren
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Alchemic Synthesis
+  Enable:     False
 ------------------------------------
 Key: Sunce
 
@@ -509,6 +556,7 @@ Key: Sunce
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Overdrive Rampage
+  Enable:     False
 ------------------------------------
 Key: ZhuBajie
 
@@ -519,6 +567,7 @@ Key: ZhuBajie
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Hog-Tied
+  Enable:     False
 ------------------------------------
 Key: ShaSeng
 
@@ -529,6 +578,7 @@ Key: ShaSeng
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Void of Sustenance
+  Enable:     False
 ------------------------------------
 Key: Tangseng
 
@@ -539,6 +589,7 @@ Key: Tangseng
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         MonkProtection
+  Enable:     False
 ------------------------------------
 Key: LiuBei
 
@@ -549,6 +600,7 @@ Key: LiuBei
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Fertile Mercy
+  Enable:     False
 ------------------------------------
 Key: SunQuan
 
@@ -559,6 +611,7 @@ Key: SunQuan
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Ease Sanctuary
+  Enable:     False
 ------------------------------------
 Key: HanXin
 
@@ -569,6 +622,7 @@ Key: HanXin
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Mass Mustering Master
+  Enable:     False
 ------------------------------------
 Key: XiangYu
 
@@ -579,6 +633,7 @@ Key: XiangYu
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Dominion Fervor
+  Enable:     False
 ------------------------------------
 Key: LiuBang
 
@@ -589,6 +644,7 @@ Key: LiuBang
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Royal Gambit
+  Enable:     False
 ------------------------------------
 Key: SuQin
 
@@ -599,6 +655,7 @@ Key: SuQin
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         VerticalAlliance
+  Enable:     False
 ------------------------------------
 Key: ZhangYi
 
@@ -609,6 +666,7 @@ Key: ZhangYi
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         HorizontalAlliance
+  Enable:     False
 ------------------------------------
 Key: BillOnTheRun
 
@@ -619,6 +677,7 @@ Key: BillOnTheRun
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Daring Bounty
+  Enable:     False
 ------------------------------------
 Key: CunningJack
 
@@ -629,6 +688,7 @@ Key: CunningJack
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Powder Keg
+  Enable:     False
 ------------------------------------
 Key: RedHandedRory
 
@@ -639,6 +699,7 @@ Key: RedHandedRory
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Ruthless Subsidization
+  Enable:     False
 ------------------------------------
 Key: HenryTheFarmer
 
@@ -650,6 +711,7 @@ Key: HenryTheFarmer
     List`1 (Count: 2)
       [0]:         Gathering FoodI
       [1]:         Gathering FoodII
+  Enable:     False
 ------------------------------------
 Key: CalebTheThunderCultist
 
@@ -661,6 +723,7 @@ Key: CalebTheThunderCultist
     List`1 (Count: 2)
       [0]:         Thunder Command
       [1]:         Heaven's Mandate
+  Enable:     False
 ------------------------------------
 Key: TheGuardian
 
@@ -672,6 +735,7 @@ Key: TheGuardian
     List`1 (Count: 2)
       [0]:         Aegis Conversion
       [1]:         Infinite Aegis
+  Enable:     False
 ------------------------------------
 Key: TheUndead
 
@@ -683,6 +747,7 @@ Key: TheUndead
     List`1 (Count: 2)
       [0]:         Zombie lives forever
       [1]:         Cannibalism
+  Enable:     False
 ------------------------------------
 Key: TomTheCat
 
@@ -697,6 +762,7 @@ Key: TomTheCat
       [2]:         Rocket Specialist
       [3]:         Blazing Fury
       [4]:         Relentless Pursuit
+  Enable:     False
 ------------------------------------
 Key: SorenTheSwordman
 
@@ -709,6 +775,7 @@ Key: SorenTheSwordman
       [0]:         Multistrike I
       [1]:         Multistrike II
       [2]:         Multistrike III
+  Enable:     False
 ------------------------------------
 Key: SorenTheSwordMaster
 
@@ -721,6 +788,7 @@ Key: SorenTheSwordMaster
       [0]:         Swift
       [1]:         Way of the Sword
       [2]:         Multistrike
+  Enable:     False
 ------------------------------------
 Key: LeoTheCowboy
 
@@ -732,6 +800,7 @@ Key: LeoTheCowboy
     List`1 (Count: 2)
       [0]:         Twin Pistols
       [1]:         Marksmanship
+  Enable:     False
 ------------------------------------
 Key: TheIronBlood
 
@@ -742,6 +811,7 @@ Key: TheIronBlood
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         IronBlood
+  Enable:     False
 ------------------------------------
 Key: Frankenstein
 
@@ -752,4 +822,5 @@ Key: Frankenstein
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Rampage
+  Enable:     False
 ------------------------------------

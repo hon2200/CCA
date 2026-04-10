@@ -274,26 +274,49 @@ public class WolfHowl : SummoningSkill, IPhaseEnterHandler, IDamagedHandler
     }
 }
 
-public class CloneTechnique : EnemySkill, IPhaseEnterHandler
+public class CloneTechnique : SummoningSkill, IDeathHandler
 {
     public CloneTechnique() : base("Clone Technique") { }
-    protected override void Envoke()
+
+    protected override List<int> GetInitialResourcesForSummon(string heroID)
     {
-        // TODO: From round 3 every 6 rounds split into 3 clones 3 turns, then merge
+        //召唤物获得1/3的资源
+        if (heroID == "Little Monkey")
+            return new List<int> { Owner.status.resources.Bullet.Value/3, 
+                Owner.status.resources.Sword.Value / 3, 0 }; // bullet, sword, reserved
+        return base.GetInitialResourcesForSummon(heroID);
     }
-    public void OnPhase(Phase phase)
+
+    public bool OnDeath(Player thisPlayer)
     {
-        if (phase is StartPhase)
-            CheckAndEvoke();
+        Summon("Little Monkey");
+        Summon("Little Monkey");
+        Summon("Little Monkey");
+        Summon("Little Monkey");
+        return false;
     }
 }
 
-public class Nurture : EnemySkill, IPhaseEnterHandler
+public class Nurture : SummoningSkill, IPhaseEnterHandler, IDeathHandler
 {
     public Nurture() : base("Nurture") { }
     protected override void Envoke()
     {
-        // TODO: Third round after entry, grow into 狼
+        // Sacrifice self after successful summon.
+        Owner.status.HP.Damage(Owner.status.HP.Value + 999, Owner, Owner, null);
+    }
+
+    public bool OnDeath(Player thisPlayer)
+    {
+        // Summoned wolf inherits the owner's current resources.
+        var inheritedResources = new List<int>
+        {
+            Owner.status.resources.Bullet.Value,
+            Owner.status.resources.Sword.Value,
+            0
+        };
+        var wolf = Summon("Wolf", inheritedResources);
+            return false;
     }
     public void OnPhase(Phase phase)
     {
@@ -708,12 +731,23 @@ public class AgileApe : EnemySkill, IPhaseEnterHandler
 
 public class OminousFeather : EnemySkill, IDamagingHandler
 {
+    bool LoseSword = true;
     public OminousFeather() : base("Ominous Feather") { }
     protected override void Envoke() { }
     public void OnDamaging(Player attacker, Player victim, int damage, out int finalDamage)
     {
         finalDamage = damage;
-        // TODO: On damage add one 凶 to target; each turn lose n resources and one 凶 (n = 凶 count)
+        if(LoseSword)
+        {
+            victim.status.resources.Sword.Lost(damage);
+            LoseSword = false;
+        }
+        else
+        {
+            victim.status.resources.Bullet.Lost(damage);
+            LoseSword = true;
+        }
+
     }
 }
 
@@ -725,8 +759,8 @@ public class Relentless : EnemySkill, ICombatHandler
     {
         if(combatEvent.Type == CombatEventType.AttackTakeEffect)
         {
-            combatEvent.Attacker.status.resources.Bullet.Get(Owner, combatEvent.Attack.Costs[1]);
-            combatEvent.Attacker.status.resources.Sword.Get(Owner, combatEvent.Attack.Costs[2]);
+            combatEvent.Attacker.status.resources.Bullet.Get(combatEvent.Attack.Costs[1]);
+            combatEvent.Attacker.status.resources.Sword.Get(combatEvent.Attack.Costs[2]);
         }
     }
 }
@@ -741,8 +775,11 @@ public class Inviolable : EnemySkill, ICombatHandler
     }
 }
 
-public class WolfGrudge : EnemySkill, IDamagedHandler, IDamagingHandler
+public class WolfGrudge : EnemySkill, IDamagedHandler, IDamagingHandler, IDeathHandler, IPhaseEnterHandler
 {
+    private static readonly HashSet<int> wolfCubIds = new HashSet<int>();
+    private static readonly HashSet<int> wolfGrudgeOwnerIds = new HashSet<int>();
+
     public WolfGrudge() : base("Wolf Grudge") { }
     protected override void Envoke() { }
     public void OnDamaged(Player attacker, Player victim, int damage, out int finalDamage)
@@ -754,6 +791,77 @@ public class WolfGrudge : EnemySkill, IDamagedHandler, IDamagingHandler
     {
         attacker.status.buffs.Apply(new DamagingOperator(-1, attacker, BuffOperator.StepSlot.Third));
         finalDamage = damage;
+    }
+
+    public void OnPhase(Phase phase)
+    {
+        if (phase is not StartPhase)
+            return;
+        RefreshWolfCubRecord();
+    }
+
+    public bool OnDeath(Player thisPlayer)
+    {
+        if (thisPlayer == null)
+            return false;
+
+        bool isWolfCub = IsWolfCub(thisPlayer);
+        if (!isWolfCub)
+            return false;
+
+        // A Wolf Cub died (including "grow up" self-sacrifice): all WolfGrudge owners get stronger damaged modifier.
+        if (PlayerManager.Instance?.Players != null)
+        {
+            foreach (var ownerId in wolfGrudgeOwnerIds)
+            {
+                if (!PlayerManager.Instance.Players.TryGetValue(ownerId, out var victim) || victim == null)
+                    continue;
+                if (victim.status == null || victim.status.life.Value == LifeStatus.Death)
+                    continue;
+
+                victim.status.buffs.Apply(new DamagedOperator(3, victim, BuffOperator.StepSlot.Third));
+            }
+        }
+
+        wolfCubIds.Remove(thisPlayer.ID_inGame);
+        return false;
+    }
+
+    private static void RefreshWolfCubRecord()
+    {
+        if (PlayerManager.Instance?.Players == null)
+            return;
+
+        foreach (var player in PlayerManager.Instance.Players.Values)
+        {
+            if (player == null)
+                continue;
+
+            if (HasWolfGrudge(player))
+                wolfGrudgeOwnerIds.Add(player.ID_inGame);
+
+            if (IsWolfCub(player))
+                wolfCubIds.Add(player.ID_inGame);
+        }
+    }
+
+    private static bool IsWolfCub(Player player)
+    {
+        return player != null && player.hero != null &&
+               (player.hero.ID == "WolfCub" || wolfCubIds.Contains(player.ID_inGame));
+    }
+
+    private static bool HasWolfGrudge(Player player)
+    {
+        if (player?.hero?.skills == null)
+            return false;
+
+        foreach (var skill in player.hero.skills)
+        {
+            if (skill != null && skill.ID == "Wolf Grudge")
+                return true;
+        }
+        return false;
     }
 }
 
@@ -783,8 +891,8 @@ public class WellEquipped : EnemySkill, IPhaseEnterHandler
     {
         if (phase is StartPhase && !isUsed)
         {
-            Owner.status.resources.Sword.Get(Owner, 5);
-            Owner.status.resources.Bullet.Get(Owner, 5);
+            Owner.status.resources.Sword.Get(5);
+            Owner.status.resources.Bullet.Get(5);
             isUsed = true;
         }
     }

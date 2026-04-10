@@ -98,7 +98,7 @@ public class ResolutionPhase : Phase
                     {
                         if (PlayerManager.Instance.Players.TryGetValue(killerID, out var killer))
                         {
-                            killer.status.resources.Bullet.Get(killer,reward);
+                            killer.status.resources.Bullet.Get(reward);
                             foreach (var skill in killer.hero.skills)
                             {
                                 if (skill is IOnKillHandler killH)

@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glow: {fileID: 4958631375478430443}
+  room: {fileID: 0}
 --- !u!65 &5451293528827133113
 BoxCollider:
   m_ObjectHideFlags: 0

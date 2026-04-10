@@ -1,10 +1,11 @@
+using AYellowpaper.SerializedCollections;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using AYellowpaper.SerializedCollections;
 
 //?????????Prefab??????????????????UI?????????????UITextManager????UIText??????????
 //????PlayerStatue???????????????????UI?????????????
@@ -22,9 +23,11 @@ public class PlayerUIText : MonoBehaviour
     [SerializeField]
     public SerializedDictionary<PlayerUITextName, TextMeshPro> UIText;
     public HPFilling HPFilling;
+    public TMP_Text SkillText;
     public void Initialize()
     {
         InitializeImagesFromLibrary();
+        UpdateSkillText();
         foreach(var text in UIText)
         {
             switch (text.Key)
@@ -101,6 +104,29 @@ public class PlayerUIText : MonoBehaviour
                 OnBorn();
             }
         };
+
+        SetSkillPanelVisible(false);
+    }
+
+    /// <summary>Sets SkillText from current hero skills (rich text). Called from <see cref="Initialize"/>; call again after <see cref="Player.SetHero"/>.</summary>
+    public void UpdateSkillText()
+    {
+        if (SkillText == null) return;
+        SkillText.richText = true;
+        SkillText.text = BuildSkillsRichText(player?.hero?.skills);
+    }
+
+    /// <summary>Show or hide the skill description object. When showing, refreshes rich text from <see cref="UpdateSkillText"/>.</summary>
+    public void SetSkillPanelVisible(bool visible)
+    {
+        if (SkillText == null) return;
+        if (visible)
+        {
+            UpdateSkillText();
+            SkillText.gameObject.SetActive(true);
+        }
+        else
+            SkillText.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -186,6 +212,42 @@ public class PlayerUIText : MonoBehaviour
     {
         float fill = currentHp / (float)(maxHp);
         HPFilling.MovingMask(fill);
+    }
+
+    public static string BuildSkillsRichText(List<SkillDefine> skills)
+    {
+        if (skills == null || skills.Count == 0)
+            return "";
+
+        var sb = new StringBuilder();
+        for (int i = 0; i < skills.Count; i++)
+        {
+            var skill = skills[i];
+            if (skill == null)
+                continue;
+
+            string name = string.IsNullOrEmpty(skill.Name) ? skill.ID ?? "" : skill.Name;
+            string desc = skill.Description ?? "";
+
+            sb.Append("<b>");
+            sb.Append(TmpEscapeForRichText(name));
+            sb.Append("</b>\n");
+            sb.Append(TmpEscapeForRichText(desc));
+
+            if (i < skills.Count - 1)
+                sb.Append('\n');
+        }
+
+        var finalSb = sb.ToString();
+        Debug.Log(finalSb);
+        return finalSb;
+    }
+
+    private static string TmpEscapeForRichText(string s)
+    {
+        if (string.IsNullOrEmpty(s))
+            return "";
+        return s.Replace("\\", "\\\\").Replace("<", "\\<");
     }
 
     // ????????????????????

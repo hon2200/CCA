@@ -16,24 +16,74 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
     [SerializeField] private float SkillButtonSpacing = 20f;
     [SerializeField] private TMP_Text SkillText;
     [SerializeField] private TMP_Text HPText;
+    [SerializeField] private TMP_Text GoldText;
+
+    [SerializeField] private GameObject HeroPanel;
 
     private string currentHeroID;
 
     public void Initialize()
     {
-        BuildHeroDropdown();
+        RougeManager.Instance.rougePlayer.Heroes.OnListChanged += (List<Hero> newHeroes, string message)
+            => { BuildRougeHeroDropDown(); };
+        BuildRougeHeroDropDown();
+        GoldTextInit();
 
         if (heroDropdown != null)
             heroDropdown.onValueChanged.AddListener(OnHeroSelected);
     }
+    public void OpenAndCloseHeroPanel()
+    {
+        if(HeroPanel.activeSelf)
+        {
+            HeroPanel.SetActive(false);
+        }
+        else
+        {
+            HeroPanel.SetActive(true);
+        }
+    }
+    public void SetHeroPanelActive(bool active)
+    {
+        if (HeroPanel != null)
+            HeroPanel.SetActive(active);
+    }
 
-    private void BuildHeroDropdown()
+    public Hero GetSelectedRougeHero()
     {
         if (heroDropdown == null)
+            return null;
+
+        int selectedIndex = heroDropdown.value;
+        if (selectedIndex <= 0 || selectedIndex >= heroDropdown.options.Count)
+            return null;
+
+        if (heroDropdown.options[selectedIndex] is RougeHeroOptionData opt)
+            return opt.Hero;
+
+        return null;
+    }
+    private void GoldTextInit()
+    {
+        RougeManager.Instance.rougePlayer.gold.OnValueChanged += (int oldVal, int newVal, string message)=>
+        {
+            GoldText.text = newVal.ToString();
+        };
+        GoldText.text = RougeManager.Instance.rougePlayer.gold.Value.ToString();
+    }
+
+    public void BuildRougeHeroDropDown()
+    {
+        BuildHeroDropdownInternal(heroDropdown, null, "-- Select hero --");
+    }
+
+    private void BuildHeroDropdownInternal(TMP_Dropdown dropdown, Hero excludedHero, string defaultLabel)
+    {
+        if (dropdown == null)
             return;
 
-        heroDropdown.options.Clear();
-        heroDropdown.options.Add(new TMP_Dropdown.OptionData("-- Select hero --"));
+        dropdown.options.Clear();
+        dropdown.options.Add(new TMP_Dropdown.OptionData(defaultLabel));
 
         var rougePlayer = RougeManager.Instance != null ? RougeManager.Instance.rougePlayer : null;
         var heroes = rougePlayer != null ? rougePlayer.Heroes : null;
@@ -41,8 +91,8 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
         if (heroes == null || heroes.Count == 0 ||
             HeroDataBase.Instance == null || HeroDataBase.Instance.HeroDictionary == null)
         {
-            heroDropdown.value = 0;
-            heroDropdown.RefreshShownValue();
+            dropdown.value = 0;
+            dropdown.RefreshShownValue();
             return;
         }
 
@@ -50,6 +100,8 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
         foreach (var hero in heroes)
         {
             if (hero == null || string.IsNullOrEmpty(hero.ID))
+                continue;
+            if (hero == excludedHero)
                 continue;
 
             if (!HeroDataBase.Instance.HeroDictionary.TryGetValue(hero.ID, out var heroDefine) || heroDefine == null)
@@ -60,11 +112,11 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
             idOccurrence[hero.ID] = n + 1;
 
             string label = n == 0 ? heroDefine.Name : $"{heroDefine.Name} ({n + 1})";
-            heroDropdown.options.Add(new RougeHeroOptionData(label, hero, heroDefine));
+            dropdown.options.Add(new RougeHeroOptionData(label, hero, heroDefine));
         }
 
-        heroDropdown.value = 0;
-        heroDropdown.RefreshShownValue();
+        dropdown.value = 0;
+        dropdown.RefreshShownValue();
     }
 
     private void OnHeroSelected(int selectedIndex)
@@ -107,6 +159,7 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
             else
                 SkillText.text = "";
         }
+
     }
 
     private static List<SkillDefine> GetSkillsFromOption(RougeHeroOptionData opt)

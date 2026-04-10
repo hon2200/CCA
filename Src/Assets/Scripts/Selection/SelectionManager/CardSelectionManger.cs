@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
 //射线检测的状态
@@ -32,6 +32,11 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
 
     // 新增：记录上一个悬停/选中的玩家（用于清理高亮）
     private GameObject _lastHoveredPlayerForHighlight;
+
+    private const float SkillPanelHoverSeconds = 0.5f;
+    private Player _skillPanelHoverPlayer;
+    private float _skillPanelHoverTimer;
+
     public void Update()
     {
         MouseAndRayUtil.Hit("Card", out var card);
@@ -182,6 +187,57 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
                 }
                 break;
         }
+
+        UpdateSkillPanelHover(player);
+    }
+
+    /// <summary>
+    /// Shows the hovered player's skill panel only after the cursor stays on them for <see cref="SkillPanelHoverSeconds"/>.
+    /// Hides all skill panels when selection is disabled or the cursor leaves the player.
+    /// </summary>
+    private void UpdateSkillPanelHover(GameObject hitPlayerGo)
+    {
+        if (rayStatus == RayStatus.Disable || PlayerManager.Instance == null)
+        {
+            HideAllPlayerSkillPanels();
+            _skillPanelHoverPlayer = null;
+            _skillPanelHoverTimer = 0f;
+            return;
+        }
+
+        Player hovered = null;
+        if (hitPlayerGo != null)
+            hovered = hitPlayerGo.GetComponentInParent<Player>();
+
+        if (hovered == null || hovered.playerUIText == null)
+        {
+            HideAllPlayerSkillPanels();
+            _skillPanelHoverPlayer = null;
+            _skillPanelHoverTimer = 0f;
+            return;
+        }
+
+        if (_skillPanelHoverPlayer != hovered)
+        {
+            _skillPanelHoverPlayer = hovered;
+            _skillPanelHoverTimer = 0f;
+        }
+        else
+            _skillPanelHoverTimer += Time.deltaTime;
+
+        foreach (var p in PlayerManager.Instance.Players.Values)
+        {
+            if (p?.playerUIText == null) continue;
+            bool show = p == hovered && _skillPanelHoverTimer >= SkillPanelHoverSeconds;
+            p.playerUIText.SetSkillPanelVisible(show);
+        }
+    }
+
+    private static void HideAllPlayerSkillPanels()
+    {
+        if (PlayerManager.Instance == null) return;
+        foreach (var p in PlayerManager.Instance.Players.Values)
+            p.playerUIText?.SetSkillPanelVisible(false);
     }
     //进行规则检查，判断攻击是否可以选中相应玩家
     private void CheckPlayer(ActionDefine action)
@@ -258,10 +314,16 @@ public class CardSelectionManager : MonoSingleton<CardSelectionManager>
         {
             player.Value.GetComponent<PlayerSelection>().DimAllGlows();
         }
+        HideAllPlayerSkillPanels();
+        _skillPanelHoverPlayer = null;
+        _skillPanelHoverTimer = 0f;
         rayStatus = RayStatus.Disable;
     }
     public void Enable()
     {
         rayStatus = RayStatus.ChooseCard;
+        HideAllPlayerSkillPanels();
+        _skillPanelHoverPlayer = null;
+        _skillPanelHoverTimer = 0f;
     }
 }

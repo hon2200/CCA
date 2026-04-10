@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 // 调用技能效果，这个也需要通过OnValueChanged来调用。
 public class SwordAttribute : ObservableAttribute<int>
 {
+    public Player Owner { get; set; }
     public bool Used { get; set; }
     public AvailableSwordAttribute AvailableSword { get; private set; }
     public SwordAttribute()
@@ -21,11 +22,11 @@ public class SwordAttribute : ObservableAttribute<int>
         SetValue(amount, "Set");
         AvailableSword.Set(amount);
     }
-    public void Get(Player thisPlayer, int number)
+    public void Get(int number)
     {
         SetValue(Value + number, "Get");
         if (onObserve && number > 0)
-            EffectManager.Instance.PlaySpotEffect(false, "SwordSupply", thisPlayer.gameObject, number);
+            EffectManager.Instance.PlaySpotEffect(false, "SwordSupply", Owner.gameObject, number);
         AvailableSword.Get(number);
     }
     public void Use(int number)
@@ -47,6 +48,8 @@ public class SwordAttribute : ObservableAttribute<int>
             if (Value - AvailableSword.Value < number)
                 AvailableSword.Lost(number - (Value - AvailableSword.Value));
             SetValue(Value - number, "Lost");
+            if (onObserve && number > 0)
+                EffectManager.Instance.PlaySpotEffect(false, "SwordLose", Owner.gameObject, number);
         }
 
 

@@ -11,6 +11,7 @@ Key: Bronze Guardian
     List`1 (Count: 2)
       [0]:         Molten Cast
       [1]:         Leader Catch
+  Enable:     False
 ------------------------------------
 Key: Bronze Imp
 
@@ -21,6 +22,7 @@ Key: Bronze Imp
   MaxHP:     8
   SkillIDList: 
     List`1 (Count: 0)
+  Enable:     False
 ------------------------------------
 Key: Ancient Tree
 
@@ -34,6 +36,7 @@ Key: Ancient Tree
       [0]:         Sow
       [1]:         Lush Growth
       [2]:         Leader Catch
+  Enable:     False
 ------------------------------------
 Key: Little Tree
 
@@ -45,6 +48,7 @@ Key: Little Tree
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Rapid Growth
+  Enable:     False
 ------------------------------------
 Key: Formless Water
 
@@ -56,6 +60,7 @@ Key: Formless Water
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Tsunami
+  Enable:     False
 ------------------------------------
 Key: Burning Avenger
 
@@ -67,6 +72,7 @@ Key: Burning Avenger
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Scorched Oblivion
+  Enable:     False
 ------------------------------------
 Key: Earth Burier
 
@@ -79,6 +85,7 @@ Key: Earth Burier
     List`1 (Count: 2)
       [0]:         Fertile Blessing
       [1]:         Return to Earth
+  Enable:     False
 ------------------------------------
 Key: Plague Incarnation
 
@@ -91,6 +98,7 @@ Key: Plague Incarnation
     List`1 (Count: 2)
       [0]:         Miasma
       [1]:         City Burn
+  Enable:     False
 ------------------------------------
 Key: War King
 
@@ -103,6 +111,7 @@ Key: War King
     List`1 (Count: 2)
       [0]:         Conqueror
       [1]:         Invader
+  Enable:     False
 ------------------------------------
 Key: Famine Reaper
 
@@ -115,6 +124,7 @@ Key: Famine Reaper
     List`1 (Count: 2)
       [0]:         Magnate
       [1]:         Slayer
+  Enable:     False
 ------------------------------------
 Key: Calamity
 
@@ -127,6 +137,7 @@ Key: Calamity
     List`1 (Count: 2)
       [0]:         Scorched Earth
       [1]:         Mirage
+  Enable:     False
 ------------------------------------
 Key: Death
 
@@ -139,6 +150,7 @@ Key: Death
     List`1 (Count: 2)
       [0]:         Death Incarnate
       [1]:         Leader Catch
+  Enable:     False
 ------------------------------------
 Key: Imp
 
@@ -150,6 +162,7 @@ Key: Imp
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Deathbound
+  Enable:     False
 ------------------------------------
 Key: Prophet
 
@@ -163,6 +176,7 @@ Key: Prophet
       [0]:         Clear Mirror
       [1]:         Encore
       [2]:         Death Sense
+  Enable:     False
 ------------------------------------
 Key: Nameless Swordsaint
 
@@ -177,6 +191,7 @@ Key: Nameless Swordsaint
       [1]:         Sword Momentum
       [2]:         Unattainable
       [3]:         Letting Go
+  Enable:     False
 ------------------------------------
 Key: Magic Bullet Shooter
 
@@ -189,6 +204,7 @@ Key: Magic Bullet Shooter
     List`1 (Count: 2)
       [0]:         Magic Bullet
       [1]:         Demonic Rite
+  Enable:     False
 ------------------------------------
 Key: GanJiang
 
@@ -201,6 +217,7 @@ Key: GanJiang
     List`1 (Count: 2)
       [0]:         Divine Blade
       [1]:         Shared Fate
+  Enable:     False
 ------------------------------------
 Key: MoYe
 
@@ -213,6 +230,7 @@ Key: MoYe
     List`1 (Count: 2)
       [0]:         Tempered Edge
       [1]:         Shared Fate
+  Enable:     False
 ------------------------------------
 Key: MeiJianChi
 
@@ -227,6 +245,7 @@ Key: MeiJianChi
       [1]:         Vengeance
       [2]:         Divine Blade
       [3]:         Tempered Edge
+  Enable:     False
 ------------------------------------
 Key: Faust
 
@@ -244,6 +263,7 @@ Key: Faust
       [4]:         Ease
       [5]:         Courtship
       [6]:         Knowledge Seeking
+  Enable:     False
 ------------------------------------
 Key: Lucifer
 
@@ -259,6 +279,7 @@ Key: Lucifer
       [2]:         Desperate Struggle
       [3]:         Life or Death
       [4]:         Leader Catch
+  Enable:     False
 ------------------------------------
 Key: Fallen Angel
 
@@ -270,6 +291,7 @@ Key: Fallen Angel
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Life or Death
+  Enable:     False
 ------------------------------------
 Key: Cunning Jester
 
@@ -281,6 +303,7 @@ Key: Cunning Jester
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Deceptive Trick
+  Enable:     False
 ------------------------------------
 Key: Raging Giant
 
@@ -292,6 +315,7 @@ Key: Raging Giant
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Rampage Stomp
+  Enable:     False
 ------------------------------------
 Key: Falling Blossom General
 
@@ -304,6 +328,7 @@ Key: Falling Blossom General
     List`1 (Count: 2)
       [0]:         Flying Flower
       [1]:         Flower Farewell
+  Enable:     False
 ------------------------------------
 Key: Sword Tomb
 
@@ -315,6 +340,7 @@ Key: Sword Tomb
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Silence
+  Enable:     False
 ------------------------------------
 Key: Cult Leader
 
@@ -327,6 +353,7 @@ Key: Cult Leader
     List`1 (Count: 2)
       [0]:         Totem Call
       [1]:         Leader Catch
+  Enable:     False
 ------------------------------------
 Key: Follower
 
@@ -338,6 +365,7 @@ Key: Follower
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Devotion
+  Enable:     False
 ------------------------------------
 Key: Black Phoenix
 
@@ -350,6 +378,7 @@ Key: Black Phoenix
     List`1 (Count: 2)
       [0]:         Rebirth
       [1]:         Emberize
+  Enable:     False
 ------------------------------------
 Key: Corrupted Tailor
 
@@ -362,6 +391,7 @@ Key: Corrupted Tailor
     List`1 (Count: 2)
       [0]:         Fabrication
       [1]:         Armor Forging
+  Enable:     False
 ------------------------------------
 Key: Corrupted Blacksmith
 
@@ -374,6 +404,7 @@ Key: Corrupted Blacksmith
     List`1 (Count: 2)
       [0]:         Tempering
       [1]:         Blade Forging
+  Enable:     False
 ------------------------------------
 Key: Corrupted Alchemist
 
@@ -386,6 +417,7 @@ Key: Corrupted Alchemist
     List`1 (Count: 2)
       [0]:         Potion Stockpiling
       [1]:         Potion Rationing
+  Enable:     False
 ------------------------------------
 Key: King Phantom
 
@@ -398,6 +430,7 @@ Key: King Phantom
     List`1 (Count: 2)
       [0]:         Golden Vault
       [1]:         Divine Pride
+  Enable:     False
 ------------------------------------
 Key: Disaster Master
 
@@ -409,6 +442,7 @@ Key: Disaster Master
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Heavenly Punishment
+  Enable:     False
 ------------------------------------
 Key: Puppet Master
 
@@ -421,6 +455,7 @@ Key: Puppet Master
     List`1 (Count: 2)
       [0]:         Cicada Shell
       [1]:         Ferocity
+  Enable:     False
 ------------------------------------
 Key: Soldier Statue
 
@@ -432,6 +467,7 @@ Key: Soldier Statue
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Revival
+  Enable:     False
 ------------------------------------
 Key: Sage Phantom
 
@@ -443,6 +479,7 @@ Key: Sage Phantom
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Redemption
+  Enable:     False
 ------------------------------------
 Key: Dark Crow
 
@@ -454,6 +491,7 @@ Key: Dark Crow
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Silent Kill
+  Enable:     False
 ------------------------------------
 Key: White Wolf King
 
@@ -467,6 +505,7 @@ Key: White Wolf King
       [0]:         Wolf Howl
       [1]:         Bloodlust
       [2]:         Leader Catch
+  Enable:     False
 ------------------------------------
 Key: Six Ear Macaque
 
@@ -479,6 +518,7 @@ Key: Six Ear Macaque
     List`1 (Count: 2)
       [0]:         Mountain Crusher
       [1]:         Clone Technique
+  Enable:     False
 ------------------------------------
 Key: Two Headed Snake
 
@@ -491,6 +531,7 @@ Key: Two Headed Snake
     List`1 (Count: 2)
       [0]:         Venom
       [1]:         Two Heads
+  Enable:     False
 ------------------------------------
 Key: Bandit Leader
 
@@ -503,6 +544,7 @@ Key: Bandit Leader
     List`1 (Count: 2)
       [0]:         Well Equipped
       [1]:         Leader Catch
+  Enable:     False
 ------------------------------------
 Key: Troll
 
@@ -513,6 +555,7 @@ Key: Troll
   MaxHP:     25
   SkillIDList: 
     List`1 (Count: 0)
+  Enable:     False
 ------------------------------------
 Key: Clumsy Gunner
 
@@ -524,6 +567,7 @@ Key: Clumsy Gunner
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Melee Disability
+  Enable:     False
 ------------------------------------
 Key: Mountain Bandit Cluster
 
@@ -535,6 +579,7 @@ Key: Mountain Bandit Cluster
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Holy Sword
+  Enable:     False
 ------------------------------------
 Key: Cultist
 
@@ -547,6 +592,7 @@ Key: Cultist
     List`1 (Count: 2)
       [0]:         Ritual
       [1]:         Inviolable
+  Enable:     False
 ------------------------------------
 Key: Crow
 
@@ -558,6 +604,7 @@ Key: Crow
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Ominous Feather
+  Enable:     False
 ------------------------------------
 Key: Mercenary Soldier
 
@@ -568,6 +615,7 @@ Key: Mercenary Soldier
   MaxHP:     3
   SkillIDList: 
     List`1 (Count: 0)
+  Enable:     False
 ------------------------------------
 Key: Mercenary Warrior
 
@@ -579,6 +627,7 @@ Key: Mercenary Warrior
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Relentless
+  Enable:     False
 ------------------------------------
 Key: Mercenary Shield Guard
 
@@ -590,6 +639,7 @@ Key: Mercenary Shield Guard
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Sturdy Shield
+  Enable:     False
 ------------------------------------
 Key: Mercenary Employer
 
@@ -601,6 +651,7 @@ Key: Mercenary Employer
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Overconfidence
+  Enable:     False
 ------------------------------------
 Key: Little Monkey
 
@@ -612,6 +663,7 @@ Key: Little Monkey
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Agile Ape
+  Enable:     False
 ------------------------------------
 Key: Wolf Cub
 
@@ -623,6 +675,7 @@ Key: Wolf Cub
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Nurture
+  Enable:     False
 ------------------------------------
 Key: Wolf
 
@@ -634,6 +687,7 @@ Key: Wolf
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Bloodlust
+  Enable:     False
 ------------------------------------
 Key: Wolf Mother
 
@@ -645,6 +699,7 @@ Key: Wolf Mother
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Wolf Grudge
+  Enable:     False
 ------------------------------------
 Key: Scarecrow1
 
@@ -656,6 +711,7 @@ Key: Scarecrow1
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Tutorial
+  Enable:     False
 ------------------------------------
 Key: Scarecrow2
 
@@ -667,6 +723,7 @@ Key: Scarecrow2
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Tutorial
+  Enable:     False
 ------------------------------------
 Key: Scarecrow3
 
@@ -678,6 +735,7 @@ Key: Scarecrow3
   SkillIDList: 
     List`1 (Count: 1)
       [0]:         Tutorial
+  Enable:     False
 ------------------------------------
 Key: Farmer
 
@@ -690,4 +748,5 @@ Key: Farmer
     List`1 (Count: 2)
       [0]:         Summon Scarecrow
       [1]:         Tutorial
+  Enable:     False
 ------------------------------------

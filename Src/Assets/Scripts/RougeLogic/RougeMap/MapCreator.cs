@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //产生Map
 public class MapCreator: MonoBehaviour
 {
+    private static GameObject PersistentMapRoot;
     //种子
     public int seed;
     //x方向单位和y方向单位
@@ -30,8 +32,36 @@ public class MapCreator: MonoBehaviour
     //生成地图
     public void Start()
     {
+        InitializePersistentMapRoot();
+        SetMapRootActive(SceneManager.GetActiveScene().name == "RougeMap");
+
+        // If map was already generated before scene switch, keep it.
+        if (MapRoot != null && MapRoot.transform.childCount > 0)
+            return;
+
         Random.InitState(seed);
         GenerateMap();
+    }
+    private void InitializePersistentMapRoot()
+    {
+        if (MapRoot == null)
+            return;
+
+        if (PersistentMapRoot != null && PersistentMapRoot != MapRoot)
+        {
+            Destroy(MapRoot);
+            MapRoot = PersistentMapRoot;
+            return;
+        }
+
+        PersistentMapRoot = MapRoot;
+        DontDestroyOnLoad(PersistentMapRoot);
+    }
+
+    public static void SetMapRootActive(bool isActive)
+    {
+        if (PersistentMapRoot != null)
+            PersistentMapRoot.SetActive(isActive);
     }
     private void Update()
     {
@@ -65,6 +95,8 @@ public class MapCreator: MonoBehaviour
         RoomsbyFloor = new();
         //生成起始房间
         Room firstRoom = CreateRoom(0, 0, 0, RoomID.StartRoom);
+        if (RougeManager.Instance != null)
+            RougeManager.Instance.SetCurrentRoom(firstRoom);
         List<Room> firstRooms = new() { firstRoom };
         RoomsbyFloor.Add(firstRooms);
         //生成发育路线

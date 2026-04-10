@@ -11,6 +11,7 @@ public class HeroDefine
     public string Description;
     public int MaxHP;
     public List<string> SkillIDList;
+    public bool Enable;
     
     // 默认构造函数供JSON反序列化使用
     public HeroDefine() { }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class RoomSelection : HoverableBase
 {
@@ -34,6 +35,16 @@ public class RoomSelection : HoverableBase
     {
         if (room == null)
             return;
+        if (RougeManager.Instance == null)
+            return;
+        if (!RougeManager.Instance.CanSelectRoom(room))
+        {
+            Debug.Log($"[RoomSelection] Room not selectable from current room. " +
+                $"Current RoomFloor = {RougeManager.Instance.CurrentRoom.floor} targetFloor={room.floor}");
+            return;
+        }
+
+        RougeManager.Instance.SetCurrentRoom(room);
 
         switch (room.roomID)
         {
@@ -42,7 +53,34 @@ public class RoomSelection : HoverableBase
             case RoomID.Boss:
                 EnterCombatRoom();
                 break;
+            case RoomID.Tavern:
+                EnterEventRoom(manager => manager.InitRecruitHero());
+                break;
+            case RoomID.SoulFountain:
+                EnterEventRoom(manager => manager.InitChooseCard());
+                break;
+            case RoomID.SacredCemetery:
+                EnterEventRoom(manager => manager.InitChooseRelic());
+                break;
+            case RoomID.Treasure:
+                EnterEventRoom(manager => manager.InitTreasureEvent());
+                break;
+            case RoomID.CurseFusion:
+                //EnterEventRoom(manager => manager.InitCurseFusion());
+                break;
         }
+    }
+
+    private static void EnterEventRoom(Action<EventManager> initEvent)
+    {
+        if (EventManager.Instance == null)
+        {
+            Debug.LogError("[RoomSelection] EventManager.Instance is null when entering event room.");
+            return;
+        }
+
+        EventManager.Instance.SetEvent();
+        initEvent?.Invoke(EventManager.Instance);
     }
 
     private void EnterCombatRoom()
@@ -113,9 +151,7 @@ public class RoomSelection : HoverableBase
 
     private static void LoadRougeScene(string sceneName)
     {
-        if (WorkingOn.Instance != null)
-            WorkingOn.Instance.LoadScene(sceneName);
-        else
-            SceneManager.LoadScene(sceneName);
+        MapCreator.SetMapRootActive(false);
+        WorkingOn.Instance.LoadScene(sceneName);
     }
 }

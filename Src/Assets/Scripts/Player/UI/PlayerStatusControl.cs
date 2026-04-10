@@ -73,7 +73,7 @@ public class PlayerStatusControl : MonoBehaviour
     {
         var p = GetPlayer();
         if (p == null) return;
-        p.status.resources.Sword.Get(p, 1);
+        p.status.resources.Sword.Get(1);
     }
 
     public void RemoveSword()
@@ -87,7 +87,7 @@ public class PlayerStatusControl : MonoBehaviour
     {
         var p = GetPlayer();
         if (p == null) return;
-        p.status.resources.Bullet.Get(p, 1);
+        p.status.resources.Bullet.Get(1);
     }
 
     public void RemoveBullet()

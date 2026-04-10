@@ -213,7 +213,7 @@ public class MnemosyneHand : Skill, IDeathHandler
             {
                 int stealSword = PlayerManager.Instance.HumanPlayer.status.resources.Sword.Value / 2;
                 PlayerManager.Instance.HumanPlayer.status.resources.Sword.Lost(stealSword);
-                self.status.resources.Sword.Get(self, stealSword);
+                self.status.resources.Sword.Get(stealSword);
             };
             thisPlayer.status.buffs.Apply(cocooned);
         }
@@ -304,7 +304,7 @@ public class DarkEmbrace : Skill, IPhaseEnterHandler
     {
         int number = PlayerManager.Instance.HumanPlayer.status.resources.Sword.Value;
         PlayerManager.Instance.HumanPlayer.status.resources.Sword.Lost(number);
-        thisPlayer.status.resources.Sword.Get(thisPlayer, number);
+        thisPlayer.status.resources.Sword.Get(number);
     }
     public void OnPhase(Phase phase, Player thisPlayer)
     {
