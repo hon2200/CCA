@@ -29,18 +29,16 @@ public class MapDesigner : MonoSingleton<MapDesigner>
     }
 
     // Initialize per-room-type weights used when drawing Bonus / Shop assignments.
-    // Scan the numeric bonus band; only values that exist on RoomID are added (e.g. 16 is skipped).
+    // Only use the configured bonus-event rooms for random bonus assignment.
     public void InitializeRoomProbabilityDic()
     {
         RoomProbabilityDic = new();
-        const int bonusPoolIdMin = 10;
-        const int bonusPoolIdMax = 19;
-        for (int v = bonusPoolIdMin; v <= bonusPoolIdMax; v++)
-        {
-            if (!Enum.IsDefined(typeof(RoomID), v))
-                continue;
-            RoomProbabilityDic[(RoomID)v] = 1f;
-        }
+        RoomProbabilityDic[RoomID.Tavern] = 1f;          // 11
+        RoomProbabilityDic[RoomID.SacredCemetery] = 1f;  // 12
+        RoomProbabilityDic[RoomID.SoulFountain] = 1f;    // 13
+        RoomProbabilityDic[RoomID.Shelter] = 1f;         // 14
+        RoomProbabilityDic[RoomID.CurseFusion] = 1f;     // 17
+        RoomProbabilityDic[RoomID.Treasure] = 1f;        // 18
     }
 
     // Assign room types for every floor except the start room (index 0).

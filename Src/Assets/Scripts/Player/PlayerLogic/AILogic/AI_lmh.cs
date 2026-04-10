@@ -312,7 +312,6 @@ public class AI_lmh
     {
         // 创建带权重和可用行动数量的类别列表
         List<(ActionType actionType, float weight, int availableCount)> weightedCategories = new List<(ActionType, float, int)>();
-
         foreach (ActionType actionType in Enum.GetValues(typeof(ActionType)))
         {
             if(actionType == ActionType.Origin)
