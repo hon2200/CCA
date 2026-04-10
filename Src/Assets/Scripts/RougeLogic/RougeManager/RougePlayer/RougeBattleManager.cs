@@ -21,6 +21,28 @@ public class RougeBattleManager : MonoBehaviour
 
     public TMP_Text CurrentHeroName;
 
+    [Header(" §¿˚“Ù–ß")] 
+    public AudioClip victorySound; 
+    [Range(0f, 1f)] public float victoryVolume = 0.6f;
+
+    [Header(" ß∞‹“Ù–ß")]
+    public AudioClip defeatSound;
+    [Range(0f, 1f)] public float defeatVolume = 0.8f;
+
+    [Header("Button to return to the Main Menu")]
+    public Button ToMainMenuButton;
+
+    private AudioSource audioSource; 
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+            OnBattleWinning();
+
+        if (Input.GetKeyDown(KeyCode.CapsLock))
+            OnBattleDefeated();
+    }
+
     void Awake()
     {
         if (rewardPanel != null)
@@ -31,7 +53,28 @@ public class RougeBattleManager : MonoBehaviour
         {
             ToMapButton.gameObject.SetActive(true);
             ToMapButton.onClick.AddListener(OnToMapButtonClicked);
+            ToMapButton.onClick.AddListener(DisableRewardPanel);
         }
+
+        if (ToMainMenuButton != null)
+        {
+            ToMainMenuButton.gameObject.SetActive(true);
+            ToMainMenuButton.onClick.AddListener(OnToMainMenuButtonClicked);
+            ToMainMenuButton.onClick.AddListener(DisableDefeatPanel);
+        }
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
+    }
+    private void DisableRewardPanel()
+    {
+        rewardPanel.SetActive(false);
+    }
+
+    private void DisableDefeatPanel()
+    {
+        defeatPanel.SetActive(false);
     }
 
     void Start()
@@ -39,6 +82,24 @@ public class RougeBattleManager : MonoBehaviour
         BattleManager.Instance.OnDefeated += OnBattleDefeated;
         BattleManager.Instance.OnWinning += OnBattleWinning;
         UpdateCurrentHeroNameText();
+    }
+
+    void PlayVictorySound()
+    {
+        if (victorySound == null || audioSource == null) return;
+
+        audioSource.clip = victorySound;
+        audioSource.volume = victoryVolume;
+        audioSource.Play();
+    }
+
+    void PlayDefeatSound()
+    {
+        if (victorySound == null || audioSource == null) return;
+
+        audioSource.clip = defeatSound;
+        audioSource.volume = defeatVolume;
+        audioSource.Play();
     }
 
     void OnDestroy()
@@ -53,12 +114,16 @@ public class RougeBattleManager : MonoBehaviour
     {
         if (defeatPanel != null)
             defeatPanel.SetActive(true);
+
+        PlayDefeatSound();
     }
 
     void OnBattleWinning()
     {
         if (rewardPanel != null)
             rewardPanel.SetActive(true);
+
+        PlayVictorySound();
     }
 
     void OnToMapButtonClicked()
@@ -69,6 +134,16 @@ public class RougeBattleManager : MonoBehaviour
             WorkingOn.Instance.LoadScene(mapSceneName);
         else
             SceneManager.LoadScene(mapSceneName);
+    }
+
+    void OnToMainMenuButtonClicked()
+    {
+        const string MainMenuSceneName = "Main Menu (Desktop)";
+        MapCreator.SetMapRootActive(true);
+        if (WorkingOn.Instance != null)
+            WorkingOn.Instance.LoadScene(MainMenuSceneName);
+        else
+            SceneManager.LoadScene(MainMenuSceneName);
     }
 
     public void OnSwitchingHero()

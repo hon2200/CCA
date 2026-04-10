@@ -34,6 +34,8 @@ public class TutorialManager : MonoSingleton<TutorialManager>
             AdvanceButton.onClick.AddListener(Advance);
 
         LevelStart();
+        
+
     }
 
     void OnDestroy()
