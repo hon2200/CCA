@@ -88,6 +88,10 @@ public class Player : MonoBehaviour
             return;
         this.hero = hero;
         hero.SetSkillOwners(this);
+        foreach(var skill in hero.skills)
+        {
+            skill.OnSetHero();
+        }
         status.MaxHP = hero.MaxHP;
         status.HP.Set(hero.CurrentHP.Value);
         playerUIText?.UpdateSkillText();
@@ -100,6 +104,10 @@ public class Player : MonoBehaviour
         if (ReferenceEquals(this.hero, hero))
             return;
         Hero oldHero = this.hero;
+        foreach(var skill in oldHero.skills)
+        {
+            skill.OnDisabled();
+        }
         if (oldHero != null)
         {
             oldHero.CurrentHP.Set(status.HP.Value);

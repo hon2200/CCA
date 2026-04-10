@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
-  m_Name: Bronze Guardian
+  m_Name: Wolf Cub
   m_EditorClassIdentifier: 
-  ID: Bronze Guardian
-  image: {fileID: 21300000, guid: 2ec754a37b925384ba773915b6cb2eba, type: 3}
+  ID: Wolf Cub
+  image: {fileID: 21300000, guid: 31de7386cf678ec49ae0832c2307025a, type: 3}

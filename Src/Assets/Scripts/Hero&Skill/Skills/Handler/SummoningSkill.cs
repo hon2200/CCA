@@ -6,7 +6,7 @@ using UnityEngine;
 /// </summary>
 public abstract class SummoningSkill : EnemySkill
 {
-    public SummoningSkill(string id, Player owner = null) : base(id, owner) { CDProgress = 1; }
+    public SummoningSkill(string id, Player owner = null) : base(id, owner) {}
 
     /// <summary>
     /// Summons a player by hero ID. Resolves the hero from HeroDataBase and adds it as an enemy AI via PlayerManager.AddPlayer.

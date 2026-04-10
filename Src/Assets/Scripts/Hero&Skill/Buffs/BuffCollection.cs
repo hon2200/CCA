@@ -8,7 +8,9 @@ public class Stunned : Buff, IPhaseEnterHandler
 {
     public Stunned(int duration, Player attacker, Player victim) : base("Stunned", duration, true, victim)
     {
-        foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+        var relics = RougeManager.Instance?.rougePlayer?.Relics;
+        if (relics != null)
+        foreach(var relic in relics)
         {
             if(relic is IStunningHandler stunRelic)
             {

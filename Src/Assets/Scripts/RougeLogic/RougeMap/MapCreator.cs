@@ -39,6 +39,7 @@ public class MapCreator: MonoBehaviour
         if (MapRoot != null && MapRoot.transform.childCount > 0)
             return;
 
+        RefreshSeed();
         Random.InitState(seed);
         GenerateMap();
     }
@@ -74,8 +75,15 @@ public class MapCreator: MonoBehaviour
     public void RegenerateMap()
     {
         ClearGeneratedMap();
+        RefreshSeed();
         Random.InitState(seed);
         GenerateMap();
+    }
+
+    private void RefreshSeed()
+    {
+        // Generate a fresh seed each time map generation starts.
+        seed = System.Environment.TickCount ^ UnityEngine.Random.Range(int.MinValue, int.MaxValue);
     }
 
     private void ClearGeneratedMap()

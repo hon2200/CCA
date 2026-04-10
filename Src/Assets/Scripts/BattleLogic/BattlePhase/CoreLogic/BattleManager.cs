@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TMPro;
+using UnityEngine.Rendering;
 
 class BattleManager: MonoSingleton<BattleManager>
 {
@@ -18,6 +19,11 @@ class BattleManager: MonoSingleton<BattleManager>
     private List<Phase> PhaseList { get; set; }
     private int CurrentPhaseIndex { get; set; }
     private bool initailized = false;
+
+    void Start()
+    {
+        Turn = new();
+    }
     private void Initialize()
     {
         if(!initailized)

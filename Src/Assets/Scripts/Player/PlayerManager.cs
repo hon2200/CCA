@@ -227,7 +227,8 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         };
 
         var humanPlayer = AddPlayer(isFriend: true, isHuman: true, humanHeroDefine);
-        humanPlayer.SetHero(RougeManager.Instance.rougePlayer.Heroes[0]);
+        if (rougePlayer?.Heroes != null && rougePlayer.Heroes.Count > 0)
+            humanPlayer.SetHero(rougePlayer.Heroes[0]);
 
         if (pickedFight.Enemies != null)
         {

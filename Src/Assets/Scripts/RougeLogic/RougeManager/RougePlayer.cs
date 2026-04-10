@@ -319,6 +319,7 @@ public class RougePlayer
             return false;
 
         Relics.Add(relic, "GetRelic");
+        RefreshRelicPanelText();
         return true;
     }
 
@@ -330,7 +331,10 @@ public class RougePlayer
         if (Relics == null || relic == null)
             return false;
 
-        return Relics.Remove(relic, "LoseRelic");
+        bool removed = Relics.Remove(relic, "LoseRelic");
+        if (removed)
+            RefreshRelicPanelText();
+        return removed;
     }
 
     /// <summary>
@@ -355,6 +359,12 @@ public class RougePlayer
             return false;
 
         return LoseRelic(target);
+    }
+
+    private static void RefreshRelicPanelText()
+    {
+        if (RelicControlPanel.Instance != null)
+            RelicControlPanel.Instance.RefreshText();
     }
 
     #endregion

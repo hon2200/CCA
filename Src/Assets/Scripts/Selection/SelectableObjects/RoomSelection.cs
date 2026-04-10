@@ -54,7 +54,6 @@ public class RoomSelection : HoverableBase
                 EnterCombatRoom();
                 break;
             case RoomID.Tavern:
-                EnterEventRoom(manager => manager.InitRecruitHero());
                 break;
             case RoomID.SoulFountain:
                 EnterEventRoom(manager => manager.InitChooseCard());

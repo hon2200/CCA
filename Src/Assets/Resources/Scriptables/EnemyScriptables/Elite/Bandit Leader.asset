@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
-  m_Name: Mercenary Warrior
+  m_Name: Bandit Leader
   m_EditorClassIdentifier: 
-  ID: Mercenary Warrior
-  image: {fileID: 0}
+  ID: Bandit Leader
+  image: {fileID: 21300000, guid: 6e650f99cb4365243974d498e7240556, type: 3}

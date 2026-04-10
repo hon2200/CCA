@@ -297,26 +297,12 @@ public class CloneTechnique : SummoningSkill, IDeathHandler
     }
 }
 
-public class Nurture : SummoningSkill, IPhaseEnterHandler, IDeathHandler
+public class Nurture : TransformingSkill, IPhaseEnterHandler
 {
-    public Nurture() : base("Nurture") { }
+    public Nurture() : base("Nurture") { CDProgress = CD; }
     protected override void Envoke()
     {
-        // Sacrifice self after successful summon.
-        Owner.status.HP.Damage(Owner.status.HP.Value + 999, Owner, Owner, null);
-    }
-
-    public bool OnDeath(Player thisPlayer)
-    {
-        // Summoned wolf inherits the owner's current resources.
-        var inheritedResources = new List<int>
-        {
-            Owner.status.resources.Bullet.Value,
-            Owner.status.resources.Sword.Value,
-            0
-        };
-        var wolf = Summon("Wolf", inheritedResources);
-            return false;
+        Transform("Wolf");
     }
     public void OnPhase(Phase phase)
     {
@@ -623,7 +609,7 @@ public class MountainCrusherEnemy : EnemySkill, IPhaseEnterHandler
         }
     }
 
-    protected override void OnDisabled()
+    public override void OnDisabled()
     {
         if (Owner != null && _mountainCrusherDmgBuff != null)
         {
@@ -723,7 +709,7 @@ public class AgileApe : EnemySkill, IPhaseEnterHandler
             Owner.status.buffs.Apply(new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second));
         }
     }
-    protected override void OnDisabled()
+    public override void OnDisabled()
     {
         Owner.status.buffs.Apply(new DamagingOperator(1 / 3f, Owner, BuffOperator.StepSlot.Second));
     }

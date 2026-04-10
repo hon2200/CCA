@@ -24,8 +24,12 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
 
     public void Initialize()
     {
-        RougeManager.Instance.rougePlayer.Heroes.OnListChanged += (List<Hero> newHeroes, string message)
-            => { BuildRougeHeroDropDown(); };
+        var heroes = RougeManager.Instance?.rougePlayer?.Heroes;
+        if (heroes != null)
+        {
+            heroes.OnListChanged += (List<Hero> newHeroes, string message)
+                => { BuildRougeHeroDropDown(); };
+        }
         BuildRougeHeroDropDown();
         GoldTextInit();
 
@@ -65,11 +69,15 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
     }
     private void GoldTextInit()
     {
-        RougeManager.Instance.rougePlayer.gold.OnValueChanged += (int oldVal, int newVal, string message)=>
+        var gold = RougeManager.Instance?.rougePlayer?.gold;
+        if (gold == null)
+            return;
+
+        gold.OnValueChanged += (int oldVal, int newVal, string message)=>
         {
             GoldText.text = newVal.ToString();
         };
-        GoldText.text = RougeManager.Instance.rougePlayer.gold.Value.ToString();
+        GoldText.text = gold.Value.ToString();
     }
 
     public void BuildRougeHeroDropDown()

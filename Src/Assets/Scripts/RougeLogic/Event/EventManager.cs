@@ -28,17 +28,6 @@ public class EventManager : MonoSingleton<EventManager>
     {
         AdvanceButton.onClick.AddListener(Advance);
     }
-    public void Update()
-    {
-        if (Input.GetMouseButtonDown(2))
-        {
-            SetEvent();
-            //InitRecruitHero();
-            //InitChooseCard();
-            //InitChooseRelic();
-            InitCurseFusionEvent();
-        }
-    }
     public void Init(EventDefine eventDefine)
     {
         ClearOptionButtons();

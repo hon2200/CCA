@@ -30,7 +30,8 @@ public class Room : MonoBehaviour
 
     private void Update()
     {
-        if (RougeManager.Instance.CurrentRoom.NextNodes.Contains(this))
+        var currentRoom = RougeManager.Instance?.CurrentRoom;
+        if (currentRoom?.NextNodes != null && currentRoom.NextNodes.Contains(this))
         {
             float pulse = 1f + Mathf.Sin(Time.time * selectablePulseSpeed + selectablePulsePhase) * selectablePulseAmplitude;
             transform.localScale = baseScale * pulse;

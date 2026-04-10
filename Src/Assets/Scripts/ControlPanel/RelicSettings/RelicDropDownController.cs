@@ -38,7 +38,9 @@ public class RelicDropDownController : MonoBehaviour
         if (string.IsNullOrEmpty(CurrentRelicID)) return;
 
         
-        var rougePlayer = RougeManager.Instance.rougePlayer;
+        var rougePlayer = RougeManager.Instance?.rougePlayer;
+        if (rougePlayer == null)
+            return;
 
         if (rougePlayer.Relics != null && rougePlayer.Relics.Count >= 10) return;
 

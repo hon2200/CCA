@@ -36,7 +36,7 @@ public abstract class SkillDefine
         Costs = Costs ?? new List<int> { 0, 0, 0 };
     }
     //当这个技能失去或者禁用的时候调用
-    protected virtual void OnDisabled()
+    public virtual void OnDisabled()
     {
 
     }
@@ -143,6 +143,12 @@ public abstract class SkillDefine
         var clone = (SkillDefine)Activator.CreateInstance(type);
         Copy(clone);
         return clone;
+    }
+
+    //Envoke when setting Hero
+    public virtual void OnSetHero()
+    {
+
     }
 }
 

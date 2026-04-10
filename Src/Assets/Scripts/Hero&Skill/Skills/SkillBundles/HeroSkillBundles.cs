@@ -46,7 +46,7 @@ public class TripleTributeOath : HeroSkill, IPhaseEnterHandler
     }
 }
 
-public class DecadeDominance : HeroSkill, IPhaseEnterHandler
+public class DecadeDominance : HeroSkill
 {
     private DamagingOperator _decadeDominanceBuff;
     private bool _isUsed;
@@ -55,18 +55,15 @@ public class DecadeDominance : HeroSkill, IPhaseEnterHandler
 
     protected override void Envoke() { }
 
-    public void OnPhase(Phase phase)
+    public override void OnSetHero()
     {
-        if (phase is not StartPhase || _isUsed || Owner == null)
-            return;
-
         float multiplier = Mathf.Max(1f, Owner.status.HP.Value / 10f);
         _decadeDominanceBuff = new DamagingOperator(multiplier, Owner, BuffOperator.StepSlot.Second);
         Owner.status.buffs.Apply(_decadeDominanceBuff);
         _isUsed = true;
     }
 
-    protected override void OnDisabled()
+    public override void OnDisabled()
     {
         if (Owner != null && _decadeDominanceBuff != null)
         {
@@ -81,7 +78,7 @@ public class ThespianCurse : HeroSkill
     public ThespianCurse() : base("Thespian's Curse") { }
 }
 
-public class MountainCrusher : HeroSkill, IPhaseEnterHandler
+public class MountainCrusher : HeroSkill
 {
     private DamagingOperator _mountainCrusherDmgBuff;
     bool isUsed = false;
@@ -89,17 +86,14 @@ public class MountainCrusher : HeroSkill, IPhaseEnterHandler
     public MountainCrusher() : base("Mountain Crusher") { }
     protected override void Envoke() { }
 
-    public void OnPhase(Phase phase)
+    public override void OnSetHero()
     {
-        if (phase is StartPhase && !isUsed)
-        {
-            _mountainCrusherDmgBuff = new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second);
-            Owner.status.buffs.Apply(_mountainCrusherDmgBuff);
-            isUsed = true;
-        }
+        _mountainCrusherDmgBuff = new DamagingOperator(3, Owner, BuffOperator.StepSlot.Second);
+        Owner.status.buffs.Apply(_mountainCrusherDmgBuff);
+        isUsed = true;
     }
 
-    protected override void OnDisabled()
+    public override void OnDisabled()
     {
         if (Owner != null && _mountainCrusherDmgBuff != null)
         {

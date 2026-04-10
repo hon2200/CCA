@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df6c9dd974b1e7498c55045b6a17de4, type: 3}
-  m_Name: Bandit Leader
+  m_Name: Wolf Mother
   m_EditorClassIdentifier: 
-  ID: Bandit Leader
-  image: {fileID: 21300000, guid: 8f473c4870560ad44bef609df426881e, type: 3}
+  ID: Wolf Mother
+  image: {fileID: 21300000, guid: 90d17997edf4b324d91c156b7971ff0f, type: 3}

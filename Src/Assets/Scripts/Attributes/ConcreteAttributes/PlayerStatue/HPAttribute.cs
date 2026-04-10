@@ -15,6 +15,14 @@ public class HPAttribute : ObservableAttribute<int>
     public void Damage(int amount, Player attacker , Player victim, AttackDefine attack)
     {
         PrintEvent.Instance.LogDamage(attacker, victim, amount);
+        foreach(var buff in attacker.status.buffs)
+        {
+            if(buff is IDamagingHandler damageBuff)
+            {
+                damageBuff.OnDamaging(attacker, victim, amount, out var finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
+            }
+        }
         foreach (var skill in attacker.hero.skills)
         {
             if (skill is IDamagingHandler triggerSkill)
@@ -23,7 +31,9 @@ public class HPAttribute : ObservableAttribute<int>
                 amount = Mathf.Max(finalDamage, 0);
             }
         }
-        foreach (var relic in RougeManager.Instance.rougePlayer.Relics)
+        var relics = RougeManager.Instance?.rougePlayer?.Relics;
+        if (relics != null)
+        foreach (var relic in relics)
         {
             if (relic is IDamagingHandler triggerRelic)
             {
@@ -39,11 +49,20 @@ public class HPAttribute : ObservableAttribute<int>
                 amount = Mathf.Max(finalDamage, 0);
             }
         }
-        foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+        if (relics != null)
+        foreach(var relic in relics)
         {
             if(relic is IDamagedHandler triggerRelic)
             {
                 triggerRelic.OnDamaged(attacker, victim, amount, out int finalDamage);
+                amount = Mathf.Max(finalDamage, 0);
+            }
+        }
+        foreach (var buff in victim.status.buffs)
+        {
+            if (buff is IDamagedHandler damageBuff)
+            {
+                damageBuff.OnDamaged(attacker, victim, amount, out var finalDamage);
                 amount = Mathf.Max(finalDamage, 0);
             }
         }

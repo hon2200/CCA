@@ -59,6 +59,7 @@ public class ResolutionPhase : Phase
     public void KnockofDeath()
     {
         var playersSnapshot = PlayerManager.Instance.Players.Values.ToList();
+        var relics = RougeManager.Instance?.rougePlayer?.Relics;
 
         foreach (var player in playersSnapshot)
         {
@@ -78,7 +79,8 @@ public class ResolutionPhase : Phase
                         }
                     }
                 }
-                foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+                if (relics != null)
+                foreach(var relic in relics)
                 {
                     if(relic is IDeathHandler deathRelic)
                     {
@@ -104,7 +106,8 @@ public class ResolutionPhase : Phase
                                 if (skill is IOnKillHandler killH)
                                     killH.OnKill(killer, player);
                             }
-                            foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+                            if (relics != null)
+                            foreach(var relic in relics)
                             {
                                 if(relic is IOnKillHandler killR)
                                     killR.OnKill(killer,player);
@@ -120,12 +123,14 @@ public class ResolutionPhase : Phase
     }
     public void CheckofDeath()
     {
+        var rougePlayer = RougeManager.Instance?.rougePlayer;
         foreach (var player in PlayerManager.Instance.Players.Values)
         {
             if (player.status.life.Value == LifeStatus.Death && player.playerType == PlayerType.Human)
             {
                 //强制换人：正常换人会在行动阶段进行。
-                foreach(var hero in RougeManager.Instance.rougePlayer.Heroes)
+                if (rougePlayer?.Heroes != null)
+                foreach(var hero in rougePlayer.Heroes)
                 {
                     if(hero.CurrentHP.Value != 0)
                     {
@@ -134,7 +139,8 @@ public class ResolutionPhase : Phase
                     }
                 }
                 BattleManager.Instance.OnDefeated.Invoke();
-                foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+                if (rougePlayer?.Relics != null)
+                foreach(var relic in rougePlayer.Relics)
                 {
                     if(relic is IBattleEndHandler end)
                     {

@@ -7,13 +7,25 @@ public class CameraScroll : MonoBehaviour
     public float scrollSpeed = 10f; // 滚轮控制速度
     public float minZoom = 5f; // 最小摄像机视野
     public float maxZoom = 20f; // 最大摄像机视野
+    [SerializeField] private Transform relicPanel; // 跟随摄像机移动的遗物面板
 
     private float originalSize;
+    private Vector3 relicPanelOffset;
 
     void Start()
     {
         // 获取摄像机原始的视野大小（根据需求，可以使用orthographicSize来控制2D摄像机）
         originalSize = camera.orthographicSize;
+
+        if (relicPanel == null && RelicDisplay.Instance != null)
+        {
+            relicPanel = RelicDisplay.Instance.transform;
+        }
+
+        if (relicPanel != null)
+        {
+            relicPanelOffset = relicPanel.position - camera.transform.position;
+        }
     }
 
     void Update()
@@ -36,6 +48,12 @@ public class CameraScroll : MonoBehaviour
 
         // 更新摄像机位置
         camera.transform.position = cameraPosition;
+
+        // 让遗物面板和摄像机一起移动（保持初始相对偏移）
+        if (relicPanel != null)
+        {
+            relicPanel.position = camera.transform.position + relicPanelOffset;
+        }
 
         // 可以按键或鼠标拖动来手动移动摄像机（可选）- 仅沿 Y 轴移动
         if (Input.GetMouseButton(1))  // 右键按下时

@@ -225,7 +225,7 @@ public class MorticianLicense : RelicDefine, IBattleEndHandler, IDeathHandler
     }
     public void OnBattleEnd(Player player = null)
     {
-        RougeManager.Instance.rougePlayer.gold.GetGold(counts[0]);
+        RougeManager.Instance?.rougePlayer?.gold?.GetGold(counts[0]);
         counts[0] = 0;
     }
 }
@@ -235,7 +235,9 @@ public class TaieAlchemyFurnace : RelicDefine
     public TaieAlchemyFurnace() : base("Taie's Alchemy Furnace") { }
     public override void OnPickup()
     {
-        RougeManager.Instance.rougePlayer.PotionMax += 2;
+        var rougePlayer = RougeManager.Instance?.rougePlayer;
+        if (rougePlayer != null)
+            rougePlayer.PotionMax += 2;
     }
 }
 

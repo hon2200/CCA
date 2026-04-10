@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -71,7 +71,11 @@ class ActionPhase : Phase
                 }
             }
         }
-        foreach(var relic in RougeManager.Instance.rougePlayer.Relics)
+        var relics = RougeManager.Instance?.rougePlayer?.Relics;
+        if (relics == null)
+            return;
+
+        foreach(var relic in relics)
         {
             if (relic is IActionModifier actionRelic)
             {
