@@ -28,6 +28,11 @@ public class EventManager : MonoSingleton<EventManager>
     {
         AdvanceButton.onClick.AddListener(Advance);
     }
+
+    //private void Start()
+    //{
+    //    InitChooseRelic();
+    //}
     public void Init(EventDefine eventDefine)
     {
         ClearOptionButtons();
