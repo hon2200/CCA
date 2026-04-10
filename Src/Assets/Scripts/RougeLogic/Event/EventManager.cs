@@ -17,6 +17,7 @@ public class EventManager : MonoSingleton<EventManager>
     [SerializeField] private Button AdvanceButton;
     [SerializeField] private SerializedDictionary<string, Sprite> EventBackGroundDic;
     [SerializeField] private SpriteRenderer EventBackground;
+    public Transform EventBackgroundTransform => EventBackground != null ? EventBackground.transform : null;
 
     [Header("Curse Fusion (optional)")]
     [SerializeField] private Button curseFusionConfirmButton;

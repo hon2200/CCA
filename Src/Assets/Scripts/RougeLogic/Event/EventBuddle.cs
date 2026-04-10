@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class RecruitHero : EventDefine
 {
-    private readonly Dictionary<string, HeroDefine> recruitableByName = new Dictionary<string, HeroDefine>();
+    private readonly Dictionary<string, string> recruitableHeroIdByOption = new Dictionary<string, string>();
 
     public RecruitHero() : base("Tavern") { }
 
@@ -19,7 +19,7 @@ public class RecruitHero : EventDefine
     private void BuildRecruitOptions()
     {
         Options = new List<string>();
-        recruitableByName.Clear();
+        recruitableHeroIdByOption.Clear();
 
         var heroDb = HeroDataBase.Instance?.HeroDictionary;
         var rougePlayer = RougeManager.Instance?.rougePlayer;
@@ -48,10 +48,10 @@ public class RecruitHero : EventDefine
 
             // Keep option labels unique even if two heroes share the same display name.
             string optionName = picked.Name;
-            if (recruitableByName.ContainsKey(optionName))
+            if (recruitableHeroIdByOption.ContainsKey(optionName))
                 optionName = $"{picked.Name} ({picked.ID})";
 
-            recruitableByName[optionName] = picked;
+            recruitableHeroIdByOption[optionName] = picked.ID;
             Options.Add(optionName);
         }
     }
@@ -61,7 +61,10 @@ public class RecruitHero : EventDefine
         if (string.IsNullOrEmpty(option))
             return;
 
-        if (!recruitableByName.TryGetValue(option, out var heroDefine) || heroDefine == null)
+        if (!recruitableHeroIdByOption.TryGetValue(option, out var heroId) || string.IsNullOrEmpty(heroId))
+            return;
+
+        if (!HeroDataBase.Instance.HeroDictionary.TryGetValue(heroId, out var heroDefine) || heroDefine == null)
             return;
 
         RougeManager.Instance?.rougePlayer?.RecruitHero(heroDefine);
@@ -70,7 +73,7 @@ public class RecruitHero : EventDefine
 
 public class ChooseRelic : EventDefine
 {
-    private readonly Dictionary<string, RelicDefine> relicByOption = new Dictionary<string, RelicDefine>();
+    private readonly Dictionary<string, string> relicIdByOption = new Dictionary<string, string>();
 
     public ChooseRelic() : base("SacredCemetery") { }
 
@@ -83,7 +86,7 @@ public class ChooseRelic : EventDefine
     private void BuildRelicOptions()
     {
         Options = new List<string>();
-        relicByOption.Clear();
+        relicIdByOption.Clear();
 
         var relicDb = RelicDatabase.Instance?.RelicDictionary;
         var rougePlayer = RougeManager.Instance?.rougePlayer;
@@ -112,10 +115,10 @@ public class ChooseRelic : EventDefine
             candidates.RemoveAt(index);
 
             string optionName = picked.Name;
-            if (relicByOption.ContainsKey(optionName))
+            if (relicIdByOption.ContainsKey(optionName))
                 optionName = $"{picked.Name} ({picked.ID})";
 
-            relicByOption[optionName] = picked;
+            relicIdByOption[optionName] = picked.ID;
             Options.Add(optionName);
         }
     }
@@ -124,7 +127,11 @@ public class ChooseRelic : EventDefine
     {
         if (string.IsNullOrEmpty(option))
             return;
-        if (!relicByOption.TryGetValue(option, out var relic) || relic == null)
+        if (!relicIdByOption.TryGetValue(option, out var relicId) || string.IsNullOrEmpty(relicId))
+            return;
+
+        var relic = RelicDatabase.Instance?.GetRelic(relicId);
+        if (relic == null)
             return;
 
         RougeManager.Instance?.rougePlayer?.GetRelic(relic, allowDuplicate: false);
@@ -133,7 +140,7 @@ public class ChooseRelic : EventDefine
 
 public class ChooseCard : EventDefine
 {
-    private readonly Dictionary<string, ActionDefine> cardByOption = new Dictionary<string, ActionDefine>();
+    private readonly Dictionary<string, string> cardIdByOption = new Dictionary<string, string>();
 
     public ChooseCard() : base("SoulFountain") { }
 
@@ -146,7 +153,7 @@ public class ChooseCard : EventDefine
     private void BuildCardOptions()
     {
         Options = new List<string>();
-        cardByOption.Clear();
+        cardIdByOption.Clear();
 
         var actionDb = ActionDataBase.Instance?.ActionDictionary;
         var rougePlayer = RougeManager.Instance?.rougePlayer;
@@ -176,10 +183,10 @@ public class ChooseCard : EventDefine
             candidates.RemoveAt(index);
 
             string optionName = picked.Name;
-            if (cardByOption.ContainsKey(optionName))
+            if (cardIdByOption.ContainsKey(optionName))
                 optionName = $"{picked.Name} ({picked.ID})";
 
-            cardByOption[optionName] = picked;
+            cardIdByOption[optionName] = picked.ID;
             Options.Add(optionName);
         }
     }
@@ -188,7 +195,11 @@ public class ChooseCard : EventDefine
     {
         if (string.IsNullOrEmpty(option))
             return;
-        if (!cardByOption.TryGetValue(option, out var action) || action == null)
+        if (!cardIdByOption.TryGetValue(option, out var actionId) || string.IsNullOrEmpty(actionId))
+            return;
+
+        if (ActionDataBase.Instance?.ActionDictionary == null ||
+            !ActionDataBase.Instance.ActionDictionary.TryGetValue(actionId, out var action) || action == null)
             return;
 
         RougeManager.Instance?.rougePlayer?.AddAction(action.ID);
