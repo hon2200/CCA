@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RougeMap.unity
     guid: c9b50f83a87e5f046b3c63d8216dd4ec
+  - enabled: 1
+    path: Assets/Scenes/Bonus Room/SoulFountain.unity
+    guid: cb19445e54fb62240be06d55b1170446
+  - enabled: 1
+    path: Assets/Scenes/Bonus Room/Tavern.unity
+    guid: 833e86fd8f9355a478dae7f145fcb8d2
+  - enabled: 1
+    path: Assets/Scenes/Bonus Room/SacredCemetery.unity
+    guid: 81738491993f93b4190344b79607d9b2
   m_configObjects: {}
