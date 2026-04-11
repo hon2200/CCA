@@ -30,10 +30,14 @@ public class EventManager : MonoSingleton<EventManager>
         AdvanceButton.onClick.AddListener(Advance);
     }
 
-    //private void Start()
-    //{
-    //    InitChooseRelic();
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            SetEvent();
+            InitChooseRelic();
+        }
+    }
     public void Init(EventDefine eventDefine)
     {
         ClearOptionButtons();
