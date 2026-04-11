@@ -1,4 +1,4 @@
-Dict 内容 (Count: 18)
+Dict 内容 (Count: 16)
 ====================================
 Key: 1-3
 
@@ -78,28 +78,6 @@ Key: 1-10
   Enemies: 
     List`1 (Count: 1)
       [0]:         Crow
-  GoldReward:     20
-  Type:     Minion
-------------------------------------
-Key: 1-11
-
-  ID:     1-11
-  Enemies: 
-    List`1 (Count: 3)
-      [0]:         Little Monkey
-      [1]:         Little Monkey
-      [2]:         Little Monkey
-  GoldReward:     20
-  Type:     Minion
-------------------------------------
-Key: 1-12
-
-  ID:     1-12
-  Enemies: 
-    List`1 (Count: 3)
-      [0]:         Little Monkey
-      [1]:         Wolf Cub
-      [2]:         Wolf Cub
   GoldReward:     20
   Type:     Minion
 ------------------------------------

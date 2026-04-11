@@ -44,5 +44,13 @@
             "开始融合"
         ],
         "Description": "融合你的英雄"
+    },
+    "Shelter": {
+        "ID": "Shelter",
+        "Name": "庇护所",
+        "Options": [
+            "休息"
+        ],
+        "Description": "在此地休息，为所有英雄回复体力"
     }
 }

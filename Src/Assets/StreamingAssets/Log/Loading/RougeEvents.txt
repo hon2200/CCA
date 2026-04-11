@@ -1,4 +1,4 @@
-Dict 内容 (Count: 5)
+Dict 内容 (Count: 6)
 ====================================
 Key: Tavern
 
@@ -54,5 +54,15 @@ Key: CurseFusion
     List`1 (Count: 1)
       [0]:         开始融合
   Description:     融合你的英雄
+  NextEvent:     null
+------------------------------------
+Key: Shelter
+
+  ID:     Shelter
+  Name:     庇护所
+  Options: 
+    List`1 (Count: 1)
+      [0]:         休息
+  Description:     在此地休息，为所有英雄回复体力
   NextEvent:     null
 ------------------------------------

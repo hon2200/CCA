@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 /// <summary>
 /// UI bridge for selecting hero IDs into RougePlayer and spawning a matching hero prefab.
@@ -15,10 +14,7 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
 
     [Header("UI")]
     [SerializeField] private TMP_Dropdown heroDropdown;
-    [SerializeField] private List<Button> SkillButtons;
-    [SerializeField] private GameObject SkillButtonPrefab;
-    [SerializeField] private GameObject SkillButtonPanel;
-    [SerializeField] private float SkillButtonSpacing = 20f;
+    [SerializeField] private TMP_Text SkillNameText;
     [SerializeField] private TMP_Text SkillText;
     [SerializeField] private TMP_Text HPText;
     [SerializeField] private TMP_Text GoldText;
@@ -26,6 +22,9 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
     [SerializeField] private GameObject HeroPanel;
 
     private string currentHeroID;
+
+    private List<SkillDefine> _currentHeroSkills;
+    private int _currentSkillIndex;
 
     private GoldAttribute _boundGold;
     private Action<int, int, string> _onGoldChanged;
@@ -208,38 +207,83 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
 
         if (selectedIndex <= 0)
         {
-            ClearSkillButtonPanel();
+            ClearSkillDisplay();
             if (HPText != null)
                 HPText.text = "";
-            if (SkillText != null)
-                SkillText.text = "";
             return;
         }
 
         if (heroDropdown.options[selectedIndex] is not RougeHeroOptionData opt || opt.HeroDefine == null)
         {
-            ClearSkillButtonPanel();
+            ClearSkillDisplay();
             if (HPText != null)
                 HPText.text = "";
-            if (SkillText != null)
-                SkillText.text = "";
             return;
         }
 
         currentHeroID = opt.HeroDefine.ID;
 
-        var skills = GetSkillsFromOption(opt);
-        RebuildSkillButtons(skills);
+        _currentHeroSkills = GetSkillsFromOption(opt);
+        _currentSkillIndex = 0;
         UpdateHpTextFromOption(opt);
+        ApplySkillAtCurrentIndex();
 
+    }
+
+    /// <summary>Cycles to the next skill for the selected hero and refreshes name/description.</summary>
+    public void NextSkill()
+    {
+        if (_currentHeroSkills == null || _currentHeroSkills.Count == 0)
+            return;
+        _currentSkillIndex = (_currentSkillIndex + 1) % _currentHeroSkills.Count;
+        ApplySkillAtCurrentIndex();
+    }
+
+    /// <summary>Cycles to the previous skill for the selected hero and refreshes name/description.</summary>
+    public void PreviousSkill()
+    {
+        if (_currentHeroSkills == null || _currentHeroSkills.Count == 0)
+            return;
+        _currentSkillIndex = (_currentSkillIndex - 1 + _currentHeroSkills.Count) % _currentHeroSkills.Count;
+        ApplySkillAtCurrentIndex();
+    }
+
+    private void ClearSkillDisplay()
+    {
+        _currentHeroSkills = null;
+        _currentSkillIndex = 0;
+        if (SkillNameText != null)
+            SkillNameText.text = "";
         if (SkillText != null)
+            SkillText.text = "";
+    }
+
+    private void ApplySkillAtCurrentIndex()
+    {
+        if (_currentHeroSkills == null || _currentHeroSkills.Count == 0)
         {
-            if (skills != null && skills.Count > 0 && skills[0] != null)
-                SkillText.text = skills[0].Description ?? "";
-            else
+            if (SkillNameText != null)
+                SkillNameText.text = "";
+            if (SkillText != null)
                 SkillText.text = "";
+            return;
         }
 
+        var skill = _currentHeroSkills[_currentSkillIndex];
+        if (skill == null)
+        {
+            if (SkillNameText != null)
+                SkillNameText.text = "";
+            if (SkillText != null)
+                SkillText.text = "";
+            return;
+        }
+
+        string name = string.IsNullOrEmpty(skill.Name) ? (skill.ID ?? "") : skill.Name;
+        if (SkillNameText != null)
+            SkillNameText.text = name;
+        if (SkillText != null)
+            SkillText.text = skill.Description ?? "";
     }
 
     private static List<SkillDefine> GetSkillsFromOption(RougeHeroOptionData opt)
@@ -294,68 +338,6 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
         }
 
         HPText.text = $"{current}/{max}";
-    }
-
-    private void RebuildSkillButtons(List<SkillDefine> skills)
-    {
-        ClearSkillButtonPanel();
-
-        if (SkillButtonPrefab == null || SkillButtonPanel == null || skills == null || skills.Count == 0)
-            return;
-
-        for (int i = 0; i < skills.Count; i++)
-        {
-            var skill = skills[i];
-            if (skill == null)
-                continue;
-
-            var instance = Instantiate(SkillButtonPrefab, SkillButtonPanel.transform, false);
-            var rect = instance.GetComponent<RectTransform>();
-            if (rect != null)
-            {
-                rect.anchorMin = new Vector2(0.5f, 1f);
-                rect.anchorMax = new Vector2(0.5f, 1f);
-                rect.pivot = new Vector2(0.5f, 1f);
-                rect.anchoredPosition = new Vector2(0f, -i * SkillButtonSpacing);
-            }
-
-            SetSkillButtonLabel(instance, skill);
-            var button = instance.GetComponent<Button>();
-            if (button != null)
-            {
-                var captured = skill;
-                button.onClick.AddListener(() =>
-                {
-                    if (SkillText != null && captured != null)
-                        SkillText.text = captured.Description ?? "";
-                });
-            }
-        }
-    }
-
-    private static void SetSkillButtonLabel(GameObject instance, SkillDefine skill)
-    {
-        string label = string.IsNullOrEmpty(skill.Name) ? (skill.ID ?? "") : skill.Name;
-
-        var skillUi = instance.GetComponentInChildren<SkillUIText>(true);
-        if (skillUi != null && skillUi.text != null)
-        {
-            skillUi.text.text = label;
-            return;
-        }
-
-        var tmp = instance.GetComponentInChildren<TMP_Text>(true);
-        if (tmp != null)
-            tmp.text = label;
-    }
-
-    private void ClearSkillButtonPanel()
-    {
-        if (SkillButtonPanel == null)
-            return;
-
-        for (int i = SkillButtonPanel.transform.childCount - 1; i >= 0; i--)
-            Destroy(SkillButtonPanel.transform.GetChild(i).gameObject);
     }
 }
 

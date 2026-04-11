@@ -72,26 +72,6 @@
         "GoldReward": 20,
         "Type": "Minion"
     },
-    "1-11": {
-        "ID": "1-11",
-        "Enemies": [
-            "Little Monkey",
-            "Little Monkey",
-            "Little Monkey"
-        ],
-        "GoldReward": 20,
-        "Type": "Minion"
-    },
-    "1-12": {
-        "ID": "1-12",
-        "Enemies": [
-            "Little Monkey",
-            "Wolf Cub",
-            "Wolf Cub"
-        ],
-        "GoldReward": 20,
-        "Type": "Minion"
-    },
     "1-13": {
         "ID": "1-13",
         "Enemies": [

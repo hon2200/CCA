@@ -12,6 +12,8 @@ public class RelicDisplay : MonoSingleton<RelicDisplay>
     [SerializeField] private Transform container;
     [SerializeField] private float spacing;
 
+    public Transform RelicContainer => container;
+
     private readonly List<GameObject> _spawnedRelics = new List<GameObject>();
 
     private void OnEnable()

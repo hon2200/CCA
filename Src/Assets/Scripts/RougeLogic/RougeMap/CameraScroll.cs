@@ -10,30 +10,47 @@ public class CameraScroll : MonoBehaviour
 
     private Vector3 relicPanelOffset;
     private Vector3 eventBackgroundOffset;
+    private bool relicPanelOffsetInitialized;
 
     void Start()
     {
-        if (relicPanel == null && RelicDisplay.Instance != null)
-        {
-            relicPanel = RelicDisplay.Instance.transform;
-        }
+        ResolveRelicPanel();
         if (eventBackground == null && EventManager.Instance != null)
         {
             eventBackground = EventManager.Instance.EventBackgroundTransform;
         }
 
-        if (relicPanel != null)
-        {
-            relicPanelOffset = relicPanel.position - camera.transform.position;
-        }
+        TryCaptureRelicPanelOffset();
         if (eventBackground != null)
         {
             eventBackgroundOffset = eventBackground.position - camera.transform.position;
         }
     }
 
+    void ResolveRelicPanel()
+    {
+        if (relicPanel != null) return;
+        if (RelicDisplay.Instance != null && RelicDisplay.Instance.RelicContainer != null)
+        {
+            relicPanel = RelicDisplay.Instance.RelicContainer;
+        }
+    }
+
+    void TryCaptureRelicPanelOffset()
+    {
+        if (relicPanel == null || camera == null) return;
+        relicPanelOffset = relicPanel.position - camera.transform.position;
+        relicPanelOffsetInitialized = true;
+    }
+
     void Update()
     {
+        if (!relicPanelOffsetInitialized)
+        {
+            ResolveRelicPanel();
+            TryCaptureRelicPanelOffset();
+        }
+
         // 右键或中键按下时，沿 Y 轴拖动摄像机（滚轮不再缩放）
         if (Input.GetMouseButton(1) || Input.GetMouseButton(2))
         {
@@ -54,7 +71,7 @@ public class CameraScroll : MonoBehaviour
         camera.transform.position = cameraPosition;
 
         // 让遗物面板和摄像机一起移动（保持初始相对偏移）
-        if (relicPanel != null)
+        if (relicPanel != null && relicPanelOffsetInitialized)
         {
             relicPanel.position = camera.transform.position + relicPanelOffset;
         }
