@@ -7,7 +7,7 @@
             "Hero1",
             "Hero3"
         ],
-        "Description": "选择英雄招募"
+        "Description": "你来到了热闹的酒馆，这里有各路英雄等你来招募"
     },
     "SoulFountain": {
         "ID": "SoulFountain",
@@ -17,7 +17,7 @@
             "Card2",
             "Card3"
         ],
-        "Description": "选择遗物"
+        "Description": "你发现了一处灵魂之泉，泉水旁浮现出强力卡牌，快来挑选。"
     },
     "SacredCemetery": {
         "ID": "SacredCemetery",
@@ -27,23 +27,23 @@
             "Relic2",
             "Relic3"
         ],
-        "Description": "选择卡牌"
+        "Description": "你来到神圣墓地，这里藏着不少神秘遗物，选一件带走吧。"
     },
     "Treasure": {
         "ID": "Treasure",
         "Name": "宝箱",
         "Options": [
-            "宝箱"
+            "打开宝箱"
         ],
-        "Description": "宝藏！"
+        "Description": "你发现了一个闪闪发光的宝箱，打开就能获得丰厚宝藏。"
     },
     "CurseFusion": {
         "ID": "CurseFusion",
         "Name": "诅咒融合",
         "Options": [
-            "开始融合"
+            "启动祭坛"
         ],
-        "Description": "融合你的英雄"
+        "Description": "你找到了看似被诅咒的祭坛，可以在这里融合英雄，但是代价是？"
     },
     "Shelter": {
         "ID": "Shelter",

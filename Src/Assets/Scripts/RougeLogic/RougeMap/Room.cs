@@ -16,7 +16,7 @@ public class Room : MonoBehaviour
     public RoomID roomID { get; private set; }
     public List<Room> NextNodes;
     [Header("Selectable Pulse")]
-    [SerializeField] private float selectablePulseAmplitude = 0.3f;
+    [SerializeField] private float selectablePulseAmplitude = 0.4f;
     [SerializeField] private float selectablePulseSpeed = 3.5f;
 
     private bool isSelectableVisual;
