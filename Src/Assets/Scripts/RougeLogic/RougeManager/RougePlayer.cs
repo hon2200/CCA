@@ -363,8 +363,8 @@ public class RougePlayer
 
     private static void RefreshRelicPanelText()
     {
-        if (RelicControlPanel.Instance != null)
-            RelicControlPanel.Instance.RefreshText();
+        if (RelicDisplay.Instance != null)
+            RelicDisplay.Instance.RefreshDisplay();
     }
 
     #endregion

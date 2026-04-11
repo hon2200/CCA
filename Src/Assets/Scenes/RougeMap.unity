@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0
-  relicPrefab: {fileID: 7166569050254291901, guid: 85608fee77966b342a355c4d08f391e8, type: 3}
+  relicPrefab: {fileID: 173352396953144784, guid: 5efbeabbe51105e4a850b6e991b6e7f8, type: 3}
   container: {fileID: 798626385}
   spacing: 0.9
 --- !u!114 &676656821
@@ -3986,7 +3986,6 @@ GameObject:
   - component: {fileID: 1794399459}
   - component: {fileID: 1794399462}
   - component: {fileID: 1794399461}
-  - component: {fileID: 1794399463}
   m_Layer: 0
   m_Name: -----GlobalManager-----
   m_TagString: Untagged
@@ -4065,22 +4064,6 @@ MonoBehaviour:
     eliteReplacementSuccesses: 0
     eliteReplacementPressure: 0
   useTemporaryRoomStandins: 0
---- !u!114 &1794399463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794399458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5e7341748c92c4395e853de5fd126c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  global: 0
-  relicPrefab: {fileID: 7166569050254291901, guid: 85608fee77966b342a355c4d08f391e8, type: 3}
-  container: {fileID: 798626385}
-  spacing: 2
 --- !u!1 &1820200127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,6 +4081,7 @@ GameObject:
   - component: {fileID: 1820200135}
   - component: {fileID: 1820200134}
   - component: {fileID: 1820200136}
+  - component: {fileID: 1820200137}
   m_Layer: 0
   m_Name: -----GameDatabase-----
   m_TagString: Untagged
@@ -4224,6 +4208,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: 0
+--- !u!114 &1820200137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820200127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ff601a8469c9f4c86a70f22bf61eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  global: 0
+  _resourcesPath: Scriptables/RelicScriptables
 --- !u!1 &1824844752
 GameObject:
   m_ObjectHideFlags: 0
