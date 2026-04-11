@@ -54,6 +54,7 @@ public class RoomSelection : HoverableBase
                 EnterCombatRoom();
                 break;
             case RoomID.Tavern:
+                EnterEventRoom(manager => manager.InitRecruitHero());
                 break;
             case RoomID.SoulFountain:
                 EnterEventRoom(manager => manager.InitChooseCard());
@@ -65,7 +66,7 @@ public class RoomSelection : HoverableBase
                 EnterEventRoom(manager => manager.InitTreasureEvent());
                 break;
             case RoomID.CurseFusion:
-                //EnterEventRoom(manager => manager.InitCurseFusion());
+                EnterEventRoom(manager => manager.InitCurseFusionEvent());
                 break;
         }
     }

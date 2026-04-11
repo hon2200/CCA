@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class RecruitHero : EventDefine
 {
+    /// <summary>When true, exactly one of three options is randomly Licunxu or Lvbu (if available); the other two are random among other heroes. Set false for normal play.</summary>
+    private const bool TestRecruitOneSlotLicunxuOrLvbu = true;
+
+    private const string TestHeroIdLicunxu = "Licunxu";
+    private const string TestHeroIdLvbu = "Lvbu";
+
     private readonly Dictionary<string, string> recruitableHeroIdByOption = new Dictionary<string, string>();
 
     public RecruitHero() : base("Tavern") { }
@@ -38,15 +44,61 @@ public class RecruitHero : EventDefine
             candidates.Add(hero);
         }
 
-        // Randomly pick up to 3 unique heroes.
-        int pickCount = Mathf.Min(3, candidates.Count);
-        for (int i = 0; i < pickCount; i++)
+        var pickedHeroes = new List<HeroDefine>();
+        if (TestRecruitOneSlotLicunxuOrLvbu)
         {
-            int index = Random.Range(0, candidates.Count);
-            HeroDefine picked = candidates[index];
-            candidates.RemoveAt(index);
+            var special = new List<HeroDefine>();
+            var others = new List<HeroDefine>();
+            foreach (var h in candidates)
+            {
+                if (h == null)
+                    continue;
+                if (h.ID == TestHeroIdLicunxu || h.ID == TestHeroIdLvbu)
+                    special.Add(h);
+                else
+                    others.Add(h);
+            }
 
-            // Keep option labels unique even if two heroes share the same display name.
+            if (special.Count > 0)
+            {
+                int si = Random.Range(0, special.Count);
+                pickedHeroes.Add(special[si]);
+            }
+
+            int slotsLeft = Mathf.Min(3 - pickedHeroes.Count, others.Count);
+            for (int i = 0; i < slotsLeft; i++)
+            {
+                int oi = Random.Range(0, others.Count);
+                pickedHeroes.Add(others[oi]);
+                others.RemoveAt(oi);
+            }
+
+            if (pickedHeroes.Count == 0 && candidates.Count > 0)
+            {
+                int pickCount = Mathf.Min(3, candidates.Count);
+                for (int i = 0; i < pickCount; i++)
+                {
+                    int index = Random.Range(0, candidates.Count);
+                    pickedHeroes.Add(candidates[index]);
+                    candidates.RemoveAt(index);
+                }
+            }
+        }
+        else
+        {
+            int pickCount = Mathf.Min(3, candidates.Count);
+            for (int i = 0; i < pickCount; i++)
+            {
+                int index = Random.Range(0, candidates.Count);
+                pickedHeroes.Add(candidates[index]);
+                candidates.RemoveAt(index);
+            }
+        }
+
+        foreach (var picked in pickedHeroes)
+        {
+            if (picked == null)
+                continue;
             string optionName = picked.Name;
             if (recruitableHeroIdByOption.ContainsKey(optionName))
                 optionName = $"{picked.Name} ({picked.ID})";
@@ -67,7 +119,9 @@ public class RecruitHero : EventDefine
         if (!HeroDataBase.Instance.HeroDictionary.TryGetValue(heroId, out var heroDefine) || heroDefine == null)
             return;
 
-        RougeManager.Instance?.rougePlayer?.RecruitHero(heroDefine);
+        var recruited = RougeManager.Instance?.rougePlayer?.RecruitHero(heroDefine);
+        if (recruited != null)
+            RougePlayerUI.Instance?.BuildRougeHeroDropDown();
     }
 }
 
@@ -220,10 +274,15 @@ public class CurseFusion : EventDefine
 {
     public Hero hero1;
     public Hero hero2;
+    /// <summary>Set by <see cref="EventManager"/> after both heroes are confirmed and merge runs; option click then only closes the event.</summary>
+    public bool IsFusionComplete { get; set; }
+
     public CurseFusion() : base("CurseFusion") { }
 
     public override void OnChoose(string option)
     {
+        if (IsFusionComplete)
+            return;
         RougePlayerUI.Instance.OpenAndCloseHeroPanel();
         RougePlayerUI.Instance.BuildRougeHeroDropDown();
     }

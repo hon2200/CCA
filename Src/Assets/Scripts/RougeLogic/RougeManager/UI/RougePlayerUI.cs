@@ -1,6 +1,9 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -8,6 +11,8 @@ using UnityEngine.UI;
 /// </summary>
 public class RougePlayerUI : MonoSingleton<RougePlayerUI>
 {
+    private const string RougeMapSceneName = "RougeMap";
+
     [Header("UI")]
     [SerializeField] private TMP_Dropdown heroDropdown;
     [SerializeField] private List<Button> SkillButtons;
@@ -22,6 +27,53 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
 
     private string currentHeroID;
 
+    private GoldAttribute _boundGold;
+    private Action<int, int, string> _onGoldChanged;
+    private Coroutine _bindGoldAfterLoadRoutine;
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnRougeMapSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnRougeMapSceneLoaded;
+        if (_bindGoldAfterLoadRoutine != null)
+        {
+            StopCoroutine(_bindGoldAfterLoadRoutine);
+            _bindGoldAfterLoadRoutine = null;
+        }
+        UnbindGoldText();
+    }
+
+    private void OnRougeMapSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != RougeMapSceneName)
+            return;
+        if (_bindGoldAfterLoadRoutine != null)
+            StopCoroutine(_bindGoldAfterLoadRoutine);
+        _bindGoldAfterLoadRoutine = StartCoroutine(BindGoldTextAfterMapReady());
+    }
+
+    /// <summary>
+    /// <see cref="SceneManager.sceneLoaded"/> runs before <c>Start</c>; <see cref="RougeManager"/> creates
+    /// <see cref="RougeManager.rougePlayer"/> in <c>Start</c>, so we wait until gold exists then bind.
+    /// </summary>
+    private IEnumerator BindGoldTextAfterMapReady()
+    {
+        const int maxFrames = 30;
+        for (int i = 0; i < maxFrames; i++)
+        {
+            var gold = RougeManager.Instance?.rougePlayer?.gold;
+            if (gold != null && GoldText != null)
+                break;
+            yield return null;
+        }
+        _bindGoldAfterLoadRoutine = null;
+        BindGoldText();
+    }
+
     public void Initialize()
     {
         var heroes = RougeManager.Instance?.rougePlayer?.Heroes;
@@ -31,11 +83,14 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
                 => { BuildRougeHeroDropDown(); };
         }
         BuildRougeHeroDropDown();
-        GoldTextInit();
+        BindGoldText();
 
         if (heroDropdown != null)
             heroDropdown.onValueChanged.AddListener(OnHeroSelected);
     }
+
+    /// <summary>Re-reads current gold and re-subscribes; safe to call after map load or run reset.</summary>
+    public void RefreshGoldText() => BindGoldText();
     public void OpenAndCloseHeroPanel()
     {
         if(HeroPanel.activeSelf)
@@ -67,17 +122,34 @@ public class RougePlayerUI : MonoSingleton<RougePlayerUI>
 
         return null;
     }
-    private void GoldTextInit()
+    private void UnbindGoldText()
     {
+        if (_boundGold != null && _onGoldChanged != null)
+            _boundGold.OnValueChanged -= _onGoldChanged;
+        _boundGold = null;
+        _onGoldChanged = null;
+    }
+
+    private void BindGoldText()
+    {
+        UnbindGoldText();
+        if (GoldText == null)
+            return;
+
         var gold = RougeManager.Instance?.rougePlayer?.gold;
         if (gold == null)
             return;
 
-        gold.OnValueChanged += (int oldVal, int newVal, string message)=>
-        {
-            GoldText.text = newVal.ToString();
-        };
+        _boundGold = gold;
+        _onGoldChanged = OnGoldValueChanged;
+        gold.OnValueChanged += _onGoldChanged;
         GoldText.text = gold.Value.ToString();
+    }
+
+    private void OnGoldValueChanged(int oldVal, int newVal, string message)
+    {
+        if (GoldText != null)
+            GoldText.text = newVal.ToString();
     }
 
     public void BuildRougeHeroDropDown()

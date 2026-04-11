@@ -21,11 +21,11 @@ public class RougeBattleManager : MonoBehaviour
 
     public TMP_Text CurrentHeroName;
 
-    [Header("Ê¤ÀûÒôĞ§")] 
+    [Header("Ê¤ï¿½ï¿½ï¿½ï¿½Ğ§")] 
     public AudioClip victorySound; 
     [Range(0f, 1f)] public float victoryVolume = 0.6f;
 
-    [Header("Ê§°ÜÒôĞ§")]
+    [Header("Ê§ï¿½ï¿½ï¿½ï¿½Ğ§")]
     public AudioClip defeatSound;
     [Range(0f, 1f)] public float defeatVolume = 0.8f;
 

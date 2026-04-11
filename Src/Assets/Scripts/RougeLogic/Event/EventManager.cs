@@ -99,12 +99,14 @@ public class EventManager : MonoSingleton<EventManager>
         currentCurseFusion = new CurseFusion();
         Init(currentCurseFusion);
         curseFusionStep = 0;
+        SetEventOptionButtonsInteractable(false);
 
         RougePlayerUI.Instance?.SetHeroPanelActive(true);
         RougePlayerUI.Instance?.BuildRougeHeroDropDown();
 
         if (curseFusionConfirmButton == null)
         {
+            SetEventOptionButtonsInteractable(true);
             Debug.LogWarning("InitCurseFusion: curseFusionConfirmButton is not assigned.");
             return;
         }
@@ -112,6 +114,7 @@ public class EventManager : MonoSingleton<EventManager>
         curseFusionConfirmButton.gameObject.SetActive(true);
         curseFusionConfirmButton.onClick.RemoveAllListeners();
         curseFusionConfirmButton.onClick.AddListener(OnCurseFusionConfirmClicked);
+        curseFusionConfirmButton.interactable = true;
         AdvanceButton.gameObject.SetActive(false);
     }
 
@@ -143,13 +146,26 @@ public class EventManager : MonoSingleton<EventManager>
 
         currentCurseFusion.hero2 = selectedHero;
         currentCurseFusion.MergeHero();
+        currentCurseFusion.IsFusionComplete = true;
 
         RougePlayerUI.Instance?.BuildRougeHeroDropDown();
         RougePlayerUI.Instance?.SetHeroPanelActive(false);
 
         curseFusionConfirmButton.gameObject.SetActive(false);
+        SetEventOptionButtonsInteractable(true);
         currentCurseFusion = null;
-        CompletedSelection();
+    }
+
+    private void SetEventOptionButtonsInteractable(bool interactable)
+    {
+        if (EventButtonPanel == null)
+            return;
+        for (int i = 0; i < EventButtonPanel.childCount; i++)
+        {
+            var btn = EventButtonPanel.GetChild(i).GetComponentInChildren<Button>(true);
+            if (btn != null)
+                btn.interactable = interactable;
+        }
     }
 
     public void SetEvent()
